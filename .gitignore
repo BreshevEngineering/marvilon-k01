@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Generated outputs
+generated/
+reports/*.tmp
+*.log
+
+# SolidWorks working/binary CAD -- use PDM when introduced
+*.SLDPRT
+*.SLDASM
+*.SLDDRW
+*.sldprt
+*.sldasm
+*.slddrw
+~$*
+
+# Large neutral CAD should normally be generated, archived or kept in PDM/LFS
+*.x_t
+*.x_b
+
+# Secrets
+.env
+*.pem
+*.key
+secrets.*
