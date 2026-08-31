@@ -1,0 +1,29 @@
+# Repository text/binary normalization
+* text=auto
+
+# Engineering source/control files: stable LF in Git
+*.py   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.csv  text eol=lf
+*.txt  text eol=lf
+
+# Windows launchers must remain CRLF
+*.cmd  text eol=crlf
+*.bat  text eol=crlf
+
+# CAD/binary artifacts
+*.SLDPRT binary
+*.SLDASM binary
+*.SLDDRW binary
+*.step binary
+*.stp binary
+*.STEP binary
+*.STP binary
+*.pdf binary
+*.png binary
+*.jpg binary
+*.zip binary
