@@ -1,0 +1,203 @@
+{
+  "schema_version": "k01_master_v3",
+  "project": "K01",
+  "assembly": "K01-A-001_Calibration_Module.SLDASM",
+  "updated": "2026-09-01",
+  "architecture": "fixed_coil_moving_internal_smco_reference_target",
+  "control_status": "WORKING_BASELINE_NOT_RELEASED",
+  "authoring": {
+    "cad": "SOLIDWORKS 2026",
+    "parameter_source": "params/k01_params.py",
+    "cad_snapshot_source": "reports/CAD_SNAPSHOT_*.json",
+    "rule": "Controlled numeric geometry is edited in params/k01_params.py. K01_master.json controls lifecycle, interfaces, materials, evidence and release gates."
+  },
+  "repository": {
+    "owner": "BreshevEngineering",
+    "name": "marvilon-k01",
+    "default_branch": "main",
+    "visibility": "private",
+    "ci_workflow": "engineering-qa"
+  },
+  "current_interface": {
+    "P003_P016": {
+      "status": "GEOMETRY PASS / LOCATING A+B IMPLEMENTED / RELEASE CHECKS OPEN",
+      "datum_A": "K01_DATUM_A_MATING; metal-to-metal axial shoulder",
+      "datum_B": "K01_DATUM_B_AXIS; Ø10 H7/g6 pilot axis",
+      "datum_C": "OPEN; angular clocking not yet physically released",
+      "fasteners": "3x M4; clamp only; not locating",
+      "seal": "12x1.5 FKM75 candidate; groove baseline only until compound/supplier compatibility freeze",
+      "required_remaining_checks": [
+        "Measure P003 pilot end face to P016 counterbore bottom; target 0.20 mm",
+        "Confirm one free rotational DOF remains with only A+B mates",
+        "Freeze Datum C/physical clocking method",
+        "Confirm P016-to-Long-Run production material/weld/post-weld machining route"
+      ]
+    }
+  },
+  "parts": {
+    "K01-P-003": {
+      "description": "Cartridge Body",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "ACTIVE / P003-P016 A+B INTERFACE IMPLEMENTED",
+      "cad_snapshot": "reports/CAD_SNAPSHOT_K01-P-003_Cartridge_Body.json",
+      "features_required": [
+        "K01_DATUM_A_MATING",
+        "K01_DATUM_B_AXIS",
+        "M4 clearance Hole Wizard",
+        "3x circular pattern",
+        "single final solid body"
+      ],
+      "interface": {
+        "pilot_fit": "Ø10 g6",
+        "mating_flange": "Ø34 x 3.00",
+        "fasteners": "3x M4 clearance on PCD24"
+      }
+    },
+    "K01-P-007": {
+      "description": "Hermetic Magnetic Can",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "ACTIVE / NEXT MAJOR DESIGN GATE",
+      "note": "Primary containment boundary. P007-to-P003 seat/root/weld and leak acceptance remain open."
+    },
+    "K01-P-013": {
+      "description": "Follower End Cap",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "ACTIVE / RETENTION PROCESS QUALIFICATION OPEN",
+      "fixation_baseline": "Structural-adhesive annular face bond P013-to-P008",
+      "fallbacks": [
+        "3-point staking/caulking",
+        "360 deg laser seam"
+      ],
+      "note": "Bonded P013 is secondary capture but is not an adhesive-independent fail-safe."
+    },
+    "K01-P-014": {
+      "description": "Front Guide Retaining Ring / IN Stop",
+      "material": "OPEN; 1.4310 / AISI 301 candidate",
+      "status": "ACTIVE / MATERIAL OPEN"
+    },
+    "K01-P-015": {
+      "description": "Dual Coil Bobbin",
+      "material": "Prototype PLA; production OPEN",
+      "status": "ACTIVE PROTOTYPE / PRODUCTION MATERIAL OPEN"
+    },
+    "K01-P-016": {
+      "description": "Long Run Interface Boss",
+      "material": "AISI 316L assigned in current CAD; compatibility with production Long Run material/weld route OPEN",
+      "status": "ACTIVE / P003-P016 A+B INTERFACE IMPLEMENTED / LONG RUN INSTALLATION OPEN",
+      "cad_snapshot": "reports/CAD_SNAPSHOT_K01-P-016_Long_Run_Interface_Boss.json",
+      "features_required": [
+        "K01_DATUM_A_MATING",
+        "K01_DATUM_B_AXIS",
+        "3x M4 tapped holes",
+        "saddle R24",
+        "Ø10 H7 pilot bore"
+      ],
+      "interface": {
+        "pilot_fit": "Ø10 H7",
+        "pilot_depth_mm": 3.2,
+        "central_passage_mm": 6.0,
+        "saddle": "R24 to Long Run OD48",
+        "datum_A_height_from_OD48_tangent_mm": 13.0,
+        "fasteners": "3x M4 tapped on PCD24"
+      }
+    },
+    "K01-B-001": {
+      "description": "Internal SmCo Magnet",
+      "material": "Sm2Co17 / S280",
+      "status": "SELECTED CANDIDATE / LOT DATA OPEN",
+      "assembly": {
+        "axial_datum": "P008 pocket front shoulder",
+        "primary_retention": "LOCTITE AA 332 axial-face bond baseline",
+        "secondary_retention": "P013 bonded retaining cap; adhesive-class independence not claimed",
+        "press_fit": false
+      }
+    }
+  },
+  "verification": {
+    "API_GATE_01": "PASS — read-only COM/FeatureManager + named datums + JSON snapshot",
+    "API_GATE_02": "PASS — native Sketch + native Boss-Extrude created through SolidWorks API",
+    "P003_snapshot": {
+      "status": "PASS",
+      "evidence": "26 features; 316L material; Datum A/B; HoleWzd; CirPattern; Combine"
+    },
+    "P016_snapshot": {
+      "status": "PASS FOR DATUMS / REFRESH AFTER FINAL HOLE IMPLEMENTATION",
+      "evidence": "Datum A/B detected; current final snapshot should remain in reports/"
+    }
+  },
+  "open_gates": [
+    {
+      "id": "G01",
+      "title": "B001 real dimensions",
+      "state": "OPEN",
+      "next": "Measure D and L of purchased lot and record each magnet."
+    },
+    {
+      "id": "G02",
+      "title": "B001 Br(T) / demagnetization data",
+      "state": "OPEN",
+      "next": "Obtain supplier lot/certificate data."
+    },
+    {
+      "id": "G03",
+      "title": "P008-B001 radial fit",
+      "state": "OPEN_AFTER_G01",
+      "next": "Close actual clearance from measured magnet lot."
+    },
+    {
+      "id": "G04",
+      "title": "P013 retention qualification",
+      "state": "OPEN",
+      "next": "Representative hot-soak axial pull + gas compatibility."
+    },
+    {
+      "id": "G05",
+      "title": "Breakaway force",
+      "state": "OPEN",
+      "next": "Hot/cold IN->OUT and OUT->IN peak force."
+    },
+    {
+      "id": "G06",
+      "title": "CFD force envelope",
+      "state": "OPEN",
+      "next": "SG Force(X) gas-wetted rod in OUT/MID/IN and hot release states."
+    },
+    {
+      "id": "G07",
+      "title": "P015 production material/electrical release",
+      "state": "OPEN",
+      "next": "Freeze bobbin polymer, wire class, lead/connector and mounting."
+    },
+    {
+      "id": "G08A",
+      "title": "P003-P016 pilot/shoulder",
+      "state": "CONDITIONAL_PASS",
+      "next": "Record 0.20 mm pilot-bottom clearance measurement; then freeze A+B."
+    },
+    {
+      "id": "G08B",
+      "title": "Datum C angular clocking",
+      "state": "OPEN_NEXT",
+      "next": "Tie clocking to P001 anti-rotation/optical target and select non-overconstraining physical key."
+    },
+    {
+      "id": "G08C",
+      "title": "P016-Long Run installation",
+      "state": "OPEN_NEXT",
+      "next": "Confirm Long Run material, weld route, post-weld finish machining and final axis inspection."
+    },
+    {
+      "id": "G09",
+      "title": "P007 containment / P007-P003",
+      "state": "OPEN_NEXT_MAJOR",
+      "next": "Freeze root seat, thick section, weld, pressure boundary and helium leak acceptance."
+    },
+    {
+      "id": "G10",
+      "title": "P014 material and retention",
+      "state": "OPEN",
+      "next": "Freeze material, split geometry and installation/removal verification."
+    }
+  ],
+  "retired_part_number_rule": "Retired part numbers are never reused."
+}

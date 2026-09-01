@@ -1,0 +1,72 @@
+"""
+K01 controlled numeric parameters.
+
+RULE:
+- Edit controlled numeric geometry here first.
+- CAD builders, equations and tests import from this module.
+- Local chamfers/fillets/process details remain CAD_LOCAL unless promoted.
+"""
+
+# System
+CHANNEL_ID_MM = 20.0
+STROKE_MM = 10.0
+ROD_D_MM = 5.0
+
+# P003 Cartridge Body
+P003_OAL_MM = 38.0
+P003_PILOT_D_MM = 10.0
+P003_PILOT_L_MM = 3.0
+P003_FLANGE_OD_MM = 34.0
+P003_FLANGE_T_MM = 3.0
+P003_M4_CLEARANCE_D_MM = 4.50
+P003_FASTENER_PCD_MM = 24.0
+P003_FASTENER_COUNT = 3
+
+# ISO 286 fit limits currently controlled for Ø10
+P003_G6_MAX_MM = 9.995
+P003_G6_MIN_MM = 9.986
+
+# P016 Long Run Interface Boss
+P016_OD_MM = 32.0
+P016_SADDLE_R_MM = 24.0
+P016_DATUM_A_HEIGHT_FROM_OD48_TANGENT_MM = 13.0
+P016_PILOT_BORE_D_MM = 10.0
+P016_PILOT_BORE_DEPTH_MM = 3.20
+P016_CENTRAL_PASSAGE_D_MM = 6.0
+P016_FASTENER_PCD_MM = 24.0
+P016_FASTENER_COUNT = 3
+P016_THREAD = "M4x0.7-6H"
+
+P016_H7_MIN_MM = 10.000
+P016_H7_MAX_MM = 10.015
+
+# Seal baseline candidate — not released purchased item
+P016_ORING_NOMINAL = "12x1.5"
+P016_ORING_GROOVE_ID_MM = 11.80
+P016_ORING_GROOVE_OD_MM = 15.80
+P016_ORING_GROOVE_DEPTH_MM = 1.20
+
+# P007 Hermetic Can
+P007_L_MM = 40.0
+P007_THIN_OD_MM = 10.0
+P007_THIN_ID_MM = 9.4
+P007_THIN_WALL_MM = 0.30
+
+# P008 / magnetic follower
+P008_OD_MM = 8.8
+P008_L_MM = 16.0
+B001_D_NOMINAL_MM = 8.0
+B001_L_NOMINAL_MM = 8.0
+
+# Actuator / force screen
+F_CFD_CURRENT_CASE_N = 0.185447243
+F_INERTIA_SCREEN_N = 0.03
+SAFETY_FACTOR_SCREEN = 2.0
+KF_MIN_SCREEN_N_PER_A = 1.0
+
+# Derived interface checks
+P003_P016_PILOT_BOTTOM_CLEARANCE_NOM_MM = (
+    P016_PILOT_BORE_DEPTH_MM - P003_PILOT_L_MM
+)
+P003_P016_CLEARANCE_MIN_MM = P016_H7_MIN_MM - P003_G6_MAX_MM
+P003_P016_CLEARANCE_MAX_MM = P016_H7_MAX_MM - P003_G6_MIN_MM
