@@ -1,0 +1,177 @@
+{
+  "schema": "k01_cad_snapshot_v1",
+  "probe_revision": "v07",
+  "read_only": true,
+  "document": {
+    "title": "K01-P-003_Cartridge_Body.SLDPRT",
+    "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT",
+    "type": 1
+  },
+  "feature_count": 26,
+  "feature_tree": [
+    {
+      "index": 1,
+      "name": "Comments",
+      "type": "CommentsFolder",
+      "suppressed": false
+    },
+    {
+      "index": 2,
+      "name": "Favorites",
+      "type": "FavoriteFolder",
+      "suppressed": false
+    },
+    {
+      "index": 3,
+      "name": "History",
+      "type": "HistoryFolder",
+      "suppressed": false
+    },
+    {
+      "index": 4,
+      "name": "Selection Sets",
+      "type": "SelectionSetFolder",
+      "suppressed": false
+    },
+    {
+      "index": 5,
+      "name": "Sensors",
+      "type": "SensorFolder",
+      "suppressed": false
+    },
+    {
+      "index": 6,
+      "name": "Design Binder",
+      "type": "DocsFolder",
+      "suppressed": false
+    },
+    {
+      "index": 7,
+      "name": "Annotations",
+      "type": "DetailCabinet",
+      "suppressed": false
+    },
+    {
+      "index": 8,
+      "name": "Surface Bodies",
+      "type": "SurfaceBodyFolder",
+      "suppressed": false
+    },
+    {
+      "index": 9,
+      "name": "Solid Bodies",
+      "type": "SolidBodyFolder",
+      "suppressed": false
+    },
+    {
+      "index": 10,
+      "name": "Lights, Cameras and Scene",
+      "type": "EnvFolder",
+      "suppressed": false
+    },
+    {
+      "index": 11,
+      "name": "Equations",
+      "type": "EqnFolder",
+      "suppressed": false
+    },
+    {
+      "index": 12,
+      "name": "AISI Type 316L stainless steel",
+      "type": "MaterialFolder",
+      "suppressed": false
+    },
+    {
+      "index": 13,
+      "name": "Front Plane",
+      "type": "RefPlane",
+      "suppressed": false
+    },
+    {
+      "index": 14,
+      "name": "Top Plane",
+      "type": "RefPlane",
+      "suppressed": false
+    },
+    {
+      "index": 15,
+      "name": "Right Plane",
+      "type": "RefPlane",
+      "suppressed": false
+    },
+    {
+      "index": 16,
+      "name": "Origin",
+      "type": "OriginProfileFeature",
+      "suppressed": false
+    },
+    {
+      "index": 17,
+      "name": "Sketch2",
+      "type": "ProfileFeature",
+      "suppressed": false
+    },
+    {
+      "index": 18,
+      "name": "Revolve1",
+      "type": "Revolution",
+      "suppressed": false
+    },
+    {
+      "index": 19,
+      "name": "Sketch4",
+      "type": "ProfileFeature",
+      "suppressed": false
+    },
+    {
+      "index": 20,
+      "name": "Boss-Extrude1",
+      "type": "ICE",
+      "suppressed": false
+    },
+    {
+      "index": 21,
+      "name": "K01_DATUM_A_MATING",
+      "type": "RefPlane",
+      "suppressed": false
+    },
+    {
+      "index": 22,
+      "name": "K01_DATUM_B_AXIS",
+      "type": "RefAxis",
+      "suppressed": false
+    },
+    {
+      "index": 23,
+      "name": "Sketch5",
+      "type": "ProfileFeature",
+      "suppressed": false
+    },
+    {
+      "index": 24,
+      "name": "M4 Clearance Hole1",
+      "type": "HoleWzd",
+      "suppressed": false
+    },
+    {
+      "index": 25,
+      "name": "CirPattern1",
+      "type": "CirPattern",
+      "suppressed": false
+    },
+    {
+      "index": 26,
+      "name": "Combine1",
+      "type": "CombineBodies",
+      "suppressed": false
+    }
+  ],
+  "controlled_objects": {
+    "K01_DATUM_A_MATING": {
+      "present": true
+    },
+    "K01_DATUM_B_AXIS": {
+      "present": true
+    }
+  }
+}
