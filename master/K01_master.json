@@ -68,7 +68,8 @@
         "3-point staking/caulking",
         "360 deg laser seam"
       ],
-      "note": "Bonded P013 is secondary capture but is not an adhesive-independent fail-safe."
+      "note": "Bonded P013 is secondary capture but is not an adhesive-independent fail-safe.",
+      "fixation": "Structural-adhesive annular-face bond to P008 rear annular face baseline; must not preload B001; adhesive product/qualification OPEN; 360 deg autogenous laser seam optional fallback only."
     },
     "K01-P-014": {
       "description": "Front Guide Retaining Ring / IN Stop",
@@ -108,7 +109,7 @@
       "assembly": {
         "axial_datum": "P008 pocket front shoulder",
         "primary_retention": "LOCTITE AA 332 axial-face bond baseline",
-        "secondary_retention": "P013 bonded retaining cap; adhesive-class independence not claimed",
+        "secondary_retention": "P013 bonded retaining cap baseline; 360 deg autogenous laser seam optional fallback only.",
         "press_fit": false
       }
     }
@@ -199,5 +200,18 @@
       "next": "Freeze material, split geometry and installation/removal verification."
     }
   ],
-  "retired_part_number_rule": "Retired part numbers are never reused."
+  "retired_part_number_rule": "Retired part numbers are never reused.",
+  "processes": {
+    "P013_retention": {
+      "baseline": "structural-adhesive annular-face bond P013-to-P008",
+      "adhesive_product": "OPEN — select/qualify for temperature and measured-gas compatibility",
+      "functional_rules": [
+        "P013 must provide independent mechanical capture of B001",
+        "P013 must not preload B001",
+        "bond must not contaminate B001 primary datum/bond interface"
+      ],
+      "qualification": "representative hot pull test + cycle/endurance test + measured-gas compatibility review",
+      "fallback": "360 deg autogenous laser seam only if adhesive qualification fails or release review explicitly selects welding"
+    }
+  }
 }
