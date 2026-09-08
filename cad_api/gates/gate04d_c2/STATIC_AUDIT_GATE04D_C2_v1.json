@@ -1,0 +1,20 @@
+{
+  "K01Gate04D_C2_Build.cs": {
+    "balanced_braces": true,
+    "no_gate04c_candidate_path": true,
+    "has_gate04d_c2": true,
+    "stable_paths_present": true
+  },
+  "K01Gate04D_C2_Verify.cs": {
+    "balanced_braces": true,
+    "no_gate04c_candidate_path": true,
+    "has_gate04d_c2": true,
+    "stable_paths_present": true
+  },
+  "C2_controlled_values": {
+    "OD33": true,
+    "PCD26_5": true,
+    "M2_5_thread": true,
+    "P007_L35": true
+  }
+}

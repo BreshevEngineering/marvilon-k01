@@ -1,0 +1,50 @@
+{
+  "schema": "k01_medtas_v8_3_static_audit",
+  "created": "2026-09-05",
+  "status": "PASS_STATIC_PACKAGE",
+  "json": {
+    "count": 5,
+    "errors": []
+  },
+  "ui": {
+    "javascript_syntax_pass": true,
+    "javascript_error": "",
+    "english_only": true,
+    "cyrillic_character_count": 0,
+    "technical_filter_blockers_first": true,
+    "technical_filter_visual_context": true,
+    "digital_thread_operational_map": true,
+    "bom_tab": true,
+    "assembly_femm_tab": true
+  },
+  "p006_gate04e": {
+    "invalid_modeldoc2_getpartbox_removed": true,
+    "partdoc_body_scan": true,
+    "plane_face_selection": true,
+    "candidate_only": true,
+    "full_assembly_verifier_present": true,
+    "full_verify_assembly_path": true,
+    "local_sw2018_compile_verified": false
+  },
+  "state": {
+    "p006_build_and_verify_both_required": true,
+    "p006_material_not_inferred": true,
+    "github_remote_in_thread": true
+  },
+  "server": {
+    "robust_files_api": true,
+    "http_500_reason_fixed": true,
+    "handoff_includes_gate04e": true
+  },
+  "registry": {
+    "entries": 44,
+    "unique_ids": true,
+    "gate04e_full_assembly_registered": true
+  },
+  "runtime_not_claimed": [
+    "Windows PowerShell preflight execution on user's workstation",
+    "SW2018 compilation/runtime for corrected Gate04E builder",
+    "SW2018 compilation/runtime for Gate04E full-assembly verifier",
+    "engineering T03 service/tool/material release"
+  ]
+}

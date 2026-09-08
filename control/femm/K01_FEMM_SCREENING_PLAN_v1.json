@@ -1,0 +1,31 @@
+{
+  "schema": "k01_femm_screening_plan_v1",
+  "title": "K01 magnetic actuator FEMM screening → final release plan",
+  "status": "GEOMETRY_READY / PRODUCTION_MAGNETIC_INPUTS_OPEN",
+  "assembly_basis": {
+    "production": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+    "current_full_candidate": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\verification\\K01-A-001_GATE04D_C2R1_VERIFY.SLDASM",
+    "interpretation": "The C2R1 verification assembly is already a full assembly clone for current geometry review. It is not the final production assembly because C2R1 has not been atomically promoted and P006/P015/B001 release items remain."
+  },
+  "screening_can_start_when": [
+    "P006 service candidate is built/read back or explicitly shown to be magnetically irrelevant to the axisymmetric screen",
+    "current P015 geometry is fingerprinted",
+    "current B001 screening magnet geometry/material assumptions are recorded"
+  ],
+  "final_release_requires": [
+    "P015 production material, winding, turns, conductor data and current limit",
+    "actual B001 supplier magnet dimensions/tolerances and Br(T)/temperature data",
+    "released stroke/position envelope",
+    "mesh-convergence/sensitivity evidence",
+    "weighted stress tensor force extraction",
+    "bench force acceptance"
+  ],
+  "outputs": [
+    "force vs position at 0/5/10 mm and refined sweep",
+    "force vs current including 1.0 A nominal and 1.25 A reserve",
+    "minimum KF over released position/tolerance/temperature envelope",
+    "flux-density maps and saturation screen",
+    "sensitivity to magnet Br/dimensions, air gaps and coil position"
+  ],
+  "acceptance_link": "Existing actuator screening requires KFmin ≥ 0.930895 N/A at nominal 1 A; final criterion remains subject to the controlled release package."
+}

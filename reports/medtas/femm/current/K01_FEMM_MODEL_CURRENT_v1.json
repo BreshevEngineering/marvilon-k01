@@ -1,0 +1,27 @@
+{
+  "schema": "k01.femm_model.current.v1_7",
+  "position": "CURRENT",
+  "cases": [
+    {
+      "id": "A",
+      "coil_A_Aturn": 1.0,
+      "coil_B_Aturn": 0
+    },
+    {
+      "id": "B",
+      "coil_A_Aturn": 0,
+      "coil_B_Aturn": 1.0
+    }
+  ],
+  "materials": {
+    "magnet_Br_T": 1.0,
+    "steel_mu_r_screen": 1.005
+  },
+  "parameter_authority": "control/parameters/K01_GATE04E_ANALYSIS_PARAMETERS_v1_7.json",
+  "evidence_source": "imported current FEMM run artifacts",
+  "model_reproducibility": "PARTIAL",
+  "limitations": [
+    "FEMM-GEO-001: DXF import reported orphan endpoints",
+    "FEMM-MODEL-001: original FEM/DXF/LUA source bundle is not yet bound to this MEDTAS node"
+  ]
+}

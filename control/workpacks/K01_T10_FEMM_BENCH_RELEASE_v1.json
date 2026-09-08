@@ -1,0 +1,34 @@
+{
+  "schema": "k01_workpackage_v1",
+  "task_id": "T10",
+  "title": "P015/B001 freeze → final FEMM → bench acceptance",
+  "status": "INPUT_FREEZE_OPEN",
+  "B001_required": [
+    "exact supplier/part no",
+    "actual/lot diameter and length",
+    "material grade SmCo",
+    "Br at reference temperature or demagnetization curve",
+    "tolerance/temperature coefficient if supplied"
+  ],
+  "P015_required": [
+    "bobbin production material/grade",
+    "winding wire part no and conductor diameter incl insulation",
+    "turn count",
+    "coil resistance at 20°C",
+    "lead/termination",
+    "current continuous/boost limits",
+    "axial coil location"
+  ],
+  "FEMM_acceptance": [
+    "evaluate force over full 10 mm functional stroke and relevant temperature/material states",
+    "nominal 1 A minimum force coefficient K_F,min ≥0.930895 N/A",
+    "1.25 A remains reserve/boost, not basis for nominal release"
+  ],
+  "bench_acceptance": [
+    "measure breakaway and full-stroke actuation",
+    "correlate bench force/current to FEMM",
+    "record current, temperature, position, pass/fail",
+    "no rub against P007 over stroke"
+  ],
+  "rule": "FEMM runner shall fail closed if required production inputs are OPEN."
+}

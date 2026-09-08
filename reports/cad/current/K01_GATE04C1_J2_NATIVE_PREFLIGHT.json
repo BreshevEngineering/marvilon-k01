@@ -1,0 +1,8 @@
+{
+  "schema": "k01_gate04c1_j2_native_preflight_v2",
+  "status": "FAIL_EXCEPTION",
+  "created_utc": "2026-09-03T16:53:39.242108+00:00",
+  "read_only": true,
+  "error": "RuntimeError('Opened document is not an assembly. GetType=None')",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\BreshevEngineering\\marvilon-k01\\tools\\sw_gate04c1_j2_native_preflight_v02.py\", line 683, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"D:\\BreshevEngineering\\marvilon-k01\\tools\\sw_gate04c1_j2_native_preflight_v02.py\", line 587, in main\n    asm, activation = activate_or_open_stable_asm(sw)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\BreshevEngineering\\marvilon-k01\\tools\\sw_gate04c1_j2_native_preflight_v02.py\", line 176, in activate_or_open_stable_asm\n    raise RuntimeError(f\"Opened document is not an assembly. GetType={doc_type(doc)}\")\nRuntimeError: Opened document is not an assembly. GetType=None\n"
+}

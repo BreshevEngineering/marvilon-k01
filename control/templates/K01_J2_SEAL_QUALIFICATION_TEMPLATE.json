@@ -1,0 +1,15 @@
+{
+  "schema": "k01_j2_seal_qualification_v1",
+  "status": "OPEN",
+  "seal_part": "K01-B-011",
+  "compound_supplier": "OPEN",
+  "compound_grade": "OPEN",
+  "hardness_shoreA": "OPEN",
+  "media_compatibility_evidence": "OPEN",
+  "temperature_range_C": "OPEN",
+  "compression_force_total_N_at_released_gap": "OPEN",
+  "criterion_N_max": 300,
+  "leak_test_method": "OPEN",
+  "leak_acceptance": "OPEN",
+  "evidence_files": []
+}

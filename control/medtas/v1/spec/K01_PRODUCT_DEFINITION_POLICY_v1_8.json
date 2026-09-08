@@ -1,0 +1,21 @@
+{
+  "schema": "k01.product_definition_policy.v1_8",
+  "principle": "The released product definition is a canonical semantic layer. Native MBD/DimXpert is the preferred machine-readable carrier, but absence of authored PMI does not force a second manual truth if a characteristic is explicitly bound to native CAD semantics plus controlled parameters/specification.",
+  "accepted_authority_states": [
+    "DEFINED_IN_MBD",
+    "VERIFIED_NATIVE_DATUM",
+    "VERIFIED_NATIVE_DIMENSION",
+    "VERIFIED_NATIVE_GEOMETRY",
+    "CONTROLLED_PARAMETER_VERIFIED",
+    "DERIVED_NON_DIMENSIONAL"
+  ],
+  "blocking_states": [
+    "OPEN_SPEC",
+    "SEMANTIC_BIND_REQUIRED",
+    "AMBIGUOUS",
+    "OPEN_TOLERANCE_SPEC",
+    "MISSING"
+  ],
+  "drawing_rule": "A drawing characteristic may be generated only from an accepted authority state. A drawing is a representation of product definition and cannot promote an OPEN or ambiguous characteristic.",
+  "mbd_migration_rule": "Reviewed semantic bindings remain traceable migration targets for later native DimXpert authoring; they are not silent fallbacks."
+}

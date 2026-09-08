@@ -1,0 +1,16 @@
+﻿PartNo,Description,Material,Status,MakeBuy
+K01-P-001,Calibration Rod,AISI 316L / EN 1.4404,ACTIVE,MAKE
+K01-P-002,Rear Guide / Anti-Rotation Bushing,TECAPEEK PVX black baseline,ACTIVE / MATERIAL BASELINE,MAKE
+K01-P-003,Cartridge Body,AISI 316L / EN 1.4404,GATE04C VERIFIED CANDIDATE / NOT PROMOTED,MAKE
+K01-P-004,Front Guide Bushing,TECAPEEK PVX black baseline,ACTIVE / MATERIAL BASELINE,MAKE
+K01-P-006,Retaining Plug,AISI 316L / EN 1.4404,ACTIVE / SERVICE FEATURE OPEN,MAKE
+K01-P-007,Hermetic Magnetic Can,AISI 316L / EN 1.4404,GATE04C VERIFIED CANDIDATE / COMPACTNESS REOPENED,MAKE
+K01-P-008,Internal Magnetic Follower,AISI 316L / EN 1.4404,ACTIVE,MAKE
+K01-P-009,Rear Stop Washer,AISI 316L / EN 1.4404,ACTIVE,MAKE
+K01-P-013,Follower End Cap,AISI 316L / EN 1.4404,ACTIVE / RETENTION QUALIFICATION OPEN,MAKE
+K01-P-014,Front Guide Retaining Ring,OPEN; 1.4310 / AISI 301 candidate,MATERIAL OPEN,MAKE
+K01-P-015,Dual Coil Bobbin,Prototype PLA; production PPS grade OPEN,PRODUCTION MATERIAL/WINDING OPEN,MAKE
+K01-P-016,Long Run Interface Boss,OPEN until production Long Run material confirmed,GATE04B / MATERIAL OPEN,MAKE
+K01-P-017,Datum C relieved/diamond locator,AISI 316L / EN 1.4404 baseline,PLANNED,MAKE
+K01-B-001,Internal SmCo Magnet,Sm2Co17 / S280 candidate,LOT DATA OPEN,BUY
+K01-B-007,Magnet Wire,Material/class per final winding specification,QTY AR/m; FINAL SPEC OPEN,BUY

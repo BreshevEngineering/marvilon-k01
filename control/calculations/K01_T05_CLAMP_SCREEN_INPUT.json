@@ -1,0 +1,28 @@
+{
+  "schema": "k01_t05_clamp_screen_input_v1",
+  "geometry": {
+    "flange_OD_mm": 33.0,
+    "PCD_mm": 26.5,
+    "clearance_hole_D_mm": 2.9,
+    "gland_worst_OD_mm": 20.6,
+    "seal_meanline_D_mm": 17.5,
+    "screw_count": 3
+  },
+  "pressure": {
+    "qualification_abs_bar": 0.2
+  },
+  "fastener": {
+    "thread": "M2.5x0.45",
+    "candidate_preload_N_per_screw": 300.0,
+    "prior_thread_strip_screen_N_per_screw": 930.0,
+    "prior_local_bending_screen_MPa_at_300N": 135.6,
+    "P007_316L_screen_yield_MPa": 170.0
+  },
+  "seal_screen": {
+    "material": "FKM 75A nominal",
+    "squeeze_percent": 26.67,
+    "compression_force_upper_bound_N": 600.0,
+    "basis": "conservative screening bound for small-section FKM at ~27% axial squeeze; exact supplier compound load remains T05 qualification input"
+  },
+  "note": "Screening only. Final release torque depends on screw grade, finish/lubrication and service/galling process."
+}

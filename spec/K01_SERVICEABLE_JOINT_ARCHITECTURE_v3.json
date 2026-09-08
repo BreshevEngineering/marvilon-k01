@@ -1,0 +1,37 @@
+{
+  "schema": "k01_serviceable_joint_architecture_v3",
+  "status": "DESIGN CANDIDATE_PENDING_NATIVE_CAD",
+  "architecture_decision": {
+    "number_of_detachable_service_interfaces": 2,
+    "why_two_are_required": [
+      "J1 P016-P003 removes the complete calibration cartridge from the Long Run without opening the cartridge.",
+      "J2 P003-P007 opens the cartridge to service P006/P008/B001/P013.",
+      "With current rear-assembly topology, eliminating either J1 or J2 removes one of those service functions or requires major redesign."
+    ],
+    "common_philosophy": "Both joints use metal-to-metal axial seating + precision pilot + static elastomer face seal + clamp screws. Fasteners do not locate.",
+    "not_identical": "Seal diameter, screw size and bolt circle differ because the functional openings and available envelopes differ."
+  },
+  "J1_P016_P003": {
+    "status": "KEEP EXISTING BASELINE",
+    "pilot": "P016 Ø10 H7 ×3.20 / P003 Ø10 g6 ×3.00; diametral clearance 0.005..0.029 mm",
+    "seal": "12×1.5 static axial O-ring baseline; compound release OPEN",
+    "clamp": "3× M4×10 A4-70 baseline, PCD24/120°, ~7 mm nominal engagement through 3 mm P003 flange",
+    "pressure_axial_load_at_0p20bar_N": 0.5654866776461628,
+    "clocking": "A face + B central pilot + C relieved/diamond locator"
+  },
+  "J2_P003_P007": {
+    "status": "REPLACE PERMANENT WELD CONCEPT",
+    "pilot": "P003 male Ø16 g6 ×1.50 / P007 female Ø16 H7 ×1.70; 0.20 axial end clearance",
+    "seal": "static axial face O-ring, 1.5-mm cross-section philosophy; exact ISO3601 ring/gland to be frozen after CAD envelope check; FKM/FFKM compound depends gas compatibility",
+    "clamp": "3× M3×8 A4-70, PCD28/120°, P007 clearance Ø3.4, P003 M3-6H full engagement ~5 mm",
+    "flanges": "OD34 candidate; P003 axial thickness 5; P007 axial thickness 3",
+    "pressure_axial_load_at_0p20bar_N": 3.1225,
+    "reason_3_screws": "Three evenly spaced clamps are sufficient for axisymmetric static face seal; pressure load is negligible. Fourth screw adds holes and flange demand without a defined functional benefit."
+  },
+  "P006": {
+    "thread": "M12×1 KEEP",
+    "engagement_mm": 6.0,
+    "reason": "Ø9.10 relief leaves ~0.85 mm radial metal to measured ~Ø10.8 thread-root envelope; M10 is geometrically incompatible and M11 is non-preferred with too little wall.",
+    "service_improvement": "Add dedicated pin-spanner feature; exact geometry after service-joint CAD envelope is frozen."
+  }
+}

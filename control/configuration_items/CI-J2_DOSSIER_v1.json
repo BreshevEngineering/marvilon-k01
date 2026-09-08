@@ -1,0 +1,132 @@
+{
+  "schema": "k01_configuration_item_dossier_v1",
+  "ci_id": "CI-J2",
+  "name": "P003↔P007 removable static-sealed service interface",
+  "type": "interface",
+  "parent_ci": "CI-A001",
+  "current_baseline": "Gate04D-C2 rejected by new P003/P006 head interference; Gate04D-C2R1 active study",
+  "requirements": [
+    "J2 must remain disassemblable/serviceable for P006/follower access",
+    "pilot provides radial/axis location",
+    "metal faces provide axial location",
+    "one fastener-hole axis provides clocking",
+    "seal must not be used as alignment element",
+    "P007 OAL remains 35 mm",
+    "no destructive joining for routine service"
+  ],
+  "materials": [
+    {
+      "item": "P003",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "CONTROLLED"
+    },
+    {
+      "item": "P007",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "CONTROLLED"
+    },
+    {
+      "item": "O-ring",
+      "material": "OPEN — process gas compatibility gate",
+      "status": "OPEN"
+    }
+  ],
+  "interfaces": [
+    "P003 metal face ↔ P007 metal face",
+    "P003 Ø14.10 g6 pilot ↔ P007 Ø14.10 H7 locator",
+    "one corresponding fastener-hole axis for clocking"
+  ],
+  "controlled_parameters": [
+    "pilot nominal Ø14.10; H7/g6",
+    "male pilot L1.50",
+    "female locator depth1.70",
+    "nominal bottom clearance0.20",
+    "seal 16×1.5, gland ID16.00 × width2.10 × depth1.10"
+  ],
+  "decision_records": [
+    "EDR-001",
+    "EDR-002",
+    "EDR-003",
+    "EDR-004",
+    "EDR-005",
+    "EDR-017",
+    "EDR-019"
+  ],
+  "evidence_records": [
+    "SRC-K01-ROTH-001",
+    "SRC-K01-MOSS-001",
+    "Gate04C native build PASS",
+    "Gate04C Verify V2 PASS"
+  ],
+  "change_history": [
+    {
+      "order": 1,
+      "state": "permanent weld concept",
+      "disposition": "REJECTED",
+      "reason": "breaks serviceability; destructive maintenance"
+    },
+    {
+      "order": 2,
+      "state": "Ø16 pilot concept",
+      "disposition": "REJECTED",
+      "reason": "incompatible with existing P007 ID14.1 root / packaging"
+    },
+    {
+      "order": 3,
+      "state": "Ø14.10 H7/g6 pilot",
+      "disposition": "VERIFIED",
+      "reason": "uses actual P007 locating geometry and preserves wall"
+    },
+    {
+      "order": 4,
+      "state": "OD34/PCD28/3×M3",
+      "disposition": "REJECTED",
+      "reason": "1.3 mm outer ligament under prior 2 mm robustness target"
+    },
+    {
+      "order": 5,
+      "state": "OD36/PCD28/3×M3",
+      "disposition": "VERIFIED FUNCTIONAL REFERENCE",
+      "reason": "BUILD+VERIFY PASS; 0 active mate errors"
+    },
+    {
+      "order": 6,
+      "state": "compactness review",
+      "disposition": "REOPENED",
+      "reason": "full circular OD36 is bulky and not globally optimized"
+    },
+    {
+      "order": 7,
+      "state": "J2-C2 OD33/PCD26.5/3×M2.5",
+      "disposition": "NEXT CONTROLLED STUDY",
+      "reason": "reduces package while preserving round lathe-friendly flange"
+    },
+    {
+      "order": 8,
+      "state": "Gate04D-C2 pilot ID10.917",
+      "disposition": "REJECTED",
+      "reason": "exact 15.396683664956 mm³ overlap with P006 head OD11.5 over L1.50"
+    },
+    {
+      "order": 9,
+      "state": "Gate04D-C2R1 pilot OD14.10 / ID12.00 / L1.50",
+      "disposition": "ACTIVE STUDY",
+      "reason": "0.25 mm nominal radial head clearance; 1.05 mm pilot wall; preserves OD33/M2.5 architecture"
+    }
+  ],
+  "rejected_alternatives": [
+    "permanent weld",
+    "OD34/PCD28 M3 under 2 mm outer-ligament rule",
+    "M2 as first production clamp"
+  ],
+  "risks_open_items": [
+    "M2.5 exact standard/head/grade/finish",
+    "thread stripping / engagement",
+    "seal preload / flange separation",
+    "stainless galling / service cycles",
+    "thermal preload change",
+    "P007 structural refresh",
+    "O-ring compound compatibility"
+  ],
+  "release_status": "HOLD / C2R1 ACTIVE"
+}

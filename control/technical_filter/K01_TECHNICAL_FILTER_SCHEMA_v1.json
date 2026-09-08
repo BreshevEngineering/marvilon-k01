@@ -1,0 +1,75 @@
+{
+  "schema": "k01_technical_decision_filter_v1",
+  "name": "K01 Technical Decision Filter",
+  "version": "1.0",
+  "rule": "No technical node may be released because it looks reasonable. Every applicable gate needs: requirement/function, fact or bounded assumption, source, verification method, evidence, disposition and change impact.",
+  "states": [
+    "PASS",
+    "PASS_WITH_LIMIT",
+    "HOLD",
+    "OPEN",
+    "STALE",
+    "N/A_JUSTIFIED"
+  ],
+  "mandatory_meta": [
+    "item_id",
+    "revision",
+    "design_authority",
+    "material_state",
+    "requirements",
+    "interfaces",
+    "assumptions",
+    "sources",
+    "change_impact",
+    "verification_evidence"
+  ],
+  "gates": [
+    "functional_requirement",
+    "architecture_integrity",
+    "interfaces_datums",
+    "load_cases",
+    "static_strength_contact",
+    "buckling_stability",
+    "torsion_rotational",
+    "fatigue_cyclic",
+    "thermal",
+    "dynamics_vibration",
+    "pressure_vacuum_sealing",
+    "fluid_cfd",
+    "magnetic_electromagnetic",
+    "materials_environment",
+    "tolerance_dimensional_chains",
+    "manufacturability_process_capability",
+    "assembly",
+    "serviceability",
+    "inspection_testability",
+    "reliability_fmea",
+    "safety_regulatory_containment",
+    "supply_chain",
+    "cost_value",
+    "documentation_traceability"
+  ],
+  "gate_required_fields": [
+    "status",
+    "question",
+    "basis",
+    "source_ids",
+    "verification_method",
+    "evidence_ids",
+    "open_actions"
+  ],
+  "release_logic": {
+    "hard_fail": [
+      "HOLD",
+      "OPEN",
+      "STALE"
+    ],
+    "pass": [
+      "PASS",
+      "PASS_WITH_LIMIT",
+      "N/A_JUSTIFIED"
+    ],
+    "mode": "FAIL_CLOSED"
+  },
+  "source_policy": "Source IDs must resolve in K01_SOURCE_REGISTRY or to a controlled project artifact; undocumented engineering judgment is an assumption, not a fact."
+}

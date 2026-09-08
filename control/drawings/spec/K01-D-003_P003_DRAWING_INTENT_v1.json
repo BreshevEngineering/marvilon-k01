@@ -1,0 +1,96 @@
+{
+  "schema": "k01_drawing_intent_v1",
+  "drawing_no": "K01-D-003",
+  "part_no": "K01-P-003",
+  "description": "Cartridge Body",
+  "status": "RELEASE_CANDIDATE_NOT_APPROVED",
+  "nominal_geometry_authority": "native SOLIDWORKS model",
+  "projection": "FIRST_ANGLE",
+  "sheet": "A3",
+  "units": "mm",
+  "views": [
+    "SECTION_AA",
+    "END_J2",
+    "ISOMETRIC_REFERENCE"
+  ],
+  "characteristics": [
+    {
+      "id": "P003-C01",
+      "feature": "J2 mating face",
+      "type": "DATUM",
+      "spec": "DATUM A; flatness 0.03; sealing face texture Rq ≤0.4 µm",
+      "source": "CI-J2",
+      "view": "SECTION_AA",
+      "inspection": "surface plate/CMM + profilometer"
+    },
+    {
+      "id": "P003-C02",
+      "feature": "J2 pilot OD",
+      "type": "FIT",
+      "spec": "Ø14.10 g6 ×1.50",
+      "source": "C2R1",
+      "view": "SECTION_AA",
+      "inspection": "micrometer + length/CMM"
+    },
+    {
+      "id": "P003-C03",
+      "feature": "J2 pilot axis",
+      "type": "GD&T",
+      "spec": "perpendicularity Ø0.03 to A; datum feature B = pilot axis",
+      "source": "functional datum architecture",
+      "view": "SECTION_AA",
+      "inspection": "CMM"
+    },
+    {
+      "id": "P003-C04",
+      "feature": "pilot internal clearance",
+      "type": "SIZE",
+      "spec": "Ø12 H9 (12.000…12.043) STUDY→RELEASE CANDIDATE",
+      "source": "WP-T03",
+      "view": "SECTION_AA",
+      "inspection": "plug gauge/CMM"
+    },
+    {
+      "id": "P003-C05",
+      "feature": "O-ring gland",
+      "type": "SIZE",
+      "spec": "ID16.00; radial width 2.10 +0.10/0; depth 1.10 +0.05/0; corner R0.30±0.20",
+      "source": "WP-T04",
+      "view": "DETAIL_J2",
+      "inspection": "CMM/optical comparator"
+    },
+    {
+      "id": "P003-C06",
+      "feature": "clamp thread pattern",
+      "type": "THREAD_GDT",
+      "spec": "3× M2.5×0.45-6H, depth 5.00; PCD Ø26.50 BASIC, 120° BASIC; position Ø0.10 | A | B",
+      "source": "WP-T05",
+      "view": "END_J2",
+      "inspection": "thread gauge + CMM"
+    },
+    {
+      "id": "P003-C07",
+      "feature": "J2 flange OD",
+      "type": "SIZE",
+      "spec": "Ø33.00 ±0.05; existing axial zone 5.00",
+      "source": "C2R1",
+      "view": "SECTION_AA",
+      "inspection": "caliper/micrometer"
+    },
+    {
+      "id": "P003-C08",
+      "feature": "material",
+      "type": "MATERIAL",
+      "spec": "AISI 316L / EN 1.4404",
+      "source": "controlled material",
+      "view": "TITLE",
+      "inspection": "CoC/material traceability"
+    }
+  ],
+  "general_notes": [
+    "UNLESS IDENTIFIED AS REFERENCE, RELEASE CHARACTERISTICS SHALL BE INSPECTABLE TO THE SPECIFIED LIMITS.",
+    "UNSPECIFIED NOMINAL GEOMETRY: CONTROLLED NATIVE SOLIDWORKS MODEL. DO NOT SCALE DRAWING.",
+    "DEBURR; BREAK SHARP EDGES 0.1–0.2 UNLESS FUNCTIONAL EDGE IS SPECIFIED.",
+    "CLEAN/PASSIVATE 316L AS APPROVED PROCESS; NO ABRASIVE DAMAGE ON SEAL/FIT SURFACES."
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "schema": "k01_sw_review_export_2",
+  "export_status": "PASS",
+  "document": {
+    "title": "K01-P-001_Calibration_Rod.SLDPRT",
+    "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-001_Calibration_Rod.SLDPRT",
+    "doc_type": 1
+  },
+  "source_file": {
+    "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-001_Calibration_Rod.SLDPRT",
+    "exists": true,
+    "size_bytes": 80856,
+    "mtime_ns": 1788004683394633500,
+    "sha256": "db4642fa999b81cc3fbab03d3b8bd8a4abea2906dca0c24b6e4a913e8110f30f",
+    "error": null
+  },
+  "material": {
+    "raw": "SOLIDWORKS Materials|AISI Type 316L stainless steel|98",
+    "name": "AISI Type 316L stainless steel",
+    "assigned": true,
+    "errors": []
+  },
+  "body": {
+    "solid_body_count": 1,
+    "errors": []
+  },
+  "custom_properties": {
+    "values": {},
+    "errors": []
+  },
+  "equations": {
+    "available": true,
+    "count": 0,
+    "link_to_file": false,
+    "file_path": "",
+    "items": [],
+    "errors": []
+  },
+  "feature_tree": {
+    "features": [
+      {
+        "path": "Comments",
+        "name": "Comments",
+        "type": "CommentsFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Favorites",
+        "name": "Favorites",
+        "type": "FavoriteFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "History",
+        "name": "History",
+        "type": "HistoryFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Selection Sets",
+        "name": "Selection Sets",
+        "type": "SelectionSetFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Sensors",
+        "name": "Sensors",
+        "type": "SensorFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Design Binder",
+        "name": "Design Binder",
+        "type": "DocsFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Annotations",
+        "name": "Annotations",
+        "type": "DetailCabinet",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [
+          {
+            "path": "Annotations/Notes",
+            "name": "Notes",
+            "type": "NotesAreaFtrFolder",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Annotations/Notes1___EndTag___",
+            "name": "Notes1___EndTag___",
+            "type": "NotesAreaFtrFolder",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      },
+      {
+        "path": "Surface Bodies",
+        "name": "Surface Bodies",
+        "type": "SurfaceBodyFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Solid Bodies",
+        "name": "Solid Bodies",
+        "type": "SolidBodyFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Lights, Cameras and Scene",
+        "name": "Lights, Cameras and Scene",
+        "type": "EnvFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [
+          {
+            "path": "Lights, Cameras and Scene/Ambient",
+            "name": "Ambient",
+            "type": "AmbientLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Lights, Cameras and Scene/Directional1",
+            "name": "Directional1",
+            "type": "DirectionLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Lights, Cameras and Scene/Directional2",
+            "name": "Directional2",
+            "type": "DirectionLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Lights, Cameras and Scene/Directional3",
+            "name": "Directional3",
+            "type": "DirectionLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      },
+      {
+        "path": "Equations",
+        "name": "Equations",
+        "type": "EqnFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "AISI Type 316L stainless steel",
+        "name": "AISI Type 316L stainless steel",
+        "type": "MaterialFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Front Plane",
+        "name": "Front Plane",
+        "type": "RefPlane",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Top Plane",
+        "name": "Top Plane",
+        "type": "RefPlane",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Right Plane",
+        "name": "Right Plane",
+        "type": "RefPlane",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Origin",
+        "name": "Origin",
+        "type": "OriginProfileFeature",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Sketch1",
+        "name": "Sketch1",
+        "type": "ProfileFeature",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D2",
+            "full_name": "D2@Sketch1@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0685,
+            "value_mm": 68.5,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D3",
+            "full_name": "D3@Sketch1@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.03600000000000002,
+            "value_mm": 36.00000000000002,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D1",
+            "full_name": "D1@Sketch1@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.004099999999999999,
+            "value_mm": 4.099999999999999,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D4",
+            "full_name": "D4@Sketch1@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0034999999999999892,
+            "value_mm": 3.4999999999999893,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D5",
+            "full_name": "D5@Sketch1@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.001,
+            "value_mm": 1.0,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Revolve1",
+        "name": "Revolve1",
+        "type": "Revolution",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D1",
+            "full_name": "D1@Revolve1@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 1,
+            "system_value_SI": 6.2831853071796,
+            "value_mm": 6283.1853071796,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D2",
+            "full_name": "D2@Sketch1@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0685,
+            "value_mm": 68.5,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D3",
+            "full_name": "D3@Sketch1@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.03600000000000002,
+            "value_mm": 36.00000000000002,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D1",
+            "full_name": "D1@Sketch1@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.004099999999999999,
+            "value_mm": 4.099999999999999,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D4",
+            "full_name": "D4@Sketch1@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0034999999999999892,
+            "value_mm": 3.4999999999999893,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D5",
+            "full_name": "D5@Sketch1@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.001,
+            "value_mm": 1.0,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [
+          {
+            "path": "Revolve1/Sketch1",
+            "name": "Sketch1",
+            "type": "ProfileFeature",
+            "suppressed": false,
+            "dimensions": [
+              {
+                "name": "D2",
+                "full_name": "D2@Sketch1@K01-P-001_Calibration_Rod.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.0685,
+                "value_mm": 68.5,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D3",
+                "full_name": "D3@Sketch1@K01-P-001_Calibration_Rod.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.03600000000000002,
+                "value_mm": 36.00000000000002,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D1",
+                "full_name": "D1@Sketch1@K01-P-001_Calibration_Rod.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.004099999999999999,
+                "value_mm": 4.099999999999999,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D4",
+                "full_name": "D4@Sketch1@K01-P-001_Calibration_Rod.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.0034999999999999892,
+                "value_mm": 3.4999999999999893,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D5",
+                "full_name": "D5@Sketch1@K01-P-001_Calibration_Rod.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.001,
+                "value_mm": 1.0,
+                "value_deg": null,
+                "errors": []
+              }
+            ],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      },
+      {
+        "path": "Sketch3",
+        "name": "Sketch3",
+        "type": "ProfileFeature",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D1",
+            "full_name": "D1@Sketch3@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0022,
+            "value_mm": 2.2,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Cut-Extrude2",
+        "name": "Cut-Extrude2",
+        "type": "ICE",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D1",
+            "full_name": "D1@Cut-Extrude2@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.027000000000000003,
+            "value_mm": 27.000000000000004,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D1",
+            "full_name": "D1@Sketch3@K01-P-001_Calibration_Rod.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0022,
+            "value_mm": 2.2,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [
+          {
+            "path": "Cut-Extrude2/Sketch3",
+            "name": "Sketch3",
+            "type": "ProfileFeature",
+            "suppressed": false,
+            "dimensions": [
+              {
+                "name": "D1",
+                "full_name": "D1@Sketch3@K01-P-001_Calibration_Rod.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.0022,
+                "value_mm": 2.2,
+                "value_deg": null,
+                "errors": []
+              }
+            ],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "errors": []
+  },
+  "summary": {
+    "dimension_count": 20,
+    "top_level_feature_count": 20
+  },
+  "errors": []
+}

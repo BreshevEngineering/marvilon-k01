@@ -1,0 +1,22 @@
+{
+  "schema": "medtas.evidence_registry.v1",
+  "project": "K01",
+  "items": [
+    {
+      "evidence_id": "K01-EV-GATE04E-FEM-FEMM-REPORT-001",
+      "title": "Gate04E FEM/FEMM Verification Report",
+      "category": "engineering_verification_report",
+      "status": "CURRENT",
+      "node_ids": [
+        "K01.STRUCT.SWSIM.P006",
+        "K01.FEMM.VERIFY.CURRENT",
+        "K01.VERIFY.GATE04E"
+      ],
+      "files": [
+        "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.docx",
+        "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.md"
+      ],
+      "summary": "SolidWorks structural service screen PASS; FEMM field/automation screen PASS_WITH_LIMITATIONS. The report is registered evidence and should be surfaced by Command Center, not treated as a standalone orphan file."
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "medtas.verification_record.v1",
+  "node_id": "K01.FEMM.RUN.A",
+  "verified_state_hash": "952d9ec043c462e181ec57b7d53f5db8cd29571358b17d6d4d2dd9cc671e82df",
+  "verified_artifact_hash": "931ce45836f2169a113a5f449e94eede631133768d25ec0fb341341369f05b73",
+  "verdict": "PASS",
+  "metrics": {
+    "script_completed": true,
+    "field_plot_present": true
+  },
+  "limitations": [],
+  "notes": "PASS is limited to solver completion + field solution evidence; Fz is not accepted as quantitative force evidence."
+}

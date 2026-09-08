@@ -1,0 +1,52 @@
+{
+  "schema": "k01_edr_v2",
+  "edr_id": "EDR-019",
+  "title": "J2 pilot inner clearance around P006 retaining-plug head",
+  "subsystem": "J2 / P003-P006",
+  "class": "B",
+  "status": "C2R1 ACTIVE STUDY",
+  "problem": "C2 pilot ID10.917 produced a new 15.396683664956 mm³ interference with P006 head OD11.5.",
+  "alternatives": [
+    {
+      "pilot_ID_mm": 11.8,
+      "radial_clearance_mm": 0.15,
+      "pilot_wall_mm": 1.15
+    },
+    {
+      "pilot_ID_mm": 12.0,
+      "radial_clearance_mm": 0.25,
+      "pilot_wall_mm": 1.05
+    },
+    {
+      "pilot_ID_mm": 12.2,
+      "radial_clearance_mm": 0.35,
+      "pilot_wall_mm": 0.95
+    },
+    {
+      "pilot_ID_mm": 12.5,
+      "radial_clearance_mm": 0.5,
+      "pilot_wall_mm": 0.8
+    }
+  ],
+  "selected": "ID12.00 mm study value",
+  "rationale": [
+    "exactly eliminates the deterministic OD11.5 head overlap",
+    "retains 1.05 mm radial pilot wall",
+    "keeps pilot OD14.10 g6 and L1.50 unchanged",
+    "keeps P006 unchanged",
+    "maintains simple turned geometry"
+  ],
+  "mandatory_open": [
+    "P006 head OD production tolerance",
+    "pilot ID production tolerance",
+    "worst-case radial clearance",
+    "service-tool envelope/access",
+    "machining robustness of 1.05 mm pilot wall"
+  ],
+  "evidence": [
+    "K01_GATE04D_C2_INTERFERENCE_DELTA.json",
+    "K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1.json",
+    "K01_GATE03E_V5_SPEC.json"
+  ],
+  "decision": "Proceed to Gate04D-C2R1 native build/verify/interference. No release until open gates close."
+}

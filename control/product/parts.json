@@ -1,0 +1,411 @@
+{
+  "authority": "Single product metadata registry. CAD owns occurrence/quantity; this registry owns identity/description/type/material authority/revision/supplier/unit. CAD custom properties are projections from this registry, never a second authoring source.",
+  "items": {
+    "K01-B-001": {
+      "cad_identity_key": "K01-B-001",
+      "cad_property_projection": {
+        "Description": "Internal SmCo Magnet",
+        "MakeBuy": "BUY",
+        "MaterialAuthority": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN",
+        "MaterialStatus": "OPEN LOT DATA",
+        "PartNo": "K01-B-001",
+        "Revision": ""
+      },
+      "description": "Internal SmCo Magnet",
+      "item_type": "PURCHASED",
+      "make_buy": "BUY",
+      "manufacturer_part_number": null,
+      "material_authority": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN",
+      "material_status": "OPEN LOT DATA",
+      "part_number": "K01-B-001",
+      "release_state": "HOLD",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-001": {
+      "cad_identity_key": "K01-P-001",
+      "cad_property_projection": {
+        "Description": "Calibration Rod",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "AISI 316L / EN 1.4404",
+        "MaterialStatus": "CONTROLLED",
+        "PartNo": "K01-P-001",
+        "Revision": ""
+      },
+      "description": "Calibration Rod",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "AISI 316L / EN 1.4404",
+      "material_status": "CONTROLLED",
+      "part_number": "K01-P-001",
+      "release_state": "PASS",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-002": {
+      "cad_identity_key": "K01-P-002",
+      "cad_property_projection": {
+        "Description": "Rear Guide / Anti-Rotation Bushing",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "TECAPEEK PVX black baseline",
+        "MaterialStatus": "BASELINE / PRODUCTION GRADE REVIEW",
+        "PartNo": "K01-P-002",
+        "Revision": ""
+      },
+      "description": "Rear Guide / Anti-Rotation Bushing",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "TECAPEEK PVX black baseline",
+      "material_status": "BASELINE / PRODUCTION GRADE REVIEW",
+      "part_number": "K01-P-002",
+      "release_state": "HOLD",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-003": {
+      "cad_identity_key": "K01-P-003",
+      "cad_property_projection": {
+        "Description": "Cartridge Body",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "AISI 316L / EN 1.4404",
+        "MaterialStatus": "CONTROLLED",
+        "PartNo": "K01-P-003",
+        "Revision": ""
+      },
+      "description": "Cartridge Body",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "AISI 316L / EN 1.4404",
+      "material_status": "CONTROLLED",
+      "part_number": "K01-P-003",
+      "release_state": "PASS",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-004": {
+      "cad_identity_key": "K01-P-004",
+      "cad_property_projection": {
+        "Description": "Front Guide Bushing",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "TECAPEEK PVX black baseline",
+        "MaterialStatus": "BASELINE / PRODUCTION GRADE REVIEW",
+        "PartNo": "K01-P-004",
+        "Revision": ""
+      },
+      "description": "Front Guide Bushing",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "TECAPEEK PVX black baseline",
+      "material_status": "BASELINE / PRODUCTION GRADE REVIEW",
+      "part_number": "K01-P-004",
+      "release_state": "HOLD",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-006": {
+      "cad_identity_key": "K01-P-006",
+      "cad_property_projection": {
+        "Description": "Retaining Plug",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "AISI 316L / EN 1.4404",
+        "MaterialStatus": "CONTROLLED",
+        "PartNo": "K01-P-006",
+        "Revision": ""
+      },
+      "description": "Retaining Plug",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "AISI 316L / EN 1.4404",
+      "material_status": "CONTROLLED",
+      "part_number": "K01-P-006",
+      "release_state": "PASS",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-007": {
+      "cad_identity_key": "K01-P-007",
+      "cad_property_projection": {
+        "Description": "Hermetic Magnetic Can",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "AISI 316L / EN 1.4404",
+        "MaterialStatus": "CONTROLLED",
+        "PartNo": "K01-P-007",
+        "Revision": ""
+      },
+      "description": "Hermetic Magnetic Can",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "AISI 316L / EN 1.4404",
+      "material_status": "CONTROLLED",
+      "part_number": "K01-P-007",
+      "release_state": "PASS",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-008": {
+      "cad_identity_key": "K01-P-008",
+      "cad_property_projection": {
+        "Description": "Internal Magnetic Follower",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "AISI 316L / EN 1.4404",
+        "MaterialStatus": "CONTROLLED",
+        "PartNo": "K01-P-008",
+        "Revision": ""
+      },
+      "description": "Internal Magnetic Follower",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "AISI 316L / EN 1.4404",
+      "material_status": "CONTROLLED",
+      "part_number": "K01-P-008",
+      "release_state": "PASS",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-009": {
+      "cad_identity_key": "K01-P-009",
+      "cad_property_projection": {
+        "Description": "Rear Stop Washer",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "AISI 316L / EN 1.4404",
+        "MaterialStatus": "CONTROLLED",
+        "PartNo": "K01-P-009",
+        "Revision": ""
+      },
+      "description": "Rear Stop Washer",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "AISI 316L / EN 1.4404",
+      "material_status": "CONTROLLED",
+      "part_number": "K01-P-009",
+      "release_state": "PASS",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-013": {
+      "cad_identity_key": "K01-P-013",
+      "cad_property_projection": {
+        "Description": "Follower End Cap",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "AISI 316L / EN 1.4404",
+        "MaterialStatus": "CONTROLLED / RETENTION QUALIFICATION OPEN",
+        "PartNo": "K01-P-013",
+        "Revision": ""
+      },
+      "description": "Follower End Cap",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "AISI 316L / EN 1.4404",
+      "material_status": "CONTROLLED / RETENTION QUALIFICATION OPEN",
+      "part_number": "K01-P-013",
+      "release_state": "HOLD",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-014": {
+      "cad_identity_key": "K01-P-014",
+      "cad_property_projection": {
+        "Description": "Front Guide Retaining Ring / IN Stop",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "OPEN; 1.4310 / AISI 301 candidate",
+        "MaterialStatus": "OPEN",
+        "PartNo": "K01-P-014",
+        "Revision": ""
+      },
+      "description": "Front Guide Retaining Ring / IN Stop",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "OPEN; 1.4310 / AISI 301 candidate",
+      "material_status": "OPEN",
+      "part_number": "K01-P-014",
+      "release_state": "HOLD",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-015": {
+      "cad_identity_key": "K01-P-015",
+      "cad_property_projection": {
+        "Description": "Dual Coil Bobbin",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "Prototype/current CAD material not production release; PPS grade/winding/leads OPEN",
+        "MaterialStatus": "OPEN",
+        "PartNo": "K01-P-015",
+        "Revision": ""
+      },
+      "description": "Dual Coil Bobbin",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "Prototype/current CAD material not production release; PPS grade/winding/leads OPEN",
+      "material_status": "OPEN",
+      "part_number": "K01-P-015",
+      "release_state": "HOLD",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    },
+    "K01-P-016": {
+      "cad_identity_key": "K01-P-016",
+      "cad_property_projection": {
+        "Description": "Long Run Interface Boss",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "AISI 316L current CAD; production Long Run compatibility/weld route OPEN",
+        "MaterialStatus": "CONDITIONAL / OPEN",
+        "PartNo": "K01-P-016",
+        "Revision": ""
+      },
+      "description": "Long Run Interface Boss",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "AISI 316L current CAD; production Long Run compatibility/weld route OPEN",
+      "material_status": "CONDITIONAL / OPEN",
+      "part_number": "K01-P-016",
+      "release_state": "HOLD",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
+    }
+  },
+  "non_modeled_inclusions": [
+    {
+      "bom_views": [
+        "EBOM",
+        "MBOM"
+      ],
+      "description": "J2 static face seal / O-ring",
+      "item_type": "PURCHASED_NON_MODELED",
+      "note": "Seal architecture exists, but released compound/supplier/part number is not yet controlled. No value is guessed.",
+      "parent": "K01-A-001",
+      "part_number": null,
+      "quantity": 1,
+      "registry_key": "NM-J2-SEAL",
+      "release_blocker": true,
+      "requirement_ids": [
+        "REQ-K01-SEAL-001",
+        "REQ-K01-MEDIA-001",
+        "REQ-K01-LEAK-001"
+      ],
+      "status": "OPEN_SPEC",
+      "unit": "ea"
+    },
+    {
+      "bom_views": [
+        "EBOM",
+        "MBOM"
+      ],
+      "description": "J2 clamp screw M2.5",
+      "item_type": "PURCHASED_NON_MODELED",
+      "note": "Thread size/count are controlled by current interface definition. Exact screw length/grade/finish/lubrication/locking route remain OPEN.",
+      "parent": "K01-A-001",
+      "part_number": null,
+      "quantity": 3,
+      "registry_key": "NM-J2-CLAMP-SCREW",
+      "release_blocker": true,
+      "status": "OPEN_SPEC",
+      "unit": "ea"
+    },
+    {
+      "bom_views": [
+        "MBOM"
+      ],
+      "description": "P007 containment weld process / filler definition",
+      "item_type": "PROCESS_AUXILIARY",
+      "note": "May be autogenous or use filler; process/filler is intentionally not assumed until welding route is released.",
+      "parent": "K01-P-007",
+      "part_number": null,
+      "quantity": null,
+      "registry_key": "NM-P007-WELD-PROCESS",
+      "release_blocker": true,
+      "status": "OPEN_PROCESS",
+      "unit": "process"
+    },
+    {
+      "bom_views": [
+        "MBOM"
+      ],
+      "description": "J2 fastener lubrication / locking process",
+      "item_type": "PROCESS_AUXILIARY",
+      "note": "Exact dry/lubricated/locking condition must match the released preload/torque process.",
+      "parent": "K01-A-001",
+      "part_number": null,
+      "quantity": null,
+      "registry_key": "NM-J2-FASTENER-PROCESS",
+      "release_blocker": true,
+      "status": "OPEN_PROCESS",
+      "unit": "process"
+    },
+    {
+      "bom_views": [
+        "PROCESS"
+      ],
+      "description": "Process gas / cleaning-media definition",
+      "item_type": "PROCESS_MEDIUM",
+      "note": "Tracked in product/process definition; not forced into EBOM/MBOM unless manufacturing policy requires it.",
+      "parent": "K01-A-001",
+      "part_number": null,
+      "quantity": null,
+      "registry_key": "NM-PROCESS-MEDIUM",
+      "release_blocker": true,
+      "requirement_ids": [
+        "REQ-K01-MEDIA-001"
+      ],
+      "status": "OPEN_SPEC",
+      "unit": "process"
+    }
+  ],
+  "project": "K01",
+  "schema": "k01.parts_registry.v1_9",
+  "source_note": "Seeded from the current reconciled K01 BOM state supplied 2026-09-07. OPEN fields remain OPEN.",
+  "suppression_policy": {
+    "dispositions": {},
+    "rule": "Any suppressed CAD occurrence requires an explicit disposition before BOM verification can PASS. Silent disappearance is prohibited."
+  }
+}

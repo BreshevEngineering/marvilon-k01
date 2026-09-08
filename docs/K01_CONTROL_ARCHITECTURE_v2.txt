@@ -1,0 +1,21 @@
+K01 CONTROL ARCHITECTURE — USER-FACING RULE
+
+Human cockpit:
+  control\K01_ENGINEERING_CONTROL_CENTER_v2.xlsx
+
+Machine authority:
+  master\K01_master.json
+  + stable native SOLIDWORKS CAD
+
+Generated projections:
+  BOM CSV/JSON
+  drawing SLDDRW/PDF/DXF
+  compact gate JSON reports
+
+Markdown files are implementation/support notes only. They are not the user's
+primary project-control interface.
+
+Git commits:
+  A) repository/control cleanup commit
+  B) engineering design commit after Datum C + J2 service-joint QA
+  C) design-freeze tag after BOM/drawings/FEMM/CFD/master sync

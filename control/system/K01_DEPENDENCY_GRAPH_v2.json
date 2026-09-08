@@ -1,0 +1,71 @@
+{
+  "schema": "k01_dependency_graph_v2",
+  "change_event": "Gate04D-C2 M3/OD36/PCD28 -> M2.5/OD33/PCD26.5",
+  "node": "CI-J2",
+  "affected": [
+    {
+      "artifact": "P003 C2 CAD",
+      "status": "CURRENT"
+    },
+    {
+      "artifact": "P007 C2 CAD",
+      "status": "CURRENT"
+    },
+    {
+      "artifact": "C2 verification assembly",
+      "status": "CURRENT"
+    },
+    {
+      "artifact": "interference QA",
+      "status": "OPEN"
+    },
+    {
+      "artifact": "fastener/thread calculation",
+      "status": "OPEN"
+    },
+    {
+      "artifact": "seal/preload calculation",
+      "status": "OPEN"
+    },
+    {
+      "artifact": "thermal preload",
+      "status": "OPEN"
+    },
+    {
+      "artifact": "service/galling",
+      "status": "OPEN"
+    },
+    {
+      "artifact": "P007 +0.20bar static",
+      "status": "STALE"
+    },
+    {
+      "artifact": "P007 -0.20bar buckling",
+      "status": "STALE"
+    },
+    {
+      "artifact": "final FEMM",
+      "status": "IMPACT_REVIEW"
+    },
+    {
+      "artifact": "K01-D-003 drawing",
+      "status": "STALE"
+    },
+    {
+      "artifact": "K01-D-006 drawing",
+      "status": "STALE"
+    },
+    {
+      "artifact": "BOM",
+      "status": "STALE"
+    },
+    {
+      "artifact": "technology P003/P007",
+      "status": "STALE"
+    },
+    {
+      "artifact": "production promotion",
+      "status": "BLOCKED"
+    }
+  ]
+}

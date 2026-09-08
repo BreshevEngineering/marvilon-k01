@@ -1,0 +1,26 @@
+{
+  "schema": "k01.drawing_rejection.v1",
+  "id": "DRAW-REJECT-C2R1-V3",
+  "status": "REJECTED_FOR_PRODUCTION",
+  "artifacts": [
+    {
+      "drawing": "K01-D-003",
+      "file": "K01-D-003_K01-P-003_C2R1_TPD_V3.PDF",
+      "issues": [
+        "Visible drawing dimension shows Ø34.00 while release characteristic C07 states flange OD Ø33.00 ±0.05.",
+        "Multiple repeated radii/diameters are imported into views without a functional manufacturing hierarchy.",
+        "The sheet is visually congested and does not provide a clean datum/GD&T-driven manufacturing definition."
+      ]
+    },
+    {
+      "drawing": "K01-D-006",
+      "file": "K01-D-006_K01-P-007_C2R1_TPD_V3.PDF",
+      "issues": [
+        "Visible drawing dimension shows 40.00 overall while release characteristic C06 states overall length 35.00 ±0.05.",
+        "Thin-can OD/ID are identified as native-model control rather than released toleranced manufacturing characteristics.",
+        "The drawing cannot be accepted as production TPD until structural/manufacturing tolerances are released and placed as native drawing annotations."
+      ]
+    }
+  ],
+  "disposition": "Retain PDFs as negative evidence. Do not repair them by cosmetic layout changes. Replace the generator architecture."
+}

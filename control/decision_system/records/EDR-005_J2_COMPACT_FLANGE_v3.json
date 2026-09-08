@@ -1,0 +1,223 @@
+{
+  "schema": "k01_edr_v2",
+  "edr_id": "EDR-005",
+  "title": "J2 compact flange geometry — Gate04D-C2",
+  "subsystem": "J2 P003↔P007",
+  "class": "B",
+  "status": "C2 REJECTED BY INTERFERENCE / C2R1 ACTIVE STUDY",
+  "requirement_problem": "Reduce OD36 bulk without losing serviceability, seal architecture, datum functions, manufacturability or robustness.",
+  "selected_study_alternative": "C2R1 round OD33 / 3×M2.5 / PCD26.5 / pilot OD14.10 ID12.00 L1.50",
+  "alternatives": [
+    "C0 OD36/M3",
+    "C1 OD34/M3",
+    "C2 OD33/M2.5",
+    "C3 three-lobed/M2.5"
+  ],
+  "mandatory_criteria": {
+    "functional_requirement": {
+      "status": "PASS",
+      "note": "OD33 C2 preserves removable J2, L35, Ø14.10 pilot and current seal architecture.",
+      "evidence": [
+        "ERR-G04D-C2-BUILD-001"
+      ]
+    },
+    "architecture_integrity": {
+      "status": "PASS",
+      "note": "No weld; serviceable P003↔P007 concept retained.",
+      "evidence": [
+        "CI-J2"
+      ]
+    },
+    "interfaces_datums": {
+      "status": "HOLD",
+      "note": "C2 assembly mate architecture passed, but C2R1 changes P003 pilot topology; rerun native build/verify before carrying this gate forward.",
+      "evidence": [
+        "Gate04D-C2 historical verify PASS",
+        "Gate04D-C2R1 verify OPEN"
+      ]
+    },
+    "load_cases": {
+      "status": "HOLD",
+      "note": "Pressure case exists; seal/preload/service/thermal load envelope not fully bounded.",
+      "evidence": [
+        "SRC-K01-MOSS-001"
+      ]
+    },
+    "static_strength_contact": {
+      "status": "HOLD",
+      "note": "Preliminary M2.5/thread screen does not reject the concept; exact preload and local flange/contact verification remain open.",
+      "evidence": [
+        "SRC-FASTENER-VDI2230-001"
+      ]
+    },
+    "buckling_stability": {
+      "status": "HOLD",
+      "note": "Historical P007 result must be refreshed after final C2 flange freeze.",
+      "evidence": [
+        "SRC-K01-MOSS-001"
+      ]
+    },
+    "torsion_rotational": {
+      "status": "HOLD",
+      "note": "Clocking geometry works; torque reaction/loosening/service strategy open.",
+      "evidence": [
+        "SRC-FASTENER-VDI2230-001"
+      ]
+    },
+    "fatigue_cyclic": {
+      "status": "HOLD",
+      "note": "Repeated service cycles/preload/galling not quantified.",
+      "evidence": [
+        "SRC-FASTENER-ISO3506-1-001"
+      ]
+    },
+    "thermal": {
+      "status": "HOLD",
+      "note": "316L/316L match helps; O-ring and screw/preload temperature behavior open.",
+      "evidence": [
+        "SRC-FASTENER-ISO3506-1-001"
+      ]
+    },
+    "dynamics_vibration": {
+      "status": "HOLD",
+      "note": "Vibration loosening/retention not explicitly disposed.",
+      "evidence": [
+        "SRC-FASTENER-VDI2230-001"
+      ]
+    },
+    "pressure_vacuum_sealing": {
+      "status": "HOLD",
+      "note": "Gland geometry controlled; compound/compression force/leak test open.",
+      "evidence": [
+        "SRC-SEAL-PARKER-001"
+      ]
+    },
+    "fluid_cfd": {
+      "status": "PASS",
+      "note": "C2 changes external flange/fastener package; controlled sample-flow geometry is unchanged.",
+      "evidence": [
+        "K01 CFD evidence"
+      ]
+    },
+    "magnetic_electromagnetic": {
+      "status": "HOLD",
+      "note": "Final FEMM impact review remains a project gate.",
+      "evidence": [
+        "SRC-K01-BRAUER-001"
+      ]
+    },
+    "materials_environment": {
+      "status": "HOLD",
+      "note": "P003/P007 316L controlled; exact screw/finish and O-ring compound open.",
+      "evidence": [
+        "SRC-FASTENER-ISO3506-1-001"
+      ]
+    },
+    "tolerance_dimensional_chains": {
+      "status": "HOLD",
+      "note": "Nominal ligaments pass; production tolerances/thermal stack still open.",
+      "evidence": [
+        "ERR-G04D-C2-BUILD-001"
+      ]
+    },
+    "manufacturability_process_capability": {
+      "status": "HOLD",
+      "note": "Round OD33 simplifies machining; M2.5 tapping in 316L and inspection capability need qualification.",
+      "evidence": [
+        "K01 technology"
+      ]
+    },
+    "assembly": {
+      "status": "HOLD",
+      "note": "C2 assembly passed, but C2R1 candidate/assembly must be rebuilt and verified; service-tool access also remains open.",
+      "evidence": [
+        "ERR-G04D-C2-VERIFY-001"
+      ]
+    },
+    "serviceability": {
+      "status": "HOLD",
+      "note": "Removable architecture passes; galling/repeated-service procedure open.",
+      "evidence": [
+        "EDR-017"
+      ]
+    },
+    "inspection_testability": {
+      "status": "HOLD",
+      "note": "Released inspection plan and leak-test criteria are missing.",
+      "evidence": [
+        "K01 technology"
+      ]
+    },
+    "reliability_fmea": {
+      "status": "HOLD",
+      "note": "Loosening/thread/seal/service failure modes need FMEA disposition.",
+      "evidence": [
+        "HEC-001"
+      ]
+    },
+    "safety_regulatory_containment": {
+      "status": "HOLD",
+      "note": "Containment concept retained; leak/material compatibility evidence required.",
+      "evidence": [
+        "MARV protection concept"
+      ]
+    },
+    "supply_chain": {
+      "status": "HOLD",
+      "note": "Exact M2.5 screw and seal compound/supplier not frozen.",
+      "evidence": [
+        "SRC-FASTENER-ISO4762-001"
+      ]
+    },
+    "change_impact": {
+      "status": "PASS",
+      "note": "C2 failure is preserved as rejection evidence and C2R1 is a separate controlled candidate; affected CAD/analysis/BOM/drawing/FEMM nodes are reopened.",
+      "evidence": [
+        "EDR-019",
+        "CI-J2",
+        "K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1"
+      ]
+    },
+    "documentation_traceability": {
+      "status": "PASS",
+      "note": "C2 delta report, exact root-cause proof, EDR-019 and C2R1 controlled inputs are linked.",
+      "evidence": [
+        "EDR-005",
+        "EDR-019",
+        "CI-J2"
+      ]
+    }
+  },
+  "evidence": [
+    "ERR-G04D-C2-BUILD-001",
+    "ERR-G04D-C2-VERIFY-001",
+    "SRC-FASTENER-ISO4762-001",
+    "SRC-FASTENER-ISO3506-1-001",
+    "SRC-FASTENER-VDI2230-001",
+    "SRC-SEAL-PARKER-001",
+    "SRC-SEAL-TRELLEBORG-001",
+    "K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1",
+    "K01_GATE04D_C2_INTERFERENCE_DELTA.json"
+  ],
+  "decision": "Reject C2 as-built due proven P003↔P006 head interference. Continue OD33/M2.5 concept as Gate04D-C2R1 with pilot inner clearance ID12.00 study value.",
+  "release": {
+    "decision": "HOLD",
+    "blocking_gate_count": 19
+  },
+  "C2_failure": {
+    "pair": "P003↔P006",
+    "stable_volume_mm3": 0.0,
+    "C2_volume_mm3": 15.396683664956079,
+    "root_cause": "pilot ID10.917 overlaps P006 head OD11.5 over 1.50 mm",
+    "analytical_overlap_mm3": 15.396683664956091,
+    "disposition": "REJECT C2 AS-BUILT"
+  },
+  "C2R1": {
+    "pilot_OD_mm": 14.1,
+    "pilot_ID_study_mm": 12.0,
+    "pilot_L_mm": 1.5,
+    "nominal_radial_clearance_to_P006_head_mm": 0.25,
+    "pilot_wall_mm": 1.05,
+    "status": "ACTIVE STUDY / tolerance+tool access OPEN"
+  }
+}

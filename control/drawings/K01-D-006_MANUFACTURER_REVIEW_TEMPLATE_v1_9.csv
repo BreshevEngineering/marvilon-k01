@@ -1,0 +1,15 @@
+review_id,balloon_id,topic,manufacturer_comment,accepted_change,owner,status
+P007-MFG-001,C01,Datum A / flatness,,,,OPEN
+P007-MFG-002,C02,Locator / fit / inspectability,,,,OPEN
+P007-MFG-003,C03,Perpendicularity / datum scheme,,,,OPEN
+P007-MFG-004,C04,3-hole pattern / position / drilling capability,,,,OPEN
+P007-MFG-005,C05,Flange size tolerance,,,,OPEN
+P007-MFG-006,C06,Overall length tolerance,,,,OPEN
+P007-MFG-007,C07,Thin-wall OD tolerance / process capability,,,,OPEN
+P007-MFG-008,C08,Thin-wall ID tolerance / process capability,,,,OPEN
+P007-MFG-009,C10,Weld process / distortion / inspectability,,,,OPEN
+P007-MFG-010,C11,Coaxiality / concentricity control,,,,OPEN
+P007-MFG-011,C12,Hermetic leak acceptance / test method,,,,OPEN
+P007-MFG-012,,Surface finish / deburr / cleaning,,,,OPEN
+P007-MFG-013,,Inspection feasibility and gauge strategy,,,,OPEN
+P007-MFG-014,,General manufacturability / cost / lead-time feedback,,,,OPEN

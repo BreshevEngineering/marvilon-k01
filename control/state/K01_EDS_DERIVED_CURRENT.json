@@ -1,0 +1,205 @@
+﻿[
+    {
+        "gate":  "functional_requirement",
+        "status":  "PASS",
+        "basis":  "C2R1 preserves removable J2, P007 L35 and compact service architecture.",
+        "evidence":  [
+                         "R1-BUILD",
+                         "R1-VERIFY",
+                         "R1-INT"
+                     ]
+    },
+    {
+        "gate":  "architecture_integrity",
+        "status":  "PASS",
+        "basis":  "No permanent weld; pilot/face/clocking/clamp/seal functions remain separated.",
+        "evidence":  [
+                         "CI-J2",
+                         "EDR-005"
+                     ]
+    },
+    {
+        "gate":  "interfaces_datums",
+        "status":  "PASS",
+        "basis":  "R1 verify proves pilot concentric + axial face + M2.5 clocking and zero active mate errors.",
+        "evidence":  [
+                         "R1-VERIFY"
+                     ]
+    },
+    {
+        "gate":  "load_cases",
+        "status":  "HOLD",
+        "basis":  "Pressure case exists; preload/seal/service/thermal load envelope not fully bounded.",
+        "evidence":  [
+                         "P007-static",
+                         "DOS-J2-C2R1"
+                     ]
+    },
+    {
+        "gate":  "static_strength_contact",
+        "status":  "HOLD",
+        "basis":  "M2.5 preliminary screen passes, but released preload and local flange/contact verification are open.",
+        "evidence":  [
+                         "MECH-SCREEN"
+                     ]
+    },
+    {
+        "gate":  "buckling_stability",
+        "status":  "STALE",
+        "basis":  "Historical P007 buckling PASS requires refresh after C2R1 freeze.",
+        "evidence":  [
+                         "P007-buckling-history"
+                     ]
+    },
+    {
+        "gate":  "torsion_rotational",
+        "status":  "HOLD",
+        "basis":  "Clocking geometry works; service torque/loosening strategy is not released.",
+        "evidence":  [
+                         "R1-VERIFY",
+                         "DOS-J2-C2R1"
+                     ]
+    },
+    {
+        "gate":  "fatigue_cyclic",
+        "status":  "HOLD",
+        "basis":  "Repeated service/preload cycle evidence is open.",
+        "evidence":  [
+                         "DOS-J2-C2R1"
+                     ]
+    },
+    {
+        "gate":  "thermal",
+        "status":  "HOLD",
+        "basis":  "316L/316L reduces mismatch, but seal and fastener preload temperature response remain open.",
+        "evidence":  [
+                         "DOS-J2-C2R1"
+                     ]
+    },
+    {
+        "gate":  "dynamics_vibration",
+        "status":  "HOLD",
+        "basis":  "No explicit loosening/vibration disposition yet.",
+        "evidence":  [
+                         "DOS-J2-C2R1"
+                     ]
+    },
+    {
+        "gate":  "pressure_vacuum_sealing",
+        "status":  "HOLD",
+        "basis":  "16×1.5 gland geometry is controlled; compound, compression force and leak acceptance are open.",
+        "evidence":  [
+                         "Parker",
+                         "Trelleborg"
+                     ]
+    },
+    {
+        "gate":  "fluid_cfd",
+        "status":  "PASS",
+        "basis":  "C2R1 changes external J2 package and does not change the controlled sample-flow/rod-force geometry.",
+        "evidence":  [
+                         "CFD-envelope"
+                     ]
+    },
+    {
+        "gate":  "magnetic_electromagnetic",
+        "status":  "HOLD",
+        "basis":  "Final FEMM remains after mechanical/P015/B001 freeze.",
+        "evidence":  [
+                         "FEMM-plan"
+                     ]
+    },
+    {
+        "gate":  "materials_environment",
+        "status":  "HOLD",
+        "basis":  "P003/P007 316L controlled; exact screw finish and O-ring compound remain open.",
+        "evidence":  [
+                         "BOM-REC",
+                         "DOS-J2-C2R1"
+                     ]
+    },
+    {
+        "gate":  "tolerance_dimensional_chains",
+        "status":  "HOLD",
+        "basis":  "Nominal geometry passes; pilot/head worst-case clearance and production tolerances are not frozen.",
+        "evidence":  [
+                         "EDR-019"
+                     ]
+    },
+    {
+        "gate":  "manufacturability_process_capability",
+        "status":  "HOLD",
+        "basis":  "Round OD33 route is simple; M2.5 tapping in 316L, thin-wall inspection and capability acceptance remain open.",
+        "evidence":  [
+                         "DOS-J2-C2R1"
+                     ]
+    },
+    {
+        "gate":  "assembly",
+        "status":  "PASS",
+        "basis":  "R1 assembly and interference gates pass. Service-cycle/tool-access is tracked separately under serviceability.",
+        "evidence":  [
+                         "R1-VERIFY",
+                         "R1-INT"
+                     ]
+    },
+    {
+        "gate":  "serviceability",
+        "status":  "HOLD",
+        "basis":  "Removable architecture is preserved; tool feature/access and galling/service-cycle evidence remain open.",
+        "evidence":  [
+                         "EDR-019",
+                         "DOS-J2-C2R1"
+                     ]
+    },
+    {
+        "gate":  "inspection_testability",
+        "status":  "HOLD",
+        "basis":  "Inspection plan and leak acceptance are not released.",
+        "evidence":  [
+                         "DOS-J2-C2R1"
+                     ]
+    },
+    {
+        "gate":  "reliability_fmea",
+        "status":  "HOLD",
+        "basis":  "Loosening/thread/seal/service failure modes still need formal disposition.",
+        "evidence":  [
+                         "HEC-001"
+                     ]
+    },
+    {
+        "gate":  "safety_regulatory_containment",
+        "status":  "HOLD",
+        "basis":  "Containment concept retained; sealing/material compatibility evidence still blocks release.",
+        "evidence":  [
+                         "MARV-protection-concept"
+                     ]
+    },
+    {
+        "gate":  "supply_chain",
+        "status":  "HOLD",
+        "basis":  "Exact M2.5 screw product/finish and O-ring compound/supplier are open.",
+        "evidence":  [
+                         "BOM-REC"
+                     ]
+    },
+    {
+        "gate":  "change_impact",
+        "status":  "PASS",
+        "basis":  "C2 rejection and C2R1 are separate controlled states; downstream nodes are reopened explicitly.",
+        "evidence":  [
+                         "EDR-005",
+                         "EDR-019"
+                     ]
+    },
+    {
+        "gate":  "documentation_traceability",
+        "status":  "PASS",
+        "basis":  "Decision/evidence traceability exists, but manufacturing drawing quality is still a release blocker.",
+        "evidence":  [
+                         "DOS-J2-C2R1",
+                         "DRAWING-QA"
+                     ]
+    }
+]

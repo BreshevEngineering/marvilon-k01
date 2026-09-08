@@ -1,0 +1,1298 @@
+{
+  "schema": "k01_p003_p007_interface_probe_v2",
+  "created_utc": "2026-09-02T05:27:32.326440+00:00",
+  "active_assembly": {
+    "title": "K01-A-001_Calibration_Module.SLDASM",
+    "doc_type": 2
+  },
+  "manual_reference": {
+    "current_P003_to_P007_station_mm": 27.0,
+    "status": "user-measured reference only"
+  },
+  "parts": {
+    "P003": {
+      "tag": "P003",
+      "name": "K01-P-003_Cartridge_Body-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT",
+      "model_title": "K01-P-003_Cartridge_Body.SLDPRT",
+      "resolved": true,
+      "component_transform_raw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0005737828141542337,
+        0.019903463636492823,
+        0.030689922541707035,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "solid_body_count": 1,
+      "bodies": [
+        {
+          "index": 0,
+          "body_box_mm": [
+            -8.367034112149511,
+            -17.000000000000004,
+            -17.000000000000004,
+            29.632965887850492,
+            17.000000000000004,
+            17.000000000000004
+          ],
+          "face_count": 24,
+          "faces": [
+            {
+              "index": 0,
+              "kind": "plane",
+              "area_mm2": 53.90972993560087,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "surface_params_raw_SI": [
+                -1.0,
+                -0.0,
+                -0.0,
+                -0.00836703411214951,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 1,
+              "kind": "cylinder",
+              "area_mm2": 52.77875658030855,
+              "diameter_mm": 5.6,
+              "axis_origin_mm": [
+                -11.36703411214951,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.01136703411214951,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.0028
+              ],
+              "errors": []
+            },
+            {
+              "index": 2,
+              "kind": "plane",
+              "area_mm2": 9.581857593448866,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "surface_params_raw_SI": [
+                1.0,
+                0.0,
+                0.0,
+                -0.00536703411214951,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 3,
+              "kind": "cylinder",
+              "area_mm2": 165.87609210954108,
+              "diameter_mm": 6.6,
+              "axis_origin_mm": [
+                -11.36703411214951,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.01136703411214951,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.0033
+              ],
+              "errors": []
+            },
+            {
+              "index": 4,
+              "kind": "plane",
+              "area_mm2": 4.27256600888212,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "surface_params_raw_SI": [
+                1.0,
+                0.0,
+                0.0,
+                0.0026329658878504903,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 5,
+              "kind": "cylinder",
+              "area_mm2": 1.0995574287564545,
+              "diameter_mm": 7.0,
+              "axis_origin_mm": [
+                -11.36703411214951,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.01136703411214951,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.0035
+              ],
+              "errors": []
+            },
+            {
+              "index": 6,
+              "kind": "plane",
+              "area_mm2": 10.532189371159792,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "surface_params_raw_SI": [
+                1.0,
+                0.0,
+                0.0,
+                0.0026829658878504917,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 7,
+              "kind": "cylinder",
+              "area_mm2": 23.57765286519132,
+              "diameter_mm": 7.9,
+              "axis_origin_mm": [
+                -11.36703411214951,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.01136703411214951,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.00395
+              ],
+              "errors": []
+            },
+            {
+              "index": 8,
+              "kind": "plane",
+              "area_mm2": 9.071348787240519,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "surface_params_raw_SI": [
+                1.0,
+                0.0,
+                0.0,
+                0.0036329658878504895,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 9,
+              "kind": "cylinder",
+              "area_mm2": 324.21236185046666,
+              "diameter_mm": 8.6,
+              "axis_origin_mm": [
+                -11.36703411214951,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.01136703411214951,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.0043
+              ],
+              "errors": []
+            },
+            {
+              "index": 10,
+              "kind": "plane",
+              "area_mm2": 5.598048945396296,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "surface_params_raw_SI": [
+                1.0,
+                0.0,
+                0.0,
+                0.01563296588785049,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 11,
+              "kind": "cylinder",
+              "area_mm2": 205.36647924969148,
+              "diameter_mm": 9.03,
+              "axis_origin_mm": [
+                -11.36703411214951,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.01136703411214951,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.004515
+              ],
+              "errors": []
+            },
+            {
+              "index": 12,
+              "kind": "plane",
+              "area_mm2": 29.918354222403572,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "surface_params_raw_SI": [
+                1.0,
+                0.0,
+                0.0,
+                0.023632965887850493,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 13,
+              "kind": "cylinder",
+              "area_mm2": 205.78060199543845,
+              "diameter_mm": 10.917,
+              "axis_origin_mm": [
+                -11.36703411214951,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.01136703411214951,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.0054585
+              ],
+              "errors": []
+            },
+            {
+              "index": 14,
+              "kind": "plane",
+              "area_mm2": 60.33358869322472,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "surface_params_raw_SI": [
+                1.0,
+                0.0,
+                0.0,
+                0.029632965887850492,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 15,
+              "kind": "cylinder",
+              "area_mm2": 1407.4335088082275,
+              "diameter_mm": 14.0,
+              "axis_origin_mm": [
+                -11.36703411214951,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.01136703411214951,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.007
+              ],
+              "errors": []
+            },
+            {
+              "index": 16,
+              "kind": "plane",
+              "area_mm2": 781.6675221213109,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "surface_params_raw_SI": [
+                -1.0,
+                -0.0,
+                -0.0,
+                -0.00536703411214951,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 17,
+              "kind": "cylinder",
+              "area_mm2": 94.24777960769381,
+              "diameter_mm": 10.0,
+              "axis_origin_mm": [
+                -11.36703411214951,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.01136703411214951,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.005
+              ],
+              "errors": []
+            },
+            {
+              "index": 18,
+              "kind": "cylinder",
+              "area_mm2": 320.442450666159,
+              "diameter_mm": 34.00000000000001,
+              "axis_origin_mm": [
+                -2.36703411214951,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                0.0,
+                0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.00236703411214951,
+                0.0,
+                0.0,
+                -1.0,
+                0.0,
+                0.0,
+                0.017000000000000005
+              ],
+              "errors": []
+            },
+            {
+              "index": 19,
+              "kind": "plane",
+              "area_mm2": 706.269298435157,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                -1.0,
+                0.0,
+                0.0
+              ],
+              "surface_params_raw_SI": [
+                -1.0,
+                0.0,
+                0.0,
+                -0.00236703411214951,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 20,
+              "kind": "cylinder",
+              "area_mm2": 42.41150082346215,
+              "diameter_mm": 4.499999999999994,
+              "axis_origin_mm": [
+                -5.3670341121495095,
+                12.000000000000002,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.00536703411214951,
+                0.012000000000000002,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.002249999999999997
+              ],
+              "errors": []
+            },
+            {
+              "index": 21,
+              "kind": "cylinder",
+              "area_mm2": 42.41150082346217,
+              "diameter_mm": 4.499999999999992,
+              "axis_origin_mm": [
+                -5.3670341121495095,
+                -6.000000000000051,
+                -10.39230484541324
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.00536703411214951,
+                -0.00600000000000005,
+                -0.01039230484541324,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.002249999999999996
+              ],
+              "errors": []
+            },
+            {
+              "index": 22,
+              "kind": "cylinder",
+              "area_mm2": 42.41150082346217,
+              "diameter_mm": 4.499999999999992,
+              "axis_origin_mm": [
+                -5.3670341121495095,
+                -5.999999999999905,
+                10.392304845413321
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.00536703411214951,
+                -0.005999999999999905,
+                0.01039230484541332,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.002249999999999996
+              ],
+              "errors": []
+            },
+            {
+              "index": 23,
+              "kind": "plane",
+              "area_mm2": 21.26254923568665,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                -0.0,
+                1.0,
+                0.0
+              ],
+              "surface_params_raw_SI": [
+                -0.0,
+                1.0,
+                0.0,
+                0.015632965887850493,
+                -0.004315,
+                0.00165
+              ],
+              "errors": []
+            }
+          ],
+          "errors": []
+        }
+      ],
+      "errors": []
+    },
+    "P007": {
+      "tag": "P007",
+      "name": "K01-P-007_Hermetic_Magnetic_Can-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+      "model_title": "K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+      "resolved": true,
+      "component_transform_raw": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.6131627146382617,
+        0.7899566351246362,
+        0.0,
+        -0.7899566351246362,
+        0.6131627146382617,
+        0.03280824543097668,
+        0.01990346363649283,
+        0.030689922541707042,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "solid_body_count": 1,
+      "bodies": [
+        {
+          "index": 0,
+          "body_box_mm": [
+            -7.601496728971953,
+            -8.0,
+            -8.0,
+            32.39850327102805,
+            8.0,
+            8.0
+          ],
+          "face_count": 9,
+          "faces": [
+            {
+              "index": 0,
+              "kind": "plane",
+              "area_mm2": 44.916920964700076,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "surface_params_raw_SI": [
+                -1.0,
+                -0.0,
+                -0.0,
+                -0.007601496728971953,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 1,
+              "kind": "cylinder",
+              "area_mm2": 310.07519490931264,
+              "diameter_mm": 14.1,
+              "axis_origin_mm": [
+                -9.601496728971954,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.009601496728971953,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.00705
+              ],
+              "errors": []
+            },
+            {
+              "index": 2,
+              "kind": "plane",
+              "area_mm2": 86.74722714724814,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "surface_params_raw_SI": [
+                -1.0,
+                -0.0,
+                -0.0,
+                -0.0006014967289719522,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 3,
+              "kind": "cylinder",
+              "area_mm2": 944.9910701998099,
+              "diameter_mm": 9.4,
+              "axis_origin_mm": [
+                -9.601496728971954,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.009601496728971953,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.0047
+              ],
+              "errors": []
+            },
+            {
+              "index": 4,
+              "kind": "plane",
+              "area_mm2": 69.39778171779852,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "surface_params_raw_SI": [
+                -1.0,
+                -0.0,
+                -0.0,
+                0.03139850327102805,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 5,
+              "kind": "plane",
+              "area_mm2": 78.53981633974485,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "surface_params_raw_SI": [
+                1.0,
+                0.0,
+                0.0,
+                0.03239850327102805,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 6,
+              "kind": "cylinder",
+              "area_mm2": 1005.3096491487339,
+              "diameter_mm": 10.0,
+              "axis_origin_mm": [
+                -9.601496728971954,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.009601496728971953,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.005
+              ],
+              "errors": []
+            },
+            {
+              "index": 7,
+              "kind": "plane",
+              "area_mm2": 122.52211349000194,
+              "diameter_mm": null,
+              "axis_origin_mm": null,
+              "axis_direction": null,
+              "normal": [
+                1.0,
+                0.0,
+                0.0
+              ],
+              "surface_params_raw_SI": [
+                1.0,
+                0.0,
+                0.0,
+                0.00039850327102804693,
+                0.0,
+                0.0
+              ],
+              "errors": []
+            },
+            {
+              "index": 8,
+              "kind": "cylinder",
+              "area_mm2": 402.1238596594936,
+              "diameter_mm": 16.0,
+              "axis_origin_mm": [
+                -9.601496728971954,
+                0.0,
+                0.0
+              ],
+              "axis_direction": [
+                -1.0,
+                -0.0,
+                -0.0
+              ],
+              "normal": null,
+              "surface_params_raw_SI": [
+                -0.009601496728971953,
+                0.0,
+                0.0,
+                -1.0,
+                -0.0,
+                -0.0,
+                0.008
+              ],
+              "errors": []
+            }
+          ],
+          "errors": []
+        }
+      ],
+      "errors": []
+    }
+  },
+  "interface_candidates": {
+    "P003": [
+      {
+        "body_index": 0,
+        "face_index": 0,
+        "kind": "plane",
+        "area_mm2": 53.90972993560087,
+        "normal": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 2,
+        "kind": "plane",
+        "area_mm2": 9.581857593448866,
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 4,
+        "kind": "plane",
+        "area_mm2": 4.27256600888212,
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 6,
+        "kind": "plane",
+        "area_mm2": 10.532189371159792,
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 8,
+        "kind": "plane",
+        "area_mm2": 9.071348787240519,
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 10,
+        "kind": "plane",
+        "area_mm2": 5.598048945396296,
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 11,
+        "kind": "cylinder",
+        "diameter_mm": 9.03,
+        "area_mm2": 205.36647924969148,
+        "axis_origin_mm": [
+          -11.36703411214951,
+          0.0,
+          0.0
+        ],
+        "axis_direction": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 12,
+        "kind": "plane",
+        "area_mm2": 29.918354222403572,
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 13,
+        "kind": "cylinder",
+        "diameter_mm": 10.917,
+        "area_mm2": 205.78060199543845,
+        "axis_origin_mm": [
+          -11.36703411214951,
+          0.0,
+          0.0
+        ],
+        "axis_direction": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 14,
+        "kind": "plane",
+        "area_mm2": 60.33358869322472,
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 15,
+        "kind": "cylinder",
+        "diameter_mm": 14.0,
+        "area_mm2": 1407.4335088082275,
+        "axis_origin_mm": [
+          -11.36703411214951,
+          0.0,
+          0.0
+        ],
+        "axis_direction": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 17,
+        "kind": "cylinder",
+        "diameter_mm": 10.0,
+        "area_mm2": 94.24777960769381,
+        "axis_origin_mm": [
+          -11.36703411214951,
+          0.0,
+          0.0
+        ],
+        "axis_direction": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 23,
+        "kind": "plane",
+        "area_mm2": 21.26254923568665,
+        "normal": [
+          -0.0,
+          1.0,
+          0.0
+        ],
+        "errors": []
+      }
+    ],
+    "P007": [
+      {
+        "body_index": 0,
+        "face_index": 0,
+        "kind": "plane",
+        "area_mm2": 44.916920964700076,
+        "normal": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 1,
+        "kind": "cylinder",
+        "diameter_mm": 14.1,
+        "area_mm2": 310.07519490931264,
+        "axis_origin_mm": [
+          -9.601496728971954,
+          0.0,
+          0.0
+        ],
+        "axis_direction": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 2,
+        "kind": "plane",
+        "area_mm2": 86.74722714724814,
+        "normal": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 3,
+        "kind": "cylinder",
+        "diameter_mm": 9.4,
+        "area_mm2": 944.9910701998099,
+        "axis_origin_mm": [
+          -9.601496728971954,
+          0.0,
+          0.0
+        ],
+        "axis_direction": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 4,
+        "kind": "plane",
+        "area_mm2": 69.39778171779852,
+        "normal": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 5,
+        "kind": "plane",
+        "area_mm2": 78.53981633974485,
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 6,
+        "kind": "cylinder",
+        "diameter_mm": 10.0,
+        "area_mm2": 1005.3096491487339,
+        "axis_origin_mm": [
+          -9.601496728971954,
+          0.0,
+          0.0
+        ],
+        "axis_direction": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 7,
+        "kind": "plane",
+        "area_mm2": 122.52211349000194,
+        "normal": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "errors": []
+      },
+      {
+        "body_index": 0,
+        "face_index": 8,
+        "kind": "cylinder",
+        "diameter_mm": 16.0,
+        "area_mm2": 402.1238596594936,
+        "axis_origin_mm": [
+          -9.601496728971954,
+          0.0,
+          0.0
+        ],
+        "axis_direction": [
+          -1.0,
+          -0.0,
+          -0.0
+        ],
+        "errors": []
+      }
+    ]
+  },
+  "assembly_inventory": [
+    {
+      "name": "K01-P-002_Guide_Bushing-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-002_Guide_Bushing.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-P-003_Cartridge_Body-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-P-001_Calibration_Rod-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-001_Calibration_Rod.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-P-007_Hermetic_Magnetic_Can-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-P-016_Long_Run_Interface_Boss-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-016_Long_Run_Interface_Boss.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-P-004_Front_Guide_Bushing-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-004_Front_Guide_Bushing.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-P-006_Retaining_Plug-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-006_Retaining_Plug.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-P-014_Front_Guide_Retaining_Ring-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-014_Front_Guide_Retaining_Ring.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-P-015_Dual_Coil_Bobbin-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-015_Dual_Coil_Bobbin.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-P-013_Follower_End_Cap-1",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-013_Follower_End_Cap.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-P-008_Internal_Magnetic_Follower-2",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-008_Internal_Magnetic_Follower.SLDPRT",
+      "errors": []
+    },
+    {
+      "name": "K01-P-009_Rear_Stop_Washer-2",
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-009_Rear_Stop_Washer.SLDPRT",
+      "errors": []
+    }
+  ]
+}

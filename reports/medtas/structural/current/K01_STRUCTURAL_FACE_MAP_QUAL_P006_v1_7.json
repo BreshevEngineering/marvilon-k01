@@ -1,0 +1,22 @@
+{
+  "ambiguity_rule": "zero or multiple semantic matches => HOLD; never choose the first candidate",
+  "issues": [
+    "FACE-QUAL-BIND-001: baseline automatic study binding did not PASS",
+    "FACE-QUAL-BIND-002: post-rebuild automatic study binding did not PASS"
+  ],
+  "runs": [
+    {
+      "return_code": 3,
+      "role_map": {},
+      "stage": "BEFORE_REBUILD"
+    },
+    {
+      "return_code": 3,
+      "role_map": {},
+      "stage": "AFTER_NOOP_REBUILD"
+    }
+  ],
+  "schema": "k01.structural_face_map_qualification.p006.v1_7",
+  "test": "automatic Simulation entity mapping before/after SOLIDWORKS ForceRebuild3(false); no CAD save or parameter write",
+  "verdict": "HOLD"
+}

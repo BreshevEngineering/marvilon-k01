@@ -1,0 +1,130 @@
+﻿[
+    {
+        "id":  "T02",
+        "name":  "C2R1 geometry / assembly / interference",
+        "status":  "PASS",
+        "why":  "Native C2R1 candidate geometry, J2 mate architecture and hard-interference gate.",
+        "action":  "RUN_C2R1_ALL",
+        "manual":  false,
+        "depends_on":  [
+
+                       ],
+        "ready":  false
+    },
+    {
+        "id":  "T03",
+        "name":  "Tolerance chain + P006 service drive",
+        "status":  "ENGINEERING_PASS / CAD_OPEN",
+        "why":  "H9/h9 and fastener-position stacks are defined; T03 passes its CAD scope after the P006 candidate and full C2R1+P006 assembly verification pass. P006 production material remains a separate product-release hold.",
+        "action":  "RUN_P006_SERVICE",
+        "manual":  false,
+        "depends_on":  [
+                           "T02"
+                       ],
+        "ready":  true
+    },
+    {
+        "id":  "T04",
+        "name":  "Seal media + compound + compression/leak qualification",
+        "status":  "HOLD_QUALIFICATION",
+        "why":  "FKM 75A is the preferred bounded-BOF candidate with FFKM fallback; local temperature/media/compound/force/leak evidence remains.",
+        "action":  "OPEN_WP_T04",
+        "manual":  true,
+        "depends_on":  [
+                           "T02"
+                       ],
+        "ready":  true
+    },
+    {
+        "id":  "T05",
+        "name":  "M2.5 preload / local flange / torque process",
+        "status":  "SCREEN_PASS / QUALIFICATION_OPEN",
+        "why":  "200–300 N/screw study window passes thread/contact screening. Release still requires actual seal load, torque–clamp calibration and local contact evidence.",
+        "action":  "OPEN_WP_T05",
+        "manual":  true,
+        "depends_on":  [
+                           "T04"
+                       ],
+        "ready":  false
+    },
+    {
+        "id":  "T06",
+        "name":  "Thermal preload / galling / service cycles",
+        "status":  "HOLD_QUALIFICATION",
+        "why":  "Matched stainless CTE is favorable; released finish/lubrication and repeated-service qualification remain.",
+        "action":  "OPEN_WP_T06",
+        "manual":  true,
+        "depends_on":  [
+                           "T05"
+                       ],
+        "ready":  false
+    },
+    {
+        "id":  "T07",
+        "name":  "P007 final static + buckling refresh",
+        "status":  "RUN_REQUIRED",
+        "why":  "Historical results remain background evidence only; final C2R1 geometry/preload needs one release refresh.",
+        "action":  "OPEN_WP_T07",
+        "manual":  true,
+        "depends_on":  [
+                           "T05",
+                           "T06"
+                       ],
+        "ready":  false
+    },
+    {
+        "id":  "T08",
+        "name":  "BOM property projection / normalization",
+        "status":  "HOLD_METADATA",
+        "why":  "Project controlled identity/text properties into native files, then rerun BOM reconciliation. OPEN materials remain OPEN.",
+        "action":  "RUN_BOM_APPLY",
+        "manual":  false,
+        "depends_on":  [
+                           "T02"
+                       ],
+        "ready":  true
+    },
+    {
+        "id":  "T09",
+        "name":  "TPD production drawings",
+        "status":  "HOLD_DRAWING_RELEASE",
+        "why":  "Release needs native V3 + release-semantic lint + visual approval bound to PDF hashes. A generated PDF alone is not release evidence.",
+        "action":  "RUN_DRAW_V3",
+        "manual":  false,
+        "depends_on":  [
+                           "T02"
+                       ],
+        "ready":  true
+    },
+    {
+        "id":  "T10",
+        "name":  "P015/B001 freeze -\u003e FEMM -\u003e bench",
+        "status":  "HOLD_INPUT_OR_TEST",
+        "why":  "Final electromagnetic release is fail-closed until production magnet/coil inputs, FEMM and bench evidence exist.",
+        "action":  "OPEN_WP_T10",
+        "manual":  true,
+        "depends_on":  [
+                           "T07"
+                       ],
+        "ready":  false
+    },
+    {
+        "id":  "T11",
+        "name":  "Atomic P003/P007 promotion",
+        "status":  "HOLD",
+        "why":  "Promotion remains blocked until the production-release dependency set closes and the technical filter contains no hard holds.",
+        "action":  "",
+        "manual":  true,
+        "depends_on":  [
+                           "T03",
+                           "T04",
+                           "T05",
+                           "T06",
+                           "T07",
+                           "T08",
+                           "T09",
+                           "T10"
+                       ],
+        "ready":  false
+    }
+]

@@ -1,0 +1,107 @@
+{
+  "schema": "k01_closure_05_manifest_v1",
+  "created": "2026-09-05",
+  "extract_to": "D:\\BreshevEngineering\\marvilon-k01",
+  "files": [
+    {
+      "path": "00_README_CLOSURE_05.md",
+      "bytes": 1719,
+      "sha256": "025d6e0fd4a4dd0c257178dc3a20916c50b2fad070e75ab2b70aae5fa97fa6d2"
+    },
+    {
+      "path": "05_RUN_K01_MODULE_CLOSURE.cmd",
+      "bytes": 2204,
+      "sha256": "0494302772c70f8b0c52197169fbd0596223359feb46042be854e57b3e7183c9"
+    },
+    {
+      "path": "cad_api/drawings/p006_probe/K01_P006_DrawingProbe.cs",
+      "bytes": 5236,
+      "sha256": "7bd481c7f729f63fa12db5b02820df0eaf24bb48cc9d1bce22966affefc83e11"
+    },
+    {
+      "path": "cad_api/drawings/p006_probe/RUN_P006_DRAWING_PROBE.cmd",
+      "bytes": 1206,
+      "sha256": "e609559bc018aeb76ae6ee4dc0a39a3532a992dfada575caa94aabd1186de8ef"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/K01Gate04E_P006_ServiceDrive.cs",
+      "bytes": 13361,
+      "sha256": "7b96aac4c99af9f76c7d260d3d20e9bb172aa4c39fd11c01fbc7fe6d36e0c87b"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/K01Gate04E_P006_ServiceVerify.cs",
+      "bytes": 8117,
+      "sha256": "466c22fa8a825b87e9b7c1798439c7b1d28da6309ea3f12b028fb6562bcfd489"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/RUN_GATE04E_P006_SERVICE_BUILD.cmd",
+      "bytes": 2778,
+      "sha256": "e9ab222647a5ef2f473021b78bee6b0e43cf8457b30e8b2b5c069afa53085fbf"
+    },
+    {
+      "path": "control/calculations/K01_T05_CLAMP_SCREEN_INPUT.json",
+      "bytes": 928,
+      "sha256": "df891b09ec65f7e154d4ec048b67031bfb0160aa337538c0a1f3b7f390927169"
+    },
+    {
+      "path": "control/calculations/RUN_T05_CLAMP_SCREEN.ps1",
+      "bytes": 2138,
+      "sha256": "bb5208ecbb2c7906485878182948d17fb98820bc2993e18e377f3bdd6f872130"
+    },
+    {
+      "path": "control/femm/BUILD_FEMM_SCREENING_INPUT_PACK.cmd",
+      "bytes": 386,
+      "sha256": "754e27b63db53ae965d7417d5bb638af8f84c5e16f852dbcec729bc9f6cc3019"
+    },
+    {
+      "path": "control/femm/BUILD_FEMM_SCREENING_INPUT_PACK.ps1",
+      "bytes": 2493,
+      "sha256": "194ef55ad07042796da7a8a744edca464de3cbb2411611150643dceffd14ab5e"
+    },
+    {
+      "path": "control/femm/CHECK_FEMM_INSTALL.cmd",
+      "bytes": 383,
+      "sha256": "19a6ef86887ca942630e49123ef92fe3742a5e4dbed4fce95bb7ec76e8a2acbe"
+    },
+    {
+      "path": "control/femm/CHECK_FEMM_INSTALL.ps1",
+      "bytes": 2099,
+      "sha256": "b81c8ce0fec6653fd286ad0a75f0622f11b5c59a9c912fcd492911c2c0e6e476"
+    },
+    {
+      "path": "control/femm/FEMM_READINESS.json",
+      "bytes": 1746,
+      "sha256": "7a4a38832b20fa58b92d68ea2a520bcfc3c866cfa5078d788b9bbb001fa1f098"
+    },
+    {
+      "path": "control/handoff/BUILD_AI_HANDOFF.cmd",
+      "bytes": 389,
+      "sha256": "9b031c48b6fce7c484ac6f9a76d40cb623a99478b45fbf04e5147f79cbe2993e"
+    },
+    {
+      "path": "control/handoff/BUILD_AI_HANDOFF.ps1",
+      "bytes": 2880,
+      "sha256": "6f47b46ee11a32fc165fa602a15952cadc717754403a640d47943b42105d08b6"
+    },
+    {
+      "path": "control/project/BUILD_MODULE_CLOSURE_STATUS.ps1",
+      "bytes": 2277,
+      "sha256": "47f74b98b00f9cb36345c03899491f60ce91c61e72195c213a6c027b6df23daa"
+    },
+    {
+      "path": "control/requirements/APPLY_T03_DP_TEMP_CLOSURE.ps1",
+      "bytes": 5705,
+      "sha256": "11284d3c5fde979e64a87fbf9252d1b4e0d356cbafe73bfee435899f46c0f706"
+    },
+    {
+      "path": "control/system/CLOSURE_05_STATIC_AUDIT.json",
+      "bytes": 373,
+      "sha256": "0f1748113332e43b374f668a657bd4c16324ad189f35cac9f78d46b3e15b4a5b"
+    },
+    {
+      "path": "control/workpacks/K01_T04_SEAL_BASELINE_CURRENT.json",
+      "bytes": 951,
+      "sha256": "f1c1abedfc99b223fada6baf03a715279f2d2ca47ea483b69721262bd476140b"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "part": "P001",
+    "route": "Turn/grind → tip/collar/anti-rotation → deburr/polish → clean → inspect",
+    "critical": "rod Ø5, straightness/runout, guide/target surfaces"
+  },
+  {
+    "part": "P002",
+    "route": "Turn OD/ID → anti-rotation feature → finish bore → clean → inspect",
+    "critical": "axial float 0.04…0.08; polymer handling"
+  },
+  {
+    "part": "P003",
+    "route": "Turn coaxial body/steps → M12×1 → J1 → J2 pilot/gland/fasteners → deburr → passivate/clean → inspect",
+    "critical": "stop chain, J1 A/B/C, J2 pilot/gland"
+  },
+  {
+    "part": "P004",
+    "route": "Turn OD/ID/shoulder → finish bore → clean → inspect",
+    "critical": "guide clearance / retention"
+  },
+  {
+    "part": "P006",
+    "route": "Turn → M12×1 → service-tool feature → clean → inspect",
+    "critical": "service feature OPEN"
+  },
+  {
+    "part": "P007",
+    "route": "Deep-bore ID9.4 → finish locator Ø14.10 → supported OD10 finish → front flange geometry → holes → clean → inspect",
+    "critical": "0.30 wall, ovality/runout, flange/locator; compact version to freeze"
+  },
+  {
+    "part": "P008",
+    "route": "Turn OD/pocket/shoulder → M4 interface → clean → inspect",
+    "critical": "B001 pocket, usable M4 depth"
+  },
+  {
+    "part": "P009",
+    "route": "Turn washer → deburr → clean → inspect",
+    "critical": "t0.50, ID/OD"
+  },
+  {
+    "part": "P013",
+    "route": "Turn cap → prepare retention/joining face → clean → inspect",
+    "critical": "must not preload B001"
+  },
+  {
+    "part": "P014",
+    "route": "Laser/stamp/machine spring ring → deburr → heat treatment if required → inspect",
+    "critical": "material/temper OPEN"
+  },
+  {
+    "part": "P015",
+    "route": "Machine/mold bobbin → wind → terminate → resistance/insulation test",
+    "critical": "production PPS/wire/leads OPEN"
+  },
+  {
+    "part": "P016",
+    "route": "Join boss to Long Run → finish datum A/B/C from actual channel axis → leak/geometry inspection",
+    "critical": "material follows production Long Run; OPEN"
+  },
+  {
+    "part": "P017",
+    "route": "Turn press shank → relieved/diamond end → orientation inspection",
+    "critical": "clocking-only function; radial relief"
+  }
+]

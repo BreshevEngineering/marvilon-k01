@@ -1,0 +1,58 @@
+{
+  "schema": "k01.drawing_mbd_release_workpack.v1_5",
+  "principle": "Drawing is a derived representation of native CAD + MBD/DimXpert. AutoDimension is prohibited. Missing product definition remains OPEN; drawing generation must not invent tolerances.",
+  "definition_authority": "native CAD + MBD/DimXpert",
+  "drawing_model_status": "AVAILABLE",
+  "mbd_coverage_status": "MISSING",
+  "required_characteristics": [
+    {
+      "chain_id": "K01-TOL-P004-SEAT",
+      "part_no": "K01-P-003",
+      "characteristic_id": "K01-CHAR-P003-SEAT-ID",
+      "role": "P003 seat internal diameter",
+      "mapping": "DimXpert/MBD",
+      "present_in_current_mbd": false
+    },
+    {
+      "chain_id": "K01-TOL-P004-SEAT",
+      "part_no": "K01-P-004",
+      "characteristic_id": "K01-CHAR-P004-OD",
+      "role": "P004 guide outside diameter",
+      "mapping": "DimXpert/MBD",
+      "present_in_current_mbd": false
+    },
+    {
+      "chain_id": "K01-TOL-P001-P008-M4-BOTTOM",
+      "part_no": "K01-P-008",
+      "characteristic_id": "K01-CHAR-P008-M4-USABLE-DEPTH",
+      "role": "P008 usable female thread depth",
+      "mapping": "DimXpert/MBD",
+      "present_in_current_mbd": false
+    },
+    {
+      "chain_id": "K01-TOL-P001-P008-M4-BOTTOM",
+      "part_no": "K01-P-001",
+      "characteristic_id": "K01-CHAR-P001-M4-MALE-LENGTH",
+      "role": "P001 male thread length",
+      "mapping": "DimXpert/MBD",
+      "present_in_current_mbd": false
+    },
+    {
+      "chain_id": "K01-TOL-ROD-TRAVEL",
+      "part_no": "A001",
+      "characteristic_id": "K01-CHAR-A001-ROD-TRAVEL",
+      "role": "functional hard-stop travel",
+      "mapping": "assembly MBD/controlled semantic feature",
+      "present_in_current_mbd": false
+    }
+  ],
+  "missing_characteristics": [
+    "K01-CHAR-P003-SEAT-ID",
+    "K01-CHAR-P004-OD",
+    "K01-CHAR-P008-M4-USABLE-DEPTH",
+    "K01-CHAR-P001-M4-MALE-LENGTH",
+    "K01-CHAR-A001-ROD-TRAVEL"
+  ],
+  "native_artifact_status": "NOT_GENERATED",
+  "next_action": "Author/confirm missing characteristics in native model, then generate SLDDRW/PDF from this workpack and verify visual + semantic parity."
+}

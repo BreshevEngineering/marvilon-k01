@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>K01 MEDTAS Control Center v5</title>
+<style>
+:root{--bg:#f3f5f6;--card:#fff;--ink:#171a1e;--muted:#65707a;--line:#dfe4e7;--dark:#25292d;--teal:#109da4;--pass:#23865b;--hold:#be4b47;--open:#b7751d;--stale:#8664a9;--info:#3978a9;--mono:ui-monospace,Consolas,monospace;--sans:Inter,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:var(--sans);color:var(--ink)}.wrap{max-width:1540px;margin:auto;padding:20px 20px 70px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;border-bottom:2px solid var(--dark);padding-bottom:12px}h1{margin:0;font-size:27px}h2{font-size:18px;margin:18px 0 9px}h3{font-size:15px;margin:0 0 8px}.teal{color:var(--teal)}.sub{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:800}.mono{font-family:var(--mono)}
+.strip{margin:14px 0;background:var(--dark);color:#fff;border-radius:14px;padding:14px 18px;display:flex;gap:25px;flex-wrap:wrap}.metric b{font:800 23px var(--mono);display:block}.metric span{font-size:10px;text-transform:uppercase;color:#b7bec4}.metric.pass b{color:#68d59d}.metric.hold b{color:#ff8e88}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}.tabs button{background:#fff;border:1px solid var(--line);border-radius:9px;padding:8px 12px;color:var(--muted);font-weight:750;cursor:pointer}.tabs button.active{background:var(--dark);border-color:var(--dark);color:#fff}.panel{display:none}.panel.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}.card{background:#fff;border:1px solid var(--line);border-radius:13px;padding:14px;box-shadow:0 1px 2px rgba(0,0,0,.03)}.small{font-size:12px;color:var(--muted);line-height:1.55}.callout{background:#fff6e5;border:1px solid #ead19a;border-radius:11px;padding:12px 14px;font-size:13px;line-height:1.5;margin-bottom:12px}
+.badge{display:inline-block;padding:3px 8px;border-radius:999px;font-size:10px;font-weight:850}.PASS{background:#e5f5ed;color:#21774f}.HOLD{background:#fbe6e5;color:#993632}.OPEN{background:#fff0d9;color:#96601b}.STALE{background:#eee9f6;color:#6b5287}.INFO{background:#e7f1fa;color:#2e6a96}
+.action{border:0;border-radius:7px;background:var(--teal);color:#fff;padding:7px 10px;font-size:11px;font-weight:800;cursor:pointer}.secondary{background:#fff;color:var(--muted);border:1px solid var(--line)}.danger{background:#aa4541}.disabled{opacity:.45;pointer-events:none}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}th,td{padding:8px;border-bottom:1px solid var(--line);font-size:12px;text-align:left;vertical-align:top}th{background:#f8fafb;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.path{font:11px var(--mono);word-break:break-all}.found{color:var(--pass);font-weight:800}.missing{color:var(--hold);font-weight:800}
+.current{border:2px solid var(--teal);background:#f9ffff}.current h2{margin:0 0 5px}.current .why{font-size:12px;color:var(--muted);margin-bottom:11px}
+.thread{display:grid;grid-template-columns:repeat(6,minmax(145px,1fr));gap:8px;align-items:stretch}.node{background:#fff;border:1px solid var(--line);border-top:4px solid #a6adb3;border-radius:10px;padding:10px;min-height:92px}.node.pass{border-top-color:var(--pass)}.node.hold{border-top-color:var(--hold)}.node.open{border-top-color:var(--open)}.node.stale{border-top-color:var(--stale)}.node b{font-size:12px;display:block}.node span{font-size:10px;color:var(--muted)}@media(max-width:1000px){.thread{grid-template-columns:repeat(3,1fr)}}@media(max-width:650px){.thread{grid-template-columns:1fr}}
+.task{display:grid;grid-template-columns:55px minmax(220px,1fr) 125px 1fr 125px;gap:8px;align-items:center;padding:9px 10px;background:#fff;border-bottom:1px solid var(--line)}.task:first-child{border-top-left-radius:10px;border-top-right-radius:10px}.task:last-child{border-bottom-left-radius:10px;border-bottom-right-radius:10px}.task .id{font:11px var(--mono);color:var(--muted)}.task .why{font-size:11px;color:var(--muted)}@media(max-width:850px){.task{grid-template-columns:50px 1fr 100px}.task .why{grid-column:2/4}}
+pre{background:#25292d;color:#ebf0f3;border-radius:10px;padding:12px;white-space:pre-wrap;font:11px/1.45 var(--mono);max-height:360px;overflow:auto}.bar{height:8px;background:#e5eaed;border-radius:10px;overflow:hidden}.bar i{display:block;height:100%;background:var(--teal)}
+footer{margin-top:25px;color:var(--muted);font-size:11px}
+</style></head>
+<body><div class=wrap>
+<header><div><h1>MARVILON <span class=teal>MEDTAS</span> · K01 Engineering Control Center v5</h1><div class=sub>Digital thread · task execution · live evidence · CAD · analysis · BOM · drawings · technology · release</div></div><div id=clock class="small mono"></div></header>
+<div id=metrics class=strip></div>
+<div class=tabs>
+<button class=active data-p=dashboard>Dashboard</button><button data-p=tasks>Task Queue</button><button data-p=thread>Digital Thread</button><button data-p=reports>Live Reports</button><button data-p=c2>Gate04D-C2</button><button data-p=cad>CAD / Drawings</button><button data-p=analysis>Analysis</button><button data-p=bom>BOM</button><button data-p=technology>Technology</button><button data-p=files>Files</button><button data-p=git>Git / Team</button><button data-p=handoff>AI Handoff</button>
+</div>
+
+<section id=dashboard class="panel active">
+<div id=currentTask class="card current"><h2>Loading current task…</h2></div>
+<div class=grid style="margin-top:12px">
+<div class=card><h3>C2 design state</h3><div id=stateSummary class=small>Loading…</div></div>
+<div class=card><h3>Release readiness</h3><div id=readiness class=small></div></div>
+<div class=card><h3>System actions</h3><button class=action onclick=refreshAll()>Refresh Center</button> <button class="action secondary" onclick=handoff()>Build AI Handoff</button><div class=small style="margin-top:8px">Reports are read directly from controlled folders. Do not search for JSON/log files manually.</div></div>
+<div class=card><h3>Human-error containment</h3><div class=small>Fail closed · stable CAD protected · delta comparison instead of blind whitelist · dependency staleness · generated BOM · explicit OPEN state · evidence hashes · controlled promotion.</div></div>
+</div>
+<h2>Execution path</h2><div id=threadMini class=thread></div>
+</section>
+
+<section id=tasks class=panel><div class=callout><b>This is the working queue.</b> Use it to continue the project. Automated steps have buttons; engineering-input/solver steps state exactly what must be closed before the next dependent task can PASS.</div><div id=taskList></div></section>
+
+<section id=thread class=panel>
+<div class=callout><b>Digital thread = dependency graph, not a folder tree.</b> Requirement → decision → evidence → parameter → CAD → verification → analysis → drawing/BOM/technology → test → release. Each node has state and evidence; changes propagate STALE downstream.</div>
+<div id=threadFull class=thread></div>
+<h2>J2-C2 relationships</h2>
+<div class=grid>
+<div class=card><h3>Requirement / Decision</h3><div class=small>EDR-005 owns why OD33/M2.5/PCD26.5 was selected for study. RVM owns how each J2 requirement is verified.</div></div>
+<div class=card><h3>CAD / Interface</h3><div class=small>CI-J2 links P003/P007 pilot, faces, seal and clamp. CI-P003-P006 separately owns the intentional M12×1 retaining-thread interface so its interference signature is not confused with J2.</div></div>
+<div class=card><h3>Evidence</h3><div class=small>Build/Verify are CURRENT. Raw interference found one unclassified P003/P006 pair. v5 requires stable-vs-C2 delta proof before accepting it.</div></div>
+<div class=card><h3>Downstream</h3><div class=small>Seal compound → preload → flange/contact verification → thermal/service → P007 structural refresh → drawings/BOM/technology → FEMM impact → release.</div></div>
+</div>
+</section>
+
+<section id=reports class=panel>
+<div class=callout><b>Live report layer.</b> This page displays the actual controlled JSON state from <span class=path>reports/...</span>. Logs and reports are opened from here.</div>
+<table><thead><tr><th>Artifact</th><th>Status</th><th>Modified</th><th>Path</th><th>Action</th></tr></thead><tbody id=reportTable></tbody></table>
+<h2>Raw interference detail</h2><div id=interferenceDetail></div>
+</section>
+
+<section id=c2 class=panel>
+<div class=grid>
+<div class=card><h3>Controlled study geometry</h3><div class=small>P003/P007 316L · round Ø33 · 3×M2.5 · PCD26.5 · P007 flange t3 · P003 J2 zone5 · pilot Ø14.10 H7/g6 · current 16×1.5 gland · P007 L35.</div></div>
+<div class=card><h3>Confirmed</h3><div class=small>Native build PASS; packaging arithmetic PASS; assembly verify PASS; active mate errors 0. These are real evidence, not inferred status.</div></div>
+<div class=card><h3>Interference finding</h3><div class=small>Raw QA reports P003↔P006 15.396684 mm³ plus two known legacy pairs. P003/P006 is an intentional M12×1-6H/6g service thread, but v5 still requires stable-vs-C2 delta evidence before closing the gate.</div></div>
+</div>
+<h2>EDS-001 hard gates</h2><table><thead><tr><th>Gate</th><th>Status</th><th>Reason / current evidence</th><th>Evidence</th></tr></thead><tbody id=edsBody></tbody></table>
+</section>
+
+<section id=cad class=panel>
+<div class=grid>
+<div class=card><h3>Candidate CAD</h3><button class=action onclick="act('RUN_C2_BUILD_VERIFY')">Run C2 Build + Verify</button><div class=small style="margin-top:8px">Use only after controlled C2 parameter changes. Current build/verify are PASS.</div></div>
+<div class=card><h3>Interference delta</h3><button class=action onclick="act('RUN_C2_DELTA')">Compare Stable ↔ C2</button><div class=small style="margin-top:8px">This is the correct next CAD gate. It resolves functional/legacy pairs by delta evidence, not a hard-coded ignore.</div></div>
+<div class=card><h3>Drawings</h3><button class="action secondary" onclick="act('RUN_C2_DRAWINGS')">Generate C2 DRAFT Drawings</button><div class=small style="margin-top:8px">v5 fixes the SW2018 <span class=mono>InsertNote</span> return-type compile error. DRAFT remains non-release.</div></div>
+</div><div id=drawingFiles style="margin-top:12px"></div>
+</section>
+
+<section id=analysis class=panel>
+<div class=grid>
+<div class=card><h3>Mechanical screen</h3><div id=mechBox class=small>Loading…</div><button class="action secondary" onclick="act('OPEN_C2_MECH')">Open Report</button></div>
+<div class=card><h3>Seal / preload</h3><span class="badge OPEN">OPEN</span><div class=small style="margin-top:8px">Gland geometry is supported; the O-ring compound/hardness is still not released. Therefore the minimum clamp preload and tightening torque cannot be released yet.</div></div>
+<div class=card><h3>Local flange verification</h3><span class="badge OPEN">OPEN</span><div class=small style="margin-top:8px">After preload range is fixed: head bearing/contact + flange bending/separation, then P007 static and buckling refresh.</div></div>
+<div class=card><h3>FEMM</h3><span class="badge OPEN">IMPACT REVIEW</span><div class=small style="margin-top:8px">Final FEMM remains after mechanical J2 freeze plus P015/B001 production data. C2 flange must not be promoted simply to reach FEMM faster.</div></div>
+</div>
+</section>
+
+<section id=bom class=panel>
+<div class=grid>
+<div class=card><h3>Raw CAD BOM</h3><div id=rawBomSummary class=small>Loading…</div><button class=action onclick="act('RUN_BOM_PIPELINE')">Run BOM Pipeline</button></div>
+<div class=card><h3>Reconciled BOM</h3><div id=recBomSummary class=small>Loading…</div><div class=small style="margin-top:8px">Authority split: CAD supplies quantity/native material; controlled map supplies PartNo/Description/material release status. Missing custom properties become projection work, not false identities.</div></div>
+</div>
+<h2>Reconciled rows / release blockers</h2><div id=bomRows></div>
+</section>
+
+<section id=technology class=panel><div class=grid>
+<div class=card><h3>P003 C2</h3><div class=small>Turn body/J2 zone → pilot/gland → M2.5 pattern → deburr/passivate/clean → inspect. Small-thread capability in 316L must be qualified.</div></div>
+<div class=card><h3>P007 C2</h3><div class=small>Deep-bore ID9.4 → Ø14.10 locator → supported OD10 finish → OD33×3 flange → 3×Ø2.9 → inspect wall/ovality/runout/flange/pattern → clean.</div></div>
+<div class=card><h3>Inspection / test</h3><div class=small>Pilot fit · gland geometry/finish · face flatness · PCD/position · thread · thin-wall ovality/runout · assembly tool access · leak test · service-cycle inspection.</div></div>
+</div></section>
+
+<section id=files class=panel><table><thead><tr><th>ID</th><th>Name</th><th>Domain</th><th>Resolved path</th><th>Status</th><th>Modified</th><th>Action</th></tr></thead><tbody id=fileTable></tbody></table></section>
+
+<section id=git class=panel><div class=grid>
+<div class=card><h3>Local Git</h3><div class="small mono">Branch: <span id=gBranch>—</span><br>Dirty: <span id=gDirty>—</span><br>Untracked: <span id=gUntracked>—</span><br>Last: <span id=gLast>—</span><br>Origin: <span id=gOrigin>—</span></div></div>
+<div class=card><h3>Checkpoint rule</h3><div class=small>Do not auto-commit engineering state. After C2 delta/interference disposition, BOM structure and v5 source stabilize, create a clean source/control/evidence checkpoint. Native CAD remains outside Git.</div></div>
+</div></section>
+
+<section id=handoff class=panel>
+<div class=callout><b>One artifact for AI review.</b> MEDTAS rebuilds the handoff from the latest registered evidence at click time. That means reports created after the previous handoff are included automatically.</div>
+<button class=action onclick=handoff()>Build Current AI Handoff ZIP</button><div id=handoffResult class=small style="margin-top:10px">Target: <span class=path>D:\BreshevEngineering\marvilon-k01\handoff\current\K01_AI_HANDOFF_CURRENT.zip</span></div>
+</section>
+<footer>MEDTAS v5: engineer makes judgments; the system owns memory, dependencies, evidence retrieval, status accounting and fail-closed release control.</footer>
+</div>
+
+<script>
+const EDS=[{"gate": "functional_requirement", "status": "PASS", "note": "OD33 C2 preserves removable J2, L35, Ø14.10 pilot and current seal architecture.", "evidence": "ERR-G04D-C2-BUILD-001"}, {"gate": "architecture_integrity", "status": "PASS", "note": "No weld; serviceable P003↔P007 concept retained.", "evidence": "CI-J2"}, {"gate": "interfaces_datums", "status": "PASS", "note": "Pilot/metal-face/one-hole-axis architecture verified; 0 active mate errors.", "evidence": "ERR-G04D-C2-VERIFY-001"}, {"gate": "load_cases", "status": "HOLD", "note": "Pressure case exists; seal/preload/service/thermal load envelope not fully bounded.", "evidence": "SRC-K01-MOSS-001"}, {"gate": "static_strength_contact", "status": "HOLD", "note": "Thread stripping, head bearing and local flange bending remain open.", "evidence": "SRC-FASTENER-VDI2230-001"}, {"gate": "buckling_stability", "status": "HOLD", "note": "Historical P007 result must be refreshed after final C2 flange freeze.", "evidence": "SRC-K01-MOSS-001"}, {"gate": "torsion_rotational", "status": "HOLD", "note": "Clocking geometry works; torque reaction/loosening/service strategy open.", "evidence": "SRC-FASTENER-VDI2230-001"}, {"gate": "fatigue_cyclic", "status": "HOLD", "note": "Repeated service cycles/preload/galling not quantified.", "evidence": "SRC-FASTENER-ISO3506-1-001"}, {"gate": "thermal", "status": "HOLD", "note": "316L/316L match helps; O-ring and screw/preload temperature behavior open.", "evidence": "SRC-FASTENER-ISO3506-1-001"}, {"gate": "dynamics_vibration", "status": "HOLD", "note": "Vibration loosening/retention not explicitly disposed.", "evidence": "SRC-FASTENER-VDI2230-001"}, {"gate": "pressure_vacuum_sealing", "status": "HOLD", "note": "Gland geometry controlled; compound/compression force/leak test open.", "evidence": "SRC-SEAL-PARKER-001"}, {"gate": "fluid_cfd", "status": "PASS", "note": "C2 changes external flange/fastener package; controlled sample-flow geometry is unchanged.", "evidence": "K01 CFD evidence"}, {"gate": "magnetic_electromagnetic", "status": "HOLD", "note": "Final FEMM impact review remains a project gate.", "evidence": "SRC-K01-BRAUER-001"}, {"gate": "materials_environment", "status": "HOLD", "note": "P003/P007 316L controlled; exact screw/finish and O-ring compound open.", "evidence": "SRC-FASTENER-ISO3506-1-001"}, {"gate": "tolerance_dimensional_chains", "status": "HOLD", "note": "Nominal ligaments pass; production tolerances/thermal stack still open.", "evidence": "ERR-G04D-C2-BUILD-001"}, {"gate": "manufacturability_process_capability", "status": "HOLD", "note": "Round OD33 simplifies machining; M2.5 tapping in 316L and inspection capability need qualification.", "evidence": "K01 technology"}, {"gate": "assembly", "status": "HOLD", "note": "Assembly mates pass; actual screw/tool envelope with hardware needs check.", "evidence": "ERR-G04D-C2-VERIFY-001"}, {"gate": "serviceability", "status": "HOLD", "note": "Removable architecture passes; galling/repeated-service procedure open.", "evidence": "EDR-017"}, {"gate": "inspection_testability", "status": "HOLD", "note": "Released inspection plan and leak-test criteria are missing.", "evidence": "K01 technology"}, {"gate": "reliability_fmea", "status": "HOLD", "note": "Loosening/thread/seal/service failure modes need FMEA disposition.", "evidence": "HEC-001"}, {"gate": "safety_regulatory_containment", "status": "HOLD", "note": "Containment concept retained; leak/material compatibility evidence required.", "evidence": "MARV protection concept"}, {"gate": "supply_chain", "status": "HOLD", "note": "Exact M2.5 screw and seal compound/supplier not frozen.", "evidence": "SRC-FASTENER-ISO4762-001"}, {"gate": "change_impact", "status": "PASS", "note": "Dependency graph lists affected CAD, analyses, BOM, drawings, technology and release gates.", "evidence": "K01_DEPENDENCY_GRAPH_v2"}, {"gate": "documentation_traceability", "status": "PASS", "note": "EDR, CI-J2, ERRs, trade study and CAD reports linked.", "evidence": "MEDTAS"}];
+let STATE=null,FILES=null;
+function cls(s){s=(s||"OPEN").toUpperCase();if(s==="PASS"||s.startsWith("PASS_"))return"PASS";if(s.includes("SCREEN_PASS"))return"PASS";if(s.includes("STALE"))return"STALE";if(s.includes("HOLD")||s.includes("FAIL"))return"HOLD";return"OPEN"}
+function badge(s){return `<span class="badge ${cls(s)}">${s||'OPEN'}</span>`}
+function taskButton(t){if(!t.action)return'';let label=t.action==='RUN_C2_DELTA'?'Run delta QA':t.action==='RUN_BOM_PIPELINE'?'Run BOM':t.action==='RUN_C2_DRAWINGS'?'Generate draft':t.action==='OPEN_C2_MECH'?'Open screen':t.action==='OPEN_EDR005'?'Open EDR':'Run';return `<button class="action ${t.kind==='ENGINEERING_INPUT'?'secondary':''}" onclick="act('${t.action}')">${label}</button>`}
+function renderTasks(){
+ let tasks=STATE.tasks||[];taskList.innerHTML=tasks.map(t=>`<div class=task><div class=id>${t.id}</div><div><b>${t.name}</b><div class=why>${t.why}</div></div><div>${badge(t.status)}</div><div class=why>${t.kind}</div><div>${taskButton(t)}</div></div>`).join('');
+ let n=STATE.next_task;if(n){currentTask.innerHTML=`<h2>Current task · ${n.id} — ${n.name}</h2><div class=why>${n.why}</div>${badge(n.status)} &nbsp; ${taskButton(n)}`;}
+}
+function renderThread(){
+ let t=STATE.tasks||[];let pick=['T01','T02','T03','T05','T06','T08','T09','T10','T11','T12'];
+ let nodes=pick.map(id=>t.find(x=>x.id===id)).filter(Boolean);
+ let h=nodes.map(n=>`<div class="node ${cls(n.status).toLowerCase()}"><b>${n.id} · ${n.name}</b><span>${n.status}<br>${n.why}</span></div>`).join('');
+ threadMini.innerHTML=h;threadFull.innerHTML=h;
+}
+function renderEDS(){edsBody.innerHTML=EDS.map(g=>`<tr><td class=path>${g.gate.replaceAll('_',' ')}</td><td>${badge(g.status)}</td><td>${g.note}</td><td class=path>${g.evidence}</td></tr>`).join('')}
+function renderState(){
+ let b=STATE.build?.status||'OPEN',v=STATE.verify?.status||'OPEN',d=STATE.delta_interference?.status||'OPEN',rb=STATE.reconciled_bom?.status||'OPEN';
+ metrics.innerHTML=`<div class="metric pass"><b>${b}</b><span>C2 Build</span></div><div class="metric pass"><b>${v}</b><span>C2 Verify</span></div><div class="metric ${cls(d).toLowerCase()}"><b>${d}</b><span>Interference Delta</span></div><div class="metric hold"><b>${EDS.filter(x=>x.status==='HOLD').length}</b><span>EDS Holds</span></div><div class=metric><b>${rb}</b><span>Reconciled BOM</span></div>`;
+ stateSummary.innerHTML=`Build <b>${b}</b><br>Verify <b>${v}</b><br>Raw interference <b>${STATE.raw_interference?.status||'OPEN'}</b><br>Delta interference <b>${d}</b><br>Reconciled BOM <b>${rb}</b>`;
+ let pass=EDS.filter(x=>x.status==='PASS').length,total=EDS.length;readiness.innerHTML=`EDS hard-gates: <b>${pass} / ${total} PASS</b><div class=bar><i style="width:${100*pass/total}%"></i></div><div class=small style="margin-top:7px">This meter is evidence completeness, not a weighted design score.</div>`;
+ renderTasks();renderThread();
+ let m=STATE.mechanical;if(m)mechBox.innerHTML=`${badge(m.status)}<br>Thread strip conservative screen: ~${m.calculation?.female_thread_strip_yield_screen_N?.toFixed?.(0)||''} N; SF2 preload ceiling screen ~${m.calculation?.allowable_preload_per_screw_at_thread_SF2_N?.toFixed?.(0)||''} N/screw.<br><b>Not a release torque calculation.</b>`;
+ let raw=STATE.raw_bom;if(raw)rawBomSummary.innerHTML=`${badge(raw.status)}<br>${raw.unique_rows} unique rows · ${raw.issue_count} raw metadata issues.<br>Observed: 12 missing PartNo, 13 missing Description, P014 material missing; B001 imported identity also requires normalization.`;
+ let rec=STATE.reconciled_bom;if(rec){recBomSummary.innerHTML=`${badge(rec.status)}<br>${rec.row_count} rows · ${rec.release_blockers} controlled release blockers · ${rec.metadata_projection_required} CAD metadata projections required.`;bomRows.innerHTML='<table><thead><tr><th>PartNo</th><th>Description</th><th>Qty</th><th>Material authority</th><th>Material status</th><th>CAD metadata</th><th>Release</th></tr></thead><tbody>'+rec.rows.map(r=>`<tr><td class=path>${r.part_no}</td><td>${r.description}</td><td>${r.qty} ${r.unit}</td><td>${r.material_authority}</td><td>${r.material_status}</td><td>${r.metadata_sync}</td><td>${badge(r.release)}</td></tr>`).join('')+'</tbody></table>';}
+ let ri=STATE.raw_interference;if(ri?.interferences)interferenceDetail.innerHTML='<table><thead><tr><th>#</th><th>Components</th><th>Volume mm³</th><th>Raw class</th></tr></thead><tbody>'+ri.interferences.map(x=>`<tr><td>${x.index}</td><td>${x.components.join(' ↔ ')}</td><td>${x.volume_mm3.toFixed(6)}</td><td>${badge(x.classification.includes('KNOWN')?'PASS':'HOLD')} ${x.classification}</td></tr>`).join('')+'</tbody></table>';
+}
+function reportRows(){
+ let ids=['C2-BUILD','C2-BUILD-LOG','C2-VERIFY','C2-VERIFY-LOG','C2-INT-RAW','C2-INT-RAW-LOG','C2-INT-DELTA','C2-INT-DELTA-LOG','C2-MECH','BOM-RAW','BOM-REC','DRAW-REPORT'];
+ let r=ids.map(id=>FILES.entries.find(x=>x.id===id)).filter(Boolean);
+ reportTable.innerHTML=r.map(e=>`<tr><td>${e.name}</td><td class=${e.exists?'found':'missing'}>${e.exists?'FOUND':'MISSING'}</td><td>${e.modified}</td><td class=path>${e.resolved}</td><td><button class=action onclick="openId('${e.id}')" ${e.exists?'':'disabled'}>Open</button> <button class="action secondary" onclick="revealId('${e.id}')" ${e.exists?'':'disabled'}>Folder</button></td></tr>`).join('');
+}
+function renderFiles(){
+ fileTable.innerHTML=FILES.entries.map(e=>`<tr><td class=path>${e.id}</td><td>${e.name}</td><td>${e.domain}</td><td class=path>${e.resolved}</td><td class=${e.exists?'found':'missing'}>${e.exists?'FOUND':'MISSING'}</td><td>${e.modified}</td><td><button class=action onclick="openId('${e.id}')" ${e.exists?'':'disabled'}>Open</button> <button class="action secondary" onclick="revealId('${e.id}')" ${e.exists?'':'disabled'}>Folder</button></td></tr>`).join('');
+ let dr=FILES.entries.filter(e=>['DRAW-P003','DRAW-P007','DRAW-REPORT'].includes(e.id));drawingFiles.innerHTML='<table><tbody>'+dr.map(e=>`<tr><td>${e.name}</td><td class=${e.exists?'found':'missing'}>${e.exists?'FOUND':'MISSING'}</td><td class=path>${e.resolved}</td><td>${e.exists?`<button class=action onclick="openId('${e.id}')">Open</button>`:''}</td></tr>`).join('')+'</tbody></table>';
+ reportRows();
+}
+async function refreshAll(){try{[STATE,FILES]=await Promise.all([fetch('/api/state').then(r=>r.json()),fetch('/api/files').then(r=>r.json())]);renderState();renderFiles();await loadGit();}catch(e){currentTask.innerHTML='<h2>Center API error</h2><div class=why>'+e+'</div>'}}
+async function loadGit(){try{let g=await fetch('/api/git').then(r=>r.json());gBranch.textContent=g.branch;gDirty.textContent=g.dirty_count;gUntracked.textContent=g.untracked_count;gLast.textContent=g.last_commit;gOrigin.textContent=g.origin}catch(e){}}
+function act(id){fetch('/api/action?id='+encodeURIComponent(id)).then(r=>r.json()).then(j=>{if(j.error)alert(j.error+'\n'+(j.path||''));setTimeout(refreshAll,2500)})}
+function openId(id){fetch('/api/open?id='+encodeURIComponent(id)).then(r=>r.json()).then(j=>{if(j.error)alert(j.error+'\n'+(j.path||''))})}
+function revealId(id){fetch('/api/reveal?id='+encodeURIComponent(id)).then(r=>r.json())}
+function handoff(){handoffResult.textContent='Building current handoff…';fetch('/api/handoff/build').then(r=>r.json()).then(j=>{handoffResult.innerHTML=j.ok?'Created: <span class=path>'+j.path+'</span>':'ERROR: '+j.error;setTimeout(refreshAll,800)})}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.p).classList.add('active')})
+clock.textContent=new Date().toLocaleString();renderEDS();refreshAll();
+</script></body></html>

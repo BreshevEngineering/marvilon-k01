@@ -1,0 +1,37 @@
+{
+  "limitations": [
+    "BOM-NONMODELED-OPEN:NM-J2-CLAMP-SCREW",
+    "BOM-NONMODELED-OPEN:NM-J2-FASTENER-PROCESS",
+    "BOM-NONMODELED-OPEN:NM-J2-SEAL",
+    "BOM-NONMODELED-OPEN:NM-P007-WELD-PROCESS",
+    "MBOM-TRANSFORMATION-OPEN:MBOM-P007-WELDED-CONSTRUCTION",
+    "BOM-MATERIAL-OPEN:K01-B-001",
+    "BOM-MATERIAL-OPEN:K01-P-014",
+    "BOM-MATERIAL-OPEN:K01-P-015",
+    "BOM-REVISION-OPEN:K01-B-001",
+    "BOM-REVISION-OPEN:K01-P-001",
+    "BOM-REVISION-OPEN:K01-P-002",
+    "BOM-REVISION-OPEN:K01-P-003",
+    "BOM-REVISION-OPEN:K01-P-004",
+    "BOM-REVISION-OPEN:K01-P-006",
+    "BOM-REVISION-OPEN:K01-P-007",
+    "BOM-REVISION-OPEN:K01-P-008",
+    "BOM-REVISION-OPEN:K01-P-009",
+    "BOM-REVISION-OPEN:K01-P-013",
+    "BOM-REVISION-OPEN:K01-P-014",
+    "BOM-REVISION-OPEN:K01-P-015",
+    "BOM-REVISION-OPEN:K01-P-016"
+  ],
+  "metrics": {
+    "items": 17,
+    "modeled_occurrences": 13,
+    "non_modeled_items": 4,
+    "suppressed_occurrences": 0
+  },
+  "node_id": "K01.MBOM.VERIFY.A001",
+  "notes": "",
+  "schema": "medtas.verification_record.v1",
+  "verdict": "HOLD",
+  "verified_artifact_hash": "f0bc2abd76b925a7b8375c74b23a1583224debff317c1a23875d18ff0b33a195",
+  "verified_state_hash": "ebd57cac00b309b06d1026947eaffb191293c9fd6628c3c91713ca227a4a5603"
+}

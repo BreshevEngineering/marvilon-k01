@@ -1,0 +1,20 @@
+{
+  "schema": "k01.drawing_status.v1",
+  "status": "PRODUCTION_DRAWINGS_OPEN",
+  "facts": [
+    "Drawing V3 is rejected for production release.",
+    "No professional production drawing is currently evidenced in the uploaded AI handoff.",
+    "The P006 Gate04E geometry is now stable enough to be the first drawing-compiler pilot.",
+    "The uploaded handoff does not contain K01_P006_DRAWING_PROBE_CURRENT.json."
+  ],
+  "next_sequence": [
+    "Run the existing read-only P006 drawing probe if the launcher is present on the workstation.",
+    "Build K01-D-005 from the native P006 candidate with a controlled DRWDOT template and selected native dimensions/hole callout only.",
+    "After the P006 pilot passes semantic and visual QA, generate P003 and P007 production drawings after T05/T07 freeze."
+  ],
+  "do_not_do": [
+    "Do not repair V3 cosmetically.",
+    "Do not use AutoDimension/all-model annotation import.",
+    "Do not release P003/P007 drawings before T05/T07 evidence is frozen."
+  ]
+}

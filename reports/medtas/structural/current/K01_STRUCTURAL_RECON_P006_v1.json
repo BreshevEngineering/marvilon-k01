@@ -1,0 +1,20 @@
+{
+  "schema": "k01.structural_reconciliation.p006.v1",
+  "screening": {
+    "solidworks": "PASS",
+    "calculix": "NOT_RUN",
+    "verdict": "PASS_WITH_LIMITATIONS"
+  },
+  "production_release": {
+    "verdict": "OPEN",
+    "required_next": "CalculiX equivalent-model cross-check or controlled waiver"
+  },
+  "comparison_metrics": [
+    "sigma_vm_max",
+    "displacement_max",
+    "reaction_balance"
+  ],
+  "limitations": [
+    "CCX-001: independent CalculiX run not yet available"
+  ]
+}

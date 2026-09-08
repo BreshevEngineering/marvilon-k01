@@ -1,0 +1,10 @@
+{
+  "artifact_hash": "11cb2266a9d4dc5439d4adc64df3048d133525700b17399e4bfd4398b92344ec",
+  "built_state_hash": "ea493322446a3db2bd4bfd505343951709380fead4b12c561ea106b9e5f5a652",
+  "node_id": "K01.BOM.MODEL.A001",
+  "producer": {
+    "tool": "build_bom_v1_9.py",
+    "view": "EBOM"
+  },
+  "schema": "medtas.build_record.v1"
+}

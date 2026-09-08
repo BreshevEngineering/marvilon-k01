@@ -1,0 +1,14 @@
+{
+  "limitations": [],
+  "metrics": {
+    "deterministic_repeat_equal": true,
+    "native_binary_changed_after_saves": false,
+    "post_save_equal": true
+  },
+  "node_id": "K01.CAD.HASH.QUAL.A001",
+  "notes": "",
+  "schema": "medtas.verification_record.v1",
+  "verdict": "PASS",
+  "verified_artifact_hash": "6d352627944eb015a4af72882b5484da356297d940dc056b7b2d0004b27b5d69",
+  "verified_state_hash": "6691594e4ffee50e2bc75d94b82a0b65d1a0a8e0b86950afb708363001294863"
+}

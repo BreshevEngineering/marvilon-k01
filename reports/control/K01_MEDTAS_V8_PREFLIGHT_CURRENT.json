@@ -1,0 +1,12 @@
+﻿{
+    "schema":  "k01_medtas_v8_4_preflight",
+    "created":  "2026-09-05T12:21:50.3103221+03:00",
+    "status":  "PASS_INFRASTRUCTURE",
+    "repo_root":  "D:\\BreshevEngineering\\marvilon-k01",
+    "cad_root":  "D:\\Marvilon\\K01\\cad",
+    "required_failures":  0,
+    "checks":  [
+
+               ],
+    "note":  "This preflight is read-only. It does not modify CAD, Git index, BOM metadata or release status."
+}

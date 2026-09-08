@@ -1,0 +1,785 @@
+{
+  "active_assembly_required": false,
+  "authority": "control/product/parts.json -> SOLIDWORKS custom properties one-way projection. Native material assignment and geometry are not modified.",
+  "errors": [],
+  "mode": "APPLY",
+  "rows": [
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Internal SmCo Magnet",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "BUY",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "OPEN LOT DATA",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-B-001",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.SLDPRT",
+      "part_number": "K01-B-001",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Calibration Rod",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "AISI 316L / EN 1.4404",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "CONTROLLED",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-001",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-001_Calibration_Rod.SLDPRT",
+      "part_number": "K01-P-001",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Rear Guide / Anti-Rotation Bushing",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "TECAPEEK PVX black baseline",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "BASELINE / PRODUCTION GRADE REVIEW",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-002",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-002_Guide_Bushing.SLDPRT",
+      "part_number": "K01-P-002",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Cartridge Body",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "AISI 316L / EN 1.4404",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "CONTROLLED",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-003",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "part_number": "K01-P-003",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Front Guide Bushing",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "TECAPEEK PVX black baseline",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "BASELINE / PRODUCTION GRADE REVIEW",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-004",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-004_Front_Guide_Bushing.SLDPRT",
+      "part_number": "K01-P-004",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Retaining Plug",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "AISI 316L / EN 1.4404",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "CONTROLLED",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-006",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\K01-P-006_Retaining_Plug_GATE04E_SERVICE_CANDIDATE.SLDPRT",
+      "part_number": "K01-P-006",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Hermetic Magnetic Can",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "AISI 316L / EN 1.4404",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "CONTROLLED",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-007",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "part_number": "K01-P-007",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Internal Magnetic Follower",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "AISI 316L / EN 1.4404",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "CONTROLLED",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-008",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-008_Internal_Magnetic_Follower.SLDPRT",
+      "part_number": "K01-P-008",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Rear Stop Washer",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "AISI 316L / EN 1.4404",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "CONTROLLED",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-009",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-009_Rear_Stop_Washer.SLDPRT",
+      "part_number": "K01-P-009",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Follower End Cap",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "AISI 316L / EN 1.4404",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "CONTROLLED / RETENTION QUALIFICATION OPEN",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-013",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-013_Follower_End_Cap.SLDPRT",
+      "part_number": "K01-P-013",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Front Guide Retaining Ring / IN Stop",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "OPEN; 1.4310 / AISI 301 candidate",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "OPEN",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-014",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-014_Front_Guide_Retaining_Ring.SLDPRT",
+      "part_number": "K01-P-014",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Dual Coil Bobbin",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "Prototype/current CAD material not production release; PPS grade/winding/leads OPEN",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "OPEN",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-015",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-015_Dual_Coil_Bobbin.SLDPRT",
+      "part_number": "K01-P-015",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    },
+    {
+      "changes": [
+        {
+          "current": "",
+          "desired": "Long Run Interface Boss",
+          "property": "Description"
+        },
+        {
+          "current": "",
+          "desired": "MAKE",
+          "property": "MakeBuy"
+        },
+        {
+          "current": "",
+          "desired": "AISI 316L current CAD; production Long Run compatibility/weld route OPEN",
+          "property": "MaterialAuthority"
+        },
+        {
+          "current": "",
+          "desired": "CONDITIONAL / OPEN",
+          "property": "MaterialStatus"
+        },
+        {
+          "current": "",
+          "desired": "K01-P-016",
+          "property": "PartNo"
+        }
+      ],
+      "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-016_Long_Run_Interface_Boss.SLDPRT",
+      "part_number": "K01-P-016",
+      "status": "APPLIED",
+      "write_results": [
+        {
+          "method": "Add3",
+          "property": "Description",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MakeBuy",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialAuthority",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "MaterialStatus",
+          "rc": 0
+        },
+        {
+          "method": "Add3",
+          "property": "PartNo",
+          "rc": 0
+        }
+      ]
+    }
+  ],
+  "schema": "k01.parts_property_projection.v2_0",
+  "source_raw_snapshot": "reports/cad/current/K01_A001_SEMANTIC_RAW_API_v1_4.json",
+  "status": "PASS",
+  "summary": {
+    "documents_opened_silently": 0,
+    "errors": 0,
+    "property_differences": 65,
+    "registry_items": 13,
+    "resolved_native_paths": 13
+  }
+}

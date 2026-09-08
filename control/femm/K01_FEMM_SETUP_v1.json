@@ -1,0 +1,13 @@
+{
+  "schema": "k01_femm_setup_v1",
+  "solver": "Finite Element Method Magnetics (FEMM) 4.2",
+  "baseline_distribution": "64-bit Stable Distribution 21Apr2019",
+  "development_build": "22Oct2023 exists but is not the K01 release baseline",
+  "reason": "Use the stable Windows build for reproducible K01 release calculations. The official distribution supports Lua command-line automation and also includes/links Python interfaces.",
+  "automation_baseline": "FEMM native Lua command line: femm.exe -lua-script=<script.lua> -windowhide",
+  "python_policy": "pyFEMM is optional later. It is not required for the first MEDTAS FEMM adapter because the current workstation has already shown Python launcher/path instability.",
+  "official_download": "https://www.femm.info/doku/doku.php?id=Download",
+  "official_docs": "https://www.femm.info/doku/doku.php?id=Documentation",
+  "release_model_rule": "Final force extraction shall use the weighted stress tensor volume integral, with mesh/sensitivity and bench comparison recorded.",
+  "installation_status": "CHECK_WITH_K01_FEMM_INSTALL.ps1"
+}

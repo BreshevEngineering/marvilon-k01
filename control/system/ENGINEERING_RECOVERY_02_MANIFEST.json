@@ -1,0 +1,157 @@
+{
+  "schema": "k01.engineering_recovery_02_manifest.v1",
+  "created": "2026-09-05",
+  "extract_to": "D:\\BreshevEngineering\\marvilon-k01",
+  "files": [
+    {
+      "path": "00_MEDTAS_PREFLIGHT.cmd",
+      "bytes": 393,
+      "sha256": "409bd94fc5b85acba632082b89ce6268e67d3e4cc9239804ab37c33740faf6f4"
+    },
+    {
+      "path": "00_README_RECOVERY_02.md",
+      "bytes": 2074,
+      "sha256": "bd2168cbb7c96dc4a62020b104c69ce492bc7f5580a9076a9f054c92fb536943"
+    },
+    {
+      "path": "02_RUN_K01_ENGINEERING_RECOVERY.cmd",
+      "bytes": 1511,
+      "sha256": "99b5f7d0b2396993be60c715073e6475f3b06e1c53c001f8aa062eb95cb97620"
+    },
+    {
+      "path": "bom/K01_BOM_NORMALIZED_CURRENT.csv",
+      "bytes": 3426,
+      "sha256": "ea47ce3a437375a9fa32d015fe50ea82e841140a32729fb81db3e04addbf674e"
+    },
+    {
+      "path": "bom/K01_BOM_NORMALIZED_CURRENT.json",
+      "bytes": 6724,
+      "sha256": "e9c8c00e0b30773c35f5826fa082fa920470a87dc5aacca68a1e9f71b5a337cd"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/K01Gate04E_P006_ServiceDrive.cs",
+      "bytes": 13197,
+      "sha256": "51550a60729d66fdcecd070f90885a11d4106896695584f86b9f5e63ca71f3b6"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/K01Gate04E_P006_ServiceVerify.cs",
+      "bytes": 8117,
+      "sha256": "466c22fa8a825b87e9b7c1798439c7b1d28da6309ea3f12b028fb6562bcfd489"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/RUN_GATE04E_P006_SERVICE_BUILD.cmd",
+      "bytes": 2778,
+      "sha256": "e9ab222647a5ef2f473021b78bee6b0e43cf8457b30e8b2b5c069afa53085fbf"
+    },
+    {
+      "path": "control/bom/NORMALIZE_BOM.cmd",
+      "bytes": 392,
+      "sha256": "dd7b511600900cd64efca06e5c2cd2c23f21da97ffccb70c78c0e29ff96a2ac2"
+    },
+    {
+      "path": "control/bom/NORMALIZE_BOM.ps1",
+      "bytes": 3901,
+      "sha256": "64f90684e2586c81d088451e1dde56911186ca05f30baed55d6681c74657495d"
+    },
+    {
+      "path": "control/command_center/OPEN_K01_COMMAND_CENTER.cmd",
+      "bytes": 567,
+      "sha256": "dcdf5a473d535bb7018adc1123058e2a1d2141910452282acbd6f5ff9457bf70"
+    },
+    {
+      "path": "control/command_center/app.js",
+      "bytes": 9270,
+      "sha256": "825737ccfde945b0513bdef315eb7282a6b09c9bad0ff4b3830126c9dc620d98"
+    },
+    {
+      "path": "control/command_center/core.ps1",
+      "bytes": 6462,
+      "sha256": "29f19a6217dc47d01b3c984a03320d4208141e45cb41f090309697f4782e4ec2"
+    },
+    {
+      "path": "control/command_center/data/file_registry.json",
+      "bytes": 11786,
+      "sha256": "1892f4b6296d4432878d29ed5ee8fc6db858f44899a5c1e0e389f2595cef24a7"
+    },
+    {
+      "path": "control/command_center/index.html",
+      "bytes": 2754,
+      "sha256": "125a91ae0212708a169fd05dd39c72a67ca7ece1d3e306cb866c6941988dbe0d"
+    },
+    {
+      "path": "control/command_center/server.ps1",
+      "bytes": 5565,
+      "sha256": "4e2344675621152afcf7fe7288b637be9378746c2e8dedc418efb9ca0be6f802"
+    },
+    {
+      "path": "control/command_center/styles.css",
+      "bytes": 2182,
+      "sha256": "97a7cf637d2e80b7820bc411376f8c56d821785d6a4f330dd7eb54c4a6825c41"
+    },
+    {
+      "path": "control/drawings/drawing_recovery_plan.json",
+      "bytes": 1444,
+      "sha256": "319109edaad87d98642ade53db4eea1078da44e37bdfe92e6b0200a05d19f898"
+    },
+    {
+      "path": "control/events/VERIFY_LEDGER.ps1",
+      "bytes": 2004,
+      "sha256": "de6fb5b56a309117538cd180429965c76f27b0df7fdaded00a6207d65019d8dc"
+    },
+    {
+      "path": "control/femm/CHECK_FEMM_INSTALL.cmd",
+      "bytes": 383,
+      "sha256": "19a6ef86887ca942630e49123ef92fe3742a5e4dbed4fce95bb7ec76e8a2acbe"
+    },
+    {
+      "path": "control/femm/CHECK_FEMM_INSTALL.ps1",
+      "bytes": 2099,
+      "sha256": "b81c8ce0fec6653fd286ad0a75f0622f11b5c59a9c912fcd492911c2c0e6e476"
+    },
+    {
+      "path": "control/femm/FEMM_READINESS.json",
+      "bytes": 1746,
+      "sha256": "7a4a38832b20fa58b92d68ea2a520bcfc3c866cfa5078d788b9bbb001fa1f098"
+    },
+    {
+      "path": "control/git/K01_GIT_CLASSIFY.ps1",
+      "bytes": 3371,
+      "sha256": "f2ce572a61b8cc663ddfa3700634ea9819d9c11044ffd4fff5abf8e61f140a9e"
+    },
+    {
+      "path": "control/git/K01_GIT_CLASSIFY_v2.ps1",
+      "bytes": 121,
+      "sha256": "ab12220aa7d60cb46bddaca55de904cedeb047a140b2e3bdb36fc3ef4e6ecc1f"
+    },
+    {
+      "path": "control/git/RUN_K01_GIT_CLASSIFY.cmd",
+      "bytes": 399,
+      "sha256": "92b8d9569081dcab49c43433001fbbb5ce4bac941687ed1ab6d21c97454e66bb"
+    },
+    {
+      "path": "control/git/RUN_K01_GIT_CLASSIFY_V2.cmd",
+      "bytes": 68,
+      "sha256": "d77ae21a90a0dadf442b94cff153f66b22c4ee11f16c1e5319123b0be46c252e"
+    },
+    {
+      "path": "control/handoff/BUILD_AI_HANDOFF.cmd",
+      "bytes": 389,
+      "sha256": "9b031c48b6fce7c484ac6f9a76d40cb623a99478b45fbf04e5147f79cbe2993e"
+    },
+    {
+      "path": "control/handoff/BUILD_AI_HANDOFF.ps1",
+      "bytes": 2494,
+      "sha256": "5851d270d4a0e102e631ea93ef1059a32042a9e325f43c66111b902489e21f00"
+    },
+    {
+      "path": "control/system/PREFLIGHT.ps1",
+      "bytes": 4802,
+      "sha256": "fc4cb211852a53abadd8d1a60117ad443cc67fa2bde87a04dd82e7e9b7c291fa"
+    },
+    {
+      "path": "tests/run_core_tests.ps1",
+      "bytes": 1657,
+      "sha256": "18aa43a26df2ef927b0381d9826ee3250a66796f6d981e55beb82ae3ed18c98e"
+    }
+  ]
+}

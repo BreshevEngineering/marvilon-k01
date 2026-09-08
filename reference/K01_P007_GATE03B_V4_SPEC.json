@@ -1,0 +1,87 @@
+{
+  "schema": "k01_p007_gate03b_v4_spec",
+  "status": "CANDIDATE_NOT_RELEASED",
+  "supersedes": "Gate03B v3 candidate 20260902_085544",
+  "reason_for_v4": "Independent STEP validation found that Gate03B v3 had an annular open rear end. The v3 profile ended at inner radius 4.7 mm on x=35 instead of closing to the axis. v4 restores the required 1.0 mm blind rear wall.",
+  "controlled_geometry_mm": {
+    "total_length": 35.0,
+    "weld_face_OD": 14.0,
+    "weld_face_ID": 10.917,
+    "weld_wall_radial_thickness": 1.5415,
+    "weld_land_length": 1.0,
+    "root_OD": 16.0,
+    "root_outer_start": 1.0,
+    "thin_ID": 9.4,
+    "thin_ID_start": 2.0,
+    "thin_OD": 10.0,
+    "thin_OD_start": 3.0,
+    "rear_inner_station": 34.0,
+    "rear_outer_station": 35.0,
+    "rear_wall_axial_thickness": 1.0
+  },
+  "reference_geometry": {
+    "bbox_mm": [
+      0.0,
+      -8.0,
+      -8.0,
+      35.0,
+      8.0,
+      8.0
+    ],
+    "volume_mm3": 661.3981049223248,
+    "surface_area_mm2": 2565.5313750716473,
+    "front_annulus_area_mm2": 60.33358869322472,
+    "rear_inner_face_area_mm2": 69.39778171779854,
+    "rear_outer_face_area_mm2": 78.53981633974483
+  },
+  "profile_points_axial_radius_mm": [
+    [
+      0.0,
+      7.0
+    ],
+    [
+      1.0,
+      7.0
+    ],
+    [
+      1.0,
+      8.0
+    ],
+    [
+      3.0,
+      8.0
+    ],
+    [
+      3.0,
+      5.0
+    ],
+    [
+      35.0,
+      5.0
+    ],
+    [
+      35.0,
+      0.0
+    ],
+    [
+      34.0,
+      0.0
+    ],
+    [
+      34.0,
+      4.7
+    ],
+    [
+      2.0,
+      4.7
+    ],
+    [
+      2.0,
+      5.4585
+    ],
+    [
+      0.0,
+      5.4585
+    ]
+  ]
+}

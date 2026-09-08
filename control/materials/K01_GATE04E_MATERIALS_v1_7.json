@@ -1,0 +1,18 @@
+{
+  "schema": "k01.gate04e.materials.v1_7",
+  "scope": "Gate04E P006 service structural model",
+  "authority": "current verified SolidWorks Simulation material assignment for the structural service case",
+  "structural_material": {
+    "designation": "1.4404 (X2CrNiMo17-12-2)",
+    "equivalent_family": "AISI 316L",
+    "model": "linear_elastic_isotropic",
+    "yield_strength_MPa": 400.0,
+    "tensile_strength_MPa": 600.0,
+    "elastic_modulus_GPa": 200.0,
+    "poisson_ratio": 0.28,
+    "density_kg_m3": 8000.0,
+    "shear_modulus_GPa": 79.0,
+    "thermal_expansion_per_K": 1.1e-5
+  },
+  "note": "This file does not assert that every K01 assembly component uses 1.4404. It controls only the current P003/P007 structural service model material state. Other parts retain their own controlled/open material identities."
+}

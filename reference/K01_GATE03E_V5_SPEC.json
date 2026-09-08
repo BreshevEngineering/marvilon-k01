@@ -1,0 +1,70 @@
+{
+  "schema": "k01_gate03e_v5_spec_v1",
+  "status": "CANDIDATE_NOT_RELEASED",
+  "basis": {
+    "P006_head_OD_mm": 11.5,
+    "P006_head_axial_span_from_P003_rear_mm": [
+      0.0,
+      2.0
+    ],
+    "P006_thread_outer_cylinder_mm": 10.8,
+    "P006_thread_axial_span_from_P003_rear_mm": [
+      -6.0,
+      0.0
+    ],
+    "current_P007_front_sleeve_span_from_P003_rear_mm": [
+      -5.0,
+      0.0
+    ],
+    "current_P007_ID14p1_span_from_P003_rear_mm": [
+      -5.0,
+      2.0
+    ],
+    "current_P007_thin_ID_start_from_P003_rear_mm": 2.0,
+    "current_P007_thin_OD_start_from_P003_rear_mm": 3.0
+  },
+  "design": {
+    "P007_v5": {
+      "description": "Current P007 geometry trimmed by exactly 5.0 mm at the front",
+      "L_mm": 35.0,
+      "front_OD_mm": 16.0,
+      "front_ID_mm": 14.1,
+      "front_ID14p1_end_mm": 2.0,
+      "thin_ID_mm": 9.4,
+      "thin_ID_start_mm": 2.0,
+      "thin_OD_mm": 10.0,
+      "thin_OD_start_mm": 3.0,
+      "blind_wall_start_mm": 34.0,
+      "rear_mm": 35.0,
+      "blind_wall_t_mm": 1.0,
+      "reference_volume_mm3": 583.4408796614285
+    },
+    "P003_collar_addon": {
+      "description": "Transfer removed old P007 sleeve envelope to P003 rear OD",
+      "span_from_P003_rear_mm": [
+        -5.0,
+        0.0
+      ],
+      "OD_mm": 16.0,
+      "ID_mm": 14.0,
+      "radial_added_thickness_mm": 1.0,
+      "reference_volume_mm3": 235.61944901923414
+    },
+    "weld_plane": {
+      "station_from_P003_rear_mm": 0.0,
+      "P003_outer_OD_after_collar_mm": 16.0,
+      "P007_outer_OD_mm": 16.0,
+      "P007_inner_ID_mm": 14.1,
+      "P007_weld_wall_radial_mm": 0.9500000000000002,
+      "joint_note": "Unequal-thickness butt joint at common OD16; WPS/joint-prep remains OPEN."
+    }
+  },
+  "engineering_invariants": [
+    "P006 clearance envelope is preserved exactly from current production P007 on x=0..2 mm",
+    "P007 thin-ID start remains +2.0 mm from P003 rear",
+    "P007 thin-OD start remains +3.0 mm from P003 rear",
+    "P007 rear inner/outer stations remain +34/+35 mm",
+    "External OD16 envelope on x=-5..0 is preserved by moving material ownership from P007 sleeve to P003 collar",
+    "No production CAD is changed by Gate03E builders"
+  ]
+}

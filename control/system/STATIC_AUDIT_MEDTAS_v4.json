@@ -1,0 +1,18 @@
+{
+  "server": {
+    "git_parameter_fixed": true,
+    "handoff_endpoint": true,
+    "reports_endpoint": true,
+    "no_python": true
+  },
+  "evidence": {
+    "build_pass": true,
+    "verify_pass": true,
+    "mate_errors_zero": true
+  },
+  "ui": {
+    "bom_tab": true,
+    "drawings": true,
+    "handoff": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "k01_j2_service_joint_v4",
+  "status": "FROZEN_FOR_NATIVE_CANDIDATE_BUILD_AFTER_DATUM_C",
+  "decision": "3-bolt removable static-sealed P003-P007 joint",
+  "P003": {
+    "service_flange": "OD34 ×5 over existing final 5 mm",
+    "male_pilot": "Ø14.10 g6 ×1.50, internal clearance bore Ø12.0 min",
+    "o_ring": "18×1.5 candidate; axial face gland; exact tolerance/surface finish per ISO3601/supplier",
+    "clamp": "3×M3-6H on PCD28 /120°, full engagement 5 mm nominal"
+  },
+  "P007": {
+    "service_flange": "OD34 ×3 over existing first 3 mm root; total length stays 35",
+    "female_pilot": "existing front ID14.10 finished as H7 over 1.70 depth",
+    "clamp": "3×Ø3.4 THRU on PCD28 /120°"
+  },
+  "fit_limits_mm": {
+    "H7_hole": [
+      14.1,
+      14.118
+    ],
+    "g6_shaft": [
+      14.083,
+      14.094
+    ],
+    "diametral_clearance": [
+      0.006,
+      0.035
+    ]
+  },
+  "why_14p10": "Uses existing P007 ID14.1 root; preliminary Ø16 female pilot was geometrically poor because the root OD is also Ø16.",
+  "pressure_resultant_N": 3.1225,
+  "fastener_strength_note": "Pressure strength is negligible; clamp selection is driven by face-seal seating, repeatability and service robustness.",
+  "next": "Build Gate04C native candidates after Gate04B PASS, then assembly/interference + one structural refresh + final FEMM."
+}

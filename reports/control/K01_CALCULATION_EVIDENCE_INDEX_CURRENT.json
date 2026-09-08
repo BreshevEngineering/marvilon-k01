@@ -1,0 +1,1637 @@
+{
+  "schema": "k01.calculation_evidence_index.v2_2",
+  "status": "PASS",
+  "items": [
+    {
+      "id": "CALC-0001",
+      "kind": "MAGNETIC",
+      "path": "reports\\engineering\\current\\K01_GATE04E_FEM_FEMM_Verification_Report_v1.docx",
+      "sha256": "e10764d62f1ab80d051cc145450d9184afd22e81c204c82be3cb8650f1cca545",
+      "size": 139001
+    },
+    {
+      "id": "CALC-0002",
+      "kind": "STRUCTURAL",
+      "path": "reports\\engineering\\current\\source\\K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx",
+      "sha256": "fd44f0f9f5ca28d08fa8280a5717168aa68303219106d95216e4dcbb55cb9c16",
+      "size": 658836
+    },
+    {
+      "id": "CALC-0003",
+      "kind": "OTHER",
+      "path": "reports\\bom\\current\\K01_BOM_A001_CURRENT.csv",
+      "sha256": "4ea7f4594f390bef1ae356559aaa4697a3285e740ef4baf8cb8a9886a9b07841",
+      "size": 2924
+    },
+    {
+      "id": "CALC-0004",
+      "kind": "OTHER",
+      "path": "reports\\bom\\current\\K01_EBOM_A001_CURRENT.csv",
+      "sha256": "4ea7f4594f390bef1ae356559aaa4697a3285e740ef4baf8cb8a9886a9b07841",
+      "size": 2924
+    },
+    {
+      "id": "CALC-0005",
+      "kind": "OTHER",
+      "path": "reports\\bom\\current\\K01_MBOM_A001_CURRENT.csv",
+      "sha256": "0974db0881c7930c652fb9457c180b327f557a41709fe7f6c65e70aed4d9141e",
+      "size": 3449
+    },
+    {
+      "id": "CALC-0006",
+      "kind": "MAGNETIC",
+      "path": "reports\\engineering\\current\\source\\K01_FEMM_CURRENT_RESULTS.csv",
+      "sha256": "36521559992baca8c7ce0210a3c6065d0adb134984198c292577dffbc642b6ca",
+      "size": 170
+    },
+    {
+      "id": "CALC-0007",
+      "kind": "OTHER",
+      "path": "reports\\inspection\\current\\K01-D-006_P007_CHARACTERISTICS_CURRENT.csv",
+      "sha256": "9562090d283afe142f33987dd7d726ae7e0c7d6ef606737a0955744aa4104c68",
+      "size": 1265
+    },
+    {
+      "id": "CALC-0008",
+      "kind": "OTHER",
+      "path": "reports\\inspection\\current\\K01_AS9102_STYLE_CHARACTERISTICS_CURRENT.csv",
+      "sha256": "bf450451121fa6dedb09bf130286ccfbc23bc9401ffebc95f66ea44e3c8fd0c8",
+      "size": 1614
+    },
+    {
+      "id": "CALC-0009",
+      "kind": "MAGNETIC",
+      "path": "reports\\engineering\\current\\source\\K01_FEMM_CURRENT_COIL_A_DONE.txt",
+      "sha256": "17444e853da74cbdcf5a5a507c2d59e6f02a3a65e08cbc7505759867796aa6a8",
+      "size": 31
+    },
+    {
+      "id": "CALC-0010",
+      "kind": "MAGNETIC",
+      "path": "reports\\engineering\\current\\source\\K01_FEMM_CURRENT_COIL_B_DONE.txt",
+      "sha256": "17444e853da74cbdcf5a5a507c2d59e6f02a3a65e08cbc7505759867796aa6a8",
+      "size": 31
+    },
+    {
+      "id": "CALC-0011",
+      "kind": "MAGNETIC",
+      "path": "reports\\engineering\\current\\source\\K01_FEMM_CURRENT_COIL_A_B.png",
+      "sha256": "cf7f924f986ffa90e52bdedc65563b39d75b30146eb9ebaa450555ce333773f7",
+      "size": 53981
+    },
+    {
+      "id": "CALC-0012",
+      "kind": "MAGNETIC",
+      "path": "reports\\engineering\\current\\source\\K01_FEMM_CURRENT_COIL_B_B.png",
+      "sha256": "6be0f59c435c37ee7982af9906132c1e9a336874b726d843e30249500c73a1e6",
+      "size": 54091
+    },
+    {
+      "id": "CALC-0013",
+      "kind": "OTHER",
+      "path": "reports\\CAD_AUDIT_K01-P-002_Guide_Bushing.json",
+      "sha256": "33111286704169ec8575e1a79ad7fbbc2ed949cd182e715ecff2d38a5ca40e91",
+      "size": 3520
+    },
+    {
+      "id": "CALC-0014",
+      "kind": "OTHER",
+      "path": "reports\\CAD_AUDIT_K01-P-003_Cartridge_Body.json",
+      "sha256": "7002c42f973f5a89d61d9d808f186dbdb8171432873f61d89c37c2b64a81ebaa",
+      "size": 4205
+    },
+    {
+      "id": "CALC-0015",
+      "kind": "OTHER",
+      "path": "reports\\CAD_AUDIT_K01-P-004_Front_Guide_Bushing.json",
+      "sha256": "a4b65182f03a0813cc83448b22ad32f0d412f38e8f6ca5651e95659ae406bd08",
+      "size": 3065
+    },
+    {
+      "id": "CALC-0016",
+      "kind": "OTHER",
+      "path": "reports\\CAD_SNAPSHOT_K01-P-003_Cartridge_Body.json",
+      "sha256": "bf9a47cbdde210fc6e6146cf0947dbead6f13015ee32604cf58d9f494779f009",
+      "size": 3657
+    },
+    {
+      "id": "CALC-0017",
+      "kind": "OTHER",
+      "path": "reports\\CAD_SNAPSHOT_K01-P-016_Long_Run_Interface_Boss.json",
+      "sha256": "8d8fe5b85f3edd6cea727f732d4ce65bb20128a7605c7b317b30c249b6fb8a26",
+      "size": 4377
+    },
+    {
+      "id": "CALC-0018",
+      "kind": "OTHER",
+      "path": "reports\\CAD_SNAPSHOT_probe_v06.json",
+      "sha256": "c8c542dc506eda112cce172e163f58e25c38003f7d3bb6cb7bfd5dbacc142c22",
+      "size": 4079
+    },
+    {
+      "id": "CALC-0019",
+      "kind": "OTHER",
+      "path": "reports\\bom\\K01_BOM_AUDIT_study_c2.json",
+      "sha256": "84ce9b6042d55a98b492efa923f7035528fffacc4f95a43b345b83d3fe2be439",
+      "size": 6384
+    },
+    {
+      "id": "CALC-0020",
+      "kind": "OTHER",
+      "path": "reports\\bom\\K01_BOM_AUDIT_study_c2r1.json",
+      "sha256": "ab02eddbec2619f27d78ff1365b2417cecdb27638456ae06703c2dbf09cee2ed",
+      "size": 6397
+    },
+    {
+      "id": "CALC-0021",
+      "kind": "OTHER",
+      "path": "reports\\bom\\K01_BOM_PROPERTY_PROJECTION_CURRENT.json",
+      "sha256": "51597f7a5fdf60bba1255abb8e2620df1467a1300b586586c3c2965998a271ab",
+      "size": 2547
+    },
+    {
+      "id": "CALC-0022",
+      "kind": "OTHER",
+      "path": "reports\\bom\\K01_BOM_RECONCILIATION_study_c2.json",
+      "sha256": "c8f82591071c5921bb72c7e3c3193b0699de8f04df5ca7a11f8cfb8bad364f08",
+      "size": 8107
+    },
+    {
+      "id": "CALC-0023",
+      "kind": "OTHER",
+      "path": "reports\\bom\\K01_BOM_RECONCILIATION_study_c2r1.json",
+      "sha256": "a8ba068f3edb7ab9e9b55fc4353447c089dbd48a8b38a04e35c25022f4f0551f",
+      "size": 11460
+    },
+    {
+      "id": "CALC-0024",
+      "kind": "OTHER",
+      "path": "reports\\calculations\\K01_T05_CLAMP_SCREEN_CURRENT.json",
+      "sha256": "ed7dcf0f0376bc2f77d8e1223b9b097697af1d7f583df160ccc2123c1ee6942c",
+      "size": 1883
+    },
+    {
+      "id": "CALC-0025",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_AI_HANDOFF_COMPLETENESS_CURRENT.json",
+      "sha256": "a1ffb09d54223ce75a9db1fb1e71d8c36d568067f2b32af3abf45364ce30997e",
+      "size": 1721
+    },
+    {
+      "id": "CALC-0026",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_COMMAND_CENTER_SELFTEST_CURRENT.json",
+      "sha256": "f9fc6046773b9e9ab3e71bd1632ada9439e3cc500ba1800da2809b548fbc702d",
+      "size": 1086
+    },
+    {
+      "id": "CALC-0027",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_CURRENT_STATE.json",
+      "sha256": "0646b0489dd9830fdd70f2abfef88cb6fb54565c44f99780274dec52c18b2130",
+      "size": 59797
+    },
+    {
+      "id": "CALC-0028",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_FINAL_ASSEMBLY_PROMOTION_CURRENT.json",
+      "sha256": "fed6379b7500339143ead92a186d5850c9bbdb335634459ea586353bc1c2ca68",
+      "size": 519
+    },
+    {
+      "id": "CALC-0029",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_GIT_AUDIT_CURRENT.json",
+      "sha256": "703392efde147f388a684428ce345b4cf74c34f6d516410285c9d4c8a2e4e23f",
+      "size": 10622
+    },
+    {
+      "id": "CALC-0030",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_IDENTITY_AUDIT_CURRENT.json",
+      "sha256": "6cb9b05bb11275f45e528e5163fd4166abdd9e547bef85f6be623fdd11038495",
+      "size": 5584
+    },
+    {
+      "id": "CALC-0031",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_IDENTITY_MIGRATION_PLAN_CURRENT.json",
+      "sha256": "09b537538c6dcb7f0d39b58be45bc9f9a8f59f689c89eb0b10d1300caee9485b",
+      "size": 2834
+    },
+    {
+      "id": "CALC-0032",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_MEDTAS_CENTER_FEED_CURRENT.json",
+      "sha256": "d3016471048c84cdf27080a30106e42352fe1ad2d78cabaf057c900d0b321010",
+      "size": 42428
+    },
+    {
+      "id": "CALC-0033",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_MEDTAS_DERIVED_STATE_CURRENT.json",
+      "sha256": "4d08bd610a205237dc39b0ffab89e02cf3bb4d6e50991ab8f5cb381b7f003b82",
+      "size": 68107
+    },
+    {
+      "id": "CALC-0034",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_MEDTAS_PREFLIGHT_CURRENT.json",
+      "sha256": "18db4539c679431a7a69b98c0b54396aee06febbece30d34bb4ab588ad63c357",
+      "size": 9993
+    },
+    {
+      "id": "CALC-0035",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_MEDTAS_V8_PREFLIGHT_CURRENT.json",
+      "sha256": "bfed5add71abf0782b820a0a36703db0b7635a22f88c30f1c2589ef68211e709",
+      "size": 431
+    },
+    {
+      "id": "CALC-0036",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_MODULE_CLOSURE_STATUS_CURRENT.json",
+      "sha256": "26f726eb67ed326de42f12d9462ef55a03c6d41bf5138b5e5ed965d4c197a5c3",
+      "size": 2176
+    },
+    {
+      "id": "CALC-0037",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_NEXT08_ENGINEERING_STATUS.json",
+      "sha256": "e650366868de31b68863c03958a778d4b2c780f3caf922625f5342536ce31ee6",
+      "size": 1661
+    },
+    {
+      "id": "CALC-0038",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_NEXT_07_ENGINEERING_STATUS.json",
+      "sha256": "ece3963ed0ccd12ecaa79e39be7b37b1faa1ca973c1b6f1a9c3786320a74b255",
+      "size": 1011
+    },
+    {
+      "id": "CALC-0039",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_NODE_TECHNICAL_FILTER_CURRENT.json",
+      "sha256": "37b61ff97c3be6ded20e7713ed1c0126ffffb1a2ac98c38d0fa2044f14f1179d",
+      "size": 16973
+    },
+    {
+      "id": "CALC-0040",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_PREVIOUS_STATE.json",
+      "sha256": "0646b0489dd9830fdd70f2abfef88cb6fb54565c44f99780274dec52c18b2130",
+      "size": 59797
+    },
+    {
+      "id": "CALC-0041",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_PROJECT_MIGRATION_PLAN_CURRENT.json",
+      "sha256": "44aca3309e012d02b2122d50830f109ba4f0e4d51d61cd9d9d61fba98f8a9164",
+      "size": 10114
+    },
+    {
+      "id": "CALC-0042",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_PROJECT_STRUCTURE_AUDIT_CURRENT.json",
+      "sha256": "371e440ccd53a8b4d2c59681b37d993b52ef2cc4a40236e1ecfdd80b33105de9",
+      "size": 12383
+    },
+    {
+      "id": "CALC-0043",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_PROJECT_STRUCTURE_CURRENT.json",
+      "sha256": "f5130bc7e3e8a982b9ab9f73337ffd2bbe548c22834285fee7c3d6e8ba32cdf1",
+      "size": 12150
+    },
+    {
+      "id": "CALC-0044",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_PROJECT_VIEW_CURRENT.json",
+      "sha256": "1818463044407de448e1e294be5c4793476406ae9e45feed473a5fe334ef4d8c",
+      "size": 233807
+    },
+    {
+      "id": "CALC-0045",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_RELEASE_PRIORITY_CURRENT.json",
+      "sha256": "a6e12258ebce725d8ded65de29b8a5fcf7fde87a3edb6204aeb00bda9337c28a",
+      "size": 20786
+    },
+    {
+      "id": "CALC-0046",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_RELEASE_PROGRAM_CURRENT.json",
+      "sha256": "67d4ff0ac7b6ed806ff7513245cfd4e15c9be510386c4d89b47713f80b6cbb81",
+      "size": 3300
+    },
+    {
+      "id": "CALC-0047",
+      "kind": "OTHER",
+      "path": "reports\\control\\K01_REQUIREMENTS_COVERAGE_CURRENT.json",
+      "sha256": "9041972a4a1ca0197e7d3fc22b8d24fb0f29f4bc4577d2014ccaf0ddef9ed9f1",
+      "size": 16432
+    },
+    {
+      "id": "CALC-0048",
+      "kind": "MAGNETIC",
+      "path": "reports\\femm\\FEMM_INSTALL_CURRENT.json",
+      "sha256": "f6163cb7a675c451c2f545a79c5221fde7a349895a4528e9e0661761c22e56b0",
+      "size": 642
+    },
+    {
+      "id": "CALC-0049",
+      "kind": "OTHER",
+      "path": "reports\\git\\K01_GITHUB_REMOTE_HEALTH_CURRENT.json",
+      "sha256": "81bd9ff6d4726f20c1024639191da641800690fa83a9f64a716d4e47d2b0e87d",
+      "size": 461
+    },
+    {
+      "id": "CALC-0050",
+      "kind": "OTHER",
+      "path": "reports\\git\\K01_GIT_CLASSIFICATION_CURRENT.json",
+      "sha256": "9b45c9d1d87800e807fdab98b344f1ad47c60ab23566fe1e56cc0f5e1a30b14d",
+      "size": 180549
+    },
+    {
+      "id": "CALC-0051",
+      "kind": "OTHER",
+      "path": "reports\\ai\\current\\K01_AI_ENGINEERING_CONTEXT_CURRENT.json",
+      "sha256": "72b97192d29d28eac48f7ebe692e7f5f8987d30497e2986f4d166ae3b791ee33",
+      "size": 3396
+    },
+    {
+      "id": "CALC-0052",
+      "kind": "OTHER",
+      "path": "reports\\ai\\current\\K01_AI_HANDOFF_AUDIT_20260904.json",
+      "sha256": "94abc3a7280af1a8a08f6c4f9b69781860c5101d043e7e63ebe69f47dd7e04de",
+      "size": 802
+    },
+    {
+      "id": "CALC-0053",
+      "kind": "OTHER",
+      "path": "reports\\analysis\\current\\K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1.json",
+      "sha256": "02f26ebc77dda96757ac7695dc79a404a7c646142200bd26299c65b97ecc88fc",
+      "size": 1383
+    },
+    {
+      "id": "CALC-0054",
+      "kind": "OTHER",
+      "path": "reports\\analysis\\current\\K01_J2_C2_MECHANICAL_SCREEN_v1.json",
+      "sha256": "4bb2c2bad12c7925e194d1ac6c49d9159b47d8688d723ecea7e4cb75ce888b9d",
+      "size": 2030
+    },
+    {
+      "id": "CALC-0055",
+      "kind": "OTHER",
+      "path": "reports\\bom\\current\\K01_EBOM_A001_CURRENT.json",
+      "sha256": "e4e436c2a1efd29fc32ac4f2062ad9a4c06d5f580f5215a7539176421cfe7ba0",
+      "size": 11632
+    },
+    {
+      "id": "CALC-0056",
+      "kind": "OTHER",
+      "path": "reports\\bom\\current\\K01_MBOM_A001_CURRENT.json",
+      "sha256": "6a6658aff07af7a5c15b1a7bf34f83e4b31150bf94577549674e94e71e2922e2",
+      "size": 13840
+    },
+    {
+      "id": "CALC-0057",
+      "kind": "OTHER",
+      "path": "reports\\bom\\current\\K01_PARTS_PROPERTY_PROJECTION_CURRENT.json",
+      "sha256": "a7a99bf4fbc84a1b3d144183cb43a50ad037c6eec2a8134b0b41a9c480ae67ab",
+      "size": 19215
+    },
+    {
+      "id": "CALC-0058",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-A-001_Calibration_Module_ASSEMBLY_MANIFEST.json",
+      "sha256": "a4dc17e2b798f998f86a2d0a24910a4725a9d066cca92f154d04bbd10278d2f2",
+      "size": 1636
+    },
+    {
+      "id": "CALC-0059",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.json",
+      "sha256": "e123ef1ecd08ef8e2885707207d586a2e6b35ab81e8aa28d6454118b8b752d44",
+      "size": 11155
+    },
+    {
+      "id": "CALC-0060",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-P-001_Calibration_Rod.json",
+      "sha256": "39a20650dbb83a05d04a049f406090bc8d83a2853b4c54ac1c431f2df96560a3",
+      "size": 14137
+    },
+    {
+      "id": "CALC-0061",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-P-002_Guide_Bushing.json",
+      "sha256": "5e300c2a414a8e878f83e1e9cc42a6546714624b377c9007e4d4c5a7e4a43ea6",
+      "size": 15968
+    },
+    {
+      "id": "CALC-0062",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-P-003_Cartridge_Body.json",
+      "sha256": "7e3fb171f90058a2b3cb2f125dd9ce756c4646d7d885b1b3c8dbb8d384d16401",
+      "size": 30006
+    },
+    {
+      "id": "CALC-0063",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-P-004_Front_Guide_Bushing.json",
+      "sha256": "8c5ab61dfc61fb3cf033109ada7f5dd8f72e3991b96cced4199ff66f892e6647",
+      "size": 10337
+    },
+    {
+      "id": "CALC-0064",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-P-006_Retaining_Plug.json",
+      "sha256": "9a19dd32b31723edddda3a55e0ba5663ba08da3dd7dae6ce9e8c44a6bc19815a",
+      "size": 7527
+    },
+    {
+      "id": "CALC-0065",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-P-007_Hermetic_Magnetic_Can.json",
+      "sha256": "537f9b511fb4e66298ec3272d012fb1f778914b00f840d63443595cfeee850bf",
+      "size": 15102
+    },
+    {
+      "id": "CALC-0066",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-P-008_Internal_Magnetic_Follower.json",
+      "sha256": "53851d86c3099bdcc46bafae60947b50113d0bc5b7dd031cb5234565ffd98c66",
+      "size": 18143
+    },
+    {
+      "id": "CALC-0067",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-P-009_Rear_Stop_Washer.json",
+      "sha256": "3aedd03713f1239a24e961cc8b149ef61c047a621a2dd92c2eb55a43cdce94e4",
+      "size": 8443
+    },
+    {
+      "id": "CALC-0068",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-P-013_Follower_End_Cap.json",
+      "sha256": "09f8c050ac273c494f3392c2a3f0ea1bbe32b897cda1895c3fd3a48361732d6b",
+      "size": 7449
+    },
+    {
+      "id": "CALC-0069",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-P-014_Front_Guide_Retaining_Ring.json",
+      "sha256": "48697f4e2485657cda566dd9f8d1118844c9ee62633b126e93801e4b4407fdae",
+      "size": 7489
+    },
+    {
+      "id": "CALC-0070",
+      "kind": "MAGNETIC",
+      "path": "reports\\cad\\current\\K01-P-015_Dual_Coil_Bobbin.json",
+      "sha256": "b6fffb2e6165c1670ee5decb0fbaac59a08de66078a7adcf6fe451f4fef6a1df",
+      "size": 7428
+    },
+    {
+      "id": "CALC-0071",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01-P-016_Long_Run_Interface_Boss.json",
+      "sha256": "4683fb90938903f161102b37b977ded8837736197fba56e742b3c12b2a03f74f",
+      "size": 29810
+    },
+    {
+      "id": "CALC-0072",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_A001_SEMANTIC_RAW_API_v1_2.json",
+      "sha256": "ffc9087b1418f2917c73239461eda2f4fd91b2dd6dcb82da95de5c29495fa84f",
+      "size": 1806
+    },
+    {
+      "id": "CALC-0073",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_A001_SEMANTIC_RAW_API_v1_4.json",
+      "sha256": "542cc9b50ed0fe6e882634de31aad1615dd938aaa5b13d58eee5bddea869f650",
+      "size": 129866
+    },
+    {
+      "id": "CALC-0074",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_BOM_FROM_SW.json",
+      "sha256": "9f2a9be1e7430158077d33034d2c01ce00450c4ceec41383955f231edc1dde64",
+      "size": 334
+    },
+    {
+      "id": "CALC-0075",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_CANDIDATES_ARCHIVE_V3_20260903.json",
+      "sha256": "0b8b6af6cfd9fca092095f197ccacc16e9c5b51a675acfc266a867f84f83e461",
+      "size": 12799
+    },
+    {
+      "id": "CALC-0076",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_CANDIDATES_SWEEP_V5_20260903.json",
+      "sha256": "cb574d43f3cd78f02af268a832eb19f0b630d01c7624e6aa4f0694994d3a269f",
+      "size": 1106
+    },
+    {
+      "id": "CALC-0077",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_DRAWING_QUALITY_P003_C2R1_v1.json",
+      "sha256": "0e5f7d894ae4c2f24619c53bc6d668ce0394845abc16af872ad1012a943f620b",
+      "size": 1326
+    },
+    {
+      "id": "CALC-0078",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE03C_ASSEMBLY_VERIFY.json",
+      "sha256": "20db2b68fde7272edf5867a407f68b106c8e77d6ec05fc7d6a4c2ffa7c3b97cc",
+      "size": 3293
+    },
+    {
+      "id": "CALC-0079",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE03D_P006_CLEARANCE_PROBE.json",
+      "sha256": "017bb118a8a3aaab373dc1a70dc479d2b35b0031ca3c059e0de310f1a3bee0f7",
+      "size": 7993
+    },
+    {
+      "id": "CALC-0080",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE03F_ASSEMBLY_VERIFY.json",
+      "sha256": "8aab7e009e762df222af34c7d40a0e1552d509aa150f32e5ad35ddbb39fca419",
+      "size": 1946
+    },
+    {
+      "id": "CALC-0081",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE03I_NATIVE_PAIR_VERIFY.json",
+      "sha256": "c3a1ebc98db4c56afd0508be67d2f14aa2566382497cdba10054b25aa5a0d9e2",
+      "size": 7644
+    },
+    {
+      "id": "CALC-0082",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04B_FAILED_CLEANUP_20260903.json",
+      "sha256": "5e5e1745ca2cc6ed7a53fadfc51670563a38e4e03ede21337dd54f33a1501a53",
+      "size": 1193
+    },
+    {
+      "id": "CALC-0083",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04C0_J2_ENVELOPE_PROBE.json",
+      "sha256": "68058a5d893ebb048617d85b8fbd3b76315f1b18302ca063cde6f0f8b3ac5923",
+      "size": 3966
+    },
+    {
+      "id": "CALC-0084",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04C1_DIRECT_PART_NATIVE_AUDIT.json",
+      "sha256": "10811f6da3966fcdea9600d05006db00dd97086248dd48397352b8c59d39a8fe",
+      "size": 1118
+    },
+    {
+      "id": "CALC-0085",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04C1_J2_NATIVE_PREFLIGHT.json",
+      "sha256": "a2b60f4d71b15d93270a4d7bb8d79685a66d281e79f68cd8f229626aa73a2e59",
+      "size": 993
+    },
+    {
+      "id": "CALC-0086",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04C_MATE_DIAG.json",
+      "sha256": "91a70b8d9eb2b73539ceacbc4259a61777ad37759e9c88e46c504279c6655040",
+      "size": 41111
+    },
+    {
+      "id": "CALC-0087",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04C_TYPED_BUILD.json",
+      "sha256": "dbb237f101d4c3a3a7cb378472b9d8c4f569e59453d9af907a1383c4455d10c7",
+      "size": 705
+    },
+    {
+      "id": "CALC-0088",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04C_TYPED_VERIFY.json",
+      "sha256": "abfa38c41445ad74ecdce21c737a719c1642011a81ab38e33229c74fbd6c5867",
+      "size": 825
+    },
+    {
+      "id": "CALC-0089",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04C_VERIFY_V2.json",
+      "sha256": "1f70b5ea425e2d362d66b6ba60005fdf0fdc4e9becec6477356dc02e8a8d339f",
+      "size": 494
+    },
+    {
+      "id": "CALC-0090",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04D_C2R1_INTERFERENCE.json",
+      "sha256": "7b15ac8a3b13abf0b1c4498ce0c40f26ba4d559402c02d834eec5c0f7038e9e1",
+      "size": 1127
+    },
+    {
+      "id": "CALC-0091",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_BUILD.json",
+      "sha256": "3a19086f0253d3d22689f2830a603acb968ca947be6f35c59cfbe59d42f4d2a0",
+      "size": 1085
+    },
+    {
+      "id": "CALC-0092",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_DRAWINGS.json",
+      "sha256": "05dccd3f38dbdd95065d2c99efa06f4758224b9769b35be1849dee3ac001f3f8",
+      "size": 867
+    },
+    {
+      "id": "CALC-0093",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_DRAWINGS_V2.json",
+      "sha256": "bd483f54f2b11f5d71b73af05634557871a35d468310726ff4179d61cee9c6d0",
+      "size": 2052
+    },
+    {
+      "id": "CALC-0094",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_DRAWINGS_V3.json",
+      "sha256": "3267b29fddd14a7226e96d3ab2344d7a9f4939047deb0ff573387eb311b0ef12",
+      "size": 1482
+    },
+    {
+      "id": "CALC-0095",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04D_C2R1_VERIFY.json",
+      "sha256": "bd9ba6bf9f77cef0e5816f86fd5751317efb99f86380d528f0686ccf18b74a48",
+      "size": 530
+    },
+    {
+      "id": "CALC-0096",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04D_C2_EVIDENCE_NORMALIZED_v1.json",
+      "sha256": "82a8e3ec2e843cc35c26f2e11194f156024a01971fee120c01e3c0fc331b20af",
+      "size": 1566
+    },
+    {
+      "id": "CALC-0097",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04D_C2_INTERFERENCE.json",
+      "sha256": "94bcc7349b7f4ff68b60f6fed0ce085215becf666c89f3e0630d33edb53ff11b",
+      "size": 1436
+    },
+    {
+      "id": "CALC-0098",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04D_C2_INTERFERENCE_DELTA.json",
+      "sha256": "e3190f249360a15d95c5801bf8b892252bd7bc14027c9a846477a1bb5840e86d",
+      "size": 2210
+    },
+    {
+      "id": "CALC-0099",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04D_C2_TYPED_BUILD.json",
+      "sha256": "a824f07b997bca19b7a9ccdfdf88c5bc68cbe0426a9f8cb885055a3ef5266e05",
+      "size": 968
+    },
+    {
+      "id": "CALC-0100",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04D_C2_VERIFY.json",
+      "sha256": "ab514dbf7b47994f8fc9277ef9a0c531bb9eca0fab72407a3b85c13e775b9e0a",
+      "size": 528
+    },
+    {
+      "id": "CALC-0101",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04E_P006_SERVICE_BUILD.json",
+      "sha256": "38e6c5e584cc6eaa2726edc68288f5839c254c3adee6e364e98b465c6b414aca",
+      "size": 1185
+    },
+    {
+      "id": "CALC-0102",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_GATE04E_P006_SERVICE_VERIFY.json",
+      "sha256": "4df44ac4ac44a38203bf0036efe7f4ba2dec2793d4817660e97f4dd49bb33538",
+      "size": 1196
+    },
+    {
+      "id": "CALC-0103",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_P003_GATE03E_COLLAR_REF_BUILD.json",
+      "sha256": "5f1c18677bfaefd87651e3b9c94a3400d24e2bb9152f1685c80a3d1e62c08a5a",
+      "size": 893
+    },
+    {
+      "id": "CALC-0104",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_P003_GATE03G_BUILD.json",
+      "sha256": "3b4a7b692f653c304626016c0c5822d49572912e29d915c012205e89dd060966",
+      "size": 959
+    },
+    {
+      "id": "CALC-0105",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_P003_P007_INTERFACE_PROBE.json",
+      "sha256": "8dd7be7d0e08e390e2557896d543fd7b0d516727e4e3831a776d99f1ea84b54b",
+      "size": 33419
+    },
+    {
+      "id": "CALC-0106",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_P003_P007_PRODUCTION_PROMOTION.json",
+      "sha256": "3f57b6bb6c4f1366b91e0500d3fc5f39132a9ffde86fbfed4d62144c54c9b89c",
+      "size": 1409
+    },
+    {
+      "id": "CALC-0107",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_P007_GATE03B_BUILD.json",
+      "sha256": "5b6627287e84c8b71c58d6e2787eacbd2f1f298ada4cca7d39fbb2f6e201f79f",
+      "size": 1542
+    },
+    {
+      "id": "CALC-0108",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_P007_GATE03E_V5_BUILD.json",
+      "sha256": "d724cba3db4c967857f6b6e73450a6e7ac0c8b6d433e130d54eb9b403e031784",
+      "size": 662
+    },
+    {
+      "id": "CALC-0109",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_P007_GATE03H_BUILD.json",
+      "sha256": "5fb94f61f582886099b8b9769fd46d870d929698fc69d34bfd41c89b9f3124b3",
+      "size": 4699
+    },
+    {
+      "id": "CALC-0110",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_POST_PROMOTION_QA.json",
+      "sha256": "57edb5d9952b9976f8f4781013eaf10303518ffe301057846f7be13a5cd182bf",
+      "size": 1155
+    },
+    {
+      "id": "CALC-0111",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_REPO_ROOT_NORMALIZE_V2_20260903.json",
+      "sha256": "b77c42c7650def20078aa39745932abe079279aa46c718dece81786693a0e91c",
+      "size": 17518
+    },
+    {
+      "id": "CALC-0112",
+      "kind": "OTHER",
+      "path": "reports\\cad\\current\\K01_REPO_STRUCTURE_AUDIT_V2_20260903.json",
+      "sha256": "bf16c967632467a89ec6255c53f0266e3bd4f4cc187097469670262650bd2109",
+      "size": 15419
+    },
+    {
+      "id": "CALC-0113",
+      "kind": "OTHER",
+      "path": "reports\\cad\\live\\K01_SOLIDWORKS_LIVE_STATE.json",
+      "sha256": "5fd3ce8d357c52dc16219bf886a85ad02706a47cec2c6ed8145e47e2258d1303",
+      "size": 643
+    },
+    {
+      "id": "CALC-0114",
+      "kind": "OTHER",
+      "path": "reports\\drawing\\current\\K01-D-006_P007_EXEMPLAR_PLAN_CURRENT.json",
+      "sha256": "f7336fcf391a8a29fac2171da4c949de2be1b07d4f2bd1bc4d519eafe82eeb8d",
+      "size": 11668
+    },
+    {
+      "id": "CALC-0115",
+      "kind": "OTHER",
+      "path": "reports\\drawing\\current\\K01-D-006_P007_LIVE_GEOMETRY_CURRENT.json",
+      "sha256": "640e654b436584311ad4508f92e8f842f830fde30874fdcd59a758b3e8301bcb",
+      "size": 4020
+    },
+    {
+      "id": "CALC-0116",
+      "kind": "OTHER",
+      "path": "reports\\drawing\\current\\K01_DRAWING_RELEASE_PLAN_CURRENT.json",
+      "sha256": "83d3c210629d49c159907f8b2393f7ade55414f83cc1a6eb36c3a0b3934e6079",
+      "size": 12823
+    },
+    {
+      "id": "CALC-0117",
+      "kind": "OTHER",
+      "path": "reports\\drawing\\current\\K01_DRAWING_TEMPLATE_DISCOVERY_CURRENT.json",
+      "sha256": "ebd91e640d29c439568142f0d59cb17ca89357be5603909b5bc0820ea06889e0",
+      "size": 1292
+    },
+    {
+      "id": "CALC-0118",
+      "kind": "OTHER",
+      "path": "reports\\inspection\\current\\K01_RELEASE_CHARACTERISTICS_CURRENT.json",
+      "sha256": "2ed96f4773a1926cacaf78cf447ac6c60a03c573665fff67209bb1a167720614",
+      "size": 7047
+    },
+    {
+      "id": "CALC-0119",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\pipeline\\K01_PIPELINE_RUN_CURRENT.json",
+      "sha256": "db57872a2eb7eeb865d5603a4a96584a63322b3d69c47841b72344344cafbbc1",
+      "size": 9713
+    },
+    {
+      "id": "CALC-0120",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\tests\\K01_CAD_CANONICAL_HASH_INVARIANCE_CURRENT.json",
+      "sha256": "f80991cf674852cf417eff87abd8b96ad76e683e726db9ff87a0bf92f01f6c3f",
+      "size": 1923
+    },
+    {
+      "id": "CALC-0121",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\tests\\K01_CENTER_ACTION_LAUNCH_SELFTEST_CURRENT.json",
+      "sha256": "8b90ec435b06592c14c991214c5655ca6f16be85cadcdd55a4c64e45e4ab1954",
+      "size": 155
+    },
+    {
+      "id": "CALC-0122",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\tests\\K01_CENTER_SECURITY_SELFTEST_CURRENT.json",
+      "sha256": "1ee57f7a9eb4021d7b3f0632818760dc0575fc81344c46a020eaaf6816bb6783",
+      "size": 495
+    },
+    {
+      "id": "CALC-0123",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\tests\\K01_CENTER_SERVER_REGRESSION_CURRENT.json",
+      "sha256": "55e5f1505fc87e247c54c5f166970ddb02be243fd54fc33b5f0088f242cafbcf",
+      "size": 490
+    },
+    {
+      "id": "CALC-0124",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\bom\\current\\K01_BOM_MODEL_A001_v1.json",
+      "sha256": "21e34864441689962588ccf31d81964041a1dee1ec6f6b94e529463240873d73",
+      "size": 12356
+    },
+    {
+      "id": "CALC-0125",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\bom\\current\\K01_BOM_VERIFY_A001_v1.json",
+      "sha256": "7230a038d64b2c7e80e56f5a1a99490545e3f61fc8d26bc2f4d976bc069c04a9",
+      "size": 910
+    },
+    {
+      "id": "CALC-0126",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\bom\\current\\K01_EBOM_MODEL_A001_v1_9.json",
+      "sha256": "e4e436c2a1efd29fc32ac4f2062ad9a4c06d5f580f5215a7539176421cfe7ba0",
+      "size": 11632
+    },
+    {
+      "id": "CALC-0127",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\bom\\current\\K01_EBOM_VERIFY_A001_v1_9.json",
+      "sha256": "e4658f76f0ded66d08c28edcc1853e256d65518ab6dead8c20956d8dbfa48889",
+      "size": 904
+    },
+    {
+      "id": "CALC-0128",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\bom\\current\\K01_MBOM_MODEL_A001_v1_9.json",
+      "sha256": "6a6658aff07af7a5c15b1a7bf34f83e4b31150bf94577549674e94e71e2922e2",
+      "size": 13840
+    },
+    {
+      "id": "CALC-0129",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\bom\\current\\K01_MBOM_VERIFY_A001_v1_9.json",
+      "sha256": "fa479a8398745c0e387592c3af5394e04df12f42c9c5cfdbf865686135a60a20",
+      "size": 1067
+    },
+    {
+      "id": "CALC-0130",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\cad\\current\\K01_CAD_SEM_A001.json",
+      "sha256": "b58fa235b0fc236813c76e1a9c959d1027b859acf43d3696f4533212f83811e1",
+      "size": 147158
+    },
+    {
+      "id": "CALC-0131",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\cad\\current\\K01_SW_INTEROP_COMPILE_CURRENT.json",
+      "sha256": "28c1e797a326f10c1784acbbf111b71d443c07eb796cad5e6a1a7f8fd3f82a37",
+      "size": 2686
+    },
+    {
+      "id": "CALC-0132",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\calculix\\current\\K01_CALCULIX_CASE_SCAFFOLD_P006_v1_5.json",
+      "sha256": "90d234011c3269b162bd4cfdd2768dbdf8d363bcddedea9e037d68906d66f006",
+      "size": 2100
+    },
+    {
+      "id": "CALC-0133",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\calculix\\current\\K01_CALCULIX_INPUT_P006_v1_6.json",
+      "sha256": "49276b40f494fb698cd1c576035580ea32d8a7dd125d54df8fc8922f9448ffc7",
+      "size": 633
+    },
+    {
+      "id": "CALC-0134",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\calculix\\current\\K01_CALCULIX_INPUT_P006_v1_7.json",
+      "sha256": "df753b95d0824170e648d5fbbcfaac2d42d850129dd1b7862a46562fc2c9d8f7",
+      "size": 699
+    },
+    {
+      "id": "CALC-0135",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\calculix\\current\\K01_CALCULIX_PREFLIGHT_CURRENT.json",
+      "sha256": "f3d27501ba44d518bc4279f70fa2314b6a737daf0c734f16b6892aa97ec720d7",
+      "size": 491
+    },
+    {
+      "id": "CALC-0136",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\calculix\\current\\K01_STRUCTURAL_MESH_P006_v1_6.json",
+      "sha256": "b5ee4e337129b9ee9aa510d8bca8a39ea52d1677bd62226129e6d14b4ecb852a",
+      "size": 302
+    },
+    {
+      "id": "CALC-0137",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\calculix\\current\\K01_STRUCTURAL_MESH_P006_v1_7.json",
+      "sha256": "3d9ce12729c50eb31d413d7cc89d169f6aa093c071c804ed234bf8727eaae9b0",
+      "size": 364
+    },
+    {
+      "id": "CALC-0138",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\drawing\\current\\K01_DRAWING_MBD_RELEASE_WORKPACK_v1_5.json",
+      "sha256": "4d0bff0072859d340b6532eb1d851f36adce4b3c69f4b0e0ed0923446a11cebc",
+      "size": 2181
+    },
+    {
+      "id": "CALC-0139",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\drawing\\current\\K01_DRAWING_MBD_RELEASE_WORKPACK_v1_6.json",
+      "sha256": "674f52d9be81a006b095ce430fcea6d9fa9f5581ecacec3556f02623547ba46b",
+      "size": 4523
+    },
+    {
+      "id": "CALC-0140",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\drawing\\current\\K01_DRAWING_MODEL_GATE04E_v1.json",
+      "sha256": "49ebb05f15cc9c384a5d54f6e9b979097deda96d38e47811bef90d446843afbe",
+      "size": 2517
+    },
+    {
+      "id": "CALC-0141",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\drawing\\current\\K01_DRAWING_VERIFY_GATE04E_v1.json",
+      "sha256": "df91b790532b371cf72ea32a40107d2bc45d0f0b02b512ada353d0e820ee737e",
+      "size": 831
+    },
+    {
+      "id": "CALC-0142",
+      "kind": "MAGNETIC",
+      "path": "reports\\medtas\\femm\\current\\K01_FEMM_MODEL_CURRENT_v1.json",
+      "sha256": "b13475499ce632fa47dc6b487f37a5ee274882ca6da63efdedd97a00bf8447be",
+      "size": 715
+    },
+    {
+      "id": "CALC-0143",
+      "kind": "MAGNETIC",
+      "path": "reports\\medtas\\femm\\current\\K01_FEMM_VERIFY_CURRENT_v1.json",
+      "sha256": "47f4edfc82bfafe413e71bf7205615c555dc8c5827e51be6c27aab8f39f23d68",
+      "size": 460
+    },
+    {
+      "id": "CALC-0144",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\current\\K01_MBD_A001_v1.json",
+      "sha256": "b7b7de89ed93ee79c4f9387ac8c92fbfb6dad28a94dac74641f43609b3968d6c",
+      "size": 4357
+    },
+    {
+      "id": "CALC-0145",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\current\\K01_MBD_AUTHORING_CANDIDATES_v1_6.json",
+      "sha256": "cfb22fb72c070e1bd1a038281274fc99a84301a2a04f99b63d5263c201f3aa9b",
+      "size": 2375
+    },
+    {
+      "id": "CALC-0146",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\current\\K01_MBD_AUTHORING_CANDIDATES_v1_7.json",
+      "sha256": "f9d26d3d07a3646fdbeaaee3fecec43fa603f885b0513bc2ecc1fd62a5b7f1c5",
+      "size": 3261
+    },
+    {
+      "id": "CALC-0147",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\current\\K01_MBD_AUTHORING_PLAN_v1_7.json",
+      "sha256": "0d7c05a4581127254727c4592362899f5081571a3caf24015ab2868a315250ed",
+      "size": 4017
+    },
+    {
+      "id": "CALC-0148",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.dimxpert.raw.json",
+      "sha256": "6c1b3e44598d8b79f5926c1ade311fbcea447c9e70b0a34ca00adf59e2ba6a26",
+      "size": 239
+    },
+    {
+      "id": "CALC-0149",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-001_Calibration_Rod.dimxpert.raw.json",
+      "sha256": "d5066d8d84f3e08fd8b9c31ebfec094f3d2535212a7c3901d1dd0f7090f486c4",
+      "size": 219
+    },
+    {
+      "id": "CALC-0150",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-002_Guide_Bushing.dimxpert.raw.json",
+      "sha256": "949135ba1e96294c9b4d218871684e05c6b62986b88ab5e1e8bfde15c6f13365",
+      "size": 217
+    },
+    {
+      "id": "CALC-0151",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE.dimxpert.raw.json",
+      "sha256": "79c0f58a64280ed35bbe2b485a8285b7e1cd4ff40ba5b60c07a7196e524b41cb",
+      "size": 241
+    },
+    {
+      "id": "CALC-0152",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-004_Front_Guide_Bushing.dimxpert.raw.json",
+      "sha256": "947003301d7367d185bfae6d0f07d9aa6144bac85e4f673a61ea1934a2aac3c1",
+      "size": 223
+    },
+    {
+      "id": "CALC-0153",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-006_Retaining_Plug_GATE04E_SERVICE_CANDIDATE.dimxpert.raw.json",
+      "sha256": "31e5ee692aba8bd69d892c8017714b48655719c5b9e24b1ab99ee2cb4ca88a0c",
+      "size": 244
+    },
+    {
+      "id": "CALC-0154",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.dimxpert.raw.json",
+      "sha256": "e7ec4dc7de9dbb0a51af1ebbdf0ed14069111149dedde16afcc5dc3f8df2b39b",
+      "size": 248
+    },
+    {
+      "id": "CALC-0155",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-008_Internal_Magnetic_Follower.dimxpert.raw.json",
+      "sha256": "9656bcc7754501b65876b82722f14eebc66650bdf6d599e85526f13fbde90404",
+      "size": 702
+    },
+    {
+      "id": "CALC-0156",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-009_Rear_Stop_Washer.dimxpert.raw.json",
+      "sha256": "17df77fd860dbf08b20375c295ef39d1a7545f0c5ae3b3e90b5ced967c964c20",
+      "size": 220
+    },
+    {
+      "id": "CALC-0157",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-013_Follower_End_Cap.dimxpert.raw.json",
+      "sha256": "66ae790ac83b0f0e5800beced97c8d00c4e40c02d00025d1af4a7ed9372682da",
+      "size": 220
+    },
+    {
+      "id": "CALC-0158",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-014_Front_Guide_Retaining_Ring.dimxpert.raw.json",
+      "sha256": "a9a22964e26e6682b874cb5c1df6f11e0f3ed497988e38137bf3b52e19951816",
+      "size": 230
+    },
+    {
+      "id": "CALC-0159",
+      "kind": "MAGNETIC",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-015_Dual_Coil_Bobbin.dimxpert.raw.json",
+      "sha256": "86a5cc135112f88cbd16fcc0b17f05beeb63fb31346568d373eb01b0ec50b270",
+      "size": 220
+    },
+    {
+      "id": "CALC-0160",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\mbd\\raw\\K01-P-016_Long_Run_Interface_Boss.dimxpert.raw.json",
+      "sha256": "333ed253305d7d0fe0a31ed58c84f003009899b17a438699e715d27f8d99cf15",
+      "size": 227
+    },
+    {
+      "id": "CALC-0161",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\product_definition\\current\\K01_PRODUCT_DEFINITION_GATE04E_v1_8.json",
+      "sha256": "3e7747989ee900875cefc765818c02549953c90b3666eac944dcd34efa719189",
+      "size": 15050
+    },
+    {
+      "id": "CALC-0162",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\provenance\\current\\K01_SNAPSHOT_A001_PROVENANCE.json",
+      "sha256": "45c7d41f48c7e19b890a261c114944de2bd50c4c0e8dbed3de09eef36e430312",
+      "size": 229
+    },
+    {
+      "id": "CALC-0163",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.AI.HANDOFF.CURRENT.build.json",
+      "sha256": "e6bace7fbed8195eb3c7aa09fae570cff903cb1b80a2b3032ff1435ca1ab8ab1",
+      "size": 361
+    },
+    {
+      "id": "CALC-0164",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.BOM.ARTIFACT.A001.build.json",
+      "sha256": "49388760b1499bc4c0db99883d0e64cd805cca1681eafc8a52175930e22449a6",
+      "size": 391
+    },
+    {
+      "id": "CALC-0165",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.BOM.MODEL.A001.build.json",
+      "sha256": "505ba089fa22203c84ff3514c9aab0d478114a3c47f9bbcc932877ca374814f6",
+      "size": 334
+    },
+    {
+      "id": "CALC-0166",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.BOM.VERIFY.A001.build.json",
+      "sha256": "4b13d037f1386b83fdeb275337322a33a18b4763dff6a3f456dfb744dfb0558e",
+      "size": 356
+    },
+    {
+      "id": "CALC-0167",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.CAD.HASH.QUAL.A001.build.json",
+      "sha256": "c1382c7f458a4f9351ce01c3dab9e4b5102ff84790115bf77162f5e2e4f4082f",
+      "size": 332
+    },
+    {
+      "id": "CALC-0168",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.CAD.SEM.A001.build.json",
+      "sha256": "938fb5e09971a1395b1545725922dcc3a6382a45128c0489dec617d2bd0db5ce",
+      "size": 1050
+    },
+    {
+      "id": "CALC-0169",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.CHARACTERISTICS.REGISTRY.build.json",
+      "sha256": "9b3f474d7ffee1dcd751386bd3ad15f74ee37ac1dd1076f57b063a6e672c03c2",
+      "size": 346
+    },
+    {
+      "id": "CALC-0170",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.DRAWING.MODEL.GATE04E.build.json",
+      "sha256": "c46770108b1a8b09a0cfe16315f202e8dd34c0a9b5bf078192edd5c1f45e32da",
+      "size": 359
+    },
+    {
+      "id": "CALC-0171",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.DRAWING.P007.EXEMPLAR.PLAN.build.json",
+      "sha256": "baf40b8c1b76c4990b3e41b4fc8b2103b02bf04150d0c6e554eb7f7a8ab66a74",
+      "size": 378
+    },
+    {
+      "id": "CALC-0172",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.DRAWING.P007.LIVE.GEOMETRY.build.json",
+      "sha256": "4c6b11c4a0ec019ddda4f024881c3058f583299ccc54a0af903a5db9734ac528",
+      "size": 402
+    },
+    {
+      "id": "CALC-0173",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.DRAWING.RELEASE.PLAN.GATE04E.build.json",
+      "sha256": "4571f2d3bddde35691e5480e924a299091531c1d2aa5eecde60ebb15ff9ffb07",
+      "size": 344
+    },
+    {
+      "id": "CALC-0174",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.DRAWING.VERIFY.GATE04E.build.json",
+      "sha256": "a16d746bb9e2dae1ff667200e34044b1e95f8d2cd9a73e7d7f711fa04a9c71d1",
+      "size": 331
+    },
+    {
+      "id": "CALC-0175",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.EVIDENCE.GATE04E.REPORT.build.json",
+      "sha256": "5da8a18329c406b4f2ae4c1abae88af0c6ca7a1f5e73564732e88a19ec726e07",
+      "size": 360
+    },
+    {
+      "id": "CALC-0176",
+      "kind": "MAGNETIC",
+      "path": "reports\\medtas\\records\\current\\K01.FEMM.MODEL.CURRENT.build.json",
+      "sha256": "92c0f5504376ffc39ca559a1c1036cf644927aa4c9ca2cf9cccd2ae0478f9b4b",
+      "size": 363
+    },
+    {
+      "id": "CALC-0177",
+      "kind": "MAGNETIC",
+      "path": "reports\\medtas\\records\\current\\K01.FEMM.RUN.A.build.json",
+      "sha256": "9efcf6c853e8012214f5b6fa35e1d484fd599aca48af208339c7714e0d0e896a",
+      "size": 369
+    },
+    {
+      "id": "CALC-0178",
+      "kind": "MAGNETIC",
+      "path": "reports\\medtas\\records\\current\\K01.FEMM.RUN.B.build.json",
+      "sha256": "365ceefb96d26736fcf2a48bb6027f9a7a578809ccce8f666ba2a4de9fd22273",
+      "size": 369
+    },
+    {
+      "id": "CALC-0179",
+      "kind": "MAGNETIC",
+      "path": "reports\\medtas\\records\\current\\K01.FEMM.VERIFY.CURRENT.build.json",
+      "sha256": "4f1100da2d48336b407f5c096af181b742507faa75b7011202745ea3527c3565",
+      "size": 360
+    },
+    {
+      "id": "CALC-0180",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.IDENTITY.AUDIT.build.json",
+      "sha256": "899d79d5fb894946d2763c59ee946f386ef6e0b2f7b09d0912722794c87f46be",
+      "size": 353
+    },
+    {
+      "id": "CALC-0181",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.IDENTITY.MIGRATION.PLAN.build.json",
+      "sha256": "89f09efe051ca8e53c8f1a5422ef0eb92f48ac8aa990590dc3073c02586414dc",
+      "size": 373
+    },
+    {
+      "id": "CALC-0182",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.MBD.A001.build.json",
+      "sha256": "ca1386a6513cba0e9a46cfb95afad8e5009d9ef3913e17658b3ce8f19b65bc68",
+      "size": 528
+    },
+    {
+      "id": "CALC-0183",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.MBD.AUTHORING.PLAN.build.json",
+      "sha256": "88b854ff2adcd2a83ef59b924ab5f65eb3ef9f5b3406a4d0a054211235786e3a",
+      "size": 332
+    },
+    {
+      "id": "CALC-0184",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.MBOM.ARTIFACT.A001.build.json",
+      "sha256": "9c63e3b92f0dccfc2309e66cb51b7fc747e5d74730acdb809bbde7a2e92b494c",
+      "size": 392
+    },
+    {
+      "id": "CALC-0185",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.MBOM.MODEL.A001.build.json",
+      "sha256": "1fed97b9e5532c5d7b29d4ecc54fee11ff3c3b80323e0336730f7f7008026551",
+      "size": 335
+    },
+    {
+      "id": "CALC-0186",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.PRODUCT.DEFINITION.GATE04E.build.json",
+      "sha256": "ff768377dc1f5113564014fefd97e05bce499cab8afd2b779d80214be2c175e9",
+      "size": 376
+    },
+    {
+      "id": "CALC-0187",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.PROJECT.STRUCTURE.build.json",
+      "sha256": "dc39abb0bd3ef7ec1fd64e9fb6b97e8fbce4df57dcf618c6312a36c3b8f655aa",
+      "size": 466
+    },
+    {
+      "id": "CALC-0188",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.REQ.COVERAGE.build.json",
+      "sha256": "b9342d1d4a658777191980d6df69d040fb68a0055807b1af5db0c1713410269c",
+      "size": 329
+    },
+    {
+      "id": "CALC-0189",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.SNAPSHOT.A001.build.json",
+      "sha256": "146bc62aad4808b66ff4f0b40c4e6c73360152564d01254fe5872e70c43ba5f2",
+      "size": 360
+    },
+    {
+      "id": "CALC-0190",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.STRUCT.BOLT_EQUIV.P006.build.json",
+      "sha256": "0ba917378f5a84b2acb07616f09aaad7a6e8f7123009b8f8af086b54f36bed92",
+      "size": 543
+    },
+    {
+      "id": "CALC-0191",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.STRUCT.FACE_MAP.P006.build.json",
+      "sha256": "ebe314deb41ca40f1ab968750b5e64170a57c4caf267612423bff59c9c4cf9fa",
+      "size": 465
+    },
+    {
+      "id": "CALC-0192",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.STRUCT.FACE_MAP.QUAL.P006.build.json",
+      "sha256": "e430eeb4ecba0b2f3f1a3f9ef74221909d86530b2a908d6d11bc239a084c9101",
+      "size": 342
+    },
+    {
+      "id": "CALC-0193",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.STRUCT.MODEL.P006.build.json",
+      "sha256": "ab783025fa71134742ec6d708e38b033e08cb2cc61f44f7934b2350eb7b55490",
+      "size": 366
+    },
+    {
+      "id": "CALC-0194",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.STRUCT.NEUTRAL.GEOMETRY.P006.build.json",
+      "sha256": "6c40c8aec70aa9ddc59d3adcc639474b8bfc8363f3ada703b02a5aed8d1be268",
+      "size": 398
+    },
+    {
+      "id": "CALC-0195",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.STRUCT.RECON.P006.build.json",
+      "sha256": "1002993022b535c7ff6e9dc82bcd028f10bcb27c7e135ca78ff8babfa71379d8",
+      "size": 355
+    },
+    {
+      "id": "CALC-0196",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.STRUCT.SWSIM.P006.build.json",
+      "sha256": "5bd2137eb0f3d9992958575a2ff1fb6ed1349bb74bf42cd69658d7af67653d77",
+      "size": 471
+    },
+    {
+      "id": "CALC-0197",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.TOL.A001.build.json",
+      "sha256": "4fc7bffb2a4105c0b572031d9cb8c831b512fc19e51bc9efa758ed57fa35860f",
+      "size": 346
+    },
+    {
+      "id": "CALC-0198",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\records\\current\\K01.VERIFY.GATE04E.build.json",
+      "sha256": "b2f2ef272f384fcb59b12b55d838477edb4d1373cb75101c6ba8f8d5c25a035e",
+      "size": 345
+    },
+    {
+      "id": "CALC-0199",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\snapshot\\current\\K01_CANONICAL_ENGINEERING_SNAPSHOT_A001_v1.json",
+      "sha256": "ef7d131a7ccc5470ec5f04fd6fe154799367bc0deefcac77751ea6f4fda2fdfe",
+      "size": 162048
+    },
+    {
+      "id": "CALC-0200",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\structural\\current\\K01_STRUCTURAL_BOLT_EQUIV_P006_v1_6.json",
+      "sha256": "5f76004c50020de49d5131e3b4f372e1cf4995abfbc095aa1d12b8986c87cdb1",
+      "size": 1459
+    },
+    {
+      "id": "CALC-0201",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\structural\\current\\K01_STRUCTURAL_BOLT_EQUIV_P006_v1_7.json",
+      "sha256": "1311a9d8a401d6f0400d5980ccb5631ef5ebcdeb0a44e7b5681c433f03a6b26c",
+      "size": 1625
+    },
+    {
+      "id": "CALC-0202",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\structural\\current\\K01_STRUCTURAL_FACE_MAP_P006_v1.json",
+      "sha256": "807a253e3053e9d8f0b6b431bd157ce854cb4dc0702c1005c0819d00118c9103",
+      "size": 84108
+    },
+    {
+      "id": "CALC-0203",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\structural\\current\\K01_STRUCTURAL_FACE_MAP_QUAL_P006_v1_7.json",
+      "sha256": "85e830c114dc68cea3c8bed32fa48319ed433a3af56905d0252d214f25f2b599",
+      "size": 702
+    },
+    {
+      "id": "CALC-0204",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\structural\\current\\K01_STRUCTURAL_MODEL_P006_v1.json",
+      "sha256": "0ffd72247a9d6b1e4385659848e37bdd41b6bbeb115a8933233061ef6eada6ae",
+      "size": 37178
+    },
+    {
+      "id": "CALC-0205",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\structural\\current\\K01_STRUCTURAL_NEUTRAL_GEOMETRY_P006_v1_6.json",
+      "sha256": "b54aaab39754248658ac7ca99be45434c2f3332a4dec2f63115acd74ff88f3b0",
+      "size": 2088
+    },
+    {
+      "id": "CALC-0206",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\structural\\current\\K01_STRUCTURAL_NEUTRAL_GEOMETRY_P006_v1_7.json",
+      "sha256": "90aef2dc1c6994b7debfcef47095338f1c1975c4f3bae72af9e468a6289ddf5d",
+      "size": 2435
+    },
+    {
+      "id": "CALC-0207",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\structural\\current\\K01_STRUCTURAL_RECON_P006_v1.json",
+      "sha256": "2b6969a50275f7fa731b97dd1557c3ac348e6b6dd37d130d6fa3adc68f5d8dba",
+      "size": 504
+    },
+    {
+      "id": "CALC-0208",
+      "kind": "TOLERANCE",
+      "path": "reports\\medtas\\tolerance\\current\\K01_TOLERANCE_A001_v1.json",
+      "sha256": "06c919a10cd091843498d9c03ccce4e65347a9a9379f29c37ba138a82ed7a552",
+      "size": 5878
+    },
+    {
+      "id": "CALC-0209",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verification\\current\\K01_VERIFY_GATE04E_v1.json",
+      "sha256": "9f632616311cb036c087e74911b100d79be58bcc36628ead6fbb1a1449445d4b",
+      "size": 835
+    },
+    {
+      "id": "CALC-0210",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.BOM.VERIFY.A001.verify.json",
+      "sha256": "eb6065d5c937a99fa8b979f855efb06d6174ab4507c51d6acd0ea2dc7e95e3e7",
+      "size": 1135
+    },
+    {
+      "id": "CALC-0211",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.CAD.HASH.QUAL.A001.verify.json",
+      "sha256": "5d97723f6678b31c41a26a2216b051057a8403eded57d35174ceb72fb5bcf412",
+      "size": 481
+    },
+    {
+      "id": "CALC-0212",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.CHARACTERISTICS.REGISTRY.verify.json",
+      "sha256": "9269bea6eda84a3f28a3a729bcf7351632b33dbf2d0feef8e84a378c0a1459bb",
+      "size": 548
+    },
+    {
+      "id": "CALC-0213",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.DRAWING.P007.EXEMPLAR.PLAN.verify.json",
+      "sha256": "07156d55071165259a066763b70ae88bc63e63523ad32d502f4f63f365ee97e9",
+      "size": 594
+    },
+    {
+      "id": "CALC-0214",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.DRAWING.P007.LIVE.GEOMETRY.verify.json",
+      "sha256": "085fea7f4f0e0e83f7f4867e47def454b5fdd44934fad0d95af032fd061c63ad",
+      "size": 807
+    },
+    {
+      "id": "CALC-0215",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.DRAWING.RELEASE.PLAN.GATE04E.verify.json",
+      "sha256": "76c74902f46640e1f9cc730c88a75b673e5785e3d90a2f77812c10adefefad26",
+      "size": 907
+    },
+    {
+      "id": "CALC-0216",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.DRAWING.VERIFY.GATE04E.verify.json",
+      "sha256": "b89a687e3f61c1d330c6c85e5eadb15cb4b88a06f7c5575daae112546386a499",
+      "size": 941
+    },
+    {
+      "id": "CALC-0217",
+      "kind": "MAGNETIC",
+      "path": "reports\\medtas\\verifications\\current\\K01.FEMM.RUN.A.verify.json",
+      "sha256": "5501ed1bbbd445a00b894922cf28e6e6c057d98eb59a9101186fb622aabcc95f",
+      "size": 531
+    },
+    {
+      "id": "CALC-0218",
+      "kind": "MAGNETIC",
+      "path": "reports\\medtas\\verifications\\current\\K01.FEMM.RUN.B.verify.json",
+      "sha256": "ecd5f17d2c886bbc6c8ddc7d2958c9ce2e4fd6d3fd47a399789c48e1721925fe",
+      "size": 531
+    },
+    {
+      "id": "CALC-0219",
+      "kind": "MAGNETIC",
+      "path": "reports\\medtas\\verifications\\current\\K01.FEMM.VERIFY.CURRENT.verify.json",
+      "sha256": "3b870d4e7410d52eb4b5d2984bef18ace87ae66d094ca9bc1422b84906d5b5f5",
+      "size": 730
+    },
+    {
+      "id": "CALC-0220",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.IDENTITY.AUDIT.verify.json",
+      "sha256": "2e4b2c70d8368002e1b430545a954f45c551d08c4a6ea6b194226803ad96f5a4",
+      "size": 561
+    },
+    {
+      "id": "CALC-0221",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.IDENTITY.MIGRATION.PLAN.verify.json",
+      "sha256": "8ca1017e72e3b3506a69b2644979ef8a706d88f8ea4540f15c5fb21cdf24de86",
+      "size": 557
+    },
+    {
+      "id": "CALC-0222",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.MBD.AUTHORING.PLAN.verify.json",
+      "sha256": "55fbd5cf00abf4e1aa799d9a319e9635d84774970453053192f9297f533d3b88",
+      "size": 674
+    },
+    {
+      "id": "CALC-0223",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.MBOM.VERIFY.A001.verify.json",
+      "sha256": "bfcf2e4bf3a6a08f79ef604a6a1191293068600f9d5bc052bcda1a64534b830d",
+      "size": 1299
+    },
+    {
+      "id": "CALC-0224",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.PRODUCT.DEFINITION.GATE04E.verify.json",
+      "sha256": "f88577a2e497bc0c22fa4995dc78e0921cb9fbcb49abcad2d602ba763a1390af",
+      "size": 1279
+    },
+    {
+      "id": "CALC-0225",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.PROJECT.STRUCTURE.verify.json",
+      "sha256": "9eb13488beacac3698d16ec6ba17ddc9640551c2da11162e9b49059bbc9f321a",
+      "size": 658
+    },
+    {
+      "id": "CALC-0226",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.REQ.COVERAGE.verify.json",
+      "sha256": "3c3e222489081db5bcd7230e1af454d4d9210cea0b9b844483eff43d8c15d52a",
+      "size": 659
+    },
+    {
+      "id": "CALC-0227",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.STRUCT.BOLT_EQUIV.P006.verify.json",
+      "sha256": "c8b2d3785d724dd7a16858ca047558d66f6267deabcf0d34cf0455ae3340973f",
+      "size": 564
+    },
+    {
+      "id": "CALC-0228",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.STRUCT.FACE_MAP.P006.verify.json",
+      "sha256": "985d42e09a8155bb8470167eb2911fd36c40a904191bfba47271e3821ddc1d9b",
+      "size": 552
+    },
+    {
+      "id": "CALC-0229",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.STRUCT.FACE_MAP.QUAL.P006.verify.json",
+      "sha256": "146f380f6746904a97ff2f8a8db44a179b66560fd08055dd470c334165fc527a",
+      "size": 588
+    },
+    {
+      "id": "CALC-0230",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.STRUCT.NEUTRAL.GEOMETRY.P006.verify.json",
+      "sha256": "464716d72f5e381504f1a12a44c3f253c2cad36bfc4301b9fe628f13bf041a12",
+      "size": 483
+    },
+    {
+      "id": "CALC-0231",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.STRUCT.RECON.P006.verify.json",
+      "sha256": "419a3ae55dbeb4ed6bccc4080a7dbcf77fdb9656cbaa580153645619d10516ee",
+      "size": 526
+    },
+    {
+      "id": "CALC-0232",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.STRUCT.SWSIM.P006.verify.json",
+      "sha256": "77f4b7f17f434d5e2e5196acf7c149dce67741bb737c6283797d4d4dee22bd07",
+      "size": 885
+    },
+    {
+      "id": "CALC-0233",
+      "kind": "OTHER",
+      "path": "reports\\medtas\\verifications\\current\\K01.VERIFY.GATE04E.verify.json",
+      "sha256": "85e94c68dcef353de49a1376028e00d8bf343ebe001eee22b7e1a57c72ff145a",
+      "size": 655
+    }
+  ]
+}

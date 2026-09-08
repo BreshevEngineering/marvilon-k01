@@ -1,0 +1,10 @@
+{
+  "schema": "medtas.build_record.v1",
+  "node_id": "K01.FEMM.VERIFY.CURRENT",
+  "built_state_hash": "b636bddbdc922bf7e2455e2dee7fb52cdfa4e2005a75061c8e803ed9162642c3",
+  "artifact_hash": "b02f380b24b4d4916040992ae71a063e70f16f39a7a467f88ed0d354e62a1e9d",
+  "producer": {
+    "tool": "build_downstream_v1_8.py",
+    "stage": "femm_verification"
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "CH-001",
+    "name": "Hard-stop travel",
+    "equation": "StopOut = StopIn + Stroke + CollarT",
+    "value": "24 = 12 + 10 + 2 mm",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "CH-002",
+    "name": "Follower-to-can radial clearance",
+    "equation": "(P007 ID - P008 OD)/2",
+    "value": "(9.4-8.8)/2 = 0.30 mm",
+    "status": "PASS vs >=0.25"
+  },
+  {
+    "id": "CH-003",
+    "name": "P007 thin wall",
+    "equation": "(OD-ID)/2",
+    "value": "(10.0-9.4)/2 = 0.30 mm",
+    "status": "ACTIVE"
+  },
+  {
+    "id": "CH-J2-001",
+    "name": "Pilot bottom clearance",
+    "equation": "1.70-1.50",
+    "value": "0.20 mm",
+    "status": "VERIFIED"
+  },
+  {
+    "id": "CH-J2-002",
+    "name": "J2 inner ligament baseline",
+    "equation": "(PCD-Dhole-GlandODworst)/2",
+    "value": "(28-3.4-20.6)/2 = 2.00 mm",
+    "status": "VERIFIED"
+  },
+  {
+    "id": "CH-J2-003",
+    "name": "J2 outer ligament baseline",
+    "equation": "(OD-PCD-Dhole)/2",
+    "value": "(36-28-3.4)/2 = 2.30 mm",
+    "status": "VERIFIED"
+  },
+  {
+    "id": "CH-ACT-001",
+    "name": "Required actuator force",
+    "equation": "SF*(Fbreakaway+|FCFD|max+Finertia)",
+    "value": "2*(0.25+0.185447243+0.03)=0.930894486 N",
+    "status": "ACTIVE"
+  }
+]

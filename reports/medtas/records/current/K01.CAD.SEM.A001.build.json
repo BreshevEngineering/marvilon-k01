@@ -1,0 +1,27 @@
+{
+  "schema": "medtas.build_record.v1",
+  "node_id": "K01.CAD.SEM.A001",
+  "built_state_hash": "f02750df76c6c51f9c7ad21b308a4541f87f0bb69834744c4187d2f4d5ec9a17",
+  "artifact_hash": "d4ad5636e4d185855d1ac5093c033065f3c90a1e4c1de619b98ba823a1993177",
+  "producer": {
+    "raw_api_adapter": "csharp",
+    "csharp_exporter": "cad_api/medtas/bin/K01CadSemanticA001.exe",
+    "pywin32_fallback": "tools/medtas/sw_semantic_pywin32_v1_5.py",
+    "canonicalizer": "tools/medtas/run_cad_sem_a001.py"
+  },
+  "source_assembly": {
+    "selection": "gate04e_verify",
+    "display_name": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM"
+  },
+  "raw_snapshot": "reports/cad/current/K01_A001_SEMANTIC_RAW_API_v1_4.json",
+  "canonical_snapshot": "reports/medtas/cad/current/K01_CAD_SEM_A001.json",
+  "completeness": {
+    "component_instances": true,
+    "assembly_configuration": true,
+    "component_transforms": true,
+    "part_feature_semantics": true,
+    "material_assignments": true,
+    "mate_features": true
+  },
+  "limitations": []
+}

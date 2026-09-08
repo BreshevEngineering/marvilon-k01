@@ -1,0 +1,16 @@
+{
+  "schema": "k01.identity_policy.v1_9",
+  "project": "K01",
+  "authority": "Stable engineering identity is the part/assembly/drawing number. Lifecycle state belongs in metadata and the Engineering Build Graph, never in the canonical identity.",
+  "rules": {
+    "part_file": "<PartNo>_<Description>.SLDPRT",
+    "assembly_file": "<AssemblyNo>_<Description>.SLDASM",
+    "drawing_file": "<DrawingNo>_<Description>.SLDDRW",
+    "forbidden_state_tokens_in_canonical_name": [
+      "GATE", "CANDIDATE", "VERIFY", "VERIFICATION", "SERVICE_CANDIDATE", "FINAL", "CURRENT", "FROZEN", "REFERENCE", "V1", "V2", "V3"
+    ],
+    "revision_rule": "Revision is metadata/property/thread state and must not be encoded into the canonical CAD filename.",
+    "migration_rule": "Existing stateful native CAD filenames are audited first. Renaming is a controlled one-time migration using SOLIDWORKS reference-safe rename/replace workflow; this overlay never bulk-renames live CAD files."
+  },
+  "release_gate": "No new stateful CAD filenames may be introduced after identity migration is approved. Existing stateful filenames remain migration debt until reference-safe migration is executed."
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "medtas.verification_record.v1",
+  "node_id": "K01.VERIFY.GATE04E",
+  "verified_state_hash": "05a3ade532b7ea1256a39e590e2f9ed4e66ec8255d8c54d33d2ef9e8004311c2",
+  "verified_artifact_hash": "d0d730250a2898aee6798e6c6b1d01ba0253a6af948911b106118e3fa1652bf0",
+  "verdict": "PASS_WITH_LIMITATIONS",
+  "metrics": {},
+  "limitations": [
+    "Current FEMM force extraction is not final quantitative release evidence",
+    "Drawing artifact/verification and unresolved product requirements remain release work",
+    "CalculiX independent cross-check is retained as DEFERRED_ASSURANCE, not a current release blocker"
+  ],
+  "notes": ""
+}

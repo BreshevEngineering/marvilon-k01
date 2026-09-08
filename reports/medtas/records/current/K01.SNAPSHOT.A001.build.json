@@ -1,0 +1,10 @@
+{
+  "schema": "medtas.build_record.v1",
+  "node_id": "K01.SNAPSHOT.A001",
+  "built_state_hash": "8c6a0755a7c59baddc18b1ed3a70201a4289f852327c3711033981a7035aaeed",
+  "artifact_hash": "10ea24c7fd25c736e7e38dd14f7dee059185aa1268327a45bbb6ef3dd41eaf64",
+  "producer": {
+    "tool": "build_downstream_v1_8.py",
+    "stage": "canonical_snapshot_v1_4"
+  }
+}

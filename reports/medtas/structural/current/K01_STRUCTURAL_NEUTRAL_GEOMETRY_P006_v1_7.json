@@ -1,0 +1,69 @@
+{
+  "hash_policy": "normalized STEP hash strips volatile header and is artifact-stability evidence only; canonical CAD semantic state remains geometry authority; geometric-equivalence checks are separate",
+  "limitations": [],
+  "parts": [
+    {
+      "assembly_instances": [
+        {
+          "instance": "K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE-1",
+          "transform": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0.000573782814154",
+            "0.0199034636365",
+            "0.0306899225417",
+            "1",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "part_no": "K01-P-003",
+      "source_native_document": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "step_binary_sha256_diagnostic": "3cf517fdc8ebd94408826ed7bce7b69664703e4155a94b2fe308a1bab21302c8",
+      "step_normalized_sha256": "606ebba3f12b74e3a821cd573d5d2a89fbf7e3fa357bc84011156147aa1f3a49",
+      "step_path": "reports/medtas/structural/current/neutral_geometry_p006/K01-P-003.STEP"
+    },
+    {
+      "assembly_instances": [
+        {
+          "instance": "K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE-1",
+          "transform": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0.032808245431",
+            "0.0199034636365",
+            "0.0306899225417",
+            "1",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "part_no": "K01-P-007",
+      "source_native_document": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "step_binary_sha256_diagnostic": "6b07c254699ed114a584cb1a685d410a00dc95131b8a291c7b477920fdf1277d",
+      "step_normalized_sha256": "181de8ac7e4b3337bed62bc9b4d5581021d9b063d38f3d379c4d56dc5879f64c",
+      "step_path": "reports/medtas/structural/current/neutral_geometry_p006/K01-P-007.STEP"
+    }
+  ],
+  "schema": "k01.structural_neutral_geometry.p006.v1_7",
+  "source": "native SOLIDWORKS part documents resolved through current CAD semantic raw snapshot",
+  "status": "PASS"
+}

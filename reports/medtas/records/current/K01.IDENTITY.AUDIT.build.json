@@ -1,0 +1,10 @@
+{
+  "artifact_hash": "3ccfe6c8c2704dc279f76013960a5731f42216fda0e47b8a16a40d8741ea3ddc",
+  "built_state_hash": "0df71207292651416bea1111d142e0939f82139468788fc06761de593f49ea7d",
+  "node_id": "K01.IDENTITY.AUDIT",
+  "producer": {
+    "source": "raw native paths",
+    "tool": "audit_identity_v2_0.py"
+  },
+  "schema": "medtas.build_record.v1"
+}

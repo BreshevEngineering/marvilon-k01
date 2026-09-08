@@ -1,0 +1,2500 @@
+{
+  "schema": "k01.repository_normalization_plan.v1",
+  "created_utc": "2026-09-08T06:10:51.727935+00:00",
+  "scope": "READ_ONLY PLAN; no move/delete/stage/commit/push/CAD write.",
+  "repo_root": "D:\\BreshevEngineering\\marvilon-k01",
+  "branch": "main",
+  "head": "bbe2535ca696287a2500edd86ad67ca342762541",
+  "remote": "origin\thttps://github.com/BreshevEngineering/marvilon-k01.git (fetch)\norigin\thttps://github.com/BreshevEngineering/marvilon-k01.git (push)",
+  "dirty_count": 249,
+  "class_counts": {
+    "HUMAN_REVIEW": 28,
+    "CURRENT_SOURCE": 56,
+    "CONTROLLED_HISTORY": 148,
+    "RUNTIME_CACHE": 4,
+    "EVIDENCE_REVIEW": 13
+  },
+  "action_counts": {
+    "REVIEW": 21,
+    "KEEP_PENDING_CAD_API_CONSOLIDATION": 22,
+    "PROPOSE_ARCHIVE_MOVE": 148,
+    "PROPOSE_GITIGNORE": 4,
+    "PROPOSE_ARCHIVE_STRAY_NOTE": 3,
+    "REVIEW_DOMAIN_AUTHORITY": 4,
+    "KEEP_PENDING_INTERNAL_CONSOLIDATION": 34,
+    "RETAIN_PENDING_EVIDENCE_POLICY": 13
+  },
+  "baseline_guard": {
+    "foundation_report": "D:\\BreshevEngineering\\marvilon-k01\\reports\\foundation\\K01_FOUNDATION_AUDIT_CURRENT.json",
+    "status": "PASS_BASELINE_GUARD",
+    "reported_status": "PASS_BASELINE_CAPTURE",
+    "source": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\verification\\K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+    "source_sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4",
+    "simulation_evidence_count": 11,
+    "actual_sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4",
+    "r01_operation": "BLOCKED_BY_POLICY_DURING_NORMALIZATION"
+  },
+  "center": {
+    "stable_core_present": [
+      "control/command_center/OPEN_K01_COMMAND_CENTER.cmd",
+      "control/command_center/app.js",
+      "control/command_center/core.ps1",
+      "control/command_center/index.html",
+      "control/command_center/server.ps1",
+      "control/command_center/styles.css"
+    ],
+    "legacy_versioned_files_detected": [
+      "K01_Command_Center_v10.html",
+      "K01_Command_Center_v11.html",
+      "K01_Command_Center_v8_REFERENCE.html",
+      "K01_Command_Center_v9.html",
+      "OPEN_K01_COMMAND_CENTER_V10.cmd",
+      "OPEN_K01_COMMAND_CENTER_V11.cmd",
+      "OPEN_K01_COMMAND_CENTER_V8_REFERENCE.cmd",
+      "OPEN_K01_COMMAND_CENTER_V9.cmd",
+      "control/command_center/K01_Command_Center_v1.html",
+      "control/command_center/K01_Command_Center_v2.html",
+      "control/command_center/K01_Command_Center_v3.html",
+      "control/command_center/K01_Command_Center_v4.html",
+      "control/command_center/K01_Command_Center_v5.html",
+      "control/command_center/K01_Command_Center_v6.html",
+      "control/command_center/K01_Command_Center_v7.html",
+      "control/command_center/K01_Command_Center_v8.html",
+      "control/command_center/OPEN_K01_COMMAND_CENTER_V2.cmd",
+      "control/command_center/OPEN_K01_COMMAND_CENTER_V3.cmd",
+      "control/command_center/OPEN_K01_COMMAND_CENTER_V4.cmd",
+      "control/command_center/OPEN_K01_COMMAND_CENTER_V5.cmd",
+      "control/command_center/OPEN_K01_COMMAND_CENTER_V6.cmd",
+      "control/command_center/OPEN_K01_COMMAND_CENTER_V7.cmd",
+      "control/command_center/OPEN_K01_COMMAND_CENTER_V8.cmd",
+      "control/command_center/cc_server_v4.ps1",
+      "control/command_center/cc_server_v5.ps1",
+      "control/command_center/cc_server_v6.ps1",
+      "control/command_center/cc_server_v7.ps1",
+      "control/command_center/cc_server_v8.ps1",
+      "control/command_center/data/K01_FILE_REGISTRY_v1.json",
+      "control/command_center/data/K01_FILE_REGISTRY_v2.json",
+      "control/command_center/data/K01_FILE_REGISTRY_v3.json",
+      "control/command_center/data/K01_FILE_REGISTRY_v5.json",
+      "control/command_center/data/K01_FILE_REGISTRY_v6.json",
+      "control/command_center/data/K01_FILE_REGISTRY_v7.json",
+      "control/command_center/data/K01_FILE_REGISTRY_v8.json"
+    ],
+    "recommended_current_entrypoint": "control/command_center/OPEN_K01_COMMAND_CENTER.cmd",
+    "recommended_current_server": "control/command_center/server.ps1",
+    "status": "READY_FOR_CONSOLIDATION_PLAN"
+  },
+  "entries": [
+    {
+      "xy": " M",
+      "path": ".gitattributes",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": " M",
+      "path": ".gitignore",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": " D",
+      "path": "README_PATCH.md",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": " D",
+      "path": "RUN_SW_API_GATE02_WRITE_TEST_v05_FINAL.cmd",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": " D",
+      "path": "RUN_SW_CAD_SNAPSHOT_v07.cmd",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": " D",
+      "path": "cad_api/README.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": ".githooks/",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": ".github/workflows/k01-control-ci.yml",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": ".github/workflows/medtas-ci.yml",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": ".local_archive/",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "00B_BUILD_IDENTITY_MIGRATION_PLAN.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/00B_BUILD_IDENTITY_MIGRATION_PLAN.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "00_AUDIT_IDENTITY.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/00_AUDIT_IDENTITY.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_IN_REPO_ROOT.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_IN_REPO_ROOT.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_1.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_BUILD_GRAPH_v1_1.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_2.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_BUILD_GRAPH_v1_2.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_3.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_BUILD_GRAPH_v1_3.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_4.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_BUILD_GRAPH_v1_4.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_5.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_BUILD_GRAPH_v1_5.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_6.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_BUILD_GRAPH_v1_6.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_7.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_BUILD_GRAPH_v1_7.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_8.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_BUILD_GRAPH_v1_8.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_9.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_BUILD_GRAPH_v1_9.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v2_0.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_BUILD_GRAPH_v2_0.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v2_2.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_BUILD_GRAPH_v2_2.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_CORE.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_CORE.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_v3.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_v3.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_v4.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_v4.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_v5.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_v5.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_v6.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_v6.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_v7.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_v7.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_v8.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_v8.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_v8_1.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_v8_1.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_v8_2.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_v8_2.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_v8_3.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_v8_3.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_INSTALL_MEDTAS_v8_4.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_INSTALL_MEDTAS_v8_4.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_MEDTAS_PREFLIGHT.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/00_MEDTAS_PREFLIGHT.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "00_MEDTAS_V8_PREFLIGHT.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/00_MEDTAS_V8_PREFLIGHT.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "00_README_CLOSURE_03.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_README_CLOSURE_03.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_README_CLOSURE_04.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_README_CLOSURE_04.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_README_CLOSURE_05.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_README_CLOSURE_05.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_README_CONTINUE_06.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_README_CONTINUE_06.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_README_HOTFIX_01.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_README_HOTFIX_01.md"
+    },
+    {
+      "xy": "??",
+      "path": "00_README_RECOVERY_02.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/00_README_RECOVERY_02.md"
+    },
+    {
+      "xy": "??",
+      "path": "01_BUILD_REQUIREMENTS_COVERAGE.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/01_BUILD_REQUIREMENTS_COVERAGE.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "01_RUN_K01_NEXT_ENGINEERING.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/01_RUN_K01_NEXT_ENGINEERING.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "02_RUN_K01_ENGINEERING_RECOVERY.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/02_RUN_K01_ENGINEERING_RECOVERY.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "02_RUN_MEDTAS_ASSURANCE_TESTS.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/02_RUN_MEDTAS_ASSURANCE_TESTS.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "03_RUN_K01_CLOSURE_03.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/03_RUN_K01_CLOSURE_03.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "03_RUN_MEDTAS_CAD_SEM_A001.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/03_RUN_MEDTAS_CAD_SEM_A001.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "03_RUN_MEDTAS_PIPELINE.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/03_RUN_MEDTAS_PIPELINE.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "04_REBUILD_MEDTAS_CENTER.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/04_REBUILD_MEDTAS_CENTER.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "04_RUN_K01_MODULE_CLOSURE.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/04_RUN_K01_MODULE_CLOSURE.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "05_CALCULIX_PREFLIGHT.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/05_CALCULIX_PREFLIGHT.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "05_RUN_K01_MODULE_CLOSURE.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/05_RUN_K01_MODULE_CLOSURE.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "06_RUN_K01_CONTINUE.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/06_RUN_K01_CONTINUE.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "06_TEST_CAD_HASH_INVARIANCE.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/06_TEST_CAD_HASH_INVARIANCE.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "07_STEP_CANONICAL_HASH.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/07_STEP_CANONICAL_HASH.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "08_BUILD_BOM_ARTIFACT.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/08_BUILD_BOM_ARTIFACT.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "09B_BUILD_MBD_AUTHORING_PLAN.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/09B_BUILD_MBD_AUTHORING_PLAN.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "09_BUILD_DRAWING_MBD_WORKPACK.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/09_BUILD_DRAWING_MBD_WORKPACK.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "09_BUILD_MBD_AUTHORING_CANDIDATES.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/09_BUILD_MBD_AUTHORING_CANDIDATES.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "10B_QUALIFY_STRUCTURAL_FACE_MAP.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/10B_QUALIFY_STRUCTURAL_FACE_MAP.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "10_BIND_STRUCTURAL_FACE_ROLES.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/10_BIND_STRUCTURAL_FACE_ROLES.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "11_EXPORT_STRUCTURAL_NEUTRAL_GEOMETRY.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/11_EXPORT_STRUCTURAL_NEUTRAL_GEOMETRY.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "12_BUILD_BOLT_EQUIV_SCAFFOLD.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/12_BUILD_BOLT_EQUIV_SCAFFOLD.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "12_BUILD_STRUCTURAL_MESH.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/12_BUILD_STRUCTURAL_MESH.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "13_BUILD_CALCULIX_INPUT.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/13_BUILD_CALCULIX_INPUT.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "14_AUDIT_PROJECT_STRUCTURE.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/14_AUDIT_PROJECT_STRUCTURE.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "15_BUILD_DRAWING_RELEASE_PLAN.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/15_BUILD_DRAWING_RELEASE_PLAN.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "16_BUILD_NATIVE_DRAWING_PACK.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/16_BUILD_NATIVE_DRAWING_PACK.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "17_DISCOVER_ANALYSIS_TOOLCHAIN.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/17_DISCOVER_ANALYSIS_TOOLCHAIN.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "18_RUN_CALCULIX_P006.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/18_RUN_CALCULIX_P006.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "19_BUILD_RELEASE_PRIORITY.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/19_BUILD_RELEASE_PRIORITY.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "20_DISCOVER_DRAWING_TEMPLATE.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/20_DISCOVER_DRAWING_TEMPLATE.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "21_RECORD_DRAWING_VISUAL_APPROVAL.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/21_RECORD_DRAWING_VISUAL_APPROVAL.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "22_BUILD_AI_HANDOFF.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/22_BUILD_AI_HANDOFF.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "23_BUILD_EBOM_MBOM.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/23_BUILD_EBOM_MBOM.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "24_SYNC_PARTS_REGISTRY_TO_CAD_PROPS.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/24_SYNC_PARTS_REGISTRY_TO_CAD_PROPS.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "25_BUILD_P007_EXEMPLAR_PLAN.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/25_BUILD_P007_EXEMPLAR_PLAN.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "26_VERIFY_DRAWING_QA.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/26_VERIFY_DRAWING_QA.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "28_BUILD_P007_EXEMPLAR_SKELETON.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/28_BUILD_P007_EXEMPLAR_SKELETON.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "29_BUILD_INSPECTION_CHARACTERISTICS.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/29_BUILD_INSPECTION_CHARACTERISTICS.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "30_INGEST_INSPECTION_RESULTS.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/30_INGEST_INSPECTION_RESULTS.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "31A_PREFLIGHT_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/31A_PREFLIGHT_FINAL_ASSEMBLY_PROMOTION.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "31B_APPLY_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/31B_APPLY_FINAL_ASSEMBLY_PROMOTION.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "31C_VERIFY_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/31C_VERIFY_FINAL_ASSEMBLY_PROMOTION.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "31D_VERIFY_FINAL_ASSEMBLY_SEMANTICS.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/31D_VERIFY_FINAL_ASSEMBLY_SEMANTICS.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "31_BUILD_RELEASE_PROGRAM.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/31_BUILD_RELEASE_PROGRAM.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "31_COMPILE_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/31_COMPILE_FINAL_ASSEMBLY_PROMOTION.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "35_GIT_AUDIT.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/35_GIT_AUDIT.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "36_BUILD_TECHNICAL_FILTER_MAP.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/36_BUILD_TECHNICAL_FILTER_MAP.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "37_AUDIT_PROJECT_STRUCTURE.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/37_AUDIT_PROJECT_STRUCTURE.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "38_BUILD_CALCULATION_EVIDENCE_INDEX.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/38_BUILD_CALCULATION_EVIDENCE_INDEX.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "39_BUILD_FINAL_BOM_V2_2.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/39_BUILD_FINAL_BOM_V2_2.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "40_BUILD_R01_RELEASE_CANDIDATE.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "numbered root launcher should become graph-internal; keep only stable human entry points",
+      "destination": "archive/medtas_legacy/root/40_BUILD_R01_RELEASE_CANDIDATE.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "CHANGELOG_MEDTAS_v1_2.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/CHANGELOG_MEDTAS_v1_2.md"
+    },
+    {
+      "xy": "??",
+      "path": "CHANGELOG_MEDTAS_v1_3.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/CHANGELOG_MEDTAS_v1_3.md"
+    },
+    {
+      "xy": "??",
+      "path": "CHANGELOG_MEDTAS_v1_4.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/CHANGELOG_MEDTAS_v1_4.md"
+    },
+    {
+      "xy": "??",
+      "path": "CHANGELOG_MEDTAS_v1_5.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/CHANGELOG_MEDTAS_v1_5.md"
+    },
+    {
+      "xy": "??",
+      "path": "CHANGELOG_MEDTAS_v1_6.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/CHANGELOG_MEDTAS_v1_6.md"
+    },
+    {
+      "xy": "??",
+      "path": "CHANGELOG_MEDTAS_v1_7.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/CHANGELOG_MEDTAS_v1_7.md"
+    },
+    {
+      "xy": "??",
+      "path": "CHANGELOG_MEDTAS_v1_8.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/CHANGELOG_MEDTAS_v1_8.md"
+    },
+    {
+      "xy": "??",
+      "path": "CHANGELOG_MEDTAS_v1_9.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/CHANGELOG_MEDTAS_v1_9.md"
+    },
+    {
+      "xy": "??",
+      "path": "CHANGELOG_MEDTAS_v2_0.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/CHANGELOG_MEDTAS_v2_0.md"
+    },
+    {
+      "xy": "??",
+      "path": "CHANGELOG_MEDTAS_v2_2.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/CHANGELOG_MEDTAS_v2_2.md"
+    },
+    {
+      "xy": "??",
+      "path": "Downloads/",
+      "old_path": null,
+      "class": "RUNTIME_CACHE",
+      "action": "PROPOSE_GITIGNORE",
+      "reason": "reproducible/local runtime cache"
+    },
+    {
+      "xy": "??",
+      "path": "FEMM",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "PROPOSE_ARCHIVE_STRAY_NOTE",
+      "reason": "stray top-level text note with tool-like filename",
+      "destination": "archive/recovery_notes/FEMM"
+    },
+    {
+      "xy": "??",
+      "path": "K01_Command_Center_v10.html",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/command_center_legacy/root/K01_Command_Center_v10.html"
+    },
+    {
+      "xy": "??",
+      "path": "K01_Command_Center_v11.html",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/command_center_legacy/root/K01_Command_Center_v11.html"
+    },
+    {
+      "xy": "??",
+      "path": "K01_Command_Center_v8_REFERENCE.html",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/command_center_legacy/root/K01_Command_Center_v8_REFERENCE.html"
+    },
+    {
+      "xy": "??",
+      "path": "K01_Command_Center_v9.html",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/command_center_legacy/root/K01_Command_Center_v9.html"
+    },
+    {
+      "xy": "??",
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v1_4.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/K01_MEDTAS_OVERLAY_MANIFEST_v1_4.json"
+    },
+    {
+      "xy": "??",
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v1_5.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/K01_MEDTAS_OVERLAY_MANIFEST_v1_5.json"
+    },
+    {
+      "xy": "??",
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v1_6.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/K01_MEDTAS_OVERLAY_MANIFEST_v1_6.json"
+    },
+    {
+      "xy": "??",
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v1_7.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/K01_MEDTAS_OVERLAY_MANIFEST_v1_7.json"
+    },
+    {
+      "xy": "??",
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v1_8.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/K01_MEDTAS_OVERLAY_MANIFEST_v1_8.json"
+    },
+    {
+      "xy": "??",
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v1_9.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/K01_MEDTAS_OVERLAY_MANIFEST_v1_9.json"
+    },
+    {
+      "xy": "??",
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v2_0.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/K01_MEDTAS_OVERLAY_MANIFEST_v2_0.json"
+    },
+    {
+      "xy": "??",
+      "path": "OPEN_K01_COMMAND_CENTER_V10.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/command_center_legacy/root/OPEN_K01_COMMAND_CENTER_V10.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "OPEN_K01_COMMAND_CENTER_V11.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/command_center_legacy/root/OPEN_K01_COMMAND_CENTER_V11.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "OPEN_K01_COMMAND_CENTER_V8_REFERENCE.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/command_center_legacy/root/OPEN_K01_COMMAND_CENTER_V8_REFERENCE.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "OPEN_K01_COMMAND_CENTER_V9.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/command_center_legacy/root/OPEN_K01_COMMAND_CENTER_V9.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "README.txt",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW_DOMAIN_AUTHORITY",
+      "reason": "ambiguous legacy top-level domain; do not move automatically"
+    },
+    {
+      "xy": "??",
+      "path": "README_COM_FIX.md",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "README_CURRENT.md",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "README_CURRENT.txt",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW_DOMAIN_AUTHORITY",
+      "reason": "ambiguous legacy top-level domain; do not move automatically"
+    },
+    {
+      "xy": "??",
+      "path": "README_K01_CAD_CONTROL.md",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_1.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/README_MEDTAS_REPO_OVERLAY_v1_1.md"
+    },
+    {
+      "xy": "??",
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_2.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/README_MEDTAS_REPO_OVERLAY_v1_2.md"
+    },
+    {
+      "xy": "??",
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_3.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/README_MEDTAS_REPO_OVERLAY_v1_3.md"
+    },
+    {
+      "xy": "??",
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_4.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/README_MEDTAS_REPO_OVERLAY_v1_4.md"
+    },
+    {
+      "xy": "??",
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_5.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/README_MEDTAS_REPO_OVERLAY_v1_5.md"
+    },
+    {
+      "xy": "??",
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_6.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/README_MEDTAS_REPO_OVERLAY_v1_6.md"
+    },
+    {
+      "xy": "??",
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_7.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/README_MEDTAS_REPO_OVERLAY_v1_7.md"
+    },
+    {
+      "xy": "??",
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_8.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/README_MEDTAS_REPO_OVERLAY_v1_8.md"
+    },
+    {
+      "xy": "??",
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_9.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/README_MEDTAS_REPO_OVERLAY_v1_9.md"
+    },
+    {
+      "xy": "??",
+      "path": "README_MEDTAS_REPO_OVERLAY_v2_0.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/README_MEDTAS_REPO_OVERLAY_v2_0.md"
+    },
+    {
+      "xy": "??",
+      "path": "README_MEDTAS_REPO_OVERLAY_v2_2.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "root-level versioned MEDTAS/Center history",
+      "destination": "archive/medtas_legacy/root/README_MEDTAS_REPO_OVERLAY_v2_2.md"
+    },
+    {
+      "xy": "??",
+      "path": "SOLIDWORKS",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "PROPOSE_ARCHIVE_STRAY_NOTE",
+      "reason": "stray top-level text note with tool-like filename",
+      "destination": "archive/recovery_notes/SOLIDWORKS"
+    },
+    {
+      "xy": "??",
+      "path": "bom/",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW_DOMAIN_AUTHORITY",
+      "reason": "ambiguous legacy top-level domain; do not move automatically"
+    },
+    {
+      "xy": "??",
+      "path": "build",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "PROPOSE_ARCHIVE_STRAY_NOTE",
+      "reason": "stray top-level text note with tool-like filename",
+      "destination": "archive/recovery_notes/build"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/00_GATE04C_ALL.cmd",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/01_GATE04C_BUILD_ONLY.cmd",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/02_GATE04C_VERIFY_ONLY.cmd",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/03_GATE04C_DRAWINGS_ONLY.cmd",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/90_GIT_STATUS_READ_ONLY.cmd",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/DRAWINGS",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/HOTFIX_v1_4_TO_v1_5_AND_RUN.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/HOTFIX_v1_4_TO_v1_5_AND_RUN.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/HOTFIX_v1_5_TO_v1_6_BUILD_ONLY.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/HOTFIX_v1_5_TO_v1_6_BUILD_ONLY.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/K01Gate04C_Build.cs",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/K01Gate04C_Drawings.cs",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/K01Gate04C_MateDiag.cs",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/K01Gate04C_Verify.cs",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/K01Gate04C_VerifyV2.cs",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/K01Gate04C_VerifyV2.cs"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/K01_GATE04C_CONTROL_MANIFEST_v1.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/K01_GATE04C_CONTROL_MANIFEST_v1.json"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/K01_GATE04C_MASTER_BOM_DELTA_v1.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/K01_GATE04C_MASTER_BOM_DELTA_v1.json"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/K01_GATE04C_PARAMS_v1.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/K01_GATE04C_PARAMS_v1.json"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/K01_POST_GATE04C_PIPELINE_v1.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/K01_POST_GATE04C_PIPELINE_v1.json"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/MANIFEST.json",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/PACKAGE_MANIFEST.json",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/PATCH_NOTES_v1_1.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/PATCH_NOTES_v1_1.md"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/PATCH_NOTES_v1_2.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/PATCH_NOTES_v1_2.md"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/PATCH_NOTES_v1_3.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/PATCH_NOTES_v1_3.md"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/PATCH_NOTES_v1_4.md",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/PATCH_NOTES_v1_4.md"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/README.txt",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/README_RUN_FIRST.txt",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/RUN_GATE04C_MATE_DIAG_READONLY.cmd",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/RUN_GATE04C_VERIFY_V2.cmd",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/RUN_GATE04C_VERIFY_V2.cmd"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/RUN_SOURCE_REPLACEMENT_AND_BUILD_ONLY.cmd",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/STATIC_SANITY_CHECK.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/STATIC_SANITY_CHECK.json"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/STATIC_SANITY_CHECK_v1_1.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/STATIC_SANITY_CHECK_v1_1.json"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/STATIC_SANITY_CHECK_v1_2.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/STATIC_SANITY_CHECK_v1_2.json"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/STATIC_SANITY_CHECK_v1_3.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/STATIC_SANITY_CHECK_v1_3.json"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/STATIC_SANITY_CHECK_v1_4.json",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/STATIC_SANITY_CHECK_v1_4.json"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/bin/",
+      "old_path": null,
+      "class": "RUNTIME_CACHE",
+      "action": "PROPOSE_GITIGNORE",
+      "reason": "reproducible/local runtime cache"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/bom/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/bridge/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/gates/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/history/",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/history/"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/medtas/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/replacement/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_CAD_API_CONSOLIDATION",
+      "reason": "CAD API current/history boundary needs later module-specific review"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/sw_cad_audit_v08.py",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/sw_cad_audit_v08.py"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/sw_cad_audit_v09.py",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/sw_cad_audit_v09.py"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/sw_handoff_pack_v01.py",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/sw_handoff_pack_v01.py"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/sw_handoff_pack_v02.py",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/sw_handoff_pack_v02.py"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/sw_review_export_v03.py",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/sw_review_export_v03.py"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/sw_review_export_v04.py",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/sw_review_export_v04.py"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/sw_review_export_v05.py",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/sw_review_export_v05.py"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/v1.5",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/v1.5"
+    },
+    {
+      "xy": "??",
+      "path": "cad_api/v1.6",
+      "old_path": null,
+      "class": "CONTROLLED_HISTORY",
+      "action": "PROPOSE_ARCHIVE_MOVE",
+      "reason": "versioned/hotfix CAD API history",
+      "destination": "archive/cad_api_legacy/v1.6"
+    },
+    {
+      "xy": "??",
+      "path": "control/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_ARCHITECTURE_REVIEW_SERVICE_JOINTS.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_CFD_OUT_MID_IN_METHOD.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_COMPLETION_PLAN_20260902.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_CONTROL_ARCHITECTURE_v2.txt",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_DATUM_C_KINEMATIC_DECISION.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_DRAWING_API_ARCHITECTURE.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_DRAWING_RELEASE_MATRIX_v1.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_DRAWING_RELEASE_PLAN.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_FEMM_FINAL_GATE.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_FEMM_FINAL_PLAN_v2.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_FILE_POLICY.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_GATE03B_P007_CANDIDATE.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_GATE03E_V5.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_GIT_PLAN_20260902.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_MANUFACTURING_ASSEMBLY_ROUTER_v1.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_P003_P007_GATE03A.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_P003_P007_MANUFACTURING_ASSEMBLY.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_P003_P007_SERVICEABLE_INTERFACE.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_P006_FASTENER_REVIEW.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_P016_LONGRUN_INSTALLATION.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_PROJECT_STRUCTURE_v1.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/K01_STAGE2_SEQUENCE.md",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/architecture/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/automation/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/design/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/history/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "docs/technology/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "handoff/",
+      "old_path": null,
+      "class": "RUNTIME_CACHE",
+      "action": "PROPOSE_GITIGNORE",
+      "reason": "reproducible/local runtime cache"
+    },
+    {
+      "xy": "??",
+      "path": "master/K01_master.pre_P013_sync_20260901_224331.json",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "master/K01_master_v4_proposed.json",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "master/cad_contracts.json",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "master/k01_params_v4_proposed.py",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "reference/",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW_DOMAIN_AUTHORITY",
+      "reason": "ambiguous legacy top-level domain; do not move automatically"
+    },
+    {
+      "xy": "??",
+      "path": "reports/CAD_AUDIT_K01-P-002_Guide_Bushing.json",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "reports/CAD_AUDIT_K01-P-003_Cartridge_Body.json",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "reports/CAD_AUDIT_K01-P-004_Front_Guide_Bushing.json",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "reports/ai/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/analysis/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/bom/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/cad/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/calculations/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/control/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/drawing/",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    },
+    {
+      "xy": "??",
+      "path": "reports/engineering/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/femm/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/foundation/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/git/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/inspection/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/medtas/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "reports/recovery/",
+      "old_path": null,
+      "class": "EVIDENCE_REVIEW",
+      "action": "RETAIN_PENDING_EVIDENCE_POLICY",
+      "reason": "generated engineering evidence/index; decide Git-small-manifest vs external artifact by type"
+    },
+    {
+      "xy": "??",
+      "path": "review_upload/",
+      "old_path": null,
+      "class": "RUNTIME_CACHE",
+      "action": "PROPOSE_GITIGNORE",
+      "reason": "reproducible/local runtime cache"
+    },
+    {
+      "xy": "??",
+      "path": "scripts/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "spec/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "tests/medtas/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "tests/run_core_tests.ps1",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "tests/run_reducer_tests.ps1",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "tools/",
+      "old_path": null,
+      "class": "CURRENT_SOURCE",
+      "action": "KEEP_PENDING_INTERNAL_CONSOLIDATION",
+      "reason": "controlled source/control subtree"
+    },
+    {
+      "xy": "??",
+      "path": "в”њРЁ8.20",
+      "old_path": null,
+      "class": "HUMAN_REVIEW",
+      "action": "REVIEW",
+      "reason": "no fail-safe normalization rule"
+    }
+  ],
+  "lists": {
+    "HUMAN_REVIEW": [
+      ".gitattributes",
+      ".gitignore",
+      "README_PATCH.md",
+      "RUN_SW_API_GATE02_WRITE_TEST_v05_FINAL.cmd",
+      "RUN_SW_CAD_SNAPSHOT_v07.cmd",
+      ".githooks/",
+      ".github/workflows/k01-control-ci.yml",
+      ".github/workflows/medtas-ci.yml",
+      ".local_archive/",
+      "FEMM",
+      "README.txt",
+      "README_COM_FIX.md",
+      "README_CURRENT.md",
+      "README_CURRENT.txt",
+      "README_K01_CAD_CONTROL.md",
+      "SOLIDWORKS",
+      "bom/",
+      "build",
+      "master/K01_master.pre_P013_sync_20260901_224331.json",
+      "master/K01_master_v4_proposed.json",
+      "master/cad_contracts.json",
+      "master/k01_params_v4_proposed.py",
+      "reference/",
+      "reports/CAD_AUDIT_K01-P-002_Guide_Bushing.json",
+      "reports/CAD_AUDIT_K01-P-003_Cartridge_Body.json",
+      "reports/CAD_AUDIT_K01-P-004_Front_Guide_Bushing.json",
+      "reports/drawing/",
+      "в”њРЁ8.20"
+    ],
+    "CURRENT_SOURCE": [
+      "cad_api/README.md",
+      "cad_api/00_GATE04C_ALL.cmd",
+      "cad_api/01_GATE04C_BUILD_ONLY.cmd",
+      "cad_api/02_GATE04C_VERIFY_ONLY.cmd",
+      "cad_api/03_GATE04C_DRAWINGS_ONLY.cmd",
+      "cad_api/90_GIT_STATUS_READ_ONLY.cmd",
+      "cad_api/DRAWINGS",
+      "cad_api/K01Gate04C_Build.cs",
+      "cad_api/K01Gate04C_Drawings.cs",
+      "cad_api/K01Gate04C_MateDiag.cs",
+      "cad_api/K01Gate04C_Verify.cs",
+      "cad_api/MANIFEST.json",
+      "cad_api/PACKAGE_MANIFEST.json",
+      "cad_api/README.txt",
+      "cad_api/README_RUN_FIRST.txt",
+      "cad_api/RUN_GATE04C_MATE_DIAG_READONLY.cmd",
+      "cad_api/RUN_SOURCE_REPLACEMENT_AND_BUILD_ONLY.cmd",
+      "cad_api/bom/",
+      "cad_api/bridge/",
+      "cad_api/gates/",
+      "cad_api/medtas/",
+      "cad_api/replacement/",
+      "control/",
+      "docs/K01_ARCHITECTURE_REVIEW_SERVICE_JOINTS.md",
+      "docs/K01_CFD_OUT_MID_IN_METHOD.md",
+      "docs/K01_COMPLETION_PLAN_20260902.md",
+      "docs/K01_CONTROL_ARCHITECTURE_v2.txt",
+      "docs/K01_DATUM_C_KINEMATIC_DECISION.md",
+      "docs/K01_DRAWING_API_ARCHITECTURE.md",
+      "docs/K01_DRAWING_RELEASE_MATRIX_v1.md",
+      "docs/K01_DRAWING_RELEASE_PLAN.md",
+      "docs/K01_FEMM_FINAL_GATE.md",
+      "docs/K01_FEMM_FINAL_PLAN_v2.md",
+      "docs/K01_FILE_POLICY.md",
+      "docs/K01_GATE03B_P007_CANDIDATE.md",
+      "docs/K01_GATE03E_V5.md",
+      "docs/K01_GIT_PLAN_20260902.md",
+      "docs/K01_MANUFACTURING_ASSEMBLY_ROUTER_v1.md",
+      "docs/K01_P003_P007_GATE03A.md",
+      "docs/K01_P003_P007_MANUFACTURING_ASSEMBLY.md",
+      "docs/K01_P003_P007_SERVICEABLE_INTERFACE.md",
+      "docs/K01_P006_FASTENER_REVIEW.md",
+      "docs/K01_P016_LONGRUN_INSTALLATION.md",
+      "docs/K01_PROJECT_STRUCTURE_v1.md",
+      "docs/K01_STAGE2_SEQUENCE.md",
+      "docs/architecture/",
+      "docs/automation/",
+      "docs/design/",
+      "docs/history/",
+      "docs/technology/",
+      "scripts/",
+      "spec/",
+      "tests/medtas/",
+      "tests/run_core_tests.ps1",
+      "tests/run_reducer_tests.ps1",
+      "tools/"
+    ],
+    "CONTROLLED_HISTORY": [
+      "00B_BUILD_IDENTITY_MIGRATION_PLAN.cmd",
+      "00_AUDIT_IDENTITY.cmd",
+      "00_INSTALL_IN_REPO_ROOT.md",
+      "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_1.md",
+      "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_2.md",
+      "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_3.md",
+      "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_4.md",
+      "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_5.md",
+      "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_6.md",
+      "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_7.md",
+      "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_8.md",
+      "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_9.md",
+      "00_INSTALL_MEDTAS_BUILD_GRAPH_v2_0.md",
+      "00_INSTALL_MEDTAS_BUILD_GRAPH_v2_2.md",
+      "00_INSTALL_MEDTAS_CORE.md",
+      "00_INSTALL_MEDTAS_v3.md",
+      "00_INSTALL_MEDTAS_v4.md",
+      "00_INSTALL_MEDTAS_v5.md",
+      "00_INSTALL_MEDTAS_v6.md",
+      "00_INSTALL_MEDTAS_v7.md",
+      "00_INSTALL_MEDTAS_v8.md",
+      "00_INSTALL_MEDTAS_v8_1.md",
+      "00_INSTALL_MEDTAS_v8_2.md",
+      "00_INSTALL_MEDTAS_v8_3.md",
+      "00_INSTALL_MEDTAS_v8_4.md",
+      "00_MEDTAS_PREFLIGHT.cmd",
+      "00_MEDTAS_V8_PREFLIGHT.cmd",
+      "00_README_CLOSURE_03.md",
+      "00_README_CLOSURE_04.md",
+      "00_README_CLOSURE_05.md",
+      "00_README_CONTINUE_06.md",
+      "00_README_HOTFIX_01.md",
+      "00_README_RECOVERY_02.md",
+      "01_BUILD_REQUIREMENTS_COVERAGE.cmd",
+      "01_RUN_K01_NEXT_ENGINEERING.cmd",
+      "02_RUN_K01_ENGINEERING_RECOVERY.cmd",
+      "02_RUN_MEDTAS_ASSURANCE_TESTS.cmd",
+      "03_RUN_K01_CLOSURE_03.cmd",
+      "03_RUN_MEDTAS_CAD_SEM_A001.cmd",
+      "03_RUN_MEDTAS_PIPELINE.cmd",
+      "04_REBUILD_MEDTAS_CENTER.cmd",
+      "04_RUN_K01_MODULE_CLOSURE.cmd",
+      "05_CALCULIX_PREFLIGHT.cmd",
+      "05_RUN_K01_MODULE_CLOSURE.cmd",
+      "06_RUN_K01_CONTINUE.cmd",
+      "06_TEST_CAD_HASH_INVARIANCE.cmd",
+      "07_STEP_CANONICAL_HASH.cmd",
+      "08_BUILD_BOM_ARTIFACT.cmd",
+      "09B_BUILD_MBD_AUTHORING_PLAN.cmd",
+      "09_BUILD_DRAWING_MBD_WORKPACK.cmd",
+      "09_BUILD_MBD_AUTHORING_CANDIDATES.cmd",
+      "10B_QUALIFY_STRUCTURAL_FACE_MAP.cmd",
+      "10_BIND_STRUCTURAL_FACE_ROLES.cmd",
+      "11_EXPORT_STRUCTURAL_NEUTRAL_GEOMETRY.cmd",
+      "12_BUILD_BOLT_EQUIV_SCAFFOLD.cmd",
+      "12_BUILD_STRUCTURAL_MESH.cmd",
+      "13_BUILD_CALCULIX_INPUT.cmd",
+      "14_AUDIT_PROJECT_STRUCTURE.cmd",
+      "15_BUILD_DRAWING_RELEASE_PLAN.cmd",
+      "16_BUILD_NATIVE_DRAWING_PACK.cmd",
+      "17_DISCOVER_ANALYSIS_TOOLCHAIN.cmd",
+      "18_RUN_CALCULIX_P006.cmd",
+      "19_BUILD_RELEASE_PRIORITY.cmd",
+      "20_DISCOVER_DRAWING_TEMPLATE.cmd",
+      "21_RECORD_DRAWING_VISUAL_APPROVAL.cmd",
+      "22_BUILD_AI_HANDOFF.cmd",
+      "23_BUILD_EBOM_MBOM.cmd",
+      "24_SYNC_PARTS_REGISTRY_TO_CAD_PROPS.cmd",
+      "25_BUILD_P007_EXEMPLAR_PLAN.cmd",
+      "26_VERIFY_DRAWING_QA.cmd",
+      "28_BUILD_P007_EXEMPLAR_SKELETON.cmd",
+      "29_BUILD_INSPECTION_CHARACTERISTICS.cmd",
+      "30_INGEST_INSPECTION_RESULTS.cmd",
+      "31A_PREFLIGHT_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "31B_APPLY_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "31C_VERIFY_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "31D_VERIFY_FINAL_ASSEMBLY_SEMANTICS.cmd",
+      "31_BUILD_RELEASE_PROGRAM.cmd",
+      "31_COMPILE_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "35_GIT_AUDIT.cmd",
+      "36_BUILD_TECHNICAL_FILTER_MAP.cmd",
+      "37_AUDIT_PROJECT_STRUCTURE.cmd",
+      "38_BUILD_CALCULATION_EVIDENCE_INDEX.cmd",
+      "39_BUILD_FINAL_BOM_V2_2.cmd",
+      "40_BUILD_R01_RELEASE_CANDIDATE.cmd",
+      "CHANGELOG_MEDTAS_v1_2.md",
+      "CHANGELOG_MEDTAS_v1_3.md",
+      "CHANGELOG_MEDTAS_v1_4.md",
+      "CHANGELOG_MEDTAS_v1_5.md",
+      "CHANGELOG_MEDTAS_v1_6.md",
+      "CHANGELOG_MEDTAS_v1_7.md",
+      "CHANGELOG_MEDTAS_v1_8.md",
+      "CHANGELOG_MEDTAS_v1_9.md",
+      "CHANGELOG_MEDTAS_v2_0.md",
+      "CHANGELOG_MEDTAS_v2_2.md",
+      "K01_Command_Center_v10.html",
+      "K01_Command_Center_v11.html",
+      "K01_Command_Center_v8_REFERENCE.html",
+      "K01_Command_Center_v9.html",
+      "K01_MEDTAS_OVERLAY_MANIFEST_v1_4.json",
+      "K01_MEDTAS_OVERLAY_MANIFEST_v1_5.json",
+      "K01_MEDTAS_OVERLAY_MANIFEST_v1_6.json",
+      "K01_MEDTAS_OVERLAY_MANIFEST_v1_7.json",
+      "K01_MEDTAS_OVERLAY_MANIFEST_v1_8.json",
+      "K01_MEDTAS_OVERLAY_MANIFEST_v1_9.json",
+      "K01_MEDTAS_OVERLAY_MANIFEST_v2_0.json",
+      "OPEN_K01_COMMAND_CENTER_V10.cmd",
+      "OPEN_K01_COMMAND_CENTER_V11.cmd",
+      "OPEN_K01_COMMAND_CENTER_V8_REFERENCE.cmd",
+      "OPEN_K01_COMMAND_CENTER_V9.cmd",
+      "README_MEDTAS_REPO_OVERLAY_v1_1.md",
+      "README_MEDTAS_REPO_OVERLAY_v1_2.md",
+      "README_MEDTAS_REPO_OVERLAY_v1_3.md",
+      "README_MEDTAS_REPO_OVERLAY_v1_4.md",
+      "README_MEDTAS_REPO_OVERLAY_v1_5.md",
+      "README_MEDTAS_REPO_OVERLAY_v1_6.md",
+      "README_MEDTAS_REPO_OVERLAY_v1_7.md",
+      "README_MEDTAS_REPO_OVERLAY_v1_8.md",
+      "README_MEDTAS_REPO_OVERLAY_v1_9.md",
+      "README_MEDTAS_REPO_OVERLAY_v2_0.md",
+      "README_MEDTAS_REPO_OVERLAY_v2_2.md",
+      "cad_api/HOTFIX_v1_4_TO_v1_5_AND_RUN.cmd",
+      "cad_api/HOTFIX_v1_5_TO_v1_6_BUILD_ONLY.cmd",
+      "cad_api/K01Gate04C_VerifyV2.cs",
+      "cad_api/K01_GATE04C_CONTROL_MANIFEST_v1.json",
+      "cad_api/K01_GATE04C_MASTER_BOM_DELTA_v1.json",
+      "cad_api/K01_GATE04C_PARAMS_v1.json",
+      "cad_api/K01_POST_GATE04C_PIPELINE_v1.json",
+      "cad_api/PATCH_NOTES_v1_1.md",
+      "cad_api/PATCH_NOTES_v1_2.md",
+      "cad_api/PATCH_NOTES_v1_3.md",
+      "cad_api/PATCH_NOTES_v1_4.md",
+      "cad_api/RUN_GATE04C_VERIFY_V2.cmd",
+      "cad_api/STATIC_SANITY_CHECK.json",
+      "cad_api/STATIC_SANITY_CHECK_v1_1.json",
+      "cad_api/STATIC_SANITY_CHECK_v1_2.json",
+      "cad_api/STATIC_SANITY_CHECK_v1_3.json",
+      "cad_api/STATIC_SANITY_CHECK_v1_4.json",
+      "cad_api/history/",
+      "cad_api/sw_cad_audit_v08.py",
+      "cad_api/sw_cad_audit_v09.py",
+      "cad_api/sw_handoff_pack_v01.py",
+      "cad_api/sw_handoff_pack_v02.py",
+      "cad_api/sw_review_export_v03.py",
+      "cad_api/sw_review_export_v04.py",
+      "cad_api/sw_review_export_v05.py",
+      "cad_api/v1.5",
+      "cad_api/v1.6"
+    ],
+    "RUNTIME_CACHE": [
+      "Downloads/",
+      "cad_api/bin/",
+      "handoff/",
+      "review_upload/"
+    ],
+    "EVIDENCE_REVIEW": [
+      "reports/ai/",
+      "reports/analysis/",
+      "reports/bom/",
+      "reports/cad/",
+      "reports/calculations/",
+      "reports/control/",
+      "reports/engineering/",
+      "reports/femm/",
+      "reports/foundation/",
+      "reports/git/",
+      "reports/inspection/",
+      "reports/medtas/",
+      "reports/recovery/"
+    ]
+  },
+  "apply_readiness": "HOLD_REVIEW_REQUIRED",
+  "apply_blockers": [
+    "All HUMAN_REVIEW items require disposition.",
+    "EVIDENCE_REVIEW policy must distinguish immutable evidence from reproducible outputs.",
+    "No R01 promotion during repository normalization.",
+    "No git add/commit/push until normalization apply is separately reviewed."
+  ]
+}

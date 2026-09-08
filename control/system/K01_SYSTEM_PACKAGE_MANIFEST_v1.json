@@ -1,0 +1,77 @@
+{
+  "schema": "k01_unified_engineering_system_pack_v1",
+  "date": "2026-09-04",
+  "extract_to": "D:\\BreshevEngineering\\marvilon-k01",
+  "files": [
+    {
+      "path": "bom/spec/K01_AUTOMATED_BOM_SPEC_v1.md",
+      "bytes": 776,
+      "sha256": "98a790acdab42601fb4c1986fd1df2ab5b88c6beb2337bc86f459a67461026c1"
+    },
+    {
+      "path": "control/command_center/K01_Command_Center_v1.html",
+      "bytes": 25996,
+      "sha256": "77c40a54428fe6cddea9fa5e5230d5da1e7fdb8ab94107a4d36e90a256ef4cdb"
+    },
+    {
+      "path": "control/command_center/OPEN_K01_COMMAND_CENTER.cmd",
+      "bytes": 71,
+      "sha256": "6ceb5169d0b025d69c7c585d5076e3c9a52118ab1971523d87321c3071c52c6e"
+    },
+    {
+      "path": "control/command_center/README_INSTALL.md",
+      "bytes": 516,
+      "sha256": "04be8952d2c83776bfb21f36fa8fbb6e8e21077035343b674071ce5acc345a73"
+    },
+    {
+      "path": "control/command_center/data/K01_control_state_v1.json",
+      "bytes": 5278,
+      "sha256": "31800a608c98bc58cc4312f1b8c51c85160a69238465346c6f66d826945324d9"
+    },
+    {
+      "path": "control/command_center/data/K01_dimension_chains_v1.json",
+      "bytes": 1229,
+      "sha256": "5736c4a9b9a0a286234eb5891714325df20960e018970a00a27794b6e0c7ff05"
+    },
+    {
+      "path": "control/command_center/data/K01_parts_material_status.csv",
+      "bytes": 1395,
+      "sha256": "fa75bf5ee0bb05f76915e0c3f03a28f0ee0ee9c8f4884dc698c211b98518edd0"
+    },
+    {
+      "path": "control/command_center/data/K01_technology_router_v1.json",
+      "bytes": 2286,
+      "sha256": "9d033cf54c8e2d17b7c195a59cf412f72e95854b59ee959ed4cdae4d1a6a2d30"
+    },
+    {
+      "path": "control/system/K01_DATA_AUTHORITY_v1.md",
+      "bytes": 907,
+      "sha256": "4b40686ae6813b9bd3ec02e3ca8316623a681a0cb39d15583c9e73483d1c976a"
+    },
+    {
+      "path": "control/system/K01_REPO_STRUCTURE_v1.md",
+      "bytes": 2000,
+      "sha256": "08ab9ce31d001adc81bf6343c67913ae9a3c39722c07d35175357297a5542278"
+    },
+    {
+      "path": "docs/design/K01_J2_COMPACTNESS_REVIEW_20260904.md",
+      "bytes": 2262,
+      "sha256": "bb61b8745d54623336fe5d35682387ee3d9bb0ef1df0b8725a5e5348d7011864"
+    },
+    {
+      "path": "docs/technology/K01_TECHNOLOGY_SYSTEM_v1.md",
+      "bytes": 571,
+      "sha256": "3fefc1c9c9dac4c8f4539d2edead7744ae174b2a561c6ca045e7758b4bbf1352"
+    },
+    {
+      "path": "reports/ai/current/K01_AI_ENGINEERING_CONTEXT_CURRENT.json",
+      "bytes": 5278,
+      "sha256": "31800a608c98bc58cc4312f1b8c51c85160a69238465346c6f66d826945324d9"
+    },
+    {
+      "path": "reports/ai/current/K01_AI_ENGINEERING_CONTEXT_CURRENT.md",
+      "bytes": 2102,
+      "sha256": "3d7c59d6906e63eb916dfcb5251d3ce2c88f14e747de916a488eaa181d591ee0"
+    }
+  ]
+}

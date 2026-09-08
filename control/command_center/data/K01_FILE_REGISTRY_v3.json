@@ -1,0 +1,174 @@
+{
+  "schema": "k01_file_registry_v3",
+  "entries": [
+    {
+      "id": "CAD-A001",
+      "name": "Production A001 assembly",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "assemblies/K01-A-001_Calibration_Module.SLDASM"
+      ]
+    },
+    {
+      "id": "CAD-C2-ASM",
+      "name": "Gate04D-C2 verification assembly",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "candidates/gate04d_c2/verification/K01-A-001_GATE04D_C2_VERIFY.SLDASM"
+      ]
+    },
+    {
+      "id": "CAD-C2-P003",
+      "name": "Gate04D-C2 P003 candidate",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "candidates/gate04d_c2/K01-P-003_Cartridge_Body_GATE04D_C2_CANDIDATE.SLDPRT"
+      ]
+    },
+    {
+      "id": "CAD-C2-P007",
+      "name": "Gate04D-C2 P007 candidate",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "candidates/gate04d_c2/K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2_CANDIDATE.SLDPRT"
+      ]
+    },
+    {
+      "id": "MASTER",
+      "name": "Current K01 master",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "master/K01_master.json",
+        "master/K01_master_v2.json"
+      ],
+      "patterns": [
+        "master/K01_master*.json"
+      ]
+    },
+    {
+      "id": "EDS001",
+      "name": "Engineering Decision Standard",
+      "domain": "DECISION",
+      "root": "repo",
+      "candidates": [
+        "control/decision_system/K01_ENGINEERING_DECISION_STANDARD_EDS001_v2.md"
+      ]
+    },
+    {
+      "id": "EDR005",
+      "name": "EDR-005 C2 flange",
+      "domain": "DECISION",
+      "root": "repo",
+      "candidates": [
+        "control/decision_system/records/EDR-005_J2_COMPACT_FLANGE_v3.json"
+      ]
+    },
+    {
+      "id": "CI-J2",
+      "name": "CI-J2 dossier",
+      "domain": "CONFIGURATION",
+      "root": "repo",
+      "candidates": [
+        "control/configuration_items/CI-J2_DOSSIER_v1.json"
+      ]
+    },
+    {
+      "id": "SOURCE-REG",
+      "name": "Source/Evidence Registry",
+      "domain": "EVIDENCE",
+      "root": "repo",
+      "candidates": [
+        "control/evidence/K01_SOURCE_REGISTRY_v1.json"
+      ]
+    },
+    {
+      "id": "C2-BUILD",
+      "name": "Latest C2 build report",
+      "domain": "EVIDENCE",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2_TYPED_BUILD.json"
+      ]
+    },
+    {
+      "id": "C2-VERIFY",
+      "name": "Latest C2 verify report",
+      "domain": "EVIDENCE",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2_VERIFY.json"
+      ]
+    },
+    {
+      "id": "C2-INT",
+      "name": "Latest C2 interference report",
+      "domain": "EVIDENCE",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2_INTERFERENCE.json"
+      ]
+    },
+    {
+      "id": "BOM-C2",
+      "name": "C2 study BOM",
+      "domain": "BOM",
+      "root": "repo",
+      "candidates": [
+        "bom/K01_BOM_study_c2.csv",
+        "bom/K01_BOM_study_c2.json"
+      ]
+    },
+    {
+      "id": "BOM-AUDIT-C2",
+      "name": "C2 study BOM audit",
+      "domain": "BOM",
+      "root": "repo",
+      "candidates": [
+        "reports/bom/K01_BOM_AUDIT_study_c2.json"
+      ]
+    },
+    {
+      "id": "DRAW-P003-PDF",
+      "name": "P003 C2 draft PDF",
+      "domain": "DRAWING",
+      "root": "cad",
+      "patterns": [
+        "drawings/gate04d_c2_draft/K01-D-003*DRAFT_C2_API*.PDF",
+        "drawings/gate04d_c2_draft/K01-D-003*.PDF"
+      ]
+    },
+    {
+      "id": "DRAW-P007-PDF",
+      "name": "P007 C2 draft PDF",
+      "domain": "DRAWING",
+      "root": "cad",
+      "patterns": [
+        "drawings/gate04d_c2_draft/K01-D-006*DRAFT_C2_API*.PDF",
+        "drawings/gate04d_c2_draft/K01-D-006*.PDF"
+      ]
+    },
+    {
+      "id": "AI-CURRENT",
+      "name": "Current AI context",
+      "domain": "EVIDENCE",
+      "root": "repo",
+      "candidates": [
+        "reports/ai/current/K01_AI_ENGINEERING_CONTEXT_CURRENT.md"
+      ]
+    },
+    {
+      "id": "AI-HANDOFF",
+      "name": "Current AI handoff ZIP",
+      "domain": "HANDOFF",
+      "root": "repo",
+      "candidates": [
+        "handoff/current/K01_AI_HANDOFF_CURRENT.zip"
+      ]
+    }
+  ]
+}

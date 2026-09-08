@@ -1,0 +1,26 @@
+{
+  "schema": "k01_medtas_reliability_standard_v1",
+  "title": "MEDTAS adapter and Control Center reliability standard",
+  "status": "ACTIVE",
+  "purpose": "Stop infrastructure defects from consuming engineering time and prevent one adapter failure from disabling unrelated project work.",
+  "rules": [
+    "No compressed multi-subsystem PowerShell one-liners in production Control Center code.",
+    "Shared API functions live in one core module; server and self-test use the same implementation.",
+    "Every adapter must expose a read-only health/self-test path before it is allowed into the main workflow.",
+    "A failed optional subsystem must degrade independently; Git failure must not suppress State, Files, CAD or engineering views.",
+    "HTTP/API errors must return structured JSON containing endpoint and error text.",
+    "Server startup is blocked if the API-core contract self-test fails.",
+    "File-registry entries may use candidates, patterns or both; missing future evidence is a normal MISSING state, not an exception.",
+    "Writes to CAD/BOM/release state remain explicit controlled actions with backup and readback.",
+    "No platform feature is promoted merely because static code generation succeeded; local Windows/SOLIDWORKS runtime evidence is required.",
+    "After v8.4, platform changes are frozen except for defects that block K01 engineering execution until Gate04E/T03 and the first T04/T05 release evidence are completed."
+  ],
+  "subsystem_contracts": {
+    "state": "must serialize independently even if Git or Files fails",
+    "git": "must catch command/auth errors and return HOLD/degraded object rather than HTTP 500",
+    "files": "must isolate errors per registry entry",
+    "solidworks": "read-only bridge health separate from controlled CAD writers",
+    "femm": "installation/solver health separate from release-result status",
+    "bom": "metadata projection health separate from engineering release blockers"
+  }
+}

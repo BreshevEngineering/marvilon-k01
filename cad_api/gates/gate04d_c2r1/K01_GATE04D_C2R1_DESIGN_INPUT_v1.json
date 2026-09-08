@@ -1,0 +1,41 @@
+{
+  "schema": "k01_gate04d_c2r1_design_input_v1",
+  "status": "CONTROLLED STUDY INPUT / NOT RELEASED",
+  "change_from_C2": "pilot inner diameter 10.917 -> 12.00 mm only; C2 OD33/M2.5/PCD26.5 architecture otherwise retained",
+  "root_cause": "exact P006 head/pilot overlap proven by volume equality",
+  "P003": {
+    "material": "316L/1.4404",
+    "flange_OD_mm": 33.0,
+    "pilot_OD_mm": 14.1,
+    "pilot_fit": "g6",
+    "pilot_L_mm": 1.5,
+    "pilot_ID_study_mm": 12.0,
+    "service_bore_minor_D_mm": 10.917
+  },
+  "P006": {
+    "material": "316L/1.4404",
+    "status": "KEEP",
+    "head_OD_nominal_mm": 11.5,
+    "head_span_mm": [
+      0.0,
+      2.0
+    ],
+    "thread": "M12×1",
+    "thread_outer_cylinder_model_mm": 10.8
+  },
+  "J2": {
+    "fasteners": "3×M2.5",
+    "PCD_mm": 26.5,
+    "seal": "16×1.5 current gland",
+    "P007_locator": "Ø14.10 H7×1.70",
+    "P007_L_mm": 35.0
+  },
+  "acceptance": [
+    "native build PASS",
+    "assembly verify PASS / 0 active mate errors",
+    "P003↔P006 interference absent",
+    "no new non-legacy hard interference",
+    "pilot ID12.00 readback present",
+    "stable CAD not modified"
+  ]
+}

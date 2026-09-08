@@ -1,0 +1,34 @@
+{
+  "schema": "k01_j2_media_envelope_v1",
+  "title": "J2 seal media / temperature qualification envelope",
+  "status": "PARTIAL_DOCUMENTED / TRACE_MEDIA_AND_LOCAL_TEMPERATURE_OPEN",
+  "documented_process_facts": [
+    "MARV 2EX is used for wet, potentially explosive process gases.",
+    "BOF/BF application documentation states CO may reach approximately 60 vol% and moisture is high.",
+    "Nitrogen is used for purge/protective functions.",
+    "System documentation places sample gas entering the optical module at approximately 100–120 °C.",
+    "K01 local J2 elastomer temperature is not yet independently proven to equal the optical-cell gas temperature; local seal temperature must be bounded separately."
+  ],
+  "release_required_inputs": [
+    "J2-local minimum/normal/maximum metal and elastomer temperature",
+    "process-gas species and concentration envelope at J2 for the released application",
+    "expected water/condensate state at J2",
+    "trace acid / sulfur / hydrocarbon / solvent species if applicable",
+    "cleaning agents that may contact J2",
+    "required service interval and leak acceptance"
+  ],
+  "material_strategy": {
+    "current_low_cost_candidate": "post-cured low-outgassing FKM 75A",
+    "use_condition": "release only after supplier chemical-compatibility confirmation and compression/leak qualification for the bounded BOF/media envelope",
+    "high_compatibility_fallback": "FFKM 75A",
+    "fallback_trigger": "media envelope contains species incompatible/conditional for selected FKM, or application variability cannot be bounded economically",
+    "excluded_as_default": "silicone/VMQ due to high gas permeability and optical-contamination concern"
+  },
+  "decision": "Do not freeze a universal elastomer before the J2-local environment is bounded. Carry FKM 75A as the production candidate for the current BOF baseline; carry FFKM as the controlled fallback.",
+  "sources": [
+    "SRC-K01-PFEIFFER-ELASTOMER-001",
+    "MARV 2EX protection concept",
+    "MARV 2EX/IR user manual",
+    "MARVILON EIC Part B"
+  ]
+}

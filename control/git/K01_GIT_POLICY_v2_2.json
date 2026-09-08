@@ -1,0 +1,25 @@
+{
+  "schema": "k01.git_policy.v2_2",
+  "recommended_repo": "BreshevEngineering/k01-calibration-module-engineering",
+  "default_branch": "main",
+  "private": true,
+  "tracked": [
+    "control/**",
+    "docs/**",
+    "tools/**",
+    "tests/**",
+    ".github/**",
+    "small text reports/registries",
+    "released manifests"
+  ],
+  "not_tracked": [
+    "SolidWorks lock files",
+    "__pycache__",
+    "Simulation scratch CWR/PC0/SL3/GEN/MAS",
+    "runtime logs",
+    "temporary CAD candidates unless explicitly accepted",
+    "generated current dashboards"
+  ],
+  "release_rule": "Release manifest contains hashes; Git commit/tag records configuration. Binary CAD may remain outside Git if storage policy requires, but its semantic snapshot and release artifact hashes are tracked.",
+  "github_connection_note": "ChatGPT GitHub connector currently exposed no repositories during v2.2 audit; local Git audit remains authoritative until connector access is restored."
+}

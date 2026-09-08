@@ -1,0 +1,81 @@
+{
+  "schema": "k01_medtas_v8_1_static_audit",
+  "created": "2026-09-05",
+  "status": "PASS_STATIC_PACKAGE",
+  "fix": {
+    "reported_v8_parser_error_removed": true,
+    "no_direct_helper_after_and": true,
+    "no_direct_helper_after_or": true,
+    "evidence_predicates_precomputed": true,
+    "dependency_ready_now_model": true
+  },
+  "preflight": {
+    "native_powershell_parser_checks_state_server_preflight": true,
+    "bridge_files_required": true
+  },
+  "command_center": {
+    "javascript_syntax_pass": true,
+    "javascript_error": "",
+    "digital_thread_tab": true,
+    "technical_filter_path_visible": true,
+    "solidworks_live_bridge_action": true,
+    "evidence_files_navigation": true
+  },
+  "digital_thread": {
+    "architecture_json_present": true,
+    "layers": 4,
+    "solidworks_bidirectional_contract": true,
+    "persistent_object_model": 11,
+    "registered_source_ids": [
+      "SRC-DT-NIST-001",
+      "SRC-DT-NIST-ARCH-001",
+      "SRC-DT-NIST-UUID-001",
+      "SRC-DT-ISO23247-5-001",
+      "SRC-TPD-SIMMONS-001",
+      "SRC-TOL-FISCHER-001"
+    ]
+  },
+  "solidworks_bridge": {
+    "read_only_design": true,
+    "local_SW2018_compile_verified": false,
+    "snapshot_target": "reports/cad/live/K01_SOLIDWORKS_LIVE_STATE.json",
+    "csharp_static": {
+      "brace_balance": true,
+      "open": 33,
+      "close": 33
+    }
+  },
+  "json": {
+    "count": 31,
+    "all_parse": true,
+    "errors": []
+  },
+  "csharp_static": {
+    "cad_api/bridge/K01SolidWorksLiveBridge.cs": {
+      "brace_balance": true,
+      "open": 33,
+      "close": 33
+    },
+    "cad_api/gates/gate04e_p006_service/K01Gate04E_P006_ServiceDrive.cs": {
+      "brace_balance": true,
+      "open": 26,
+      "close": 26
+    },
+    "cad_api/gates/gate04d_c2r1/K01Gate04D_C2R1_DrawingsV3.cs": {
+      "brace_balance": true,
+      "open": 81,
+      "close": 81
+    },
+    "cad_api/bom/K01_BOM_PropertyProjection.cs": {
+      "brace_balance": true,
+      "open": 41,
+      "close": 41
+    }
+  },
+  "external_runtime_holds": [
+    "Run v8.1 preflight on Windows/PowerShell parser",
+    "Compile/run SOLIDWORKS live bridge against local SW2018 interop",
+    "Run P006 service candidate",
+    "T04–T10 production-release evidence remains required"
+  ]
+}

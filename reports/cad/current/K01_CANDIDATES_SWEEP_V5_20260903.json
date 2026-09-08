@@ -1,0 +1,25 @@
+{
+  "schema": "k01_candidates_sweep_v5",
+  "status": "PASS",
+  "created_utc": "2026-09-03T07:02:12.396343+00:00",
+  "moves": [
+    {
+      "group": "runtime_logs",
+      "source": "D:\\Marvilon\\K01\\cad\\candidates\\BenchMark.txt",
+      "destination": "D:\\Marvilon\\K01\\cad\\candidates\\archive\\runtime_logs\\20260903\\BenchMark.txt"
+    },
+    {
+      "group": "rejected_gate04b_failed",
+      "source": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-016_Long_Run_Interface_Boss_GATE04B_DATUMC_20260903_090415.SLDPRT",
+      "destination": "D:\\Marvilon\\K01\\cad\\candidates\\archive\\rejected_gate04b_failed\\20260903\\K01-P-016_Long_Run_Interface_Boss_GATE04B_DATUMC_20260903_090415.SLDPRT"
+    },
+    {
+      "group": "runtime_logs",
+      "source": "D:\\Marvilon\\K01\\cad\\candidates\\PerformanceLog.txt",
+      "destination": "D:\\Marvilon\\K01\\cad\\candidates\\archive\\runtime_logs\\20260903\\PerformanceLog.txt"
+    }
+  ],
+  "deleted_locks": [],
+  "unclassified_left": [],
+  "rule": "Top-level candidates should contain only archive plus current active candidates."
+}

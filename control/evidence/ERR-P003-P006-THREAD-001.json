@@ -1,0 +1,16 @@
+{
+  "schema": "k01_evidence_reference_record_v1",
+  "err_id": "ERR-P003-P006-THREAD-001",
+  "source_id": "PROJECT-CONTROL-P003-P006",
+  "source_type": "controlled_project_record",
+  "title": "P003/P006 M12×1 retaining-thread definition",
+  "edition_version": "K01 project control / build baseline",
+  "author_publisher": "MARVILON K01",
+  "section_page_figure_table": "K01_PROJECT_CONTROL.xlsx Build Queue; BUILD_K01_v14.md P003/P006 sections",
+  "url_or_controlled_path": "project controlled records",
+  "claim_supported": "P003 uses M12×1-6H; P006 uses M12×1-6g with 6 mm engagement; P006 relief Ø9.10×0.06 controls P002 float. The interface is intentional and serviceable.",
+  "applicability_to_K01": "Interpretation of P003↔P006 interference in C2 verification assembly.",
+  "limitations_assumptions": "Does not by itself prove that the exact current interference volume is acceptable; stable-vs-C2 delta QA is still required.",
+  "checked_date": "2026-09-04",
+  "status": "CURRENT"
+}

@@ -1,0 +1,127 @@
+{
+  "description_alias_notes": [
+    {
+      "current_name": "K01-P-002_Guide_Bushing.SLDPRT",
+      "current_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-002_Guide_Bushing.SLDPRT",
+      "expected_canonical_name": "K01-P-002_Rear_Guide_Anti_Rotation_Bushing.SLDPRT",
+      "forbidden_tokens": [],
+      "part_number": "K01-P-002",
+      "status": "DESCRIPTION_NORMALIZATION_REQUIRED",
+      "type": "PART"
+    },
+    {
+      "current_name": "K01-P-014_Front_Guide_Retaining_Ring.SLDPRT",
+      "current_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-014_Front_Guide_Retaining_Ring.SLDPRT",
+      "expected_canonical_name": "K01-P-014_Front_Guide_Retaining_Ring_IN_Stop.SLDPRT",
+      "forbidden_tokens": [],
+      "part_number": "K01-P-014",
+      "status": "DESCRIPTION_NORMALIZATION_REQUIRED",
+      "type": "PART"
+    }
+  ],
+  "description_normalization_note_count": 2,
+  "documents_audited": 14,
+  "duplicate_identities": {},
+  "duplicate_identity_count": 0,
+  "limitations": [],
+  "migration_count": 5,
+  "migration_plan": [
+    {
+      "current_name": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+      "current_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\verification\\K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+      "expected_canonical_name": "K01-A-001_Calibration_Module.SLDASM",
+      "forbidden_tokens": [
+        "GATE",
+        "VERIFY"
+      ],
+      "part_number": "K01-A-001",
+      "status": "STATEFUL_NAME_MIGRATION_REQUIRED",
+      "type": "ASSEMBLY"
+    },
+    {
+      "current_name": "K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "current_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "expected_canonical_name": "K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+      "forbidden_tokens": [
+        "GATE",
+        "CANDIDATE"
+      ],
+      "part_number": "K01-P-007",
+      "status": "STATEFUL_NAME_MIGRATION_REQUIRED",
+      "type": "PART"
+    },
+    {
+      "current_name": "K01-P-006_Retaining_Plug_GATE04E_SERVICE_CANDIDATE.SLDPRT",
+      "current_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\K01-P-006_Retaining_Plug_GATE04E_SERVICE_CANDIDATE.SLDPRT",
+      "expected_canonical_name": "K01-P-006_Retaining_Plug.SLDPRT",
+      "forbidden_tokens": [
+        "GATE",
+        "CANDIDATE",
+        "SERVICE_CANDIDATE"
+      ],
+      "part_number": "K01-P-006",
+      "status": "STATEFUL_NAME_MIGRATION_REQUIRED",
+      "type": "PART"
+    },
+    {
+      "current_name": "K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "current_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "expected_canonical_name": "K01-P-003_Cartridge_Body.SLDPRT",
+      "forbidden_tokens": [
+        "GATE",
+        "CANDIDATE"
+      ],
+      "part_number": "K01-P-003",
+      "status": "STATEFUL_NAME_MIGRATION_REQUIRED",
+      "type": "PART"
+    },
+    {
+      "current_name": "K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.SLDPRT",
+      "current_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.SLDPRT",
+      "expected_canonical_name": "K01-B-001_Internal_SmCo_Magnet.SLDPRT",
+      "forbidden_tokens": [
+        "REFERENCE"
+      ],
+      "part_number": "K01-B-001",
+      "status": "STATEFUL_NAME_MIGRATION_REQUIRED",
+      "type": "PART"
+    }
+  ],
+  "policy": {
+    "authority": "Stable engineering identity is the part/assembly/drawing number. Lifecycle state belongs in metadata and the Engineering Build Graph, never in the canonical identity.",
+    "project": "K01",
+    "release_gate": "No new stateful CAD filenames may be introduced after identity migration is approved. Existing stateful filenames remain migration debt until reference-safe migration is executed.",
+    "rules": {
+      "assembly_file": "<AssemblyNo>_<Description>.SLDASM",
+      "drawing_file": "<DrawingNo>_<Description>.SLDDRW",
+      "forbidden_state_tokens_in_canonical_name": [
+        "GATE",
+        "CANDIDATE",
+        "VERIFY",
+        "VERIFICATION",
+        "SERVICE_CANDIDATE",
+        "FINAL",
+        "CURRENT",
+        "FROZEN",
+        "REFERENCE",
+        "V1",
+        "V2",
+        "V3"
+      ],
+      "migration_rule": "Existing stateful native CAD filenames are audited first. Renaming is a controlled one-time migration using SOLIDWORKS reference-safe rename/replace workflow; this overlay never bulk-renames live CAD files.",
+      "part_file": "<PartNo>_<Description>.SLDPRT",
+      "revision_rule": "Revision is metadata/property/thread state and must not be encoded into the canonical CAD filename."
+    },
+    "schema": "k01.identity_policy.v1_9"
+  },
+  "rules": {
+    "bulk_rename": "PROHIBITED",
+    "priority": "stateful lifecycle tokens first; descriptive normalization can be grouped into the same one-time migration before released drawings",
+    "rename_execution": "reference-safe SOLIDWORKS rename/replace only; reopen A001 with zero missing references, then recompute CAD semantic STATE_HASH and drawing/BOM dependency graph",
+    "source_for_filename_audit": "raw CAD API snapshot native_path; canonical semantic state intentionally excludes filesystem paths"
+  },
+  "schema": "k01.identity_audit.v2_0",
+  "source_raw_snapshot": "reports/cad/current/K01_A001_SEMANTIC_RAW_API_v1_4.json",
+  "stateful_name_migration_count": 5,
+  "status": "HOLD_MIGRATION_REQUIRED"
+}

@@ -1,0 +1,90 @@
+{
+  "00_GATE04C_ALL.cmd": {
+    "bytes": 1568,
+    "sha256": "9c3857450e458710418ea305a44c32a716973edfe788f37dba4eb1a2f0549060"
+  },
+  "01_GATE04C_BUILD_ONLY.cmd": {
+    "bytes": 2762,
+    "sha256": "56d28bee6123cc0eb42a6c0a9e0a91cc94e67e677656baf900d68a1946973760"
+  },
+  "02_GATE04C_VERIFY_ONLY.cmd": {
+    "bytes": 2762,
+    "sha256": "409fb2980d691aab615f0926555decfac74d76c401ffe1641f18754c3ae52b79"
+  },
+  "03_GATE04C_DRAWINGS_ONLY.cmd": {
+    "bytes": 2773,
+    "sha256": "3e57ad45b868c411128c6c0122df0c876ead9376a6f4796c4a5a01ce38e89418"
+  },
+  "90_GIT_STATUS_READ_ONLY.cmd": {
+    "bytes": 507,
+    "sha256": "f19debc538e503c6c7cc75cdf141ce11871daff7c9704699df83bca2373a4e91"
+  },
+  "K01Gate04C_Build.cs": {
+    "bytes": 34104,
+    "sha256": "3d0f4079008f15b30899f507e81c9ac33e3dd5875918400aaf1cb92a33c003e6"
+  },
+  "K01Gate04C_Drawings.cs": {
+    "bytes": 17282,
+    "sha256": "014e24517017fe37d3893382b01a2ee75a5fc9135784df964ea26c88e2d2228a"
+  },
+  "K01Gate04C_Verify.cs": {
+    "bytes": 18631,
+    "sha256": "1741a7a3ae91b23d23c76df814259cadd7c052814bdb8b22c05f2a0f8ee7f88c"
+  },
+  "K01_GATE04C_CONTROL_MANIFEST_v1.json": {
+    "bytes": 1103,
+    "sha256": "ccea6486db728733ccc4895079f55c3da22a9b3657f9a585834580fc02690546"
+  },
+  "K01_GATE04C_MASTER_BOM_DELTA_v1.json": {
+    "bytes": 949,
+    "sha256": "13f540e8fe5f2c01008a4cdb1260e4fe09199ae0cd796f42c30e22d68f2c650c"
+  },
+  "K01_GATE04C_PARAMS_v1.json": {
+    "bytes": 2138,
+    "sha256": "e56fba5e4c733321a4100e0c2c6d81788025cfcce7d08af76f1a0271916904fd"
+  },
+  "K01_POST_GATE04C_PIPELINE_v1.json": {
+    "bytes": 919,
+    "sha256": "f663e2fd3b008937d5f070b9e15da35c3140213f1b73b419fda9813ec8d2b58d"
+  },
+  "PATCH_NOTES_v1_1.md": {
+    "bytes": 580,
+    "sha256": "91b5c9d668473d314d16de3c7f43d3b2446057493c7f19ca3154e8209bdaa746"
+  },
+  "PATCH_NOTES_v1_2.md": {
+    "bytes": 779,
+    "sha256": "9e841ebbfad3d242d190a77718ac4b61b91992462cbc38ce721567fc5d089785"
+  },
+  "PATCH_NOTES_v1_3.md": {
+    "bytes": 881,
+    "sha256": "365e809f83c8663cbe74efa7b8049abef550574f9ea5d26acba1f2e832803cf2"
+  },
+  "PATCH_NOTES_v1_4.md": {
+    "bytes": 467,
+    "sha256": "714248a741f68f4a171568d32105e79d8fa2bfd9825469bb3bebfa1d94ddabd5"
+  },
+  "README_RUN_FIRST.txt": {
+    "bytes": 4862,
+    "sha256": "ff0ce21bdf01916fac589373d5cfdace4376f4d5d9ea600ee31d83aa8f6905bc"
+  },
+  "STATIC_SANITY_CHECK.json": {
+    "bytes": 865,
+    "sha256": "c06f02654414277318f09eb23fbbba3c5be689175379a007f8b10c0fa7ce779d"
+  },
+  "STATIC_SANITY_CHECK_v1_1.json": {
+    "bytes": 696,
+    "sha256": "2eb412ca985a8021210c6e5a5595f020b0b85009a616738d91a314391395c8b2"
+  },
+  "STATIC_SANITY_CHECK_v1_2.json": {
+    "bytes": 702,
+    "sha256": "bd40e5292ac4cf497ad6800bb0629c51512d3f56596a1d0ba447a9a74339e542"
+  },
+  "STATIC_SANITY_CHECK_v1_3.json": {
+    "bytes": 958,
+    "sha256": "ebd638e79fb42cecf425ef4aaeb4292987dacff850ef7da8c892ee2c36419478"
+  },
+  "STATIC_SANITY_CHECK_v1_4.json": {
+    "bytes": 801,
+    "sha256": "478d9cf06c387bd3e71d2a58f070992dc2fd906be1a503d8f11a5f87df66eb0d"
+  }
+}

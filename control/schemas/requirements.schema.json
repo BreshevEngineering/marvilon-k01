@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "k01.requirements.schema.json",
+  "type": "object",
+  "required": [
+    "schema",
+    "project",
+    "requirements"
+  ],
+  "properties": {
+    "schema": {
+      "const": "k01.requirements.v1"
+    },
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "statement",
+          "status",
+          "source",
+          "verification_method",
+          "links"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^REQ-K01-[A-Z0-9-]+$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "RELEASED",
+              "PARTIAL",
+              "CANDIDATE",
+              "OPEN",
+              "REJECTED",
+              "SUPERSEDED"
+            ]
+          },
+          "source": {
+            "type": "object",
+            "required": [
+              "type",
+              "ref"
+            ]
+          },
+          "verification_method": {
+            "type": "string",
+            "minLength": 1
+          },
+          "links": {
+            "type": "object",
+            "required": [
+              "gates",
+              "design_objects",
+              "evidence"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "k01_workpackage_v2",
+  "task_id": "T03",
+  "title": "Pilot tolerance chain + P006 service drive",
+  "status": "ENGINEERING_DEFINITION_PASS / CAD_IMPLEMENTATION_OPEN",
+  "controlled_input": {
+    "P003_pilot_ID": "Ø12 H9",
+    "P006_head_OD": "Ø11.5 h9",
+    "P003_pilot_OD": "Ø14.10 g6",
+    "P007_locator_ID": "Ø14.10 H7"
+  },
+  "worst_case_clearance": {
+    "P003_ID_limits_mm": [
+      12.0,
+      12.043
+    ],
+    "P006_head_limits_mm": [
+      11.457,
+      11.5
+    ],
+    "radial_clearance_mm": [
+      0.25,
+      0.293
+    ],
+    "pilot_wall_min_mm": 1.02
+  },
+  "fastener_pattern_stack": {
+    "P003_thread_position_diam_mm": 0.1,
+    "P007_clearance_position_diam_mm": 0.15,
+    "pilot_fit_max_diametral_clearance_mm": 0.035,
+    "M2p5_major_mm": 2.5,
+    "clearance_hole_mm": 2.9,
+    "available_radial_clearance_mm": 0.2,
+    "worst_relative_center_offset_mm": 0.1425,
+    "assembly_margin_radial_mm": 0.0575,
+    "status": "PASS_WORST_CASE"
+  },
+  "P006_service_drive": {
+    "architecture": "hollow axial two-pin face driver",
+    "holes": "2×Ø1.50 +0.05/0 blind ×1.20±0.05 deep, PCD8.50, 180°",
+    "tool_envelope": "OD≤11.80; central ID≥6.30; pins nominal Ø1.45",
+    "head_ligaments_mm": {
+      "to_ID6": 0.5,
+      "to_OD11p5": 0.75
+    },
+    "structural_tool_screen_at_0p5_Nm": {
+      "tangential_force_per_pin_N": 58.824,
+      "pin_shear_stress_if_D1p5_MPa": 33.29,
+      "hole_bearing_pressure_if_depth1p2_MPa": 32.68
+    },
+    "note": "0.5 N·m is tool-feature structural screen only; not P006 assembly torque."
+  },
+  "decision": "Freeze H9/h9 clearance architecture and two-pin service-drive geometry as release candidates. T03 closes when the native P006 candidate and full C2R1+P006 verification assembly pass. Seating/removal process qualification belongs to T06.",
+  "open_actions": [
+    "native P006 service-drive candidate build",
+    "full C2R1 + P006 candidate assembly link/readback verification",
+    "freeze P006 production material before final product release"
+  ],
+  "material_control": {
+    "P003": "AISI 316L / EN 1.4404 — controlled",
+    "P007": "AISI 316L / EN 1.4404 — controlled",
+    "P006": "OPEN — production material has not been confirmed by a controlled source in the current MEDTAS package; do not infer it."
+  }
+}

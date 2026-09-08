@@ -1,0 +1,1366 @@
+{
+  "schema_version": "MEDTAS-GRAPH-1.3",
+  "project": "K01",
+  "description": "K01 engineering build graph v1.3: real CAD semantics, boundary face mapping, tolerance, structural SW/CalculiX, FEMM, drawing and BOM.",
+  "nodes": [
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.REQ.GATE04E",
+      "project": "K01",
+      "kind": "requirement",
+      "title": "Gate04E requirements",
+      "producer": {
+        "mode": "source"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [],
+        "semantic_payload": {
+          "scope": "P006 service verification + current magnetic position screening",
+          "requirement_set": "controlled project requirements; bind to repository requirements registry"
+        },
+        "toolchain": [],
+        "outputs": [],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.PARAM.GATE04E",
+      "project": "K01",
+      "kind": "parameter_set",
+      "title": "Gate04E controlled parameters",
+      "producer": {
+        "mode": "source"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.REQ.GATE04E",
+            "role": "requirements",
+            "consume": "state",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "structural": {
+            "normal_force_N": "300",
+            "pressure_MPa": "0.02",
+            "bolt_count": "3",
+            "bolt_nominal_mm": "2.5",
+            "bolt_preload_N_each": "300"
+          },
+          "magnetic": {
+            "Br_T": "1.00",
+            "mu316": "1.005",
+            "coil_A_Aturn": "1",
+            "coil_B_Aturn": "1"
+          }
+        },
+        "toolchain": [],
+        "outputs": [],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.MAT.GATE04E",
+      "project": "K01",
+      "kind": "material_spec",
+      "title": "Gate04E material state",
+      "producer": {
+        "mode": "source"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.REQ.GATE04E",
+            "role": "requirements",
+            "consume": "state",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "structural_material": "1.4404 (X2CrNiMo17-12-2)",
+          "yield_strength_MPa": "400",
+          "elastic_modulus_GPa": "200",
+          "poisson": "0.28",
+          "density_kg_m3": "8000"
+        },
+        "toolchain": [],
+        "outputs": [],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.CAD.SEM.A001",
+      "project": "K01",
+      "kind": "cad_semantic_state",
+      "title": "A001 CAD semantic state",
+      "producer": {
+        "mode": "derived",
+        "implementation": "cad_api/medtas/K01CadSemanticA001.exe + tools/medtas/run_cad_sem_a001.py"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.PARAM.GATE04E",
+            "role": "parameters",
+            "consume": "state",
+            "required": true
+          },
+          {
+            "node_id": "K01.MAT.GATE04E",
+            "role": "materials",
+            "consume": "state",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "required_semantics": [
+            "part identities",
+            "configurations",
+            "critical dimensions",
+            "datums",
+            "interfaces",
+            "mates",
+            "suppression state",
+            "material assignment"
+          ],
+          "source": "live SolidWorks API extraction of selected A001 assembly",
+          "required_assembly_semantics": [
+            "component instances",
+            "referenced configurations",
+            "suppression",
+            "component transforms",
+            "mate feature state"
+          ],
+          "required_part_semantics": [
+            "material assignment",
+            "feature suppression",
+            "feature dimensions",
+            "custom datums/interfaces"
+          ]
+        },
+        "toolchain": [
+          {
+            "name": "K01CadSemanticA001",
+            "version": "1.2",
+            "identity_affects_state": true
+          },
+          {
+            "name": "MEDTAS CAD semantic canonicalizer",
+            "version": "1.2",
+            "identity_affects_state": true
+          }
+        ],
+        "outputs": [
+          {
+            "output_id": "cad_semantic_json",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/cad/current/K01_CAD_SEM_A001.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        },
+        "state_payload_source": {
+          "mode": "json_file",
+          "path": "reports/medtas/cad/current/K01_CAD_SEM_A001.json",
+          "required": true
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.SNAPSHOT.A001",
+      "project": "K01",
+      "kind": "canonical_snapshot",
+      "title": "A001 canonical engineering snapshot",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.REQ.GATE04E",
+            "role": "requirements",
+            "consume": "state",
+            "required": true
+          },
+          {
+            "node_id": "K01.PARAM.GATE04E",
+            "role": "parameters",
+            "consume": "state",
+            "required": true
+          },
+          {
+            "node_id": "K01.MAT.GATE04E",
+            "role": "materials",
+            "consume": "state",
+            "required": true
+          },
+          {
+            "node_id": "K01.CAD.SEM.A001",
+            "role": "cad_semantics",
+            "consume": "state",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "normalization": "units + deterministic ordering + canonical semantic identifiers",
+          "purpose": "solver/drawing/BOM-neutral engineering state"
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "canonical_snapshot",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/snapshot/current/K01_CANONICAL_ENGINEERING_SNAPSHOT_A001_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        },
+        "state_payload_source": {
+          "mode": "json_file",
+          "path": "reports/medtas/snapshot/current/K01_CANONICAL_ENGINEERING_SNAPSHOT_A001_v1.json",
+          "required": true
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.TOL.A001",
+      "project": "K01",
+      "kind": "tolerance_chain",
+      "title": "A001 tolerance-chain analysis",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_release",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.SNAPSHOT.A001",
+            "role": "canonical_state",
+            "consume": "state",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "method": "1D/2D critical functional chains from canonical dimensions and tolerances",
+          "required_outputs": [
+            "worst_case",
+            "statistical_if_applicable",
+            "functional_margin",
+            "contributors"
+          ]
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "tolerance_report",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/tolerance/current/K01_TOLERANCE_A001_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        },
+        "state_payload_source": {
+          "mode": "json_file",
+          "path": "reports/medtas/tolerance/current/K01_TOLERANCE_A001_v1.json",
+          "required": true
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.STRUCT.MODEL.P006",
+      "project": "K01",
+      "kind": "structural_model",
+      "title": "P006 solver-neutral structural model",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.SNAPSHOT.A001",
+            "role": "canonical_state",
+            "consume": "state",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "load_case": "P006_SERVICE",
+          "material": "1.4404",
+          "normal_force_N": "300",
+          "pressure_MPa": "0.02",
+          "bolt_preload_N_each": "300",
+          "contact": "no_penetration",
+          "analysis": "linear_static"
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "structural_model",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/structural/current/K01_STRUCTURAL_MODEL_P006_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        },
+        "state_payload_source": {
+          "mode": "json_file",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_MODEL_P006_v1.json",
+          "required": true
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.STRUCT.FACE_MAP.P006",
+      "project": "K01",
+      "kind": "boundary_role_map",
+      "title": "P006 solver-neutral boundary face map",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_release",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.STRUCT.MODEL.P006",
+            "role": "structural_model",
+            "consume": "state",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "purpose": "bind CAD face signatures to FIXED / PRESSURE / SERVICE_FORCE / CONTACT roles without runtime face IDs",
+          "policy": "fail_closed_until_roles_confirmed"
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "face_map",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/structural/current/K01_STRUCTURAL_FACE_MAP_P006_v1.json"
+          }
+        ],
+        "verification_policy": "K01-VP-FACE-MAP-1",
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        },
+        "state_payload_source": {
+          "mode": "json_file",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_FACE_MAP_P006_v1.json",
+          "required": true
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.STRUCT.SWSIM.P006",
+      "project": "K01",
+      "kind": "solver_run",
+      "title": "SolidWorks Simulation P006 service run",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.STRUCT.MODEL.P006",
+            "role": "solver_neutral_model",
+            "consume": "state",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "solver": "SolidWorks Simulation",
+          "solver_type": "FFEPlus",
+          "mesh": "solid standard",
+          "large_displacement": false,
+          "friction": false
+        },
+        "toolchain": [
+          {
+            "name": "SOLIDWORKS Simulation",
+            "identity_affects_state": true
+          }
+        ],
+        "outputs": [
+          {
+            "output_id": "sw_report",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "path": "reports/engineering/current/source/K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx"
+          }
+        ],
+        "verification_policy": "K01-VP-STRUCT-SCREEN-1",
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.STRUCT.CCX.P006",
+      "project": "K01",
+      "kind": "solver_run",
+      "title": "CalculiX independent P006 service run",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_release",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.STRUCT.MODEL.P006",
+            "role": "solver_neutral_model",
+            "consume": "state",
+            "required": true
+          },
+          {
+            "node_id": "K01.STRUCT.FACE_MAP.P006",
+            "role": "boundary_role_map",
+            "consume": "both",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "solver": "CalculiX",
+          "purpose": "independent cross-solver check",
+          "target_metrics": [
+            "sigma_vm_max",
+            "displacement_max",
+            "reaction_balance"
+          ]
+        },
+        "toolchain": [
+          {
+            "name": "CalculiX",
+            "identity_affects_state": true
+          }
+        ],
+        "outputs": [
+          {
+            "output_id": "ccx_results",
+            "required": true,
+            "hash_mode": "tree",
+            "media_type": "application/octet-stream",
+            "path": "reports/medtas/calculix/current/K01_CCX_P006"
+          }
+        ],
+        "verification_policy": "K01-VP-CCX-1",
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.STRUCT.RECON.P006",
+      "project": "K01",
+      "kind": "verification",
+      "title": "Structural solver reconciliation",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_release",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.STRUCT.SWSIM.P006",
+            "role": "sw_results",
+            "consume": "both",
+            "required": true
+          },
+          {
+            "node_id": "K01.STRUCT.CCX.P006",
+            "role": "ccx_results",
+            "consume": "both",
+            "required": false
+          }
+        ],
+        "semantic_payload": {
+          "gate04e": "SolidWorks result is sufficient for screening",
+          "production_release": "CalculiX cross-check required unless explicitly waived by controlled decision",
+          "comparison_metrics": [
+            "stress",
+            "displacement",
+            "reaction_balance"
+          ]
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "structural_reconciliation",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/structural/current/K01_STRUCTURAL_RECON_P006_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.FEMM.MODEL.CURRENT",
+      "project": "K01",
+      "kind": "femm_model",
+      "title": "FEMM current-position model",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.SNAPSHOT.A001",
+            "role": "canonical_state",
+            "consume": "state",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "position": "CURRENT",
+          "Br_T": "1.00",
+          "mu316": "1.005",
+          "cases": [
+            "COIL_A_1_ATURN",
+            "COIL_B_1_ATURN"
+          ],
+          "geometry_source": "controlled CAD-derived 2D section"
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "femm_model",
+            "required": true,
+            "hash_mode": "tree",
+            "media_type": "application/json",
+            "path": "reports/medtas/femm/current/K01_FEMM_MODEL_CURRENT_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        },
+        "state_payload_source": {
+          "mode": "json_file",
+          "path": "reports/medtas/femm/current/K01_FEMM_MODEL_CURRENT_v1.json",
+          "required": true
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.FEMM.RUN.A",
+      "project": "K01",
+      "kind": "solver_run",
+      "title": "FEMM Coil A screening",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.FEMM.MODEL.CURRENT",
+            "role": "femm_model",
+            "consume": "both",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "IA": "1",
+          "IB": "0"
+        },
+        "toolchain": [
+          {
+            "name": "FEMM",
+            "identity_affects_state": true
+          }
+        ],
+        "outputs": [
+          {
+            "output_id": "done",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "text/plain",
+            "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_DONE.txt"
+          },
+          {
+            "output_id": "field_plot",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "image/png",
+            "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_B.png"
+          }
+        ],
+        "verification_policy": "K01-VP-FEMM-SCREEN-1",
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.FEMM.RUN.B",
+      "project": "K01",
+      "kind": "solver_run",
+      "title": "FEMM Coil B screening",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.FEMM.MODEL.CURRENT",
+            "role": "femm_model",
+            "consume": "both",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "IA": "0",
+          "IB": "1"
+        },
+        "toolchain": [
+          {
+            "name": "FEMM",
+            "identity_affects_state": true
+          }
+        ],
+        "outputs": [
+          {
+            "output_id": "done",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "text/plain",
+            "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_DONE.txt"
+          },
+          {
+            "output_id": "field_plot",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "image/png",
+            "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_B.png"
+          }
+        ],
+        "verification_policy": "K01-VP-FEMM-SCREEN-1",
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.FEMM.VERIFY.CURRENT",
+      "project": "K01",
+      "kind": "verification",
+      "title": "FEMM current-position verification",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.FEMM.RUN.A",
+            "role": "coil_A_results",
+            "consume": "both",
+            "required": true
+          },
+          {
+            "node_id": "K01.FEMM.RUN.B",
+            "role": "coil_B_results",
+            "consume": "both",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "screening_acceptance": "solver completes and field solution evidence is produced for both 1 A-turn cases",
+          "force_release_acceptance": "force extraction must be independently validated before Fz is used as release evidence",
+          "numeric_export": "CSV is supplemental; Coil B record is known incomplete and force extraction is not release evidence."
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "femm_verification",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/femm/current/K01_FEMM_VERIFY_CURRENT_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        },
+        "state_payload_source": {
+          "mode": "json_file",
+          "path": "reports/medtas/femm/current/K01_FEMM_VERIFY_CURRENT_v1.json",
+          "required": true
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.DRAWING.MODEL.GATE04E",
+      "project": "K01",
+      "kind": "drawing_model",
+      "title": "Gate04E drawing semantic model",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_release",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.SNAPSHOT.A001",
+            "role": "canonical_state",
+            "consume": "state",
+            "required": true
+          },
+          {
+            "node_id": "K01.TOL.A001",
+            "role": "tolerance_results",
+            "consume": "state",
+            "required": false
+          }
+        ],
+        "semantic_payload": {
+          "principle": "drawing is a derived representation of canonical engineering intent, not an independent source of truth",
+          "required_content": [
+            "material",
+            "datums",
+            "fits",
+            "critical dimensions",
+            "tolerances",
+            "surface requirements",
+            "manufacturing notes",
+            "revision"
+          ]
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "drawing_semantics",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/drawing/current/K01_DRAWING_MODEL_GATE04E_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        },
+        "state_payload_source": {
+          "mode": "json_file",
+          "path": "reports/medtas/drawing/current/K01_DRAWING_MODEL_GATE04E_v1.json",
+          "required": true
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.DRAWING.ARTIFACT.GATE04E",
+      "project": "K01",
+      "kind": "drawing_artifact",
+      "title": "Gate04E production drawing pack",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_release",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.DRAWING.MODEL.GATE04E",
+            "role": "drawing_semantics",
+            "consume": "both",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "target": "native drawing + controlled PDF/export"
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "drawing_pack",
+            "required": true,
+            "hash_mode": "tree",
+            "media_type": "application/octet-stream",
+            "path": "drawings/release_candidate/gate04e"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.DRAWING.VERIFY.GATE04E",
+      "project": "K01",
+      "kind": "verification",
+      "title": "Drawing verification",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_release",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.DRAWING.MODEL.GATE04E",
+            "role": "drawing_semantics",
+            "consume": "state",
+            "required": true
+          },
+          {
+            "node_id": "K01.DRAWING.ARTIFACT.GATE04E",
+            "role": "drawing_artifact",
+            "consume": "artifact",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "checks": [
+            "semantic parity",
+            "material present",
+            "datum scheme",
+            "fits/tolerances",
+            "no missing views",
+            "no broken dimensions",
+            "revision linkage"
+          ]
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "drawing_verify",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/drawing/current/K01_DRAWING_VERIFY_GATE04E_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.BOM.MODEL.A001",
+      "project": "K01",
+      "kind": "bom_model",
+      "title": "A001 canonical BOM model",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_release",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.SNAPSHOT.A001",
+            "role": "canonical_state",
+            "consume": "state",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "fields": [
+            "item_id",
+            "part_number",
+            "revision",
+            "description",
+            "quantity",
+            "material",
+            "make_buy",
+            "supplier_if_buy",
+            "mass_if_available",
+            "source_node"
+          ]
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "bom_json",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/bom/current/K01_BOM_MODEL_A001_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        },
+        "state_payload_source": {
+          "mode": "json_file",
+          "path": "reports/medtas/bom/current/K01_BOM_MODEL_A001_v1.json",
+          "required": true
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.BOM.ARTIFACT.A001",
+      "project": "K01",
+      "kind": "bom_artifact",
+      "title": "A001 BOM export",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_release",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.BOM.MODEL.A001",
+            "role": "bom_model",
+            "consume": "both",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "formats": [
+            "xlsx",
+            "csv"
+          ]
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "bom_export",
+            "required": true,
+            "hash_mode": "tree",
+            "media_type": "application/octet-stream",
+            "path": "reports/bom/current"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.BOM.VERIFY.A001",
+      "project": "K01",
+      "kind": "verification",
+      "title": "A001 BOM verification",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_release",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.BOM.MODEL.A001",
+            "role": "bom_semantics",
+            "consume": "state",
+            "required": true
+          },
+          {
+            "node_id": "K01.BOM.ARTIFACT.A001",
+            "role": "bom_artifact",
+            "consume": "artifact",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "checks": [
+            "assembly quantity parity",
+            "revision parity",
+            "material parity",
+            "make/buy completeness",
+            "no orphan items",
+            "no duplicate identities"
+          ]
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "bom_verify",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/bom/current/K01_BOM_VERIFY_A001_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.EVIDENCE.GATE04E.REPORT",
+      "project": "K01",
+      "kind": "evidence_report",
+      "title": "Gate04E FEM/FEMM verification report",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "evidence",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.STRUCT.SWSIM.P006",
+            "role": "structural_evidence",
+            "consume": "both",
+            "required": true
+          },
+          {
+            "node_id": "K01.FEMM.VERIFY.CURRENT",
+            "role": "femm_evidence",
+            "consume": "both",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "report_id": "K01-EV-GATE04E-FEM-FEMM-REPORT-001",
+          "registry": "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY_v1.json"
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "report_docx",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "path": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.docx"
+          },
+          {
+            "output_id": "report_md",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "text/markdown",
+            "path": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.md"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.VERIFY.GATE04E",
+      "project": "K01",
+      "kind": "verification",
+      "title": "Gate04E engineering verification",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.STRUCT.SWSIM.P006",
+            "role": "structural_screen",
+            "consume": "both",
+            "required": true
+          },
+          {
+            "node_id": "K01.FEMM.VERIFY.CURRENT",
+            "role": "magnetic_screen",
+            "consume": "both",
+            "required": true
+          },
+          {
+            "node_id": "K01.TOL.A001",
+            "role": "tolerance",
+            "consume": "both",
+            "required": false
+          },
+          {
+            "node_id": "K01.STRUCT.CCX.P006",
+            "role": "calculix",
+            "consume": "both",
+            "required": false
+          },
+          {
+            "node_id": "K01.DRAWING.VERIFY.GATE04E",
+            "role": "drawings",
+            "consume": "both",
+            "required": false
+          },
+          {
+            "node_id": "K01.BOM.VERIFY.A001",
+            "role": "bom",
+            "consume": "both",
+            "required": false
+          },
+          {
+            "node_id": "K01.EVIDENCE.GATE04E.REPORT",
+            "role": "formal_report",
+            "consume": "artifact",
+            "required": false
+          }
+        ],
+        "semantic_payload": {
+          "screen_gate_required": [
+            "K01.STRUCT.SWSIM.P006",
+            "K01.FEMM.VERIFY.CURRENT"
+          ],
+          "production_release_additional": [
+            "K01.TOL.A001",
+            "K01.STRUCT.CCX.P006",
+            "K01.DRAWING.VERIFY.GATE04E",
+            "K01.BOM.VERIFY.A001"
+          ]
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "gate04e_verify",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/verification/current/K01_VERIFY_GATE04E_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    },
+    {
+      "schema_version": "MEDTAS-NODE-1.1",
+      "node_id": "K01.BASELINE.GATE04E",
+      "project": "K01",
+      "kind": "baseline",
+      "title": "Gate04E baseline manifest",
+      "producer": {
+        "mode": "derived"
+      },
+      "lifecycle": {
+        "criticality": "required_for_gate",
+        "superseded_by": null
+      },
+      "contract": {
+        "inputs": [
+          {
+            "node_id": "K01.VERIFY.GATE04E",
+            "role": "verification",
+            "consume": "both",
+            "required": true
+          }
+        ],
+        "semantic_payload": {
+          "roots": [
+            "BASELINE_STATE_HASH",
+            "BASELINE_ARTIFACT_HASH"
+          ],
+          "rule": "baseline is immutable; later changes create a new baseline manifest"
+        },
+        "toolchain": [],
+        "outputs": [
+          {
+            "output_id": "baseline_manifest",
+            "required": true,
+            "hash_mode": "file",
+            "media_type": "application/json",
+            "path": "reports/medtas/baseline/current/K01_BASELINE_GATE04E_v1.json"
+          }
+        ],
+        "verification_policy": null,
+        "hash_policy": {
+          "algorithm": "sha256",
+          "canonicalization": "MEDTAS-JCS-LIKE-1",
+          "include_toolchain_identity": true,
+          "float_policy": "pre_normalized_decimal_strings"
+        }
+      }
+    }
+  ]
+}

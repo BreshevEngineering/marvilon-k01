@@ -1,0 +1,17 @@
+{
+  "schema": "k01_actuation_bench_acceptance_v1",
+  "status": "OPEN",
+  "assembly_revision": "OPEN",
+  "breakaway_force_N": "OPEN",
+  "full_stroke_10mm": "OPEN",
+  "nominal_current_A": 1.0,
+  "boost_current_A": 1.25,
+  "positions_tested_mm": [
+    0,
+    5,
+    10
+  ],
+  "no_rub": "OPEN",
+  "temperature_C": "OPEN",
+  "evidence_files": []
+}

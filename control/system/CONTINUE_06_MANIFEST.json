@@ -1,0 +1,77 @@
+{
+  "schema": "k01_continue_06_manifest_v1",
+  "created": "2026-09-05",
+  "extract_to": "D:\\BreshevEngineering\\marvilon-k01",
+  "files": [
+    {
+      "path": "00_README_CONTINUE_06.md",
+      "bytes": 1150,
+      "sha256": "c9d5b02cab420e0b836a445cb8457e5c274f1bfc5f3dde11c0f0fc9a192e970b"
+    },
+    {
+      "path": "06_RUN_K01_CONTINUE.cmd",
+      "bytes": 2599,
+      "sha256": "d72b3d7eee73f90295efb4ce0286c97a807f83f45ecb14853ce10ca6d0efe3d7"
+    },
+    {
+      "path": "cad_api/drawings/p006_probe/K01_P006_DrawingProbe.cs",
+      "bytes": 5236,
+      "sha256": "7bd481c7f729f63fa12db5b02820df0eaf24bb48cc9d1bce22966affefc83e11"
+    },
+    {
+      "path": "cad_api/drawings/p006_probe/RUN_P006_DRAWING_PROBE.cmd",
+      "bytes": 1206,
+      "sha256": "e609559bc018aeb76ae6ee4dc0a39a3532a992dfada575caa94aabd1186de8ef"
+    },
+    {
+      "path": "control/calculations/K01_T05_CLAMP_SCREEN_INPUT.json",
+      "bytes": 928,
+      "sha256": "df891b09ec65f7e154d4ec048b67031bfb0160aa337538c0a1f3b7f390927169"
+    },
+    {
+      "path": "control/calculations/RUN_T05_CLAMP_SCREEN.ps1",
+      "bytes": 2138,
+      "sha256": "bb5208ecbb2c7906485878182948d17fb98820bc2993e18e377f3bdd6f872130"
+    },
+    {
+      "path": "control/femm/BUILD_FEMM_SCREENING_INPUT_PACK.cmd",
+      "bytes": 386,
+      "sha256": "754e27b63db53ae965d7417d5bb638af8f84c5e16f852dbcec729bc9f6cc3019"
+    },
+    {
+      "path": "control/femm/BUILD_FEMM_SCREENING_INPUT_PACK.ps1",
+      "bytes": 2493,
+      "sha256": "194ef55ad07042796da7a8a744edca464de3cbb2411611150643dceffd14ab5e"
+    },
+    {
+      "path": "control/handoff/BUILD_AI_HANDOFF.cmd",
+      "bytes": 389,
+      "sha256": "9b031c48b6fce7c484ac6f9a76d40cb623a99478b45fbf04e5147f79cbe2993e"
+    },
+    {
+      "path": "control/handoff/BUILD_AI_HANDOFF.ps1",
+      "bytes": 2880,
+      "sha256": "6f47b46ee11a32fc165fa602a15952cadc717754403a640d47943b42105d08b6"
+    },
+    {
+      "path": "control/project/BUILD_MODULE_CLOSURE_STATUS.ps1",
+      "bytes": 2277,
+      "sha256": "47f74b98b00f9cb36345c03899491f60ce91c61e72195c213a6c027b6df23daa"
+    },
+    {
+      "path": "control/requirements/APPLY_T03_DP_TEMP_CLOSURE.ps1",
+      "bytes": 6875,
+      "sha256": "bce242988f0fc13f0afbabca9a4e49d86a097d486623025ff4467f558b66cfba"
+    },
+    {
+      "path": "control/system/CONTINUE_06_STATIC_AUDIT.json",
+      "bytes": 336,
+      "sha256": "ffa367d8c08b1c5a2a32c7cc61ba4ddad596f84d166b5c6075dda34c283b2241"
+    },
+    {
+      "path": "control/workpacks/K01_T04_SEAL_BASELINE_CURRENT.json",
+      "bytes": 951,
+      "sha256": "f1c1abedfc99b223fada6baf03a715279f2d2ca47ea483b69721262bd476140b"
+    }
+  ]
+}

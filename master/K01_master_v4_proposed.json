@@ -1,0 +1,310 @@
+{
+  "schema_version": "k01_master_v4_proposed_20260902",
+  "project": "K01",
+  "assembly": "K01-A-001_Calibration_Module.SLDASM",
+  "updated": "2026-09-02",
+  "architecture": "fixed_coil_moving_internal_smco_reference_target",
+  "control_status": "DESIGN_FREEZE_IN_PROGRESS__PRODUCTION_RELEASE_DEFERRED",
+  "authoring": {
+    "current_development_cad": "SOLIDWORKS 2018 on current laptop",
+    "source_project_origin": "Main MARV project was authored in SOLIDWORKS 2024",
+    "final_integration_cad": "SOLIDWORKS 2026 on second laptop",
+    "policy": "Finish K01 design freeze in SW2018; after freeze promote/import into authoritative SW2026 project. Do not maintain a bidirectional SW2018<->SW2026 production workflow.",
+    "parameter_source": "params/k01_params.py",
+    "master_role": "lifecycle, interfaces, materials, force budgets, evidence and release gates"
+  },
+  "repository": {
+    "owner": "BreshevEngineering",
+    "name": "marvilon-k01",
+    "default_branch": "main",
+    "visibility": "private",
+    "ci_workflow": "engineering-qa"
+  },
+  "current_interface": {
+    "P003_P016": {
+      "status": "GEOMETRY PASS / LOCATING A+B IMPLEMENTED / RELEASE CHECKS OPEN",
+      "datum_A": "K01_DATUM_A_MATING; metal-to-metal axial shoulder",
+      "datum_B": "K01_DATUM_B_AXIS; Ø10 H7/g6 pilot axis",
+      "datum_C": "OPEN; angular clocking not yet physically released",
+      "fasteners": "3x M4; clamp only; not locating",
+      "seal": "12x1.5 FKM75 candidate; groove baseline only until compound/supplier compatibility freeze",
+      "required_remaining_checks": [
+        "Measure P003 pilot end face to P016 counterbore bottom; target 0.20 mm",
+        "Confirm one free rotational DOF remains with only A+B mates",
+        "Freeze Datum C/physical clocking method",
+        "Confirm P016-to-Long-Run production material/weld/post-weld machining route"
+      ]
+    },
+    "P003_P007": {
+      "status": "DESIGN FREEZE / GATE03I PASS / MANUAL INTERFERENCE PASS",
+      "P003_change": "rear OD16 collar over final 5.00 mm; native-history candidate Gate03G",
+      "P007_change": "remove legacy front sleeve 5.00 mm; final L35.00; native-history candidate Gate03H",
+      "assembly": "26 mates before/after, 0 mate errors, zero transform delta for P003/P007",
+      "structural": {
+        "static_dp_pos_020bar": "PASS SCREEN; reaction 3.1225 N matches 3.123 N analytical resultant",
+        "buckling_dp_neg_020bar": {
+          "status": "PASS SCREEN",
+          "lambda": [
+            1883.6,
+            1907.5,
+            1950.5,
+            1952.2,
+            2843.1
+          ]
+        }
+      },
+      "production_promotion": "OPEN — stable production filenames still contain pre-freeze geometry in current SW2018 workspace"
+    }
+  },
+  "parts": {
+    "K01-P-003": {
+      "description": "Cartridge Body",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "DESIGN FROZEN / PRODUCTION PROMOTION OPEN",
+      "cad_snapshot": "reports/CAD_SNAPSHOT_K01-P-003_Cartridge_Body.json",
+      "features_required": [
+        "K01_DATUM_A_MATING",
+        "K01_DATUM_B_AXIS",
+        "M4 clearance Hole Wizard",
+        "3x circular pattern",
+        "single final solid body"
+      ],
+      "interface": {
+        "pilot_fit": "Ø10 g6",
+        "mating_flange": "Ø34 x 3.00",
+        "fasteners": "3x M4 clearance on PCD24",
+        "rear_weld_collar": "OD16 x 5.00 mm integrated into P003 native-history candidate"
+      }
+    },
+    "K01-P-007": {
+      "description": "Hermetic Magnetic Can",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "DESIGN FROZEN / STRUCTURAL SCREEN PASS / PRODUCTION PROMOTION OPEN",
+      "note": "Primary static containment boundary. Geometry and structural screening frozen; manufacturing weld/WPS and helium leak acceptance remain production-release gates.",
+      "controlled": {
+        "L_mm": 35.0,
+        "front_root_OD_mm": 16.0,
+        "front_cavity_ID_mm": 14.1,
+        "thin_OD_mm": 10.0,
+        "thin_ID_mm": 9.4,
+        "thin_wall_mm": 0.3,
+        "thin_ID_start_from_weld_mm": 2.0,
+        "thin_OD_start_from_weld_mm": 3.0,
+        "rear_inner_mm": 34.0,
+        "rear_outer_mm": 35.0
+      }
+    },
+    "K01-P-013": {
+      "description": "Follower End Cap",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "DESIGN BASELINE / CAD MATERIAL PROPERTY CORRECTION OPEN / PROCESS QUALIFICATION DEFERRED",
+      "fixation_baseline": "Structural-adhesive annular face bond P013-to-P008",
+      "fallbacks": [
+        "3-point staking/caulking",
+        "360 deg laser seam"
+      ],
+      "note": "Current CAD audit reports generic Steel. Engineering material remains 316L. Bonded retaining-cap baseline; no B001 preload.",
+      "fixation": "Structural-adhesive annular-face bond to P008 rear annular face baseline; must not preload B001; adhesive product/qualification OPEN; 360 deg autogenous laser seam optional fallback only."
+    },
+    "K01-P-014": {
+      "description": "Front Guide Retaining Ring / IN Stop",
+      "material": "OPEN; 1.4310 / AISI 301 candidate",
+      "status": "DESIGN DECISION OPEN — MATERIAL"
+    },
+    "K01-P-015": {
+      "description": "Dual Coil Bobbin",
+      "material": "Prototype PLA; production OPEN",
+      "status": "DESIGN DECISION OPEN — PRODUCTION MATERIAL / ELECTRICAL SPEC"
+    },
+    "K01-P-016": {
+      "description": "Long Run Interface Boss",
+      "material": "AISI 316L assigned in current CAD; compatibility with production Long Run material/weld route OPEN",
+      "status": "A+B GEOMETRY PASS / DATUM C + LONG RUN INSTALLATION OPEN",
+      "cad_snapshot": "reports/CAD_SNAPSHOT_K01-P-016_Long_Run_Interface_Boss.json",
+      "features_required": [
+        "K01_DATUM_A_MATING",
+        "K01_DATUM_B_AXIS",
+        "3x M4 tapped holes",
+        "saddle R24",
+        "Ø10 H7 pilot bore"
+      ],
+      "interface": {
+        "pilot_fit": "Ø10 H7",
+        "pilot_depth_mm": 3.2,
+        "central_passage_mm": 6.0,
+        "saddle": "R24 to Long Run OD48",
+        "datum_A_height_from_OD48_tangent_mm": 13.0,
+        "fasteners": "3x M4 tapped on PCD24"
+      }
+    },
+    "K01-B-001": {
+      "description": "Internal SmCo Magnet",
+      "material": "Sm2Co17 / S280 or equivalent high-temperature SmCo",
+      "status": "DESIGN SPEC / PROCUREMENT DEFERRED",
+      "supplier_candidate": "MTS SM-SA-8x8; stock tolerance ±0.1 mm does not itself satisfy frozen fit acceptance without sorting",
+      "controlled": {
+        "D_nominal_mm": 8.0,
+        "D_functional_acceptance": "Ø8 h9 or equivalent incoming-sorted envelope; upper limit 8.000 mm",
+        "D_h9_approx_limits_mm": [
+          7.964,
+          8.0
+        ],
+        "L_nominal_mm": 8.0,
+        "L_stock_tolerance_mm": 0.1,
+        "magnetization": "axial",
+        "Br_screen_min_T": 1.0,
+        "Tmax_design_min_C": 200
+      },
+      "assembly": {
+        "axial_datum": "P008 pocket front shoulder",
+        "primary_retention": "LOCTITE AA 332 axial-face bond baseline",
+        "secondary_retention": "P013 bonded retaining cap baseline",
+        "press_fit": false
+      },
+      "note": "No physical magnet purchase is required for K01 design freeze. CoC, actual lot dimensions and Br(T) are production-release verification."
+    },
+    "K01-P-008": {
+      "description": "Internal Magnetic Follower",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "DESIGN BASELINE / KEEP CURRENT NATIVE GEOMETRY",
+      "controlled": {
+        "OD_mm": 8.8,
+        "L_mm": 16.0,
+        "M4_usable_depth_mm": 4.0,
+        "magnet_pocket_D_nominal_mm": 8.1,
+        "magnet_pocket_fit": "Ø8.10 H9 design callout",
+        "magnet_pocket_depth_mm": 8.2
+      },
+      "note": "Gate04A direct D1 edit rejected because it translated the complete body axis by -0.050 mm. Do not use that candidate. Keep current P008 geometry; control fit by B001 functional acceptance/sorting."
+    },
+    "K01-P-009": {
+      "description": "Rear Stop Washer / OUT Stop",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "DESIGN BASELINE / CAD MATERIAL PROPERTY CORRECTION OPEN",
+      "note": "Current CAD audit reports generic Steel; do not treat that as released material."
+    }
+  },
+  "verification": {
+    "API_GATE_01": "PASS — read-only COM/FeatureManager + named datums + JSON snapshot",
+    "API_GATE_02": "PASS — native Sketch + native Boss-Extrude created through SolidWorks API",
+    "P003_snapshot": {
+      "status": "PASS",
+      "evidence": "26 features; 316L material; Datum A/B; HoleWzd; CirPattern; Combine"
+    },
+    "P016_snapshot": {
+      "status": "PASS FOR DATUMS / REFRESH AFTER FINAL HOLE IMPLEMENTATION",
+      "evidence": "Datum A/B detected; current final snapshot should remain in reports/"
+    }
+  },
+  "retired_part_number_rule": "Retired part numbers are never reused.",
+  "processes": {
+    "P013_retention": {
+      "baseline": "structural-adhesive annular-face bond P013-to-P008",
+      "adhesive_product": "OPEN — select/qualify for temperature and measured-gas compatibility",
+      "functional_rules": [
+        "P013 must provide independent mechanical capture of B001",
+        "P013 must not preload B001",
+        "bond must not contaminate B001 primary datum/bond interface"
+      ],
+      "qualification": "representative hot pull test + cycle/endurance test + measured-gas compatibility review",
+      "fallback": "360 deg autogenous laser seam only if adhesive qualification fails or release review explicitly selects welding"
+    }
+  },
+  "actuator_design_budget": {
+    "criterion": "F_act_min >= 2*(F_breakaway_max + abs(F_CFD_axial_max) + F_inertia)",
+    "KF_min_screen_N_per_A": 1.0,
+    "pulse_current_capability_A": 1.25,
+    "F_inertia_N": 0.03,
+    "F_breakaway_design_acceptance_max_N": 0.25,
+    "current_CFD_case_N": 0.185447243,
+    "allowable_CFD_max_at_1p25A_N": 0.345,
+    "decision": "Physical breakaway measurement is not a design input anymore; it becomes an assembly acceptance test. One final CFD OUT/MID/IN envelope remains required to verify <=0.345 N."
+  },
+  "design_freeze_gates": [
+    {
+      "id": "DF01",
+      "state": "OPEN",
+      "title": "Promote validated P003/P007 to stable production filenames"
+    },
+    {
+      "id": "DF02",
+      "state": "OPEN",
+      "title": "Freeze P008/B001 fit specification without procurement"
+    },
+    {
+      "id": "DF03",
+      "state": "OPEN",
+      "title": "Freeze P014 material / retention"
+    },
+    {
+      "id": "DF04",
+      "state": "OPEN",
+      "title": "Freeze P015 production material + winding/driver/lead spec"
+    },
+    {
+      "id": "DF05",
+      "state": "OPEN",
+      "title": "Correct P009/P013 CAD material metadata to 316L"
+    },
+    {
+      "id": "DF06",
+      "state": "OPEN",
+      "title": "Freeze Datum C and P016-to-Long-Run installation/inspection"
+    },
+    {
+      "id": "DF07",
+      "state": "OPEN",
+      "title": "Freeze optical target/anti-rotation release definition"
+    },
+    {
+      "id": "DF08",
+      "state": "OPEN",
+      "title": "CFD OUT/MID/IN gas-wetted rod axial-force envelope"
+    },
+    {
+      "id": "DF09",
+      "state": "OPEN_AFTER_DF08",
+      "title": "Close actuator force budget against acceptance limits"
+    },
+    {
+      "id": "DF10",
+      "state": "OPEN",
+      "title": "Synchronize master/BOM/GitHub and create design-freeze tag"
+    }
+  ],
+  "production_release_gates": [
+    {
+      "id": "PR01",
+      "title": "B001 supplier CoC / Br(T) / incoming dimensions"
+    },
+    {
+      "id": "PR02",
+      "title": "Breakaway hot/cold both directions <= design acceptance"
+    },
+    {
+      "id": "PR03",
+      "title": "P013 bond qualification"
+    },
+    {
+      "id": "PR04",
+      "title": "P007 qualified weld/WPS"
+    },
+    {
+      "id": "PR05",
+      "title": "Integral helium leak acceptance"
+    },
+    {
+      "id": "PR06",
+      "title": "Actuator bench force/motion"
+    },
+    {
+      "id": "PR07",
+      "title": "P015 pulse thermal/insulation verification"
+    },
+    {
+      "id": "PR08",
+      "title": "Optical calibration repeatability"
+    }
+  ],
+  "open_gates_legacy_note": "The former G01..G10 list mixed design-freeze and production-release evidence. Use design_freeze_gates and production_release_gates above."
+}

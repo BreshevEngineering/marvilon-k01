@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "k01.revision_policy.schema.json",
+  "type": "object",
+  "required": [
+    "schema",
+    "states",
+    "rules"
+  ],
+  "properties": {
+    "schema": {
+      "const": "k01.revision_policy.v1"
+    },
+    "states": {
+      "type": "array"
+    },
+    "rules": {
+      "type": "array"
+    }
+  }
+}

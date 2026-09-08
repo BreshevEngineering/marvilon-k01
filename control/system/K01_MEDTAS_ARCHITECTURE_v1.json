@@ -1,0 +1,55 @@
+{
+  "schema": "k01_medtas_architecture_v1",
+  "name": "MARVILON Engineering Digital Thread and Assurance System (MEDTAS)",
+  "principle": "No single file is the truth for the whole project. Each artifact class has a bounded authority; current project state is derived from their linked evidence.",
+  "authority_layers": [
+    {
+      "layer": "Native CAD",
+      "authority": "released geometry, topology, configurations, assembly links, native material where explicitly assigned",
+      "system": "SOLIDWORKS"
+    },
+    {
+      "layer": "Engineering decisions",
+      "authority": "why a choice was made, alternatives, assumptions, release gates, rationale",
+      "system": "EDR / CI dossiers / work packages"
+    },
+    {
+      "layer": "Verification evidence",
+      "authority": "observed solver/API/test result for a specific geometry/input/version",
+      "system": "JSON reports + logs + hashes"
+    },
+    {
+      "layer": "Requirements/verification",
+      "authority": "what must be satisfied and by which verification method",
+      "system": "RVM + EDS-001"
+    },
+    {
+      "layer": "Product identity / BOM",
+      "authority": "PartNo, description, make/buy, material release state, supplier/lot data; quantities from CAD assembly",
+      "system": "BOM reconciliation + controlled identity map"
+    },
+    {
+      "layer": "Derived state",
+      "authority": "current task/gate state only; never edits historical evidence",
+      "system": "K01_STATE_ENGINE_v7"
+    },
+    {
+      "layer": "History",
+      "authority": "append-only transitions and evidence ingestion",
+      "system": "K01_EVENT_LEDGER.jsonl"
+    },
+    {
+      "layer": "Source control",
+      "authority": "history of text/code/control artifacts",
+      "system": "Git/GitHub; native CAD excluded from ordinary Git"
+    },
+    {
+      "layer": "Future multi-user vault",
+      "authority": "CAD ownership/check-in/versioning/multi-user access",
+      "system": "CAD-aware PDM/vault after process stabilization"
+    }
+  ],
+  "state_transition_rule": "A task changes state only when required evidence changes, or when a controlled engineering decision/work-package is revised. Dashboard buttons do not mark tasks PASS by themselves.",
+  "release_rule": "Release is fail-closed. Missing, stale, inconsistent or unverified dependencies keep the parent gate HOLD/STALE.",
+  "current_active_design": "Gate04D-C2R1"
+}

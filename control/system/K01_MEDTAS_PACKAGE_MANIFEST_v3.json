@@ -1,0 +1,147 @@
+{
+  "schema": "k01_medtas_package_v3_1",
+  "date": "2026-09-04",
+  "extract_to": "D:\\BreshevEngineering\\marvilon-k01",
+  "files": [
+    {
+      "path": "00_INSTALL_MEDTAS_v3.md",
+      "bytes": 454,
+      "sha256": "0d3c18764a57e80441cf14a5959d1c26d7974605ad29567525a95267a8d87ba3"
+    },
+    {
+      "path": "bom/spec/K01_AUTOMATED_BOM_SPEC_v1.md",
+      "bytes": 474,
+      "sha256": "9b220917dfeff7a5bb9ccfcec3c98738883dede07b90e33f0c11e84edabbb23f"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/00_GATE04D_C2_BUILD_AND_VERIFY.cmd",
+      "bytes": 787,
+      "sha256": "572221db20f79baf13baa3d8994c9d946e37b41ff6f3c6ced7e31635f804a485"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/01_GATE04D_C2_BUILD_ONLY.cmd",
+      "bytes": 2823,
+      "sha256": "71d228286a57a5412fd7c4c6506600e1a3733ec583eba3d54284d796d8977170"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/02_GATE04D_C2_VERIFY_ONLY.cmd",
+      "bytes": 1775,
+      "sha256": "58132342e5f8ca0a0ded4b28f3ae4f122123e65417d8bc90fd0dee85fa93da6f"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/K01Gate04D_C2_Build.cs",
+      "bytes": 36891,
+      "sha256": "a181928d083d9fe96b0369d74c8dd2a907a235472ff1c5573bd8b60291c645fb"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/K01Gate04D_C2_Verify.cs",
+      "bytes": 19401,
+      "sha256": "6ea51b66d45319f0893ec8f427771cb0ba76fedf64dbc40e99f6d8340b836720"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/K01_GATE04D_C2_DESIGN_INPUT_v1.json",
+      "bytes": 1180,
+      "sha256": "1c1ac3af1a019f6eec1b021b49f937244e055242f101331831b97cf9739e0053"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/K01_GATE04D_C2_PARAMS_v1.json",
+      "bytes": 1977,
+      "sha256": "22e167a32804d741a1cddcda9ad796ed7158005bddbdce6298ef0f64c5b3321f"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/README_GATE04D_C2.md",
+      "bytes": 949,
+      "sha256": "d88748921962410dbfd133a91e0a7c567662787304b1f9cbf7f0864f49345813"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/STATIC_AUDIT_GATE04D_C2_v1.json",
+      "bytes": 449,
+      "sha256": "10eef0f464510fb726190baee19b13778e3d77a7a6c851a19b0f97522f6658a6"
+    },
+    {
+      "path": "control/command_center/K01_Command_Center_v3.html",
+      "bytes": 24086,
+      "sha256": "59ae823b71ec7eb8e66784fa5d893a211661f91f8af5966735dee19fbe6c5025"
+    },
+    {
+      "path": "control/command_center/OPEN_K01_COMMAND_CENTER_V3.cmd",
+      "bytes": 587,
+      "sha256": "cac6cedded9ee012396cdace78c3bd834b755388ebbeb2d3f832186e054c0807"
+    },
+    {
+      "path": "control/command_center/cc_server.ps1",
+      "bytes": 5262,
+      "sha256": "5a2e73d21ed5506219f085abe519f8eb7cb2d092e5e26f00894d3ba2738578e6"
+    },
+    {
+      "path": "control/command_center/data/K01_FILE_REGISTRY_v2.json",
+      "bytes": 2260,
+      "sha256": "83cc63dd1a0f015fe307fe792b8d7fd0a77ad2c8264e0b10c87338d92a2de554"
+    },
+    {
+      "path": "control/command_center/data/K01_MACHINE_PROFILES_v2.json",
+      "bytes": 459,
+      "sha256": "d43d39a788ece35cedcf2c28d24b9dd4a1f0e99c5ad297452e0e0914c3e0ab8f"
+    },
+    {
+      "path": "control/configuration_items/CI-J2_DOSSIER_v1.json",
+      "bytes": 3390,
+      "sha256": "a95c3ef0381dab4f11ce8649107e0537f5b9f47be5b3b8529b51a91c75a772eb"
+    },
+    {
+      "path": "control/configuration_items/K01_CID_TEMPLATE_v1.json",
+      "bytes": 604,
+      "sha256": "9d973d36f5f4d3fbccae04fafcd4899a2edcdb9d101332f4baba309d959bb277"
+    },
+    {
+      "path": "control/decision_system/K01_DECISION_REGISTER_v2.csv",
+      "bytes": 3058,
+      "sha256": "27093e6be9aefd5368bfb7ea3fb9291a6386d9dd3b70e16fa27eaa8f6e76adf5"
+    },
+    {
+      "path": "control/decision_system/K01_ENGINEERING_DECISION_STANDARD_EDS001_v2.md",
+      "bytes": 3619,
+      "sha256": "2d1831c87cc1931af2663929e6ac177ceaa8114a1f5f948a0246799894eaa070"
+    },
+    {
+      "path": "control/evidence/K01_ERR_TEMPLATE_v1.json",
+      "bytes": 470,
+      "sha256": "82da73d1eea875ebcf235d35f4c7b8c70596ab886cf6f6c5c1f1038a85ddd1fd"
+    },
+    {
+      "path": "control/evidence/K01_SOURCE_REGISTRY_v1.json",
+      "bytes": 6079,
+      "sha256": "bd1e356f5eb929b22d7e0e9b83e5630b2b1146a31b90aacfae83d25718827b07"
+    },
+    {
+      "path": "control/system/K01_HUMAN_ERROR_CONTROL_POLICY_HEC001_v1.md",
+      "bytes": 1794,
+      "sha256": "e7879e7c0fe97b7f2c0e5551e36e2476c5c64262169abce7d58a09aa8dbd13a7"
+    },
+    {
+      "path": "control/system/MEDTAS_SYSTEM_OVERVIEW_v3.md",
+      "bytes": 2203,
+      "sha256": "12cc4941c66c053b2b4e97b6a7f0af304cd5cda7255096558603efa724957c0f"
+    },
+    {
+      "path": "docs/design/trade_studies/K01_J2_COMPACT_TRADE_STUDY_v2.json",
+      "bytes": 2421,
+      "sha256": "3d3d4abd719a95f79db238182e28171438e84a20df30647017c096bd2c756c35"
+    },
+    {
+      "path": "docs/design/trade_studies/K01_J2_COMPACT_TRADE_STUDY_v2.md",
+      "bytes": 2410,
+      "sha256": "0f41f7a0a22c5260b304e3383d19f46b579e100aae76e2d0f2fb81df63e8317f"
+    },
+    {
+      "path": "docs/technology/K01_TECHNOLOGY_SYSTEM_v2.md",
+      "bytes": 604,
+      "sha256": "7bfb5b912550da87e90514a7cff3bb03ae17f1e79ce04949e56f42177fd832e1"
+    },
+    {
+      "path": "reports/ai/current/K01_AI_ENGINEERING_CONTEXT_CURRENT.md",
+      "bytes": 817,
+      "sha256": "f3a1396c74f0a0c7d37470159c57da11bf87d2e8674c23daa44f05f9a7b51aec"
+    }
+  ]
+}

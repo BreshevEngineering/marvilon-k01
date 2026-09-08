@@ -1,0 +1,67 @@
+{
+  "hash_policy": "normalized STEP hash strips volatile header and is artifact-stability evidence only; native CAD semantic state remains geometry authority",
+  "limitations": [],
+  "parts": [
+    {
+      "assembly_instances": [
+        {
+          "instance": "K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE-1",
+          "transform": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0.000573782814154",
+            "0.0199034636365",
+            "0.0306899225417",
+            "1",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "part_no": "K01-P-003",
+      "step_binary_sha256_diagnostic": "653d6e3a8edce756c48c7d6e5ef810116e5a35176b1b2f9d859a6afc8ec0fdf6",
+      "step_normalized_sha256": "65090aec422c03a380499ec48c1ac999e4b0f09f872268624589e1d2ca1a8cac",
+      "step_path": "reports/medtas/structural/current/neutral_geometry_p006/K01-P-003.STEP"
+    },
+    {
+      "assembly_instances": [
+        {
+          "instance": "K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE-1",
+          "transform": [
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0",
+            "0",
+            "0",
+            "1",
+            "0.032808245431",
+            "0.0199034636365",
+            "0.0306899225417",
+            "1",
+            "0",
+            "0",
+            "0"
+          ]
+        }
+      ],
+      "part_no": "K01-P-007",
+      "step_binary_sha256_diagnostic": "0594949ca6ffdab9f250a80cacac1f175973e7c7a9b4182f17db6155c875e5fa",
+      "step_normalized_sha256": "030e08e6618869c3ae0d9e2a2d966cf6f2e8706cb5338f86d54b068fa0f325bf",
+      "step_path": "reports/medtas/structural/current/neutral_geometry_p006/K01-P-007.STEP"
+    }
+  ],
+  "schema": "k01.structural_neutral_geometry.p006.v1_6",
+  "source": "native SOLIDWORKS part documents from current CAD semantic raw snapshot",
+  "status": "PASS"
+}

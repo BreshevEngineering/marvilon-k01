@@ -1,0 +1,23 @@
+{
+  "schema": "k01_sw_review_export_assembly_manifest_2",
+  "assembly": {
+    "title": "K01-A-001_Calibration_Module.SLDASM",
+    "native_path": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM"
+  },
+  "part_snapshots": [
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-002_Guide_Bushing.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-003_Cartridge_Body.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-001_Calibration_Rod.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-007_Hermetic_Magnetic_Can.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-016_Long_Run_Interface_Boss.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-004_Front_Guide_Bushing.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-006_Retaining_Plug.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-014_Front_Guide_Retaining_Ring.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-015_Dual_Coil_Bobbin.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-013_Follower_End_Cap.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-008_Internal_Magnetic_Follower.json",
+    "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01-P-009_Rear_Stop_Washer.json"
+  ],
+  "warnings": []
+}

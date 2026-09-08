@@ -1,0 +1,370 @@
+{
+  "blocking_items": [
+    "K01-CHAR-A001-ROD-TRAVEL",
+    "K01-CHAR-P003-SEAT-ID",
+    "K01-D003-DATUM-A",
+    "K01-D003-DATUM-B",
+    "K01-D003-FASTENER-PATTERN",
+    "K01-D003-PILOT",
+    "K01-D005-BORE",
+    "K01-D005-SERVICE-DRIVE",
+    "K01-D005-THREAD",
+    "K01-D006-BLIND-END",
+    "K01-D006-CONCENTRICITY",
+    "K01-D006-LOCATOR",
+    "K01-D006-THIN-WALL",
+    "K01-D006-WELD",
+    "K01-D012-IN-OUT",
+    "K01-D012-LONG-RUN",
+    "K01-D012-OPTICAL-DATUM"
+  ],
+  "drawings": [
+    {
+      "blocking_items": [
+        "K01-D003-DATUM-A",
+        "K01-D003-DATUM-B",
+        "K01-D003-PILOT",
+        "K01-D003-FASTENER-PATTERN",
+        "K01-CHAR-P003-SEAT-ID"
+      ],
+      "characteristics": [
+        {
+          "authority": "material_state",
+          "definition_state": "DERIVED_NON_DIMENSIONAL",
+          "drawing_release_authority": "READY",
+          "evidence": {},
+          "id": "K01-D003-MAT",
+          "role": "material",
+          "source": "material_state",
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "native_datum",
+          "definition_state": "VERIFIED_NATIVE_DATUM",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {
+            "datum_name": "K01_DATUM_A_MATING",
+            "document": "K01-P-003",
+            "present": true
+          },
+          "id": "K01-D003-DATUM-A",
+          "role": "mating-face datum A",
+          "source": "cad_semantic.datums",
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "native_datum",
+          "definition_state": "VERIFIED_NATIVE_DATUM",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {
+            "datum_name": "K01_DATUM_B_AXIS",
+            "document": "K01-P-003",
+            "present": true
+          },
+          "id": "K01-D003-DATUM-B",
+          "role": "functional axis datum B",
+          "source": "cad_semantic.datums",
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "interface_parameter+native_geometry",
+          "definition_state": "CONTROLLED_PARAMETER_VERIFIED",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {
+            "cad_model_present": true,
+            "controlled_parameters": {
+              "pilot_fit": "H7/g6",
+              "pilot_nominal_diameter_mm": 14.1
+            }
+          },
+          "id": "K01-D003-PILOT",
+          "role": "J2 locating pilot/locator characteristic",
+          "source": "controlled_parameter+cad_presence",
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "interface_parameter+native_geometry",
+          "definition_state": "CONTROLLED_PARAMETER_VERIFIED",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {
+            "cad_model_present": true,
+            "controlled_parameters": {
+              "fastener_count": 3,
+              "fastener_pcd_mm": 26.5,
+              "fastener_thread": "M2.5"
+            }
+          },
+          "id": "K01-D003-FASTENER-PATTERN",
+          "role": "three-hole M2.5 clamp pattern",
+          "source": "controlled_parameter+cad_presence",
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "tolerance_chain",
+          "definition_state": "OPEN_TOLERANCE_SPEC",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {
+            "candidate_status": "GEOMETRY_CANDIDATE_UNIQUE",
+            "candidates": [
+              {
+                "area_m2": "0.00016587609211",
+                "body": "K01_F_J2_C2R1_PILOT_D14p10_ID12p00_g6_L1p50",
+                "delta_mm": 0.0,
+                "diameter_mm": 6.6,
+                "face_signature": "9d3852d93167ce950b3487b292dc45edf8c173ab29b12a364ed7304fcc787322",
+                "method": "CYLINDRICAL_FACE_GEOMETRY"
+              }
+            ]
+          },
+          "id": "K01-CHAR-P003-SEAT-ID",
+          "role": "P004 guide seat ID",
+          "source": "cad_semantic.face_geometry+tolerance_seed",
+          "tolerance_release_state": "OPEN"
+        }
+      ],
+      "drawing_no": "K01-D-003",
+      "model": "K01-P-003",
+      "status": "BLOCKED_PRODUCT_DEFINITION",
+      "title": "Cartridge Body"
+    },
+    {
+      "blocking_items": [
+        "K01-D005-THREAD",
+        "K01-D005-BORE",
+        "K01-D005-SERVICE-DRIVE"
+      ],
+      "characteristics": [
+        {
+          "authority": "material_state",
+          "definition_state": "DERIVED_NON_DIMENSIONAL",
+          "drawing_release_authority": "READY",
+          "evidence": {},
+          "id": "K01-D005-MAT",
+          "role": "material",
+          "source": "material_state",
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "native_geometry",
+          "definition_state": "SEMANTIC_BIND_REQUIRED",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {},
+          "id": "K01-D005-THREAD",
+          "role": "retaining thread interface",
+          "source": null,
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "native_geometry",
+          "definition_state": "SEMANTIC_BIND_REQUIRED",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {},
+          "id": "K01-D005-BORE",
+          "role": "functional bore",
+          "source": null,
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "native_geometry+service_requirement",
+          "definition_state": "SEMANTIC_BIND_REQUIRED",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {},
+          "id": "K01-D005-SERVICE-DRIVE",
+          "role": "service-drive geometry",
+          "source": null,
+          "tolerance_release_state": null
+        }
+      ],
+      "drawing_no": "K01-D-005",
+      "model": "K01-P-006",
+      "status": "BLOCKED_PRODUCT_DEFINITION",
+      "title": "Retaining Plug"
+    },
+    {
+      "blocking_items": [
+        "K01-D006-LOCATOR",
+        "K01-D006-THIN-WALL",
+        "K01-D006-WELD",
+        "K01-D006-BLIND-END",
+        "K01-D006-CONCENTRICITY"
+      ],
+      "characteristics": [
+        {
+          "authority": "material_state",
+          "definition_state": "DERIVED_NON_DIMENSIONAL",
+          "drawing_release_authority": "READY",
+          "evidence": {},
+          "id": "K01-D006-MAT",
+          "role": "material",
+          "source": "material_state",
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "interface_parameter+native_geometry",
+          "definition_state": "CONTROLLED_PARAMETER_VERIFIED",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {
+            "cad_model_present": true,
+            "controlled_parameters": {
+              "pilot_fit": "H7/g6",
+              "pilot_nominal_diameter_mm": 14.1
+            }
+          },
+          "id": "K01-D006-LOCATOR",
+          "role": "J2 mating locator characteristic",
+          "source": "controlled_parameter+cad_presence",
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "native_geometry+pressure_requirement",
+          "definition_state": "SEMANTIC_BIND_REQUIRED",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {},
+          "id": "K01-D006-THIN-WALL",
+          "role": "containment thin-wall zone",
+          "source": null,
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "process_definition",
+          "definition_state": "OPEN_SPEC",
+          "drawing_release_authority": "OPEN_SPEC",
+          "evidence": {},
+          "id": "K01-D006-WELD",
+          "role": "weld/containment interface",
+          "source": "process_definition",
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "native_geometry",
+          "definition_state": "SEMANTIC_BIND_REQUIRED",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {},
+          "id": "K01-D006-BLIND-END",
+          "role": "blind end geometry",
+          "source": null,
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "functional_datum_scheme",
+          "definition_state": "OPEN_SPEC",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {},
+          "id": "K01-D006-CONCENTRICITY",
+          "role": "critical concentricity/coaxiality control",
+          "source": "functional_datum_scheme",
+          "tolerance_release_state": null
+        }
+      ],
+      "drawing_no": "K01-D-006",
+      "model": "K01-P-007",
+      "status": "BLOCKED_PRODUCT_DEFINITION",
+      "title": "Hermetic Magnetic Can"
+    },
+    {
+      "blocking_items": [
+        "K01-D012-IN-OUT",
+        "K01-D012-OPTICAL-DATUM",
+        "K01-CHAR-A001-ROD-TRAVEL",
+        "K01-D012-LONG-RUN"
+      ],
+      "characteristics": [
+        {
+          "authority": "assembly_semantics",
+          "definition_state": "SEMANTIC_BIND_REQUIRED",
+          "drawing_release_authority": "SEMANTIC_BIND_REQUIRED",
+          "evidence": {},
+          "id": "K01-D012-IN-OUT",
+          "role": "IN/OUT functional states",
+          "source": null,
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "requirement+assembly_semantics",
+          "definition_state": "OPEN_SPEC",
+          "drawing_release_authority": "OPEN_SPEC",
+          "evidence": {},
+          "id": "K01-D012-OPTICAL-DATUM",
+          "role": "optical functional datum",
+          "source": "requirement+assembly_semantics",
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "assembly_hard_stops",
+          "definition_state": "SEMANTIC_BIND_REQUIRED",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {
+            "candidate_status": "MANUAL_SEMANTIC_BIND_REQUIRED",
+            "candidates": []
+          },
+          "id": "K01-CHAR-A001-ROD-TRAVEL",
+          "role": "functional rod travel",
+          "source": null,
+          "tolerance_release_state": "OPEN"
+        },
+        {
+          "authority": "canonical_bom",
+          "definition_state": "DERIVED_NON_DIMENSIONAL",
+          "drawing_release_authority": "READY",
+          "evidence": {},
+          "id": "K01-D012-BOM",
+          "role": "assembly BOM",
+          "source": "canonical_bom",
+          "tolerance_release_state": null
+        },
+        {
+          "authority": "native_geometry+interface_requirement",
+          "definition_state": "SEMANTIC_BIND_REQUIRED",
+          "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+          "evidence": {},
+          "id": "K01-D012-LONG-RUN",
+          "role": "Long Run interface",
+          "source": null,
+          "tolerance_release_state": null
+        }
+      ],
+      "drawing_no": "K01-D-012",
+      "model": "K01-A-001",
+      "status": "BLOCKED_PRODUCT_DEFINITION",
+      "title": "Calibration Module Assembly"
+    }
+  ],
+  "generation_binding": {
+    "annotation_policy": "MBD_ONLY_REVIEWED_CHARACTERISTICS",
+    "auto_dimension": false,
+    "native_format": "SLDDRW",
+    "output_root": "drawings/release_candidate/gate04e",
+    "release_format": "PDF",
+    "schema": "k01.drawing_generation_binding.v1_7",
+    "status": "TEMPLATE_BOUND_MBD_PENDING",
+    "template_binding_authority": "unique discovered template; review before production release",
+    "template_path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\data\\templates\\iso.drwdot",
+    "views": [
+      "Front",
+      "Right",
+      "Isometric"
+    ]
+  },
+  "native_artifact_status": "NOT_GENERATED",
+  "policy": "Drawing skeleton/views may be generated by API, but any dimensional/GD&T/tolerance content released on a drawing must originate from model PMI/MBD. AutoDimension and independent hand-typed duplicate tolerances are prohibited.",
+  "priority_exemplar": {
+    "blocking_items": [
+      "C01",
+      "C02",
+      "C03",
+      "C04",
+      "C05",
+      "C06",
+      "C07",
+      "C08",
+      "C10",
+      "C11",
+      "C12"
+    ],
+    "drawing_no": "K01-D-006",
+    "status": "HOLD"
+  },
+  "ready_drawings": [],
+  "schema": "k01.drawing_release_plan.gate04e.v1_9",
+  "verdict": "HOLD"
+}

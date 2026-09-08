@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MARVILON MEDTAS · K01</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+<header><h1>MARVILON MEDTAS · K01</h1><small>Requirements → Decisions → CAD → Evidence → Product Definition → Verification → Release</small></header>
+<div class="nav">
+<button data-page="overview" class="active">Overview</button>
+<button data-page="requirements">Requirements</button>
+<button data-page="filter">Technical Filter</button>
+<button data-page="product">Product Definition</button>
+<button data-page="files">Files & Git</button>
+</div>
+<div id="error"></div>
+
+<section id="overview" class="page active">
+<div class="notice"><b>Purpose:</b> show only what blocks the next engineering decision. Detailed work-package history remains accessible through Files, not as a primary navigation layer.</div>
+<div class="grid" id="overviewMetrics"></div>
+<h2>Next engineering actions</h2><div id="engineeringActions" class="card"></div><div class="split" style="margin-top:12px"><div><h2>SOLIDWORKS live</h2><div id="solidworksPanel" class="card"></div></div><div><h2>AI / evidence handoff</h2><div id="handoffPanel" class="card"></div></div></div><h2>Current blockers</h2><div id="overviewBlockers" class="list"></div>
+<h2>Provenance</h2><div id="provenanceSummary" class="card"></div>
+</section>
+
+<section id="requirements" class="page">
+<div class="notice">Requirements are first-class controlled objects. An OPEN requirement blocks every linked release gate.</div>
+<div class="grid" id="reqMetrics"></div>
+<div class="toolbar"><button class="active" data-rq="ALL">All</button><button data-rq="BLOCKER">Blockers</button><button data-rq="RELEASED">Released</button></div>
+<div id="requirementsTable"></div>
+</section>
+
+<section id="filter" class="page">
+<div class="notice">Gate status is calculated by the reducer. The browser does not decide PASS/HOLD. Requirement gaps and stale hash-bound evidence override nominal gate status.</div>
+<div class="toolbar"><button class="active" data-gate="ALL">All</button><button data-gate="BLOCKER">Blockers</button><button data-gate="PASS">Pass</button></div>
+<div id="filterList" class="list"></div>
+</section>
+
+<section id="product" class="page">
+<div class="split">
+<div><h2>BOM / Configuration</h2><div id="bomPanel" class="card"></div></div>
+<div><h2>Drawing / TPD</h2><div id="drawingPanel" class="card"></div></div>
+</div>
+</section>
+
+<section id="files" class="page">
+<div class="split">
+<div><h2>Artifacts</h2><div id="filesPanel"></div></div>
+<div><h2>Git / GitHub</h2><div id="gitPanel" class="card"></div></div>
+</div>
+</section>
+<script src="/app.js"></script>
+</body></html>

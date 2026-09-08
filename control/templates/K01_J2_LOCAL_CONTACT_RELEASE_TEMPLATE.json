@@ -1,0 +1,11 @@
+{
+  "schema": "k01_j2_local_contact_release_v1",
+  "status": "OPEN",
+  "preload_N_per_screw": 300,
+  "load_case": "max release preload + seal + pressure",
+  "P007_max_von_mises_MPa": "OPEN",
+  "P003_max_von_mises_MPa": "OPEN",
+  "contact_opening": "OPEN",
+  "criterion": "no functional separation; structural SF >=2 where applicable",
+  "evidence_files": []
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "k01_workpackage_v1",
+  "task_id": "T06",
+  "title": "Thermal preload + galling + service cycles",
+  "status": "ARCHITECTURE_DEFINED / QUALIFICATION_OPEN",
+  "thermal_screen": {
+    "metal_pair": "A4 stainless fastener / 316L P003+P007",
+    "study_delta_alpha_per_K": 1.5e-06,
+    "deltaT_K": 100,
+    "grip_mm": 3.0,
+    "free_differential_extension_mm": 0.00045,
+    "simple_screw_stiffness_N_per_mm": 109071.0,
+    "upper_bound_preload_shift_if_joint_rigid_N": 49.1,
+    "interpretation": "metal CTE mismatch is secondary but not zero; real joint stiffness reduces this simple upper bound. Elastomer force/compression set remains the more uncertain temperature effect."
+  },
+  "galling_strategy": {
+    "rule": "dry stainless-on-stainless torque-controlled assembly is not release baseline",
+    "preferred_process": "controlled qualified lubricant/finish on external J2 M2.5 screw threads and under-head bearing surface; contamination compatibility reviewed because this is an instrument",
+    "qualification": "same cleaning, finish/lubricant and bearing treatment used in torque-preload calibration and production",
+    "source_basis": "NASA fastener guidance documents galling/scatter risk and recommends specified lubrication where possible"
+  },
+  "locking_strategy": {
+    "status": "OPEN",
+    "candidates": [
+      "preload-only with service witness mark if vibration qualification passes",
+      "qualified removable thread-locking compound if compatible",
+      "mechanical locking only if it does not compromise service/space"
+    ],
+    "reject": "unqualified liquid threadlocker or random anti-seize because it changes nut factor and service chemistry"
+  },
+  "service_qualification": {
+    "provisional_cycles": 50,
+    "status": "PROVISIONAL_REQUIREMENT",
+    "cycle": "disassemble → inspect → clean/process → new O-ring → reassemble → verify preload method → leak/functional check",
+    "acceptance": [
+      "no thread damage/galling",
+      "no hole/driver deformation",
+      "no loss of dimensional fit",
+      "repeatable assembly without rework"
+    ],
+    "note": "50 cycles is a conservative project qualification target until product service-life/maintenance-cycle requirement is formally frozen."
+  },
+  "open_actions": [
+    "freeze J2 local temperature envelope",
+    "choose exact screw finish/lubricant",
+    "torque-preload test exact screw/finish",
+    "approve service-cycle count and run qualification"
+  ]
+}

@@ -1,0 +1,18 @@
+﻿PartNo,Description,Qty,Material / specification,MakeBuy,DesignStatus,Design action remaining,Production release later
+K01-P-001,Calibration Rod,1,EN 1.4404 / AISI 316L,MAKE,BASELINE,Optical/anti-rotation release definition,Repeatability
+K01-P-002,Rear Guide / Anti-Rotation Bushing,1,TECAPEEK PVX black baseline,MAKE/BUY,BASELINE,Vendor grade property freeze,Wear/breakaway
+K01-P-003,Cartridge Body,1,EN 1.4404 / AISI 316L,MAKE,DESIGN FROZEN,Promote Gate03G to stable production filename,Manufacturing inspection
+K01-P-004,Front Guide Bushing,1,TECAPEEK PVX black baseline,MAKE/BUY,BASELINE,Vendor grade property freeze,Wear/breakaway
+K01-P-005,RETIRED NUMBER,0,—,—,RETIRED,None,Do not reuse
+K01-P-006,Retaining Plug,1,EN 1.4404 / AISI 316L,MAKE,BASELINE,None,Inspection
+K01-P-007,Hermetic Magnetic Can,1,EN 1.4404 / AISI 316L,MAKE,DESIGN FROZEN / STATIC+BUCKLING PASS,Promote Gate03H to stable production filename,WPS + helium leak
+K01-P-008,Internal Magnetic Follower,1,EN 1.4404 / AISI 316L,MAKE,BASELINE,Keep Ø8.10; freeze H9 fit and B001 acceptance spec,Incoming B001 check
+K01-P-009,Rear Stop Washer / OUT Stop,1,EN 1.4404 / AISI 316L,MAKE,BASELINE,Correct SW material metadata,Inspection
+K01-P-013,Follower End Cap,1,EN 1.4404 / AISI 316L,MAKE,BASELINE,Correct SW material metadata,Bond qualification
+K01-P-014,Front Guide Retaining Ring / IN Stop,1,EN 1.4310 / AISI 301 spring stainless candidate,MAKE/BUY,OPEN DESIGN DECISION,Freeze spring temper/material,Endurance
+K01-P-015,Dual Coil Bobbin,1,Production PPS specification OPEN,MAKE,OPEN DESIGN DECISION,"Freeze PPS grade, winding/lead spec",Thermal/insulation test
+K01-P-016,Long Run Interface Boss,1,EN 1.4404 assigned; Long Run compatibility OPEN,MAKE,A+B GEOMETRY PASS,Freeze Datum C + installation/inspection,Post-install axis inspection
+K01-B-001,Internal SmCo Magnet,1,Sm2Co17/S280 equivalent; Ø8×8 axial; Br≥1.00T screen,BUY,DESIGN SPEC / PROCUREMENT DEFERRED,Functional diameter acceptance Ø8 h9 or incoming sorting,CoC + incoming D/L/Br
+K01-B-007,Magnet Wire,2,Enameled Cu Ø0.20 mm baseline,BUY,BASELINE,Freeze insulation temp class,Supplier verification
+K01-B-008,Current Driver,1,24V bipolar regulated pulse ≥1.25A,BUY,FUNCTIONAL SPEC,Exact PN supplier-open,Electrical/EMC
+K01-B-009,Lead/Connector,1,Electrical spec OPEN,BUY,OPEN DESIGN DECISION,Freeze connector/temp class,Supplier verification

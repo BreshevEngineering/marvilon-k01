@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "k01.drawing_definition.schema.json",
+  "type": "object",
+  "required": [
+    "schema",
+    "drawing_id",
+    "part_id",
+    "status",
+    "model",
+    "views",
+    "characteristics"
+  ],
+  "properties": {
+    "schema": {
+      "const": "k01.drawing_definition.v1"
+    },
+    "drawing_id": {
+      "type": "string"
+    },
+    "part_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "DRAFT",
+        "REVIEW",
+        "RELEASE_READY",
+        "RELEASED",
+        "REJECTED"
+      ]
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "authority",
+        "path_ref"
+      ]
+    },
+    "views": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "purpose"
+        ]
+      }
+    },
+    "characteristics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "purpose",
+          "source_ref",
+          "annotation_type",
+          "view",
+          "inspection_method",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "purpose": {
+            "type": "string"
+          },
+          "source_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "annotation_type": {
+            "enum": [
+              "MODEL_DIMENSION",
+              "FIT",
+              "HOLE_CALLOUT",
+              "THREAD_CALLOUT",
+              "DATUM",
+              "GD&T",
+              "SURFACE_FINISH",
+              "NOTE",
+              "MATERIAL",
+              "PROCESS"
+            ]
+          },
+          "view": {
+            "type": "string"
+          },
+          "inspection_method": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "RELEASED",
+              "OPEN",
+              "CANDIDATE"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

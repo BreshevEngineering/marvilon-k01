@@ -1,0 +1,449 @@
+{
+  "schema": "k01_technical_decision_filter_instance_v1",
+  "item_id": "CI-J2",
+  "revision": "C2R1-PR1",
+  "design_authority": "SOLIDWORKS native C2R1 candidate + controlled work packages",
+  "material_state": "P003/P007 316L controlled; P006 production material OPEN; FKM 75A is the preferred bounded-BOF seal candidate with FFKM fallback; exact seal and fastener supplier products remain qualification items.",
+  "requirements": [
+    "removable service boundary",
+    "static gas seal",
+    "P007 L35",
+    "no new interference",
+    "manufacturable compact flange"
+  ],
+  "interfaces": [
+    "P003↔P007 J2",
+    "P003↔P006 service access",
+    "P007↔P015 magnetic envelope"
+  ],
+  "assumptions": [
+    "local J2 metal temperature envelope not yet measured/frozen",
+    "50 service cycles is provisional qualification target",
+    "exact FKM/FFKM supplier compound must be approved against the bounded actual media/temperature envelope"
+  ],
+  "sources": [
+    "K01_SOURCE_REGISTRY_v2",
+    "Manual of Engineering Drawing",
+    "Mechanical Tolerance Stackup and Analysis"
+  ],
+  "change_impact": "C2R1 nominal CAD geometry remains frozen; v8 changes release specifications/tolerances/service feature/process controls, not the proven OD33 package.",
+  "verification_evidence": [
+    "R1-BUILD",
+    "R1-VERIFY",
+    "R1-INT",
+    "WP-T03",
+    "WP-T04",
+    "WP-T05",
+    "WP-T06"
+  ],
+  "gates": [
+    {
+      "gate": "functional_requirement",
+      "status": "PASS",
+      "question": "Does J2 remain removable and sealed?",
+      "basis": "C2R1 retains a removable static-sealed P003↔P007 interface.",
+      "source_ids": [
+        "EDR-001",
+        "CI-J2"
+      ],
+      "verification_method": "design review",
+      "evidence_ids": [
+        "R1-BUILD",
+        "R1-VERIFY"
+      ],
+      "open_actions": []
+    },
+    {
+      "gate": "architecture_integrity",
+      "status": "PASS",
+      "question": "Are locating, clamping and sealing functions separated?",
+      "basis": "Pilot locates radially, metal faces axially, one hole clocks, 3 screws clamp, O-ring seals.",
+      "source_ids": [
+        "EDR-005"
+      ],
+      "verification_method": "CAD/assembly review",
+      "evidence_ids": [
+        "R1-VERIFY"
+      ],
+      "open_actions": []
+    },
+    {
+      "gate": "interfaces_datums",
+      "status": "PASS",
+      "question": "Is the datum architecture deterministic without overconstraint?",
+      "basis": "Ø14.10 H7/g6 and mating face are verified; one clamp-hole axis is used only for clocking.",
+      "source_ids": [
+        "CI-J2"
+      ],
+      "verification_method": "native assembly verify",
+      "evidence_ids": [
+        "R1-VERIFY"
+      ],
+      "open_actions": []
+    },
+    {
+      "gate": "load_cases",
+      "status": "PASS_WITH_LIMIT",
+      "question": "Are governing load cases bounded?",
+      "basis": "Pressure reaction is only 3.1225 N; seal compression and service preload govern the clamp design.",
+      "source_ids": [
+        "SRC-K01-MOSS-001",
+        "SRC-SEAL-TRELLEBORG-001"
+      ],
+      "verification_method": "analytical + supplier qualification",
+      "evidence_ids": [
+        "MECH-SCREEN",
+        "WP-T04",
+        "WP-T05"
+      ],
+      "open_actions": [
+        "seal compression-force qualification"
+      ]
+    },
+    {
+      "gate": "static_strength_contact",
+      "status": "PASS_WITH_LIMIT",
+      "question": "Do M2.5 threads/flange pass the current bounded preload envelope?",
+      "basis": "For 200–300 N/screw candidate preload, thread strip SF is ≥3.10 at 300 N/screw; conservative local strip-bending screen is ≈135.6 MPa at 300 N/screw vs 170 MPa 316L screening yield.",
+      "source_ids": [
+        "SRC-FASTENER-VDI2230-001",
+        "SRC-FASTENER-ISO3506-1-001"
+      ],
+      "verification_method": "analytical screen + local FEA",
+      "evidence_ids": [
+        "WP-T05"
+      ],
+      "open_actions": [
+        "T07 structural refresh / local contact confirmation"
+      ]
+    },
+    {
+      "gate": "buckling_stability",
+      "status": "STALE",
+      "question": "Does P007 retain buckling margin after final J2 freeze?",
+      "basis": "Historical λ1=1883.6 is strong but must be refreshed on final geometry.",
+      "source_ids": [
+        "SRC-K01-MOSS-001"
+      ],
+      "verification_method": "SOLIDWORKS Simulation eigen-buckling",
+      "evidence_ids": [
+        "P007-BUCKLING-HISTORY"
+      ],
+      "open_actions": [
+        "run T07"
+      ]
+    },
+    {
+      "gate": "torsion_rotational",
+      "status": "PASS_WITH_LIMIT",
+      "question": "Can service torque be reacted without damaging P006/J2?",
+      "basis": "Two-pin P006 face-drive candidate has low nominal pin stresses at 0.5 N·m structural tool capacity; actual P006 seating torque remains process-controlled.",
+      "source_ids": [
+        "SRC-FASTENER-VDI2230-001"
+      ],
+      "verification_method": "analytic tool feature screen + service trial",
+      "evidence_ids": [
+        "WP-T03"
+      ],
+      "open_actions": [
+        "qualify service torque"
+      ]
+    },
+    {
+      "gate": "fatigue_cyclic",
+      "status": "HOLD",
+      "question": "Is repeated service life demonstrated?",
+      "basis": "A provisional 50-cycle qualification is defined; test evidence does not yet exist.",
+      "source_ids": [
+        "HEC-001"
+      ],
+      "verification_method": "50-cycle disassembly/assembly qualification",
+      "evidence_ids": [
+        "WP-T06"
+      ],
+      "open_actions": [
+        "run service-cycle test"
+      ]
+    },
+    {
+      "gate": "thermal",
+      "status": "PASS_WITH_LIMIT",
+      "question": "Is thermally induced preload bounded?",
+      "basis": "A4 stainless and 316L have closely matched expansion; a conservative Δα study still gives only tens of newtons per screw over 100 K, but seal force/compression set is temperature dependent.",
+      "source_ids": [
+        "SRC-FASTENER-ISO3506-1-001"
+      ],
+      "verification_method": "thermal preload analysis + hot torque/retention check",
+      "evidence_ids": [
+        "WP-T06"
+      ],
+      "open_actions": [
+        "freeze J2 local temperature envelope",
+        "hot seal-force qualification"
+      ]
+    },
+    {
+      "gate": "dynamics_vibration",
+      "status": "HOLD",
+      "question": "Is loosening under vibration explicitly disposed?",
+      "basis": "No released locking method yet.",
+      "source_ids": [
+        "SRC-FASTENER-VDI2230-001"
+      ],
+      "verification_method": "bench vibration/retention or justified N/A",
+      "evidence_ids": [
+        "WP-T06"
+      ],
+      "open_actions": [
+        "select and qualify locking strategy"
+      ]
+    },
+    {
+      "gate": "pressure_vacuum_sealing",
+      "status": "HOLD",
+      "question": "Is gland geometry robust and is material qualified?",
+      "basis": "16×1.5 gland geometry is bounded, but the exact J2-local temperature and released process-media envelope are not yet fully bounded. FKM 75A is the preferred BOF production candidate; FFKM is a controlled fallback. Exact compound, compression force and leak acceptance remain release evidence.",
+      "source_ids": [
+        "SRC-SEAL-PARKER-001",
+        "SRC-SEAL-TRELLEBORG-001",
+        "SRC-K01-PFEIFFER-ELASTOMER-001"
+      ],
+      "verification_method": "media/temperature qualification + tolerance stack + supplier compound evidence + compression-force/leak test",
+      "evidence_ids": [
+        "WP-T04",
+        "MEDIA-T04"
+      ],
+      "open_actions": [
+        "freeze J2-local temperature",
+        "freeze released media envelope",
+        "select exact FKM/FFKM supplier compound",
+        "compression-force qualification",
+        "leak acceptance/test"
+      ]
+    },
+    {
+      "gate": "fluid_cfd",
+      "status": "PASS",
+      "question": "Does the compact flange alter controlled sample-flow geometry?",
+      "basis": "External J2 flange package does not change the controlled sample-flow/rod wetted geometry.",
+      "source_ids": [
+        "K01 CFD evidence"
+      ],
+      "verification_method": "change-impact review",
+      "evidence_ids": [
+        "CFD-envelope"
+      ],
+      "open_actions": []
+    },
+    {
+      "gate": "magnetic_electromagnetic",
+      "status": "HOLD",
+      "question": "Is final magnetic force margin verified on released P015/B001?",
+      "basis": "Final FEMM remains after P015/B001 freeze.",
+      "source_ids": [
+        "SRC-K01-BRAUER-001"
+      ],
+      "verification_method": "FEMM + bench force test",
+      "evidence_ids": [
+        "WP-T10"
+      ],
+      "open_actions": [
+        "freeze B001 lot data",
+        "freeze P015 winding/material",
+        "run final FEMM"
+      ]
+    },
+    {
+      "gate": "materials_environment",
+      "status": "HOLD",
+      "question": "Are structural and sealing materials compatible with the bounded environment?",
+      "basis": "P003/P007 material is controlled as 316L. P006 production material is not yet confirmed by a controlled source. The J2 elastomer family strategy is defined, but exact compound and local media/temperature qualification remain open.",
+      "source_ids": [
+        "MARV protection concept",
+        "SRC-SEAL-TRELLEBORG-001"
+      ],
+      "verification_method": "material compatibility review",
+      "evidence_ids": [
+        "WP-T04"
+      ],
+      "open_actions": [
+        "freeze P006 production material",
+        "freeze J2 local temperature/media envelope",
+        "select exact seal compound/supplier"
+      ]
+    },
+    {
+      "gate": "tolerance_dimensional_chains",
+      "status": "PASS_WITH_LIMIT",
+      "question": "Do worst-case tolerances retain assembly/clearance?",
+      "basis": "C2R1 functional chains are treated as worst-case assembly/interface stacks; pilot/head and fastener-pattern stacks currently pass at study tolerances.",
+      "source_ids": [
+        "SRC-TOL-FISCHER-001"
+      ],
+      "verification_method": "worst-case stackup across P003↔P006 and P003↔P007 mating interfaces; include fit, datum and position variation",
+      "evidence_ids": [
+        "WP-T03",
+        "DRAWING-INTENT"
+      ],
+      "open_actions": [
+        "confirm drawing GD&T in native output"
+      ]
+    },
+    {
+      "gate": "manufacturability_process_capability",
+      "status": "PASS_WITH_LIMIT",
+      "question": "Can normal turning/drilling/tapping/inspection make it?",
+      "basis": "Round OD33, reamed/turned locating features and 3-hole pattern are simple. Small M2.5 tapping in 316L and P006 Ø1.5 blind service holes need shop capability confirmation.",
+      "source_ids": [
+        "SRC-TPD-SIMMONS-001",
+        "SRC-TOL-FISCHER-001"
+      ],
+      "verification_method": "process review + first-article inspection",
+      "evidence_ids": [
+        "WP-T03",
+        "WP-T05"
+      ],
+      "open_actions": [
+        "tap/drill capability check"
+      ]
+    },
+    {
+      "gate": "assembly",
+      "status": "PASS",
+      "question": "Does native assembly constrain the joint as designed?",
+      "basis": "Native verify PASS with 0 active mate errors and no new hard interference.",
+      "source_ids": [
+        "R1-BUILD",
+        "R1-VERIFY"
+      ],
+      "verification_method": "native assembly/interference check",
+      "evidence_ids": [
+        "R1-VERIFY",
+        "R1-INT"
+      ],
+      "open_actions": []
+    },
+    {
+      "gate": "serviceability",
+      "status": "PASS_WITH_LIMIT",
+      "question": "Can the joint be opened and P006 actuated?",
+      "basis": "No weld; dedicated two-pin hollow face-drive architecture is selected.",
+      "source_ids": [
+        "EDR-001"
+      ],
+      "verification_method": "service trial",
+      "evidence_ids": [
+        "WP-T03"
+      ],
+      "open_actions": [
+        "build P006 service feature",
+        "run service trial"
+      ]
+    },
+    {
+      "gate": "inspection_testability",
+      "status": "HOLD",
+      "question": "Can every release characteristic be inspected/tested?",
+      "basis": "Drawing Intent now links each release characteristic to a defined inspection method; exact leak-test acceptance and some final production tolerances remain open.",
+      "source_ids": [
+        "SRC-TPD-SIMMONS-001",
+        "SRC-TOL-FISCHER-001"
+      ],
+      "verification_method": "drawing assurance + FAI + leak test",
+      "evidence_ids": [
+        "DRAWING-INTENT"
+      ],
+      "open_actions": [
+        "generate/approve V3 drawing",
+        "define leak acceptance"
+      ]
+    },
+    {
+      "gate": "reliability_fmea",
+      "status": "HOLD",
+      "question": "Are loosening, galling, seal and service FMs closed?",
+      "basis": "Failure modes are identified but qualification evidence remains open.",
+      "source_ids": [
+        "HEC-001"
+      ],
+      "verification_method": "FMEA disposition",
+      "evidence_ids": [
+        "WP-T06"
+      ],
+      "open_actions": [
+        "complete FMEA/qualification"
+      ]
+    },
+    {
+      "gate": "safety_regulatory_containment",
+      "status": "HOLD",
+      "question": "Does J2 maintain containment for hazardous MARV service?",
+      "basis": "MARV documentation treats sampled gas as potentially toxic/explosive and containment as safety-relevant; leak/material evidence is therefore a release gate.",
+      "source_ids": [
+        "MARV protection concept",
+        "MARV user manual"
+      ],
+      "verification_method": "containment design review + leak test",
+      "evidence_ids": [
+        "WP-T04"
+      ],
+      "open_actions": [
+        "leak qualification"
+      ]
+    },
+    {
+      "gate": "supply_chain",
+      "status": "HOLD",
+      "question": "Are exact screw/seal purchasable specs released?",
+      "basis": "Size/classes are selected; exact M2.5 finish/lubrication and FFKM supplier compound are open.",
+      "source_ids": [
+        "BOM-REC"
+      ],
+      "verification_method": "supplier/CoC review",
+      "evidence_ids": [
+        "WP-T04",
+        "WP-T06"
+      ],
+      "open_actions": [
+        "freeze exact B011 and screw source"
+      ]
+    },
+    {
+      "gate": "cost_value",
+      "status": "PASS_WITH_LIMIT",
+      "question": "Is the compact solution economically proportionate?",
+      "basis": "OD33 round turned flange and 3 screws minimize machining. FFKM is expensive but one small safety-critical seal has low system-level cost; FKM remains an application-approved cost-down option only after media compatibility proof.",
+      "source_ids": [
+        "EDR-005"
+      ],
+      "verification_method": "DFM/cost review",
+      "evidence_ids": [
+        "WP-T04"
+      ],
+      "open_actions": [
+        "obtain seal quote"
+      ]
+    },
+    {
+      "gate": "documentation_traceability",
+      "status": "HOLD",
+      "question": "Can manufacturing/inspection trace each characteristic to requirement and evidence?",
+      "basis": "MEDTAS v8 separates nominal CAD geometry, released allowable variation, decision rationale, verification evidence and derived state; Drawing Intent implements design-intent-to-inspection traceability.",
+      "source_ids": [
+        "SRC-TPD-SIMMONS-001",
+        "SRC-TOL-FISCHER-001",
+        "CI-J2",
+        "EDR-005",
+        "EDR-019"
+      ],
+      "verification_method": "drawing linter + release audit",
+      "evidence_ids": [
+        "DRAWING-INTENT",
+        "TECH-FILTER"
+      ],
+      "open_actions": [
+        "run Drawing V3 + linter"
+      ]
+    }
+  ]
+}

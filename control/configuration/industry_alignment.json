@@ -1,0 +1,26 @@
+{
+  "schema": "k01.industry_alignment.v1",
+  "standards": [
+    {
+      "standard": "ISO 10007:2017",
+      "scope": "configuration management guidance",
+      "MEDTAS_mapping": {
+        "configuration management planning": "configuration/revision policy",
+        "configuration identification": "CI / artifact IDs / requirements / BOM IDs",
+        "change control": "EDR/change impact/promotion",
+        "configuration status accounting": "current state + requirements/filter coverage",
+        "configuration audit": "hash/provenance/release audit"
+      }
+    },
+    {
+      "standard": "SAE EIA-649C",
+      "scope": "configuration-management principles across the product lifecycle",
+      "MEDTAS_mapping": "same five CM functions, tailored for a small mechanical/electromechanical engineering project"
+    },
+    {
+      "standard": "ISO 10303-242:2025",
+      "scope": "managed model-based 3D engineering / product-data exchange",
+      "MEDTAS_mapping": "future neutral external exchange target for managed 3D/PMI/configuration data; not claimed as currently implemented"
+    }
+  ]
+}

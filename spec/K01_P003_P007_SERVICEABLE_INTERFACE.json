@@ -1,0 +1,58 @@
+{
+  "schema": "k01_p003_p007_serviceable_interface_candidate_v1",
+  "status": "DESIGN CANDIDATE_TO_BUILD_AFTER_DATUM_C",
+  "decision": "Reject permanent P003-P007 weld as production baseline; use removable static-sealed joint.",
+  "requirements": [
+    "No dynamic seal across containment boundary.",
+    "P007 removable without cutting/welding.",
+    "P006/P008/B001/P013 serviceable after P015 removal.",
+    "P003-P007 location independent of clamp fasteners.",
+    "P007 thin magnetic zone OD10/ID9.4 and downstream axial stations remain unchanged."
+  ],
+  "recommended_interface": {
+    "P003_rear_service_flange": {
+      "OD_mm": 34.0,
+      "axial_thickness_mm": 5.0
+    },
+    "pilot": {
+      "P003_male": "Ø16 g6 x 1.50 protrusion; internal clearance bore ≥ Ø12.0",
+      "P007_female": "Ø16 H7 x 1.70 counterbore",
+      "axial_bottom_clearance_mm": 0.2
+    },
+    "seal": {
+      "type": "static axial face O-ring; no dynamic motion",
+      "candidate": "18 x 1.5 FKM75; FFKM option if measured-gas compatibility requires",
+      "groove_candidate_mm": {
+        "ID": 17.8,
+        "OD": 21.8,
+        "depth": 1.2
+      },
+      "note": "Same 1.5 mm cross-section / 1.20 mm face-gland compression philosophy already used at P016. Final compound and groove standard verification remain release items."
+    },
+    "P007_front_flange": {
+      "OD_mm": 34.0,
+      "thickness_mm": 3.0
+    },
+    "clamp": {
+      "count": 4,
+      "fastener": "M3 x 8, A4-70, low-profile/button head, removable",
+      "pattern": "PCD28, 4 x 90 deg",
+      "P007_clearance_hole_mm": 3.4,
+      "P003_thread": "M3-6H, full thread 5.0 min; tap drill depth 6.0 min",
+      "function": "clamp only; pilot locates; metal-to-metal faces control O-ring squeeze",
+      "torque": "OPEN until screw finish/anti-galling method and O-ring compound are frozen"
+    }
+  },
+  "assembly_sequence": [
+    "Disconnect and slide P015 rearward off P007.",
+    "Remove four P003-P007 clamp screws.",
+    "Withdraw P007 axially; no weld cutting.",
+    "P006 and internal follower/rod hardware become accessible.",
+    "Replace static O-ring at service unless procedure explicitly permits reuse.",
+    "Reassemble on pilot, seat metal-to-metal faces, tighten clamp screws in cross sequence."
+  ],
+  "analysis_impact": {
+    "static_buckling": "Previous P007 thin-shell results remain screening evidence because OD10/ID9.4 thin zone is unchanged; one final refresh is required after service flange CAD freeze.",
+    "magnetic": "Final FEMM sweep required after serviceable flange freeze because front 316L geometry near P015 changes; no real magnet purchase is required."
+  }
+}

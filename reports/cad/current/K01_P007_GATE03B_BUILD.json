@@ -1,0 +1,48 @@
+{
+  "schema": "k01_p007_gate03b_build_v4_blind_end",
+  "status": "PASS",
+  "solidworks": {
+    "revision": "26.0.1",
+    "major": 26,
+    "year": 2018
+  },
+  "production_cad_modified": false,
+  "supersedes_candidate": "K01-P-007_Hermetic_Magnetic_Can_GATE03B_CANDIDATE_20260902_085544",
+  "superseded_reason": "v3 had an annular OPEN rear end; v4 restores the 1.0 mm blind rear wall",
+  "native_candidate": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-007_Hermetic_Magnetic_Can_GATE03B_V4_CANDIDATE_20260902_090924.SLDPRT",
+  "step_candidate": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-007_Hermetic_Magnetic_Can_GATE03B_V4_CANDIDATE_20260902_090924.STEP",
+  "body_box_mm": [
+    0.0,
+    -8.0,
+    -8.0,
+    35.0,
+    8.0,
+    8.0
+  ],
+  "body_volume_mm3": 661.3981049223245,
+  "expected_volume_mm3": 661.3981049223248,
+  "volume_delta_mm3": 3.410605131648481e-13,
+  "material": {
+    "requested": "AISI Type 316L stainless steel",
+    "authority": "AISI 316L / EN 1.4404",
+    "applied": true,
+    "error": null
+  },
+  "controlled_geometry_mm": {
+    "total_length": 35.0,
+    "weld_face_OD": 14.0,
+    "weld_face_ID": 10.917,
+    "weld_wall_radial_thickness": 1.5415,
+    "weld_land_length": 1.0,
+    "root_OD": 16.0,
+    "root_outer_start": 1.0,
+    "thin_ID": 9.4,
+    "thin_ID_start": 2.0,
+    "thin_OD": 10.0,
+    "thin_OD_start": 3.0,
+    "rear_inner_station": 34.0,
+    "rear_outer_station": 35.0,
+    "rear_wall_axial_thickness": 1.0
+  },
+  "release_status": "CANDIDATE_NOT_RELEASED"
+}

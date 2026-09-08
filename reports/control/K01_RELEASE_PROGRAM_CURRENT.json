@@ -1,0 +1,72 @@
+{
+  "current_priority": 0,
+  "project": "K01",
+  "rule": "Work the first HOLD stage that materially blocks release; do not spend time on deferred assurance while upstream product-definition stages are open.",
+  "schema": "k01.release_program.v1_9",
+  "stages": [
+    {
+      "current": "HOLD_MIGRATION_REQUIRED",
+      "done_when": "Canonical native filenames contain only stable identity + description; lifecycle state is metadata; no new stateful filenames.",
+      "evidence": "reports/control/K01_IDENTITY_AUDIT_CURRENT.json",
+      "stage": 0,
+      "status": "HOLD",
+      "title": "Identity"
+    },
+    {
+      "current": "HOLD",
+      "done_when": "requirements.json and parts.json are authoritative; coverage report exposes every requirement without registered evidence.",
+      "evidence": "reports/control/K01_REQUIREMENTS_COVERAGE_CURRENT.json",
+      "stage": 1,
+      "status": "HOLD",
+      "title": "Requirements + parts registries"
+    },
+    {
+      "current": "QUALIFIED_BY_ASSURANCE_SUITE",
+      "done_when": "POST-only side effects, registered file IDs, escaped DOM rendering, one status classifier, no engineering literals in UI, reducer fixtures PASS.",
+      "evidence": "tests/medtas/state_reducer_fixtures_v1_9.py",
+      "stage": 2,
+      "status": "PASS",
+      "title": "Panel trust / reducer assurance"
+    },
+    {
+      "current": "EBOM HOLD / MBOM HOLD",
+      "done_when": "CAD occurrence/qty + parts.json attributes generate EBOM/MBOM; suppressed/non-modeled items explicit; registry→CAD props is one-way.",
+      "evidence": "reports/medtas/bom/current/K01_EBOM_VERIFY_A001_v1_9.json",
+      "stage": 3,
+      "status": "HOLD",
+      "title": "Specification as graph node"
+    },
+    {
+      "current": "MBD_NOT_YET_AUTHORED / PASS_WITH_LIMITATIONS",
+      "done_when": "Critical tolerances/datums are native PMI/MBD; changing model tolerance stales tolerance-chain node automatically; MC uses only explicit distributions.",
+      "evidence": "reports/medtas/tolerance/current/K01_TOLERANCE_A001_v1.json",
+      "stage": 4,
+      "status": "HOLD",
+      "title": "Tolerances as model data"
+    },
+    {
+      "current": "HOLD / QA HOLD",
+      "done_when": "P007 exemplar validated first; no drawing tolerance absent from model PMI; title/revision/references/PMI/visual QA pass.",
+      "evidence": "reports/drawing/current/K01_DRAWING_RELEASE_PLAN_CURRENT.json",
+      "stage": 5,
+      "status": "HOLD",
+      "title": "Drawing release"
+    },
+    {
+      "current": "open acceptance 11",
+      "done_when": "Stable characteristic IDs link PMI, drawing balloon, inspection data and released acceptance; leak result is numeric and auto-evaluated.",
+      "evidence": "reports/inspection/current/K01_RELEASE_CHARACTERISTICS_CURRENT.json",
+      "stage": 6,
+      "status": "HOLD",
+      "title": "Characteristics + acceptance"
+    },
+    {
+      "current": "NOT_ACTIVATED_BY_DESIGN",
+      "done_when": "Qualified Windows self-hosted runner rebuilds stale CAD/FEMM nodes nightly; cloud CI handles non-CAD tests.",
+      "evidence": "docs/automation/K01_NIGHTLY_RUNNER_PLAN_v1_9.md",
+      "stage": 7,
+      "status": "DEFERRED_ASSURANCE",
+      "title": "Runner + nightly build"
+    }
+  ]
+}

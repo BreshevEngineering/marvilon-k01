@@ -1,0 +1,33 @@
+{
+  "schema": "k01_medtas_v8_4_static_audit",
+  "created": "2026-09-05",
+  "status": "PASS_STATIC_PACKAGE",
+  "json": {
+    "count": 5,
+    "errors": []
+  },
+  "javascript": {
+    "syntax_pass": true,
+    "error": ""
+  },
+  "reliability_checks": {
+    "bad_git_object_array_pattern_removed": true,
+    "git_single_path_classification": true,
+    "git_single_path_remote_health": true,
+    "shared_core_used_by_server": true,
+    "shared_core_used_by_selftest": true,
+    "git_errors_degraded_not_throwing": true,
+    "browser_subsystem_isolation": true,
+    "subsystem_health_ui": true,
+    "api_health_endpoint": true,
+    "structured_endpoint_error": true,
+    "server_braces_balanced": true,
+    "core_braces_balanced": true,
+    "selftest_braces_balanced": true
+  },
+  "runtime_not_claimed": [
+    "Windows PowerShell parser/runtime",
+    "live /api/git execution on the user's workstation",
+    "SOLIDWORKS 2018 Gate04E compile/runtime"
+  ]
+}

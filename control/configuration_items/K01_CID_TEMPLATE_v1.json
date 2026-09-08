@@ -1,0 +1,23 @@
+{
+  "schema": "k01_configuration_item_dossier_v1",
+  "ci_id": "CI-XXX",
+  "name": "",
+  "type": "part|interface|subassembly|system",
+  "parent_ci": "",
+  "current_baseline": "",
+  "requirements": [],
+  "materials": [],
+  "interfaces": [],
+  "controlled_parameters": [],
+  "dimension_chains": [],
+  "decision_records": [],
+  "evidence_records": [],
+  "cad_artifacts": [],
+  "calculation_artifacts": [],
+  "technology_artifacts": [],
+  "inspection_and_test": [],
+  "change_history": [],
+  "rejected_alternatives": [],
+  "risks_open_items": [],
+  "release_status": "DRAFT|VERIFIED_CANDIDATE|RELEASED|HOLD"
+}

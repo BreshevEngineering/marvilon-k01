@@ -1,0 +1,46 @@
+{
+  "schema": "k01_gate03f_assembly_verify_v1",
+  "created_utc": "2026-09-02T09:12:21.565569+00:00",
+  "status": "PASS_WITH_INTERFERENCE_API_WARN",
+  "solidworks_revision": "26.0.1",
+  "production_assembly": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+  "production_assembly_modified": false,
+  "verification_assembly": "D:\\Marvilon\\K01\\cad\\candidates\\K01-A-001_GATE03F_P007_V5_VERIFY_20260902_121204.SLDASM",
+  "P007_v5": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-007_Hermetic_Magnetic_Can_GATE03E_V5_CANDIDATE_20260902_114833.SLDPRT",
+  "P003_collar_reference": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-003_GATE03E_COLLAR_ADDON_REFERENCE_20260902_115731.SLDPRT",
+  "calculated_station_deltas_mm": {
+    "thin_ID_start": 9.813077866773594e-15,
+    "thin_OD_start": 9.813077866773594e-15,
+    "rear_inner": 9.813077866773594e-15,
+    "rear_outer": 9.813077866773594e-15
+  },
+  "physical_station_deltas_mm": {
+    "thin_ID_start": 7.757919228897728e-15,
+    "thin_OD_start": 7.757919228897728e-15,
+    "rear_inner": 7.757919228897728e-15,
+    "rear_outer": 7.757919228897728e-15
+  },
+  "P007_transform_max_delta": 3.469446951953614e-18,
+  "collar_transform_max_delta": 0.0,
+  "collar_assembly_span_from_P003_rear_mm": [
+    -5.0,
+    0.0
+  ],
+  "interference": {
+    "available": true,
+    "count": null,
+    "rows": [],
+    "critical_hits": [],
+    "errors": [
+      "GetInterferenceCount: GetInterferenceCount: expected callable for args=(), got int",
+      "GetInterferences: GetInterferences: expected callable for args=(), got tuple"
+    ]
+  },
+  "release_status": "ASSEMBLY_GEOMETRY_GATE_ONLY__NOT_PRODUCTION_RELEASE",
+  "next_if_pass": [
+    "Build native P003 candidate with OD16 rear collar L5 integrated into the same solid body",
+    "Mate/reference migration audit",
+    "P007 Static +0.20 bar",
+    "P007 external-pressure Buckling -0.20 bar"
+  ]
+}

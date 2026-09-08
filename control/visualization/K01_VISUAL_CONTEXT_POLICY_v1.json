@@ -1,0 +1,27 @@
+{
+  "schema": "k01_visual_context_policy_v1",
+  "status": "ACTIVE",
+  "purpose": "Provide immediate visual context in MEDTAS without turning the Control Center into a heavy CAD renderer.",
+  "layers": [
+    {
+      "level": "L1 lightweight schematic",
+      "implementation": "inline SVG in the browser",
+      "use": "functional interface, datum responsibility, envelope and key controlled dimensions",
+      "performance": "negligible; no external image file or graphics library"
+    },
+    {
+      "level": "L2 cached CAD preview",
+      "implementation": "optional PNG/WebP exported on explicit user command and stored in reports/previews",
+      "use": "actual part/assembly visual orientation",
+      "performance": "loaded only when available; never continuously rendered"
+    },
+    {
+      "level": "L3 native CAD",
+      "implementation": "Open controlled artifact in SOLIDWORKS",
+      "use": "authoritative geometry review and editing",
+      "performance": "outside browser"
+    }
+  ],
+  "rule": "A schematic or preview is navigation context only. It never becomes design authority and cannot satisfy a CAD/drawing release gate.",
+  "current_v8_3": "J2 Technical Filter includes two inline SVG schematics. Cached CAD preview export is deferred until the current K01 release path is stable."
+}

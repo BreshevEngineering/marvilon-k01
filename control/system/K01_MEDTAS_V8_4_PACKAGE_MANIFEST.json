@@ -1,0 +1,107 @@
+{
+  "schema": "k01_medtas_v8_4_manifest",
+  "created": "2026-09-05",
+  "extract_to": "D:\\BreshevEngineering\\marvilon-k01",
+  "files": [
+    {
+      "path": "00_INSTALL_MEDTAS_v8_4.md",
+      "bytes": 4521,
+      "sha256": "fa2edb577877aa51204b1a4b277dc7c38b4876d78f5e9fac03ad5b96899fa58a"
+    },
+    {
+      "path": "00_MEDTAS_V8_PREFLIGHT.cmd",
+      "bytes": 544,
+      "sha256": "20e242ff8351b128b39fda51d463882b510333dd34cc3a1b9cc0ab229c3d4b9a"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/K01Gate04E_P006_ServiceDrive.cs",
+      "bytes": 11682,
+      "sha256": "003e7d184db548100fa3bc44ab0052770f488399aabee19d6ea150c2dbd9f8aa"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/K01Gate04E_P006_ServiceVerify.cs",
+      "bytes": 8117,
+      "sha256": "466c22fa8a825b87e9b7c1798439c7b1d28da6309ea3f12b028fb6562bcfd489"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/RUN_GATE04E_P006_SERVICE_BUILD.cmd",
+      "bytes": 2778,
+      "sha256": "e9ab222647a5ef2f473021b78bee6b0e43cf8457b30e8b2b5c069afa53085fbf"
+    },
+    {
+      "path": "control/command_center/K01_Command_Center_v8.html",
+      "bytes": 48206,
+      "sha256": "2ec9cd86feb3efea1dfe8fa0d20eb4d2ceb9c301bac172ac5cd910e1c7265e30"
+    },
+    {
+      "path": "control/command_center/OPEN_K01_COMMAND_CENTER_V8.cmd",
+      "bytes": 905,
+      "sha256": "ab357f1750d412c9663cca461d7aab06c95c11e498f5957b5586d5ee04f9b704"
+    },
+    {
+      "path": "control/command_center/RUN_K01_COMMAND_CENTER_SELFTEST.cmd",
+      "bytes": 449,
+      "sha256": "e50a18fe730b7e70b12dca3fc5f58ae3508d2aa6dbf6f32dbd15f5a6f8baa213"
+    },
+    {
+      "path": "control/command_center/RUN_K01_COMMAND_CENTER_SELFTEST.ps1",
+      "bytes": 664,
+      "sha256": "f07952d010e12d8553cae365ae1abe5fa5548fba0d173269752029da12ac3468"
+    },
+    {
+      "path": "control/command_center/cc_api_core_v8.ps1",
+      "bytes": 7942,
+      "sha256": "c02fc1f4750ae4b6022a5dc6adff9cfb08f3fa003ae34d33f52ab27ea6ddc459"
+    },
+    {
+      "path": "control/command_center/cc_server_v8.ps1",
+      "bytes": 12763,
+      "sha256": "d613ed97013bf628ec202eaa9d5a0e3cdca70b452d2fb07aea6e3a34cc707a00"
+    },
+    {
+      "path": "control/command_center/data/K01_FILE_REGISTRY_v8.json",
+      "bytes": 10046,
+      "sha256": "63cb58863d7ea17a725202533a4ceed5ff3ba1fc58e67abed1bf3cb0c83b9649"
+    },
+    {
+      "path": "control/digital_thread/K01_MEDTAS_DIGITAL_THREAD_ARCHITECTURE_v2.json",
+      "bytes": 9808,
+      "sha256": "29874f188cc9b0888a2f1e1a3b9ad0361ed21d3dc6ddf3fb3f35b82d75f0415b"
+    },
+    {
+      "path": "control/state/K01_STATE_ENGINE_v8.ps1",
+      "bytes": 10853,
+      "sha256": "04cf9eac8cc606be91277b5fe4f738f25d560bb5a66e59369d6c9d4bfa668d5e"
+    },
+    {
+      "path": "control/system/K01_MEDTAS_RELIABILITY_STANDARD_v1.json",
+      "bytes": 1965,
+      "sha256": "3846fc65bb4c5b7328f8601482d90dd606caa20dbda604232d1f6e1e4bb0ac59"
+    },
+    {
+      "path": "control/system/K01_MEDTAS_V8_4_CHANGELOG.md",
+      "bytes": 1309,
+      "sha256": "25660a838c82cb981c7bda575c14375f99f33df40055c1ff57078acc61215223"
+    },
+    {
+      "path": "control/system/K01_MEDTAS_V8_PREFLIGHT.ps1",
+      "bytes": 9165,
+      "sha256": "360f2e35d4cbd1b0bf8f426d7600fe194c64e90fc69b6359574ce696afab8c50"
+    },
+    {
+      "path": "control/system/STATIC_AUDIT_MEDTAS_v8_4.json",
+      "bytes": 947,
+      "sha256": "ae309e1de408a9168ae5f9c73f889e4cd895be7664b55e8c08e916e2e7c0bae1"
+    },
+    {
+      "path": "control/technical_filter/K01_J2_C2R1_TECHNICAL_FILTER_v1.json",
+      "bytes": 15391,
+      "sha256": "81ea21d6c85371dfc7c390663fa989fb27170e7f8b27bb2c651e9372a7e73bf6"
+    },
+    {
+      "path": "control/workpacks/K01_T03_PILOT_TOOL_WORKPACKAGE_v2.json",
+      "bytes": 2310,
+      "sha256": "a3b0e2c92aa62b0606c2f5300a01368911c2a4a40b253c7857ea6020fe150a70"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "schema": "k01.medtas_core_manifest.v1",
+  "created": "2026-09-05",
+  "extract_to": "D:\\BreshevEngineering\\marvilon-k01",
+  "files": [
+    {
+      "path": ".github/workflows/k01-control-ci.yml",
+      "bytes": 903,
+      "sha256": "c82b87d91ee20a7c6074d3ba70a5b18212ab0615820250b4403ab9ea3df62cf6"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_CORE.md",
+      "bytes": 3037,
+      "sha256": "3af6008f61c94f5f2bdda16792448619626b0215e1c668cc626de1223dec64f3"
+    },
+    {
+      "path": "00_MEDTAS_PREFLIGHT.cmd",
+      "bytes": 393,
+      "sha256": "409bd94fc5b85acba632082b89ce6268e67d3e4cc9239804ab37c33740faf6f4"
+    },
+    {
+      "path": "control/bom/REFRESH_BOM_READ_ONLY.cmd",
+      "bytes": 613,
+      "sha256": "cd93889f18c4df538c5d3c771096f7b70a8c29f934bffdae116e6afa7074d4c0"
+    },
+    {
+      "path": "control/bom/bom_policy.json",
+      "bytes": 1285,
+      "sha256": "8d20adcbd4401e4921c710f7e83210af3be3e9e99ba73c83d6ecb4b3df82c0d1"
+    },
+    {
+      "path": "control/command_center/OPEN_K01_COMMAND_CENTER.cmd",
+      "bytes": 567,
+      "sha256": "dcdf5a473d535bb7018adc1123058e2a1d2141910452282acbd6f5ff9457bf70"
+    },
+    {
+      "path": "control/command_center/app.js",
+      "bytes": 7316,
+      "sha256": "3e9fe38e1b707110ae366ef1ae317b4825e9cb7ea837c2d1468760388794b12d"
+    },
+    {
+      "path": "control/command_center/core.ps1",
+      "bytes": 3198,
+      "sha256": "e0b3899c9f867e950949f79166c50f62e9dc9f8d332a03a550c21e2168d3c3ac"
+    },
+    {
+      "path": "control/command_center/data/file_registry.json",
+      "bytes": 11786,
+      "sha256": "1892f4b6296d4432878d29ed5ee8fc6db858f44899a5c1e0e389f2595cef24a7"
+    },
+    {
+      "path": "control/command_center/index.html",
+      "bytes": 2542,
+      "sha256": "2df6e24192f7b65358b8f8a63181432c4072be92a36e5af7da262d00ae2a6fd5"
+    },
+    {
+      "path": "control/command_center/server.ps1",
+      "bytes": 5179,
+      "sha256": "e1ad2df02f13ea97c5be265eac0611250498adf30ed4cc44ca06b852865b97d2"
+    },
+    {
+      "path": "control/command_center/styles.css",
+      "bytes": 2182,
+      "sha256": "97a7cf637d2e80b7820bc411376f8c56d821785d6a4f330dd7eb54c4a6825c41"
+    },
+    {
+      "path": "control/configuration/CREATE_BASELINE.ps1",
+      "bytes": 1457,
+      "sha256": "ed6b540e88f740ad17559b09409590c2e00657ebcc873cf9cc94dc97589fcc86"
+    },
+    {
+      "path": "control/configuration/industry_alignment.json",
+      "bytes": 1096,
+      "sha256": "dd8aa8d13d574fcd6ebe23e0eb9e50c74d53c858fced06b78ca35e2d9bf19f06"
+    },
+    {
+      "path": "control/configuration/revision_policy.json",
+      "bytes": 1870,
+      "sha256": "e9e56385f52791f6d4fcdf48a568c678e1cd982808ac361bf7efae570c1f0b40"
+    },
+    {
+      "path": "control/decisions/EDR-020_drawing_automation.json",
+      "bytes": 932,
+      "sha256": "ecff5d2c7184d7dcf1c8cf30b7a14937f42797711c6f2e110f36cc69bc8d554e"
+    },
+    {
+      "path": "control/drawings/definitions/K01-D-003.drawing.json",
+      "bytes": 1965,
+      "sha256": "e6153d2acceb9c3374d782a1c50dba51c5e9e0e43527112ad5392b67a00908e6"
+    },
+    {
+      "path": "control/drawings/definitions/K01-D-006.drawing.json",
+      "bytes": 2131,
+      "sha256": "33a9172c39a29aa46d3392bbb1b6603405fc5821d6cd48033f477357cc1d3a80"
+    },
+    {
+      "path": "control/drawings/drawing_v3_rejection.json",
+      "bytes": 1271,
+      "sha256": "617080f47560e64b68d12e98fb77797464dc5c350c55e2a703d352a3f1c0b7f1"
+    },
+    {
+      "path": "control/drawings/tpd_automation_architecture.json",
+      "bytes": 3484,
+      "sha256": "a5e2ae899f60a45215a7a8bf8e1078f0e301a7b184a44661d44afe7902298f5a"
+    },
+    {
+      "path": "control/events/APPEND_EVENT.ps1",
+      "bytes": 1551,
+      "sha256": "de1f8952db3cbdc437b9474f24c09d8707c35aac5de11acd3b684b3fb9d97328"
+    },
+    {
+      "path": "control/events/VERIFY_LEDGER.ps1",
+      "bytes": 1520,
+      "sha256": "a49d18d66a506f0a856cac07328c5a184f15fd1ed82b35f28bfb73c256e38596"
+    },
+    {
+      "path": "control/provenance/BACKFILL_C2R1_PROVENANCE.cmd",
+      "bytes": 130,
+      "sha256": "1bf42107c3bab916f81ca39aa2ae844c674bb2950fd9c8ea7709ef4ca961ab21"
+    },
+    {
+      "path": "control/provenance/BACKFILL_C2R1_PROVENANCE.ps1",
+      "bytes": 2345,
+      "sha256": "dd5feff3d15a3919506e62d42ab8cd28d3f1b7f7fa99f5df1f3682efaf530046"
+    },
+    {
+      "path": "control/provenance/REGISTER_EVIDENCE.ps1",
+      "bytes": 1903,
+      "sha256": "5ca2583b8c79f10f13f78e91965132622b0b4a5a1afe59afc30702adbc9e8082"
+    },
+    {
+      "path": "control/provenance/VERIFY_PROVENANCE.ps1",
+      "bytes": 1545,
+      "sha256": "46675b69c7bb1d6973d2e716fe22d336131e424c7bc830dd3f3d59f14d24fe81"
+    },
+    {
+      "path": "control/requirements/REPORT_REQUIREMENTS_COVERAGE.cmd",
+      "bytes": 134,
+      "sha256": "d0980b565f6b62aace5619f154179a1162f0a4090a4fb180cb4afd78640d6006"
+    },
+    {
+      "path": "control/requirements/REPORT_REQUIREMENTS_COVERAGE.ps1",
+      "bytes": 802,
+      "sha256": "7289d439012f635eec80697d1ca05e0c5412799fda96627fb9de0fda1eaa2a43"
+    },
+    {
+      "path": "control/requirements/requirements.json",
+      "bytes": 12295,
+      "sha256": "ceb50730fe3ba26c952d65be4fdf3eddc4924946a3d86f68b3c266ec41b4f22a"
+    },
+    {
+      "path": "control/schemas/baseline.schema.json",
+      "bytes": 603,
+      "sha256": "f7b79be35f5235a9434b46ac261c930ec62800eaf8340dcc9f43675c63b46742"
+    },
+    {
+      "path": "control/schemas/bom_reconciliation.schema.json",
+      "bytes": 602,
+      "sha256": "04e3680f01710023bcc448428c588277caea41f513d440de595b7b582455d582"
+    },
+    {
+      "path": "control/schemas/drawing_definition.schema.json",
+      "bytes": 2065,
+      "sha256": "6256e3ebeca84baf4a7b7878d7c18c3d1df76d9b6dfcd2f44b965a67c56dae56"
+    },
+    {
+      "path": "control/schemas/event.schema.json",
+      "bytes": 762,
+      "sha256": "d7b3f3c5f9ac7e759db6e273cd2009232e78b0c3a03131e921124fbc730f49af"
+    },
+    {
+      "path": "control/schemas/evidence_provenance.schema.json",
+      "bytes": 1236,
+      "sha256": "b3724a69411d1676300f3f090798d397a7e3166059bff4256298183c5ba23dee"
+    },
+    {
+      "path": "control/schemas/requirements.schema.json",
+      "bytes": 1685,
+      "sha256": "dbbd14705409af51a72f7bbbff09d6645a92d526e80ae303c93e8240e1953bd1"
+    },
+    {
+      "path": "control/schemas/revision_policy.schema.json",
+      "bytes": 362,
+      "sha256": "6dc5656df0af1b730c76e62222e2c9eb098095a3d3fbaa54b116e188b693f3df"
+    },
+    {
+      "path": "control/schemas/technical_filter.schema.json",
+      "bytes": 1202,
+      "sha256": "1ba222f2355eb5e8958582c8c82b8708d26cbfc4ed801e8408b8e2018377e50e"
+    },
+    {
+      "path": "control/state/reducer.ps1",
+      "bytes": 5366,
+      "sha256": "db9b58907de0cc7746c25e5d89a57315d7d5656170cfa0fddedb5669eaaa83f1"
+    },
+    {
+      "path": "control/state/reducer_core.ps1",
+      "bytes": 3132,
+      "sha256": "a866a7d37ef3592b0d7bf7192181ddeb4193a89b54d6aa7e9b53bcd1993bd69d"
+    },
+    {
+      "path": "control/system/PREFLIGHT.ps1",
+      "bytes": 3096,
+      "sha256": "0db0991ccc9c1c7b8048ca96e08cb6c8393ab0bb72a59bc12542a4bae116ed20"
+    },
+    {
+      "path": "control/system/STATIC_AUDIT_MEDTAS_CORE.json",
+      "bytes": 1164,
+      "sha256": "c428c85dfb3f76b8ac0f9365f5c7679296267a8289910c78346c5193ddfbaf60"
+    },
+    {
+      "path": "control/technical_filter/K01_J2_C2R1_TECHNICAL_FILTER_v1.json",
+      "bytes": 15391,
+      "sha256": "81ea21d6c85371dfc7c390663fa989fb27170e7f8b27bb2c651e9372a7e73bf6"
+    },
+    {
+      "path": "tests/run_core_tests.ps1",
+      "bytes": 753,
+      "sha256": "52c845f4355172cb5f21283aabe2eb2f0cce3851c61c2234de4cbad3c6cd0ff5"
+    },
+    {
+      "path": "tests/run_reducer_tests.ps1",
+      "bytes": 1694,
+      "sha256": "0e059f825560ff9204b924c330c3ddc08b5cbd630af16bec6ab21f39e732f235"
+    },
+    {
+      "path": "tools/check_requirement_links.py",
+      "bytes": 743,
+      "sha256": "e2589eba7608d9d3ef3d4ed59fd0aa1d55f2ed122c2d4ab4a3208b518e5a44a0"
+    },
+    {
+      "path": "tools/check_ui_engineering_literals.py",
+      "bytes": 761,
+      "sha256": "771c843d55cacfc502b6867e84761bf872acefad65d6e4a3f1565d2a193dc607"
+    },
+    {
+      "path": "tools/validate_schemas.py",
+      "bytes": 1205,
+      "sha256": "7357359c304074e92a53c5d6edebe73ea861df2d2d98ebb00b1cb4580e8767d7"
+    }
+  ]
+}

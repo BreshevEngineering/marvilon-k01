@@ -1,0 +1,15 @@
+name: MEDTAS cloud QA
+on:
+  push:
+  pull_request:
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: JSON parse
+        run: python tools/medtas/ci_validate_repository_v2_2.py --repo-root . --json-only
+      - name: Technical-filter / structure / graph QA
+        run: python tools/medtas/ci_validate_repository_v2_2.py --repo-root .

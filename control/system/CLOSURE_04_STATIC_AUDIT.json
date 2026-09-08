@@ -1,0 +1,12 @@
+{
+  "schema": "k01_closure_04_static_audit_v1",
+  "created": "2026-09-05",
+  "status": "PASS_STATIC_PACKAGE",
+  "checks": {
+    "runner_directly_invokes_closure_ps1": true,
+    "runner_checks_closure_script_exists": true,
+    "temperature_basis_accepted_55C": true,
+    "P006_material_from_controlled_bom": true,
+    "repo_cleanup_plan_is_read_only": true
+  }
+}

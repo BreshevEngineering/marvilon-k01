@@ -1,0 +1,22 @@
+{
+  "schema": "k01_p003_gate03g_build_v1",
+  "status": "PASS",
+  "solidworks_revision": "26.0.1",
+  "source_production_p003": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT",
+  "production_p003_modified": false,
+  "native_candidate": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-003_Cartridge_Body_GATE03G_CANDIDATE_20260902_122316.SLDPRT",
+  "step_candidate": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-003_Cartridge_Body_GATE03G_CANDIDATE_20260902_122316.STEP",
+  "rear_local_station_mm": 29.632965887850492,
+  "collar_start_local_station_mm": 24.632965887850492,
+  "controlled_geometry_mm": {
+    "collar_length": 5.0,
+    "old_OD": 14.0,
+    "new_OD": 16.0,
+    "radial_added_thickness": 1.0
+  },
+  "volume_before_mm3": 5578.010781272215,
+  "volume_after_mm3": 5813.63023029145,
+  "volume_delta_mm3": 235.6194490192347,
+  "expected_volume_delta_mm3": 235.61944901923448,
+  "release_status": "CANDIDATE_NOT_RELEASED"
+}

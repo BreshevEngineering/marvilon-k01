@@ -1,0 +1,55 @@
+{
+  "schema": "k01.drawing_characteristics.v1_7",
+  "principle": "released drawings are derived views of native CAD + reviewed MBD/DimXpert + controlled product metadata; this registry defines release intent and never replaces the native model",
+  "drawings": [
+    {
+      "drawing_no": "K01-D-003",
+      "model": "K01-P-003",
+      "title": "Cartridge Body",
+      "characteristics": [
+        {"id":"K01-D003-MAT","role":"material","authority":"material_state","status":"DEFINED_IN_CONTROL"},
+        {"id":"K01-D003-DATUM-A","role":"mating-face datum A","authority":"native_datum","status":"NEEDS_MBD_BIND"},
+        {"id":"K01-D003-DATUM-B","role":"functional axis datum B","authority":"native_datum","status":"NEEDS_MBD_BIND"},
+        {"id":"K01-D003-PILOT","role":"J2 locating pilot/locator characteristic","authority":"interface_parameter+native_geometry","status":"NEEDS_MBD_BIND"},
+        {"id":"K01-D003-FASTENER-PATTERN","role":"three-hole M2.5 clamp pattern","authority":"interface_parameter+native_geometry","status":"NEEDS_MBD_BIND"},
+        {"id":"K01-CHAR-P003-SEAT-ID","role":"P004 guide seat ID","authority":"tolerance_chain","status":"NEEDS_MBD_BIND"}
+      ]
+    },
+    {
+      "drawing_no": "K01-D-005",
+      "model": "K01-P-006",
+      "title": "Retaining Plug",
+      "characteristics": [
+        {"id":"K01-D005-MAT","role":"material","authority":"material_state","status":"DEFINED_IN_CONTROL"},
+        {"id":"K01-D005-THREAD","role":"retaining thread interface","authority":"native_geometry","status":"NEEDS_MBD_BIND"},
+        {"id":"K01-D005-BORE","role":"functional bore","authority":"native_geometry","status":"NEEDS_MBD_BIND"},
+        {"id":"K01-D005-SERVICE-DRIVE","role":"service-drive geometry","authority":"native_geometry+service_requirement","status":"NEEDS_MBD_BIND"}
+      ]
+    },
+    {
+      "drawing_no": "K01-D-006",
+      "model": "K01-P-007",
+      "title": "Hermetic Magnetic Can",
+      "characteristics": [
+        {"id":"K01-D006-MAT","role":"material","authority":"material_state","status":"DEFINED_IN_CONTROL"},
+        {"id":"K01-D006-LOCATOR","role":"J2 mating locator characteristic","authority":"interface_parameter+native_geometry","status":"NEEDS_MBD_BIND"},
+        {"id":"K01-D006-THIN-WALL","role":"containment thin-wall zone","authority":"native_geometry+pressure_requirement","status":"NEEDS_MBD_BIND"},
+        {"id":"K01-D006-WELD","role":"weld/containment interface","authority":"process_definition","status":"OPEN_SPEC"},
+        {"id":"K01-D006-BLIND-END","role":"blind end geometry","authority":"native_geometry","status":"NEEDS_MBD_BIND"},
+        {"id":"K01-D006-CONCENTRICITY","role":"critical concentricity/coaxiality control","authority":"functional_datum_scheme","status":"OPEN_SPEC"}
+      ]
+    },
+    {
+      "drawing_no": "K01-D-012",
+      "model": "K01-A-001",
+      "title": "Calibration Module Assembly",
+      "characteristics": [
+        {"id":"K01-D012-IN-OUT","role":"IN/OUT functional states","authority":"assembly_semantics","status":"NEEDS_MBD_BIND"},
+        {"id":"K01-D012-OPTICAL-DATUM","role":"optical functional datum","authority":"requirement+assembly_semantics","status":"OPEN_SPEC"},
+        {"id":"K01-CHAR-A001-ROD-TRAVEL","role":"functional rod travel","authority":"assembly_hard_stops","status":"NEEDS_MBD_BIND"},
+        {"id":"K01-D012-BOM","role":"assembly BOM","authority":"canonical_bom","status":"DEFINED_IN_CONTROL"},
+        {"id":"K01-D012-LONG-RUN","role":"Long Run interface","authority":"native_geometry+interface_requirement","status":"NEEDS_MBD_BIND"}
+      ]
+    }
+  ]
+}

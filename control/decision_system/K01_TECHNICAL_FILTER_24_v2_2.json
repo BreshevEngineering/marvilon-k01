@@ -1,0 +1,102 @@
+{
+  "schema": "k01.technical_filter_24.v2_2",
+  "categories": [
+    {
+      "id": "01",
+      "key": "functional_requirement"
+    },
+    {
+      "id": "02",
+      "key": "architecture_integrity"
+    },
+    {
+      "id": "03",
+      "key": "interfaces_datums"
+    },
+    {
+      "id": "04",
+      "key": "load_cases"
+    },
+    {
+      "id": "05",
+      "key": "static_strength_contact"
+    },
+    {
+      "id": "06",
+      "key": "buckling_stability"
+    },
+    {
+      "id": "07",
+      "key": "torsion_rotational"
+    },
+    {
+      "id": "08",
+      "key": "fatigue_cyclic"
+    },
+    {
+      "id": "09",
+      "key": "thermal"
+    },
+    {
+      "id": "10",
+      "key": "dynamics_vibration"
+    },
+    {
+      "id": "11",
+      "key": "pressure_vacuum_sealing"
+    },
+    {
+      "id": "12",
+      "key": "fluid_cfd"
+    },
+    {
+      "id": "13",
+      "key": "magnetic_electromagnetic"
+    },
+    {
+      "id": "14",
+      "key": "materials_environment"
+    },
+    {
+      "id": "15",
+      "key": "tolerance_dimensional_chains"
+    },
+    {
+      "id": "16",
+      "key": "manufacturability_process_capability"
+    },
+    {
+      "id": "17",
+      "key": "assembly"
+    },
+    {
+      "id": "18",
+      "key": "serviceability"
+    },
+    {
+      "id": "19",
+      "key": "inspection_testability"
+    },
+    {
+      "id": "20",
+      "key": "reliability_fmea"
+    },
+    {
+      "id": "21",
+      "key": "safety_regulatory_containment"
+    },
+    {
+      "id": "22",
+      "key": "supply_chain"
+    },
+    {
+      "id": "23",
+      "key": "cost_value"
+    },
+    {
+      "id": "24",
+      "key": "documentation_traceability"
+    }
+  ],
+  "rule": "Each release-relevant node must map to applicable categories with rationale and evidence; unknown/unmapped release node => HOLD."
+}

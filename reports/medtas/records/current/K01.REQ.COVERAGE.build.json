@@ -1,0 +1,9 @@
+{
+  "artifact_hash": "3a6aaccdb6f3ad9827ad479b6e79a06cb9f8ce5cde985aa5c72afe38f962a77a",
+  "built_state_hash": "3a955d734fd05508d26b2588aa7e2d93252fbb23410e3d5d71e84a84f8166051",
+  "node_id": "K01.REQ.COVERAGE",
+  "producer": {
+    "tool": "build_requirements_coverage_v1_9.py"
+  },
+  "schema": "medtas.build_record.v1"
+}

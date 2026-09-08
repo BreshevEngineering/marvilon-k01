@@ -1,0 +1,42 @@
+{
+  "schema": "medtas.evidence_registry.v1_2",
+  "project": "K01",
+  "items": [
+    {
+      "evidence_id": "K01-EV-GATE04E-FEM-FEMM-REPORT-001",
+      "title": "Gate04E FEM/FEMM Verification Report",
+      "category": "engineering_verification_report",
+      "status": "CURRENT",
+      "node_ids": ["K01.STRUCT.SWSIM.P006","K01.FEMM.VERIFY.CURRENT","K01.VERIFY.GATE04E"],
+      "files": [
+        "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.docx",
+        "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.md"
+      ],
+      "summary": "Registered engineering evidence. SolidWorks service screen PASS; FEMM field/automation screen PASS_WITH_LIMITATIONS."
+    },
+    {
+      "evidence_id": "K01-EV-SWSIM-P006-001",
+      "title": "SolidWorks Simulation P006 source report",
+      "category": "solver_source_report",
+      "status": "CURRENT",
+      "node_ids": ["K01.STRUCT.SWSIM.P006"],
+      "files": ["reports/engineering/current/source/K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx"],
+      "summary": "Source report used for the MEDTAS structural solver node: EN 1.4404, 300 N service force, 0.02 MPa pressure, 3x M2.5 preload 300 N, sigma_vm,max 40.66 MPa, URES,max 0.002171 mm."
+    },
+    {
+      "evidence_id": "K01-EV-FEMM-CURRENT-001",
+      "title": "FEMM current-position run evidence",
+      "category": "solver_run_evidence",
+      "status": "CURRENT",
+      "node_ids": ["K01.FEMM.RUN.A","K01.FEMM.RUN.B","K01.FEMM.VERIFY.CURRENT"],
+      "files": [
+        "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_DONE.txt",
+        "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_DONE.txt",
+        "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_B.png",
+        "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_B.png",
+        "reports/engineering/current/source/K01_FEMM_CURRENT_RESULTS.csv"
+      ],
+      "summary": "Both solver scripts completed and field plots exist. Force extraction remains non-release evidence; Coil B CSV record is incomplete."
+    }
+  ]
+}

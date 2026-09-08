@@ -1,0 +1,18 @@
+{
+  "schema": "k01_machine_profiles_v1",
+  "active_profile": "workstation_sw2018",
+  "profiles": {
+    "workstation_sw2018": {
+      "repo_root": "D:\\BreshevEngineering\\marvilon-k01",
+      "cad_root": "D:\\Marvilon\\K01\\cad",
+      "solidworks": "2018 revision 26.0.1",
+      "status": "ACTIVE"
+    },
+    "laptop_sw2026": {
+      "repo_root": "TBD",
+      "cad_root": "TBD",
+      "solidworks": "2026",
+      "status": "PLANNED AFTER DESIGN FREEZE"
+    }
+  }
+}

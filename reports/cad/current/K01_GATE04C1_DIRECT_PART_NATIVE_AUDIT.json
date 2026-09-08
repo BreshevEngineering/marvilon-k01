@@ -1,0 +1,8 @@
+{
+  "schema": "k01_gate04c1_direct_part_native_audit_v3",
+  "created_utc": "2026-09-03T17:00:11.504817+00:00",
+  "status": "FAIL_EXCEPTION",
+  "read_only": true,
+  "error": "RuntimeError(\"SOLIDWORKS returned a different/opaque document after opening. Expected=D:\\\\Marvilon\\\\K01\\\\cad\\\\parts\\\\K01-P-003_Cartridge_Body.SLDPRT; got_path=''; got_title=''\")",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\BreshevEngineering\\marvilon-k01\\tools\\sw_gate04c1_direct_part_native_audit_v03.py\", line 385, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"D:\\BreshevEngineering\\marvilon-k01\\tools\\sw_gate04c1_direct_part_native_audit_v03.py\", line 331, in main\n    p3doc=open_part(sw,P003)\n          ^^^^^^^^^^^^^^^^^^\n  File \"D:\\BreshevEngineering\\marvilon-k01\\tools\\sw_gate04c1_direct_part_native_audit_v03.py\", line 152, in open_part\n    raise RuntimeError(\nRuntimeError: SOLIDWORKS returned a different/opaque document after opening. Expected=D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT; got_path=''; got_title=''\n"
+}

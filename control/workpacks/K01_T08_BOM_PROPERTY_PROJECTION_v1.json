@@ -1,0 +1,30 @@
+{
+  "schema": "k01_workpackage_v1",
+  "task_id": "T08",
+  "title": "BOM property projection and release normalization",
+  "status": "TOOL_READY / APPLY_AFTER_REVIEW",
+  "current_reconciliation": {
+    "rows": 13,
+    "release_blockers": 7,
+    "metadata_projection_required": 13,
+    "unmapped": 0
+  },
+  "property_contract": [
+    "PartNo",
+    "Description",
+    "MaterialSpec",
+    "MaterialStatus",
+    "MakeBuy",
+    "Unit",
+    "LifecycleStatus",
+    "K01_ControlRevision"
+  ],
+  "rules": [
+    "assembly quantity remains CAD-derived",
+    "OPEN material is projected as OPEN text and never silently assigned as a native material",
+    "candidate P003/P007 keep canonical PartNo despite candidate filename",
+    "write operation archives/backs up and generates before/after report",
+    "no second hand-maintained BOM truth"
+  ],
+  "next": "run v8 property projection DRY RUN; APPLY only after report has zero identity ambiguity."
+}

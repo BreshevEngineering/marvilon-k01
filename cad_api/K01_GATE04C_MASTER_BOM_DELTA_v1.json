@@ -1,0 +1,38 @@
+{
+  "schema": "k01_gate04c_master_bom_delta_v1",
+  "apply": "ONLY_AFTER_GATE04C_FINAL_QA_PASS",
+  "K01-P-003": {
+    "material": "AISI 316L / EN 1.4404",
+    "J2_flange_OD_mm": 36.0,
+    "J2_flange_zone_mm": 5.0,
+    "J2_pilot_D_mm": 14.1,
+    "J2_pilot_fit": "g6",
+    "J2_pilot_L_mm": 1.5,
+    "J2_gland_ID_mm": 16.0,
+    "J2_gland_OD_nom_mm": 20.2,
+    "J2_gland_depth_mm": 1.1,
+    "J2_thread": "M3x0.5-6H",
+    "J2_qty": 3,
+    "J2_PCD_mm": 28.0
+  },
+  "K01-P-007": {
+    "material": "AISI 316L / EN 1.4404",
+    "L_mm": 35.0,
+    "J2_flange_OD_mm": 36.0,
+    "J2_flange_t_mm": 3.0,
+    "J2_locator_D_mm": 14.1,
+    "J2_locator_fit": "H7",
+    "J2_clearance_D_mm": 3.4,
+    "J2_qty": 3,
+    "J2_PCD_mm": 28.0
+  },
+  "K01-B-011": {
+    "description": "J2 Static O-Ring",
+    "size": "16x1.5 mm",
+    "material": "OPEN",
+    "qty": 1,
+    "unit": "ea",
+    "standard": "ISO 3601 metric",
+    "status": "ACTIVE / SIZE FROZEN / MATERIAL OPEN"
+  }
+}

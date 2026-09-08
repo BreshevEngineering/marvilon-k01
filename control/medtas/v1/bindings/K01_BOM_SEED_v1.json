@@ -1,0 +1,24 @@
+{
+  "schema": "k01.bom_seed.v1",
+  "purpose": "Identity metadata only. Quantities and CAD material are derived from the live assembly semantic snapshot.",
+  "items": {
+    "K01-P-001":{"description":"Calibration Rod","make_buy":"MAKE"},
+    "K01-P-002":{"description":"Guide Bushing","make_buy":"MAKE/BUY"},
+    "K01-P-003":{"description":"Cartridge Body","make_buy":"MAKE"},
+    "K01-P-004":{"description":"Front Guide Bushing","make_buy":"MAKE/BUY"},
+    "K01-P-006":{"description":"Retaining Plug","make_buy":"MAKE"},
+    "K01-P-007":{"description":"Hermetic Magnetic Can","make_buy":"MAKE"},
+    "K01-P-008":{"description":"Internal Magnetic Follower","make_buy":"MAKE"},
+    "K01-P-009":{"description":"Rear Stop Washer","make_buy":"MAKE"},
+    "K01-P-010":{"description":"External Magnet Carriage","make_buy":"MAKE"},
+    "K01-P-012":{"description":"External Magnet Retaining Cap","make_buy":"MAKE"},
+    "K01-P-013":{"description":"Follower End Cap","make_buy":"MAKE"},
+    "K01-P-014":{"description":"Front Guide Retaining Ring / IN Stop","make_buy":"MAKE/BUY"},
+    "K01-B-001":{"description":"Internal SmCo Magnet","make_buy":"BUY"},
+    "K01-B-002":{"description":"External Ring Magnet","make_buy":"BUY"},
+    "K01-B-003":{"description":"PF25-48C4 Motor","make_buy":"BUY/EXISTING"},
+    "K01-B-004":{"description":"Lead Screw M5x0.5","make_buy":"BUY"},
+    "K01-B-005":{"description":"Linear Bearing RJMP-01-06","make_buy":"BUY"},
+    "K01-B-006":{"description":"Guide Shaft D6","make_buy":"BUY"}
+  }
+}

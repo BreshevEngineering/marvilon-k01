@@ -1,0 +1,512 @@
+{
+  "schema": "k01_medtas_package_v6",
+  "date": "2026-09-04",
+  "extract_to": "D:\\BreshevEngineering\\marvilon-k01",
+  "files": [
+    {
+      "path": "00_INSTALL_MEDTAS_v3.md",
+      "bytes": 454,
+      "sha256": "0d3c18764a57e80441cf14a5959d1c26d7974605ad29567525a95267a8d87ba3"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_v4.md",
+      "bytes": 727,
+      "sha256": "67246a0b0803b924c6441f75e7e7d61e8f3ffc4a7ce85e0d5b9524178f51635b"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_v5.md",
+      "bytes": 1340,
+      "sha256": "4bec15864a460e08ff025ab668f9d8a524049fc88e15cfec9f0011c10d3942e8"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_v6.md",
+      "bytes": 1898,
+      "sha256": "36dd93cc65d3a082d9c9e556ae7effe0e28dc268fdd53f2f3fe0a3ace1d3b890"
+    },
+    {
+      "path": "bom/K01_BOM_RECONCILED_study_c2.csv",
+      "bytes": 3810,
+      "sha256": "e56f444e164681b636f7f648c20ebc4dd7647631c4a8561df4d80661938a8782"
+    },
+    {
+      "path": "bom/K01_BOM_RECONCILED_study_c2.json",
+      "bytes": 8107,
+      "sha256": "c8f82591071c5921bb72c7e3c3193b0699de8f04df5ca7a11f8cfb8bad364f08"
+    },
+    {
+      "path": "bom/K01_BOM_study_c2.csv",
+      "bytes": 3375,
+      "sha256": "243e994cee63756427e96e9ac7e92f48640def1c2b61f19845813d473749f26e"
+    },
+    {
+      "path": "bom/spec/K01_AUTOMATED_BOM_SPEC_v1.md",
+      "bytes": 474,
+      "sha256": "9b220917dfeff7a5bb9ccfcec3c98738883dede07b90e33f0c11e84edabbb23f"
+    },
+    {
+      "path": "cad_api/bom/02_RECONCILE_K01_BOM_C2.cmd",
+      "bytes": 424,
+      "sha256": "68fd9ac30ff987d3f43a0203c6ce3c5f4efc3f664b8d7d22ffb7d284d298b972"
+    },
+    {
+      "path": "cad_api/bom/K01_BOM_Extract.cs",
+      "bytes": 8183,
+      "sha256": "c14c5bb32b2660e37481c4d6690fc138c41ef64e5d14b906bbe3f4f3d933c80e"
+    },
+    {
+      "path": "cad_api/bom/K01_BOM_Reconcile.ps1",
+      "bytes": 2958,
+      "sha256": "e5f4be3e416cf8dd1a07b6fb819aee30727f4125a72128dbd4d46fff1d89c0e2"
+    },
+    {
+      "path": "cad_api/bom/RUN_K01_BOM.cmd",
+      "bytes": 1188,
+      "sha256": "bc18dbf8a80aba7988f22d383ea7d5292d822950e646e0613f29609835304378"
+    },
+    {
+      "path": "cad_api/bom/RUN_K01_BOM_PIPELINE_C2.cmd",
+      "bytes": 554,
+      "sha256": "1d96b45afb1ff61c74e7b24c0f7e2a4b4773798b9ed155d4fe1e72aba95b427d"
+    },
+    {
+      "path": "cad_api/bom/RUN_K01_BOM_PIPELINE_C2R1.cmd",
+      "bytes": 603,
+      "sha256": "ee621a257f5af5102f3809fb10354786a7fe24bfeafb550779f2e31c85b8e674"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/00_GATE04D_C2_BUILD_AND_VERIFY.cmd",
+      "bytes": 787,
+      "sha256": "572221db20f79baf13baa3d8994c9d946e37b41ff6f3c6ced7e31635f804a485"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/01_GATE04D_C2_BUILD_ONLY.cmd",
+      "bytes": 2823,
+      "sha256": "71d228286a57a5412fd7c4c6506600e1a3733ec583eba3d54284d796d8977170"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/02_GATE04D_C2_VERIFY_ONLY.cmd",
+      "bytes": 1775,
+      "sha256": "58132342e5f8ca0a0ded4b28f3ae4f122123e65417d8bc90fd0dee85fa93da6f"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/03B_GATE04D_C2_INTERFERENCE_DELTA_QA.cmd",
+      "bytes": 1337,
+      "sha256": "8239b9d0ff4c5f5e85da7e468ab55c914897a707ea1b1fae36ca28d518919163"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/03_GATE04D_C2_INTERFERENCE_QA.cmd",
+      "bytes": 1248,
+      "sha256": "209e0343e3c5a521a4bc58fa651506fa9e46118d5b867a3a13ea347e98d9f180"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/04_GATE04D_C2_DRAFT_DRAWINGS.cmd",
+      "bytes": 2806,
+      "sha256": "6579ed0f629f6580db057568631b20d61073e68f706fb500c81752e598954072"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/K01Gate04D_C2_Build.cs",
+      "bytes": 36891,
+      "sha256": "a181928d083d9fe96b0369d74c8dd2a907a235472ff1c5573bd8b60291c645fb"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/K01Gate04D_C2_Drawings.cs",
+      "bytes": 17359,
+      "sha256": "9873bae2b9d14688773ff05cfd4eaa9a88bc900381646539f22bf15bf9f7ad07"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/K01Gate04D_C2_InterferenceDeltaQA.cs",
+      "bytes": 9286,
+      "sha256": "5d9d9141ad5152914d7389d82a0e549e7d81a3dfa4c5b9a73127b481135649fe"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/K01Gate04D_C2_InterferenceQA.cs",
+      "bytes": 5361,
+      "sha256": "7efc042352744f132df957622e86419c5757809e385492159544e327e5c99065"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/K01Gate04D_C2_Verify.cs",
+      "bytes": 19415,
+      "sha256": "6d34ac79e5fc508c03842ba9d66022acbce713776e8ff8e9bd7841065f313803"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/K01_GATE04D_C2_DESIGN_INPUT_v1.json",
+      "bytes": 1180,
+      "sha256": "1c1ac3af1a019f6eec1b021b49f937244e055242f101331831b97cf9739e0053"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/K01_GATE04D_C2_PARAMS_v1.json",
+      "bytes": 1977,
+      "sha256": "22e167a32804d741a1cddcda9ad796ed7158005bddbdce6298ef0f64c5b3321f"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/README_GATE04D_C2.md",
+      "bytes": 949,
+      "sha256": "d88748921962410dbfd133a91e0a7c567662787304b1f9cbf7f0864f49345813"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2/STATIC_AUDIT_GATE04D_C2_v1.json",
+      "bytes": 449,
+      "sha256": "10eef0f464510fb726190baee19b13778e3d77a7a6c851a19b0f97522f6658a6"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/00_GATE04D_C2R1_ALL.cmd",
+      "bytes": 900,
+      "sha256": "cc83e76b740f522d36aff860633dc58959d7452e7a611d0fc9ee00b677aead43"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/01_GATE04D_C2R1_BUILD_ONLY.cmd",
+      "bytes": 2845,
+      "sha256": "07861a9c300367f32cbfd622d7a214f6689f2ffb1f18c8c721d01d1051583b6b"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/02_GATE04D_C2R1_VERIFY_ONLY.cmd",
+      "bytes": 1787,
+      "sha256": "38a40cf7d19ce7e180851171062eedde12b625585f606511ff8b6dd0fa1c67a7"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/03_GATE04D_C2R1_INTERFERENCE_QA.cmd",
+      "bytes": 1260,
+      "sha256": "39f697e78d99962bd02dc8fc3dcbee7a54e616337853ee0f2f7082ca272c3160"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/04_GATE04D_C2R1_DRAFT_DRAWINGS.cmd",
+      "bytes": 2828,
+      "sha256": "c02e94a320bddf953466d76c4519762b983b24ab7ea1d2bfee02efde8e95deef"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/K01Gate04D_C2R1_Build.cs",
+      "bytes": 38156,
+      "sha256": "988fa387e672c6e3a4952afc7a4db4ee8bd6eca2cfd4d32abc7415d680a5e09a"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/K01Gate04D_C2R1_Drawings.cs",
+      "bytes": 17397,
+      "sha256": "6a1f93668658deddce4a7c9b25bf7c8e22f3e4b51bade70fc152e0cae3c92233"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/K01Gate04D_C2R1_InterferenceQA.cs",
+      "bytes": 5375,
+      "sha256": "6ba2126b8b3d89b15d1580f5fb2f0d24aeb884c07f33b09ed410891318430465"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/K01Gate04D_C2R1_Verify.cs",
+      "bytes": 19447,
+      "sha256": "4e7db4cbc07a36662cbc269a1a7c5c2fbed52bf0a75cd763262cf7cd68425dba"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/K01_GATE04D_C2R1_DESIGN_INPUT_v1.json",
+      "bytes": 1144,
+      "sha256": "28f31c2249f9ba1fd52e3923deb7609c9a5c9db696d42aa0d46934bcf0b1c437"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/K01_GATE04D_C2R1_PARAMS_v1.json",
+      "bytes": 2280,
+      "sha256": "6c788e007900849d69a230cb8861face91760a8b2bed807758c1d3493039d59a"
+    },
+    {
+      "path": "control/command_center/K01_Command_Center_v3.html",
+      "bytes": 24086,
+      "sha256": "59ae823b71ec7eb8e66784fa5d893a211661f91f8af5966735dee19fbe6c5025"
+    },
+    {
+      "path": "control/command_center/K01_Command_Center_v4.html",
+      "bytes": 34100,
+      "sha256": "0e4a1e7fb1da50dc3cfc1fce8db0dc83a2959e13694938733bd74538c0753669"
+    },
+    {
+      "path": "control/command_center/K01_Command_Center_v5.html",
+      "bytes": 26241,
+      "sha256": "1e891fac423653431be67769b7ce87756a68e60416ea765f113c3550aeb22028"
+    },
+    {
+      "path": "control/command_center/K01_Command_Center_v6.html",
+      "bytes": 24613,
+      "sha256": "38ea81054892ea60fda0603613bc07a2997a1b4ae4dceca3ff7b9281878fcf9c"
+    },
+    {
+      "path": "control/command_center/OPEN_K01_COMMAND_CENTER_V3.cmd",
+      "bytes": 587,
+      "sha256": "cac6cedded9ee012396cdace78c3bd834b755388ebbeb2d3f832186e054c0807"
+    },
+    {
+      "path": "control/command_center/OPEN_K01_COMMAND_CENTER_V4.cmd",
+      "bytes": 595,
+      "sha256": "b5239deba450409bcfef2e63601d3f2019c2555fdba0cc3c52e365f5cabffa98"
+    },
+    {
+      "path": "control/command_center/OPEN_K01_COMMAND_CENTER_V5.cmd",
+      "bytes": 492,
+      "sha256": "a9ebb8e32f0bbaa67a83b3cc79feff7c129ab8bfeb6841990fd1c7e0a627c34a"
+    },
+    {
+      "path": "control/command_center/OPEN_K01_COMMAND_CENTER_V6.cmd",
+      "bytes": 505,
+      "sha256": "ccb0d828d99350a3e6b1795c4da86824ff378a5656ab20448487460e9206b1d3"
+    },
+    {
+      "path": "control/command_center/cc_server.ps1",
+      "bytes": 5262,
+      "sha256": "5a2e73d21ed5506219f085abe519f8eb7cb2d092e5e26f00894d3ba2738578e6"
+    },
+    {
+      "path": "control/command_center/cc_server_v4.ps1",
+      "bytes": 8979,
+      "sha256": "924a0d34ddc64106f7291d590c82636390ac3c1a21be7d734903ea14007a5705"
+    },
+    {
+      "path": "control/command_center/cc_server_v5.ps1",
+      "bytes": 11662,
+      "sha256": "c166ac946b20c96fd823bad0624a9f4f372eaf6904fef478ce79de2cf38b19da"
+    },
+    {
+      "path": "control/command_center/cc_server_v6.ps1",
+      "bytes": 14865,
+      "sha256": "d9615cd625652a2eb5fdc6a1059ff11edf83b8edebb28ab1ee44903ca01b7089"
+    },
+    {
+      "path": "control/command_center/data/K01_FILE_REGISTRY_v2.json",
+      "bytes": 2260,
+      "sha256": "83cc63dd1a0f015fe307fe792b8d7fd0a77ad2c8264e0b10c87338d92a2de554"
+    },
+    {
+      "path": "control/command_center/data/K01_FILE_REGISTRY_v3.json",
+      "bytes": 4224,
+      "sha256": "e57124d035ddcf3d20cc8ccfb7e16482e8aaffc0d00a8d898a7746d085446329"
+    },
+    {
+      "path": "control/command_center/data/K01_FILE_REGISTRY_v5.json",
+      "bytes": 6283,
+      "sha256": "b665d804c33dc3f0382625ed8a8feeb9b7395c3641fc2ddc5b8475efbd31866d"
+    },
+    {
+      "path": "control/command_center/data/K01_FILE_REGISTRY_v6.json",
+      "bytes": 6419,
+      "sha256": "2d536f9a83c09b65a70f02ca66f605d05c5cae2cac17268d1082c4d09f43f9b9"
+    },
+    {
+      "path": "control/command_center/data/K01_MACHINE_PROFILES_v2.json",
+      "bytes": 459,
+      "sha256": "d43d39a788ece35cedcf2c28d24b9dd4a1f0e99c5ad297452e0e0914c3e0ab8f"
+    },
+    {
+      "path": "control/configuration_items/CI-J2_DOSSIER_v1.json",
+      "bytes": 3866,
+      "sha256": "4d45ac51599862885480f21978b5bb2a84f605738cdaba37814b4d7ec689bdad"
+    },
+    {
+      "path": "control/configuration_items/CI-P003-P006_RETAINING_THREAD_DOSSIER_v1.json",
+      "bytes": 1751,
+      "sha256": "0e538a863c38fe3969f6a5ddde3725fe696af059f99942147ddf9b2d52339ab5"
+    },
+    {
+      "path": "control/configuration_items/K01_CID_TEMPLATE_v1.json",
+      "bytes": 604,
+      "sha256": "9d973d36f5f4d3fbccae04fafcd4899a2edcdb9d101332f4baba309d959bb277"
+    },
+    {
+      "path": "control/decision_system/K01_DECISION_REGISTER_v2.csv",
+      "bytes": 3334,
+      "sha256": "c7d38225419af028fe13815829e55678822dd563edb17ba15deb5dabe0cf23e2"
+    },
+    {
+      "path": "control/decision_system/K01_ENGINEERING_DECISION_STANDARD_EDS001_v2.md",
+      "bytes": 3619,
+      "sha256": "2d1831c87cc1931af2663929e6ac177ceaa8114a1f5f948a0246799894eaa070"
+    },
+    {
+      "path": "control/decision_system/K01_J2_C2_REQUIREMENTS_VERIFICATION_MATRIX_v1.csv",
+      "bytes": 1287,
+      "sha256": "b92625e84d49b1f3909b3ba883f6ff58cae2c3b5e354511348a6a5230a3054c9"
+    },
+    {
+      "path": "control/decision_system/records/EDR-005_J2_COMPACT_FLANGE_v3.json",
+      "bytes": 7004,
+      "sha256": "a35cafb235ed2d229fa265dab0ff8d21924e0f506363748ae8326bb2e2caaace"
+    },
+    {
+      "path": "control/decision_system/records/EDR-019_J2_PILOT_INNER_CLEARANCE_v1.json",
+      "bytes": 1513,
+      "sha256": "1b67418e69a1b6cef8d721e1407f788b8588b1d0dfef04cce439d086f82e03fa"
+    },
+    {
+      "path": "control/evidence/ERR-G04D-C2-BUILD-001.json",
+      "bytes": 948,
+      "sha256": "2e63e0d32af5ecf8f30b4f784b72f12b7d51bb63023f6fcad5cb42897e15b12e"
+    },
+    {
+      "path": "control/evidence/ERR-G04D-C2-VERIFY-001.json",
+      "bytes": 935,
+      "sha256": "63bfbeb8bbc26491cc1e95efdc76284ef4a94e316778d58c5dea77b524b941ba"
+    },
+    {
+      "path": "control/evidence/ERR-P003-P006-THREAD-001.json",
+      "bytes": 995,
+      "sha256": "875a74856a9a564d5d07b275a177bdd00ee9fd804698e50eaa6bf0e74035a131"
+    },
+    {
+      "path": "control/evidence/K01_ERR_TEMPLATE_v1.json",
+      "bytes": 470,
+      "sha256": "82da73d1eea875ebcf235d35f4c7b8c70596ab886cf6f6c5c1f1038a85ddd1fd"
+    },
+    {
+      "path": "control/evidence/K01_SOURCE_REGISTRY_v1.json",
+      "bytes": 9145,
+      "sha256": "d76a00855ab20773d7ba12b781a97e831b7ccee27a9a9f3b0aa60fcf0799908f"
+    },
+    {
+      "path": "control/system/K01_DEPENDENCY_GRAPH_v2.json",
+      "bytes": 1373,
+      "sha256": "2499c77c37e9216e078449b5d91482bf1f682245679c089d2cce61fa5e64f512"
+    },
+    {
+      "path": "control/system/K01_GATE04D_C2_RELEASE_PLAN_v1.md",
+      "bytes": 685,
+      "sha256": "d2e18fa092ecbac8bf8edea5c3e860d53927df24c3319b97644ab8bb2f7147f2"
+    },
+    {
+      "path": "control/system/K01_HUMAN_ERROR_CONTROL_POLICY_HEC001_v1.md",
+      "bytes": 1794,
+      "sha256": "e7879e7c0fe97b7f2c0e5551e36e2476c5c64262169abce7d58a09aa8dbd13a7"
+    },
+    {
+      "path": "control/system/K01_MEDTAS_PACKAGE_MANIFEST_v3.json",
+      "bytes": 5319,
+      "sha256": "ec67f15bef8b39525e2b8fdddc7ee867a6784b4a174529872cc26961a95c6d38"
+    },
+    {
+      "path": "control/system/K01_MEDTAS_PACKAGE_MANIFEST_v4.json",
+      "bytes": 9740,
+      "sha256": "ac1bb40f695a7946cb9419bd5bac4e314ee3be5fdbe1fc11fd36bde52921db47"
+    },
+    {
+      "path": "control/system/K01_MEDTAS_PACKAGE_MANIFEST_v5.json",
+      "bytes": 14501,
+      "sha256": "7d06b2573a0464926a66160a1a1d92407f2ccde47ef334ae46a1bd4d48f0e1bb"
+    },
+    {
+      "path": "control/system/K01_PART_IDENTITY_AUTHORITY_v1.json",
+      "bytes": 3976,
+      "sha256": "dac1d7ddcf5952d7200c8a7c05fe754e1df44c5a410655be34f1c1003d648c31"
+    },
+    {
+      "path": "control/system/MEDTAS_SYSTEM_OVERVIEW_v3.md",
+      "bytes": 2203,
+      "sha256": "12cc4941c66c053b2b4e97b6a7f0af304cd5cda7255096558603efa724957c0f"
+    },
+    {
+      "path": "control/system/STATIC_AUDIT_MEDTAS_v4.json",
+      "bytes": 313,
+      "sha256": "164235dd6fd3578f3e08cfb65208dbe1c8d83bbf213ec9b5997d0177e143f54c"
+    },
+    {
+      "path": "control/system/STATIC_AUDIT_MEDTAS_v5.json",
+      "bytes": 713,
+      "sha256": "d5a2d9a222ec313bbbf45941951c01e4aaf699e319d9cff9870e5371e139ac12"
+    },
+    {
+      "path": "control/system/STATIC_AUDIT_MEDTAS_v6.json",
+      "bytes": 851,
+      "sha256": "2ef8602195bb0e797258dcefab1182327600889b8127f24e601589ed20a8eb67"
+    },
+    {
+      "path": "docs/design/trade_studies/K01_J2_COMPACT_TRADE_STUDY_v2.json",
+      "bytes": 2421,
+      "sha256": "3d3d4abd719a95f79db238182e28171438e84a20df30647017c096bd2c756c35"
+    },
+    {
+      "path": "docs/design/trade_studies/K01_J2_COMPACT_TRADE_STUDY_v2.md",
+      "bytes": 2410,
+      "sha256": "0f41f7a0a22c5260b304e3383d19f46b579e100aae76e2d0f2fb81df63e8317f"
+    },
+    {
+      "path": "docs/design/trade_studies/K01_J2_PILOT_INNER_CLEARANCE_TRADE_v1.json",
+      "bytes": 2191,
+      "sha256": "556fbb963e4d9db1c986b0f00a328c86e6353bfaf91b6df8b3ba90c5cf9b6021"
+    },
+    {
+      "path": "docs/technology/K01_TECHNOLOGY_SYSTEM_v2.md",
+      "bytes": 604,
+      "sha256": "7bfb5b912550da87e90514a7cff3bb03ae17f1e79ce04949e56f42177fd832e1"
+    },
+    {
+      "path": "reports/ai/current/K01_AI_ENGINEERING_CONTEXT_CURRENT.md",
+      "bytes": 817,
+      "sha256": "f3a1396c74f0a0c7d37470159c57da11bf87d2e8674c23daa44f05f9a7b51aec"
+    },
+    {
+      "path": "reports/ai/current/K01_AI_HANDOFF_AUDIT_20260904.json",
+      "bytes": 802,
+      "sha256": "94abc3a7280af1a8a08f6c4f9b69781860c5101d043e7e63ebe69f47dd7e04de"
+    },
+    {
+      "path": "reports/analysis/current/K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1.json",
+      "bytes": 1383,
+      "sha256": "02f26ebc77dda96757ac7695dc79a404a7c646142200bd26299c65b97ecc88fc"
+    },
+    {
+      "path": "reports/analysis/current/K01_J2_C2_MECHANICAL_SCREEN_v1.json",
+      "bytes": 2030,
+      "sha256": "4bb2c2bad12c7925e194d1ac6c49d9159b47d8688d723ecea7e4cb75ce888b9d"
+    },
+    {
+      "path": "reports/bom/K01_BOM_AUDIT_study_c2.json",
+      "bytes": 6384,
+      "sha256": "84ce9b6042d55a98b492efa923f7035528fffacc4f95a43b345b83d3fe2be439"
+    },
+    {
+      "path": "reports/bom/K01_BOM_RECONCILIATION_study_c2.json",
+      "bytes": 8107,
+      "sha256": "c8f82591071c5921bb72c7e3c3193b0699de8f04df5ca7a11f8cfb8bad364f08"
+    },
+    {
+      "path": "reports/cad/current/K01_GATE04D_C2_EVIDENCE_NORMALIZED_v1.json",
+      "bytes": 1566,
+      "sha256": "82a8e3ec2e843cc35c26f2e11194f156024a01971fee120c01e3c0fc331b20af"
+    },
+    {
+      "path": "reports/cad/current/K01_GATE04D_C2_INTERFERENCE.json",
+      "bytes": 1436,
+      "sha256": "94bcc7349b7f4ff68b60f6fed0ce085215becf666c89f3e0630d33edb53ff11b"
+    },
+    {
+      "path": "reports/cad/current/K01_GATE04D_C2_INTERFERENCE_20260904_170502.log",
+      "bytes": 550,
+      "sha256": "b761c1a5024225d1927d30b8ad84477257848412ce492497908f2d957338e267"
+    },
+    {
+      "path": "reports/cad/current/K01_GATE04D_C2_INTERFERENCE_DELTA.json",
+      "bytes": 2210,
+      "sha256": "e3190f249360a15d95c5801bf8b892252bd7bc14027c9a846477a1bb5840e86d"
+    },
+    {
+      "path": "reports/cad/current/K01_GATE04D_C2_TYPED_BUILD.json",
+      "bytes": 968,
+      "sha256": "a824f07b997bca19b7a9ccdfdf88c5bc68cbe0426a9f8cb885055a3ef5266e05"
+    },
+    {
+      "path": "reports/cad/current/K01_GATE04D_C2_TYPED_BUILD_20260904_153714.log",
+      "bytes": 2817,
+      "sha256": "a9322e79bb512ed053c5c79445a3f54936d84c31e2ccb110d8d206d2fca78f42"
+    },
+    {
+      "path": "reports/cad/current/K01_GATE04D_C2_TYPED_BUILD_20260904_165102.log",
+      "bytes": 3166,
+      "sha256": "c1c1de6ac1c2e1d19ea49eeadb1a760b922c595521c457d38c500f2678f5388f"
+    },
+    {
+      "path": "reports/cad/current/K01_GATE04D_C2_VERIFY.json",
+      "bytes": 528,
+      "sha256": "ab514dbf7b47994f8fc9277ef9a0c531bb9eca0fab72407a3b85c13e775b9e0a"
+    },
+    {
+      "path": "reports/cad/current/K01_GATE04D_C2_VERIFY_20260904_153842.log",
+      "bytes": 1424,
+      "sha256": "10dcd78a0fed563e57552b9310d8b7141a5f73922ce6021ee253e64e2d7f4881"
+    },
+    {
+      "path": "reports/cad/current/K01_GATE04D_C2_VERIFY_20260904_165225.log",
+      "bytes": 1432,
+      "sha256": "6dc06ae8b6896362ba11adfe4b41e61262caf25aaed28b769ea13459d357b256"
+    }
+  ]
+}

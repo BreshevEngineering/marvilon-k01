@@ -1,0 +1,38 @@
+{
+  "schema": "k01.t06.service_galling_plan.v2",
+  "title": "T06 — service/galling qualification",
+  "status": "PLAN_READY / PROCESS_SELECTION_OPEN",
+  "scope": [
+    "3xM2.5 J2 clamp screws",
+    "P006 M12x1 service plug"
+  ],
+  "facts": [
+    "Repeated dry austenitic-stainless threaded service is a galling risk and is not accepted as the production process.",
+    "The exact anti-galling method must be compatible with the contamination/cleanliness rules of the assembly."
+  ],
+  "qualification_candidate": {
+    "cycles": 50,
+    "note": "50 cycles remains an engineering qualification candidate until the service-life requirement is formally released.",
+    "record": [
+      "assembly/removal torque",
+      "visible pickup",
+      "debris",
+      "thread damage",
+      "tool engagement",
+      "post-cycle leak test"
+    ]
+  },
+  "process_options_to_select": [
+    "controlled compatible thread lubricant on non-wetted thread surfaces",
+    "qualified coated/plated stainless service fastener where lubricant is prohibited",
+    "replaceable J2 clamp screws after defined service interval"
+  ],
+  "acceptance": [
+    "No seizure.",
+    "No thread pickup requiring P003/P006 repair.",
+    "No unacceptable metallic debris.",
+    "P006 service tool remains functional.",
+    "Leak acceptance passes after final cycle."
+  ],
+  "next": "Select one production anti-galling route after T05 preload/torque basis is known."
+}

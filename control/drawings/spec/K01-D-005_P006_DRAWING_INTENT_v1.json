@@ -1,0 +1,87 @@
+{
+  "schema": "k01_drawing_intent_v1",
+  "drawing_no": "K01-D-005",
+  "part_no": "K01-P-006",
+  "description": "Retaining Plug",
+  "status": "RELEASE_CANDIDATE_NOT_APPROVED",
+  "nominal_geometry_authority": "native SOLIDWORKS model",
+  "projection": "FIRST_ANGLE",
+  "sheet": "A3",
+  "units": "mm",
+  "views": [
+    "SECTION_AA",
+    "END_SERVICE",
+    "ISOMETRIC_REFERENCE"
+  ],
+  "characteristics": [
+    {
+      "id": "P006-C01",
+      "feature": "retaining thread",
+      "type": "THREAD",
+      "spec": "M12×1-6g ×6",
+      "source": "controlled P006",
+      "view": "SECTION_AA",
+      "inspection": "thread ring gauge"
+    },
+    {
+      "id": "P006-C02",
+      "feature": "head OD",
+      "type": "SIZE",
+      "spec": "Ø11.50 h9 (11.457…11.500)",
+      "source": "WP-T03",
+      "view": "SECTION_AA",
+      "inspection": "micrometer"
+    },
+    {
+      "id": "P006-C03",
+      "feature": "through bore",
+      "type": "SIZE",
+      "spec": "Ø6.00",
+      "source": "controlled P006",
+      "view": "SECTION_AA",
+      "inspection": "plug gauge"
+    },
+    {
+      "id": "P006-C04",
+      "feature": "service drive",
+      "type": "HOLE_PATTERN",
+      "spec": "2× Ø1.50 +0.05/0 blind ×1.20±0.05 deep on PCD Ø8.50 BASIC, 180° BASIC",
+      "source": "WP-T03",
+      "view": "END_SERVICE",
+      "inspection": "pin gauge + depth/CMM"
+    },
+    {
+      "id": "P006-C05",
+      "feature": "service drive position",
+      "type": "GD&T",
+      "spec": "position Ø0.10 relative to P006 thread axis",
+      "source": "WP-T03",
+      "view": "END_SERVICE",
+      "inspection": "CMM/optical"
+    },
+    {
+      "id": "P006-C06",
+      "feature": "P002 axial relief",
+      "type": "FUNCTIONAL",
+      "spec": "Ø9.10×0.06 relief; resulting P002 float 0.04…0.08",
+      "source": "K01 assembly/service router",
+      "view": "DETAIL_RELIEF",
+      "inspection": "CMM + assembly feeler/axial measurement"
+    },
+    {
+      "id": "P006-C07",
+      "feature": "material",
+      "type": "MATERIAL",
+      "spec": "AISI 316L / EN 1.4404",
+      "source": "controlled material",
+      "view": "TITLE",
+      "inspection": "CoC"
+    }
+  ],
+  "general_notes": [
+    "UNLESS IDENTIFIED AS REFERENCE, RELEASE CHARACTERISTICS SHALL BE INSPECTABLE TO THE SPECIFIED LIMITS.",
+    "UNSPECIFIED NOMINAL GEOMETRY: CONTROLLED NATIVE SOLIDWORKS MODEL. DO NOT SCALE DRAWING.",
+    "DEBURR; BREAK SHARP EDGES 0.1–0.2 UNLESS FUNCTIONAL EDGE IS SPECIFIED.",
+    "CLEAN/PASSIVATE 316L AS APPROVED PROCESS; NO ABRASIVE DAMAGE ON SEAL/FIT SURFACES."
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "k01_j2_production_release_package_v1",
+  "release_id": "J2-C2R1-PR1",
+  "design": "Gate04D-C2R1",
+  "status": "DESIGN_GEOMETRY_FROZEN / PRODUCTION_RELEASE_HOLD",
+  "geometry_freeze": {
+    "status": "PASS",
+    "facts": [
+      "OD33",
+      "3×M2.5 PCD26.5",
+      "P003/P007 316L",
+      "Ø14.10 H7/g6 datum pilot",
+      "P007 L35",
+      "16×1.5 seal architecture",
+      "0 new hard interference",
+      "0 active mate errors"
+    ]
+  },
+  "release_tasks": [
+    {
+      "task": "T03",
+      "status": "ENGINEERING_DEFINITION_PASS / CAD_IMPLEMENTATION_OPEN"
+    },
+    {
+      "task": "T04",
+      "status": "DESIGN_CLASS_SELECTED / SUPPLIER_QUALIFICATION_OPEN"
+    },
+    {
+      "task": "T05",
+      "status": "ANALYTIC_SCREEN_PASS / LOCAL_FEA_AND_TORQUE_CALIBRATION_OPEN"
+    },
+    {
+      "task": "T06",
+      "status": "ARCHITECTURE_DEFINED / QUALIFICATION_OPEN"
+    },
+    {
+      "task": "T07",
+      "status": "RUN_REQUIRED_IN_SOLIDWORKS"
+    },
+    {
+      "task": "T08",
+      "status": "TOOL_READY / APPLY_AFTER_REVIEW"
+    },
+    {
+      "task": "T09",
+      "status": "DRAWING_V3_TOOL_READY / NATIVE_OUTPUT_REVIEW_OPEN"
+    },
+    {
+      "task": "T10",
+      "status": "INPUT_FREEZE_OPEN"
+    }
+  ],
+  "promotion_rule": "Atomic P003/P007 stable promotion only after production-release tasks resolve to PASS and technical filter has no HOLD/OPEN/STALE applicable gates.",
+  "do_not_reopen_without_evidence": [
+    "OD33 round flange",
+    "3×M2.5/PCD26.5",
+    "P007 L35",
+    "J2 removable architecture"
+  ],
+  "seal_release_strategy": {
+    "candidate": "post-cured low-outgassing FKM 75A for bounded current BOF baseline",
+    "fallback": "FFKM 75A if media/temperature qualification rejects FKM or application envelope cannot be bounded",
+    "status": "HOLD — exact compound/media/local-temperature evidence required"
+  },
+  "release_holds": [
+    "T04 exact J2-local temperature + process/cleaning media envelope + elastomer compound qualification"
+  ]
+}

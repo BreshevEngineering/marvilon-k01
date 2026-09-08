@@ -1,0 +1,32 @@
+{
+  "schema": "k01.femm_readiness.v1",
+  "title": "K01 magnetic-actuator FEMM readiness",
+  "current_state": "SOLVER_INSTALLED_BY_USER / FINGERPRINT_PENDING / MAGNETIC_PRODUCTION_INPUTS_OPEN",
+  "geometry": {
+    "current_full_geometric_basis": "Gate04D-C2R1 full verification assembly",
+    "next_mechanical_basis": "Gate04E full C2R1 + P006 service verification assembly",
+    "rule": "Start screening after Gate04E readback; final release uses the final released geometry/input fingerprint."
+  },
+  "B001": {
+    "selected_candidate": "Sm2Co17 / S280",
+    "lot_dimensions": "OPEN — measure purchased lot D and L",
+    "Br_T_demagnetization_data": "OPEN — obtain supplier lot/certificate data",
+    "radial_fit": "OPEN_AFTER_REAL_DIMENSIONS"
+  },
+  "P015": {
+    "description": "Dual Coil Bobbin",
+    "prototype_material": "PLA",
+    "production_material": "OPEN",
+    "winding_turns_wire_leads": "OPEN",
+    "current_geometry_fingerprint": "PENDING CAD/API extraction"
+  },
+  "screening_rule": "A screening FEMM model may use explicitly tagged candidate assumptions. It must not be promoted to FINAL FEMM evidence.",
+  "final_release_rule": "Final FEMM requires actual B001 lot dimensions + Br(T)/temperature data, production P015 winding/material data, released stroke/current/temperature envelope, input hashes, mesh sensitivity and bench comparison.",
+  "next_actions": [
+    "Run CHECK_FEMM_INSTALL.cmd to fingerprint the installed solver.",
+    "Complete Gate04E P006 candidate and full-assembly verification.",
+    "Measure B001 magnet lot D and L; record each magnet.",
+    "Obtain B001 supplier remanence/demagnetization/temperature data.",
+    "Extract current P015 geometry and freeze production winding/material inputs."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "k01_workpackage_v1",
+  "task_id": "T05",
+  "title": "M2.5 preload / threads / OD33 flange contact-separation",
+  "status": "ANALYTIC_SCREEN_PASS / LOCAL_FEA_AND_TORQUE_CALIBRATION_OPEN",
+  "fastener_candidate": "3× ISO 4762 M2.5×0.45, A4-70 class; exact finish/lubrication/supplier under T06",
+  "preload_design_window_N_per_screw": [
+    200,
+    300
+  ],
+  "preload_target_N_per_screw": 250,
+  "capacity": {
+    "proof_screen_N_per_screw": 1525.86,
+    "female_thread_strip_screen_N_per_screw": 930.42,
+    "SF_thread_at_300N": 3.1,
+    "SF_proof_at_300N": 5.09
+  },
+  "separation": {
+    "total_min_preload_N": 600,
+    "seal_force_design_max_N": 300,
+    "pressure_reaction_N": 3.1225,
+    "residual_contact_force_min_N": 296.877,
+    "status": "PASS_POSITIVE_CONTACT"
+  },
+  "local_screens": {
+    "socket_head_OD_assumption_mm": 4.5,
+    "head_bearing_pressure_at_300N_MPa": 32.26,
+    "conservative_P007_radial_strip_bending_MPa": 135.6,
+    "screen_yield_316L_MPa": 170,
+    "bending_status": "PASS_SCREEN",
+    "note": "strip model uses only one head-diameter effective width and is intentionally conservative; final local FEA is verification authority"
+  },
+  "torque_process": {
+    "released_torque_Nm": "OPEN",
+    "rule": "Do not release torque from T=KFd alone. Calibrate exact screw finish/lubricant against 200–300 N preload using torque-clamp testing analogous to ISO 16047; record lot/process.",
+    "expected_engineering_range_only_Nm": "~0.06–0.15 for K≈0.12–0.20; NOT a drawing torque."
+  },
+  "decision": "OD33/3×M2.5 is not rejected by preload/thread/contact screening. Keep geometry frozen and run one local structural/contact verification after seal/process freeze."
+}

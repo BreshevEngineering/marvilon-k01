@@ -1,0 +1,253 @@
+{
+  "schema": "k01_file_registry_v7",
+  "entries": [
+    {
+      "id": "STATE",
+      "name": "Derived engineering state",
+      "domain": "STATE",
+      "root": "repo",
+      "candidates": [
+        "control/state/K01_STATE_CURRENT.json"
+      ]
+    },
+    {
+      "id": "ARCH",
+      "name": "MEDTAS authority architecture",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "control/system/K01_MEDTAS_ARCHITECTURE_v1.json"
+      ]
+    },
+    {
+      "id": "EVENTS",
+      "name": "Engineering event ledger",
+      "domain": "STATE",
+      "root": "repo",
+      "candidates": [
+        "control/state/K01_EVENT_LEDGER.jsonl"
+      ]
+    },
+    {
+      "id": "TASKS",
+      "name": "Derived task register",
+      "domain": "STATE",
+      "root": "repo",
+      "candidates": [
+        "control/state/K01_TASK_REGISTER_CURRENT.json"
+      ]
+    },
+    {
+      "id": "EDS-DERIVED",
+      "name": "Derived EDS gate state",
+      "domain": "STATE",
+      "root": "repo",
+      "candidates": [
+        "control/state/K01_EDS_DERIVED_CURRENT.json"
+      ]
+    },
+    {
+      "id": "RVM-DERIVED",
+      "name": "Derived J2 verification matrix",
+      "domain": "STATE",
+      "root": "repo",
+      "candidates": [
+        "control/state/K01_RVM_DERIVED_CURRENT.json"
+      ]
+    },
+    {
+      "id": "DOS-J2",
+      "name": "J2 C2R1 engineering dossier",
+      "domain": "DECISION",
+      "root": "repo",
+      "candidates": [
+        "control/decision_system/K01_J2_C2R1_ENGINEERING_DOSSIER_v1.json"
+      ]
+    },
+    {
+      "id": "EDR005",
+      "name": "EDR-005 compact flange",
+      "domain": "DECISION",
+      "root": "repo",
+      "candidates": [
+        "control/decision_system/records/EDR-005_J2_COMPACT_FLANGE_v3.json"
+      ]
+    },
+    {
+      "id": "WORK-T03",
+      "name": "T03 pilot/tool work package",
+      "domain": "DECISION",
+      "root": "repo",
+      "candidates": [
+        "control/workpacks/K01_T03_PILOT_TOOL_WORKPACKAGE_v1.json"
+      ]
+    },
+    {
+      "id": "EDR019",
+      "name": "EDR-019 pilot clearance",
+      "domain": "DECISION",
+      "root": "repo",
+      "candidates": [
+        "control/decision_system/records/EDR-019_J2_PILOT_INNER_CLEARANCE_v1.json"
+      ]
+    },
+    {
+      "id": "CI-J2",
+      "name": "CI-J2 dossier",
+      "domain": "CONFIGURATION",
+      "root": "repo",
+      "candidates": [
+        "control/configuration_items/CI-J2_DOSSIER_v1.json"
+      ]
+    },
+    {
+      "id": "R1-BUILD",
+      "name": "C2R1 native build",
+      "domain": "LIVE_REPORT",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_TYPED_BUILD.json"
+      ]
+    },
+    {
+      "id": "R1-VERIFY",
+      "name": "C2R1 assembly verify",
+      "domain": "LIVE_REPORT",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_VERIFY.json"
+      ]
+    },
+    {
+      "id": "R1-INT",
+      "name": "C2R1 interference",
+      "domain": "LIVE_REPORT",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_INTERFERENCE.json"
+      ]
+    },
+    {
+      "id": "MECH",
+      "name": "J2 M2.5 mechanical screen",
+      "domain": "ANALYSIS",
+      "root": "repo",
+      "candidates": [
+        "reports/analysis/current/K01_J2_C2_MECHANICAL_SCREEN_v1.json"
+      ]
+    },
+    {
+      "id": "ROOTCAUSE",
+      "name": "C2 rejection root cause",
+      "domain": "ANALYSIS",
+      "root": "repo",
+      "candidates": [
+        "reports/analysis/current/K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1.json"
+      ]
+    },
+    {
+      "id": "BOM-RAW",
+      "name": "C2R1 raw BOM audit",
+      "domain": "BOM",
+      "root": "repo",
+      "candidates": [
+        "reports/bom/K01_BOM_AUDIT_study_c2r1.json"
+      ]
+    },
+    {
+      "id": "BOM-REC",
+      "name": "C2R1 BOM reconciliation",
+      "domain": "BOM",
+      "root": "repo",
+      "candidates": [
+        "reports/bom/K01_BOM_RECONCILIATION_study_c2r1.json",
+        "bom/K01_BOM_RECONCILED_study_c2r1.json"
+      ]
+    },
+    {
+      "id": "DRAW-QA-OLD",
+      "name": "P003 current drawing quality review",
+      "domain": "DRAWING",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_DRAWING_QUALITY_P003_C2R1_v1.json"
+      ]
+    },
+    {
+      "id": "DRAW-V2",
+      "name": "C2R1 drawing V2 report",
+      "domain": "DRAWING",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_TYPED_DRAWINGS_V2.json"
+      ]
+    },
+    {
+      "id": "DRAW-V2-LOG",
+      "name": "Latest drawing V2 log",
+      "domain": "LIVE_LOG",
+      "root": "repo",
+      "patterns": [
+        "reports/cad/current/K01_GATE04D_C2R1_TYPED_DRAWINGS_V2_*.log"
+      ]
+    },
+    {
+      "id": "DRAW-P003-V2",
+      "name": "P003 manufacturing-draft V2 PDF",
+      "domain": "DRAWING",
+      "root": "cad",
+      "patterns": [
+        "drawings/gate04d_c2r1_draft/K01-D-003*DRAFT_C2R1_API_V2*.PDF"
+      ]
+    },
+    {
+      "id": "DRAW-P007-V2",
+      "name": "P007 manufacturing-draft V2 PDF",
+      "domain": "DRAWING",
+      "root": "cad",
+      "patterns": [
+        "drawings/gate04d_c2r1_draft/K01-D-006*DRAFT_C2R1_API_V2*.PDF"
+      ]
+    },
+    {
+      "id": "GIT-CLASS",
+      "name": "Git path classification",
+      "domain": "GIT",
+      "root": "repo",
+      "candidates": [
+        "reports/git/K01_GIT_CLASSIFICATION_CURRENT.json"
+      ]
+    },
+    {
+      "id": "MASTER",
+      "name": "Current K01 master",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "master/K01_master.json",
+        "master/K01_master_v2.json"
+      ],
+      "patterns": [
+        "master/K01_master*.json"
+      ]
+    },
+    {
+      "id": "SOURCE-REG",
+      "name": "Source/evidence registry",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "control/evidence/K01_SOURCE_REGISTRY_v1.json"
+      ]
+    },
+    {
+      "id": "AI-HANDOFF",
+      "name": "Current AI handoff ZIP",
+      "domain": "HANDOFF",
+      "root": "repo",
+      "candidates": [
+        "handoff/current/K01_AI_HANDOFF_CURRENT.zip"
+      ]
+    }
+  ]
+}

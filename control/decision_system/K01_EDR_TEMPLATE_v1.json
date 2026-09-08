@@ -1,0 +1,21 @@
+{
+  "schema": "k01_edr_v1",
+  "edr_id": "EDR-XXX",
+  "title": "",
+  "subsystem": "",
+  "class": "A|B|C",
+  "status": "DRAFT|HOLD|VERIFIED_CANDIDATE|RELEASED|REJECTED|SUPERSEDED",
+  "requirement_problem": "",
+  "current_baseline": "",
+  "alternatives": [],
+  "assumptions": [],
+  "mandatory_criteria": {},
+  "optimization": {"weights": {}, "scores": {}, "sensitivity": ""},
+  "selected_alternative": "",
+  "rationale": "",
+  "rejected_alternatives": [],
+  "affected_artifacts": [],
+  "open_items": [],
+  "evidence_files": [],
+  "release": {"decision": "HOLD", "date": "", "approved_by": ""}
+}

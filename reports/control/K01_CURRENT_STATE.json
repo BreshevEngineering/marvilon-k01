@@ -1,0 +1,894 @@
+﻿{
+    "schema":  "k01.current_state.v1",
+    "generated":  "2026-09-06T12:06:33.8104165+03:00",
+    "requirements":  {
+                         "total":  17,
+                         "released":  12,
+                         "blockers":  5,
+                         "rows":  [
+                                      {
+                                          "id":  "REQ-K01-FUNC-001",
+                                          "title":  "Hermetic calibration actuation",
+                                          "statement":  "Provide controlled linear calibration motion without a moving shaft penetration through the containment boundary.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "architecture review + assembly verification",
+                                          "gates":  [
+                                                        "functional_requirement",
+                                                        "architecture_integrity"
+                                                    ],
+                                          "gate_states":  [
+                                                              "PASS",
+                                                              "PASS"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  false
+                                      },
+                                      {
+                                          "id":  "REQ-K01-SERVICE-001",
+                                          "title":  "J2 service access",
+                                          "statement":  "P003↔P007 shall remain removable so P006/follower service does not require destruction of the containment can.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "CAD assembly/service review",
+                                          "gates":  [
+                                                        "architecture_integrity",
+                                                        "assembly",
+                                                        "serviceability"
+                                                    ],
+                                          "gate_states":  [
+                                                              "PASS",
+                                                              "PASS",
+                                                              "PASS_WITH_LIMIT"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  false
+                                      },
+                                      {
+                                          "id":  "REQ-K01-STROKE-001",
+                                          "title":  "Calibration stroke",
+                                          "statement":  "Functional rod stroke shall be 10.0 mm.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "CAD mate/envelope verification + bench stroke measurement",
+                                          "gates":  [
+                                                        "functional_requirement",
+                                                        "interfaces_datums"
+                                                    ],
+                                          "gate_states":  [
+                                                              "PASS",
+                                                              "PASS"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  false
+                                      },
+                                      {
+                                          "id":  "REQ-K01-PORT-001",
+                                          "title":  "Feedthrough envelope",
+                                          "statement":  "The chamber-side feedthrough interface shall fit within a nominal Ø10 mm input envelope unless a controlled interface change is approved.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "CAD interface check",
+                                          "gates":  [
+                                                        "interfaces_datums",
+                                                        "documentation_traceability"
+                                                    ],
+                                          "gate_states":  [
+                                                              "PASS",
+                                                              "HOLD"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  false
+                                      },
+                                      {
+                                          "id":  "REQ-K01-P007-L-001",
+                                          "title":  "P007 overall length",
+                                          "statement":  "P007 overall length shall remain 35.0 mm for the C2R1 mechanical baseline.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "native CAD readback",
+                                          "gates":  [
+                                                        "interfaces_datums",
+                                                        "assembly"
+                                                    ],
+                                          "gate_states":  [
+                                                              "PASS",
+                                                              "PASS"
+                                                          ],
+                                          "evidence":  [
+                                                           "K01_GATE04D_C2R1_TYPED_BUILD.json"
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  true,
+                                          "release_blocker":  false
+                                      },
+                                      {
+                                          "id":  "REQ-K01-J2-LOC-001",
+                                          "title":  "J2 locating architecture",
+                                          "statement":  "J2 transverse location shall be controlled by the Ø14.10 H7/g6 pilot/locator pair and axial location by the metal mating faces; clamp screws shall not be redundant datum controls.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "CAD mate/readback + tolerance analysis",
+                                          "gates":  [
+                                                        "interfaces_datums",
+                                                        "tolerance_dimensional_chains",
+                                                        "assembly"
+                                                    ],
+                                          "gate_states":  [
+                                                              "PASS",
+                                                              "PASS_WITH_LIMIT",
+                                                              "PASS"
+                                                          ],
+                                          "evidence":  [
+                                                           "K01_GATE04D_C2R1_VERIFY.json"
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  true,
+                                          "release_blocker":  false
+                                      },
+                                      {
+                                          "id":  "REQ-K01-MAT-P003-001",
+                                          "title":  "P003 material",
+                                          "statement":  "P003 production material shall be AISI 316L / EN 1.4404.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "material certificate + CAD/BOM reconciliation",
+                                          "gates":  [
+                                                        "materials_environment",
+                                                        "supply_chain"
+                                                    ],
+                                          "gate_states":  [
+                                                              "HOLD",
+                                                              "HOLD"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  false
+                                      },
+                                      {
+                                          "id":  "REQ-K01-MAT-P007-001",
+                                          "title":  "P007 material",
+                                          "statement":  "P007 production material shall be AISI 316L / EN 1.4404.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "material certificate + CAD/BOM reconciliation",
+                                          "gates":  [
+                                                        "materials_environment",
+                                                        "supply_chain"
+                                                    ],
+                                          "gate_states":  [
+                                                              "HOLD",
+                                                              "HOLD"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  false
+                                      },
+                                      {
+                                          "id":  "REQ-K01-MAT-P006-001",
+                                          "title":  "P006 production material",
+                                          "statement":  "P006 production material shall be AISI 316L / EN 1.4404.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "Native SOLIDWORKS material readback + reconciled BOM + material certificate at manufacture",
+                                          "gates":  [
+                                                        "materials_environment",
+                                                        "manufacturability_process_capability",
+                                                        "serviceability"
+                                                    ],
+                                          "gate_states":  [
+                                                              "HOLD",
+                                                              "PASS_WITH_LIMIT",
+                                                              "PASS_WITH_LIMIT"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  false
+                                      },
+                                      {
+                                          "id":  "REQ-K01-ENV-DP-001",
+                                          "title":  "J2 differential-pressure envelope",
+                                          "statement":  "J2/P007 qualification differential-pressure envelope shall be -0.20 ... +0.20 bar.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "Final P007 Static +0.20 bar; Buckling -0.20 bar; leak acceptance test",
+                                          "gates":  [
+                                                        "load_cases",
+                                                        "static_strength_contact",
+                                                        "buckling_stability",
+                                                        "pressure_vacuum_sealing",
+                                                        "safety_regulatory_containment"
+                                                    ],
+                                          "gate_states":  [
+                                                              "PASS_WITH_LIMIT",
+                                                              "PASS_WITH_LIMIT",
+                                                              "STALE",
+                                                              "HOLD",
+                                                              "HOLD"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  false
+                                      },
+                                      {
+                                          "id":  "REQ-K01-ENV-TEMP-001",
+                                          "title":  "J2 local temperature envelope",
+                                          "statement":  "For the current release, accepted CFD establishes J2 local temperature at 50-55 degC; use 55 degC as design maximum.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "Existing CFD is the controlled thermal basis; reopen only after a controlled geometry/flow/thermal-boundary change",
+                                          "gates":  [
+                                                        "thermal",
+                                                        "materials_environment",
+                                                        "pressure_vacuum_sealing"
+                                                    ],
+                                          "gate_states":  [
+                                                              "PASS_WITH_LIMIT",
+                                                              "HOLD",
+                                                              "HOLD"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  false
+                                      },
+                                      {
+                                          "id":  "REQ-K01-MEDIA-001",
+                                          "title":  "J2 media/cleaning envelope",
+                                          "statement":  "Process gas, condensate and cleaning-media species that may contact J2 shall be bounded for elastomer qualification.",
+                                          "requirement_status":  "OPEN",
+                                          "verification_method":  "media specification + supplier compatibility statement + leak qualification",
+                                          "gates":  [
+                                                        "materials_environment",
+                                                        "pressure_vacuum_sealing",
+                                                        "safety_regulatory_containment"
+                                                    ],
+                                          "gate_states":  [
+                                                              "HOLD",
+                                                              "HOLD",
+                                                              "HOLD"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  true
+                                      },
+                                      {
+                                          "id":  "REQ-K01-SEAL-001",
+                                          "title":  "J2 static seal",
+                                          "statement":  "J2 shall use a static face seal architecture sized for the released media, temperature, pressure and service envelope.",
+                                          "requirement_status":  "PARTIAL",
+                                          "verification_method":  "gland tolerance stack + compression-force qualification + leak test",
+                                          "gates":  [
+                                                        "pressure_vacuum_sealing",
+                                                        "thermal",
+                                                        "serviceability"
+                                                    ],
+                                          "gate_states":  [
+                                                              "HOLD",
+                                                              "PASS_WITH_LIMIT",
+                                                              "PASS_WITH_LIMIT"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  true
+                                      },
+                                      {
+                                          "id":  "REQ-K01-LEAK-001",
+                                          "title":  "Leak acceptance",
+                                          "statement":  "A quantitative J2 leak-test acceptance criterion shall be defined before production release.",
+                                          "requirement_status":  "OPEN",
+                                          "verification_method":  "qualified leak test",
+                                          "gates":  [
+                                                        "pressure_vacuum_sealing",
+                                                        "inspection_testability",
+                                                        "safety_regulatory_containment"
+                                                    ],
+                                          "gate_states":  [
+                                                              "HOLD",
+                                                              "HOLD",
+                                                              "HOLD"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  true
+                                      },
+                                      {
+                                          "id":  "REQ-K01-SERVICE-CYCLES-001",
+                                          "title":  "Repeated service life",
+                                          "statement":  "Required number of J2/P006 service cycles shall be released; provisional 50-cycle screening is not itself a product requirement.",
+                                          "requirement_status":  "OPEN",
+                                          "verification_method":  "service-cycle qualification",
+                                          "gates":  [
+                                                        "fatigue_cyclic",
+                                                        "serviceability",
+                                                        "reliability_fmea"
+                                                    ],
+                                          "gate_states":  [
+                                                              "HOLD",
+                                                              "PASS_WITH_LIMIT",
+                                                              "HOLD"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  true
+                                      },
+                                      {
+                                          "id":  "REQ-K01-ACT-FORCE-001",
+                                          "title":  "Actuator force coefficient",
+                                          "statement":  "Final electromagnetic design shall meet or exceed the released minimum force/force-coefficient envelope over stroke, current, temperature and production tolerances.",
+                                          "requirement_status":  "CANDIDATE",
+                                          "verification_method":  "FEMM sensitivity sweep + bench acceptance",
+                                          "gates":  [
+                                                        "magnetic_electromagnetic",
+                                                        "load_cases",
+                                                        "inspection_testability"
+                                                    ],
+                                          "gate_states":  [
+                                                              "HOLD",
+                                                              "PASS_WITH_LIMIT",
+                                                              "HOLD"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  true
+                                      },
+                                      {
+                                          "id":  "REQ-K01-TPD-001",
+                                          "title":  "Production technical definition",
+                                          "statement":  "Released manufacturing definition shall unambiguously communicate functionally necessary size, fit, GD\u0026T, material, finish, process and inspection characteristics without contradictory dimensions.",
+                                          "requirement_status":  "RELEASED",
+                                          "verification_method":  "drawing semantic QA + visual QA + inspection-plan cross-check",
+                                          "gates":  [
+                                                        "documentation_traceability",
+                                                        "inspection_testability",
+                                                        "manufacturability_process_capability"
+                                                    ],
+                                          "gate_states":  [
+                                                              "HOLD",
+                                                              "HOLD",
+                                                              "PASS_WITH_LIMIT"
+                                                          ],
+                                          "evidence":  [
+
+                                                       ],
+                                          "covered_by_gate":  true,
+                                          "covered_by_evidence":  false,
+                                          "release_blocker":  false
+                                      }
+                                  ]
+                     },
+    "gates":  {
+                  "total":  24,
+                  "blockers":  14,
+                  "rows":  [
+                               {
+                                   "gate":  "functional_requirement",
+                                   "status":  "PASS",
+                                   "base_status":  "PASS",
+                                   "reason":  "C2R1 retains a removable static-sealed P003↔P007 interface.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "architecture_integrity",
+                                   "status":  "PASS",
+                                   "base_status":  "PASS",
+                                   "reason":  "Pilot locates radially, metal faces axially, one hole clocks, 3 screws clamp, O-ring seals.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "interfaces_datums",
+                                   "status":  "PASS",
+                                   "base_status":  "PASS",
+                                   "reason":  "Ø14.10 H7/g6 and mating face are verified; one clamp-hole axis is used only for clocking.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "load_cases",
+                                   "status":  "HOLD_REQUIREMENT",
+                                   "base_status":  "PASS_WITH_LIMIT",
+                                   "reason":  "Blocked by requirement(s): REQ-K01-ACT-FORCE-001",
+                                   "requirement_ids":  [
+                                                           "REQ-K01-ACT-FORCE-001"
+                                                       ]
+                               },
+                               {
+                                   "gate":  "static_strength_contact",
+                                   "status":  "PASS_WITH_LIMIT",
+                                   "base_status":  "PASS_WITH_LIMIT",
+                                   "reason":  "For 200–300 N/screw candidate preload, thread strip SF is ≥3.10 at 300 N/screw; conservative local strip-bending screen is ≈135.6 MPa at 300 N/screw vs 170 MPa 316L screening yield.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "buckling_stability",
+                                   "status":  "STALE",
+                                   "base_status":  "STALE",
+                                   "reason":  "Historical λ1=1883.6 is strong but must be refreshed on final geometry.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "torsion_rotational",
+                                   "status":  "PASS_WITH_LIMIT",
+                                   "base_status":  "PASS_WITH_LIMIT",
+                                   "reason":  "Two-pin P006 face-drive candidate has low nominal pin stresses at 0.5 N·m structural tool capacity; actual P006 seating torque remains process-controlled.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "fatigue_cyclic",
+                                   "status":  "HOLD_REQUIREMENT",
+                                   "base_status":  "HOLD",
+                                   "reason":  "Blocked by requirement(s): REQ-K01-SERVICE-CYCLES-001",
+                                   "requirement_ids":  [
+                                                           "REQ-K01-SERVICE-CYCLES-001"
+                                                       ]
+                               },
+                               {
+                                   "gate":  "thermal",
+                                   "status":  "HOLD_REQUIREMENT",
+                                   "base_status":  "PASS_WITH_LIMIT",
+                                   "reason":  "Blocked by requirement(s): REQ-K01-SEAL-001",
+                                   "requirement_ids":  [
+                                                           "REQ-K01-SEAL-001"
+                                                       ]
+                               },
+                               {
+                                   "gate":  "dynamics_vibration",
+                                   "status":  "HOLD",
+                                   "base_status":  "HOLD",
+                                   "reason":  "No released locking method yet.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "pressure_vacuum_sealing",
+                                   "status":  "HOLD_REQUIREMENT",
+                                   "base_status":  "HOLD",
+                                   "reason":  "Blocked by requirement(s): REQ-K01-MEDIA-001, REQ-K01-SEAL-001, REQ-K01-LEAK-001",
+                                   "requirement_ids":  [
+                                                           "REQ-K01-MEDIA-001",
+                                                           "REQ-K01-SEAL-001",
+                                                           "REQ-K01-LEAK-001"
+                                                       ]
+                               },
+                               {
+                                   "gate":  "fluid_cfd",
+                                   "status":  "PASS",
+                                   "base_status":  "PASS",
+                                   "reason":  "External J2 flange package does not change the controlled sample-flow/rod wetted geometry.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "magnetic_electromagnetic",
+                                   "status":  "HOLD_REQUIREMENT",
+                                   "base_status":  "HOLD",
+                                   "reason":  "Blocked by requirement(s): REQ-K01-ACT-FORCE-001",
+                                   "requirement_ids":  [
+                                                           "REQ-K01-ACT-FORCE-001"
+                                                       ]
+                               },
+                               {
+                                   "gate":  "materials_environment",
+                                   "status":  "HOLD_REQUIREMENT",
+                                   "base_status":  "HOLD",
+                                   "reason":  "Blocked by requirement(s): REQ-K01-MEDIA-001",
+                                   "requirement_ids":  [
+                                                           "REQ-K01-MEDIA-001"
+                                                       ]
+                               },
+                               {
+                                   "gate":  "tolerance_dimensional_chains",
+                                   "status":  "PASS_WITH_LIMIT",
+                                   "base_status":  "PASS_WITH_LIMIT",
+                                   "reason":  "C2R1 functional chains are treated as worst-case assembly/interface stacks; pilot/head and fastener-pattern stacks currently pass at study tolerances.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "manufacturability_process_capability",
+                                   "status":  "PASS_WITH_LIMIT",
+                                   "base_status":  "PASS_WITH_LIMIT",
+                                   "reason":  "Round OD33, reamed/turned locating features and 3-hole pattern are simple. Small M2.5 tapping in 316L and P006 Ø1.5 blind service holes need shop capability confirmation.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "assembly",
+                                   "status":  "PASS",
+                                   "base_status":  "PASS",
+                                   "reason":  "Native verify PASS with 0 active mate errors and no new hard interference.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "serviceability",
+                                   "status":  "HOLD_REQUIREMENT",
+                                   "base_status":  "PASS_WITH_LIMIT",
+                                   "reason":  "Blocked by requirement(s): REQ-K01-SEAL-001, REQ-K01-SERVICE-CYCLES-001",
+                                   "requirement_ids":  [
+                                                           "REQ-K01-SEAL-001",
+                                                           "REQ-K01-SERVICE-CYCLES-001"
+                                                       ]
+                               },
+                               {
+                                   "gate":  "inspection_testability",
+                                   "status":  "HOLD_REQUIREMENT",
+                                   "base_status":  "HOLD",
+                                   "reason":  "Blocked by requirement(s): REQ-K01-LEAK-001, REQ-K01-ACT-FORCE-001",
+                                   "requirement_ids":  [
+                                                           "REQ-K01-LEAK-001",
+                                                           "REQ-K01-ACT-FORCE-001"
+                                                       ]
+                               },
+                               {
+                                   "gate":  "reliability_fmea",
+                                   "status":  "HOLD_REQUIREMENT",
+                                   "base_status":  "HOLD",
+                                   "reason":  "Blocked by requirement(s): REQ-K01-SERVICE-CYCLES-001",
+                                   "requirement_ids":  [
+                                                           "REQ-K01-SERVICE-CYCLES-001"
+                                                       ]
+                               },
+                               {
+                                   "gate":  "safety_regulatory_containment",
+                                   "status":  "HOLD_REQUIREMENT",
+                                   "base_status":  "HOLD",
+                                   "reason":  "Blocked by requirement(s): REQ-K01-MEDIA-001, REQ-K01-LEAK-001",
+                                   "requirement_ids":  [
+                                                           "REQ-K01-MEDIA-001",
+                                                           "REQ-K01-LEAK-001"
+                                                       ]
+                               },
+                               {
+                                   "gate":  "supply_chain",
+                                   "status":  "HOLD",
+                                   "base_status":  "HOLD",
+                                   "reason":  "Size/classes are selected; exact M2.5 finish/lubrication and FFKM supplier compound are open.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "cost_value",
+                                   "status":  "PASS_WITH_LIMIT",
+                                   "base_status":  "PASS_WITH_LIMIT",
+                                   "reason":  "OD33 round turned flange and 3 screws minimize machining. FFKM is expensive but one small safety-critical seal has low system-level cost; FKM remains an application-approved cost-down option only after media compatibility proof.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               },
+                               {
+                                   "gate":  "documentation_traceability",
+                                   "status":  "HOLD",
+                                   "base_status":  "HOLD",
+                                   "reason":  "MEDTAS v8 separates nominal CAD geometry, released allowable variation, decision rationale, verification evidence and derived state; Drawing Intent implements design-intent-to-inspection traceability.",
+                                   "requirement_ids":  [
+
+                                                       ]
+                               }
+                           ]
+              },
+    "provenance":  {
+                       "tracked":  4,
+                       "unhashed":  4,
+                       "rows":  [
+                                    {
+                                        "gate":  "interfaces_datums",
+                                        "path":  "reports\\cad\\current\\K01_GATE04D_C2R1_VERIFY.json",
+                                        "status":  "UNHASHED",
+                                        "details":  {
+                                                        "status":  "UNHASHED",
+                                                        "provenance_path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_VERIFY.json.provenance.json",
+                                                        "mismatches":  [
+
+                                                                       ]
+                                                    }
+                                    },
+                                    {
+                                        "gate":  "assembly",
+                                        "path":  "reports\\cad\\current\\K01_GATE04D_C2R1_VERIFY.json",
+                                        "status":  "UNHASHED",
+                                        "details":  {
+                                                        "status":  "UNHASHED",
+                                                        "provenance_path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_VERIFY.json.provenance.json",
+                                                        "mismatches":  [
+
+                                                                       ]
+                                                    }
+                                    },
+                                    {
+                                        "gate":  "change_impact",
+                                        "path":  "reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_BUILD.json",
+                                        "status":  "UNHASHED",
+                                        "details":  {
+                                                        "status":  "UNHASHED",
+                                                        "provenance_path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_BUILD.json.provenance.json",
+                                                        "mismatches":  [
+
+                                                                       ]
+                                                    }
+                                    },
+                                    {
+                                        "gate":  "documentation_traceability",
+                                        "path":  "reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_BUILD.json",
+                                        "status":  "UNHASHED",
+                                        "details":  {
+                                                        "status":  "UNHASHED",
+                                                        "provenance_path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_BUILD.json.provenance.json",
+                                                        "mismatches":  [
+
+                                                                       ]
+                                                    }
+                                    }
+                                ]
+                   },
+    "bom":  {
+                "schema":  "k01_bom_reconciled_v1",
+                "created":  "2026-09-04T18:41:00.7255691+03:00",
+                "status":  "HOLD",
+                "source_audit":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\bom\\K01_BOM_AUDIT_study_c2r1.json",
+                "row_count":  13,
+                "release_blockers":  7,
+                "metadata_projection_required":  13,
+                "unmapped":  0,
+                "rows":  [
+                             {
+                                 "part_no":  "K01-P-014",
+                                 "description":  "Front Guide Retaining Ring / IN Stop",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "OPEN; 1.4310 / AISI 301 candidate",
+                                 "material_status":  "OPEN",
+                                 "cad_native_material":  "",
+                                 "cad_partno":  "K01-P-014_Front_Guide_Retaining_Ring",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "HOLD",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\parts\\K01-P-014_Front_Guide_Retaining_Ring.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-P-008",
+                                 "description":  "Internal Magnetic Follower",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "AISI 316L / EN 1.4404",
+                                 "material_status":  "CONTROLLED",
+                                 "cad_native_material":  "1.4404 (X2CrNiMo17-12-2)",
+                                 "cad_partno":  "K01-P-008_Internal_Magnetic_Follower",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "PASS",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\parts\\K01-P-008_Internal_Magnetic_Follower.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-P-013",
+                                 "description":  "Follower End Cap",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "AISI 316L / EN 1.4404",
+                                 "material_status":  "CONTROLLED / RETENTION QUALIFICATION OPEN",
+                                 "cad_native_material":  "AISI Type 316L stainless steel",
+                                 "cad_partno":  "K01-P-013_Follower_End_Cap",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "HOLD",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\parts\\K01-P-013_Follower_End_Cap.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-P-016",
+                                 "description":  "Long Run Interface Boss",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "AISI 316L current CAD; production Long Run compatibility/weld route OPEN",
+                                 "material_status":  "CONDITIONAL / OPEN",
+                                 "cad_native_material":  "AISI Type 316L stainless steel",
+                                 "cad_partno":  "K01-P-016_Long_Run_Interface_Boss",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "HOLD",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\parts\\K01-P-016_Long_Run_Interface_Boss.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-P-001",
+                                 "description":  "Calibration Rod",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "AISI 316L / EN 1.4404",
+                                 "material_status":  "CONTROLLED",
+                                 "cad_native_material":  "AISI Type 316L stainless steel",
+                                 "cad_partno":  "K01-P-001_Calibration_Rod",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "PASS",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\parts\\K01-P-001_Calibration_Rod.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-P-002",
+                                 "description":  "Rear Guide / Anti-Rotation Bushing",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "TECAPEEK PVX black baseline",
+                                 "material_status":  "BASELINE / PRODUCTION GRADE REVIEW",
+                                 "cad_native_material":  "TECAPEEK PVX black (Ensinger)",
+                                 "cad_partno":  "K01-P-002_Guide_Bushing",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "HOLD",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\parts\\K01-P-002_Guide_Bushing.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-P-004",
+                                 "description":  "Front Guide Bushing",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "TECAPEEK PVX black baseline",
+                                 "material_status":  "BASELINE / PRODUCTION GRADE REVIEW",
+                                 "cad_native_material":  "TECAPEEK PVX black (Ensinger)",
+                                 "cad_partno":  "K01-P-004_Front_Guide_Bushing",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "HOLD",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\parts\\K01-P-004_Front_Guide_Bushing.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-P-003",
+                                 "description":  "Cartridge Body",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "AISI 316L / EN 1.4404",
+                                 "material_status":  "CONTROLLED",
+                                 "cad_native_material":  "AISI Type 316L stainless steel",
+                                 "cad_partno":  "K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "PASS",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-P-007",
+                                 "description":  "Hermetic Magnetic Can",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "AISI 316L / EN 1.4404",
+                                 "material_status":  "CONTROLLED",
+                                 "cad_native_material":  "AISI Type 316L stainless steel",
+                                 "cad_partno":  "K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "PASS",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-P-006",
+                                 "description":  "Retaining Plug",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "AISI 316L / EN 1.4404",
+                                 "material_status":  "CONTROLLED",
+                                 "cad_native_material":  "AISI Type 316L stainless steel",
+                                 "cad_partno":  "K01-P-006_Retaining_Plug",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "PASS",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\parts\\K01-P-006_Retaining_Plug.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-P-009",
+                                 "description":  "Rear Stop Washer",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "AISI 316L / EN 1.4404",
+                                 "material_status":  "CONTROLLED",
+                                 "cad_native_material":  "AISI Type 316L stainless steel",
+                                 "cad_partno":  "K01-P-009_Rear_Stop_Washer",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "PASS",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\parts\\K01-P-009_Rear_Stop_Washer.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-P-015",
+                                 "description":  "Dual Coil Bobbin",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "MAKE",
+                                 "material_authority":  "Prototype/current CAD material not production release; PPS grade/winding/leads OPEN",
+                                 "material_status":  "OPEN",
+                                 "cad_native_material":  "PPS",
+                                 "cad_partno":  "K01-P-015_Dual_Coil_Bobbin",
+                                 "cad_identity_source":  "FILENAME_FALLBACK_NONAUTHORITATIVE",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "HOLD",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\parts\\K01-P-015_Dual_Coil_Bobbin.SLDPRT"
+                             },
+                             {
+                                 "part_no":  "K01-B-001",
+                                 "description":  "Internal SmCo Magnet",
+                                 "qty":  1,
+                                 "unit":  "ea",
+                                 "make_buy":  "BUY",
+                                 "material_authority":  "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN",
+                                 "material_status":  "OPEN LOT DATA",
+                                 "cad_native_material":  "Sm2Co17 S280 — MTS SM-SA-8x8",
+                                 "cad_partno":  "Open CASCADE STEP translator 7.9 1",
+                                 "cad_identity_source":  "CUSTOM_PROPERTY",
+                                 "metadata_sync":  "PROJECTION_REQUIRED",
+                                 "release":  "HOLD",
+                                 "path":  "D:\\Marvilon\\K01\\cad\\parts\\K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.SLDPRT"
+                             }
+                         ]
+            },
+    "github":  {
+                   "schema":  "k01_github_remote_health_v1",
+                   "created":  "2026-09-05T09:35:30.0928652+03:00",
+                   "status":  "PASS_REMOTE_REACHABLE",
+                   "origin":  "https://github.com/BreshevEngineering/marvilon-k01.git",
+                   "branch":  "main",
+                   "remote_head":  "bbe2535ca696287a2500edd86ad67ca342762541\tHEAD",
+                   "read_only":  true,
+                   "note":  "Uses git remote get-url and git ls-remote only. No fetch, pull, push, stage or commit is performed."
+               },
+    "femm":  null,
+    "current_action":  "CLOSE_REQUIREMENTS"
+}

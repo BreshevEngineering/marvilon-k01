@@ -1,0 +1,12 @@
+{
+  "artifact_hash": "9e46e1e5f6bf27df4078520c4ea2b5fd3cf8e8aa4f379341b55fc58b78ae4531",
+  "built_state_hash": "6529ae10bc054dd94cbaf83c71457e84a97771fcc619a83f6a02ec2f2419e9ab",
+  "limitations": [
+    "PROJECT-STRUCTURE-REVIEW: 33 unclassified root object(s) require classification; no automatic move performed"
+  ],
+  "node_id": "K01.PROJECT.STRUCTURE",
+  "producer": {
+    "tool": "project_structure_v1_7.py"
+  },
+  "schema": "medtas.build_record.v1"
+}

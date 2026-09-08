@@ -1,0 +1,20 @@
+{
+  "schema": "k01.drawing_recovery_plan.v1",
+  "status": "ACTIVE",
+  "v3_disposition": "REJECTED_FOR_PRODUCTION",
+  "reason": "V3 contains contradictory visible dimensions and excessive model-annotation import; cosmetic rearrangement is not acceptable.",
+  "method_basis": [
+    "Manual of Engineering Drawing: dimension for manufacture/function, datum-based control, true/basic position for patterns.",
+    "Mechanical Tolerance Stackup and Analysis: functional dimensioning, worst-case chains, interface/assembly shift and GD&T relationships."
+  ],
+  "implementation_sequence": [
+    "1. Use Gate04E P006 as the pilot because it is geometrically simple and its service feature is newly controlled.",
+    "2. Create one native SOLIDWORKS first-angle drawing from a controlled DRWDOT template.",
+    "3. Import only model dimensions explicitly marked for drawing from selected named features; never the entire model.",
+    "4. Add true native hole callout for the two service holes and datum/GD&T only where function requires them.",
+    "5. Run semantic QA: every displayed dimension must map to exactly one Drawing Definition characteristic; no contradictory duplicates.",
+    "6. Once the pilot is accepted, apply the same compiler to P003 and P007."
+  ],
+  "next_gate": "Gate04E P006 candidate must exist before the native P006 drawing pilot can be generated.",
+  "no_claim": "No production drawing is declared by this recovery package."
+}

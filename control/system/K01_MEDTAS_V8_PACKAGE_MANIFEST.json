@@ -1,0 +1,298 @@
+{
+  "schema": "k01_medtas_v8_update_manifest",
+  "created": "2026-09-04",
+  "package": "K01_MEDTAS_v8_UPDATE_20260904",
+  "extract_to": "D:\\BreshevEngineering\\marvilon-k01",
+  "installation_type": "CONTROLLED_UPDATE / MERGE INTO EXISTING K01 REPO",
+  "does_not_include": [
+    "native CAD binaries",
+    "mutable reports/cad current evidence",
+    "event ledger / derived current state",
+    "compiled bin folders",
+    "timestamp logs",
+    "reference books / copyrighted literature",
+    "Git index changes or commits"
+  ],
+  "files": [
+    {
+      "path": "00_INSTALL_MEDTAS_v8.md",
+      "bytes": 4966,
+      "sha256": "ca57de71e35d6a3459cf20790696a2e918fb8eaee3a8f6b6d8bd8fae2a05af9d"
+    },
+    {
+      "path": "00_MEDTAS_V8_PREFLIGHT.cmd",
+      "bytes": 542,
+      "sha256": "9e5a7eb91163817de20a63ee2594479886ac6b1f51f08c89d5546b63496d140a"
+    },
+    {
+      "path": "cad_api/bom/03_BOM_PROPERTY_PROJECTION_DRY_RUN.cmd",
+      "bytes": 1338,
+      "sha256": "63ef50937eb491468347fdf5981fef28e4ffbc01bc8c71f1f3b3f0bb26204c04"
+    },
+    {
+      "path": "cad_api/bom/04_BOM_PROPERTY_PROJECTION_APPLY.cmd",
+      "bytes": 1131,
+      "sha256": "b8e9a40ac2399e339a4541508be38d78e81dd7f170d6c1ac573352df5372a5ff"
+    },
+    {
+      "path": "cad_api/bom/K01_BOM_Extract.cs",
+      "bytes": 8183,
+      "sha256": "c14c5bb32b2660e37481c4d6690fc138c41ef64e5d14b906bbe3f4f3d933c80e"
+    },
+    {
+      "path": "cad_api/bom/K01_BOM_PropertyProjection.cs",
+      "bytes": 3937,
+      "sha256": "9ba859458e61dbf0730f7bd386ad624135b1b11bdba709c3c6a1f18bd08e8502"
+    },
+    {
+      "path": "cad_api/bom/K01_BOM_Reconcile.ps1",
+      "bytes": 2958,
+      "sha256": "e5f4be3e416cf8dd1a07b6fb819aee30727f4125a72128dbd4d46fff1d89c0e2"
+    },
+    {
+      "path": "cad_api/bom/RUN_K01_BOM.cmd",
+      "bytes": 1188,
+      "sha256": "bc18dbf8a80aba7988f22d383ea7d5292d822950e646e0613f29609835304378"
+    },
+    {
+      "path": "cad_api/bom/RUN_K01_BOM_PIPELINE_C2R1.cmd",
+      "bytes": 603,
+      "sha256": "ee621a257f5af5102f3809fb10354786a7fe24bfeafb550779f2e31c85b8e674"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/06_GATE04D_C2R1_DRAWINGS_V3.cmd",
+      "bytes": 1507,
+      "sha256": "4fba18f355b8fff6e32560fdcdf86e896e826e023ecf3a06312be77d7317bd07"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/K01Gate04D_C2R1_DrawingsV3.cs",
+      "bytes": 8957,
+      "sha256": "81a5ee4018a5225ea8cb6a83d11d61b3233aa0b5e3d35496b5d7d8b23d4aa839"
+    },
+    {
+      "path": "cad_api/gates/gate04d_c2r1/K01_GATE04D_C2R1_PARAMS_v1.json",
+      "bytes": 2280,
+      "sha256": "6c788e007900849d69a230cb8861face91760a8b2bed807758c1d3493039d59a"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/K01Gate04E_P006_ServiceDrive.cs",
+      "bytes": 4240,
+      "sha256": "9d84020c81d39c030f7c1a4d74009442ff6db0623fe88c825030aae1d4712484"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/RUN_GATE04E_P006_SERVICE_BUILD.cmd",
+      "bytes": 1816,
+      "sha256": "7ed7dfcb9200c826500fa607287027d1b1f40390080da84f3b7ab4054977d652"
+    },
+    {
+      "path": "control/command_center/K01_Command_Center_v8.html",
+      "bytes": 18970,
+      "sha256": "d163699dd1a086df40e179dd146ea5540dee018a9a2694051129fc6fe44fb996"
+    },
+    {
+      "path": "control/command_center/OPEN_K01_COMMAND_CENTER_V8.cmd",
+      "bytes": 371,
+      "sha256": "828259ad872496ed18b949f3fdbefd07b7a3f435cd87986b1bc6c5787a45b7be"
+    },
+    {
+      "path": "control/command_center/cc_server_v8.ps1",
+      "bytes": 8341,
+      "sha256": "73cd9726dba29fbff28019e2e4c9c7d19be332095c0d1386bb5ea83934a3d892"
+    },
+    {
+      "path": "control/command_center/data/K01_FILE_REGISTRY_v8.json",
+      "bytes": 7749,
+      "sha256": "c7177a1ce0ccb4d03b0958d1a483322859805fc4aad5d0864ba759e3d67dd3a9"
+    },
+    {
+      "path": "control/decision_system/K01_J2_C2R1_ENGINEERING_DOSSIER_v2.json",
+      "bytes": 6747,
+      "sha256": "fb1ec18f8980d37c5279584bbc425aa4a1bfefac8667b3451969fcaa1344797a"
+    },
+    {
+      "path": "control/drawings/K01_DRAWING_INTENT_LINT_v2.ps1",
+      "bytes": 5887,
+      "sha256": "67fc51766695b3955ef04ebdab456626d52d6b8e641245553e6a06e3f36f08c7"
+    },
+    {
+      "path": "control/drawings/K01_DRAWING_VISUAL_APPROVAL_v1.ps1",
+      "bytes": 1704,
+      "sha256": "2b5359960b92f2acad14ae6dade26a2006f8aa2aadf084a131859fd1f7d7226b"
+    },
+    {
+      "path": "control/drawings/K01_TPD_DRAWING_ASSURANCE_STANDARD_v1.json",
+      "bytes": 3181,
+      "sha256": "1e9ac40bb833869e9574c287fe6d47efe1d6db6f96e83a973b8a961534afb1d4"
+    },
+    {
+      "path": "control/drawings/RUN_K01_DRAWING_INTENT_LINT.cmd",
+      "bytes": 270,
+      "sha256": "ab35cd6f362a2d0e8c1979e2f9494cfe531faee296cde1863ca1c4e7868a580c"
+    },
+    {
+      "path": "control/drawings/RUN_K01_DRAWING_VISUAL_APPROVAL.cmd",
+      "bytes": 136,
+      "sha256": "b674253feaa115b963b160f5a0b6c0e03d06dd7c143dc8fd362fdeaac2cf8aae"
+    },
+    {
+      "path": "control/drawings/spec/K01-D-003_P003_DRAWING_INTENT_v1.json",
+      "bytes": 2906,
+      "sha256": "d3534e3529f2088f6a0bc256f5d11334e0e8828b4e7526be5f1b0e470c987c0c"
+    },
+    {
+      "path": "control/drawings/spec/K01-D-005_P006_DRAWING_INTENT_v1.json",
+      "bytes": 2549,
+      "sha256": "0f982ee19a415aca95c46421c4edf9c806f99af8b1c2255084097926d3ec5885"
+    },
+    {
+      "path": "control/drawings/spec/K01-D-006_P007_DRAWING_INTENT_v1.json",
+      "bytes": 3070,
+      "sha256": "3adb40c46f75ab4f8289eb8cecfca2b2fd46b052ea98e0d913f256e396dbc298"
+    },
+    {
+      "path": "control/evidence/K01_SOURCE_REGISTRY_v2.json",
+      "bytes": 14353,
+      "sha256": "fdf388f8d0532bfde8bcd14c5c745850d5a1018c18f61ce95fac7b8e323f37f7"
+    },
+    {
+      "path": "control/git/K01_GIT_CLASSIFY_v2.ps1",
+      "bytes": 3993,
+      "sha256": "2c31d96bff6f19efca53a087ca78038545656ff174654e1a5a44c6f249b350d0"
+    },
+    {
+      "path": "control/git/RUN_K01_GIT_CLASSIFY_V2.cmd",
+      "bytes": 363,
+      "sha256": "a4b943814c557cb7594bf26d763a8afade03a54473c4aa2965bf70209f1321aa"
+    },
+    {
+      "path": "control/release/K01_J2_C2R1_PRODUCTION_RELEASE_PACKAGE_v1.json",
+      "bytes": 2000,
+      "sha256": "780245ae052072e0f2a638eef36c01e8885e86ebd77807061121f86481733b85"
+    },
+    {
+      "path": "control/state/K01_STATE_ENGINE_v8.ps1",
+      "bytes": 7301,
+      "sha256": "a85447828e5f299bcf5c713cb0a55b837e8ffc575baf0d0b61b8e27b3663b1ed"
+    },
+    {
+      "path": "control/system/K01_MEDTAS_V8_CHANGELOG.md",
+      "bytes": 2261,
+      "sha256": "a1648f32a80e33077444ef6406d0ec77d714241abfde6c0f05915e138f56f42f"
+    },
+    {
+      "path": "control/system/K01_MEDTAS_V8_PREFLIGHT.ps1",
+      "bytes": 4726,
+      "sha256": "cd8827480b3e090b78d7bb7aca68e43088675137b5c6cd48403deff42d6935cd"
+    },
+    {
+      "path": "control/system/STATIC_AUDIT_MEDTAS_v8.json",
+      "bytes": 3124,
+      "sha256": "f924c934944b160dcf75a63a1f09ceeef37cc2289a066107e97cd6d64a32e335"
+    },
+    {
+      "path": "control/technical_filter/K01_J2_C2R1_TECHNICAL_FILTER_v1.json",
+      "bytes": 15168,
+      "sha256": "4f36be8457dfdb6d015f49ee068908cfef43ffa3cb81e2dbe0275447f57f0e30"
+    },
+    {
+      "path": "control/technical_filter/K01_TECHNICAL_FILTER_LINT_v1.ps1",
+      "bytes": 1512,
+      "sha256": "211def6e5bebe55bd33922e49aa4f46e3e5aa5c183d2a17e889a0e53492b1560"
+    },
+    {
+      "path": "control/technical_filter/K01_TECHNICAL_FILTER_SCHEMA_v1.json",
+      "bytes": 1862,
+      "sha256": "49c8238d4e53765e9ab8c2d7dd15832217433d91bc2471b4cff31f32ea3ac5e8"
+    },
+    {
+      "path": "control/technical_filter/RUN_K01_TECHNICAL_FILTER_LINT.cmd",
+      "bytes": 134,
+      "sha256": "27f25b26d972526d5d92d0e97d1f98e7b9b4efc1d58f04c9108f4f2b2fb7dc95"
+    },
+    {
+      "path": "control/templates/K01_ACTUATION_BENCH_ACCEPTANCE_TEMPLATE.json",
+      "bytes": 342,
+      "sha256": "2cc322914efe347ab03e331a8c5da44497343545a457acb588225df113bc72ac"
+    },
+    {
+      "path": "control/templates/K01_FINAL_FEMM_RELEASE_TEMPLATE.json",
+      "bytes": 306,
+      "sha256": "adf210eb89d6062856585827fe93f4c7185a6a640a1d0ef15fc323f5632e98af"
+    },
+    {
+      "path": "control/templates/K01_J2_LOCAL_CONTACT_RELEASE_TEMPLATE.json",
+      "bytes": 359,
+      "sha256": "6f6b74ac61c305ca718519450dcd43d613fac11a545de045df8bf48354e20ebb"
+    },
+    {
+      "path": "control/templates/K01_J2_SEAL_QUALIFICATION_TEMPLATE.json",
+      "bytes": 421,
+      "sha256": "37cca6b7ca54bd70b53b06ab835c6f2738c3e4c29da3dc9b7eba2ce51fe8d2fc"
+    },
+    {
+      "path": "control/templates/K01_J2_SERVICE_CYCLES_TEMPLATE.json",
+      "bytes": 255,
+      "sha256": "cc460e687e45a8a4efc6bca5cd48ba30271eef1e9c2880c1292b2d26f90ab7c4"
+    },
+    {
+      "path": "control/templates/K01_M2P5_TORQUE_CLAMP_TEMPLATE.json",
+      "bytes": 404,
+      "sha256": "cc794a46cef868b7bbd6226e77535f7ebb6cdc83956af9106ea7dde638006512"
+    },
+    {
+      "path": "control/templates/K01_P007_BUCKLING_C2R1_RELEASE_TEMPLATE.json",
+      "bytes": 303,
+      "sha256": "03aa0b58265f743642c264deead0696e020441ae3e851ba8e83f16f9a36f04da"
+    },
+    {
+      "path": "control/templates/K01_P007_STATIC_C2R1_RELEASE_TEMPLATE.json",
+      "bytes": 383,
+      "sha256": "ecef37b065ada5fe543ddc695b5b9b939d1837de685e6c14d8d8dc80dcd71e1f"
+    },
+    {
+      "path": "control/workpacks/K01_T03_PILOT_TOOL_WORKPACKAGE_v2.json",
+      "bytes": 1913,
+      "sha256": "2ef42cf815bf067e58ab0e1c1afa53412d1051dfb76ba8d15dea716d9292d2ea"
+    },
+    {
+      "path": "control/workpacks/K01_T04_MEDIA_ENVELOPE_v1.json",
+      "bytes": 2060,
+      "sha256": "464110d3b24065e540c31adf493455bd99517327cc97e67c1a271634e3eec610"
+    },
+    {
+      "path": "control/workpacks/K01_T04_SEAL_PRELOAD_WORKPACKAGE_v1.json",
+      "bytes": 3139,
+      "sha256": "2f3e8fe16f951cc511fb24892ac7cef7aebe173563a313a4fa851128a762b66d"
+    },
+    {
+      "path": "control/workpacks/K01_T05_J2_CLAMP_STRENGTH_WORKPACKAGE_v1.json",
+      "bytes": 1720,
+      "sha256": "c71ea0792b88c239d0a68f6f0c30221508ab1acd52d14d64f00dad340b1c7bbf"
+    },
+    {
+      "path": "control/workpacks/K01_T06_THERMAL_GALLING_SERVICE_WORKPACKAGE_v1.json",
+      "bytes": 2473,
+      "sha256": "4c380071eb9c12936303ff062b368b104ec51c0806cfcf932ba00712d1781d50"
+    },
+    {
+      "path": "control/workpacks/K01_T07_P007_STRUCTURAL_REFRESH_v1.json",
+      "bytes": 1585,
+      "sha256": "bc666df84bb01b05e3a650b0404a95e4c2b651627808cf226c31455314cfb571"
+    },
+    {
+      "path": "control/workpacks/K01_T08_BOM_PROPERTY_PROJECTION_v1.json",
+      "bytes": 938,
+      "sha256": "d9f7cf7cde63a8c8df4feb0ce0c7afc99ba06d41bc07fa87a3130cd7506338de"
+    },
+    {
+      "path": "control/workpacks/K01_T09_DRAWING_TPD_RELEASE_v1.json",
+      "bytes": 1057,
+      "sha256": "34ec8de30d199e2da38bea69fe8250777da89f05b4db54de002b2e923d75c337"
+    },
+    {
+      "path": "control/workpacks/K01_T10_FEMM_BENCH_RELEASE_v1.json",
+      "bytes": 1223,
+      "sha256": "7f2d6db759e21e750762bc63b8fdb9d2a2bbd1ae023f523d072f6be96e0c4e4c"
+    }
+  ]
+}

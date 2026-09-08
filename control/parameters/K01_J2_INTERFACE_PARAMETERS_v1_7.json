@@ -1,0 +1,20 @@
+{
+  "schema": "k01.interface_parameters.j2.v1_7",
+  "project": "K01",
+  "status": "FROZEN_C2R1_SCREENING_BASELINE",
+  "authority": "controlled design parameters; CAD semantic readback must verify rather than silently redefine them",
+  "source_basis": [
+    "Gate04D-C2R1 verified compact flange baseline",
+    "K01 project control current release thread"
+  ],
+  "interface": {
+    "flange_od_mm": 33.0,
+    "fastener_count": 3,
+    "fastener_thread": "M2.5",
+    "fastener_pcd_mm": 26.5,
+    "pilot_nominal_diameter_mm": 14.10,
+    "pilot_fit": "H7/g6",
+    "p007_overall_length_mm": 35.0
+  },
+  "policy": "These values are machine state. Command Center HTML must not duplicate them as literals. A controlled parameter revision is required to change them."
+}

@@ -1,0 +1,125 @@
+﻿[
+    {
+        "id":  "J2-R-001",
+        "requirement":  "Serviceable without destructive joining",
+        "status":  "PASS",
+        "evidence":  [
+                         "EDR-001",
+                         "CI-J2"
+                     ]
+    },
+    {
+        "id":  "J2-R-002",
+        "requirement":  "P003/P007 material 316L/1.4404",
+        "status":  "PASS",
+        "evidence":  [
+                         "R1-BUILD"
+                     ]
+    },
+    {
+        "id":  "J2-R-003",
+        "requirement":  "P007 OAL 35.0 mm",
+        "status":  "PASS",
+        "evidence":  [
+                         "R1-BUILD"
+                     ]
+    },
+    {
+        "id":  "J2-R-004",
+        "requirement":  "Radial location Ø14.10 H7/g6",
+        "status":  "PASS",
+        "evidence":  [
+                         "R1-BUILD",
+                         "R1-VERIFY"
+                     ]
+    },
+    {
+        "id":  "J2-R-005",
+        "requirement":  "Axial location metal-face to metal-face",
+        "status":  "PASS",
+        "evidence":  [
+                         "R1-VERIFY"
+                     ]
+    },
+    {
+        "id":  "J2-R-006",
+        "requirement":  "Clocking by one M2.5-hole axis",
+        "status":  "PASS",
+        "evidence":  [
+                         "R1-VERIFY"
+                     ]
+    },
+    {
+        "id":  "J2-R-007",
+        "requirement":  "Compact flange OD33.0",
+        "status":  "PASS",
+        "evidence":  [
+                         "R1-BUILD"
+                     ]
+    },
+    {
+        "id":  "J2-R-008",
+        "requirement":  "3×M2.5 pattern PCD26.5",
+        "status":  "PASS",
+        "evidence":  [
+                         "R1-BUILD"
+                     ]
+    },
+    {
+        "id":  "J2-R-009",
+        "requirement":  "No new hard interference",
+        "status":  "PASS",
+        "evidence":  [
+                         "R1-INT"
+                     ]
+    },
+    {
+        "id":  "J2-R-010",
+        "requirement":  "Thread/flange withstand released preload/service loads",
+        "status":  "OPEN",
+        "evidence":  [
+                         "MECH-SCREEN"
+                     ]
+    },
+    {
+        "id":  "J2-R-011",
+        "requirement":  "Static seal maintains containment",
+        "status":  "OPEN",
+        "evidence":  [
+                         "Seal/preload"
+                     ]
+    },
+    {
+        "id":  "J2-R-012",
+        "requirement":  "Serviceability after repeated cycles",
+        "status":  "OPEN",
+        "evidence":  [
+                         "Service/galling"
+                     ]
+    },
+    {
+        "id":  "J2-R-013",
+        "requirement":  "Production tolerances preserve seal/clearances",
+        "status":  "OPEN",
+        "evidence":  [
+                         "EDR-019"
+                     ]
+    },
+    {
+        "id":  "J2-R-014",
+        "requirement":  "P007 structural margins acceptable after J2 freeze",
+        "status":  "STALE",
+        "evidence":  [
+                         "Static/buckling history"
+                     ]
+    },
+    {
+        "id":  "J2-R-015",
+        "requirement":  "BOM/drawings/technology match release",
+        "status":  "HOLD",
+        "evidence":  [
+                         "BOM-REC",
+                         "DRAWING-QA"
+                     ]
+    }
+]

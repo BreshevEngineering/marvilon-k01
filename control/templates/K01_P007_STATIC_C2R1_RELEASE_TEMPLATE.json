@@ -1,0 +1,15 @@
+{
+  "schema": "k01_p007_static_release_v1",
+  "status": "OPEN",
+  "study": "K01_P007_STATIC_DP_POS_020bar_C2R1_RELEASE",
+  "model_hash": "OPEN",
+  "material": "316L / 1.4404",
+  "delta_p_bar": 0.2,
+  "max_von_mises_MPa": "OPEN",
+  "screen_yield_MPa": 170,
+  "SF": "OPEN",
+  "max_displacement_mm": "OPEN",
+  "reaction_N": "OPEN",
+  "mesh/convergence": "OPEN",
+  "evidence_files": []
+}

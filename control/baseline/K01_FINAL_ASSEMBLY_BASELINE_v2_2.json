@@ -1,0 +1,52 @@
+{
+  "schema": "k01.final_assembly_baseline.v2_2",
+  "project": "K01",
+  "status": "CANDIDATE_TO_PROMOTE_FROM_VERIFIED_GATE04E",
+  "source": "cad/candidates/gate04e_p006_service/verification/K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+  "target": "cad/final_candidate/R01/K01-A-001_Calibration_Module.SLDASM",
+  "expected_component_count": 13,
+  "identity_renames": {
+    "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM": "K01-A-001_Calibration_Module.SLDASM",
+    "K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE.SLDPRT": "K01-P-003_Cartridge_Body.SLDPRT",
+    "K01-P-006_Retaining_Plug_GATE04E_SERVICE_CANDIDATE.SLDPRT": "K01-P-006_Retaining_Plug.SLDPRT",
+    "K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT": "K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+    "K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.SLDPRT": "K01-B-001_Internal_SmCo_Magnet.SLDPRT"
+  },
+  "critical_geometry_mm": {
+    "A001.stroke": 10.0,
+    "P003.length": 38.0,
+    "P003.P004_seat_ID": 6.6,
+    "P003.stop_in": 12.0,
+    "P003.stop_out": 24.0,
+    "P003.J2_flange_OD": 33.0,
+    "P003.J2_pilot_OD": 14.1,
+    "P003.J2_pilot_ID": 12.0,
+    "P003.J2_pilot_length": 1.5,
+    "P003.J2_fastener_PCD": 26.5,
+    "P006.length": 8.0,
+    "P006.front_relief_depth": 0.06,
+    "P006.service_drive_hole_D": 1.5,
+    "P006.service_drive_depth": 1.2,
+    "P006.service_drive_PCD": 8.5,
+    "P007.net_OAL": 35.0,
+    "P007.thin_OD": 10.0,
+    "P007.thin_ID": 9.4,
+    "P007.wall": 0.3,
+    "P007.flange_OD": 33.0,
+    "P007.flange_thickness": 3.0,
+    "P007.locator_OD": 14.1,
+    "P007.locator_length": 2.0,
+    "P007.clearance_hole_D": 2.9,
+    "P007.fastener_PCD": 26.5
+  },
+  "known_conflicts": [
+    {
+      "id": "P007-C02-LOCATOR-LENGTH",
+      "live_verified_CAD_mm": 2.0,
+      "legacy_drawing_mm": 1.7,
+      "authority": "live_verified_CAD",
+      "status": "LEGACY_DRAWING_TO_SUPERSEDE_UNLESS_NEW_ENGINEERING_EVIDENCE"
+    }
+  ],
+  "expected_mate_count": 30
+}

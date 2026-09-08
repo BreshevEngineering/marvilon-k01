@@ -1,0 +1,17 @@
+{
+  "schema": "k01.drawing_p007_mbd_bindings.v1_9",
+  "drawing_no": "K01-D-006",
+  "part_number": "K01-P-007",
+  "policy": "Human-confirmed mapping from controlled characteristic ID to native DimXpert/PMI annotation. Empty binding is HOLD; automatic nominal-value matching does not authorize PMI.",
+  "bindings": {
+    "C01": null,
+    "C02": null,
+    "C03": null,
+    "C04": null,
+    "C05": null,
+    "C06": null,
+    "C07": null,
+    "C08": null,
+    "C11": null
+  }
+}

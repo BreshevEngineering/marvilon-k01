@@ -1,0 +1,17 @@
+{
+  "schema": "k01_m2p5_torque_clamp_qualification_v1",
+  "status": "OPEN",
+  "screw_supplier_part": "OPEN",
+  "grade": "A4-70 candidate",
+  "finish_lubricant": "OPEN",
+  "thread_condition": "OPEN",
+  "target_preload_N_per_screw": 250,
+  "accepted_preload_window_N": [
+    200,
+    300
+  ],
+  "calibrated_torque_Nm": "OPEN",
+  "sample_count": "OPEN",
+  "preload_scatter": "OPEN",
+  "evidence_files": []
+}

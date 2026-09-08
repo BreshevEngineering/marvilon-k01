@@ -1,0 +1,21 @@
+{
+  "limitations": [
+    "DRAWING-VERIFY-ARTIFACT-001: drawing artifact manifest missing",
+    "DRAWING-VERIFY-ARTIFACT-002: artifact generation is not PASS",
+    "DRAWING-VERIFY-PLAN-002: definition/release plan is not PASS",
+    "DRAWING-VERIFY-MISSING-PDF:K01-D-003,K01-D-005,K01-D-006,K01-D-012",
+    "DRAWING-VISUAL-001: explicit visual QA approval is missing/stale/not PASS for the current artifact set"
+  ],
+  "metrics": {
+    "artifact_set_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected_drawings": 4,
+    "pdf_drawings": 0,
+    "visual_approval": false
+  },
+  "node_id": "K01.DRAWING.VERIFY.GATE04E",
+  "notes": "",
+  "schema": "medtas.verification_record.v1",
+  "verdict": "HOLD",
+  "verified_artifact_hash": "a4595c31987db9ae2d13e1f40277a6c38a953e89e2d828c942af31f6df3133ab",
+  "verified_state_hash": "5e7d6a72cd60fab8ff7dbd89621b830ba5cfa2498266938f7c7de5dd6ab8752c"
+}

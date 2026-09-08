@@ -1,0 +1,15 @@
+﻿{
+    "schema":  "k01.workpackage_closeout.v1",
+    "id":  "T03",
+    "title":  "Pilot tolerance chain + P006 service drive",
+    "status":  "PASS_T03",
+    "engineering_definition":  "PASS",
+    "cad_implementation":  "PASS",
+    "material":  "AISI 316L / EN 1.4404",
+    "evidence":  [
+                     "reports/cad/current/K01_GATE04E_P006_SERVICE_BUILD.json",
+                     "reports/cad/current/K01_GATE04E_P006_SERVICE_VERIFY.json",
+                     "reports/bom/K01_BOM_RECONCILIATION_study_c2r1.json"
+                 ],
+    "residual_to_T06":  "Repeated service-cycle / galling qualification"
+}

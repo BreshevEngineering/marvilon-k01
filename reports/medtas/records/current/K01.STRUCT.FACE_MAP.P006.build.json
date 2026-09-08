@@ -1,0 +1,12 @@
+{
+  "artifact_hash": "f5d37c5e536f2ee1f300e5d6b1f31143c75c096e2b757220c8535356ea68be43",
+  "built_state_hash": "f71934dbc49c7a2c091968dc8914d6dd3839ec09992a717b236e2997ff1e32fe",
+  "limitations": [
+    "FACE-MAP-ROLE-001: automatic SolidWorks Simulation study role extraction/confirmation is required"
+  ],
+  "node_id": "K01.STRUCT.FACE_MAP.P006",
+  "producer": {
+    "tool": "build_face_map_candidate_v1_7.py"
+  },
+  "schema": "medtas.build_record.v1"
+}

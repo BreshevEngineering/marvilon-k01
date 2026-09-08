@@ -1,0 +1,104 @@
+{
+  "schema": "k01.status_model.v1_7",
+  "unknown_policy": "MISSING",
+  "buckets": {
+    "PASS": {
+      "severity": 0,
+      "label": "PASS"
+    },
+    "LIMIT": {
+      "severity": 1,
+      "label": "LIMIT"
+    },
+    "OPEN": {
+      "severity": 2,
+      "label": "OPEN"
+    },
+    "MISSING": {
+      "severity": 3,
+      "label": "MISSING"
+    },
+    "STALE": {
+      "severity": 4,
+      "label": "STALE"
+    },
+    "DRIFT": {
+      "severity": 4,
+      "label": "DRIFT"
+    },
+    "BLOCKED": {
+      "severity": 5,
+      "label": "BLOCKED"
+    },
+    "HOLD": {
+      "severity": 6,
+      "label": "HOLD"
+    },
+    "INFO": {
+      "severity": 0,
+      "label": "INFO"
+    }
+  },
+  "map": {
+    "PASS": "PASS",
+    "RELEASED": "PASS",
+    "PASS_REMOTE_REACHABLE": "PASS",
+    "FROZEN": "PASS",
+    "CURRENT": "PASS",
+    "PASS_WITH_LIMITATIONS": "LIMIT",
+    "PASS_WITH_LIMIT": "LIMIT",
+    "PARTIAL": "LIMIT",
+    "SCREEN": "LIMIT",
+    "QUALIFICATION_OPEN": "LIMIT",
+    "CANDIDATE": "OPEN",
+    "OPEN": "OPEN",
+    "REVIEW_REQUIRED": "OPEN",
+    "FRESH_UNVERIFIED": "OPEN",
+    "NOT_GENERATED": "MISSING",
+    "NOT_RUN": "MISSING",
+    "MBD_NOT_YET_AUTHORED": "MISSING",
+    "MISSING": "MISSING",
+    "STALE": "STALE",
+    "SUPERSEDED": "STALE",
+    "DRIFT": "DRIFT",
+    "BLOCKED": "BLOCKED",
+    "BLOCKED_UPSTREAM": "BLOCKED",
+    "BLOCKED_MBD_DEFINITION": "BLOCKED",
+    "BLOCKED_FACE_ROLE_BINDING": "BLOCKED",
+    "HOLD": "HOLD",
+    "HOLD_REQUIREMENT": "HOLD",
+    "FAIL": "HOLD",
+    "ERROR": "HOLD",
+    "FROZEN_C2R1_SCREENING_BASELINE": "PASS",
+    "AVAILABLE": "PASS",
+    "READY_FOR_DRAWING_ARTIFACT": "PASS",
+    "DEFINED_IN_MBD": "PASS",
+    "DERIVED_NON_DIMENSIONAL": "PASS",
+    "ALREADY_PRESENT_IN_MBD": "PASS",
+    "CANDIDATE_UNIQUE": "OPEN",
+    "GEOMETRY_CANDIDATE_UNIQUE": "OPEN",
+    "MANUAL_SEMANTIC_BIND_REQUIRED": "OPEN",
+    "AMBIGUOUS": "HOLD",
+    "NOT_FOUND": "MISSING",
+    "OPEN_SPEC": "OPEN",
+    "NEEDS_MBD_BIND": "OPEN",
+    "DEFINED_IN_CONTROL": "LIMIT",
+    "READY_ADAPTER_NOT_ENABLED": "OPEN",
+    "BLOCKED_EXPORT": "BLOCKED",
+    "HOLD_SEMANTIC_DRIFT": "HOLD",
+    "NOT_VERIFIED": "OPEN",
+    "PASS_TO_CONTINUE": "PASS",
+    "NOT_READY": "OPEN",
+    "APPROVED": "PASS",
+    "COMPILE_FAILED": "HOLD",
+    "INTEROP_MISSING": "MISSING",
+    "NOT_COMPILED": "MISSING",
+    "READY_FOR_NATIVE_GENERATION": "PASS",
+    "TEMPLATE_BOUND_MBD_PENDING": "OPEN",
+    "OPEN_TEMPLATE_AND_MBD": "OPEN",
+    "MBD_ACTIVE": "PASS",
+    "READY_TO_RUN": "PASS",
+    "BLOCKED_TOOLCHAIN": "BLOCKED",
+    "BLOCKED_FACE_QUALIFICATION": "BLOCKED"
+  }
+}

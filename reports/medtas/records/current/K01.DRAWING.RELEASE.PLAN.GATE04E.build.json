@@ -1,0 +1,9 @@
+{
+  "artifact_hash": "812f0df10116f5ea446b638b5204077a855ee148c88a52344e30c447f5512a60",
+  "built_state_hash": "347b3e9bcd07adb498539184068130d515052f283aa3896c313b05c27494e499",
+  "node_id": "K01.DRAWING.RELEASE.PLAN.GATE04E",
+  "producer": {
+    "tool": "build_drawing_release_plan_v1_9.py"
+  },
+  "schema": "medtas.build_record.v1"
+}

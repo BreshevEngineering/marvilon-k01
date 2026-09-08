@@ -1,0 +1,146 @@
+{
+  "schema": "k01_control_state_v1",
+  "updated": "2026-09-04",
+  "project": "MARVILON K01 Calibration Module",
+  "cad": {
+    "development": "SOLIDWORKS 2018 revision 26.0.1",
+    "target_after_freeze": "SOLIDWORKS 2026"
+  },
+  "production_assembly": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+  "gate04c_verification_assembly": "D:\\Marvilon\\K01\\cad\\candidates\\gate04c\\verification\\K01-A-001_GATE04C_VERIFY_V2.SLDASM",
+  "gate04c": {
+    "build": "PASS",
+    "verify_v2": "PASS",
+    "promotion": "OPEN",
+    "active_mate_errors": 0
+  },
+  "j2": {
+    "status": "VERIFIED CANDIDATE / NOT PROMOTED",
+    "function": "Removable P003↔P007 static-sealed service joint",
+    "current_verified": {
+      "P003_material": "AISI 316L / EN 1.4404",
+      "P007_material": "AISI 316L / EN 1.4404",
+      "flange_OD_mm": 36.0,
+      "P003_flange_zone_mm": 5.0,
+      "P007_flange_thickness_mm": 3.0,
+      "pilot": "Ø14.10 H7/g6",
+      "pilot_male_L_mm": 1.5,
+      "pilot_female_depth_mm": 1.7,
+      "pilot_bottom_clearance_mm": 0.2,
+      "fasteners": "3×M3 at 120°, PCD28",
+      "P007_clearance_hole_mm": 3.4,
+      "P003_native_tap_drill_mm": 2.5,
+      "thread_requirement": "M3×0.5-6H",
+      "seal": "16×1.5 metric O-ring",
+      "gland_ID_mm": 16.0,
+      "gland_width_mm": 2.1,
+      "gland_depth_mm": 1.1,
+      "gland_OD_nominal_mm": 20.2,
+      "gland_OD_worst_mm": 20.6
+    },
+    "compactness_review": {
+      "disposition": "REOPEN OPTIMIZATION BEFORE PROMOTION",
+      "reason": "OD36 full circular flange is the minimum full circular envelope under current M3/PCD28/2.0 mm ligament assumptions, but is not a mass/packaging optimum.",
+      "preferred_study": "3-lobed flange + M2.5 option; preserve seal and D14.10 pilot; release only after CAD/FEA/assembly QA",
+      "baseline_math": {
+        "inner_ligament_mm": "(28-3.4-20.6)/2 = 2.00",
+        "outer_ligament_mm": "(36-28-3.4)/2 = 2.30",
+        "minimum_full_circular_OD_mm": "28+3.4+2×2.0 = 35.4"
+      },
+      "candidate_C2": {
+        "fastener": "3×M2.5",
+        "clearance_hole_assumption_mm": 2.9,
+        "PCD_candidate_mm": 26.5,
+        "ligament_target_mm": 1.5,
+        "minimum_full_circular_OD_math_mm": 32.4,
+        "suggested_roundup_OD_mm": 33.0,
+        "status": "STUDY ONLY — exact fastener standard/head/torque/ligament/FEA not yet frozen"
+      }
+    }
+  },
+  "interfaces": {
+    "J1": "P016↔P003: A metal face + Ø10 H7/g6 pilot + clocking C; 3×M4 on PCD24",
+    "J2": "P003↔P007: metal face + Ø14.10 H7/g6 pilot + one hole-axis clocking; clamp currently 3×M3"
+  },
+  "gates": [
+    {
+      "id": "G-CAD-01",
+      "name": "Stable P003/P007 prior promotion",
+      "status": "PASS",
+      "evidence": "26 mates / 0 errors; P007 L35"
+    },
+    {
+      "id": "G04C-BUILD",
+      "name": "J2 native P003/P007 build",
+      "status": "PASS",
+      "evidence": "OD36, seal gland, pilot, hole patterns"
+    },
+    {
+      "id": "G04C-VERIFY",
+      "name": "J2 assembly Verify V2",
+      "status": "PASS",
+      "evidence": "candidate links true; 3 new J2 mates; 0 active mate errors"
+    },
+    {
+      "id": "G04C-COMPACT",
+      "name": "J2 compact production optimization",
+      "status": "OPEN",
+      "evidence": "Current full OD36 flange judged bulky in assembly review"
+    },
+    {
+      "id": "G04B",
+      "name": "Datum C / P017",
+      "status": "OPEN",
+      "evidence": "Design definition known; native implementation pending"
+    },
+    {
+      "id": "G-P007-STATIC",
+      "name": "P007 +0.20 bar static refresh",
+      "status": "OPEN",
+      "evidence": "Previous study PASS; refresh after final flange freeze"
+    },
+    {
+      "id": "G-P007-BUCK",
+      "name": "P007 -0.20 bar buckling refresh",
+      "status": "OPEN",
+      "evidence": "Previous λ1=1883.6; refresh after final flange freeze"
+    },
+    {
+      "id": "G-P015",
+      "name": "P015 production material / winding / leads",
+      "status": "OPEN",
+      "evidence": "PPS grade OPEN"
+    },
+    {
+      "id": "G-B001",
+      "name": "B001 production lot magnetic data",
+      "status": "OPEN",
+      "evidence": "Sm2Co17/S280 candidate; lot Br(T) open"
+    },
+    {
+      "id": "G-FEMM",
+      "name": "Final FEMM",
+      "status": "OPEN",
+      "evidence": "Run after J2 compact + P015 freeze"
+    },
+    {
+      "id": "G-BOM",
+      "name": "Automatic BOM zero-delta",
+      "status": "OPEN",
+      "evidence": "master/control metadata repair required"
+    },
+    {
+      "id": "G-REL",
+      "name": "Atomic production promotion / release",
+      "status": "OPEN",
+      "evidence": "blocked by compactness + remaining gates"
+    }
+  ],
+  "known_conflicts": [
+    "K01_master_v2 still says P007 L=40 mm; verified native baseline is L=35 mm.",
+    "Older ENGINEERING_STANDARD calls SW2026 current authoring; actual active development is SW2018 rev26.0.1, SW2026 after freeze.",
+    "Control Center v5 J2 rows still contain pre-Gate04C wording/exact-gland-open state.",
+    "Assembly/service router still says P007 Ø16 pilot; current verified pilot is Ø14.10 H7/g6.",
+    "P003 production thread representation is still Ø2.50 native tap-drill geometry + M3 requirement, not final Hole Wizard/cosmetic-thread release representation."
+  ]
+}

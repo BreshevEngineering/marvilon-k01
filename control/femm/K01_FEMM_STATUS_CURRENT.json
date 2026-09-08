@@ -1,0 +1,24 @@
+{
+  "schema": "k01.femm.status.v1",
+  "status": "SOLVER_READY / CALCULATION_NOT_YET_EVIDENCED",
+  "solver": {
+    "path": "C:\\femm42\\bin\\femm.exe",
+    "sha256": "5e83cf0899cabae2017868ddcce338e3ba4ac25d1bf8e511eac77eda2bc92a21",
+    "installation_status": "PASS_FEMM_FOUND"
+  },
+  "evidence_present": [
+    "solver installation/fingerprint",
+    "P015 native CAD report + file hash",
+    "B001 native CAD reference report + file hash",
+    "Gate04E mechanical candidate evidence"
+  ],
+  "evidence_missing": [
+    "FEMM model file/script",
+    "mesh-convergence report",
+    "force-vs-position sweep result",
+    "P015 released winding definition",
+    "B001 actual lot dimensions and Br(T)/demagnetization-temperature data",
+    "bench comparison"
+  ],
+  "answer_to_question": "No: there is currently no evidence that FEMM has already been calculated correctly. Only the solver installation and input-readiness layer are proven."
+}

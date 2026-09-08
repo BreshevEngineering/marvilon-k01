@@ -1,0 +1,16 @@
+{
+  "schema": "k01.toolchain_binding.v1_6",
+  "policy": "Explicit local tool paths override PATH. Empty values are not guessed.",
+  "gmsh_executable": "",
+  "calculix_executable": "",
+  "mesh": {
+    "element_order": 2,
+    "target_family": "C3D10-compatible",
+    "characteristic_length_mm": 1.0,
+    "algorithm_3d": 10
+  },
+  "calculix": {
+    "job_name": "K01_P006",
+    "working_dir": "reports/medtas/calculix/current/K01_CCX_P006"
+  }
+}

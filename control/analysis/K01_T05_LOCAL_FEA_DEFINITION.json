@@ -1,0 +1,63 @@
+{
+  "schema": "k01.t05.local_fea_definition.v2",
+  "title": "T05 — compact J2 flange local contact / separation verification",
+  "status": "READY_TO_RUN",
+  "geometry_basis": "Final C2R1 compact J2: OD33 / PCD26.5 / 3xM2.5 / P007 flange t3 / P003 J2 zone t5 / pilot Ø14.10 / 16x1.5 gland.",
+  "materials": {
+    "P003": "AISI 316L / EN 1.4404",
+    "P007": "AISI 316L / EN 1.4404"
+  },
+  "study_name": "K01_J2_T05_LOCAL_CONTACT",
+  "contacts": [
+    "P003/P007 metal mating faces: No Penetration, separation allowed.",
+    "Pilot/bore: locating function only; do not use it as an axial clamp support.",
+    "Do not mesh the O-ring in the first metal-release study."
+  ],
+  "load_cases": [
+    {
+      "id": "LC1_PRELOAD_200",
+      "bolt_preload_N_each": 200,
+      "seal_reaction_N_total": [
+        0,
+        300,
+        600
+      ],
+      "pressure_bar": 0.2,
+      "pressure_separating_force_N": 4.8106,
+      "purpose": "sensitivity / lower preload bound"
+    },
+    {
+      "id": "LC2_PRELOAD_300",
+      "bolt_preload_N_each": 300,
+      "seal_reaction_N_total": [
+        0,
+        300,
+        600
+      ],
+      "pressure_bar": 0.2,
+      "pressure_separating_force_N": 4.8106,
+      "purpose": "current upper candidate preload / release screen"
+    }
+  ],
+  "seal_force_note": "0/300/600 N is a sensitivity envelope only. It is not a released FKM supplier compression-force value.",
+  "mesh": [
+    "Curvature-based mesh.",
+    "Local size <=0.20 mm at M2.5 receiver region, gland edge, pilot root and P007 flange root.",
+    "Repeat critical case with one local refinement and compare peak stress/contact opening."
+  ],
+  "outputs": [
+    "von Mises stress in P003 and P007",
+    "contact pressure on metal mating face",
+    "maximum local face separation",
+    "bolt connector axial force",
+    "J2 datum-face displacement"
+  ],
+  "release_rule": [
+    "No plasticity.",
+    "Target minimum static safety factor >=1.5 to the controlled material yield used in the study.",
+    "No gross face opening that unloads the static seal.",
+    "At 300 N/screw, existing analytical thread-strip screen remains >=3.10; FEA must not show a new local failure mode.",
+    "Result must be saved as controlled report and linked to the final CAD hash/fingerprint."
+  ],
+  "decision_after_run": "If LC2 with 600 N separating seal reaction passes, retain OD33. If it fails only through local flange bending/contact, redesign locally before touching the rest of the module."
+}

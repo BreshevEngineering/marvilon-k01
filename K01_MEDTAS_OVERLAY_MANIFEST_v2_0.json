@@ -1,0 +1,1371 @@
+{
+  "schema": "k01.medtas.overlay_manifest.v2_0",
+  "file_count": 273,
+  "files": [
+    {
+      "path": "00B_BUILD_IDENTITY_MIGRATION_PLAN.cmd",
+      "size": 197,
+      "sha256": "f3a45832ab85bfac5c4e4eabe1fb1ccd5c8e7eb2a9d8c3b8535611bd9f0f2e07"
+    },
+    {
+      "path": "00_AUDIT_IDENTITY.cmd",
+      "size": 406,
+      "sha256": "b4c82e2802a3059e6836cc76cc9564bdec728f5a564e0eac84a230fb2601a838"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_1.md",
+      "size": 1650,
+      "sha256": "dc88c4a63b18479382f5245be286248bc3108bdd43a5c1d86041464bc07eaaf8"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_2.md",
+      "size": 1799,
+      "sha256": "10ae84433f0466941315983babae40594b4903b254290f88dde9636b1fc9ce51"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_3.md",
+      "size": 1708,
+      "sha256": "9c8f439c125428f741272f1ae43b73a0aaf126f77dd1bb9977f8433e47042739"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_4.md",
+      "size": 550,
+      "sha256": "9912a6edb6c43d3dc206a2f5b0501f8ea4e8446f8a8e88d9be42164ebf9d10ba"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_5.md",
+      "size": 553,
+      "sha256": "329c25cd600da1b21966cb09cdab02233f964920549b60488fa54d1314c4da62"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_6.md",
+      "size": 406,
+      "sha256": "8271eb0163531c5213070f16f57675cb3b26d8ffaef879d855557fd8761fd52d"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_7.md",
+      "size": 2944,
+      "sha256": "1201acd9df38a767940fd46daa18274413453639ce4463598beb82b0e899474c"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_8.md",
+      "size": 629,
+      "sha256": "c37d0f7493ed43a074abe85871f110a4d584e01e0446f9e6bfbddadc752b3373"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v1_9.md",
+      "size": 1222,
+      "sha256": "237f92cd05beb7f1959b866a2379450b686dc2f28ca41502e20a8a38dfc3a913"
+    },
+    {
+      "path": "00_INSTALL_MEDTAS_BUILD_GRAPH_v2_0.md",
+      "size": 1431,
+      "sha256": "4527fef6ac058b94891a10d751b41fe4a6b4989636b1d55e78be49082e1c25c8"
+    },
+    {
+      "path": "01_BUILD_REQUIREMENTS_COVERAGE.cmd",
+      "size": 113,
+      "sha256": "39905aa71dfebc245df58400da51cada945ed667be402b17e53fce8b99f90e82"
+    },
+    {
+      "path": "02_RUN_MEDTAS_ASSURANCE_TESTS.cmd",
+      "size": 696,
+      "sha256": "0d001f6ba05a0d2258bbc6b0a029c6f449cd73e6d8bebf33c94d1c816aa330dd"
+    },
+    {
+      "path": "03_RUN_MEDTAS_CAD_SEM_A001.cmd",
+      "size": 105,
+      "sha256": "19bc87ea3d866d08026ac5e6997ddfaf337416b7e443c0dd64377d369343462c"
+    },
+    {
+      "path": "03_RUN_MEDTAS_PIPELINE.cmd",
+      "size": 628,
+      "sha256": "3885d5e99a99f636129a4595f2b746a2a1e83d2627da34b93d7d0b7a6791fae9"
+    },
+    {
+      "path": "04_REBUILD_MEDTAS_CENTER.cmd",
+      "size": 406,
+      "sha256": "a00008a5f31836bd15e82402ae29114e995f914d77a0476697d79efc368d5865"
+    },
+    {
+      "path": "05_CALCULIX_PREFLIGHT.cmd",
+      "size": 354,
+      "sha256": "0581a16029ab379f2a6d0a30ad950e423fd2264e0ba7ab3536193cfdeed3ff80"
+    },
+    {
+      "path": "06_TEST_CAD_HASH_INVARIANCE.cmd",
+      "size": 689,
+      "sha256": "62129d43320331145496a077812901c426dc7ea7a1457edc0f051d22c3c50ed3"
+    },
+    {
+      "path": "07_STEP_CANONICAL_HASH.cmd",
+      "size": 159,
+      "sha256": "30ed06dd3ff58d5a71ba36051f3347c9069e74c920a096755ef571510b7a51b6"
+    },
+    {
+      "path": "08_BUILD_BOM_ARTIFACT.cmd",
+      "size": 178,
+      "sha256": "e79956af86722f89910860d8107c5da786ddc0fd1462a6b6328ba58b1e66a05f"
+    },
+    {
+      "path": "09B_BUILD_MBD_AUTHORING_PLAN.cmd",
+      "size": 587,
+      "sha256": "130a70652b9138e88f0be2030b747eacaa6ae61d7335ca54baa9b785c4e8e54b"
+    },
+    {
+      "path": "09_BUILD_DRAWING_MBD_WORKPACK.cmd",
+      "size": 307,
+      "sha256": "6418d2053ed2328767eb96af26da65f806bcb26578346768b18359275393b711"
+    },
+    {
+      "path": "09_BUILD_MBD_AUTHORING_CANDIDATES.cmd",
+      "size": 620,
+      "sha256": "9b1051426de6a9d0bb73467c531b9925a1da1b101f2ba7e642e365296010abe3"
+    },
+    {
+      "path": "10B_QUALIFY_STRUCTURAL_FACE_MAP.cmd",
+      "size": 681,
+      "sha256": "7b805f24f942b80a2ede14f0631ecd5b1ae203aaef0d86a3c72813bfc8302918"
+    },
+    {
+      "path": "10_BIND_STRUCTURAL_FACE_ROLES.cmd",
+      "size": 657,
+      "sha256": "a853cfd4a6efc966d4c8eca6be79a4150e2c77638cdf0c95212dce93272f2ff6"
+    },
+    {
+      "path": "11_EXPORT_STRUCTURAL_NEUTRAL_GEOMETRY.cmd",
+      "size": 403,
+      "sha256": "2cf889b6a0c62fa2dffdafaf111699fac3448f456eb83186a4a8290402d0df09"
+    },
+    {
+      "path": "12_BUILD_BOLT_EQUIV_SCAFFOLD.cmd",
+      "size": 461,
+      "sha256": "849f3e4ec229bd815656cab441eb5c7da04b61cf0d340d2441b5de99f3e21cff"
+    },
+    {
+      "path": "12_BUILD_STRUCTURAL_MESH.cmd",
+      "size": 457,
+      "sha256": "314f3d54caa0acd80884b6fe73ccae905f48be663a53522a277cee6995101aff"
+    },
+    {
+      "path": "13_BUILD_CALCULIX_INPUT.cmd",
+      "size": 456,
+      "sha256": "6040ebdf38244a5ca3dfc9576eef3b51f3f44bc1e8cdcd71d2fd05eb813bb8f2"
+    },
+    {
+      "path": "14_AUDIT_PROJECT_STRUCTURE.cmd",
+      "size": 444,
+      "sha256": "8aba78e5b67301cb29e6c4230a3043932ce6382afa8367a1efb8240bd6b36700"
+    },
+    {
+      "path": "15_BUILD_DRAWING_RELEASE_PLAN.cmd",
+      "size": 268,
+      "sha256": "f00e71448caa639b266215ebca29f32503a140483aa8f1390dc740d20564dc06"
+    },
+    {
+      "path": "16_BUILD_NATIVE_DRAWING_PACK.cmd",
+      "size": 413,
+      "sha256": "f1c726db8c7a0d9f3f13af39c3b634c8e46e07728b189aae3747d8395088861e"
+    },
+    {
+      "path": "17_DISCOVER_ANALYSIS_TOOLCHAIN.cmd",
+      "size": 677,
+      "sha256": "37169134863ceb6102475a73fbf00c873234aabc646140a171d98c8fe71ced38"
+    },
+    {
+      "path": "18_RUN_CALCULIX_P006.cmd",
+      "size": 453,
+      "sha256": "8ef52b794876d744d03bcddaf161db1c5e2089df9718974c836881ed57e9c6b6"
+    },
+    {
+      "path": "19_BUILD_RELEASE_PRIORITY.cmd",
+      "size": 203,
+      "sha256": "38ab844d83946680007dd2bee6997796eb911fc923581d6b7ecf938fcabccf51"
+    },
+    {
+      "path": "20_DISCOVER_DRAWING_TEMPLATE.cmd",
+      "size": 894,
+      "sha256": "ca847bf04aa97e7bac8106f884e814bbd0c8123f42e3d9742531076dfe2bec01"
+    },
+    {
+      "path": "21_RECORD_DRAWING_VISUAL_APPROVAL.cmd",
+      "size": 467,
+      "sha256": "2236d52bcb02fcff3a7ee32190f0150b8511195059e0609fc8d6d3c1940e9140"
+    },
+    {
+      "path": "22_BUILD_AI_HANDOFF.cmd",
+      "size": 96,
+      "sha256": "629abef02749d5a184b99f891b35fe491e6299e2e2411177bc1acc685e5a2eba"
+    },
+    {
+      "path": "23_BUILD_EBOM_MBOM.cmd",
+      "size": 426,
+      "sha256": "7aaa8a7b7bdadcb2f279fa51d9dde65c25d753ee0b1527578880746802a99b85"
+    },
+    {
+      "path": "24_SYNC_PARTS_REGISTRY_TO_CAD_PROPS.cmd",
+      "size": 734,
+      "sha256": "1caba5e203caf27d4ec73505c2a3dcc5b7f169f4551af4e2154be0bc7ffb2664"
+    },
+    {
+      "path": "25_BUILD_P007_EXEMPLAR_PLAN.cmd",
+      "size": 526,
+      "sha256": "fd9e9a7b94a641b8eeaaa9ac29354cac038ae64259b9325f6100352dcd36733e"
+    },
+    {
+      "path": "26_VERIFY_DRAWING_QA.cmd",
+      "size": 101,
+      "sha256": "785810c54d8d66969a635053c5268b2aecad43fc4c9eeb29998620f783b27a29"
+    },
+    {
+      "path": "28_BUILD_P007_EXEMPLAR_SKELETON.cmd",
+      "size": 114,
+      "sha256": "e1e23bb334203f6602a6fb70ed99ca71a222ab6e22d1bf3c4a81570805693ff5"
+    },
+    {
+      "path": "29_BUILD_INSPECTION_CHARACTERISTICS.cmd",
+      "size": 118,
+      "sha256": "92a59fedd9f42a7b684548c4da990c9c4c5a22dae86380370cb9addc833eafa6"
+    },
+    {
+      "path": "30_INGEST_INSPECTION_RESULTS.cmd",
+      "size": 228,
+      "sha256": "11f3bf8d5668a446c5aef2e89e06d251abeaab46d282b781d62c313a78070f68"
+    },
+    {
+      "path": "31_BUILD_RELEASE_PROGRAM.cmd",
+      "size": 107,
+      "sha256": "2b02b64fde569d0e79d4333343c40f8676e3c6909220e74289a59694f7c43fb6"
+    },
+    {
+      "path": "CHANGELOG_MEDTAS_v1_2.md",
+      "size": 642,
+      "sha256": "34ff9c97aa9ea2997091bf19ca232e0b936336b0d705cf1aad50f1f3ebadead1"
+    },
+    {
+      "path": "CHANGELOG_MEDTAS_v1_3.md",
+      "size": 703,
+      "sha256": "61baa402bc1a76a8f4c4a23f7312aec8e8685d9ec35da67f430f4d50ae4bdfb5"
+    },
+    {
+      "path": "CHANGELOG_MEDTAS_v1_4.md",
+      "size": 1492,
+      "sha256": "8a7d68a1d9b5da58f54c048d9032e5b36eab300621a17a2b9c5ddef26b22e690"
+    },
+    {
+      "path": "CHANGELOG_MEDTAS_v1_5.md",
+      "size": 2211,
+      "sha256": "ede7622b8265fe8be15ec869f8e54cb2c6606b13722557511d678f620f7ec7a1"
+    },
+    {
+      "path": "CHANGELOG_MEDTAS_v1_6.md",
+      "size": 3595,
+      "sha256": "58912d2747c0927a9d3e2516b6804ba93c3f7b34d78a1b8a4e4b150b3a525b3d"
+    },
+    {
+      "path": "CHANGELOG_MEDTAS_v1_7.md",
+      "size": 2843,
+      "sha256": "a2141f9f1e78ad6190c77e037c32fa67c9584162d8cda9889daee45235ea8023"
+    },
+    {
+      "path": "CHANGELOG_MEDTAS_v1_8.md",
+      "size": 2246,
+      "sha256": "deda5c97f87a6197f942371a6c982a9147fa9eb831701d8c3883c93d82c6c2ee"
+    },
+    {
+      "path": "CHANGELOG_MEDTAS_v1_9.md",
+      "size": 1458,
+      "sha256": "edfc322587ca59b2ae3558ee0e80ecaf2097a3aa34bb1b9fd052e7eaa8ce6c2a"
+    },
+    {
+      "path": "CHANGELOG_MEDTAS_v2_0.md",
+      "size": 4158,
+      "sha256": "6ce1fa081beac3e415e35b9760abbb8e19ce8917f34043f699510e6c8f6ce056"
+    },
+    {
+      "path": "K01_Command_Center_v10.html",
+      "size": 55285,
+      "sha256": "c46cdd6fc2c41dce5e96a753793d5864e9f9beb9905b5e951f47d724b76ff809"
+    },
+    {
+      "path": "K01_Command_Center_v11.html",
+      "size": 790,
+      "sha256": "9ee074854e9f9041b465e86273dd101f66daddad42a62d3033ebd9a33efeed0f"
+    },
+    {
+      "path": "K01_Command_Center_v8_REFERENCE.html",
+      "size": 48206,
+      "sha256": "2ec9cd86feb3efea1dfe8fa0d20eb4d2ceb9c301bac172ac5cd910e1c7265e30"
+    },
+    {
+      "path": "K01_Command_Center_v9.html",
+      "size": 54259,
+      "sha256": "3c606ebc0aa4be154da1900af78da2817c1ec49d1e421745d10fc44b034b6b47"
+    },
+    {
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v1_4.json",
+      "size": 12598,
+      "sha256": "9fd0c0e729155a7d235abd5dc7f140be12c57829d306035d643dca065b874605"
+    },
+    {
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v1_5.json",
+      "size": 16723,
+      "sha256": "3266a1eb3c030cbd777d6a6e6a56bd7652c533555d59dab51ecfba474bf3de08"
+    },
+    {
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v1_6.json",
+      "size": 30858,
+      "sha256": "db817ff72cd9fab2f4581ead1c36251e28e603062d2b3328b22f77ef590b3128"
+    },
+    {
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v1_8.json",
+      "size": 36447,
+      "sha256": "3c7a2d8737d410dd2d2ea48614e1595c71fa38fa1f5a755cd72e3eaf844b7921"
+    },
+    {
+      "path": "K01_MEDTAS_OVERLAY_MANIFEST_v1_9.json",
+      "size": 67327,
+      "sha256": "6345b8a21015b5f6eeb707fe3f940f4126b1171e86a685da04b37ea1b6cc3fb0"
+    },
+    {
+      "path": "OPEN_K01_COMMAND_CENTER_V10.cmd",
+      "size": 144,
+      "sha256": "583596f512459b5b3f91f0f780fc3cdfa837d8d27c1b436a973f994028401796"
+    },
+    {
+      "path": "OPEN_K01_COMMAND_CENTER_V11.cmd",
+      "size": 1628,
+      "sha256": "3faffd6d83e70ce4ab77b2923468ededfe16c543bff7c65fdf3f735021cd17e6"
+    },
+    {
+      "path": "OPEN_K01_COMMAND_CENTER_V8_REFERENCE.cmd",
+      "size": 905,
+      "sha256": "ab357f1750d412c9663cca461d7aab06c95c11e498f5957b5586d5ee04f9b704"
+    },
+    {
+      "path": "OPEN_K01_COMMAND_CENTER_V9.cmd",
+      "size": 143,
+      "sha256": "cca40a9ff9c070bbce32f906c22953a607dc2a7733841efb1f963d71cac4590c"
+    },
+    {
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_1.md",
+      "size": 705,
+      "sha256": "5532afe213a3dd98b6f1b1fabba6db67431da2482525a59f15b259de1f3d18ff"
+    },
+    {
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_2.md",
+      "size": 1469,
+      "sha256": "7e5a4ec49495eb041d938fd763aa40c7efa38e2890504d1afb7fcd349e2bab11"
+    },
+    {
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_3.md",
+      "size": 638,
+      "sha256": "e4ecc2415d292af8ef4b7f47fb8f7165b815d80065bee98c54114160fb052422"
+    },
+    {
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_4.md",
+      "size": 1343,
+      "sha256": "77fcc571c64ba228e87f9821623de404ad6c690a597c2b40beb4b43a57f879a7"
+    },
+    {
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_5.md",
+      "size": 1338,
+      "sha256": "1e6e7b55625eb98f842e06fd914e1755678eec6436aaca0b7c9003300fb332df"
+    },
+    {
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_6.md",
+      "size": 2435,
+      "sha256": "02a21a5e1b625832e8edc9c2413401c6854f864bf1789002f53a9c095a95fe8f"
+    },
+    {
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_7.md",
+      "size": 2242,
+      "sha256": "6a704f91a859eefd286f387f6a71881356557e6c386d9332e2c847716d280b10"
+    },
+    {
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_8.md",
+      "size": 1450,
+      "sha256": "c1ce68bc4387b35b3b68fd082c06fa9abde72f56ebb00917f19689a88475e200"
+    },
+    {
+      "path": "README_MEDTAS_REPO_OVERLAY_v1_9.md",
+      "size": 1349,
+      "sha256": "6f3ccaf80dfc74dfeab31d7a4cb04b05a8a4d0d0a7990ec77c50c2b1defaf31d"
+    },
+    {
+      "path": "README_MEDTAS_REPO_OVERLAY_v2_0.md",
+      "size": 3302,
+      "sha256": "9193835788e8cddf61c89779b4f33868005e87c79780e4511d608f4295874d7e"
+    },
+    {
+      "path": "cad_api/medtas/K01CadSemanticA001.cs",
+      "size": 19319,
+      "sha256": "6a3cfc76fd8134fa3093476947149bddeaed42cb9caa050fe8dcfcb02ac4150e"
+    },
+    {
+      "path": "cad_api/medtas/K01DrawingPackGenerator.cs",
+      "size": 5355,
+      "sha256": "c361b21a54a18b391cbfd22182ee5bcc8f6d3cf2222ede15ed8c5791dd944b15"
+    },
+    {
+      "path": "cad_api/medtas/K01MbdDimXpertPart.cs",
+      "size": 7181,
+      "sha256": "0626472e8b7df42dd02aac55152ae8de6bd2ab729caabb46394763428e5dce0c"
+    },
+    {
+      "path": "cad_api/medtas/K01SimulationStudySelections.cs",
+      "size": 6329,
+      "sha256": "517fb661335a0ab0dacbae9b8d73149655eebb4ea21676321734973ddd545b92"
+    },
+    {
+      "path": "control/drawings/K01-D-006_MANUFACTURER_REVIEW_TEMPLATE_v1_9.csv",
+      "size": 931,
+      "sha256": "f7fa7789c97319957bf8a1b3762fbfa49584c1b254afd4f8d778b762a6ed5268"
+    },
+    {
+      "path": "control/drawings/K01-D-006_MBD_BINDINGS_v1_9.json",
+      "size": 473,
+      "sha256": "8210bced784eb0a2d9e7fd8148d4c00d1fb4813eb128f146854d687dbc655a09"
+    },
+    {
+      "path": "control/drawings/K01-D-006_P007_EXEMPLAR_v1_9.json",
+      "size": 3782,
+      "sha256": "be76f90d33f4609db01103c3ac21a1f055245592836394bdcca4c5f0d4ea58ee"
+    },
+    {
+      "path": "control/drawings/K01_DRAWING_CHARACTERISTICS_v1_7.json",
+      "size": 3595,
+      "sha256": "ddb006374add8d78b0608ace50f42c897cc5795f97571380ed47d72caf2103b7"
+    },
+    {
+      "path": "control/drawings/K01_DRAWING_QA_POLICY_v1_9.json",
+      "size": 2003,
+      "sha256": "9f872cd61cf074dc92536d74ccdf111ddac759bda39d41321b2fd6254de43c51"
+    },
+    {
+      "path": "control/identity/K01_IDENTITY_POLICY_v1_9.json",
+      "size": 1177,
+      "sha256": "0ef642e4988d6710fc3afb7fe6c86242c5fea1d826de179f7f7a18492e63749f"
+    },
+    {
+      "path": "control/identity/entities.json",
+      "size": 968,
+      "sha256": "53f4077ddb68ce3d7d9988aa7a878bee2da7490f624ae8f94aa245a07b6d6f05"
+    },
+    {
+      "path": "control/inspection/K01_CHARACTERISTIC_POLICY_v1_9.json",
+      "size": 815,
+      "sha256": "27cae0bd8af1b481a9a4568595d034b8bbf502d8f66216fed584ec6f13a2c4df"
+    },
+    {
+      "path": "control/materials/K01_GATE04E_MATERIALS_v1_7.json",
+      "size": 823,
+      "sha256": "c73deddb91031e892fca84a83a13382e5fc69dc04feaa905ebdb20ca0ed5805d"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_BOM_SEED_v1.json",
+      "size": 1514,
+      "sha256": "14fc823210240a815307d8fb8c9d456a7845e535b2c584a99e241c3c5fabdadd"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1.json",
+      "size": 1129,
+      "sha256": "698f3eeed476255ff5c1bf0516e3b4dfc5aea5633c5f18b82138e27ec0378f65"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_2.json",
+      "size": 1133,
+      "sha256": "21abd32a5446a841c2c9df1e39d6b6ea4e22c7659e2b6771555854f852010aab"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_3.json",
+      "size": 1132,
+      "sha256": "b26dd9475e9cd42ef10a0e5a0b8b997632880eb45dab653a6280117fff906121"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_4.json",
+      "size": 1281,
+      "sha256": "164628c667f4d6d99dbeded2f27ce5366e806d0aee77876fe37b773d68498cf5"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_5.json",
+      "size": 1398,
+      "sha256": "541b1f940e9679a65d953a9f640d4432b941936a7ce651090ce16ed9995e7a5c"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_6.json",
+      "size": 1444,
+      "sha256": "2649cf1438d3792878d465be1b5ae96f5eae45ca1cf33feacd4cb2910b64ef65"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_DRAWING_SEED_v1.json",
+      "size": 740,
+      "sha256": "83c079e9c64c0e85021188f3d391cd1fe86ae257668893703b8b5cc894b63fb6"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_MBD_AUTHORING_TARGETS_v1_6.json",
+      "size": 1294,
+      "sha256": "a927e93ea139f1c7d03dd1998e41b36932077833277cec29c72974f20cd58cbc"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_SWSIM_P006_REFERENCE_v1_7.json",
+      "size": 794,
+      "sha256": "f4a34bdf73e1b4e277749b656472ef71f72f513289f5a65221976de057778401"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_SWSIM_STUDY_BINDING_v1_7.json",
+      "size": 803,
+      "sha256": "f6220e35f38b5be2b7c8b3a68c561a4e9c265f0f3c3afe672bdbb557dd05be0a"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_TOLERANCE_MBD_MAP_v1.json",
+      "size": 1588,
+      "sha256": "8b7ba407c7d7a78eacd72c0cd4dee2fcf8a7ec10ce354fb43a2ee2f23ab37902"
+    },
+    {
+      "path": "control/medtas/v1/bindings/K01_TOLERANCE_SEED_v1.json",
+      "size": 1650,
+      "sha256": "fe4489080d20dbe0e971a974d4c97bfa7fa2cacbf8a7751fc9458576b1b7bf9b"
+    },
+    {
+      "path": "control/medtas/v1/center/K01_COMMAND_CENTER_MEDTAS_INTEGRATION_v1.md",
+      "size": 1060,
+      "sha256": "43732f816383a6964e37e95de67f21809c384067ff7d419153f370b6cf4802b1"
+    },
+    {
+      "path": "control/medtas/v1/center/assets/app_v11.js",
+      "size": 27158,
+      "sha256": "2c397b6d502751afc41d05968a4211e52a8f4dd7c2e509232f2b8e6ec06d317d"
+    },
+    {
+      "path": "control/medtas/v1/center/assets/styles_v11.css",
+      "size": 5426,
+      "sha256": "a60bcabf99b388fa9ce35e49824ad30906051b2a56d0277a2f3e54322034318b"
+    },
+    {
+      "path": "control/medtas/v1/defaults/K01_DRAWING_GENERATION_BINDING_v1_7.default.json",
+      "size": 356,
+      "sha256": "de976555343c824c5631ea45ccbb79c4d72b959fe7d3afefac64aadc1c5ecb22"
+    },
+    {
+      "path": "control/medtas/v1/defaults/K01_TOOLCHAIN_BINDING_v1_6.default.json",
+      "size": 441,
+      "sha256": "f16dab63e13e013a14402de6831d22ad3b09658a47361e9087094a51b48c19b1"
+    },
+    {
+      "path": "control/medtas/v1/graph/K01_engineering_build_graph_v1_1.json",
+      "size": 35443,
+      "sha256": "51c041acb3220bfbb2b07c5f90e99aee595cc947b28de4c384d25809ca6852a9"
+    },
+    {
+      "path": "control/medtas/v1/graph/K01_engineering_build_graph_v1_2.json",
+      "size": 38593,
+      "sha256": "61bba6112c8ceca7569a35c18fb36ddedf470fe1eb48a7377fa0dabe7eb928a1"
+    },
+    {
+      "path": "control/medtas/v1/graph/K01_engineering_build_graph_v1_3.json",
+      "size": 40304,
+      "sha256": "e26bea6dfdc8345153b7388fa9f8eafefcf1d2243b6392ddcd06a01e46a7ef8f"
+    },
+    {
+      "path": "control/medtas/v1/graph/K01_engineering_build_graph_v1_4.json",
+      "size": 43152,
+      "sha256": "b44ac6960e7293e0192d060523d7d5638b2de7d3ef73be98a12b15cd93a345ae"
+    },
+    {
+      "path": "control/medtas/v1/graph/K01_engineering_build_graph_v1_5.json",
+      "size": 43189,
+      "sha256": "a7a09f7ecf02510e92809a069770c5cec070c222bb039cf5ebccdf5daf30cf24"
+    },
+    {
+      "path": "control/medtas/v1/graph/K01_engineering_build_graph_v1_6.json",
+      "size": 52345,
+      "sha256": "32f32bbdb026685bafeb1064c1e6170c733e71cccaf3f216a34bf2f6533c557b"
+    },
+    {
+      "path": "control/medtas/v1/graph/K01_engineering_build_graph_v1_7.json",
+      "size": 64655,
+      "sha256": "f166870a82a0e6be8662dbeb15d3dd47e13e9971f175c1ca74ce7c0ed355b46d"
+    },
+    {
+      "path": "control/medtas/v1/graph/K01_engineering_build_graph_v1_8.json",
+      "size": 67509,
+      "sha256": "9a760dc3c15a73f016e27f531892d838ca125f4b9a1feb1680384a9b34bacb88"
+    },
+    {
+      "path": "control/medtas/v1/graph/K01_engineering_build_graph_v1_9.json",
+      "size": 91431,
+      "sha256": "1671510c001a5bc7e21b0679fec5f4d585d6e66ba5f3ffb4d2fd926d04027df6"
+    },
+    {
+      "path": "control/medtas/v1/graph/K01_engineering_build_graph_v2_0.json",
+      "size": 98914,
+      "sha256": "29dc3275dd8ad4b87d0cecdaa451e86eae078236754668c85ebed87ed3872e45"
+    },
+    {
+      "path": "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY_v1.json",
+      "size": 846,
+      "sha256": "4bf7faaa31654d79636d806bc66be5a1810d6fc7ecde56c63abee898e1be75da"
+    },
+    {
+      "path": "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY_v1_2.json",
+      "size": 2082,
+      "sha256": "706e685536d123517a2c6d04277202fe9125c4c27c4dc7811fa0da94bb34a151"
+    },
+    {
+      "path": "control/medtas/v1/schemas/medtas_graph.schema.v1.json",
+      "size": 605,
+      "sha256": "140a123161b855f39a2e41f8144ed42534e7e6304a9f7903d3555a60a8b37aab"
+    },
+    {
+      "path": "control/medtas/v1/schemas/medtas_node.schema.v1.json",
+      "size": 8440,
+      "sha256": "d01bb35018f1fd72bf893da8b281394794fb6aad1a91d12e14cd1281a25c9c03"
+    },
+    {
+      "path": "control/medtas/v1/spec/CANONICAL_HASH_AND_MBD_POLICY_v1_4.md",
+      "size": 3347,
+      "sha256": "972daaa52d58d3f3362922e59bb116599b77effee2f2c4d7ddb25ca649563ba8"
+    },
+    {
+      "path": "control/medtas/v1/spec/CANONICAL_HASH_AND_MBD_POLICY_v1_5.md",
+      "size": 1998,
+      "sha256": "9cd55649f37127df217a7623803f573d8a24d15678b70598f7d8a3f0c9c8cb55"
+    },
+    {
+      "path": "control/medtas/v1/spec/K01_PRODUCT_DEFINITION_POLICY_v1_8.json",
+      "size": 1089,
+      "sha256": "21a8da27071aed247bc62fe53bcf26a84df9e9b7d2cf50aa4b98380f87e56ecc"
+    },
+    {
+      "path": "control/medtas/v1/spec/K01_PROJECT_LAYOUT_v1_7.json",
+      "size": 3551,
+      "sha256": "f39f6eb991eea4097080d6ede2b5508fbed0ddb5b91179260b51406b9f6daf0d"
+    },
+    {
+      "path": "control/medtas/v1/spec/K01_RELEASE_PRIORITY_POLICY_v1_8.json",
+      "size": 3444,
+      "sha256": "d35957f4de20b1b079dae81d89cfb2b174f37bfd1be5fa3c5244a62933ceb5ad"
+    },
+    {
+      "path": "control/medtas/v1/spec/K01_RELEASE_PRIORITY_POLICY_v1_9.json",
+      "size": 3087,
+      "sha256": "cdccaa247a21651e4dbe1c1a65906b49c443fe09234690c9378ba28eca6104b8"
+    },
+    {
+      "path": "control/medtas/v1/spec/K01_STATUS_MODEL_v1_7.json",
+      "size": 2568,
+      "sha256": "45a9f536bf72aad757a2963c612ca743e4c2eb7e178e4428ef94908ceb13cf97"
+    },
+    {
+      "path": "control/medtas/v1/spec/K01_STATUS_MODEL_v1_8.json",
+      "size": 2997,
+      "sha256": "aa9a00025bb713542c3ef386867cd7b0730a2edc3fbb2eec557a2b308f0b3669"
+    },
+    {
+      "path": "control/medtas/v1/spec/K01_STATUS_MODEL_v1_9.json",
+      "size": 4311,
+      "sha256": "0c0cfec5f06e31669917360b3b80769253059d0ce6e509fa5c7f906a12c73d51"
+    },
+    {
+      "path": "control/medtas/v1/spec/MEDTAS_STALE_PROPAGATION_v1.md",
+      "size": 6079,
+      "sha256": "3180fe780a39f3ab7b170b004c4f713410db4010423c5543b5f47079d211641a"
+    },
+    {
+      "path": "control/parameters/K01_GATE04E_ANALYSIS_PARAMETERS_v1_7.json",
+      "size": 834,
+      "sha256": "c96fe092c6b6284b886f6b11a4b56175a4ccb81d4673de78808f6902de838c2e"
+    },
+    {
+      "path": "control/parameters/K01_J2_INTERFACE_PARAMETERS_v1_7.json",
+      "size": 759,
+      "sha256": "025498412f0909ae062b6f14ef3f21a364668eb6a1ac91ad3b51317ae74eebd3"
+    },
+    {
+      "path": "control/product/K01_BOM_POLICY_v1_9.json",
+      "size": 1210,
+      "sha256": "76dcd5b4500e249a57af7097842537011ca62c1b0435b0a172614dabd7b59919"
+    },
+    {
+      "path": "control/product/parts.json",
+      "size": 14168,
+      "sha256": "a7f28ae4c95ec7dfcb1ed843ba94cb3d2673c20b259f6b6dd0da87664697ebf8"
+    },
+    {
+      "path": "control/requirements/requirements.json",
+      "size": 13204,
+      "sha256": "c210362212d39c82bc57ddc1d181173ea749f2e41eea2570ccb75db9567a486c"
+    },
+    {
+      "path": "control/revisions/K01_REVISION_POLICY_v1_9.json",
+      "size": 552,
+      "sha256": "f26cc55aaa2263d1eb410c076f32286d5556c9066355df1e1d03ad36c6f3cdf3"
+    },
+    {
+      "path": "docs/architecture/K01_MEDTAS_ARCHITECTURE_v1_7.md",
+      "size": 2965,
+      "sha256": "0cac367629269d24753f3611a009cbee87efca6f799a0e9c34dc639042e6da19"
+    },
+    {
+      "path": "docs/architecture/K01_RELEASE_DATA_PIPELINE_v1_9.md",
+      "size": 3478,
+      "sha256": "a4866cfbc82f7caba8dd380d9676a9dac6530fd892c9efbee80aeb7c455179ad"
+    },
+    {
+      "path": "docs/architecture/K01_REPOSITORY_STRUCTURE_AND_AUTHORITY_v1_8.md",
+      "size": 3564,
+      "sha256": "cb02689a4c2177fc4e843dfda004bba8384312377cb3c460b2ca02e444a0cdcc"
+    },
+    {
+      "path": "docs/automation/K01_NIGHTLY_RUNNER_PLAN_v1_9.md",
+      "size": 1308,
+      "sha256": "90f6beb3cba41418f57e67c30ee84a583b5c98e066fdb25072b04230dbe49eab"
+    },
+    {
+      "path": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.docx",
+      "size": 139001,
+      "sha256": "e10764d62f1ab80d051cc145450d9184afd22e81c204c82be3cb8650f1cca545"
+    },
+    {
+      "path": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.md",
+      "size": 3768,
+      "sha256": "48439d610299f5ef00e5163d2a8c148073e61bdc8ce586088a5b1f68b977f08e"
+    },
+    {
+      "path": "reports/engineering/current/source/K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx",
+      "size": 658836,
+      "sha256": "fd44f0f9f5ca28d08fa8280a5717168aa68303219106d95216e4dcbb55cb9c16"
+    },
+    {
+      "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_B.png",
+      "size": 53981,
+      "sha256": "cf7f924f986ffa90e52bdedc65563b39d75b30146eb9ebaa450555ce333773f7"
+    },
+    {
+      "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_DONE.txt",
+      "size": 31,
+      "sha256": "17444e853da74cbdcf5a5a507c2d59e6f02a3a65e08cbc7505759867796aa6a8"
+    },
+    {
+      "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_B.png",
+      "size": 54091,
+      "sha256": "6be0f59c435c37ee7982af9906132c1e9a336874b726d843e30249500c73a1e6"
+    },
+    {
+      "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_DONE.txt",
+      "size": 31,
+      "sha256": "17444e853da74cbdcf5a5a507c2d59e6f02a3a65e08cbc7505759867796aa6a8"
+    },
+    {
+      "path": "reports/engineering/current/source/K01_FEMM_CURRENT_RESULTS.csv",
+      "size": 170,
+      "sha256": "36521559992baca8c7ce0210a3c6065d0adb134984198c292577dffbc642b6ca"
+    },
+    {
+      "path": "tests/medtas/state_reducer_fixtures_v1_9.py",
+      "size": 3262,
+      "sha256": "d91c4bee7a0197d75fe49aeec53af9dbb91d3914acfd6e2c473692154e76a3c1"
+    },
+    {
+      "path": "tools/medtas/ai_handoff_v1_8.py",
+      "size": 2726,
+      "sha256": "48fe4826065f1f8c8027dc75e32f307806aac5ca2550846b676765c11a00599c"
+    },
+    {
+      "path": "tools/medtas/ai_handoff_v1_9.py",
+      "size": 3237,
+      "sha256": "7c7a6c8c010024b6b38d9d077c5dbb0b70997b0d9ad51d652bc03a1e8b994835"
+    },
+    {
+      "path": "tools/medtas/ai_handoff_v2_0.py",
+      "size": 3545,
+      "sha256": "71db63a476d33c5604361ae21898fa8da332d0a4e2fef6e1b2fea43b9de05bf6"
+    },
+    {
+      "path": "tools/medtas/audit_identity_v1_9.py",
+      "size": 4058,
+      "sha256": "2bdff1e8e9926db7a8070f8a9d864547aea05d3351824e7b7b94fd56d7a084e8"
+    },
+    {
+      "path": "tools/medtas/audit_identity_v2_0.py",
+      "size": 5772,
+      "sha256": "96c88cd5a423f91b0a16e9faa2a15c894a88d6405590006b25334f00fd7910f5"
+    },
+    {
+      "path": "tools/medtas/auto_bind_structural_face_roles_v1_7.py",
+      "size": 4453,
+      "sha256": "9e4370336375e1426a33ec4de03d8c37a9419f353c580fa6624b945dfe679600"
+    },
+    {
+      "path": "tools/medtas/bind_structural_face_roles_v1_6.py",
+      "size": 5112,
+      "sha256": "b59115c3ed0bf11de34cc17b170bd10a048860bee91934ecb129ad340b19ec2d"
+    },
+    {
+      "path": "tools/medtas/build_bolt_equiv_scaffold_v1_6.py",
+      "size": 2514,
+      "sha256": "ac776e12e85ed0a4d2bafe2c6cb7046b64910fa72af428311d591951e6a43100"
+    },
+    {
+      "path": "tools/medtas/build_bolt_equiv_scaffold_v1_7.py",
+      "size": 3044,
+      "sha256": "1ca6d680c6d34332b4dce1cebbae28c4997584bd6f309308debebdacde542b62"
+    },
+    {
+      "path": "tools/medtas/build_bom_artifact_v1_5.py",
+      "size": 4310,
+      "sha256": "5aa4aa7bfb7bf483284e3bf26c39e4d5ae2a3d51d72ac3517f1843f666709abd"
+    },
+    {
+      "path": "tools/medtas/build_bom_v1_9.py",
+      "size": 10176,
+      "sha256": "ef2549d6677c5ef877847dfcacb7722942469cb80c7088f13a5ca901edb40fb3"
+    },
+    {
+      "path": "tools/medtas/build_calculix_input_v1_6.py",
+      "size": 3126,
+      "sha256": "8d0de7f06974074d556555fb681cd228b2097f9cd961b311307f73686bd10986"
+    },
+    {
+      "path": "tools/medtas/build_calculix_input_v1_7.py",
+      "size": 3160,
+      "sha256": "8f72b9f76dc9f76ef65f6b899c770b383b93f752330b1ec425b59eda5543c3ab"
+    },
+    {
+      "path": "tools/medtas/build_calculix_scaffold_v1_5.py",
+      "size": 2162,
+      "sha256": "c0a5b2e617a3f70ef1b3ce2be79dd891ab49219b26953933e074d6b27e15ea93"
+    },
+    {
+      "path": "tools/medtas/build_downstream_v1_2.py",
+      "size": 23858,
+      "sha256": "446c591f8f25487aa65f0f40b08e9272321b09e828a44b397fb162e201d91f5c"
+    },
+    {
+      "path": "tools/medtas/build_downstream_v1_6.py",
+      "size": 24094,
+      "sha256": "d8ac2ceb5ae48dbb5159c7855b682f432874faddaf9b4f6ac7ef449e959f1ba9"
+    },
+    {
+      "path": "tools/medtas/build_downstream_v1_7.py",
+      "size": 25330,
+      "sha256": "e3bf1c886e975af67d805817889d89ae31223e37e15ae0ab36d1b459e5027c71"
+    },
+    {
+      "path": "tools/medtas/build_downstream_v1_8.py",
+      "size": 25914,
+      "sha256": "aacf9ddbaab0307c8da2cb8f9ab8931f949468ab94daf403459678dcb7ab4980"
+    },
+    {
+      "path": "tools/medtas/build_drawing_mbd_workpack_v1_5.py",
+      "size": 2529,
+      "sha256": "48dd6fbed19f6f57926384a02e5f2bb3e7eeaafdef1a5b89abd17a15e1f58281"
+    },
+    {
+      "path": "tools/medtas/build_drawing_mbd_workpack_v1_6.py",
+      "size": 2822,
+      "sha256": "c374a281ef05926208c01c73382ff124557856aaed8ae2ed58404d08e0cbcbe7"
+    },
+    {
+      "path": "tools/medtas/build_drawing_release_plan_v1_7.py",
+      "size": 2996,
+      "sha256": "cde564534a2dee537158051c67082085597310cf2e5ef4b81e76a467923abd7d"
+    },
+    {
+      "path": "tools/medtas/build_drawing_release_plan_v1_8.py",
+      "size": 3405,
+      "sha256": "de68d33605b6a715e0b6badd31c91fbb3f638fbf2cc5f52d8d4ac36231213760"
+    },
+    {
+      "path": "tools/medtas/build_drawing_release_plan_v1_9.py",
+      "size": 3186,
+      "sha256": "bca485172f85e1d3bf3899fb770c30963c2f69d4990d1f5d8de79200bbdb6b16"
+    },
+    {
+      "path": "tools/medtas/build_face_map_candidate_v1_3.py",
+      "size": 6951,
+      "sha256": "b4977c843cba31aa85677d499532f74d9452201ac66d684103b731e728919f92"
+    },
+    {
+      "path": "tools/medtas/build_face_map_candidate_v1_6.py",
+      "size": 5760,
+      "sha256": "7668d4bd91feb543a155da7db8349f3e7ec72634b67503939f3690d80e5a5b0b"
+    },
+    {
+      "path": "tools/medtas/build_face_map_candidate_v1_7.py",
+      "size": 3635,
+      "sha256": "c2a189171bb9eea857f1b583fa04cb8a4ed574513c8c58f5b94726521842ebe3"
+    },
+    {
+      "path": "tools/medtas/build_identity_migration_plan_v2_0.py",
+      "size": 2438,
+      "sha256": "f626d899ef352cd7fba69776611a84eac4dde79dc673fe6ceb05e521898f1922"
+    },
+    {
+      "path": "tools/medtas/build_inspection_characteristics_v1_9.py",
+      "size": 2973,
+      "sha256": "770e2851d232d77bf8f86e1674d9d524757821f22e723368d8a2246053cb5f0e"
+    },
+    {
+      "path": "tools/medtas/build_mbd_a001_v1_4.py",
+      "size": 6539,
+      "sha256": "6cf0ef7b30627037b87733e78b3523fde23ee7350132eb9194e161b16e7de2bc"
+    },
+    {
+      "path": "tools/medtas/build_mbd_a001_v1_6.py",
+      "size": 5278,
+      "sha256": "7e2123fa88b540eb814e495ac79e1536313f670a0ea50514397f4550768e6669"
+    },
+    {
+      "path": "tools/medtas/build_mbd_authoring_candidates_v1_6.py",
+      "size": 2641,
+      "sha256": "3db45653c5f8242669a7a1d26efdeb853f59c783ccc186635cd31282931a05fa"
+    },
+    {
+      "path": "tools/medtas/build_mbd_authoring_candidates_v1_7.py",
+      "size": 3650,
+      "sha256": "29f74e8812fe37adb0024d108bc98b4feed8bb5c4d3c567268ccc81efee76e83"
+    },
+    {
+      "path": "tools/medtas/build_mbd_authoring_plan_v1_7.py",
+      "size": 2212,
+      "sha256": "c99769337bab94d7b5c2997410bd906efab220b4be2bb7f9227a5e526d54aa99"
+    },
+    {
+      "path": "tools/medtas/build_native_drawing_pack_v1_7.py",
+      "size": 5317,
+      "sha256": "c02d019a5c3baf51ac4829cd7c53971f40280446f0aa98bdb66dc27efc07cee1"
+    },
+    {
+      "path": "tools/medtas/build_native_drawing_pack_v1_8.py",
+      "size": 5928,
+      "sha256": "2c287ff2f45fd024ecf6d2f9e61b8393476f3a689e54f567d591be97b241e425"
+    },
+    {
+      "path": "tools/medtas/build_p007_exemplar_plan_v1_9.py",
+      "size": 4542,
+      "sha256": "06ab697e1367c3d053a6d31cc1a308fef0b47ce219f0faf73b4f8fddd3120280"
+    },
+    {
+      "path": "tools/medtas/build_p007_exemplar_plan_v2_0.py",
+      "size": 6052,
+      "sha256": "0be760171940d12deabcd0ae3e8de411446011a6af73fad4a0475f7651cdecbf"
+    },
+    {
+      "path": "tools/medtas/build_p007_exemplar_skeleton_v1_9.py",
+      "size": 3891,
+      "sha256": "2decd7f1d3e1b4028de55e860b4e63618f9ba87bf39a13b18daa3222113834a2"
+    },
+    {
+      "path": "tools/medtas/build_p007_geometry_authority_v2_0.py",
+      "size": 7919,
+      "sha256": "b7a9913561f45b557ca803251fa7130438e62d1822bd298237c4b54be78fa394"
+    },
+    {
+      "path": "tools/medtas/build_p007_release_front_v2_0.py",
+      "size": 564,
+      "sha256": "a2ed17d881bd240ad04d974483040c9e2fb8954a0e7d324bdfcfc0789d60a2f3"
+    },
+    {
+      "path": "tools/medtas/build_product_definition_v1_8.py",
+      "size": 7144,
+      "sha256": "5a6f7ad3af87d92e420144e4c1697e3188687ef61cf67f9b0f7ce12d3a768a9b"
+    },
+    {
+      "path": "tools/medtas/build_release_priority_view_v1_8.py",
+      "size": 4161,
+      "sha256": "5cf0b64e7377fc785f0017cd81797053a1a21e80cab69717aba01defdda3734a"
+    },
+    {
+      "path": "tools/medtas/build_release_priority_view_v1_9.py",
+      "size": 4074,
+      "sha256": "55a33bf29716187717d9d65f9dd793439edd72a5954d3d5b998ec60e1300efc7"
+    },
+    {
+      "path": "tools/medtas/build_release_program_v1_9.py",
+      "size": 4946,
+      "sha256": "abb904b23c58b10562cc22bc0405417b3d09cdba9730c1d8b85483adfe2bb1ea"
+    },
+    {
+      "path": "tools/medtas/build_requirements_coverage_v1_9.py",
+      "size": 3136,
+      "sha256": "d21e5eb42e9595fc8ea0d45a8feb9d83734a36f758468d6f6d22c691a22a7cf9"
+    },
+    {
+      "path": "tools/medtas/build_structural_mesh_v1_6.py",
+      "size": 8448,
+      "sha256": "5bb4427f2d755773500c24305a5c435d9be2f3a842cab2dacbc955664442c076"
+    },
+    {
+      "path": "tools/medtas/build_structural_mesh_v1_7.py",
+      "size": 9363,
+      "sha256": "76ec062750900424e13b45fdaf046c68f7f1930f2c40d62bcf3d2787869bd1d4"
+    },
+    {
+      "path": "tools/medtas/cad_hash_invariance_test_v1_4.py",
+      "size": 2687,
+      "sha256": "03fd19240c3e6589d958c4751bfc7a0cf1d8b2aa42255260c1051690be465743"
+    },
+    {
+      "path": "tools/medtas/cad_hash_invariance_test_v1_5.py",
+      "size": 3943,
+      "sha256": "a7c7cc434423759803da1bf06b5ac416e5c99a8b193e2e48ce5e54877f39db22"
+    },
+    {
+      "path": "tools/medtas/cad_hash_invariance_test_v1_6.py",
+      "size": 5220,
+      "sha256": "a2844c129c9baad7028509de68624b96c478bfde975bc88b6bbe88cf8b92cb47"
+    },
+    {
+      "path": "tools/medtas/calculix_preflight_v1_2.py",
+      "size": 2143,
+      "sha256": "16df062da59684a058759d1918a14cc4d98c2c846fd0653bbeb76ee6b46288a4"
+    },
+    {
+      "path": "tools/medtas/calculix_preflight_v1_5.py",
+      "size": 2754,
+      "sha256": "b63c5ab923d713699643053187f45d52a75cb187a1c2516e7afdad0a44f7d9fd"
+    },
+    {
+      "path": "tools/medtas/calculix_preflight_v1_6.py",
+      "size": 2535,
+      "sha256": "22fa1511ef027efeeaa98f2e065b9d1c4932b9bc1a14a3c6742a3fe01de77c0e"
+    },
+    {
+      "path": "tools/medtas/calculix_preflight_v1_7.py",
+      "size": 2868,
+      "sha256": "b465cefe34e791d82dc6b08ee61efdf7a53762952210caef7d0c1b31d122c127"
+    },
+    {
+      "path": "tools/medtas/canonical_hash_selftest_v1_4.py",
+      "size": 1318,
+      "sha256": "36a29444157a123ac7f779d459d91eefead689cf124f02286e534bcf37f9c1f6"
+    },
+    {
+      "path": "tools/medtas/canonical_hash_selftest_v1_5.py",
+      "size": 1318,
+      "sha256": "a59a64a60a784e1e4468766e75259bc5295e83559f841477ffdc4996cfc8d5a7"
+    },
+    {
+      "path": "tools/medtas/canonical_hash_v1_4.py",
+      "size": 2847,
+      "sha256": "7838d6e75f73b99eff024fcafc9e2d24c3a68a10829957f0ded64b5e4c8077d5"
+    },
+    {
+      "path": "tools/medtas/canonical_hash_v1_5.py",
+      "size": 2847,
+      "sha256": "7838d6e75f73b99eff024fcafc9e2d24c3a68a10829957f0ded64b5e4c8077d5"
+    },
+    {
+      "path": "tools/medtas/center_action_launch_selftest_v1_8.py",
+      "size": 2048,
+      "sha256": "adfa5bddf82212587ecdf9df031bf856ce81a6899e9b02831500fb41256dec61"
+    },
+    {
+      "path": "tools/medtas/center_action_launch_selftest_v2_0.py",
+      "size": 1739,
+      "sha256": "29094628b2ac8adc6ae7c40ef7e3183dae25fe4a7204cc2d26519351cdf5df89"
+    },
+    {
+      "path": "tools/medtas/center_feed_v1.py",
+      "size": 2003,
+      "sha256": "2ebf9d1908c62a81e71e2ee974938f00afcaeba4b70c59e97019ca40e20a0c41"
+    },
+    {
+      "path": "tools/medtas/center_feed_v1_2.py",
+      "size": 2753,
+      "sha256": "d840ca309cfe4110b17fc2ba57263b569d0360a20e3c8bfe0785c54682bf4c6a"
+    },
+    {
+      "path": "tools/medtas/center_security_selftest_v1_7.py",
+      "size": 3038,
+      "sha256": "939029d81890bf40c56c2931ac3fa8d10f892ddff1d182ebe28800b70e9360ac"
+    },
+    {
+      "path": "tools/medtas/center_security_selftest_v1_8.py",
+      "size": 3324,
+      "sha256": "7602aee2cb86c40c696920c75c9b6ad7fc3600e75dbb5e8b132e48f88dddbbe9"
+    },
+    {
+      "path": "tools/medtas/center_security_selftest_v2_0.py",
+      "size": 3474,
+      "sha256": "6b2fa9fd3a39eeb92da050bbf9cdd1f79f8530998198294da5698864a5b380d6"
+    },
+    {
+      "path": "tools/medtas/center_selftest_v10.py",
+      "size": 1312,
+      "sha256": "9865871d8f37f8b2cf4d8761c1bcd59793a27cd084f49d757056e8b200574e78"
+    },
+    {
+      "path": "tools/medtas/center_selftest_v9.py",
+      "size": 2252,
+      "sha256": "2d2ceac292b4dce85880bc190516431436502e0e857a33a06a3975e58b7c3127"
+    },
+    {
+      "path": "tools/medtas/center_server_regression_v1_7.py",
+      "size": 3864,
+      "sha256": "5f9e88d72c0b6211fee4b8b2ff59e361eca6d537d076d22c47033c6670cf2515"
+    },
+    {
+      "path": "tools/medtas/center_server_regression_v1_8.py",
+      "size": 4071,
+      "sha256": "6bcefeda841dff189df1f4ac59c17c7f2d3ac45ac1087850e6b7002c606c79ba"
+    },
+    {
+      "path": "tools/medtas/center_server_regression_v2_0.py",
+      "size": 4071,
+      "sha256": "538d9830b815555d51c8f384e215b40623e81b72a7f89d649db944020671e76a"
+    },
+    {
+      "path": "tools/medtas/center_server_v10.py",
+      "size": 17325,
+      "sha256": "6f91a5a3a0cac619f39c3cbfaa2d9dfb7b8c05b867467308313a66dd4c993ddd"
+    },
+    {
+      "path": "tools/medtas/center_server_v11.py",
+      "size": 25666,
+      "sha256": "c52ea145e6daab6998fe020687387653bfc67eea2d9e54bf679dd36de0686c26"
+    },
+    {
+      "path": "tools/medtas/center_server_v12.py",
+      "size": 28559,
+      "sha256": "9730c6d49116bb1315893292efda63549ed4258c69d0413575e1d5b4efea30e4"
+    },
+    {
+      "path": "tools/medtas/common_load_selftest_v1_9.py",
+      "size": 351,
+      "sha256": "fc3ee8af466037236504ad69cf62c8099506f34d668530b97c49a64b5a58c56e"
+    },
+    {
+      "path": "tools/medtas/compile_sw_exporters_v1_4.py",
+      "size": 3471,
+      "sha256": "e39a89d63bd9f4a902247e14cdaf6489e5b7464141bafebb9a20da2955553efa"
+    },
+    {
+      "path": "tools/medtas/compile_sw_exporters_v1_5.py",
+      "size": 4627,
+      "sha256": "8bc4a6b8315392669b42b156aae3806f0bbd407695b3164529950782a84e6dae"
+    },
+    {
+      "path": "tools/medtas/compile_sw_exporters_v1_6.py",
+      "size": 5352,
+      "sha256": "fe33b34b323da4f6010fc6826d807f4cc1a18ff5e7845d970d8f84bd8746347a"
+    },
+    {
+      "path": "tools/medtas/compile_sw_exporters_v1_7.py",
+      "size": 5621,
+      "sha256": "4cad73da1d9b5ecc97d32c0450c9ee557046a838dca58690e5b86cc54cc466c4"
+    },
+    {
+      "path": "tools/medtas/compile_sw_semantic_exporter_v1_3.py",
+      "size": 2738,
+      "sha256": "46c93f8cb7effc7cd61b4ec38f5d7be51ca881064aae8510aae73b5ee963a57f"
+    },
+    {
+      "path": "tools/medtas/discover_analysis_toolchain_v1_7.py",
+      "size": 2899,
+      "sha256": "ece1e40d9e2f775ff246589793d456a80a139a5357aeecf8111f5eefddd19b08"
+    },
+    {
+      "path": "tools/medtas/discover_drawing_templates_v1_7.py",
+      "size": 2402,
+      "sha256": "c482a65f16e0de5c87b483237776a7cc8b40858c16ceec2cea6c973c1e2b9252"
+    },
+    {
+      "path": "tools/medtas/drawing_qa_gate_v1_9.py",
+      "size": 3372,
+      "sha256": "6d3c707273fc7ad84ec75759442e93d407332ea5172ccb27c4aa9689bd2a7fa4"
+    },
+    {
+      "path": "tools/medtas/ensure_runtime_bindings_v1_9.py",
+      "size": 964,
+      "sha256": "cb2075a260745d652b95ba78d6c0f7f13a276d1c8b374869f2d9cdb6f0f191ef"
+    },
+    {
+      "path": "tools/medtas/export_structural_neutral_geometry_v1_6.py",
+      "size": 4030,
+      "sha256": "1e79108dd810781f5d8fabae2dbe956442846a3da735dce22f39564c4d7edec6"
+    },
+    {
+      "path": "tools/medtas/export_structural_neutral_geometry_v1_7.py",
+      "size": 4434,
+      "sha256": "6a41bd0d20142aaadfbc2606aa902945faeb276f0f2b0ae32c78905ad60b1d43"
+    },
+    {
+      "path": "tools/medtas/face_identity_v1_7.py",
+      "size": 3353,
+      "sha256": "8542ae555d03911f6b402d1302811e8b91b1a5d367d03483a06c065897113d73"
+    },
+    {
+      "path": "tools/medtas/harden_product_definition_v1_9.py",
+      "size": 2512,
+      "sha256": "98eb3ce15a3589b8e2629300081b3814e5875851facaa8f09d469b44dc3ad7c7"
+    },
+    {
+      "path": "tools/medtas/ingest_inspection_results_v1_9.py",
+      "size": 2411,
+      "sha256": "e8fccbe9e67989add869003ca67a9aa63d08ba73cb729b3e14a32ff1957ccc0c"
+    },
+    {
+      "path": "tools/medtas/medtas_center_proxy_v9.py",
+      "size": 8343,
+      "sha256": "eb24275165f2ef1c962c3304143aa35a77b5420057afe15747ca5725d64a61c9"
+    },
+    {
+      "path": "tools/medtas/medtas_state_engine_v1_1.py",
+      "size": 8828,
+      "sha256": "7b929213d4bd68473ed3230cf5b996a102b3e682414b2d9ea1ac1c348b7304ee"
+    },
+    {
+      "path": "tools/medtas/medtas_v16_common.py",
+      "size": 3537,
+      "sha256": "77cfa0239d5960211709ce79b4d19a2b070778c097371b470dc4dd269b6e39ad"
+    },
+    {
+      "path": "tools/medtas/pipeline_v1_5.py",
+      "size": 6827,
+      "sha256": "86049d8081b886b28fd7bb2559d4fb5fa90f5d6d92b24ab2e8094f6acfd76f87"
+    },
+    {
+      "path": "tools/medtas/pipeline_v1_6.py",
+      "size": 6524,
+      "sha256": "043dead771d08af7133bab8497383b9ca846e1ac3dd214d9f7e3a0ec115d37b4"
+    },
+    {
+      "path": "tools/medtas/pipeline_v1_7.py",
+      "size": 11011,
+      "sha256": "debb176615b917bd27bbb041ad3c1a63cc830f806f05698fa72a766aaceed176"
+    },
+    {
+      "path": "tools/medtas/pipeline_v1_8.py",
+      "size": 9709,
+      "sha256": "06de148adc54fce5963ddd4d0cd98e008b8e126ba9b69e507ec4854e332cc333"
+    },
+    {
+      "path": "tools/medtas/pipeline_v1_9.py",
+      "size": 8923,
+      "sha256": "c227a7aa3138986cc730799092c28f342b81e13e460a234482e3be69bb4f33e6"
+    },
+    {
+      "path": "tools/medtas/pipeline_v2_0.py",
+      "size": 9424,
+      "sha256": "2bde4308324a1c05ebd812811958a72e1e12998f1fa4c23860cafa2f2b1603b5"
+    },
+    {
+      "path": "tools/medtas/print_summary_v1_2.py",
+      "size": 1140,
+      "sha256": "44bfe8cc18d3616863b5fac4328a41e669817bca22e3792a0d666364bed3e24c"
+    },
+    {
+      "path": "tools/medtas/project_structure_v1_7.py",
+      "size": 5362,
+      "sha256": "373a00fbea5cbb0387d3f6ba3fdaf0397d91716b1c2a820ad7aea5a8abd396f9"
+    },
+    {
+      "path": "tools/medtas/project_view_v1_7.py",
+      "size": 5276,
+      "sha256": "d53e811d1013f77e5005de5d3c69436664a8267ee0d479e5678bb8364ab96998"
+    },
+    {
+      "path": "tools/medtas/project_view_v1_8.py",
+      "size": 5994,
+      "sha256": "38410e29c797146e05728835e4bd24f347ebf3e013aaccfd656f27799672e31c"
+    },
+    {
+      "path": "tools/medtas/project_view_v1_9.py",
+      "size": 3984,
+      "sha256": "7aae8c73f5e4871d3375c43caa4f649108f1f71621e2ccab52a61c6fafbbb138"
+    },
+    {
+      "path": "tools/medtas/qualify_structural_face_map_v1_7.py",
+      "size": 3156,
+      "sha256": "71d69ac6b1ab32ac25977cc4f749277125db30af2f7661735e06e3e27240539b"
+    },
+    {
+      "path": "tools/medtas/rebuild_medtas_state.py",
+      "size": 2928,
+      "sha256": "e77d6a6f543204550665e77b8c2cb3e7c1b7fd816428060d04a940771043bb76"
+    },
+    {
+      "path": "tools/medtas/record_drawing_visual_approval_v1_7.py",
+      "size": 2002,
+      "sha256": "9e9187979255e00c28743e73e6a260f512ee10da79546367a392de4fd0b2e0ac"
+    },
+    {
+      "path": "tools/medtas/record_drawing_visual_approval_v1_8.py",
+      "size": 2279,
+      "sha256": "db51e0078dec94b4ea31cc48d2728b21c4c07b9dec1f17bdfcc31f8c6073fba6"
+    },
+    {
+      "path": "tools/medtas/registry_selftest_v1_9.py",
+      "size": 1468,
+      "sha256": "e48c578316ce2d7fad17949c6ec30bd1329178661c50008151acd6098fac094e"
+    },
+    {
+      "path": "tools/medtas/render_center_html_v1_2.py",
+      "size": 2982,
+      "sha256": "503bd5d9a1e96a913b17a8e5133d2b4e2c9137a403388ff3a95167789ae96f41"
+    },
+    {
+      "path": "tools/medtas/run_cad_sem_a001.py",
+      "size": 12959,
+      "sha256": "bf399423e6ab4e97420ee0d65f1327c593041729d06135f6dd7ee6bb04b79f45"
+    },
+    {
+      "path": "tools/medtas/run_calculix_p006_v1_7.py",
+      "size": 3021,
+      "sha256": "2e37289aa6e0eb87caf2d4acebc19b2b97bc18c1444ff67485aa77e82ad49d2b"
+    },
+    {
+      "path": "tools/medtas/status_model_selftest_v1_7.py",
+      "size": 602,
+      "sha256": "0fe182258fa9f9390f6a95015bdce8354e6346eacaca0db6c434817f708a1712"
+    },
+    {
+      "path": "tools/medtas/status_model_selftest_v1_8.py",
+      "size": 598,
+      "sha256": "9d0dceba030147dc5f22c8d2087554b7cbf9e2988fcc2e23f27f8fb9a06f5fa8"
+    },
+    {
+      "path": "tools/medtas/status_model_v1_7.py",
+      "size": 1030,
+      "sha256": "e28792d4f7160f547c47059ebdbb2b164583d045817bdd4a732544002873834d"
+    },
+    {
+      "path": "tools/medtas/status_model_v1_8.py",
+      "size": 1118,
+      "sha256": "f2eb3b54f0419228650d6b260b6b1cc320c41b2746bbe47e267958b3b99df545"
+    },
+    {
+      "path": "tools/medtas/step_canonical_hash_v1_4.py",
+      "size": 277,
+      "sha256": "64dc8118a5b6fa846eb5cc24fdf4b181ce9e75545b49340e1aa69143adf2bfba"
+    },
+    {
+      "path": "tools/medtas/sw_semantic_pywin32_v1_5.py",
+      "size": 11826,
+      "sha256": "38581bd4030a28961878e0dac41cd7cf8d0daf99d4c7d0c1922bd7d6938c6731"
+    },
+    {
+      "path": "tools/medtas/sync_parts_registry_to_cad_props_v1_9.py",
+      "size": 5410,
+      "sha256": "043963c34f6a9b2ea4b1766cec4ec235c1778cb6d4d5b0f91e9a831f7e8446c6"
+    },
+    {
+      "path": "tools/medtas/sync_parts_registry_to_cad_props_v2_0.py",
+      "size": 6059,
+      "sha256": "6766f392647c4d34446d45aaf3a40e7a91ac4768b95cef8153fd87515ccafab1"
+    },
+    {
+      "path": "tools/medtas/verify_drawing_pack_v1_7.py",
+      "size": 2799,
+      "sha256": "9ff447a2d217f083db0e365fbb89a9ea8211a4200211a6d11b4b986ecedc14d9"
+    },
+    {
+      "path": "tools/medtas/verify_drawing_pack_v1_8.py",
+      "size": 3519,
+      "sha256": "3d6b07f9244921050b3bdef260c2886b94b448557cb0a6feee8306cd338b899a"
+    }
+  ]
+}

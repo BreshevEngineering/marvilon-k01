@@ -1,0 +1,74 @@
+{
+  "schema": "k01.drawing_definition.v1",
+  "drawing_id": "K01-D-006",
+  "part_id": "K01-P-007",
+  "status": "DRAFT",
+  "model": {
+    "authority": "NATIVE_SOLIDWORKS",
+    "path_ref": "CAD-R1-P007"
+  },
+  "views": [
+    {
+      "id": "V1",
+      "type": "LONGITUDINAL_SECTION",
+      "purpose": "Primary manufacturing view of locator/flange/thin can"
+    },
+    {
+      "id": "V2",
+      "type": "J2_END",
+      "purpose": "clearance-hole pattern and flange definition"
+    },
+    {
+      "id": "V3",
+      "type": "ISOMETRIC_REFERENCE",
+      "purpose": "Orientation only; no release dimensions"
+    }
+  ],
+  "characteristics": [
+    {
+      "id": "CHAR-P007-MAT",
+      "purpose": "production material",
+      "source_ref": "REQ-K01-MAT-P007-001",
+      "annotation_type": "MATERIAL",
+      "view": "TITLE_BLOCK",
+      "inspection_method": "material certificate + BOM",
+      "status": "RELEASED"
+    },
+    {
+      "id": "CHAR-P007-L",
+      "purpose": "overall controlled length",
+      "source_ref": "REQ-K01-P007-L-001",
+      "annotation_type": "MODEL_DIMENSION",
+      "view": "V1",
+      "inspection_method": "length measurement/CMM",
+      "status": "RELEASED"
+    },
+    {
+      "id": "CHAR-P007-LOC",
+      "purpose": "J2 locator and datum architecture",
+      "source_ref": "REQ-K01-J2-LOC-001",
+      "annotation_type": "FIT",
+      "view": "V1",
+      "inspection_method": "bore gauge/CMM",
+      "status": "RELEASED"
+    },
+    {
+      "id": "CHAR-P007-THIN-CAN",
+      "purpose": "thin-can OD/ID/wall released from final structural + manufacturing evidence",
+      "source_ref": "T07 structural release + manufacturing capability",
+      "annotation_type": "MODEL_DIMENSION",
+      "view": "V1",
+      "inspection_method": "CMM/air gauge or agreed thin-wall metrology",
+      "status": "OPEN"
+    },
+    {
+      "id": "CHAR-P007-PATTERN",
+      "purpose": "clearance-hole position relative to J2 datums",
+      "source_ref": "CI-J2 / released tolerance-stack result",
+      "annotation_type": "GD&T",
+      "view": "V2",
+      "inspection_method": "CMM/functional gauge",
+      "status": "CANDIDATE"
+    }
+  ]
+}

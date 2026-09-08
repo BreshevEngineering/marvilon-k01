@@ -1,0 +1,17 @@
+#!/bin/sh
+# Fast text-based gate only.
+# It intentionally does NOT start SOLIDWORKS.
+# Freshness is still checked against local native CAD hashes when those files exist.
+
+PYTHON_CMD="py -3.12"
+if ! command -v py >/dev/null 2>&1; then
+  PYTHON_CMD="python"
+fi
+
+$PYTHON_CMD tools/k01_audit.py
+RC=$?
+if [ $RC -ne 0 ]; then
+  echo "K01 pre-commit audit FAILED."
+  exit $RC
+fi
+exit 0

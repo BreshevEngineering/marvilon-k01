@@ -1,0 +1,26 @@
+{
+  "schema": "k01.medtas_core_static_audit.v1",
+  "created": "2026-09-05",
+  "status": "PASS_STATIC_PACKAGE",
+  "checks": {
+    "json_parse": true,
+    "json_schema_validation": true,
+    "requirement_gate_links": true,
+    "ui_engineering_literal_guard": true,
+    "javascript_syntax": true,
+    "powershell_static_brace_scan": true,
+    "stable_runtime_filenames": true,
+    "actions_use_post": true,
+    "state_reducer_outside_html": true,
+    "hash_provenance_present": true,
+    "hash_chained_event_ledger_present": true,
+    "github_ci_present": true
+  },
+  "deliberate_runtime_holds": [
+    "Windows PowerShell parser/runtime must be confirmed by 00_MEDTAS_PREFLIGHT.cmd on the user's workstation.",
+    "Current C2R1 evidence must be backfilled with provenance sidecars before hash-based freshness can replace legacy unverified freshness.",
+    "Gate04E P006 must still compile/run in local SOLIDWORKS 2018.",
+    "Drawing V3 remains rejected; no new production drawing is claimed.",
+    "Open product requirements for differential pressure, J2 local temperature/media, P006 material, leak acceptance and service cycles remain engineering blockers."
+  ]
+}

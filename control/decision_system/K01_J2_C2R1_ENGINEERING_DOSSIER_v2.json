@@ -1,0 +1,164 @@
+{
+  "schema": "k01_engineering_dossier_v2",
+  "dossier_id": "DOS-J2-C2R1-v2",
+  "title": "J2 P003↔P007 removable compact flange — Gate04D-C2R1",
+  "status": "CAD_ARCHITECTURE_PASS / MECHANICAL_RELEASE_HOLD",
+  "design_intent": {
+    "function": "Provide a removable static-sealed P003↔P007 service boundary while preserving P007 containment can, 35 mm OAL and cartridge service access.",
+    "datum_functions": [
+      "Ø14.10 H7/g6 pilot controls transverse location / coaxiality.",
+      "metal mating faces control axial location.",
+      "one clamp-hole axis provides angular clocking in verification; the three screws provide clamp, not redundant datum control.",
+      "O-ring provides sealing only; it is not the centering element."
+    ]
+  },
+  "selected_geometry": {
+    "P003_material": "AISI 316L / EN 1.4404",
+    "P007_material": "AISI 316L / EN 1.4404",
+    "flange_OD_mm": 33.0,
+    "fastener_pattern": "3×M2.5×0.45 on PCD 26.5, 120°",
+    "P007_flange_thickness_mm": 3.0,
+    "P003_J2_zone_mm": 5.0,
+    "pilot": "OD14.10 g6 ×1.50; internal clearance Ø12 H9 production candidate (T03)",
+    "P006_head_clearance_radial_nominal_mm": 0.25,
+    "pilot_wall_radial_mm": 1.05,
+    "seal": "16×1.5 O-ring; gland ID16.00 / OD20.20 / depth1.10",
+    "nominal_o_ring_squeeze_percent": 26.66666666666666,
+    "P007_OAL_mm": 35.0
+  },
+  "history_and_rejected_alternatives": [
+    {
+      "alternative": "Permanent P003↔P007 weld",
+      "status": "REJECTED",
+      "reason": "destroys required service access to P006/follower."
+    },
+    {
+      "alternative": "Ø16 pilot",
+      "status": "REJECTED",
+      "reason": "incompatible with actual P007 ID14.1 architecture."
+    },
+    {
+      "alternative": "OD34 / PCD28 / M3",
+      "status": "REJECTED",
+      "reason": "insufficient outer ligament under previous M3 package."
+    },
+    {
+      "alternative": "OD36 / PCD28 / M3",
+      "status": "VERIFIED_REFERENCE / NOT OPTIMUM",
+      "reason": "worked geometrically but was unnecessarily bulky."
+    },
+    {
+      "alternative": "C2 OD33/M2.5 with pilot ID10.917",
+      "status": "REJECTED",
+      "reason": "introduced exact 15.3966837 mm³ collision with P006 head."
+    },
+    {
+      "alternative": "C2R1 OD33/M2.5 with pilot ID12.00",
+      "status": "ACTIVE",
+      "reason": "retains compact flange and removes proven head/pilot collision with 0.25 mm nominal radial clearance."
+    }
+  ],
+  "evidence": {
+    "native_build": {
+      "status": "PASS",
+      "facts": [
+        "stable P003/P007 not modified",
+        "OD33",
+        "3×M2.5",
+        "pilot OD14.10/ID12.00×1.50",
+        "P007 L35"
+      ]
+    },
+    "assembly_verify": {
+      "status": "PASS",
+      "facts": [
+        "pilot concentric",
+        "metal-face coincidence",
+        "M2.5 clocking",
+        "0 active mate errors"
+      ]
+    },
+    "hard_interference": {
+      "status": "PASS",
+      "facts": [
+        "2 known legacy pairs only",
+        "0 new/unclassified pairs"
+      ]
+    },
+    "prior_C2_root_cause": {
+      "status": "CONFIRMED",
+      "equation": "π/4 × (11.5² − 10.917²) × 1.50 = 15.396683664956 mm³"
+    }
+  },
+  "mechanical_screen": {
+    "status": "SCREEN_PASS_WITH_RELEASE_HOLDS",
+    "screw_candidate": "ISO 4762 M2.5×0.45, stainless A4-70 candidate; exact supplier/finish not frozen",
+    "tensile_stress_area_mm2": 3.390795089543035,
+    "screw_proof_load_screen_N": 1525.8577902943657,
+    "female_thread_strip_yield_screen_N_per_screw": 930.4215472324261,
+    "SF2_study_preload_ceiling_N_per_screw": 465.21077361621303,
+    "pressure_reaction_total_N": 3.1225,
+    "pressure_per_screw_N": 1.0408333333333333,
+    "interpretation": [
+      "External pressure does not size the screws.",
+      "The preliminary thread screen does not reject M2.5.",
+      "This is not a release torque calculation.",
+      "Actual required preload is governed primarily by seal compression, joint separation margin, friction/galling and service conditions."
+    ]
+  },
+  "manufacturing_and_service": {
+    "P003": "Turn coaxial body/J2 zone and pilot/gland; drill/tap 3×M2.5 in 316L; deburr/passivate/clean; inspect pilot/gland/pattern/face.",
+    "P007": "Deep-bore/finish thin can; retain Ø14.10 locator; machine OD33×3 flange within L35; drill 3×Ø2.90; inspect wall/ovality/runout/pattern.",
+    "advantages": [
+      "round flange keeps turning/drilling simple",
+      "three screws minimize holes and assembly operations",
+      "no permanent joining at service boundary",
+      "same 316L body/can minimizes thermal-expansion mismatch at the metal interface"
+    ],
+    "open_service_items": [
+      "P006 final service-tool feature/access through revised pilot ID",
+      "stainless fastener galling strategy",
+      "repeated disassembly/service-cycle verification"
+    ]
+  },
+  "release_blockers": [
+    "P006 two-pin face-drive native candidate and first-article/service-method verification",
+    "J2-local temperature and released process/cleaning media envelope",
+    "exact FKM/FFKM supplier compound, compression-force and leak qualification",
+    "released clamp preload/torque process and exact M2.5 supplier/finish/lubrication",
+    "local P007 flange/contact/separation solver verification at released preload",
+    "thermal preload + anti-galling + repeated-service-cycle qualification",
+    "P007 final +0.20 bar Static and -0.20 bar Buckling refresh",
+    "BOM metadata projection/reconciliation",
+    "TPD V3 drawings: release-semantic lint + visual approval + remaining production tolerances",
+    "P015/B001 production freeze, final FEMM and bench acceptance"
+  ],
+  "current_decision": "Freeze C2R1 geometry. Continue production-release evidence closure; do not reopen OD33/M2.5 geometry without contrary evidence and do not promote P003/P007 until T03–T10 pass.",
+  "sources": [
+    "EDR-005",
+    "EDR-019",
+    "CI-J2",
+    "ERR-G04D-C2-BUILD-001",
+    "ERR-G04D-C2-VERIFY-001",
+    "SRC-FASTENER-VDI2230-001",
+    "SRC-FASTENER-ISO4762-001",
+    "SRC-FASTENER-ISO3506-1-001",
+    "SRC-SEAL-PARKER-001",
+    "SRC-SEAL-TRELLEBORG-001",
+    "SRC-TPD-SIMMONS-001",
+    "SRC-TOL-FISCHER-001",
+    "SRC-K01-PFEIFFER-ELASTOMER-001"
+  ],
+  "current_workpackages": [
+    "K01_T03_PILOT_TOOL_WORKPACKAGE_v2",
+    "K01_T04_MEDIA_ENVELOPE_v1",
+    "K01_T04_SEAL_PRELOAD_WORKPACKAGE_v1",
+    "K01_T05_J2_CLAMP_STRENGTH_WORKPACKAGE_v1",
+    "K01_T06_THERMAL_GALLING_SERVICE_WORKPACKAGE_v1",
+    "K01_T07_P007_STRUCTURAL_REFRESH_v1",
+    "K01_T08_BOM_PROPERTY_PROJECTION_v1",
+    "K01_T09_DRAWING_TPD_RELEASE_v1",
+    "K01_T10_FEMM_BENCH_RELEASE_v1"
+  ],
+  "revision_note": "Updates C2R1 production-release chain through T03–T10 and links drawing/tolerance/seal literature evidence."
+}

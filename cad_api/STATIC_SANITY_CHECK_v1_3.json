@@ -1,0 +1,35 @@
+{
+  "K01Gate04C_Build.cs": {
+    "balanced_braces": true,
+    "ResolvePackageRoot_present": true,
+    "parent_dir_search_present": true,
+    "params_filename_present": true,
+    "typed_interop_present": true
+  },
+  "K01Gate04C_Verify.cs": {
+    "balanced_braces": true,
+    "ResolvePackageRoot_present": true,
+    "parent_dir_search_present": true,
+    "params_filename_present": true,
+    "typed_interop_present": true
+  },
+  "K01Gate04C_Drawings.cs": {
+    "balanced_braces": true,
+    "ResolvePackageRoot_present": true,
+    "parent_dir_search_present": true,
+    "params_filename_present": true,
+    "typed_interop_present": true
+  },
+  "01_GATE04C_BUILD_ONLY.cmd": {
+    "copies_params_to_bin": true,
+    "checks_params_exists": true
+  },
+  "02_GATE04C_VERIFY_ONLY.cmd": {
+    "copies_params_to_bin": true,
+    "checks_params_exists": true
+  },
+  "03_GATE04C_DRAWINGS_ONLY.cmd": {
+    "copies_params_to_bin": true,
+    "checks_params_exists": true
+  }
+}

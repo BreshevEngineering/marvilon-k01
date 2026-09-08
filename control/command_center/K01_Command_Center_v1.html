@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MARVILON K01 Engineering Control Center</title>
+<style>
+:root{--ink:#17191c;--muted:#697078;--paper:#f4f6f7;--card:#fff;--line:#e1e5e8;--dark:#26292d;--teal:#159da3;--pass:#2d9968;--open:#d08a2c;--hold:#c74848;--blue:#397db6;--mono:ui-monospace,Consolas,monospace;--sans:Inter,Segoe UI,Arial,sans-serif}
+*{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans)} .wrap{max-width:1320px;margin:auto;padding:22px 20px 80px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;border-bottom:2px solid var(--dark);padding-bottom:13px} h1{margin:0;font-size:26px} .teal{color:var(--teal)} .sub{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700} .mono{font-family:var(--mono)}
+.strip{margin:16px 0;background:var(--dark);color:#fff;border-radius:14px;padding:14px 18px;display:flex;gap:22px;align-items:center;flex-wrap:wrap} .metric b{display:block;font:800 25px var(--mono)} .metric span{font-size:10px;color:#aab0b6;text-transform:uppercase;letter-spacing:.08em} .metric.pass b{color:#64d39b} .metric.open b{color:#f0b45e}
+.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0} .tabs button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:8px 14px;font-weight:700;color:var(--muted);cursor:pointer} .tabs button.active{background:var(--dark);color:#fff;border-color:var(--dark)} .panel{display:none} .panel.active{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:14px} .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px;box-shadow:0 1px 2px rgba(0,0,0,.04)} .card h3{margin:0 0 8px;font-size:16px} .small{font-size:12px;color:var(--muted);line-height:1.5} .kv{display:grid;grid-template-columns:150px 1fr;gap:5px 10px;font-size:13px} .kv b{font-weight:700}
+.badge{font-size:10px;font-weight:800;border-radius:999px;padding:3px 8px;display:inline-block} .PASS{background:#e8f7ef;color:#1f7d52} .OPEN{background:#fff1df;color:#9a6218} .HOLD{background:#fde9e9;color:#9e3030} .INFO{background:#e9f2fb;color:#2d6e9f}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden} th,td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:left;font-size:12px;vertical-align:top} th{background:#f8f9fa;color:var(--muted);text-transform:uppercase;font-size:10px;letter-spacing:.07em}
+.callout{background:#fff7e8;border:1px solid #efd59a;border-radius:12px;padding:13px 15px;margin-bottom:14px;font-size:13px;line-height:1.55} .callout strong{color:#875914}
+.path{font:12px var(--mono);background:#f0f2f4;border-radius:7px;padding:7px 9px;word-break:break-all} .tree{font:12px/1.55 var(--mono);white-space:pre;background:#22262a;color:#e9eef2;border-radius:12px;padding:16px;overflow:auto}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0} .toolbar button{border:0;border-radius:8px;background:var(--teal);color:#fff;padding:8px 12px;font-weight:700;cursor:pointer} .toolbar button.secondary{background:#fff;color:var(--muted);border:1px solid var(--line)}
+input,select,textarea{font:12px var(--sans);border:1px solid var(--line);border-radius:7px;padding:5px 7px} textarea{width:100%;min-height:55px} .gate-row select{min-width:85px}
+.calc{display:grid;grid-template-columns:repeat(5,minmax(90px,1fr));gap:8px} .calc label{font-size:11px;color:var(--muted)} .calc input{width:100%;margin-top:3px} .calc-out{font:700 13px var(--mono);padding-top:18px}
+footer{margin-top:26px;color:var(--muted);font-size:11px}
+</style></head>
+<body><div class="wrap">
+<header><div><h1>MARVILON K01 <span class="teal">Engineering Control Center</span></h1><div class="sub">CAD · gates · BOM · dimensional chains · technology · evidence · release</div></div><div class="mono small" id="clock"></div></header>
+<div class="strip" id="metrics"></div>
+<div class="tabs">
+<button class="active" data-p="overview">Overview</button><button data-p="gates">Gates</button><button data-p="parts">Parts / BOM</button><button data-p="interfaces">Interfaces / Chains</button><button data-p="technology">Technology</button><button data-p="changes">Change Control</button><button data-p="evidence">Evidence / AI</button><button data-p="repo">Repo</button>
+</div>
+
+<section id="overview" class="panel active">
+<div class="callout"><strong>Current decision:</strong> Gate04C OD36 circular J2 is a verified functional reference, not the final compact production optimum. Atomic promotion is held for one compactness optimization pass.</div>
+<div class="grid">
+<div class="card"><h3>Production CAD</h3><div class="kv"><b>Main assembly</b><span class="path">D:\Marvilon\K01\cad\assemblies\K01-A-001_Calibration_Module.SLDASM</span><b>Environment</b><span>SOLIDWORKS 2018 revision 26.0.1</span><b>SW2026</b><span>Controlled migration after design freeze</span></div></div>
+<div class="card"><h3>Gate04C verification</h3><div class="kv"><b>Build</b><span><span class="badge PASS">PASS</span></span><b>Verify V2</b><span><span class="badge PASS">PASS</span></span><b>Mate errors</b><span>0</span><b>Promotion</b><span><span class="badge OPEN">OPEN</span></span></div></div>
+<div class="card"><h3>Authority domains</h3><div class="small">Master: requirements/material/lifecycle.<br>Native SW: topology, feature tree, exact mates.<br>Parameter registry: controlled cross-part values.<br>BOM: generated projection.<br>Solver reports: calculation evidence.<br>Technology registry: manufacturing route.</div></div>
+<div class="card"><h3>Next critical path</h3><div class="small">1. Compact J2 optimization.<br>2. CAD/assembly/interference verification.<br>3. Atomic P003/P007 promotion.<br>4. Master/property/BOM reconciliation.<br>5. Datum C, structural refresh, P015/B001, final FEMM.<br>6. Drawings + technology release.</div></div>
+</div>
+</section>
+
+<section id="gates" class="panel"><div class="toolbar"><button id="exportBackup">Save full control backup</button><button class="secondary" id="resetState">Reset dashboard state</button></div><table><thead><tr><th>ID</th><th>Gate</th><th>Status</th><th>Evidence / note</th></tr></thead><tbody id="gateBody"></tbody></table></section>
+
+<section id="parts" class="panel">
+<div class="callout"><strong>BOM rule:</strong> production BOM is generated from stable assembly/custom properties plus master-only BUY/consumable rows. Missing material blocks release. No hand-maintained BOM as authority.</div>
+<table><thead><tr><th>Part</th><th>Description</th><th>Material</th><th>Status</th><th>Make/Buy</th></tr></thead><tbody id="partBody"></tbody></table>
+</section>
+
+<section id="interfaces" class="panel">
+<div class="grid">
+<div class="card"><h3>J1 — P016 ↔ P003</h3><div class="small">3×M4 / PCD24 is J1, not J2. A = metal face; B = Ø10 H7/g6 pilot; C = relieved/diamond locator concept. P016 material remains OPEN until production Long Run material is confirmed.</div></div>
+<div class="card"><h3>J2 — P003 ↔ P007</h3><div class="small"><b>Current verified candidate:</b> 3×M3 / PCD28, Ø14.10 H7/g6 pilot, 16×1.5 seal, OD36 circular flange. The P003 native holes are Ø2.50 tap-drill geometry with M3×0.5-6H production requirement; P007 holes are Ø3.40 clearance.</div></div>
+</div>
+<h3>Dimensional / functional chains</h3><table><thead><tr><th>ID</th><th>Chain</th><th>Equation</th><th>Value</th><th>Status</th></tr></thead><tbody id="chainBody"></tbody></table>
+<h3>J2 compactness calculator</h3>
+<div class="card"><div class="calc">
+<label>Gland OD worst, mm<input id="gland" type="number" step=".1" value="20.6"></label>
+<label>Hole Ø, mm<input id="hole" type="number" step=".1" value="3.4"></label>
+<label>Ligament target, mm<input id="lig" type="number" step=".1" value="2.0"></label>
+<label>PCD, mm<input id="pcd" type="number" step=".1" value="28.0"></label>
+<div class="calc-out" id="calcOut"></div></div>
+<div class="small" style="margin-top:8px">Full-circular OD minimum = PCD + hole Ø + 2×outer ligament. Inner ligament = (PCD − hole Ø − gland OD)/2. This is packaging arithmetic, not final fastener/FEA release.</div></div>
+</section>
+
+<section id="technology" class="panel"><table><thead><tr><th>Part</th><th>Manufacturing route</th><th>Critical control</th></tr></thead><tbody id="techBody"></tbody></table></section>
+
+<section id="changes" class="panel">
+<div class="grid">
+<div class="card"><h3>Current verified baseline</h3><div class="small">OD36 circular / PCD28 / 3×M3 / 2.0 mm inner ligament / 2.3 mm outer ligament. Internally consistent and assembly-verified.</div></div>
+<div class="card"><h3>C1 — 3-lobed M3</h3><span class="badge INFO">STUDY</span><div class="small">Keep current seal, PCD and M3. Remove full circular material between three local bolt bosses. Maximum local envelope stays similar, but mass/visual bulk falls. Adds profile milling.</div></div>
+<div class="card"><h3>C2 — compact M2.5</h3><span class="badge OPEN">PREFERRED STUDY</span><div class="small">Candidate only: 3×M2.5, clearance assumption Ø2.9, PCD≈26.5, ligament study target1.5. Mathematical full-circular OD≈32.4 → study OD33. Must freeze exact standard/head/torque/edge distance and run FEA/assembly QA.</div></div>
+<div class="card"><h3>Rejected / not preferred</h3><div class="small">Permanent P003↔P007 weld: rejected — violates serviceability.<br>OD34/PCD28 M3: rejected under 2 mm outer ligament target.<br>M2 first-choice production clamp: not preferred — unnecessarily delicate for service joint.</div></div>
+</div>
+</section>
+
+<section id="evidence" class="panel">
+<div class="toolbar"><button id="exportAI">Export AI context JSON</button><button class="secondary" id="exportAIMd">Export AI context MD</button></div>
+<div class="card"><h3>Known conflicts requiring repair</h3><ul id="conflicts"></ul></div>
+<div class="card"><h3>Current evidence paths</h3><div class="small">CAD reports: <span class="path">reports/cad/current/</span><br>AI context: <span class="path">reports/ai/current/</span><br>BOM audits: <span class="path">reports/bom/</span><br>Calculation evidence: <span class="path">reports/calc/</span></div></div>
+</section>
+
+<section id="repo" class="panel">
+<div class="callout"><strong>Extraction rule for this package:</strong> extract the ZIP directly into <span class="mono">D:\BreshevEngineering\marvilon-k01\</span>. It creates/merges only controlled subfolders; do not make another project root.</div>
+<div class="tree">marvilon-k01/
+├─ master/
+├─ params/
+├─ control/
+│  ├─ command_center/
+│  │  ├─ K01_Command_Center_v1.html
+│  │  └─ data/
+│  └─ system/
+├─ cad_api/
+├─ scripts/
+├─ tools/
+├─ bom/
+│  └─ spec/
+├─ reports/
+│  ├─ cad/
+│  ├─ bom/
+│  ├─ calc/
+│  └─ ai/current/
+├─ docs/
+│  ├─ design/
+│  └─ technology/
+├─ reference/
+├─ tests/
+├─ handoff/
+└─ .local_archive/</div>
+</section>
+<footer>Dashboard is a projection, not an independent design authority. Local edits are stored in browser localStorage and must be reconciled by the engineering build before release.</footer>
+</div>
+<script>
+const BASE={"schema": "k01_control_state_v1", "updated": "2026-09-04", "project": "MARVILON K01 Calibration Module", "cad": {"development": "SOLIDWORKS 2018 revision 26.0.1", "target_after_freeze": "SOLIDWORKS 2026"}, "production_assembly": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM", "gate04c_verification_assembly": "D:\\Marvilon\\K01\\cad\\candidates\\gate04c\\verification\\K01-A-001_GATE04C_VERIFY_V2.SLDASM", "gate04c": {"build": "PASS", "verify_v2": "PASS", "promotion": "OPEN", "active_mate_errors": 0}, "j2": {"status": "VERIFIED CANDIDATE / NOT PROMOTED", "function": "Removable P003↔P007 static-sealed service joint", "current_verified": {"P003_material": "AISI 316L / EN 1.4404", "P007_material": "AISI 316L / EN 1.4404", "flange_OD_mm": 36.0, "P003_flange_zone_mm": 5.0, "P007_flange_thickness_mm": 3.0, "pilot": "Ø14.10 H7/g6", "pilot_male_L_mm": 1.5, "pilot_female_depth_mm": 1.7, "pilot_bottom_clearance_mm": 0.2, "fasteners": "3×M3 at 120°, PCD28", "P007_clearance_hole_mm": 3.4, "P003_native_tap_drill_mm": 2.5, "thread_requirement": "M3×0.5-6H", "seal": "16×1.5 metric O-ring", "gland_ID_mm": 16.0, "gland_width_mm": 2.1, "gland_depth_mm": 1.1, "gland_OD_nominal_mm": 20.2, "gland_OD_worst_mm": 20.6}, "compactness_review": {"disposition": "REOPEN OPTIMIZATION BEFORE PROMOTION", "reason": "OD36 full circular flange is the minimum full circular envelope under current M3/PCD28/2.0 mm ligament assumptions, but is not a mass/packaging optimum.", "preferred_study": "3-lobed flange + M2.5 option; preserve seal and D14.10 pilot; release only after CAD/FEA/assembly QA", "baseline_math": {"inner_ligament_mm": "(28-3.4-20.6)/2 = 2.00", "outer_ligament_mm": "(36-28-3.4)/2 = 2.30", "minimum_full_circular_OD_mm": "28+3.4+2×2.0 = 35.4"}, "candidate_C2": {"fastener": "3×M2.5", "clearance_hole_assumption_mm": 2.9, "PCD_candidate_mm": 26.5, "ligament_target_mm": 1.5, "minimum_full_circular_OD_math_mm": 32.4, "suggested_roundup_OD_mm": 33.0, "status": "STUDY ONLY — exact fastener standard/head/torque/ligament/FEA not yet frozen"}}}, "interfaces": {"J1": "P016↔P003: A metal face + Ø10 H7/g6 pilot + clocking C; 3×M4 on PCD24", "J2": "P003↔P007: metal face + Ø14.10 H7/g6 pilot + one hole-axis clocking; clamp currently 3×M3"}, "gates": [{"id": "G-CAD-01", "name": "Stable P003/P007 prior promotion", "status": "PASS", "evidence": "26 mates / 0 errors; P007 L35"}, {"id": "G04C-BUILD", "name": "J2 native P003/P007 build", "status": "PASS", "evidence": "OD36, seal gland, pilot, hole patterns"}, {"id": "G04C-VERIFY", "name": "J2 assembly Verify V2", "status": "PASS", "evidence": "candidate links true; 3 new J2 mates; 0 active mate errors"}, {"id": "G04C-COMPACT", "name": "J2 compact production optimization", "status": "OPEN", "evidence": "Current full OD36 flange judged bulky in assembly review"}, {"id": "G04B", "name": "Datum C / P017", "status": "OPEN", "evidence": "Design definition known; native implementation pending"}, {"id": "G-P007-STATIC", "name": "P007 +0.20 bar static refresh", "status": "OPEN", "evidence": "Previous study PASS; refresh after final flange freeze"}, {"id": "G-P007-BUCK", "name": "P007 -0.20 bar buckling refresh", "status": "OPEN", "evidence": "Previous λ1=1883.6; refresh after final flange freeze"}, {"id": "G-P015", "name": "P015 production material / winding / leads", "status": "OPEN", "evidence": "PPS grade OPEN"}, {"id": "G-B001", "name": "B001 production lot magnetic data", "status": "OPEN", "evidence": "Sm2Co17/S280 candidate; lot Br(T) open"}, {"id": "G-FEMM", "name": "Final FEMM", "status": "OPEN", "evidence": "Run after J2 compact + P015 freeze"}, {"id": "G-BOM", "name": "Automatic BOM zero-delta", "status": "OPEN", "evidence": "master/control metadata repair required"}, {"id": "G-REL", "name": "Atomic production promotion / release", "status": "OPEN", "evidence": "blocked by compactness + remaining gates"}], "known_conflicts": ["K01_master_v2 still says P007 L=40 mm; verified native baseline is L=35 mm.", "Older ENGINEERING_STANDARD calls SW2026 current authoring; actual active development is SW2018 rev26.0.1, SW2026 after freeze.", "Control Center v5 J2 rows still contain pre-Gate04C wording/exact-gland-open state.", "Assembly/service router still says P007 Ø16 pilot; current verified pilot is Ø14.10 H7/g6.", "P003 production thread representation is still Ø2.50 native tap-drill geometry + M3 requirement, not final Hole Wizard/cosmetic-thread release representation."]};
+const PARTS=[{"part": "K01-P-001", "description": "Calibration Rod", "material": "AISI 316L / EN 1.4404", "status": "ACTIVE", "makebuy": "MAKE"}, {"part": "K01-P-002", "description": "Rear Guide / Anti-Rotation Bushing", "material": "TECAPEEK PVX black baseline", "status": "ACTIVE / MATERIAL BASELINE", "makebuy": "MAKE"}, {"part": "K01-P-003", "description": "Cartridge Body", "material": "AISI 316L / EN 1.4404", "status": "GATE04C VERIFIED CANDIDATE / NOT PROMOTED", "makebuy": "MAKE"}, {"part": "K01-P-004", "description": "Front Guide Bushing", "material": "TECAPEEK PVX black baseline", "status": "ACTIVE / MATERIAL BASELINE", "makebuy": "MAKE"}, {"part": "K01-P-006", "description": "Retaining Plug", "material": "AISI 316L / EN 1.4404", "status": "ACTIVE / SERVICE FEATURE OPEN", "makebuy": "MAKE"}, {"part": "K01-P-007", "description": "Hermetic Magnetic Can", "material": "AISI 316L / EN 1.4404", "status": "GATE04C VERIFIED CANDIDATE / COMPACTNESS REOPENED", "makebuy": "MAKE"}, {"part": "K01-P-008", "description": "Internal Magnetic Follower", "material": "AISI 316L / EN 1.4404", "status": "ACTIVE", "makebuy": "MAKE"}, {"part": "K01-P-009", "description": "Rear Stop Washer", "material": "AISI 316L / EN 1.4404", "status": "ACTIVE", "makebuy": "MAKE"}, {"part": "K01-P-013", "description": "Follower End Cap", "material": "AISI 316L / EN 1.4404", "status": "ACTIVE / RETENTION QUALIFICATION OPEN", "makebuy": "MAKE"}, {"part": "K01-P-014", "description": "Front Guide Retaining Ring", "material": "OPEN; 1.4310 / AISI 301 candidate", "status": "MATERIAL OPEN", "makebuy": "MAKE"}, {"part": "K01-P-015", "description": "Dual Coil Bobbin", "material": "Prototype PLA; production PPS grade OPEN", "status": "PRODUCTION MATERIAL/WINDING OPEN", "makebuy": "MAKE"}, {"part": "K01-P-016", "description": "Long Run Interface Boss", "material": "OPEN until production Long Run material confirmed", "status": "GATE04B / MATERIAL OPEN", "makebuy": "MAKE"}, {"part": "K01-P-017", "description": "Datum C relieved/diamond locator", "material": "AISI 316L / EN 1.4404 baseline", "status": "PLANNED", "makebuy": "MAKE"}, {"part": "K01-B-001", "description": "Internal SmCo Magnet", "material": "Sm2Co17 / S280 candidate", "status": "LOT DATA OPEN", "makebuy": "BUY"}, {"part": "K01-B-007", "description": "Magnet Wire", "material": "Material/class per final winding specification", "status": "QTY AR/m; FINAL SPEC OPEN", "makebuy": "BUY"}];
+const CHAINS=[{"id": "CH-001", "name": "Hard-stop travel", "equation": "StopOut = StopIn + Stroke + CollarT", "value": "24 = 12 + 10 + 2 mm", "status": "ACTIVE"}, {"id": "CH-002", "name": "Follower-to-can radial clearance", "equation": "(P007 ID - P008 OD)/2", "value": "(9.4-8.8)/2 = 0.30 mm", "status": "PASS vs >=0.25"}, {"id": "CH-003", "name": "P007 thin wall", "equation": "(OD-ID)/2", "value": "(10.0-9.4)/2 = 0.30 mm", "status": "ACTIVE"}, {"id": "CH-J2-001", "name": "Pilot bottom clearance", "equation": "1.70-1.50", "value": "0.20 mm", "status": "VERIFIED"}, {"id": "CH-J2-002", "name": "J2 inner ligament baseline", "equation": "(PCD-Dhole-GlandODworst)/2", "value": "(28-3.4-20.6)/2 = 2.00 mm", "status": "VERIFIED"}, {"id": "CH-J2-003", "name": "J2 outer ligament baseline", "equation": "(OD-PCD-Dhole)/2", "value": "(36-28-3.4)/2 = 2.30 mm", "status": "VERIFIED"}, {"id": "CH-ACT-001", "name": "Required actuator force", "equation": "SF*(Fbreakaway+|FCFD|max+Finertia)", "value": "2*(0.25+0.185447243+0.03)=0.930894486 N", "status": "ACTIVE"}];
+const TECH=[{"part": "P001", "route": "Turn/grind → tip/collar/anti-rotation → deburr/polish → clean → inspect", "critical": "rod Ø5, straightness/runout, guide/target surfaces"}, {"part": "P002", "route": "Turn OD/ID → anti-rotation feature → finish bore → clean → inspect", "critical": "axial float 0.04…0.08; polymer handling"}, {"part": "P003", "route": "Turn coaxial body/steps → M12×1 → J1 → J2 pilot/gland/fasteners → deburr → passivate/clean → inspect", "critical": "stop chain, J1 A/B/C, J2 pilot/gland"}, {"part": "P004", "route": "Turn OD/ID/shoulder → finish bore → clean → inspect", "critical": "guide clearance / retention"}, {"part": "P006", "route": "Turn → M12×1 → service-tool feature → clean → inspect", "critical": "service feature OPEN"}, {"part": "P007", "route": "Deep-bore ID9.4 → finish locator Ø14.10 → supported OD10 finish → front flange geometry → holes → clean → inspect", "critical": "0.30 wall, ovality/runout, flange/locator; compact version to freeze"}, {"part": "P008", "route": "Turn OD/pocket/shoulder → M4 interface → clean → inspect", "critical": "B001 pocket, usable M4 depth"}, {"part": "P009", "route": "Turn washer → deburr → clean → inspect", "critical": "t0.50, ID/OD"}, {"part": "P013", "route": "Turn cap → prepare retention/joining face → clean → inspect", "critical": "must not preload B001"}, {"part": "P014", "route": "Laser/stamp/machine spring ring → deburr → heat treatment if required → inspect", "critical": "material/temper OPEN"}, {"part": "P015", "route": "Machine/mold bobbin → wind → terminate → resistance/insulation test", "critical": "production PPS/wire/leads OPEN"}, {"part": "P016", "route": "Join boss to Long Run → finish datum A/B/C from actual channel axis → leak/geometry inspection", "critical": "material follows production Long Run; OPEN"}, {"part": "P017", "route": "Turn press shank → relieved/diamond end → orientation inspection", "critical": "clocking-only function; radial relief"}];
+let S=JSON.parse(localStorage.getItem('k01_cc_state_v1')||'null')||structuredClone(BASE);
+const save=()=>localStorage.setItem('k01_cc_state_v1',JSON.stringify(S));
+function badge(s){return `<span class="badge ${s==='PASS'?'PASS':s==='OPEN'?'OPEN':'HOLD'}">${s}</span>`}
+function renderMetrics(){let pass=S.gates.filter(g=>g.status==='PASS').length, open=S.gates.filter(g=>g.status==='OPEN').length, hold=S.gates.filter(g=>g.status==='HOLD').length;document.getElementById('metrics').innerHTML=`<div class="metric pass"><b>${pass}</b><span>Gates PASS</span></div><div class="metric open"><b>${open}</b><span>Open</span></div><div class="metric"><b>${hold}</b><span>Hold</span></div><div class="metric pass"><b>${S.gate04c.active_mate_errors}</b><span>Mate errors</span></div><div class="metric"><b>2018</b><span>Active SW</span></div>`}
+function renderGates(){let b=document.getElementById('gateBody');b.innerHTML='';S.gates.forEach((g,i)=>{let tr=document.createElement('tr');tr.className='gate-row';tr.innerHTML=`<td class="mono">${g.id}</td><td>${g.name}</td><td><select data-i="${i}"><option ${g.status==='PASS'?'selected':''}>PASS</option><option ${g.status==='OPEN'?'selected':''}>OPEN</option><option ${g.status==='HOLD'?'selected':''}>HOLD</option></select></td><td><textarea data-note="${i}">${g.evidence||''}</textarea></td>`;b.appendChild(tr)});b.querySelectorAll('select').forEach(x=>x.onchange=e=>{S.gates[+e.target.dataset.i].status=e.target.value;save();renderMetrics()});b.querySelectorAll('textarea').forEach(x=>x.onchange=e=>{S.gates[+e.target.dataset.note].evidence=e.target.value;save()})}
+function renderParts(){document.getElementById('partBody').innerHTML=PARTS.map(p=>`<tr><td class="mono">${p.part}</td><td>${p.description}</td><td>${p.material}</td><td>${p.status.includes('OPEN')?'<span class="badge OPEN">'+p.status+'</span>':p.status}</td><td>${p.makebuy}</td></tr>`).join('')}
+function renderChains(){document.getElementById('chainBody').innerHTML=CHAINS.map(c=>`<tr><td class="mono">${c.id}</td><td>${c.name}</td><td class="mono">${c.equation}</td><td>${c.value}</td><td>${c.status}</td></tr>`).join('')}
+function renderTech(){document.getElementById('techBody').innerHTML=TECH.map(t=>`<tr><td class="mono">${t.part}</td><td>${t.route}</td><td>${t.critical}</td></tr>`).join('')}
+function renderConflicts(){document.getElementById('conflicts').innerHTML=S.known_conflicts.map(x=>`<li>${x}</li>`).join('')}
+function calc(){let g=+document.getElementById('gland').value,h=+document.getElementById('hole').value,l=+document.getElementById('lig').value,p=+document.getElementById('pcd').value;let inner=(p-h-g)/2, od=p+h+2*l;document.getElementById('calcOut').innerHTML=`inner lig = ${inner.toFixed(2)} mm<br>min full OD = ${od.toFixed(2)} mm`}
+['gland','hole','lig','pcd'].forEach(id=>document.getElementById(id).oninput=calc);
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.p).classList.add('active')})
+function dl(name,text,type='application/json'){let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click()}
+document.getElementById('exportBackup').onclick=()=>dl('K01_ControlCenter_backup_'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify(S,null,2));
+document.getElementById('resetState').onclick=()=>{if(confirm('Reset local dashboard edits?')){S=structuredClone(BASE);save();renderAll()}}
+document.getElementById('exportAI').onclick=()=>dl('K01_AI_Context_'+new Date().toISOString().slice(0,10)+'.json',JSON.stringify(S,null,2));
+document.getElementById('exportAIMd').onclick=()=>{let md=`# K01 AI Context\n\nProduction assembly: ${S.production_assembly}\n\nGate04C BUILD=${S.gate04c.build}, VERIFY=${S.gate04c.verify_v2}, promotion=${S.gate04c.promotion}.\n\n## J2\n${JSON.stringify(S.j2,null,2)}\n\n## Open gates\n${S.gates.filter(g=>g.status!=='PASS').map(g=>'- '+g.id+' '+g.name+' — '+g.status+' — '+g.evidence).join('\n')}\n\n## Known conflicts\n${S.known_conflicts.map(x=>'- '+x).join('\n')}`;dl('K01_AI_Context_'+new Date().toISOString().slice(0,10)+'.md',md,'text/markdown')}
+function renderAll(){renderMetrics();renderGates();renderParts();renderChains();renderTech();renderConflicts();calc()}
+document.getElementById('clock').textContent='updated 2026-09-04 · '+new Date().toLocaleString();
+renderAll();
+</script></body></html>

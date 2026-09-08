@@ -1,0 +1,26 @@
+{
+  "schema": "k01.gate04e.analysis_parameters.v1_7",
+  "scope": "Gate04E P006 service structural screen + current FEMM screening",
+  "authority": "controlled engineering parameters; values are inputs to the build graph and are not duplicated in the Command Center UI",
+  "structural": {
+    "normal_force_N": 300.0,
+    "pressure_MPa": 0.02,
+    "bolt": {
+      "count": 3,
+      "thread": "M2.5",
+      "nominal_shank_diameter_mm": 2.5,
+      "head_diameter_mm": 4.5,
+      "preload_N_each": 300.0
+    },
+    "analysis_type": "linear_static",
+    "contact": "global_no_penetration_surface_to_surface",
+    "friction": false
+  },
+  "magnetic_screening": {
+    "coil_A_Aturn": 1.0,
+    "coil_B_Aturn": 1.0,
+    "mu_r_316_screening": 1.005,
+    "magnet_Br_T_screening": 1.0,
+    "force_extraction_release_status": "NOT_VERIFIED"
+  }
+}

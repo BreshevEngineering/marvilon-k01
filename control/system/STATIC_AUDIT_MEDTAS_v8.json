@@ -1,0 +1,98 @@
+{
+  "schema": "k01_medtas_v8_static_audit",
+  "created": "2026-09-04",
+  "status": "PASS_STATIC_PACKAGE",
+  "scope": "Controlled v8 update only. Mutable current evidence/event ledger/native CAD are deliberately not packaged.",
+  "json": {
+    "count": 29,
+    "all_parse": true,
+    "errors": []
+  },
+  "command_center": {
+    "javascript_syntax_pass": true,
+    "javascript_error": "",
+    "no_python_runtime_dependency": true,
+    "state_api_invokes_function": true,
+    "git_api_invokes_function": true,
+    "files_api_invokes_function": true,
+    "direct_evidence_navigation": true,
+    "event_ledger_not_overwritten": true
+  },
+  "technical_filter": {
+    "gate_count": 24,
+    "all_24_gate_fields_present": true,
+    "source_registry_unique": true,
+    "source_links_resolve": true
+  },
+  "drawing_assurance": {
+    "autodimension_call_absent": true,
+    "intentional_marked_dimensions": true,
+    "section_view": true,
+    "characteristic_table": true,
+    "fail_closed_linter_v2": true,
+    "current_expected_release_status": "HOLD_RELEASE_OPEN_CHARACTERISTICS",
+    "current_expected_holds": [
+      "K01-D-003: RELEASE_CANDIDATE_NOT_APPROVED",
+      "K01-D-003/P003-C04: provisional characteristic",
+      "K01-D-005: RELEASE_CANDIDATE_NOT_APPROVED",
+      "K01-D-005/P006-C03: tolerance/fit/GD&T not explicit",
+      "K01-D-006: RELEASE_CANDIDATE_NOT_APPROVED",
+      "K01-D-006/P007-C07: provisional characteristic",
+      "K01-D-006/P007-C07: tolerance/fit/GD&T not explicit",
+      "K01-D-006/P007-C08: provisional characteristic",
+      "K01-D-006/P007-C08: tolerance/fit/GD&T not explicit"
+    ],
+    "local_SW2018_compile_verified": false
+  },
+  "p006_service_builder": {
+    "stable_copy_before_candidate": true,
+    "candidate_only_policy": true,
+    "local_SW2018_compile_verified": false
+  },
+  "bom": {
+    "text_property_projection_only": true,
+    "apply_requires_explicit_ack": true,
+    "reconciliation_auto_rerun": true
+  },
+  "git": {
+    "invoked_subcommands": [
+      "status",
+      "branch",
+      "log"
+    ],
+    "read_only_classifier": true,
+    "no_stage_or_commit_action": true
+  },
+  "file_registry": {
+    "entry_count": 34,
+    "unique_ids": true
+  },
+  "csharp_static": {
+    "K01Gate04D_C2R1_DrawingsV3.cs": {
+      "brace_balance": true,
+      "open": 81,
+      "close": 81
+    },
+    "K01Gate04E_P006_ServiceDrive.cs": {
+      "brace_balance": true,
+      "open": 26,
+      "close": 26
+    },
+    "K01_BOM_PropertyProjection.cs": {
+      "brace_balance": true,
+      "open": 41,
+      "close": 41
+    }
+  },
+  "external_release_holds": [
+    "P006 service candidate: local SW2018 build and service verification",
+    "T04 local temperature/media/exact elastomer/compression/leak",
+    "T05 torque-clamp calibration and final local contact/FEA",
+    "T06 thermal/galling/repeated-service qualification",
+    "T07 final P007 Static/Buckling",
+    "T08 actual BOM metadata projection/reconciliation",
+    "T09 local SW2018 Drawing V3 + release-semantic closure + visual approval",
+    "T10 P015/B001 production freeze + final FEMM + bench",
+    "T11 atomic P003/P007 promotion"
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "characteristics": [
+    {
+      "candidate_spec": "FLATNESS 0.03",
+      "id": "C01",
+      "mbd_required": true,
+      "role": "J2 face / datum A flatness",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "GD&T"
+    },
+    {
+      "candidate_spec": "Ø14.10 H7 × 1.70",
+      "id": "C02",
+      "mbd_required": true,
+      "role": "Locator / datum B",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "SIZE_FIT_DATUM"
+    },
+    {
+      "candidate_spec": "PERP Ø0.03 TO A",
+      "id": "C03",
+      "mbd_required": true,
+      "role": "Locator axis perpendicularity to A",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "GD&T"
+    },
+    {
+      "candidate_spec": "3×Ø2.90 THRU; PCD26.50 BASIC; 120° BASIC; POS Ø0.15 |A|B",
+      "id": "C04",
+      "mbd_required": true,
+      "role": "J2 clamp clearance pattern",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "PATTERN_GD&T"
+    },
+    {
+      "candidate_spec": "Ø33.00 ±0.05 × 3.00 ±0.05",
+      "id": "C05",
+      "mbd_required": true,
+      "role": "Flange size",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "SIZE_TOLERANCE"
+    },
+    {
+      "candidate_spec": "35.00 ±0.05",
+      "id": "C06",
+      "mbd_required": true,
+      "role": "Overall length",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "SIZE_TOLERANCE"
+    },
+    {
+      "candidate_spec": "Ø10.00; release tolerance/general-tolerance coverage OPEN",
+      "id": "C07",
+      "mbd_required": true,
+      "role": "Thin can OD",
+      "status": "OPEN_TOLERANCE_POLICY",
+      "type": "SIZE"
+    },
+    {
+      "candidate_spec": "Ø9.40; release tolerance/general-tolerance coverage OPEN",
+      "id": "C08",
+      "mbd_required": true,
+      "role": "Thin can ID",
+      "status": "OPEN_TOLERANCE_POLICY",
+      "type": "SIZE"
+    },
+    {
+      "candidate_spec": "AISI 316L / EN 1.4404",
+      "id": "C09",
+      "mbd_required": false,
+      "role": "Material",
+      "status": "CONTROLLED_PRODUCT_DATA",
+      "type": "MATERIAL"
+    },
+    {
+      "candidate_spec": null,
+      "id": "C10",
+      "mbd_required": false,
+      "role": "Containment weld interface/process",
+      "status": "OPEN_SPEC",
+      "type": "PROCESS"
+    },
+    {
+      "candidate_spec": null,
+      "id": "C11",
+      "mbd_required": true,
+      "role": "Critical concentricity/coaxiality control",
+      "status": "OPEN_SPEC",
+      "type": "GD&T"
+    },
+    {
+      "candidate_spec": null,
+      "id": "C12",
+      "mbd_required": false,
+      "role": "Leak/containment acceptance reference",
+      "status": "OPEN_REQUIREMENT",
+      "type": "INSPECTION_REQUIREMENT"
+    }
+  ],
+  "drawing_no": "K01-D-006",
+  "manufacturer_feedback_gate": {
+    "purpose": "Use one difficult drawing to validate template/content with manufacturer before batch generation.",
+    "ready_when": [
+      "C01-C08 and C11 are represented in native model PMI/MBD or explicitly removed by controlled engineering decision",
+      "C10 weld process route has a draft controlled definition",
+      "drawing template bound",
+      "draft PDF generated from native model without manually authored duplicate tolerances"
+    ]
+  },
+  "part_number": "K01-P-007",
+  "policy": "For dimensional/GD&T/tolerance content, drawing release is forbidden unless the same characteristic exists in the native model PMI/MBD. Drawing is a derived representation.",
+  "priority": "FIRST_EXEMPLAR",
+  "schema": "k01.drawing_p007_exemplar.v1_9",
+  "source_note": "Candidate characteristic values transcribed from existing K01-D-006 C2R1 draft/TPD V3. They are NOT released authority until authored/verified in native MBD or controlled non-dimensional product definition.",
+  "source_status": "LEGACY_DRAFT_CANDIDATE_ONLY",
+  "title": "Hermetic Magnetic Can"
+}

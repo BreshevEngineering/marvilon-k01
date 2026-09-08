@@ -1,0 +1,11 @@
+{
+  "schema": "medtas.build_record.v1",
+  "node_id": "K01.STRUCT.SWSIM.P006",
+  "built_state_hash": "2cabfb43a6718e9d75a2c50b60ce8203bae90bff9d57ecb2afa1e9921770088e",
+  "artifact_hash": "24d6eb2be1da2cd2afb76bfdd615d77e890c66b22c4096c8ac69e22da5c04b9f",
+  "producer": {
+    "tool": "MEDTAS controlled evidence binding",
+    "source": "reports/engineering/current/source/K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx",
+    "study_name": "Static 1"
+  }
+}

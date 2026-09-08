@@ -1,0 +1,9 @@
+{
+  "artifact_hash": "2857733d9d523319d077bd112334b76ee27763219acfa8c8f92d838f5d2aecbb",
+  "built_state_hash": "0342f27db86d8052dde5345c3449d183e99e95d6ce73fec99dd37a2c3bae2ea7",
+  "node_id": "K01.CHARACTERISTICS.REGISTRY",
+  "producer": {
+    "tool": "build_inspection_characteristics_v1_9.py"
+  },
+  "schema": "medtas.build_record.v1"
+}

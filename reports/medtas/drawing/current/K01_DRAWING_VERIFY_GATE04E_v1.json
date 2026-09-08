@@ -1,0 +1,18 @@
+{
+  "issues": [
+    "DRAWING-VERIFY-ARTIFACT-001: drawing artifact manifest missing",
+    "DRAWING-VERIFY-ARTIFACT-002: artifact generation is not PASS",
+    "DRAWING-VERIFY-PLAN-002: definition/release plan is not PASS",
+    "DRAWING-VERIFY-MISSING-PDF:K01-D-003,K01-D-005,K01-D-006,K01-D-012",
+    "DRAWING-VISUAL-001: explicit visual QA approval is missing/stale/not PASS for the current artifact set"
+  ],
+  "metrics": {
+    "artifact_set_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "expected_drawings": 4,
+    "pdf_drawings": 0,
+    "visual_approval": false
+  },
+  "policy": "Release requires definition plan PASS + generated SLDDRW/PDF artifacts + explicit visual QA. A file existing is not sufficient.",
+  "schema": "k01.drawing_verify.gate04e.v1_7",
+  "verdict": "HOLD"
+}

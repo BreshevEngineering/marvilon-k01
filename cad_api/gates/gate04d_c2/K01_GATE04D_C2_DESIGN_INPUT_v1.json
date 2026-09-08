@@ -1,0 +1,47 @@
+{
+  "schema": "k01_gate04d_c2_design_input_v1",
+  "status": "CONTROLLED STUDY INPUT",
+  "P003": {
+    "material": "AISI 316L / EN 1.4404",
+    "J2_flange_OD_mm": 33.0,
+    "J2_flange_depth_inward_mm": 5.0,
+    "pilot_OD_nominal_mm": 14.1,
+    "pilot_fit": "g6",
+    "pilot_L_outward_mm": 1.5,
+    "gland_ID_mm": 16.0,
+    "gland_OD_nominal_mm": 20.2,
+    "gland_depth_mm": 1.1,
+    "thread": "M2.5x0.45-6H",
+    "tap_drill_D_mm": 2.05,
+    "tap_depth_mm": 5.0
+  },
+  "P007": {
+    "material": "AISI 316L / EN 1.4404",
+    "overall_L_mm": 35.0,
+    "locator_ID_nominal_mm": 14.1,
+    "locator_fit": "H7",
+    "thin_OD_mm": 10.0,
+    "thin_ID_mm": 9.4,
+    "J2_flange_OD_mm": 33.0,
+    "J2_flange_depth_inward_mm": 3.0,
+    "clearance_hole_D_mm": 2.9
+  },
+  "J2": {
+    "pattern_qty": 3,
+    "pattern_PCD_mm": 26.5,
+    "seed_angle_deg_local": 30.0,
+    "equal_spacing_deg": 120.0,
+    "gland_OD_design_max_mm": 20.6,
+    "inner_ligament_study_mm": 1.5,
+    "outer_ligament_study_mm": 1.8,
+    "fastener": "3×M2.5 — exact standard/grade/length/finish OPEN",
+    "torque": "OPEN"
+  },
+  "references": [
+    "EDR-003",
+    "EDR-004",
+    "EDR-005",
+    "EDR-017",
+    "CI-J2"
+  ]
+}

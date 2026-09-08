@@ -1,0 +1,28 @@
+{
+  "schema": "k01_medtas_v5_static_audit",
+  "drawing_generator": {
+    "note_cast_fixed": true,
+    "no_unfixed_assignment": true,
+    "braces_balanced": true
+  },
+  "delta_interference": {
+    "stable_vs_c2": true,
+    "functional_pair_not_blindly_whitelisted": true,
+    "m12_interface_pair": true,
+    "braces_balanced": true
+  },
+  "command_center": {
+    "state_endpoint": true,
+    "handoff_endpoint": true,
+    "task_queue": true,
+    "resolver_avoids_root_false_positive": true,
+    "python_dependency_absent": true,
+    "git_args_fixed": true
+  },
+  "bom": {
+    "raw_audit_present": true,
+    "reconciled_preview_present": true,
+    "authority_map_present": true
+  },
+  "handoff_audit_present": true
+}

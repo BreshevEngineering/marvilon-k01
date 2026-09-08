@@ -1,0 +1,51 @@
+{
+  "schema": "k01.release_priority_policy.v1_9",
+  "principle": "Work is ordered by release leverage. A task that cannot change the next manufacturing/design-definition decision is deferred, not deleted.",
+  "current_release_target": "Close one manufacturer-grade P007 exemplar, computed EBOM/parts metadata, then batch remaining production definition.",
+  "priority_bands": [
+    {
+      "priority": "P0",
+      "title": "Protect frozen mechanical design",
+      "nodes": ["K01.CAD.SEM.A001", "K01.STRUCT.SWSIM.P006"],
+      "policy": "Do not reopen geometry or spend time optimizing the large structural margin without contrary evidence."
+    },
+    {
+      "priority": "P1A",
+      "title": "First manufacturer-grade drawing: K01-D-006 / P007",
+      "nodes": ["K01.DRAWING.P007.EXEMPLAR.PLAN", "K01.PRODUCT.DEFINITION.GATE04E", "K01.DRAWING.RELEASE.PLAN.GATE04E"],
+      "policy": "P007 is the exemplar because it contains thin wall, weld/containment, locating GD&T and inspection complexity. Author PMI in the model first; drawing tolerances are derived only."
+    },
+    {
+      "priority": "P1B",
+      "title": "Parts registry + computed EBOM",
+      "nodes": ["K01.PARTS.REGISTRY", "K01.CAD.PROPS.PROJECTION.A001", "K01.BOM.MODEL.A001", "K01.BOM.ARTIFACT.A001", "K01.BOM.VERIFY.A001"],
+      "policy": "CAD owns structure/quantity. parts.json owns metadata. Custom properties are a one-way projection from registry. Non-modeled and suppressed items are explicit."
+    },
+    {
+      "priority": "P1C",
+      "title": "Remaining drawings + manufacturing BOM",
+      "nodes": ["K01.DRAWING.ARTIFACT.GATE04E", "K01.DRAWING.VERIFY.GATE04E", "K01.MBOM.MODEL.A001", "K01.MBOM.ARTIFACT.A001", "K01.MBOM.VERIFY.A001"],
+      "policy": "After P007/template feedback, batch drawing skeletons and close MBOM transformations including P007 welded construction."
+    },
+    {
+      "priority": "P2",
+      "title": "Release-critical product requirements",
+      "requirement_ids": ["REQ-K01-MEDIA-001", "REQ-K01-SEAL-001", "REQ-K01-LEAK-001", "REQ-K01-SERVICE-CYCLES-001", "REQ-K01-ACT-FORCE-001"],
+      "policy": "These remain production-release blockers even when CAD/FEA/drawings are green."
+    },
+    {
+      "priority": "P3",
+      "title": "Magnetic quantitative acceptance",
+      "nodes": ["K01.FEMM.VERIFY.CURRENT"],
+      "policy": "Current field/automation screen is retained. Final force/bench evidence is reopened for actuator release."
+    },
+    {
+      "priority": "P4",
+      "title": "Independent solver assurance",
+      "nodes": ["K01.STRUCT.FACE_MAP.P006", "K01.STRUCT.FACE_MAP.QUAL.P006", "K01.STRUCT.BOLT_EQUIV.P006", "K01.STRUCT.NEUTRAL.GEOMETRY.P006", "K01.STRUCT.MESH.P006", "K01.STRUCT.CCX.INPUT.P006", "K01.STRUCT.CCX.P006", "K01.STRUCT.RECON.P006"],
+      "policy": "DEFERRED_ASSURANCE. Reopen only if structural geometry/load/contact assumptions change materially, margin collapses, or release policy explicitly requires independent solver reconciliation."
+    }
+  ],
+  "calculix_current_role": "DEFERRED_ASSURANCE",
+  "calculix_is_release_blocker": false
+}

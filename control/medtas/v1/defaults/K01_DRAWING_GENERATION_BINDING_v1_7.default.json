@@ -1,0 +1,11 @@
+{
+  "schema": "k01.drawing_generation_binding.v1_7",
+  "template_path": null,
+  "output_root": "drawings/release_candidate/gate04e",
+  "native_format": "SLDDRW",
+  "release_format": "PDF",
+  "views": ["Front","Right","Isometric"],
+  "annotation_policy": "MBD_ONLY_REVIEWED_CHARACTERISTICS",
+  "auto_dimension": false,
+  "status": "OPEN_TEMPLATE_AND_MBD"
+}

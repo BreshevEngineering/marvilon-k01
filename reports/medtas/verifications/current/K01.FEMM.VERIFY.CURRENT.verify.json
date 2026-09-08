@@ -1,0 +1,20 @@
+{
+  "schema": "medtas.verification_record.v1",
+  "node_id": "K01.FEMM.VERIFY.CURRENT",
+  "verified_state_hash": "b636bddbdc922bf7e2455e2dee7fb52cdfa4e2005a75061c8e803ed9162642c3",
+  "verified_artifact_hash": "b02f380b24b4d4916040992ae71a063e70f16f39a7a467f88ed0d354e62a1e9d",
+  "verdict": "PASS_WITH_LIMITATIONS",
+  "metrics": {
+    "coil_A_script": "PASS",
+    "coil_B_script": "PASS",
+    "field_solution_A": true,
+    "field_solution_B": true,
+    "force_release_evidence": false
+  },
+  "limitations": [
+    "FEMM-GEO-001: orphan endpoints warning on DXF import",
+    "FEMM-OUT-001: Coil B CSV record is incomplete",
+    "FEMM-FORCE-001: Fz_N=0 extraction is not independently validated"
+  ],
+  "notes": ""
+}

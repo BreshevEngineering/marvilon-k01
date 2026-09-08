@@ -1,0 +1,82 @@
+{
+  "schema": "k01_file_registry_v2",
+  "entries": [
+    {
+      "id": "CAD-A001",
+      "name": "Production A001 assembly",
+      "domain": "CAD",
+      "kind": "cad",
+      "path": "assemblies/K01-A-001_Calibration_Module.SLDASM"
+    },
+    {
+      "id": "CAD-G04C-V2",
+      "name": "Gate04C verification V2 assembly",
+      "domain": "CAD",
+      "kind": "cad",
+      "path": "candidates/gate04c/verification/K01-A-001_GATE04C_VERIFY_V2.SLDASM"
+    },
+    {
+      "id": "MASTER",
+      "name": "Current K01 master v2",
+      "domain": "CONTROL",
+      "kind": "repo",
+      "path": "master/K01_master_v2.json"
+    },
+    {
+      "id": "EDS001",
+      "name": "Engineering Decision Standard EDS-001 v2",
+      "domain": "DECISION",
+      "kind": "repo",
+      "path": "control/decision_system/K01_ENGINEERING_DECISION_STANDARD_EDS001_v2.md"
+    },
+    {
+      "id": "EDR-REGISTER",
+      "name": "Engineering Decision Register",
+      "domain": "DECISION",
+      "kind": "repo",
+      "path": "control/decision_system/K01_DECISION_REGISTER_v2.csv"
+    },
+    {
+      "id": "CI-J2",
+      "name": "J2 Configuration Item Dossier",
+      "domain": "CONFIGURATION",
+      "kind": "repo",
+      "path": "control/configuration_items/CI-J2_DOSSIER_v1.json"
+    },
+    {
+      "id": "SOURCE-REG",
+      "name": "Source/Evidence Registry",
+      "domain": "EVIDENCE",
+      "kind": "repo",
+      "path": "control/evidence/K01_SOURCE_REGISTRY_v1.json"
+    },
+    {
+      "id": "J2-TRADE",
+      "name": "J2 Compact Flange Study v2",
+      "domain": "DESIGN",
+      "kind": "repo",
+      "path": "docs/design/trade_studies/K01_J2_COMPACT_TRADE_STUDY_v2.md"
+    },
+    {
+      "id": "G04D-C2-INPUT",
+      "name": "Gate04D-C2 design input",
+      "domain": "CAD_API",
+      "kind": "repo",
+      "path": "cad_api/gates/gate04d_c2/K01_GATE04D_C2_DESIGN_INPUT_v1.json"
+    },
+    {
+      "id": "AI-CURRENT",
+      "name": "Current AI engineering context",
+      "domain": "EVIDENCE",
+      "kind": "repo",
+      "path": "reports/ai/current/K01_AI_ENGINEERING_CONTEXT_CURRENT.md"
+    },
+    {
+      "id": "BOM-SPEC",
+      "name": "Automatic BOM specification",
+      "domain": "BOM",
+      "kind": "repo",
+      "path": "bom/spec/K01_AUTOMATED_BOM_SPEC_v1.md"
+    }
+  ]
+}

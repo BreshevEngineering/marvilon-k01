@@ -1,0 +1,1 @@
+Copy contents into D:\\BreshevEngineering\\marvilon-k01\nThen run RUN_K01_P003_P007_INTERFACE_PROBE.cmd with K01-A-001 active.\n

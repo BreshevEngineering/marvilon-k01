@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "k01.event.schema.json",
+  "type": "object",
+  "required": [
+    "schema",
+    "seq",
+    "timestamp",
+    "type",
+    "subject",
+    "payload",
+    "previous_hash",
+    "event_hash"
+  ],
+  "properties": {
+    "schema": {
+      "const": "k01.event.v2"
+    },
+    "seq": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "payload": {
+      "type": "object"
+    },
+    "previous_hash": {
+      "type": "string",
+      "pattern": "^$|^[0-9a-f]{64}$"
+    },
+    "event_hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  }
+}

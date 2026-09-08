@@ -1,0 +1,24 @@
+{
+  "schema": "k01_current_evidence_summary_v7",
+  "created": "2026-09-04T18:48:00+03:00",
+  "active_design": "Gate04D-C2R1",
+  "gate04d_c2r1": {
+    "build": "PASS",
+    "verify": "PASS",
+    "active_mate_errors": 0,
+    "interference": "PASS",
+    "new_interferences": 0,
+    "conclusion": "CAD geometry + assembly constraints + hard-interference gate PASS."
+  },
+  "bom": {
+    "raw_status": "HOLD",
+    "raw_issue_count": 26,
+    "reconciled_status": "HOLD",
+    "release_blockers": 7,
+    "metadata_projection_required": 13
+  },
+  "drawing": {
+    "p003_status": "HOLD_NOT_MANUFACTURING_DRAWING",
+    "conclusion": "Generated PDF is not yet a manufacturing drawing."
+  }
+}

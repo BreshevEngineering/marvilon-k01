@@ -1,0 +1,70 @@
+{
+  "schema": "k01.drawing_definition.v1",
+  "drawing_id": "K01-D-003",
+  "part_id": "K01-P-003",
+  "status": "DRAFT",
+  "model": {
+    "authority": "NATIVE_SOLIDWORKS",
+    "path_ref": "CAD-R1-P003"
+  },
+  "views": [
+    {
+      "id": "V1",
+      "type": "LONGITUDINAL_SECTION",
+      "purpose": "Primary manufacturing view through J2/service axis"
+    },
+    {
+      "id": "V2",
+      "type": "J2_END",
+      "purpose": "Pilot/gland/thread-pattern definition"
+    },
+    {
+      "id": "V3",
+      "type": "DETAIL",
+      "purpose": "Pilot + gland only if V1/V2 cannot carry readable tolerances"
+    },
+    {
+      "id": "V4",
+      "type": "ISOMETRIC_REFERENCE",
+      "purpose": "Orientation only; no release dimensions"
+    }
+  ],
+  "characteristics": [
+    {
+      "id": "CHAR-P003-MAT",
+      "purpose": "production material",
+      "source_ref": "REQ-K01-MAT-P003-001",
+      "annotation_type": "MATERIAL",
+      "view": "TITLE_BLOCK",
+      "inspection_method": "material certificate + BOM",
+      "status": "RELEASED"
+    },
+    {
+      "id": "CHAR-P003-J2-LOC",
+      "purpose": "J2 locating pilot/axial datum architecture",
+      "source_ref": "REQ-K01-J2-LOC-001",
+      "annotation_type": "FIT",
+      "view": "V1",
+      "inspection_method": "limit gauge/CMM per released inspection plan",
+      "status": "RELEASED"
+    },
+    {
+      "id": "CHAR-P003-SEAL",
+      "purpose": "static J2 gland definition",
+      "source_ref": "REQ-K01-SEAL-001",
+      "annotation_type": "MODEL_DIMENSION",
+      "view": "V3",
+      "inspection_method": "CMM/optical measurement + surface finish verification",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "CHAR-P003-PATTERN",
+      "purpose": "clamp-hole/thread pattern relative to functional datums",
+      "source_ref": "CI-J2 / released tolerance-stack result",
+      "annotation_type": "GD&T",
+      "view": "V2",
+      "inspection_method": "CMM/functional gauge",
+      "status": "CANDIDATE"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "k01_post_gate04c_pipeline_v1",
+  "CFD_force_max_N": 0.185447243,
+  "actuator_force_requirement_1A_N": 0.930894486,
+  "FEMM_screening_KF_min_N_per_A": 1.0,
+  "final_FEMM": "OPEN",
+  "sequence": [
+    "typed Gate04C native build",
+    "verification A001",
+    "existing review/export and interference disposition",
+    "atomic P003/P007 promotion",
+    "master delta apply",
+    "SOLIDWORKS custom-property projection",
+    "BOM regenerate and zero unexplained delta comparison",
+    "Git source/control commit",
+    "Gate04B Datum C completion",
+    "stable A001 global QA",
+    "P007 +0.20 bar static refresh",
+    "P007 -0.20 bar buckling refresh",
+    "P015 material/winding freeze",
+    "actual B001 supplier/grade/tolerance/Br(T) freeze",
+    "P008-B001-P013 retention stack freeze",
+    "B007 wire/turns/length/resistance freeze",
+    "final production FEMM",
+    "bench-force acceptance test"
+  ]
+}

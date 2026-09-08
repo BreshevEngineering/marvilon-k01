@@ -1,0 +1,133 @@
+{
+  "schema": "k01_file_registry_v1",
+  "entries": [
+    {
+      "id": "CAD-A001",
+      "name": "Production assembly A001",
+      "domain": "CAD",
+      "kind": "cad",
+      "path": "assemblies/K01-A-001_Calibration_Module.SLDASM",
+      "status": "PRODUCTION BASELINE"
+    },
+    {
+      "id": "CAD-G04C-V2",
+      "name": "Gate04C verification assembly",
+      "domain": "CAD",
+      "kind": "cad",
+      "path": "candidates/gate04c/verification/K01-A-001_GATE04C_VERIFY_V2.SLDASM",
+      "status": "VERIFIED CANDIDATE"
+    },
+    {
+      "id": "CAD-P003-C",
+      "name": "P003 Gate04C candidate",
+      "domain": "CAD",
+      "kind": "cad",
+      "path": "candidates/gate04c/K01-P-003_Cartridge_Body_GATE04C_CANDIDATE.SLDPRT",
+      "status": "REFERENCE / NOT PROMOTED"
+    },
+    {
+      "id": "CAD-P007-C",
+      "name": "P007 Gate04C candidate",
+      "domain": "CAD",
+      "kind": "cad",
+      "path": "candidates/gate04c/K01-P-007_Hermetic_Magnetic_Can_GATE04C_CANDIDATE.SLDPRT",
+      "status": "REFERENCE / NOT PROMOTED"
+    },
+    {
+      "id": "MASTER",
+      "name": "K01 master v2",
+      "domain": "CONTROL",
+      "kind": "repo",
+      "path": "master/K01_master_v2.json",
+      "status": "REPAIR REQUIRED"
+    },
+    {
+      "id": "CC-V5",
+      "name": "Legacy Engineering Control Center v5",
+      "domain": "CONTROL",
+      "kind": "repo",
+      "path": "control/K01_ENGINEERING_CONTROL_CENTER_v5.xlsx",
+      "status": "LEGACY / MIGRATE"
+    },
+    {
+      "id": "EDS001",
+      "name": "Engineering Decision Standard",
+      "domain": "CONTROL",
+      "kind": "repo",
+      "path": "control/decision_system/K01_ENGINEERING_DECISION_STANDARD_EDS001_v1.md",
+      "status": "CURRENT"
+    },
+    {
+      "id": "EDR-REG",
+      "name": "Decision Register",
+      "domain": "CONTROL",
+      "kind": "repo",
+      "path": "control/decision_system/K01_DECISION_REGISTER_v1.csv",
+      "status": "CURRENT"
+    },
+    {
+      "id": "J2-TRADE",
+      "name": "J2 Compact Trade Study",
+      "domain": "DESIGN",
+      "kind": "repo",
+      "path": "docs/design/trade_studies/K01_J2_COMPACT_TRADE_STUDY_v1.md",
+      "status": "CURRENT"
+    },
+    {
+      "id": "G04C-BUILD",
+      "name": "Gate04C Build report",
+      "domain": "EVIDENCE",
+      "kind": "repo",
+      "path": "reports/cad/current/K01_GATE04C_TYPED_BUILD.json",
+      "status": "PASS"
+    },
+    {
+      "id": "G04C-VERIFY",
+      "name": "Gate04C Verify V2 report",
+      "domain": "EVIDENCE",
+      "kind": "repo",
+      "path": "reports/cad/current/K01_GATE04C_VERIFY_V2.json",
+      "status": "PASS"
+    },
+    {
+      "id": "BOM-SPEC",
+      "name": "Automatic BOM specification",
+      "domain": "BOM",
+      "kind": "repo",
+      "path": "bom/spec/K01_AUTOMATED_BOM_SPEC_v1.md",
+      "status": "CURRENT"
+    },
+    {
+      "id": "BOM-XLSX",
+      "name": "Generated BOM XLSX",
+      "domain": "BOM",
+      "kind": "repo",
+      "path": "bom/K01_BOM_current.xlsx",
+      "status": "EXPECTED OUTPUT"
+    },
+    {
+      "id": "BOM-JSON",
+      "name": "Generated BOM JSON",
+      "domain": "BOM",
+      "kind": "repo",
+      "path": "bom/K01_BOM_current.json",
+      "status": "EXPECTED OUTPUT"
+    },
+    {
+      "id": "AI-CONTEXT",
+      "name": "AI Engineering Context",
+      "domain": "EVIDENCE",
+      "kind": "repo",
+      "path": "reports/ai/current/K01_AI_ENGINEERING_CONTEXT_CURRENT.md",
+      "status": "CURRENT"
+    },
+    {
+      "id": "TECH",
+      "name": "Technology system",
+      "domain": "TECHNOLOGY",
+      "kind": "repo",
+      "path": "docs/technology/K01_TECHNOLOGY_SYSTEM_v1.md",
+      "status": "CURRENT"
+    }
+  ]
+}

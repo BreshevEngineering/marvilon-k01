@@ -1,0 +1,323 @@
+{
+  "schema": "k01_source_registry_v2",
+  "sources": [
+    {
+      "source_id": "SRC-SE-NASA-DECISION-001",
+      "type": "systems_engineering_guidance",
+      "title": "NASA Systems Engineering Handbook — 6.8 Decision Analysis",
+      "publisher": "NASA",
+      "location": "https://www.nasa.gov/reference/6-8-decision-analysis/",
+      "relevance": "alternatives, mandatory/enhancing criteria, cost/schedule/risk/safety/supportability, uncertainty, evaluation methods, decision report",
+      "status": "CURRENT_REFERENCE"
+    },
+    {
+      "source_id": "SRC-SE-NASA-CM-001",
+      "type": "configuration_management_guidance",
+      "title": "NASA Systems Engineering Handbook — 6.5 Configuration Management",
+      "publisher": "NASA",
+      "location": "https://www.nasa.gov/reference/6-5-configuration-management/",
+      "relevance": "configuration identification, change control, status accounting, audits, baselines, configuration items",
+      "status": "CURRENT_REFERENCE"
+    },
+    {
+      "source_id": "SRC-SE-NASA-DATA-001",
+      "type": "technical_data_management_guidance",
+      "title": "NASA Systems Engineering Handbook — 6.6 Technical Data Management",
+      "publisher": "NASA",
+      "location": "https://www.nasa.gov/reference/6-6-technical-data-management/",
+      "relevance": "technical data lifecycle, access, management, protection, retention",
+      "status": "CURRENT_REFERENCE"
+    },
+    {
+      "source_id": "SRC-SE-NASA-RVM-001",
+      "type": "verification_guidance",
+      "title": "NASA Systems Engineering Handbook — Appendix D Requirements Verification Matrix",
+      "publisher": "NASA",
+      "location": "https://www.nasa.gov/reference/appendix-d-requirements-verification-matrix/",
+      "relevance": "unique requirement IDs, verification method and definitive source traceability",
+      "status": "CURRENT_REFERENCE"
+    },
+    {
+      "source_id": "SRC-DT-NIST-001",
+      "type": "web_reference",
+      "title": "NIST — Digital Thread for Manufacturing",
+      "publisher": "NIST",
+      "location": "https://www.nist.gov/programs-projects/digital-thread-manufacturing",
+      "relevance": "bidirectional product-definition/manufacturing/quality information flow, model-based enterprise, traceability",
+      "status": "ARCHITECTURE_REFERENCE"
+    },
+    {
+      "source_id": "SRC-DT-NIST-SLH-001",
+      "type": "digital_thread_architecture_reference",
+      "title": "System Lifecycle Handler — Spinning a Digital Thread for Manufacturing",
+      "publisher": "NIST",
+      "location": "https://www.nist.gov/publications/system-lifecycle-handler-spinning-digital-thread-manufacturing",
+      "relevance": "connect heterogeneous artifacts from requirements/system architecture through PLM/CAD/CAM/simulation to machines/sensors using web dashboard and REST/HTTP",
+      "status": "REFERENCE"
+    },
+    {
+      "source_id": "SRC-DIGENG-DOD-001",
+      "type": "digital_engineering_strategy",
+      "title": "Department of Defense Digital Engineering Strategy",
+      "publisher": "U.S. Department of Defense",
+      "location": "https://www.defense.gov/News/Releases/Release/Article/1567723/the-department-of-defense-announces-its-digital-engineering-strategy/",
+      "relevance": "models for decisions, enduring authoritative source, collaboration infrastructure, lifecycle digital engineering",
+      "status": "REFERENCE"
+    },
+    {
+      "source_id": "SRC-CM-ISO10007-001",
+      "type": "standard",
+      "title": "ISO 10007:2017 — Quality management — Guidelines for configuration management",
+      "publisher": "ISO",
+      "location": "https://www.iso.org/standard/70400.html",
+      "relevance": "configuration management from concept to disposal",
+      "status": "CURRENT_STANDARD"
+    },
+    {
+      "source_id": "SRC-K01-ROTH-001",
+      "type": "project_literature",
+      "title": "Roth — Vacuum Sealing Techniques",
+      "publisher": "project uploaded literature",
+      "location": "reference/literature/roth_a_vacuum_sealing_techniques.pdf",
+      "sections": [
+        "Ch.3 §38.41 O-ring groove seals",
+        "Ch.3 §38.45 step seals",
+        "Ch.5 Table 5.1A motion transmission / stationary membrane magnetic field"
+      ],
+      "relevance": "limited-compression elastomer groove seal; seal should not be used for mechanical alignment; magnetic field transmission through stationary membrane",
+      "status": "PROJECT_REFERENCE"
+    },
+    {
+      "source_id": "SRC-K01-MOSS-001",
+      "type": "project_literature",
+      "title": "Moss & Basic — Pressure Vessel Design Manual",
+      "publisher": "project uploaded literature",
+      "location": "reference/literature/moss_dr_basic_m_pressure_vessel_design_manual.pdf",
+      "sections": [
+        "Procedure 2-15 Buckling of Thin Wall Cylindrical Shells",
+        "Flange design / bolt torque for sealing"
+      ],
+      "relevance": "P007 shell/buckling, flange/bolt/gasket engineering reference",
+      "status": "PROJECT_REFERENCE"
+    },
+    {
+      "source_id": "SRC-K01-FURLANI-001",
+      "type": "project_literature",
+      "title": "Furlani — Permanent Magnet and Electromechanical Devices",
+      "publisher": "project uploaded literature",
+      "location": "reference/literature/furlani_edward_permanent_magnet_and_electromechanical_device.pdf",
+      "sections": [
+        "Ch.5 Electromechanical Devices / energy and coenergy / magnetic actuator force"
+      ],
+      "relevance": "magnetic force derivation and actuator analysis",
+      "status": "PROJECT_REFERENCE"
+    },
+    {
+      "source_id": "SRC-K01-BRAUER-001",
+      "type": "project_literature",
+      "title": "Brauer — Magnetic Actuators and Sensors",
+      "publisher": "project uploaded literature",
+      "location": "reference/literature/brauer_jr_magnetic_actuators_and_sensors.pdf",
+      "sections": [
+        "Ch.7 DC magnetic actuators",
+        "Ch.15 electromechanical analysis / optimization"
+      ],
+      "relevance": "actuator topology, force-position/current behavior, FE/system optimization",
+      "status": "PROJECT_REFERENCE"
+    },
+    {
+      "source_id": "SRC-FASTENER-ISO4762-001",
+      "type": "standard",
+      "title": "ISO 4762:2004 — Hexagon socket head cap screws",
+      "publisher": "ISO",
+      "location": "https://www.iso.org/standard/34460.html",
+      "relevance": "coarse-pitch socket-head cap-screw characteristics; M2.5 screw geometry basis",
+      "status": "CURRENT_STANDARD"
+    },
+    {
+      "source_id": "SRC-FASTENER-ISO3506-1-001",
+      "type": "standard",
+      "title": "ISO 3506-1:2020 — Mechanical properties of corrosion-resistant stainless steel fasteners",
+      "publisher": "ISO",
+      "location": "https://www.iso.org/standard/70045.html",
+      "relevance": "stainless fastener grade/property-class framework; does not itself define torque/clamp force",
+      "status": "CURRENT_STANDARD"
+    },
+    {
+      "source_id": "SRC-FASTENER-VDI2230-001",
+      "type": "design_standard",
+      "title": "VDI 2230 Blatt 1:2015 — Systematic calculation of highly stressed bolted joints",
+      "publisher": "VDI",
+      "location": "https://www.vdi.de/en/home/vdi-standards/details/vdi-2230-blatt-1-systematische-berechnung-hochbeanspruchter-schraubenverbindungen-zylindrische-einschraubenverbindungen",
+      "relevance": "preload/external-load/deformation verification framework",
+      "status": "CURRENT_REFERENCE"
+    },
+    {
+      "source_id": "SRC-SEAL-PARKER-001",
+      "type": "handbook",
+      "title": "Parker O-Ring Handbook ORD 5700",
+      "publisher": "Parker",
+      "location": "https://www.parker.com/content/dam/Parker-com/Literature/O-Ring-Division-Literature/ORD-5700.pdf",
+      "relevance": "static face-seal design and compression-force dependence on compound/hardness",
+      "status": "CURRENT_REFERENCE"
+    },
+    {
+      "source_id": "SRC-SEAL-TRELLEBORG-001",
+      "type": "handbook",
+      "title": "Trelleborg Sealing Solutions — O-Ring Technical Information",
+      "publisher": "Trelleborg Sealing Solutions",
+      "location": "https://www.trelleborg.com/seals/-/media/tss-media-repository/tss_website/pdf-and-other-literature/catalogs/o_ring_gb_en.pdf",
+      "relevance": "metric axial groove dimensions/radii used for 1.5 mm cross-section gland",
+      "status": "CURRENT_REFERENCE"
+    },
+    {
+      "source_id": "ERR-G04D-C2-BUILD-001",
+      "type": "cad_build_evidence",
+      "title": "K01 Gate04D-C2 Native Build PASS",
+      "publisher": "K01 MEDTAS / SOLIDWORKS 2018 API",
+      "location": "reports/cad/current/K01_GATE04D_C2_TYPED_BUILD.json",
+      "relevance": "OD33 candidate geometry, package arithmetic, P007 L35, stable protection",
+      "status": "CURRENT_EVIDENCE"
+    },
+    {
+      "source_id": "ERR-G04D-C2-VERIFY-001",
+      "type": "assembly_verification_evidence",
+      "title": "K01 Gate04D-C2 Assembly Verify PASS",
+      "publisher": "K01 MEDTAS / SOLIDWORKS 2018 API",
+      "location": "reports/cad/current/K01_GATE04D_C2_VERIFY.json",
+      "relevance": "candidate links, controlled J2 pilot/face/M2.5 clocking mates, 0 active mate errors",
+      "status": "CURRENT_EVIDENCE"
+    },
+    {
+      "source_id": "SRC-TPD-ISO129-1-001",
+      "type": "standard",
+      "title": "ISO 129-1:2018 — Presentation of dimensions and tolerances — General principles",
+      "publisher": "ISO",
+      "location": "https://www.iso.org/standard/64007.html",
+      "relevance": "2D technical-drawing dimension/tolerance presentation basis",
+      "status": "CURRENT_STANDARD"
+    },
+    {
+      "source_id": "SRC-GPS-ISO1101-001",
+      "type": "standard",
+      "title": "ISO 1101:2017 — Geometrical tolerancing",
+      "publisher": "ISO",
+      "location": "https://www.iso.org/standard/66777.html",
+      "relevance": "datum/GD&T symbol language and interpretation",
+      "status": "CURRENT_STANDARD"
+    },
+    {
+      "source_id": "SRC-TPD-ISO7200-001",
+      "type": "standard",
+      "title": "ISO 7200:2004 — Data fields in title blocks and document headers",
+      "publisher": "ISO",
+      "location": "https://www.iso.org/standard/35446.html",
+      "relevance": "drawing title/document block data-field architecture",
+      "status": "CURRENT_STANDARD"
+    },
+    {
+      "source_id": "SRC-TPD-ISO5457-001",
+      "type": "standard",
+      "title": "ISO 5457:1999 — Sizes and layout of drawing sheets",
+      "publisher": "ISO",
+      "location": "https://www.iso.org/standard/29017.html",
+      "relevance": "drawing-sheet size/layout architecture",
+      "status": "CURRENT_STANDARD"
+    },
+    {
+      "source_id": "SRC-SW2018-AUTODIM-001",
+      "type": "implementation_reference",
+      "title": "SOLIDWORKS API 2018 — IDrawingDoc.AutoDimension",
+      "publisher": "Dassault Systèmes",
+      "location": "https://help.solidworks.com/2018/english/api/sldworksapi/solidworks.interop.sldworks~solidworks.interop.sldworks.idrawingdoc~autodimension.html",
+      "relevance": "native automatic drawing dimensions on a selected drawing view",
+      "status": "CURRENT_FOR_SW2018"
+    },
+    {
+      "source_id": "SRC-SW2018-SECTION-001",
+      "type": "implementation_reference",
+      "title": "SOLIDWORKS API 2018 — Create Section View example",
+      "publisher": "Dassault Systèmes",
+      "location": "https://help.solidworks.com/2018/English/api/sldworksapi/Create_Section_View_and_Get_Some_Data_Example_CSharp.htm",
+      "relevance": "native section-view creation for axisymmetric J2 details",
+      "status": "CURRENT_FOR_SW2018"
+    },
+    {
+      "source_id": "SRC-TPD-SIMMONS-001",
+      "type": "project_literature",
+      "title": "Simmons, Maguire, Phelps — Manual of Engineering Drawing, 4th ed.",
+      "publisher": "Elsevier / project uploaded literature",
+      "location": "Uploaded project literature / ChatGPT project files; source registered by title/section, not redistributed in the K01 repository",
+      "sections": [
+        "Ch.16 Dimensioning Principles",
+        "Ch.21 Limits and Fits",
+        "Ch.22–25 Geometrical Tolerancing, Datums, Positional Tolerancing",
+        "Ch.29 Duality Principle",
+        "Ch.38 Production Drawings"
+      ],
+      "relevance": "technical product specification, functional datum/GD&T definition, production drawing structure, design-intent-to-verification duality",
+      "status": "PROJECT_PRIMARY_REFERENCE",
+      "access_policy": "REFERENCE_ONLY / DO_NOT_COPY_INTO_GIT_PACKAGE"
+    },
+    {
+      "source_id": "SRC-TOL-FISCHER-001",
+      "type": "project_literature",
+      "title": "Fischer — Mechanical Tolerance Stackup and Analysis, 2nd ed.",
+      "publisher": "CRC Press / project uploaded literature",
+      "location": "Uploaded project literature / ChatGPT project files; source registered by title/section, not redistributed in the K01 repository",
+      "sections": [
+        "Ch.5 Sources of Variation",
+        "Ch.7 Worst-Case Tolerance Analysis / Assembly Shift",
+        "Ch.9 GD&T in Tolerance Analysis",
+        "Ch.16 Tolerance Stackups with GD&T",
+        "Ch.18 Floating / Fixed Fasteners",
+        "Ch.19 Limits and Fits"
+      ],
+      "relevance": "worst-case dimensional chains across mating interfaces, assembly shift, position tolerance, fastener pattern stackup and inspection-oriented tolerancing",
+      "status": "PROJECT_PRIMARY_REFERENCE",
+      "access_policy": "REFERENCE_ONLY / DO_NOT_COPY_INTO_GIT_PACKAGE"
+    },
+    {
+      "source_id": "SRC-K01-PFEIFFER-ELASTOMER-001",
+      "type": "project_literature",
+      "title": "Pfeiffer Vacuum — Vacuum Technology Book II, elastomer sealing materials",
+      "publisher": "Pfeiffer Vacuum / project uploaded literature",
+      "location": "Uploaded project literature / ChatGPT project files; source registered by title/section, not redistributed in the K01 repository",
+      "sections": [
+        "Mechanical components in vacuum, §3.2.2 Sealing materials"
+      ],
+      "relevance": "FKM permeability example; elastomer behavior depends on gas, temperature, aging and process conditions; service life may require experiment",
+      "status": "PROJECT_REFERENCE",
+      "access_policy": "REFERENCE_ONLY / DO_NOT_COPY_INTO_GIT_PACKAGE"
+    },
+    {
+      "source_id": "SRC-DT-NIST-ARCH-001",
+      "type": "publication",
+      "title": "NIST — Reference architecture to integrate heterogeneous manufacturing systems for the digital thread",
+      "publisher": "NIST",
+      "location": "https://www.nist.gov/publications/reference-architecture-integrate-heterogeneous-manufacturing-systems-digital-thread",
+      "relevance": "heterogeneous-system integration and tiered digital-thread architecture",
+      "status": "ARCHITECTURE_REFERENCE"
+    },
+    {
+      "source_id": "SRC-DT-NIST-UUID-001",
+      "type": "publication",
+      "title": "NIST — Research Results and Recommendations for Universally Unique Identifiers in Product Data Standards",
+      "publisher": "NIST",
+      "location": "https://www.nist.gov/publications/research-results-and-recommendations-universally-unique-identifiers-product-data",
+      "relevance": "persistent identifiers connecting requirements and lifecycle information across heterogeneous systems",
+      "status": "ARCHITECTURE_REFERENCE"
+    },
+    {
+      "source_id": "SRC-DT-ISO23247-5-001",
+      "type": "standard_reference",
+      "title": "ISO 23247-5:2026 — Digital thread for digital twin",
+      "publisher": "ISO",
+      "location": "https://www.iso.org/standard/87425.html",
+      "relevance": "manufacturing digital-thread lifecycle connectivity and management; architecture context only",
+      "status": "ARCHITECTURE_REFERENCE / NO COMPLIANCE CLAIM"
+    }
+  ],
+  "revision": "v2",
+  "revision_note": "Adds MEDTAS TPD/tolerance-stack primary references and J2 elastomer-environment evidence without deleting prior source records."
+}

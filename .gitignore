@@ -1,36 +1,50 @@
-# Python
+# Python/runtime
 __pycache__/
 *.py[cod]
-.pytest_cache/
-.venv/
-venv/
+*.log
+reports/**/current/*.tmp
 
-# IDE / OS
-.vscode/
-.idea/
+# SolidWorks lock/temp
+~$*.SLDPRT
+~$*.SLDASM
+~$*.SLDDRW
+
+# Simulation scratch / solver heavy runtime
+*.CWR
+*.PC0
+*.SL3
+*.GEN
+*.MAS
+*.rsl
+
+# MEDTAS generated materialized current views (release manifests are tracked separately)
+reports/control/K01_MEDTAS_CENTER_CURRENT.html
+reports/medtas/logs/current/
+
+# OS/editor
 Thumbs.db
 .DS_Store
 
-# Generated outputs
-generated/
-reports/*.tmp
+# >>> K01 SNAPSHOT RUNTIME EXCLUSIONS >>>
+# Generated/cache/local transfer artefacts. Exact pre-reorg state is preserved
+# externally under D:\BreshevEngineering\K01_snapshots.
+.local_archive/
+Downloads/
+handoff/
+review_upload/
+**/__pycache__/
+*.pyc
+*.pyo
+*.exe
+*.dll
+*.zip
 *.log
-
-# SolidWorks working/binary CAD -- use PDM when introduced
-*.SLDPRT
-*.SLDASM
-*.SLDDRW
-*.sldprt
-*.sldasm
-*.slddrw
-~$*
-
-# Large neutral CAD should normally be generated, archived or kept in PDM/LFS
-*.x_t
-*.x_b
-
-# Secrets
-.env
-*.pem
-*.key
-secrets.*
+*.tmp
+*.bak
+*.swp
+*.swo
+*.CWR
+*.PC0
+*.SL3
+cad_api/bin/
+# <<< K01 SNAPSHOT RUNTIME EXCLUSIONS <<<

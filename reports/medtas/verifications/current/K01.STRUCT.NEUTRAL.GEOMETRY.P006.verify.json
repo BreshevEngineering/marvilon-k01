@@ -1,0 +1,12 @@
+{
+  "limitations": [],
+  "metrics": {
+    "parts_exported": 2
+  },
+  "node_id": "K01.STRUCT.NEUTRAL.GEOMETRY.P006",
+  "notes": "STEP normalized hashes are stability fingerprints, not proof of geometric equivalence.",
+  "schema": "medtas.verification_record.v1",
+  "verdict": "PASS",
+  "verified_artifact_hash": "b97fb78f9e63cad9ae54a3d86848d9cd7a8a7a46dbfd65b59680a7a68f55e2b2",
+  "verified_state_hash": "9e1a24dc4e384a16eef56298c3097f77d78f69cdf0e12ed9482d0bc354778309"
+}

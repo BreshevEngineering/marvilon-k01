@@ -1,0 +1,372 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marvilon.local/schemas/medtas_node.schema.v1.json",
+  "title": "MEDTAS Node Schema v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "node_id",
+    "project",
+    "kind",
+    "title",
+    "producer",
+    "contract"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "MEDTAS-NODE-1.0"
+    },
+    "node_id": {
+      "type": "string",
+      "pattern": "^[A-Z0-9][A-Z0-9._-]{2,127}$"
+    },
+    "project": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "requirement",
+        "parameter_set",
+        "material_spec",
+        "cad_semantic_state",
+        "canonical_snapshot",
+        "tolerance_chain",
+        "structural_model",
+        "solver_run",
+        "femm_model",
+        "drawing_model",
+        "drawing_artifact",
+        "bom_model",
+        "bom_artifact",
+        "verification",
+        "release_policy",
+        "baseline",
+        "generic"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string"
+    },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "source",
+            "derived",
+            "external"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
+    "lifecycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "owner": {
+          "type": "string"
+        },
+        "criticality": {
+          "type": "string",
+          "enum": [
+            "advisory",
+            "required_for_gate",
+            "required_for_release"
+          ]
+        },
+        "superseded_by": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "inputs",
+        "semantic_payload",
+        "outputs",
+        "hash_policy"
+      ],
+      "properties": {
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "node_id",
+              "role",
+              "consume",
+              "required"
+            ],
+            "properties": {
+              "node_id": {
+                "type": "string"
+              },
+              "role": {
+                "type": "string"
+              },
+              "consume": {
+                "type": "string",
+                "enum": [
+                  "state",
+                  "artifact",
+                  "both"
+                ]
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "selector": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "semantic_payload": {
+          "type": "object"
+        },
+        "toolchain": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "identity_affects_state"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              },
+              "executable_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "script_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "config_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "identity_affects_state": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "output_id",
+              "required",
+              "hash_mode"
+            ],
+            "properties": {
+              "output_id": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "media_type": {
+                "type": "string"
+              },
+              "required": {
+                "type": "boolean"
+              },
+              "hash_mode": {
+                "type": "string",
+                "enum": [
+                  "file",
+                  "tree",
+                  "none"
+                ]
+              }
+            }
+          }
+        },
+        "verification_policy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "hash_policy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "algorithm",
+            "canonicalization",
+            "include_toolchain_identity"
+          ],
+          "properties": {
+            "algorithm": {
+              "const": "sha256"
+            },
+            "canonicalization": {
+              "const": "MEDTAS-JCS-LIKE-1"
+            },
+            "include_toolchain_identity": {
+              "type": "boolean"
+            },
+            "float_policy": {
+              "type": "string",
+              "enum": [
+                "pre_normalized_decimal_strings",
+                "native_json"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "build_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "built_from_state_hash",
+        "artifact_hash"
+      ],
+      "properties": {
+        "built_from_state_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "artifact_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "artifact_manifest": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "generated_at_utc": {
+          "type": "string"
+        },
+        "host": {
+          "type": "string"
+        }
+      }
+    },
+    "verification_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verified_state_hash",
+        "verified_artifact_hash",
+        "verdict"
+      ],
+      "properties": {
+        "verified_state_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "verified_artifact_hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "verdict": {
+          "type": "string",
+          "enum": [
+            "PASS",
+            "PASS_WITH_LIMITATIONS",
+            "HOLD"
+          ]
+        },
+        "criteria_results": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "derived": {
+      "type": "object",
+      "readOnly": true,
+      "additionalProperties": false,
+      "properties": {
+        "state_hash": {
+          "type": "string"
+        },
+        "artifact_hash": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "state": {
+          "type": "string",
+          "enum": [
+            "MISSING",
+            "BLOCKED",
+            "STALE",
+            "DRIFT",
+            "FRESH_UNVERIFIED",
+            "PASS",
+            "PASS_WITH_LIMITATIONS",
+            "HOLD",
+            "SUPERSEDED"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "stale_causes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

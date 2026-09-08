@@ -1,0 +1,26 @@
+{
+  "limitations": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C10",
+    "C11",
+    "C12"
+  ],
+  "metrics": {
+    "blocking_items": 11,
+    "characteristics": 12,
+    "live_geometry_conflicts": 1
+  },
+  "node_id": "K01.DRAWING.P007.EXEMPLAR.PLAN",
+  "notes": "",
+  "schema": "medtas.verification_record.v1",
+  "verdict": "HOLD",
+  "verified_artifact_hash": "f43f452b3f2800610732a5cb58806cb98b58583da3615bf8d44c78e14b057187",
+  "verified_state_hash": "86cc50fd60be93ea14cc274d8c49c4c45e648d64ff7efc534dfe6b54fab09696"
+}

@@ -1,0 +1,133 @@
+﻿[
+    {
+        "id":  "T01",
+        "name":  "C2 failure root cause retained",
+        "status":  "PASS",
+        "kind":  "EVIDENCE",
+        "why":  "Preserve rejected C2 and exact P003/P006 collision proof.",
+        "action":  "OPEN_ROOTCAUSE",
+        "depends_on":  [
+
+                       ]
+    },
+    {
+        "id":  "T02",
+        "name":  "C2R1 native CAD + assembly + interference",
+        "status":  "PASS",
+        "kind":  "AUTOMATED",
+        "why":  "Build, mate architecture and no-new-hard-interference are the geometry release gate.",
+        "action":  "RUN_C2R1_ALL",
+        "depends_on":  [
+                           "T01"
+                       ]
+    },
+    {
+        "id":  "T03",
+        "name":  "Pilot tolerance chain + P006 service-tool envelope",
+        "status":  "OPEN",
+        "kind":  "ENGINEERING",
+        "why":  "Nominal 0.25 mm radial clearance is proven only at nominal geometry. Freeze P006 head tolerance, pilot-ID tolerance, worst-case clearance and tool access.",
+        "action":  "OPEN_EDR019",
+        "depends_on":  [
+                           "T02"
+                       ]
+    },
+    {
+        "id":  "T04",
+        "name":  "Seal compound + clamp preload",
+        "status":  "OPEN",
+        "kind":  "ENGINEERING_INPUT",
+        "why":  "O-ring geometry exists, but compound/hardness/process-gas compatibility and compression force are needed before clamp preload is released.",
+        "action":  "OPEN_DOSSIER",
+        "depends_on":  [
+                           "T02"
+                       ]
+    },
+    {
+        "id":  "T05",
+        "name":  "M2.5 joint + local flange/contact verification",
+        "status":  "OPEN",
+        "kind":  "ANALYSIS",
+        "why":  "Preliminary thread screen does not reject M2.5; final preload/friction/head-bearing/flange-separation verification remains.",
+        "action":  "OPEN_MECH",
+        "depends_on":  [
+                           "T04"
+                       ]
+    },
+    {
+        "id":  "T06",
+        "name":  "Thermal preload + service/galling",
+        "status":  "OPEN",
+        "kind":  "ENGINEERING",
+        "why":  "Quantify preload drift, stainless galling/anti-seize policy, loosening and repeated service cycles.",
+        "action":  "OPEN_DOSSIER",
+        "depends_on":  [
+                           "T05"
+                       ]
+    },
+    {
+        "id":  "T07",
+        "name":  "P007 static + buckling refresh",
+        "status":  "STALE",
+        "kind":  "SOLVER",
+        "why":  "Historical pressure/buckling screens must be refreshed once C2R1 mechanical geometry/preload is frozen.",
+        "action":  "",
+        "depends_on":  [
+                           "T05",
+                           "T06"
+                       ]
+    },
+    {
+        "id":  "T08",
+        "name":  "C2R1 BOM normalization / metadata projection",
+        "status":  "HOLD",
+        "kind":  "AUTOMATED",
+        "why":  "Assembly quantities are known; 13 metadata projections and 7 release blockers remain in the current reconciliation.",
+        "action":  "RUN_R1_BOM",
+        "depends_on":  [
+                           "T02"
+                       ]
+    },
+    {
+        "id":  "T09",
+        "name":  "Production-capable drawing draft",
+        "status":  "PASS_DRAFT",
+        "kind":  "AUTOMATED",
+        "why":  "A file existing is not enough. The drawing quality gate requires section, visible dimensions, title block and controlled callouts.",
+        "action":  "RUN_R1_DRAWINGS_V2",
+        "depends_on":  [
+                           "T02"
+                       ]
+    },
+    {
+        "id":  "T10",
+        "name":  "Final FEMM impact/release model",
+        "status":  "OPEN",
+        "kind":  "SOLVER",
+        "why":  "Run after J2 mechanical freeze plus P015/B001 production data freeze.",
+        "action":  "",
+        "depends_on":  [
+                           "T05",
+                           "T06",
+                           "T07"
+                       ]
+    },
+    {
+        "id":  "T11",
+        "name":  "Atomic P003/P007 promotion / release audit",
+        "status":  "HOLD",
+        "kind":  "RELEASE",
+        "why":  "Promote P003/P007 together only after all mandatory engineering gates and document/BOM controls pass.",
+        "action":  "",
+        "depends_on":  [
+                           "T03",
+                           "T04",
+                           "T05",
+                           "T06",
+                           "T07",
+                           "T08",
+                           "T09",
+                           "T10"
+                       ]
+    }
+]

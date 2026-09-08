@@ -1,0 +1,18 @@
+{
+  "limitations": [
+    "PROJECT-STRUCTURE-REVIEW: 33 unclassified root object(s) require classification; no automatic move performed"
+  ],
+  "metrics": {
+    "controlled_root_entrypoints": 100,
+    "missing_zones": 0,
+    "unclassified_root_files": 21,
+    "unclassified_top_directories": 12,
+    "zones": 23
+  },
+  "node_id": "K01.PROJECT.STRUCTURE",
+  "notes": "",
+  "schema": "medtas.verification_record.v1",
+  "verdict": "PASS_WITH_LIMITATIONS",
+  "verified_artifact_hash": "9e46e1e5f6bf27df4078520c4ea2b5fd3cf8e8aa4f379341b55fc58b78ae4531",
+  "verified_state_hash": "6529ae10bc054dd94cbaf83c71457e84a97771fcc619a83f6a02ec2f2419e9ab"
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "k01.calculix_case_scaffold.p006.v1_5",
+  "status": "BLOCKED_FACE_ROLE_BINDING",
+  "source_structural_model": "reports/medtas/structural/current/K01_STRUCTURAL_MODEL_P006_v1.json",
+  "source_face_map": "reports/medtas/structural/current/K01_STRUCTURAL_FACE_MAP_P006_v1.json",
+  "analysis": "linear_static",
+  "material": {
+    "name": "1.4404 (X2CrNiMo17-12-2)",
+    "E_Pa": 200000000000.0,
+    "nu": 0.28,
+    "yield_Pa": 400000000.0,
+    "density_kg_m3": 8000
+  },
+  "boundary_conditions": {
+    "fixture": {
+      "role": "FIXED_INTERFACE_FACE",
+      "count": 1,
+      "topology_binding": "OPEN_FOR_NEUTRAL_SOLVER"
+    },
+    "pressure": {
+      "role": "PRESSURE_FACES",
+      "value_MPa": 0.02,
+      "face_count_reference": 5,
+      "topology_binding": "OPEN_FOR_NEUTRAL_SOLVER"
+    },
+    "service_force": {
+      "role": "SERVICE_FORCE_FACE",
+      "value_N": 300,
+      "face_count_reference": 1,
+      "topology_binding": "OPEN_FOR_NEUTRAL_SOLVER"
+    },
+    "bolts": {
+      "count": 3,
+      "nominal_diameter_mm": 2.5,
+      "head_diameter_mm": 4.5,
+      "preload_N_each": 300
+    },
+    "contact": {
+      "type": "no_penetration_surface_to_surface",
+      "friction": false
+    }
+  },
+  "reference_solidworks_evidence": {
+    "sigma_vm_max_MPa": 40.66,
+    "displacement_max_mm": 0.002171,
+    "reaction_resultant_N": 302.262,
+    "mesh_nodes": 102923,
+    "mesh_elements": 63800
+  },
+  "required_face_roles": [
+    "FIXED_INTERFACE_FACE",
+    "SERVICE_FORCE_FACE",
+    "PRESSURE_FACES",
+    "CONTACT_PAIR"
+  ],
+  "confirmed_face_roles": {},
+  "missing_face_roles": [
+    "FIXED_INTERFACE_FACE",
+    "SERVICE_FORCE_FACE",
+    "PRESSURE_FACES",
+    "CONTACT_PAIR"
+  ],
+  "next_sequence": [
+    "export controlled neutral geometry for P003/P007 only",
+    "mesh with controlled mesher and named physical groups",
+    "generate CalculiX .inp from material + loads + role map",
+    "run ccx",
+    "parse .dat/.frd",
+    "reconcile sigma_vm_max / displacement / reaction balance against SolidWorks"
+  ]
+}

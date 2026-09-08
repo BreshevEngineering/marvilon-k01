@@ -1,0 +1,133 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>K01 MEDTAS Control Center v6</title><style>
+:root{--bg:#f3f5f6;--card:#fff;--ink:#171a1e;--muted:#68727b;--line:#dfe4e7;--dark:#25292d;--teal:#0f9da4;--pass:#23845a;--hold:#ba4843;--open:#b97821;--stale:#795c9b;--blue:#3377a8;--mono:ui-monospace,Consolas,monospace;--sans:Inter,"Segoe UI",Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:var(--sans);color:var(--ink)}.wrap{max-width:1560px;margin:auto;padding:19px 20px 70px}
+header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--dark);padding-bottom:12px;gap:20px}h1{font-size:27px;margin:0}h2{font-size:18px;margin:18px 0 9px}h3{font-size:15px;margin:0 0 8px}.teal{color:var(--teal)}.sub{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.11em;font-weight:800}.mono{font-family:var(--mono)}.small{font-size:12px;color:var(--muted);line-height:1.55}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:12px;margin:14px 0}@media(max-width:900px){.hero{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px;box-shadow:0 1px 2px rgba(0,0,0,.03)}.card.active{border:2px solid var(--teal);background:#f9ffff}.card.reject{border-left:5px solid var(--hold)}.card h2{margin:0 0 7px}
+.strip{background:var(--dark);color:#fff;border-radius:14px;padding:14px 18px;display:flex;gap:24px;flex-wrap:wrap;margin:14px 0}.metric b{font:800 23px var(--mono);display:block}.metric span{font-size:10px;color:#b8bec4;text-transform:uppercase}.metric.pass b{color:#67d49c}.metric.hold b{color:#ff8d87}.metric.open b{color:#f0b765}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}.tabs button{border:1px solid var(--line);background:#fff;color:var(--muted);font-weight:750;border-radius:9px;padding:8px 12px;cursor:pointer}.tabs button.active{background:var(--dark);border-color:var(--dark);color:#fff}.panel{display:none}.panel.active{display:block}
+.badge{display:inline-block;padding:3px 8px;border-radius:999px;font-size:10px;font-weight:850}.PASS{background:#e4f5ec;color:#21774f}.HOLD{background:#fbe6e5;color:#97342f}.OPEN{background:#fff0d9;color:#96601b}.STALE{background:#eee8f5;color:#654d82}
+.action{border:0;border-radius:7px;background:var(--teal);color:#fff;padding:8px 11px;font-size:11px;font-weight:800;cursor:pointer}.secondary{background:#fff;color:var(--muted);border:1px solid var(--line)}.danger{background:var(--hold)}button[disabled]{opacity:.45;cursor:not-allowed}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}th,td{padding:8px;border-bottom:1px solid var(--line);font-size:12px;text-align:left;vertical-align:top}th{background:#f8fafb;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.05em}.path{font:11px var(--mono);word-break:break-all}.found{color:var(--pass);font-weight:800}.missing{color:var(--hold);font-weight:800}
+.task{display:grid;grid-template-columns:52px minmax(250px,1.2fr) 105px 1.5fr 130px;gap:9px;align-items:center;background:#fff;border-bottom:1px solid var(--line);padding:10px}.task:first-child{border-radius:10px 10px 0 0}.task:last-child{border-radius:0 0 10px 10px}.task .id{font:11px var(--mono);color:var(--muted)}.task .why{font-size:11px;color:var(--muted)}@media(max-width:850px){.task{grid-template-columns:45px 1fr 95px}.task .why{grid-column:2/4}}
+.thread{display:grid;grid-template-columns:repeat(5,minmax(160px,1fr));gap:8px}@media(max-width:1000px){.thread{grid-template-columns:repeat(3,1fr)}}@media(max-width:650px){.thread{grid-template-columns:1fr}}.node{background:#fff;border:1px solid var(--line);border-top:4px solid #a9afb4;border-radius:10px;padding:10px;min-height:105px}.node.pass{border-top-color:var(--pass)}.node.hold{border-top-color:var(--hold)}.node.open{border-top-color:var(--open)}.node.stale{border-top-color:var(--stale)}.node b{font-size:12px;display:block;margin-bottom:4px}.node span{font-size:10px;color:var(--muted)}.rootproof{font:12px/1.55 var(--mono);background:#25292d;color:#eef2f4;padding:12px;border-radius:10px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}.bar{height:8px;background:#e5eaed;border-radius:10px;overflow:hidden}.bar i{display:block;height:100%;background:var(--teal)}.apierr{background:#fdecec;border:1px solid #e3aaa7;border-radius:10px;padding:12px;color:#8c312d;white-space:pre-wrap;font:11px/1.5 var(--mono)}footer{margin-top:25px;font-size:11px;color:var(--muted)}
+</style></head><body><div class=wrap>
+<header><div><h1>MARVILON <span class=teal>MEDTAS</span> · K01 Engineering Control Center v6</h1><div class=sub>Actionable digital thread · live evidence · fail-closed engineering workflow</div></div><div id=clock class="small mono"></div></header>
+
+<div class=hero>
+<div class="card reject"><h2>C2 · REJECTED</h2><div class=small>The previous OD33 / M2.5 concept was not rejected; the <b>pilot internal geometry</b> was. Stable A001 has no P003↔P006 interference, while C2 introduced 15.3966837 mm³.</div><div class=rootproof style="margin-top:10px">π/4 × (11.5² − 10.917²) × 1.50
+= 15.396683664956 mm³
+= CAD interference volume</div></div>
+<div class="card active"><h2>ACTIVE DESIGN · Gate04D-C2R1</h2><div class=small>Retain Ø33 round flange · 3×M2.5 · PCD26.5 · pilot OD14.10 g6 ×1.50. Revise <b>pilot ID10.917 → ID12.00 study</b>. Nominal P006-head radial clearance = 0.25 mm; pilot radial wall = 1.05 mm.</div><button class=action style="margin-top:11px" onclick="act('RUN_C2R1_ALL')">Run C2R1 Build + Verify + Interference</button></div>
+</div>
+
+<div id=metrics class=strip></div>
+<div class=tabs><button class=active data-p=dashboard>Dashboard</button><button data-p=tasks>Task Queue</button><button data-p=thread>Digital Thread</button><button data-p=reports>Live Reports</button><button data-p=r1>C2R1 Design</button><button data-p=analysis>Analysis</button><button data-p=bom>BOM</button><button data-p=drawings>Drawings</button><button data-p=eds>EDS-001</button><button data-p=files>Files</button><button data-p=git>Git / Team</button><button data-p=handoff>AI Handoff</button></div>
+
+<section id=dashboard class="panel active">
+<div id=currentTask class="card active"><h2>Loading current task…</h2></div>
+<div id=apiError style="display:none;margin-top:12px"></div>
+<h2>Project execution path</h2><div id=threadMini class=thread></div>
+<div class=grid style="margin-top:12px">
+<div class=card><h3>Current engineering state</h3><div id=stateBox class=small>Loading…</div></div>
+<div class=card><h3>Evidence completeness</h3><div id=readyBox class=small></div></div>
+<div class=card><h3>Center actions</h3><button class=action onclick=refreshAll()>Refresh</button> <button class="action secondary" onclick=handoff()>Build AI Handoff</button><div class=small style="margin-top:8px">The v6 API never intentionally returns plain-text errors for /api routes; frontend also diagnoses non-JSON responses.</div></div>
+</div>
+</section>
+
+<section id=tasks class=panel><div class=card style="margin-bottom:10px"><h3>Execution queue</h3><div class=small>The first non-PASS task is the current engineering task. Automated tasks are launched directly from here; dependent tasks remain OPEN/STALE instead of being forgotten.</div></div><div id=taskList></div></section>
+
+<section id=thread class=panel>
+<div class=card style="margin-bottom:12px"><h3>Digital Thread</h3><div class=small>Requirement → EDR → configuration item → controlled parameter → CAD → assembly verification → interference/analysis → BOM/drawing/technology → FEMM/test → release. History is retained: C2 remains rejection evidence; C2R1 is a new controlled candidate rather than overwriting it.</div></div>
+<div id=threadFull class=thread></div>
+<h2>Key relationships</h2><div class=grid>
+<div class=card><h3>EDR-005</h3><div class=small>Owns compact-flange selection and overall J2 trade study.</div></div>
+<div class=card><h3>EDR-019</h3><div class=small>Owns pilot-ID clearance around the retained P006 head and the C2→C2R1 correction.</div></div>
+<div class=card><h3>CI-J2</h3><div class=small>Owns P003↔P007 service/seal/datum/clamp interface history.</div></div>
+<div class=card><h3>CI-P003-P006</h3><div class=small>Separately owns retaining plug M12×1 service interface, preventing unrelated geometry from being misclassified.</div></div>
+</div>
+</section>
+
+<section id=reports class=panel><div class=card style="margin-bottom:10px"><h3>Live Reports</h3><div class=small>No manual path hunting. FOUND means an actual file exists, not merely a directory. Missing pattern-only artifacts stay MISSING.</div></div><table><thead><tr><th>Artifact</th><th>Domain</th><th>Status</th><th>Modified</th><th>Path</th><th></th></tr></thead><tbody id=reportTable></tbody></table></section>
+
+<section id=r1 class=panel>
+<div class=grid>
+<div class=card><h3>Fixed C2R1 geometry</h3><div class=small>P003/P007 = 316L · flange Ø33 · 3×M2.5 · PCD26.5 · P007 t3 · P003 zone5 · pilot OD14.10 g6 ×1.50 · female depth1.70 · P007 L35 · current 16×1.5 gland.</div></div>
+<div class=card><h3>Revised pilot internal clearance</h3><div class=small>ID12.00 study; P006 head OD11.5; nominal radial clearance0.25; pilot wall1.05. P006 remains unchanged.</div></div>
+<div class=card><h3>Still OPEN</h3><div class=small>P006 head tolerance · pilot-ID tolerance · worst-case clearance · final service-tool feature/access · production O-ring compound · clamp preload · local flange verification.</div></div>
+</div>
+<h2>C2R1 execution</h2><button class=action onclick="act('RUN_C2R1_ALL')">Run C2R1 Build + Verify + Interference</button>
+</section>
+
+<section id=analysis class=panel><div class=grid>
+<div class=card><h3>Root cause</h3><span class="badge PASS">CONFIRMED</span><div class=small style="margin-top:8px">Exact volume equality proves P006-head/pilot collision. C2 is not eligible for promotion.</div><button class="action secondary" onclick="act('OPEN_ROOTCAUSE')">Open proof</button></div>
+<div class=card><h3>M2.5 preliminary screen</h3><div id=mechBox class=small>Loading…</div><button class="action secondary" onclick="act('OPEN_MECH')">Open screen</button></div>
+<div class=card><h3>Seal → preload</h3><span class="badge OPEN">OPEN</span><div class=small style="margin-top:8px">Exact elastomer compound/hardness must be frozen before minimum clamp preload and release torque can be calculated.</div></div>
+<div class=card><h3>FEMM</h3><span class="badge OPEN">OPEN</span><div class=small style="margin-top:8px">Final FEMM follows J2 mechanical freeze plus P015/B001 production data. It remains in the thread, not forgotten.</div></div>
+</div></section>
+
+<section id=bom class=panel><div class=grid>
+<div class=card><h3>C2R1 BOM pipeline</h3><button class=action onclick="act('RUN_R1_BOM')">Generate / Reconcile C2R1 BOM</button><div class=small style="margin-top:8px">Available after R1 verification assembly exists. Uses CAD quantities/native materials plus controlled identity/material-release status.</div></div>
+<div class=card><h3>Current C2 metadata lesson</h3><div class=small>Previous raw BOM exposed missing PartNo/Description and OPEN materials. v6 preserves these as projection/release tasks instead of silently treating filenames as authority.</div></div>
+</div></section>
+
+<section id=drawings class=panel><div class=grid>
+<div class=card><h3>C2R1 DRAFT drawings</h3><button class="action secondary" onclick="act('RUN_R1_DRAWINGS')">Generate C2R1 DRAFT Drawings</button><div class=small style="margin-top:8px">SW2018 InsertNote cast fix is retained. Draft generation should be run only after the R1 candidate exists.</div></div>
+<div class=card><h3>Release drawing rule</h3><div class=small>Native SLDDRW/PDF are outputs of the controlled candidate. Production release stays blocked until mechanical, seal, thermal/service and structural gates pass.</div></div>
+</div><div id=drawingStatus style="margin-top:12px"></div></section>
+
+<section id=eds class=panel><table><thead><tr><th>Gate</th><th>Status</th><th>Current basis</th><th>Evidence</th></tr></thead><tbody id=edsTable></tbody></table></section>
+
+<section id=files class=panel><table><thead><tr><th>ID</th><th>Name</th><th>Domain</th><th>Status</th><th>Modified</th><th>Resolved path</th><th></th></tr></thead><tbody id=fileTable></tbody></table></section>
+
+<section id=git class=panel><div class=grid>
+<div class=card><h3>Local Git</h3><div class="small mono">Branch: <span id=gBranch>—</span><br>Dirty: <span id=gDirty>—</span><br>Untracked: <span id=gUntracked>—</span><br>Last: <span id=gLast>—</span><br>Origin: <span id=gOrigin>—</span></div></div>
+<div class=card><h3>Checkpoint policy</h3><div class=small>No auto-commit. C2 rejection evidence + C2R1 source should be committed after the R1 gate scripts are locally proven. Native CAD remains outside Git.</div></div>
+</div></section>
+
+<section id=handoff class=panel><div class=card><h3>Current AI Handoff</h3><div class=small">One ZIP collects C2 rejection evidence, root-cause proof, EDR-005/019, CI dossiers, C2R1 inputs, latest R1 reports/logs, BOM and drawings when available.</div><button class=action style="margin-top:10px" onclick=handoff()>Build Current AI Handoff ZIP</button><div id=handoffResult class="small path" style="margin-top:8px"></div></div></section>
+
+<footer>MEDTAS v6: human judgment remains explicit; memory, evidence retrieval, dependency status and release blocking are system responsibilities.</footer>
+</div><script>
+const EDS=[{"gate": "functional_requirement", "status": "PASS", "note": "OD33 C2 preserves removable J2, L35, Ø14.10 pilot and current seal architecture.", "evidence": "ERR-G04D-C2-BUILD-001"}, {"gate": "architecture_integrity", "status": "PASS", "note": "No weld; serviceable P003↔P007 concept retained.", "evidence": "CI-J2"}, {"gate": "interfaces_datums", "status": "HOLD", "note": "C2 assembly mate architecture passed, but C2R1 changes P003 pilot topology; rerun native build/verify before carrying this gate forward.", "evidence": "Gate04D-C2 historical verify PASS; Gate04D-C2R1 verify OPEN"}, {"gate": "load_cases", "status": "HOLD", "note": "Pressure case exists; seal/preload/service/thermal load envelope not fully bounded.", "evidence": "SRC-K01-MOSS-001"}, {"gate": "static_strength_contact", "status": "HOLD", "note": "Preliminary M2.5/thread screen does not reject the concept; exact preload and local flange/contact verification remain open.", "evidence": "SRC-FASTENER-VDI2230-001"}, {"gate": "buckling_stability", "status": "HOLD", "note": "Historical P007 result must be refreshed after final C2 flange freeze.", "evidence": "SRC-K01-MOSS-001"}, {"gate": "torsion_rotational", "status": "HOLD", "note": "Clocking geometry works; torque reaction/loosening/service strategy open.", "evidence": "SRC-FASTENER-VDI2230-001"}, {"gate": "fatigue_cyclic", "status": "HOLD", "note": "Repeated service cycles/preload/galling not quantified.", "evidence": "SRC-FASTENER-ISO3506-1-001"}, {"gate": "thermal", "status": "HOLD", "note": "316L/316L match helps; O-ring and screw/preload temperature behavior open.", "evidence": "SRC-FASTENER-ISO3506-1-001"}, {"gate": "dynamics_vibration", "status": "HOLD", "note": "Vibration loosening/retention not explicitly disposed.", "evidence": "SRC-FASTENER-VDI2230-001"}, {"gate": "pressure_vacuum_sealing", "status": "HOLD", "note": "Gland geometry controlled; compound/compression force/leak test open.", "evidence": "SRC-SEAL-PARKER-001"}, {"gate": "fluid_cfd", "status": "PASS", "note": "C2 changes external flange/fastener package; controlled sample-flow geometry is unchanged.", "evidence": "K01 CFD evidence"}, {"gate": "magnetic_electromagnetic", "status": "HOLD", "note": "Final FEMM impact review remains a project gate.", "evidence": "SRC-K01-BRAUER-001"}, {"gate": "materials_environment", "status": "HOLD", "note": "P003/P007 316L controlled; exact screw/finish and O-ring compound open.", "evidence": "SRC-FASTENER-ISO3506-1-001"}, {"gate": "tolerance_dimensional_chains", "status": "HOLD", "note": "Nominal ligaments pass; production tolerances/thermal stack still open.", "evidence": "ERR-G04D-C2-BUILD-001"}, {"gate": "manufacturability_process_capability", "status": "HOLD", "note": "Round OD33 simplifies machining; M2.5 tapping in 316L and inspection capability need qualification.", "evidence": "K01 technology"}, {"gate": "assembly", "status": "HOLD", "note": "C2 assembly passed, but C2R1 candidate/assembly must be rebuilt and verified; service-tool access also remains open.", "evidence": "ERR-G04D-C2-VERIFY-001"}, {"gate": "serviceability", "status": "HOLD", "note": "Removable architecture passes; galling/repeated-service procedure open.", "evidence": "EDR-017"}, {"gate": "inspection_testability", "status": "HOLD", "note": "Released inspection plan and leak-test criteria are missing.", "evidence": "K01 technology"}, {"gate": "reliability_fmea", "status": "HOLD", "note": "Loosening/thread/seal/service failure modes need FMEA disposition.", "evidence": "HEC-001"}, {"gate": "safety_regulatory_containment", "status": "HOLD", "note": "Containment concept retained; leak/material compatibility evidence required.", "evidence": "MARV protection concept"}, {"gate": "supply_chain", "status": "HOLD", "note": "Exact M2.5 screw and seal compound/supplier not frozen.", "evidence": "SRC-FASTENER-ISO4762-001"}, {"gate": "change_impact", "status": "PASS", "note": "C2 failure is preserved as rejection evidence and C2R1 is a separate controlled candidate; affected CAD/analysis/BOM/drawing/FEMM nodes are reopened.", "evidence": "EDR-019; CI-J2; K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1"}, {"gate": "documentation_traceability", "status": "PASS", "note": "C2 delta report, exact root-cause proof, EDR-019 and C2R1 controlled inputs are linked.", "evidence": "EDR-005; EDR-019; CI-J2"}];
+let STATE=null,FILES=null;
+function c(s){s=(s||'OPEN').toUpperCase();if(s==='PASS'||s.startsWith('PASS_')||s.includes('SCREEN_PASS')||s.includes('CONFIRMED'))return'PASS';if(s.includes('STALE'))return'STALE';if(s.includes('HOLD')||s.includes('FAIL')||s.includes('REJECT'))return'HOLD';return'OPEN'}
+function badge(s){return `<span class="badge ${c(s)}">${s||'OPEN'}</span>`}
+async function api(url){
+ const r=await fetch(url,{cache:'no-store'});const txt=await r.text();let j;
+ try{j=JSON.parse(txt)}catch(e){throw new Error(`Non-JSON API response from ${url} (HTTP ${r.status}):\n${txt.slice(0,1200)}`)}
+ if(!r.ok||j.ok===false)throw new Error(`${j.error||'API error'}\n${j.detail||''}`);
+ return j;
+}
+function taskButton(t){if(!t.action)return'';let m={RUN_C2R1_ALL:'Run C2R1 gate',RUN_R1_BOM:'Run BOM',RUN_R1_DRAWINGS:'Generate draft',OPEN_ROOTCAUSE:'Open proof',OPEN_EDR019:'Open EDR-019',OPEN_EDR005:'Open EDR-005',OPEN_MECH:'Open analysis'};return `<button class="action ${t.kind==='ENGINEERING_INPUT'?'secondary':''}" onclick="act('${t.action}')">${m[t.action]||'Open / Run'}</button>`}
+function renderState(){
+ const tasks=STATE.tasks||[];const n=STATE.next_task;
+ currentTask.innerHTML=n?`<h2>CURRENT TASK · ${n.id} — ${n.name}</h2><div class=small>${n.why}</div><div style="margin-top:9px">${badge(n.status)} &nbsp; ${taskButton(n)}</div>`:'<h2>All queued tasks PASS</h2>';
+ taskList.innerHTML=tasks.map(t=>`<div class=task><div class=id>${t.id}</div><div><b>${t.name}</b></div><div>${badge(t.status)}</div><div class=why>${t.why}</div><div>${taskButton(t)}</div></div>`).join('');
+ let picks=['T01','T02','T04','T05','T07','T08','T09','T10','T11'];let nodes=picks.map(id=>tasks.find(x=>x.id===id)).filter(Boolean);let nh=nodes.map(x=>`<div class="node ${c(x.status).toLowerCase()}"><b>${x.id} · ${x.name}</b><span>${x.status}<br>${x.why}</span></div>`).join('');threadMini.innerHTML=nh;threadFull.innerHTML=nh;
+ let r1b=STATE.r1_build?.status||'OPEN',r1v=STATE.r1_verify?.status||'OPEN',r1i=STATE.r1_interference?.status||'OPEN';
+ metrics.innerHTML=`<div class="metric hold"><b>REJECT</b><span>C2</span></div><div class="metric ${c(r1b).toLowerCase()}"><b>${r1b}</b><span>C2R1 Build</span></div><div class="metric ${c(r1v).toLowerCase()}"><b>${r1v}</b><span>C2R1 Verify</span></div><div class="metric ${c(r1i).toLowerCase()}"><b>${r1i}</b><span>C2R1 Interference</span></div><div class=metric><b>${EDS.filter(x=>x.status==='HOLD').length}</b><span>Legacy EDS Holds</span></div>`;
+ stateBox.innerHTML=`Active design: <b>${STATE.active_design}</b><br>C2 root cause: <b>${STATE.root_cause?.status||'MISSING'}</b><br>C2R1 build: <b>${r1b}</b><br>C2R1 verify: <b>${r1v}</b><br>C2R1 interference: <b>${r1i}</b>`;
+ let total=tasks.length,pass=tasks.filter(x=>c(x.status)==='PASS').length;readyBox.innerHTML=`Execution tasks: <b>${pass} / ${total} PASS</b><div class=bar><i style="width:${100*pass/total}%"></i></div><div class=small style="margin-top:7px">Not a weighted design score; this is evidence/task completeness.</div>`;
+ let m=STATE.mechanical;if(m)mechBox.innerHTML=`${badge(m.status)}<br>Thread-strip conservative screen ≈ ${m.calculation?.female_thread_strip_yield_screen_N?.toFixed?.(0)||'—'} N/screw; SF2 study ceiling ≈ ${m.calculation?.allowable_preload_per_screw_at_thread_SF2_N?.toFixed?.(0)||'—'} N/screw.<br><b>Not release torque.</b>`;
+}
+function renderFiles(){
+ fileTable.innerHTML=FILES.entries.map(e=>`<tr><td class=path>${e.id}</td><td>${e.name}</td><td>${e.domain}</td><td class=${e.exists?'found':'missing'}>${e.exists?'FOUND':'MISSING'}</td><td>${e.modified}</td><td class=path>${e.resolved||'—'}</td><td><button class=action onclick="openId('${e.id}')" ${e.exists?'':'disabled'}>Open</button> <button class="action secondary" onclick="revealId('${e.id}')" ${e.exists?'':'disabled'}>Folder</button></td></tr>`).join('');
+ let ids=['C2-DELTA','C2-ROOTCAUSE','R1-BUILD','R1-BUILD-LOG','R1-VERIFY','R1-VERIFY-LOG','R1-INT','R1-INT-LOG','R1-BOM-RAW','R1-BOM-REC','R1-DRAW-REPORT'];let rr=ids.map(id=>FILES.entries.find(x=>x.id===id)).filter(Boolean);reportTable.innerHTML=rr.map(e=>`<tr><td>${e.name}</td><td>${e.domain}</td><td class=${e.exists?'found':'missing'}>${e.exists?'FOUND':'MISSING'}</td><td>${e.modified}</td><td class=path>${e.resolved||'—'}</td><td><button class=action onclick="openId('${e.id}')" ${e.exists?'':'disabled'}>Open</button></td></tr>`).join('');
+ let dr=['R1-DRAW-REPORT','R1-DRAW-P003','R1-DRAW-P007'].map(id=>FILES.entries.find(x=>x.id===id)).filter(Boolean);drawingStatus.innerHTML='<table><tbody>'+dr.map(e=>`<tr><td>${e.name}</td><td class=${e.exists?'found':'missing'}>${e.exists?'FOUND':'MISSING'}</td><td class=path>${e.resolved||'—'}</td></tr>`).join('')+'</tbody></table>';
+}
+function renderEDS(){edsTable.innerHTML=EDS.map(g=>`<tr><td class=path>${g.gate.replaceAll('_',' ')}</td><td>${badge(g.status)}</td><td>${g.note}</td><td class=path>${g.evidence}</td></tr>`).join('')}
+async function refreshAll(){
+ apiError.style.display='none';
+ try{STATE=await api('/api/state');renderState()}catch(e){apiError.style.display='block';apiError.className='apierr';apiError.textContent='STATE API ERROR\n'+e.message}
+ try{FILES=await api('/api/files');renderFiles()}catch(e){apiError.style.display='block';apiError.className='apierr';apiError.textContent+=(apiError.textContent?'\n\n':'')+'FILES API ERROR\n'+e.message}
+ try{let g=(await api('/api/git')).git;gBranch.textContent=g.branch;gDirty.textContent=g.dirty_count;gUntracked.textContent=g.untracked_count;gLast.textContent=g.last_commit;gOrigin.textContent=g.origin}catch(e){}
+}
+function act(id){api('/api/action?id='+encodeURIComponent(id)).then(()=>setTimeout(refreshAll,2200)).catch(e=>alert(e.message))}
+function openId(id){api('/api/open?id='+encodeURIComponent(id)).catch(e=>alert(e.message))}
+function revealId(id){api('/api/reveal?id='+encodeURIComponent(id)).catch(e=>alert(e.message))}
+function handoff(){handoffResult.textContent='Building…';api('/api/handoff/build').then(j=>{handoffResult.textContent='Created: '+j.path;setTimeout(refreshAll,600)}).catch(e=>handoffResult.textContent=e.message)}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.p).classList.add('active')})
+clock.textContent=new Date().toLocaleString();renderEDS();refreshAll();
+</script></body></html>

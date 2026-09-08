@@ -1,0 +1,15 @@
+{
+  "schema": "k01_final_femm_release_v1",
+  "status": "OPEN",
+  "B001_lot_data": "OPEN",
+  "P015_production_data": "OPEN",
+  "stroke_mm": [
+    0,
+    10
+  ],
+  "current_nominal_A": 1.0,
+  "K_F_min_N_per_A": "OPEN",
+  "criterion_min_N_per_A": 0.930895,
+  "temperature_cases": "OPEN",
+  "model_files": []
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "k01_j2_pilot_inner_clearance_trade_v1",
+  "status": "R1 STUDY SELECTED / NOT RELEASED",
+  "problem": "C2 pilot ID10.917 physically overlaps P006 head OD11.5 over the 1.50 mm pilot length.",
+  "evidence": {
+    "reported_interference_mm3": 15.396683664956079,
+    "analytical_overlap_mm3": 15.396683664956091,
+    "difference_mm3": 1.2434497875801753e-14
+  },
+  "fixed_invariants": {
+    "P006_head_OD_nominal_mm": 11.5,
+    "P006_head_span_mm": [
+      0.0,
+      2.0
+    ],
+    "P006_thread_outer_cylinder_mm": 10.8,
+    "P006_geometry": "KEEP",
+    "pilot_OD_mm": 14.1,
+    "pilot_fit": "g6",
+    "pilot_length_mm": 1.5,
+    "P007_female_depth_mm": 1.7,
+    "P007_OAL_mm": 35.0,
+    "flange_OD_mm": 33.0,
+    "fastener": "3×M2.5",
+    "PCD_mm": 26.5
+  },
+  "alternatives": [
+    {
+      "pilot_ID_mm": 11.8,
+      "nominal_radial_clearance_to_P006_head_mm": 0.15000000000000036,
+      "pilot_radial_wall_mm": 1.1499999999999995,
+      "comment": "tool access/tolerance still open"
+    },
+    {
+      "pilot_ID_mm": 12.0,
+      "nominal_radial_clearance_to_P006_head_mm": 0.25,
+      "pilot_radial_wall_mm": 1.0499999999999998,
+      "comment": "tool access/tolerance still open"
+    },
+    {
+      "pilot_ID_mm": 12.2,
+      "nominal_radial_clearance_to_P006_head_mm": 0.34999999999999964,
+      "pilot_radial_wall_mm": 0.9500000000000002,
+      "comment": "tool access/tolerance still open"
+    },
+    {
+      "pilot_ID_mm": 12.5,
+      "nominal_radial_clearance_to_P006_head_mm": 0.5,
+      "pilot_radial_wall_mm": 0.7999999999999998,
+      "comment": "tool access/tolerance still open"
+    }
+  ],
+  "selected": {
+    "pilot_ID_mm": 12.0,
+    "basis": [
+      "eliminates deterministic OD11.5-head overlap",
+      "gives 0.25 mm nominal radial clearance to P006 head",
+      "retains 1.05 mm radial pilot wall",
+      "simple turned nominal diameter aligned with M12 service-interface envelope"
+    ],
+    "status": "CONTROLLED STUDY VALUE",
+    "open_gates": [
+      "P006 head OD production tolerance",
+      "P003 pilot ID production tolerance",
+      "worst-case radial clearance",
+      "P006 service-tool access",
+      "pilot wall machining robustness"
+    ]
+  }
+}

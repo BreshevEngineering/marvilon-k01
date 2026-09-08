@@ -1,0 +1,68 @@
+{
+  "schema": "k01.medtas_core_hotfix_01_manifest.v1",
+  "created": "2026-09-05",
+  "extract_to": "D:\\BreshevEngineering\\marvilon-k01",
+  "purpose": "Fix stable-core PowerShell defects and immediately resume K01 engineering work.",
+  "files": [
+    {
+      "path": "00_MEDTAS_PREFLIGHT.cmd",
+      "bytes": 393,
+      "sha256": "409bd94fc5b85acba632082b89ce6268e67d3e4cc9239804ab37c33740faf6f4"
+    },
+    {
+      "path": "00_README_HOTFIX_01.md",
+      "bytes": 1511,
+      "sha256": "f3066499007af72e043705100a58d1536bbb7e9c1d4f7e54311b0a23b91f3819"
+    },
+    {
+      "path": "01_RUN_K01_NEXT_ENGINEERING.cmd",
+      "bytes": 1387,
+      "sha256": "a2c8480dd1ea15c0a429ea08f3a8a1f3d76b5cc96cd8555a6e743e3e412c0167"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/K01Gate04E_P006_ServiceDrive.cs",
+      "bytes": 11682,
+      "sha256": "003e7d184db548100fa3bc44ab0052770f488399aabee19d6ea150c2dbd9f8aa"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/K01Gate04E_P006_ServiceVerify.cs",
+      "bytes": 8117,
+      "sha256": "466c22fa8a825b87e9b7c1798439c7b1d28da6309ea3f12b028fb6562bcfd489"
+    },
+    {
+      "path": "cad_api/gates/gate04e_p006_service/RUN_GATE04E_P006_SERVICE_BUILD.cmd",
+      "bytes": 2778,
+      "sha256": "e9ab222647a5ef2f473021b78bee6b0e43cf8457b30e8b2b5c069afa53085fbf"
+    },
+    {
+      "path": "control/command_center/core.ps1",
+      "bytes": 6120,
+      "sha256": "d509e8edba28248c279b55e3f9d6aee5639230d1bde535d0ba6b8df0a7f628e6"
+    },
+    {
+      "path": "control/femm/CHECK_FEMM_INSTALL.cmd",
+      "bytes": 383,
+      "sha256": "19a6ef86887ca942630e49123ef92fe3742a5e4dbed4fce95bb7ec76e8a2acbe"
+    },
+    {
+      "path": "control/femm/CHECK_FEMM_INSTALL.ps1",
+      "bytes": 2099,
+      "sha256": "b81c8ce0fec6653fd286ad0a75f0622f11b5c59a9c912fcd492911c2c0e6e476"
+    },
+    {
+      "path": "control/femm/FEMM_READINESS.json",
+      "bytes": 1746,
+      "sha256": "7a4a38832b20fa58b92d68ea2a520bcfc3c866cfa5078d788b9bbb001fa1f098"
+    },
+    {
+      "path": "control/system/PREFLIGHT.ps1",
+      "bytes": 4802,
+      "sha256": "fc4cb211852a53abadd8d1a60117ad443cc67fa2bde87a04dd82e7e9b7c291fa"
+    },
+    {
+      "path": "tests/run_core_tests.ps1",
+      "bytes": 1657,
+      "sha256": "18aa43a26df2ef927b0381d9826ee3250a66796f6d981e55beb82ae3ed18c98e"
+    }
+  ]
+}

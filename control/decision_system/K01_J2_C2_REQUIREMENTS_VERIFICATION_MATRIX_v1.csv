@@ -1,0 +1,16 @@
+﻿RequirementID,Requirement,VerificationMethod,Evidence,Status
+J2-R-001,Serviceable without destructive joining,Inspection/analysis,CI-J2; EDR-001,PASS
+J2-R-002,P003/P007 material 316L/1.4404,CAD/material readback,Gate04D Build,PASS
+J2-R-003,P007 OAL 35.0 mm,CAD readback,Gate04D Build,PASS
+J2-R-004,Radial location Ø14.10 H7/g6,CAD readback + mate,Build/Verify,PASS
+J2-R-005,Axial location metal-face to metal-face,Assembly mate,Verify,PASS
+J2-R-006,Clocking by one M2.5-hole axis,Assembly mate,Verify log,PASS
+J2-R-007,C2 flange OD33.0,CAD readback,Build,PASS
+J2-R-008,3×M2.5 pattern PCD26.5,CAD readback,Build,PASS
+J2-R-009,No new hard interference,Automated interference detection,C2 interference report,OPEN
+J2-R-010,Thread/flange withstand preload/service loads,Analysis/FEA,EDR-003/005,OPEN
+J2-R-011,Static seal maintains containment,Analysis + leak test,EDR-004,OPEN
+J2-R-012,Serviceability after repeated cycles,Service/galling verification,EDR-017,OPEN
+J2-R-013,Production tolerances preserve seal/ligaments,Worst-case stack + inspection,Dimension-chain report,OPEN
+J2-R-014,P007 structural margins acceptable,Static + buckling refresh,Simulation reports,OPEN
+J2-R-015,BOM/drawings/technology match release,Automated reconciliation,MEDTAS release audit,OPEN

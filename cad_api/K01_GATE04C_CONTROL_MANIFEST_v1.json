@@ -1,0 +1,20 @@
+{
+  "schema": "k01_gate04c_control_manifest_v1",
+  "automation": "C# strongly typed SOLIDWORKS interop",
+  "retired_from_current_use": [
+    "Gate04C1 Python COM v01",
+    "Gate04C1 Python COM v02",
+    "Gate04C1 Python COM v03",
+    "VBA Gate04C proposal"
+  ],
+  "repo_source_location": "cad_api\\gate04c_typed",
+  "stable_authority": "master/K01_master.json + stable native SOLIDWORKS CAD",
+  "promotion": "ATOMIC P003+P007 ONLY AFTER FINAL QA PASS",
+  "drawings": "DRAFT_API until drawing QA/release gate",
+  "git_rule": "commit source/control/reports; do not add generated CAD binaries to normal Git without explicit PDM/LFS policy",
+  "femm_status": "OPEN — mandatory after J2 + P015 + actual B001 freeze",
+  "package_version": "1.4",
+  "compile_fix": "Use installed SW2018 interop signatures: OpenDoc6/Save3/AddMate5 = ref; Face2 selection via Entity.Select4",
+  "runtime_fix": "Resolve parameter file from bin/parent/cwd and copy params JSON to bin before execution",
+  "compile_fix_v1_4": "Explicit System.Environment qualification to avoid SolidWorks.Interop.sldworks.Environment ambiguity"
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "k01_j2_compact_trade_v1",
+  "status": "SCREENING / NOT RELEASE DATA",
+  "constants": {
+    "gland_OD_worst_mm": 20.6,
+    "pressure_reaction_N": 3.1225,
+    "A4_70_Rp02_screen_MPa": 450.0
+  },
+  "alternatives": [
+    {
+      "id": "C0",
+      "description": "OD36 round, 3×M3, PCD28",
+      "hole_mm": 3.4,
+      "head_OD_mm": 5.5,
+      "pcd_mm": 28.0,
+      "od_mm": 36.0,
+      "inner_lig_mm": 2.0,
+      "outer_lig_mm": 2.3,
+      "status": "VERIFIED FUNCTIONAL REFERENCE"
+    },
+    {
+      "id": "C1",
+      "description": "OD34 round, 3×M3, PCD27",
+      "hole_mm": 3.4,
+      "head_OD_mm": 5.5,
+      "pcd_mm": 27.0,
+      "od_mm": 34.0,
+      "inner_lig_mm": 1.5,
+      "outer_lig_mm": 1.8,
+      "status": "BACKUP STUDY"
+    },
+    {
+      "id": "C2",
+      "description": "OD33 round, 3×M2.5, PCD26.5",
+      "hole_mm": 2.9,
+      "head_OD_mm": 4.5,
+      "pcd_mm": 26.5,
+      "od_mm": 33.0,
+      "inner_lig_mm": 1.5,
+      "outer_lig_mm": 1.8,
+      "status": "PREFERRED FIRST CAD STUDY"
+    },
+    {
+      "id": "C3",
+      "description": "3-lobed, 3×M2.5, PCD26.5, central sealing land ≈OD24, local lobe envelope ≈OD32",
+      "hole_mm": 2.9,
+      "head_OD_mm": 4.5,
+      "pcd_mm": 26.5,
+      "od_mm": null,
+      "inner_lig_mm": 1.5,
+      "outer_lig_mm": null,
+      "status": "SECOND STUDY ONLY IF C2 STILL TOO LARGE"
+    }
+  ],
+  "fastener_screen": {
+    "M2_5_tensile_stress_area_mm2": 3.390795089543035,
+    "M3_tensile_stress_area_mm2": 5.03083244349935,
+    "M2_5_Rp02_load_N_per_screw": 1525.8577902943657,
+    "M3_Rp02_load_N_per_screw": 2263.8745995747076,
+    "pressure_reaction_percent_of_3x_M2_5_Rp02_load": 0.06821299730249027,
+    "pressure_reaction_percent_of_3x_M3_Rp02_load": 0.04597575031447699,
+    "interpretation": "Pressure load is negligible vs screw material capacity; seal preload, thread stripping/bearing, galling and service robustness govern."
+  },
+  "recommendation": "Build C2 first; it reduces size while preserving round turning/drilling simplicity. Use C3 only if C2 remains too bulky."
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marvilon.local/schemas/medtas_graph.schema.v1.json",
+  "title": "MEDTAS Engineering Build Graph v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project",
+    "nodes"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "MEDTAS-GRAPH-1.0"
+    },
+    "project": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "medtas_node.schema.v1.json"
+      }
+    }
+  }
+}

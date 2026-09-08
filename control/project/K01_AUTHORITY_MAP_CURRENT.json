@@ -1,0 +1,22 @@
+{
+  "schema": "k01.authority_map.current.v3",
+  "project": "K01",
+  "principle": "Authority is domain-specific. Command Center is projection/orchestration only.",
+  "authorities": {
+    "engineering_baseline": "control/baseline/K01_ENGINEERING_BASELINE.json",
+    "requirements": "control/requirements/requirements.json",
+    "product_metadata": "control/product/parts.json",
+    "native_geometry": "Gate04E assembly recorded by engineering baseline manifest",
+    "tolerances_gdt": "controlled Product Characteristics → native SolidWorks DimXpert/PMI → drawing/inspection projection",
+    "ebom_mbom": "computed from CAD occurrence tree + product registry + manufacturing process definitions",
+    "analysis": "solver evidence bound to engineering baseline/input fingerprint",
+    "release_state": "computed; fail closed",
+    "history": "Git/manual commits + evidence hashes"
+  },
+  "explicit_non_authorities": [
+    "planned R01 package until separately promoted and verified",
+    "legacy Command Center versions",
+    "hand-edited computed BOM outputs",
+    "chat memory"
+  ]
+}

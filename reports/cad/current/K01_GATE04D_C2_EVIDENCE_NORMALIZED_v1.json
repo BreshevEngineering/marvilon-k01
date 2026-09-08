@@ -1,0 +1,34 @@
+{
+  "schema": "k01_gate04d_c2_evidence_normalized_v1",
+  "date": "2026-09-04",
+  "status": "GEOMETRY_AND_ASSEMBLY_PASS / FULL_EDS_OPEN",
+  "build": {
+    "status": "PASS",
+    "solidworks_revision": "26.0.1",
+    "production_p003_modified": "false",
+    "production_p007_modified": "false",
+    "checks": [
+      "PASS C2 packaging arithmetic: inner/outer ligament and head envelope.",
+      "PASS P003 C2: OD33 flange + existing seal gland + 3x M2.5 seed/pattern + D14.10x1.50 pilot.",
+      "PASS P007 C2: OD33x3 flange + 3x D2.90 seed/pattern; L35 and thin can retained.",
+      "PASS: stable P003/P007 were copied; only Gate04D-C2 candidate files were modified."
+    ],
+    "warnings": [
+      "C2 head margin is packaging evidence only; tool access, flange strength, thread stripping, seal preload and service/galling remain separate gates."
+    ],
+    "sha256": "447a375baba13f8e857e73af2f29bb4e60e33bc2d72ec467343ee9a3037d750e"
+  },
+  "verify": {
+    "status": "PASS",
+    "solidworks_revision": "26.0.1",
+    "p003_candidate": true,
+    "p007_candidate": true,
+    "pilot_concentric": true,
+    "axial_face": true,
+    "clocking_M2p5": true,
+    "active_mate_errors": 0,
+    "raw_schema_note": "Raw Verify v1 field is named j2_clocking_m3, but the log proves feature K01_J2_C2_CLOCKING_M2P5. Future generator corrected in MEDTAS v4.",
+    "sha256": "f9e58e51ccef0d9fa8c6a58402fc54e47882dd94c40b67a3882994f44ee90474"
+  },
+  "release_rule": "Geometry/assembly PASS does not close mechanical, seal, thermal, service, manufacturing, material or release gates."
+}

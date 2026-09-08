@@ -1,0 +1,39 @@
+{
+  "schema": "k01.bom_scope.v2_2",
+  "views": {
+    "A001_EBOM": {
+      "purpose": "design composition",
+      "structure_source": "live stable-name A001 CAD traversal",
+      "attribute_source": "control/product/parts.json",
+      "non_modeled": [
+        "NM-J2-SEAL",
+        "NM-J2-CLAMP-SCREW"
+      ]
+    },
+    "A001_MBOM": {
+      "purpose": "manufacturing composition",
+      "base": "A001_EBOM",
+      "adds": [
+        "P007 weld/process decomposition",
+        "assembly process aids",
+        "non-modeled production consumables as controlled"
+      ]
+    },
+    "K01_SYSTEM_BOM": {
+      "purpose": "system scope",
+      "base": "A001_EBOM",
+      "adds": [
+        "K01-B-007",
+        "K01-B-008",
+        "K01-B-009",
+        "K01-B-010(optional)"
+      ]
+    }
+  },
+  "rules": [
+    "No BOM field is manually maintained in the output.",
+    "Suppressed CAD occurrence requires explicit disposition.",
+    "EBOM and MBOM are distinct.",
+    "Output JSON/CSV are hashed artifacts and stale when CAD or parts registry changes."
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "schema": "k01_gate04d_c2r1_typed_api_params_v1",
+  "project": "MARVILON K01 Calibration Module",
+  "decision_refs": [
+    "EDR-003",
+    "EDR-004",
+    "EDR-005",
+    "EDR-017",
+    "CI-J2"
+  ],
+  "solidworks_target": "SOLIDWORKS 2018 / revision 26.x",
+  "paths": {
+    "stable_p003": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT",
+    "stable_p007": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+    "stable_a001": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+    "candidate_dir": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1",
+    "verification_dir": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\verification",
+    "drawing_dir": "D:\\Marvilon\\K01\\cad\\drawings\\gate04d_c2r1_draft",
+    "report_dir": "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current"
+  },
+  "P003": {
+    "material": "AISI 316L / EN 1.4404",
+    "current_rear_collar_OD_mm": 16.0,
+    "current_rear_collar_L_mm": 5.0,
+    "service_bore_minor_D_mm": 10.917,
+    "J2_flange_OD_mm": 33.0,
+    "J2_flange_depth_inward_mm": 5.0,
+    "pilot_OD_nominal_mm": 14.1,
+    "pilot_fit": "g6",
+    "pilot_L_outward_mm": 1.5,
+    "oring_size": "16x1.5 mm",
+    "oring_material": "OPEN",
+    "gland_ID_mm": 16.0,
+    "gland_OD_nominal_mm": 20.2,
+    "gland_depth_mm": 1.1,
+    "thread": "M2.5x0.45-6H",
+    "tap_drill_D_mm": 2.05,
+    "tap_depth_mm": 5.0,
+    "pilot_inner_clearance_D_mm": 12.0,
+    "pilot_inner_clearance_status": "STUDY / tolerance+tool access OPEN"
+  },
+  "P007": {
+    "material": "AISI 316L / EN 1.4404",
+    "overall_L_mm": 35.0,
+    "locator_ID_nominal_mm": 14.1,
+    "locator_fit": "H7",
+    "thin_OD_mm": 10.0,
+    "thin_ID_mm": 9.4,
+    "J2_flange_OD_mm": 33.0,
+    "J2_flange_depth_inward_mm": 3.0,
+    "clearance_hole_D_mm": 2.9
+  },
+  "J2": {
+    "pattern_qty": 3,
+    "pattern_PCD_mm": 26.5,
+    "seed_angle_deg_local": 30.0,
+    "equal_spacing_deg": 120.0,
+    "gland_OD_design_max_mm": 20.6,
+    "inner_ligament_study_mm": 1.5,
+    "outer_ligament_study_mm": 1.8,
+    "fastener_head_OD_study_mm": 4.5,
+    "P006_head_OD_nominal_mm": 11.5,
+    "P006_head_span_mm": [
+      0.0,
+      2.0
+    ],
+    "pilot_nominal_radial_clearance_to_head_mm": 0.25,
+    "pilot_radial_wall_mm": 1.05
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "medtas.verification_record.v1",
+  "node_id": "K01.STRUCT.SWSIM.P006",
+  "verified_state_hash": "2cabfb43a6718e9d75a2c50b60ce8203bae90bff9d57ecb2afa1e9921770088e",
+  "verified_artifact_hash": "24d6eb2be1da2cd2afb76bfdd615d77e890c66b22c4096c8ac69e22da5c04b9f",
+  "verdict": "PASS",
+  "metrics": {
+    "sigma_vm_max_MPa": 40.66,
+    "displacement_max_mm": 0.002171,
+    "equivalent_strain_max": 0.0001207,
+    "reaction_resultant_N": 302.262,
+    "mesh_nodes": 102923,
+    "mesh_elements": 63800,
+    "maximum_aspect_ratio": 13.093,
+    "distorted_elements_percent": 0.0,
+    "designation": "1.4404 (X2CrNiMo17-12-2)",
+    "yield_strength_MPa": 400.0,
+    "simple_yield_margin": 9.84
+  },
+  "limitations": [],
+  "notes": "Linear-static P006 service screening bound from K01_SWSIM_P006_REFERENCE_v1_7.json; exact report remains the evidence artifact."
+}

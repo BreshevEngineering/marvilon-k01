@@ -1,0 +1,23 @@
+{
+  "K01Gate04C_Build.cs": {
+    "balanced_braces": true,
+    "unqualified_Environment_CurrentDirectory_absent": true,
+    "unqualified_Environment_NewLine_absent": true,
+    "System_Environment_CurrentDirectory_present": true,
+    "typed_interop_present": true
+  },
+  "K01Gate04C_Verify.cs": {
+    "balanced_braces": true,
+    "unqualified_Environment_CurrentDirectory_absent": true,
+    "unqualified_Environment_NewLine_absent": true,
+    "System_Environment_CurrentDirectory_present": true,
+    "typed_interop_present": true
+  },
+  "K01Gate04C_Drawings.cs": {
+    "balanced_braces": true,
+    "unqualified_Environment_CurrentDirectory_absent": true,
+    "unqualified_Environment_NewLine_absent": true,
+    "System_Environment_CurrentDirectory_present": true,
+    "typed_interop_present": true
+  }
+}

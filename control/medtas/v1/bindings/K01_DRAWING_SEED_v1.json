@@ -1,0 +1,10 @@
+{
+  "schema": "k01.drawing_seed.v1",
+  "release_mode": "HYBRID_NATIVE_3D_PLUS_SHORT_2D",
+  "items": [
+    {"drawing_no":"K01-D-003","model":"K01-P-003","required":["material","datum A mating face","datum B axis","pilot/shoulder interface","M2.5 pattern","critical fits/tolerances"]},
+    {"drawing_no":"K01-D-005","model":"K01-P-006","required":["material","M12x1 interface","bore","service-drive geometry","critical dimensions"]},
+    {"drawing_no":"K01-D-006","model":"K01-P-007","required":["material","thin-wall containment zone","weld interface","blind end","critical concentricity"]},
+    {"drawing_no":"K01-D-012","model":"K01-A-001","required":["IN/OUT states","optical datum","functional travel","BOM","Long Run interface"]}
+  ]
+}

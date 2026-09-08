@@ -1,0 +1,28 @@
+{
+  "schema": "medtas.cad_sem_binding.v1_4",
+  "node_id": "K01.CAD.SEM.A001",
+  "source_selection": {
+    "preferred_gate_verify": "reports/cad/current/K01_GATE04E_P006_SERVICE_VERIFY.json",
+    "preferred_gate_verify_field": "verify_assembly",
+    "fallback_assembly": "cad/assemblies/K01-A-001_Calibration_Module.SLDASM"
+  },
+  "raw_api_output": "reports/cad/current/K01_A001_SEMANTIC_RAW_API_v1_4.json",
+  "canonical_output": "reports/medtas/cad/current/K01_CAD_SEM_A001.json",
+  "build_record": "reports/medtas/records/current/K01.CAD.SEM.A001.build.json",
+  "derived_state": "reports/control/K01_MEDTAS_DERIVED_STATE_CURRENT.json",
+  "center_feed": "reports/control/K01_MEDTAS_CENTER_FEED_CURRENT.json",
+  "normalization": {
+    "float_significant_digits": 12,
+    "drop_absolute_paths_from_state": true,
+    "drop_timestamps_from_state": true,
+    "drop_native_file_sha_from_state": true,
+    "retain_component_transforms": true,
+    "retain_referenced_configurations": true,
+    "retain_mates": true,
+    "retain_material_assignments": true,
+    "retain_feature_suppression": true,
+    "retain_feature_dimensions": true,
+    "canonicalization": "MEDTAS-CANONICAL-JSON-1.4",
+    "invariance_test": "two native saves with no semantic change must preserve canonical hash"
+  }
+}

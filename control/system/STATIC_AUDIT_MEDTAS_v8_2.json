@@ -1,0 +1,55 @@
+{
+  "schema": "k01_medtas_v8_2_static_audit",
+  "status": "PASS_STATIC_PACKAGE",
+  "json_count": 37,
+  "json_errors": [],
+  "javascript_syntax_pass": true,
+  "javascript_error": "",
+  "file_registry": {
+    "entries": 41,
+    "unique_ids": true,
+    "pattern_only_entries_supported": true,
+    "semantic_ok": true
+  },
+  "api_files_fix": {
+    "null_candidates_index_removed": true,
+    "empty_path_guard": true,
+    "per_entry_error_isolated": true,
+    "http_500_reason_fixed": true
+  },
+  "technical_filter_ui": {
+    "blockers_first": true,
+    "domain_categories": true,
+    "status_filter": true,
+    "compact_gate_cards": true
+  },
+  "professional_design_ui": {
+    "bom_configuration_tab": true,
+    "assembly_femm_tab": true,
+    "evidence_files_tab": true,
+    "digital_thread_tab": true
+  },
+  "femm": {
+    "setup_file": true,
+    "install_check": true,
+    "screening_plan": true,
+    "python_not_required": true
+  },
+  "git": {
+    "remote_health_check": true,
+    "remote_check_read_only": true,
+    "no_auto_commit": true
+  },
+  "state": {
+    "inline_function_after_and_regression": true,
+    "femm_install_in_state": true,
+    "t03_not_false_full_pass": true
+  },
+  "runtime_not_claimed": [
+    "PowerShell parser/runtime on user's Windows",
+    "SOLIDWORKS 2018 compilation/runtime for native writers/bridge",
+    "FEMM installation",
+    "GitHub authentication/reachability",
+    "engineering release evidence T03–T10"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "schema": "k01.project_layout.v1_7",
+  "principle": "logical project structure is controlled without forcibly moving existing engineering artifacts; migration is planned, then executed by an explicit change",
+  "zones": [
+    {
+      "id": "CONTROL",
+      "path": "control",
+      "purpose": "requirements, parameters, materials, decisions, release policy, MEDTAS contracts"
+    },
+    {
+      "id": "DOCS",
+      "path": "docs",
+      "purpose": "architecture, engineering notes, standards references"
+    },
+    {
+      "id": "DRAWINGS_WORK",
+      "path": "drawings/work",
+      "purpose": "working native drawing artifacts"
+    },
+    {
+      "id": "DRAWINGS_RC",
+      "path": "drawings/release_candidate",
+      "purpose": "release-candidate drawing packs"
+    },
+    {
+      "id": "DRAWINGS_RELEASED",
+      "path": "drawings/released",
+      "purpose": "approved released drawing packs"
+    },
+    {
+      "id": "BOM_META",
+      "path": "bom/metadata",
+      "purpose": "controlled identity and product metadata"
+    },
+    {
+      "id": "BOM_SUPPLIER",
+      "path": "bom/supplier",
+      "purpose": "supplier and MPN evidence"
+    },
+    {
+      "id": "BOM_RELEASED",
+      "path": "bom/released",
+      "purpose": "approved BOM exports"
+    },
+    {
+      "id": "ANALYSIS_STRUCT",
+      "path": "analysis/structural",
+      "purpose": "solver-neutral structural definitions and reviewed solver inputs"
+    },
+    {
+      "id": "ANALYSIS_MAG",
+      "path": "analysis/magnetic",
+      "purpose": "magnetic model definitions and FEMM inputs"
+    },
+    {
+      "id": "ANALYSIS_THERMAL",
+      "path": "analysis/thermal",
+      "purpose": "thermal model definitions"
+    },
+    {
+      "id": "ANALYSIS_FLOW",
+      "path": "analysis/flow",
+      "purpose": "flow model definitions"
+    },
+    {
+      "id": "REPORTS_CONTROL",
+      "path": "reports/control",
+      "purpose": "materialized project/control views"
+    },
+    {
+      "id": "REPORTS_CAD",
+      "path": "reports/cad",
+      "purpose": "CAD API snapshots and verification"
+    },
+    {
+      "id": "REPORTS_MEDTAS",
+      "path": "reports/medtas",
+      "purpose": "build graph records, verifications, solver-neutral evidence"
+    },
+    {
+      "id": "REPORTS_ENGINEERING",
+      "path": "reports/engineering",
+      "purpose": "formal engineering reports and source evidence"
+    },
+    {
+      "id": "REPORTS_BOM",
+      "path": "reports/bom",
+      "purpose": "BOM generated artifacts"
+    },
+    {
+      "id": "REPORTS_DRAWING",
+      "path": "reports/drawing",
+      "purpose": "drawing QA and release evidence"
+    },
+    {
+      "id": "REPORTS_TESTS",
+      "path": "reports/tests",
+      "purpose": "qualification and bench evidence"
+    },
+    {
+      "id": "TOOLS",
+      "path": "tools",
+      "purpose": "controlled automation source"
+    },
+    {
+      "id": "TESTS",
+      "path": "tests",
+      "purpose": "software/engineering qualification tests"
+    },
+    {
+      "id": "REPORTS_INSPECTION",
+      "path": "reports/inspection",
+      "purpose": "released characteristic registries and measurement/acceptance evidence"
+    },
+    {
+      "id": "DOCS_AUTOMATION",
+      "path": "docs/automation",
+      "purpose": "runner/nightly-build deployment plans and operational automation notes"
+    }
+  ],
+  "external_roots": [
+    {
+      "id": "NATIVE_CAD_WORKSPACE",
+      "resolution": "derive from current CAD semantic binding/selected assembly",
+      "policy": "allowed external engineering root, read/write only through controlled CAD adapters"
+    }
+  ]
+}

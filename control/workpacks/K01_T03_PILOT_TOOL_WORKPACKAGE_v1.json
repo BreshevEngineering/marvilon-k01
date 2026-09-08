@@ -1,0 +1,55 @@
+{
+  "schema": "k01_engineering_workpackage_v1",
+  "task_id": "T03",
+  "title": "Pilot tolerance chain + P006 service-tool envelope",
+  "status": "PARTIAL / TOLERANCE STUDY DEFINED / TOOL FEATURE OPEN",
+  "purpose": "Close the remaining production-clearance and service-access risk created by the compact ID12.00 pilot without changing the validated C2R1 flange architecture.",
+  "inputs": {
+    "P003_pilot_ID_nominal_mm": 12.0,
+    "P003_pilot_OD_nominal_mm": 14.1,
+    "P003_pilot_OD_fit": "g6",
+    "P006_head_OD_nominal_mm": 11.5,
+    "P006_through_bore_mm": 6.0,
+    "pilot_length_mm": 1.5
+  },
+  "tolerance_candidate": {
+    "status": "STUDY / NOT RELEASED",
+    "basis": "Use standard, readily inspectable unilateral ISO-286 zones on two clearance-envelope diameters; these surfaces are not a locating fit.",
+    "P003_pilot_ID": "Ø12 H9 -> 12.000...12.043 mm",
+    "P006_head_OD": "Ø11.5 h9 -> 11.457...11.500 mm",
+    "P003_pilot_OD": "Ø14.10 g6 -> approximately 14.083...14.094 mm in the 10-18 mm ISO 286 size band",
+    "radial_clearance_min_mm": 0.25,
+    "radial_clearance_max_mm": 0.29299999999999926,
+    "minimum_pilot_radial_wall_mm": 1.0200000000000005,
+    "interpretation": [
+      "The minimum head/pilot radial clearance remains 0.250 mm because H9 cannot go below 12.000 and h9 cannot go above 11.500.",
+      "Even at the study worst-case pilot OD/ID limits, the pilot radial wall remains about 1.020 mm.",
+      "This is a manufacturability/clearance proposal, not a functional fit pair; drawing wording must not imply that the ID12/head interface locates the assembly."
+    ]
+  },
+  "service_tool_envelope": {
+    "status": "ARCHITECTURE SELECTED / FEATURE GEOMETRY OPEN",
+    "finding": "A conventional external socket or wrench around the Ø11.5 P006 head is incompatible with the Ø12 minimum pilot opening; the available radial annulus is too small for a useful socket wall.",
+    "selected_architecture": "Hollow axial face-drive tool passing through the pilot and engaging dedicated face-drive features on P006.",
+    "tool_body_study": {
+      "maximum_OD_mm": 11.8,
+      "minimum_central_clearance_ID_mm": 6.3,
+      "minimum_radial_clearance_to_pilot_at_ID12_mm": 0.1,
+      "tool_body_radial_wall_mm": 2.7500000000000004
+    },
+    "P006_feature_rule": "Use two diametrically opposed face-drive seats/dogs in the annular head face outside the Ø6 through bore. Exact dog/slot width, depth, edge ligaments and drive radius shall be sized from the released P006 assembly/removal torque, not guessed.",
+    "why_not_external_hex": "The compact pilot leaves only 0.25 mm nominal radial head clearance, so a normal socket geometry would either not pass the pilot or would have impractically thin walls.",
+    "remaining_inputs": [
+      "released P006 seating/removal torque or measurable assembly method that prevents PEEK crushing",
+      "selected anti-galling/retention method",
+      "minimum face-drive feature strength and inspection criterion"
+    ]
+  },
+  "decision": "Keep C2R1 pilot ID12.00 as active study. Carry H9/h9 as the preferred tolerance study. Carry a hollow face-drive service tool as the preferred architecture. Do not mark T03 PASS until the P006 drive feature and service torque/assembly method are released.",
+  "sources": [
+    "ISO 286-2 tolerance tables",
+    "EDR-019",
+    "K01_GATE03E_V5_SPEC",
+    "BUILD_K01_v14"
+  ]
+}

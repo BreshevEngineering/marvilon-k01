@@ -1,0 +1,26 @@
+{
+  "schema": "k01.authority_map.v2_2",
+  "project": "K01",
+  "principle": "No single file is absolute truth; authority is domain-specific and provenance-preserving.",
+  "authorities": {
+    "requirements": "control/requirements/requirements.json",
+    "product_metadata": "control/product/parts.json",
+    "native_geometry": "verified stable-name SolidWorks CAD promoted from Gate04E",
+    "canonical_semantics": "reports/medtas/cad/current/K01_CAD_SEM_A001.json",
+    "parameters": "control/parameters/*.json",
+    "materials": "control/product/parts.json + control/materials/*.json",
+    "tolerances_gdt": "native SolidWorks MBD/DimXpert PMI",
+    "ebom_mbom": "computed outputs only; never hand-edited",
+    "drawings": "derived presentation of native CAD + PMI + parts registry",
+    "analysis": "solver reports/evidence registered by node",
+    "release_state": "MEDTAS graph reducer + release policy",
+    "history": "Git + immutable evidence/release manifests"
+  },
+  "legacy_sources": [
+    "master/K01_master.json",
+    "control/K01_master_v2.json",
+    "bom/K01_BOM_master.csv",
+    "control/K01_PROJECT_CONTROL_v2.xlsx"
+  ],
+  "legacy_rule": "Preserve as source/history; do not use as editable master after v2.2 authority migration."
+}

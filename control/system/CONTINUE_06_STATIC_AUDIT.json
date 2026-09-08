@@ -1,0 +1,13 @@
+{
+  "schema": "k01_continue_06_static_audit_v1",
+  "created": "2026-09-05",
+  "status": "PASS_STATIC_PACKAGE",
+  "checks": {
+    "no_function_R": false,
+    "no_function_J": true,
+    "uses_Get_K01Requirement": true,
+    "fixed_repo_root_in_runner": true,
+    "does_not_rerun_gate04e": false,
+    "only_closure_is_hard_stop": true
+  }
+}

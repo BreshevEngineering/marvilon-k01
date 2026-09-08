@@ -1,0 +1,29 @@
+{
+  "schema": "k01_cfd_out_0mm_result_v1",
+  "position": "OUT",
+  "rod_position_mm": 0.0,
+  "status": "PASS",
+  "iterations": 241,
+  "Fx_N": -0.185399974,
+  "Fx_averaged_N": -0.18540157,
+  "force_delta_N": 4.92645982e-06,
+  "force_criterion_N": 0.000207425764,
+  "last20_force_span_N": 1.66e-06,
+  "mass_flow_in_kg_s": 0.0007243,
+  "mass_flow_out_kg_s": -0.000724298963,
+  "relative_mass_imbalance": 1.431727184835456e-06,
+  "p_in_Pa": 91470.1861,
+  "p_out_Pa": 91325.0,
+  "delta_p_Pa": 145.1861,
+  "max_velocity_m_s": 18.6952048,
+  "rod_average_temperature_K": 330.254568,
+  "outlet_average_temperature_K": 368.37206,
+  "positional_comparison": {
+    "MID_5mm_absFx_N": 0.185420895,
+    "prior_IN_current_case_absFx_N": 0.185447243,
+    "max_if_prior_case_is_exact_IN10_N": 0.185447243,
+    "spread_0_5_10_N": 4.7269e-05,
+    "spread_percent_of_max": 0.02548919
+  },
+  "formal_gate_note": "CFD positional envelope may close at 0.185447243 N only after confirming the prior controlled current-case geometry is exactly IN=10.00 mm."
+}

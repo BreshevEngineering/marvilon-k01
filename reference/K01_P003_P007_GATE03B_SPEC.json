@@ -1,0 +1,96 @@
+{
+  "schema": "k01_p003_p007_gate03b_candidate_v1",
+  "status": "CANDIDATE_NOT_RELEASED",
+  "basis": {
+    "P003_rear_face_OD_mm": 14.0,
+    "P003_rear_bore_ID_mm": 10.917,
+    "P003_rear_face_area_mm2": 60.33358869322472,
+    "current_P003_rear_assembly_station_mm": 30.206748702004727,
+    "current_P007_front_assembly_station_mm": 25.206748702004724,
+    "current_axial_overlap_mm": 5.0,
+    "current_P007_inner_14p1_end_station_mm": 32.206748702004724,
+    "current_P007_outer_16_end_station_mm": 33.206748702004724,
+    "current_P007_rear_inner_station_mm": 64.20674870200472,
+    "current_P007_rear_outer_station_mm": 65.20674870200472
+  },
+  "design_intent": {
+    "P003_change": "NONE for Gate03B candidate",
+    "P007_total_length_new_mm": 35.0,
+    "weld_face_station_local_mm": 0.0,
+    "weld_face_OD_mm": 14.0,
+    "weld_face_ID_mm": 10.917,
+    "weld_wall_radial_thickness_mm": 1.5415,
+    "weld_land_length_mm": 1.0,
+    "root_outer_OD_mm": 16.0,
+    "root_outer_start_mm": 1.0,
+    "thin_inner_ID_mm": 9.4,
+    "thin_inner_start_mm": 2.0,
+    "thin_outer_OD_mm": 10.0,
+    "thin_outer_start_mm": 3.0,
+    "rear_inner_end_mm": 34.0,
+    "rear_outer_end_mm": 35.0,
+    "rear_wall_thickness_mm": 1.0,
+    "thin_wall_radial_thickness_mm": 0.3,
+    "material": "AISI 316L / EN 1.4404",
+    "joint": "continuous circumferential butt weld; full penetration functional requirement; WPS OPEN",
+    "alignment": "external precision welding fixture",
+    "trapped_volume": "none intentionally introduced by interface geometry"
+  },
+  "profile_points_axial_radius_mm": [
+    [
+      0.0,
+      7.0
+    ],
+    [
+      1.0,
+      7.0
+    ],
+    [
+      1.0,
+      8.0
+    ],
+    [
+      3.0,
+      8.0
+    ],
+    [
+      3.0,
+      5.0
+    ],
+    [
+      35.0,
+      5.0
+    ],
+    [
+      35.0,
+      4.7
+    ],
+    [
+      34.0,
+      4.7
+    ],
+    [
+      2.0,
+      4.7
+    ],
+    [
+      2.0,
+      5.4585
+    ],
+    [
+      0.0,
+      5.4585
+    ]
+  ],
+  "release_gates_before_master_update": [
+    "native SolidWorks candidate build PASS",
+    "one solid body",
+    "BREP dimensions match this spec",
+    "candidate assembly placement preserves current thin-zone absolute stations",
+    "interference/collision PASS",
+    "P007 static +0.20 bar screen",
+    "P007 external-pressure buckling -0.20 bar screen",
+    "weld WPS/coupon qualification",
+    "helium leak acceptance defined and passed"
+  ]
+}

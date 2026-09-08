@@ -1,0 +1,13 @@
+﻿{
+    "schema":  "k01.edr.v1",
+    "id":  "EDR-021",
+    "title":  "J2 differential-pressure qualification envelope",
+    "status":  "DECIDED",
+    "decision":  "Use -0.20 ... +0.20 bar as the structural/sealing qualification differential-pressure envelope. This is not a normal-operating-pressure claim.",
+    "basis":  [
+                  "Containment-system maximum inlet pressure is 200 mbar in the protection concept.",
+                  "Known outlet suction is approximately -100 mbar; -0.20 bar provides conservative negative-side qualification.",
+                  "The 6 bar probe-purge path is diverted away from the optical sensor module.",
+                  "Existing P007 +0.20 bar static and -0.20 bar buckling cases are retained and refreshed on final geometry."
+              ]
+}

@@ -1,0 +1,254 @@
+{
+  "schema": "k01_file_registry_v6",
+  "entries": [
+    {
+      "id": "CAD-A001",
+      "name": "Production A001 assembly",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "assemblies/K01-A-001_Calibration_Module.SLDASM"
+      ]
+    },
+    {
+      "id": "C2-DELTA",
+      "name": "C2 interference delta — rejection evidence",
+      "domain": "HISTORY",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2_INTERFERENCE_DELTA.json"
+      ]
+    },
+    {
+      "id": "C2-ROOTCAUSE",
+      "name": "C2 pilot/P006 root-cause proof",
+      "domain": "ANALYSIS",
+      "root": "repo",
+      "candidates": [
+        "reports/analysis/current/K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1.json"
+      ]
+    },
+    {
+      "id": "EDR005",
+      "name": "EDR-005 compact flange decision",
+      "domain": "DECISION",
+      "root": "repo",
+      "candidates": [
+        "control/decision_system/records/EDR-005_J2_COMPACT_FLANGE_v3.json"
+      ]
+    },
+    {
+      "id": "EDR019",
+      "name": "EDR-019 pilot inner clearance",
+      "domain": "DECISION",
+      "root": "repo",
+      "candidates": [
+        "control/decision_system/records/EDR-019_J2_PILOT_INNER_CLEARANCE_v1.json"
+      ]
+    },
+    {
+      "id": "CI-J2",
+      "name": "CI-J2 dossier",
+      "domain": "CONFIGURATION",
+      "root": "repo",
+      "candidates": [
+        "control/configuration_items/CI-J2_DOSSIER_v1.json"
+      ]
+    },
+    {
+      "id": "CI-P003-P006",
+      "name": "P003/P006 retaining interface dossier",
+      "domain": "CONFIGURATION",
+      "root": "repo",
+      "candidates": [
+        "control/configuration_items/CI-P003-P006_RETAINING_THREAD_DOSSIER_v1.json"
+      ]
+    },
+    {
+      "id": "R1-INPUT",
+      "name": "C2R1 controlled design input",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "cad_api/gates/gate04d_c2r1/K01_GATE04D_C2R1_DESIGN_INPUT_v1.json"
+      ]
+    },
+    {
+      "id": "R1-PARAMS",
+      "name": "C2R1 API parameters",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "cad_api/gates/gate04d_c2r1/K01_GATE04D_C2R1_PARAMS_v1.json"
+      ]
+    },
+    {
+      "id": "CAD-R1-P003",
+      "name": "C2R1 P003 candidate",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "candidates/gate04d_c2r1/K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE.SLDPRT"
+      ]
+    },
+    {
+      "id": "CAD-R1-P007",
+      "name": "C2R1 P007 candidate",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "candidates/gate04d_c2r1/K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT"
+      ]
+    },
+    {
+      "id": "CAD-R1-ASM",
+      "name": "C2R1 verification assembly",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "candidates/gate04d_c2r1/verification/K01-A-001_GATE04D_C2R1_VERIFY.SLDASM"
+      ]
+    },
+    {
+      "id": "R1-BUILD",
+      "name": "C2R1 native build report",
+      "domain": "LIVE_REPORT",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_TYPED_BUILD.json"
+      ]
+    },
+    {
+      "id": "R1-BUILD-LOG",
+      "name": "Latest C2R1 build log",
+      "domain": "LIVE_LOG",
+      "root": "repo",
+      "patterns": [
+        "reports/cad/current/K01_GATE04D_C2R1_TYPED_BUILD_*.log"
+      ]
+    },
+    {
+      "id": "R1-VERIFY",
+      "name": "C2R1 assembly verify report",
+      "domain": "LIVE_REPORT",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_VERIFY.json"
+      ]
+    },
+    {
+      "id": "R1-VERIFY-LOG",
+      "name": "Latest C2R1 verify log",
+      "domain": "LIVE_LOG",
+      "root": "repo",
+      "patterns": [
+        "reports/cad/current/K01_GATE04D_C2R1_VERIFY_*.log"
+      ]
+    },
+    {
+      "id": "R1-INT",
+      "name": "C2R1 interference report",
+      "domain": "LIVE_REPORT",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_INTERFERENCE.json"
+      ]
+    },
+    {
+      "id": "R1-INT-LOG",
+      "name": "Latest C2R1 interference log",
+      "domain": "LIVE_LOG",
+      "root": "repo",
+      "patterns": [
+        "reports/cad/current/K01_GATE04D_C2R1_INTERFERENCE_*.log"
+      ]
+    },
+    {
+      "id": "R1-BOM-RAW",
+      "name": "C2R1 raw BOM audit",
+      "domain": "BOM",
+      "root": "repo",
+      "candidates": [
+        "reports/bom/K01_BOM_AUDIT_study_c2r1.json"
+      ]
+    },
+    {
+      "id": "R1-BOM-REC",
+      "name": "C2R1 reconciled BOM",
+      "domain": "BOM",
+      "root": "repo",
+      "candidates": [
+        "bom/K01_BOM_RECONCILED_study_c2r1.json"
+      ]
+    },
+    {
+      "id": "R1-DRAW-REPORT",
+      "name": "C2R1 drawing report",
+      "domain": "DRAWING",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_TYPED_DRAWINGS.json"
+      ]
+    },
+    {
+      "id": "R1-DRAW-P003",
+      "name": "P003 C2R1 draft PDF",
+      "domain": "DRAWING",
+      "root": "cad",
+      "patterns": [
+        "drawings/gate04d_c2r1_draft/K01-D-003*DRAFT_C2R1_API*.PDF",
+        "drawings/gate04d_c2r1_draft/K01-D-003*.PDF"
+      ]
+    },
+    {
+      "id": "R1-DRAW-P007",
+      "name": "P007 C2R1 draft PDF",
+      "domain": "DRAWING",
+      "root": "cad",
+      "patterns": [
+        "drawings/gate04d_c2r1_draft/K01-D-006*DRAFT_C2R1_API*.PDF",
+        "drawings/gate04d_c2r1_draft/K01-D-006*.PDF"
+      ]
+    },
+    {
+      "id": "MECH-SCREEN",
+      "name": "J2 C2 mechanical screening",
+      "domain": "ANALYSIS",
+      "root": "repo",
+      "candidates": [
+        "reports/analysis/current/K01_J2_C2_MECHANICAL_SCREEN_v1.json"
+      ]
+    },
+    {
+      "id": "MASTER",
+      "name": "Current K01 master",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "master/K01_master.json",
+        "master/K01_master_v2.json"
+      ],
+      "patterns": [
+        "master/K01_master*.json"
+      ]
+    },
+    {
+      "id": "RVM-C2",
+      "name": "J2 requirements verification matrix",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "control/decision_system/K01_J2_C2_REQUIREMENTS_VERIFICATION_MATRIX_v1.csv"
+      ]
+    },
+    {
+      "id": "AI-HANDOFF",
+      "name": "Current AI handoff ZIP",
+      "domain": "HANDOFF",
+      "root": "repo",
+      "candidates": [
+        "handoff/current/K01_AI_HANDOFF_CURRENT.zip"
+      ]
+    }
+  ]
+}

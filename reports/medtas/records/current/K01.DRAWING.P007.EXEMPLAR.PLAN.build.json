@@ -1,0 +1,10 @@
+{
+  "artifact_hash": "f43f452b3f2800610732a5cb58806cb98b58583da3615bf8d44c78e14b057187",
+  "built_state_hash": "86cc50fd60be93ea14cc274d8c49c4c45e648d64ff7efc534dfe6b54fab09696",
+  "node_id": "K01.DRAWING.P007.EXEMPLAR.PLAN",
+  "producer": {
+    "live_geometry_authority": true,
+    "tool": "build_p007_exemplar_plan_v2_0.py"
+  },
+  "schema": "medtas.build_record.v1"
+}

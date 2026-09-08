@@ -1,0 +1,426 @@
+{
+  "schema": "k01_repo_structure_audit_v2",
+  "created_utc": "2026-09-03T13:57:21.122756+00:00",
+  "top_directories": [
+    {
+      "directory": ".githooks",
+      "files": 1,
+      "tracked": 0,
+      "untracked": 1,
+      "extensions": {
+        "<none>": 1
+      },
+      "samples": [
+        ".githooks\\pre-commit"
+      ]
+    },
+    {
+      "directory": ".github",
+      "files": 1,
+      "tracked": 1,
+      "untracked": 0,
+      "extensions": {
+        ".yml": 1
+      },
+      "samples": [
+        ".github\\workflows\\qa.yml"
+      ]
+    },
+    {
+      "directory": "00_admin",
+      "files": 1,
+      "tracked": 1,
+      "untracked": 0,
+      "extensions": {
+        ".md": 1
+      },
+      "samples": [
+        "00_admin\\ENGINEERING_RULES.md"
+      ]
+    },
+    {
+      "directory": "bom",
+      "files": 2,
+      "tracked": 0,
+      "untracked": 2,
+      "extensions": {
+        ".csv": 2
+      },
+      "samples": [
+        "bom\\K01_BOM_FROM_SW.csv",
+        "bom\\K01_DESIGN_BOM_v3.csv"
+      ]
+    },
+    {
+      "directory": "cad_api",
+      "files": 14,
+      "tracked": 7,
+      "untracked": 7,
+      "extensions": {
+        ".py": 13,
+        ".md": 1
+      },
+      "samples": [
+        "cad_api\\README.md",
+        "cad_api\\sw_api_gate02_write_test_v05_final.py",
+        "cad_api\\sw_api_probe.py",
+        "cad_api\\sw_api_probe_v04.py",
+        "cad_api\\sw_api_probe_v05.py",
+        "cad_api\\sw_api_probe_v06.py",
+        "cad_api\\sw_cad_audit_v08.py",
+        "cad_api\\sw_cad_audit_v09.py",
+        "cad_api\\sw_cad_snapshot_v07.py",
+        "cad_api\\sw_handoff_pack_v01.py",
+        "cad_api\\sw_handoff_pack_v02.py",
+        "cad_api\\sw_review_export_v03.py",
+        "cad_api\\sw_review_export_v04.py",
+        "cad_api\\sw_review_export_v05.py"
+      ]
+    },
+    {
+      "directory": "control",
+      "files": 39,
+      "tracked": 0,
+      "untracked": 39,
+      "extensions": {
+        ".cmd": 35,
+        ".xlsx": 4
+      },
+      "samples": [
+        "control\\01_CANDIDATES_FINALIZE_DRYRUN.cmd",
+        "control\\01_CANDIDATES_SWEEP_DRYRUN.cmd",
+        "control\\01_DELETE_ARCHIVED_LOCKS_DRYRUN.cmd",
+        "control\\01_GATE04B_DATUM_C_V7_AUTOACTIVATE.cmd",
+        "control\\01_GATE04B_FAILED_CLEANUP_DRYRUN.cmd",
+        "control\\02_CANDIDATES_FINALIZE_APPLY.cmd",
+        "control\\02_CANDIDATES_SWEEP_APPLY.cmd",
+        "control\\02_DELETE_ARCHIVED_LOCKS_APPLY.cmd",
+        "control\\02_GATE04B_FAILED_CLEANUP_APPLY.cmd",
+        "control\\02_GATE04C0_J2_ENVELOPE_PROBE_READONLY.cmd",
+        "control\\03_DATUM_C_GATE04B_V3.cmd",
+        "control\\03_GATE04B_DATUM_C_V5.cmd",
+        "control\\03_GATE04B_DATUM_C_V6.cmd",
+        "control\\03_MASTER_COMPLETENESS_V2_DRYRUN.cmd",
+        "control\\03_REPO_ROOT_NORMALIZE_DRYRUN.cmd",
+        "control\\04_BOM_FROM_SOLIDWORKS.cmd"
+      ]
+    },
+    {
+      "directory": "docs",
+      "files": 27,
+      "tracked": 5,
+      "untracked": 22,
+      "extensions": {
+        ".md": 26,
+        ".txt": 1
+      },
+      "samples": [
+        "docs\\CAD_AUTOMATION_ARCHITECTURE.md",
+        "docs\\DECISION_LOG.md",
+        "docs\\GITHUB_SETUP_CHECKLIST.md",
+        "docs\\K01_ARCHITECTURE_REVIEW_SERVICE_JOINTS.md",
+        "docs\\K01_CFD_OUT_MID_IN_METHOD.md",
+        "docs\\K01_COMPLETION_PLAN_20260902.md",
+        "docs\\K01_CONTROL_ARCHITECTURE_v2.txt",
+        "docs\\K01_CURRENT_GATES.md",
+        "docs\\K01_DATUM_C_KINEMATIC_DECISION.md",
+        "docs\\K01_DRAWING_API_ARCHITECTURE.md",
+        "docs\\K01_DRAWING_RELEASE_MATRIX_v1.md",
+        "docs\\K01_DRAWING_RELEASE_PLAN.md",
+        "docs\\K01_FEMM_FINAL_GATE.md",
+        "docs\\K01_FEMM_FINAL_PLAN_v2.md",
+        "docs\\K01_FILE_POLICY.md",
+        "docs\\K01_GATE03B_P007_CANDIDATE.md"
+      ]
+    },
+    {
+      "directory": "handoff",
+      "files": 18,
+      "tracked": 0,
+      "untracked": 18,
+      "extensions": {
+        ".bmp": 10,
+        ".json": 4,
+        ".step": 2,
+        ".zip": 2
+      },
+      "samples": [
+        "handoff\\K01-A-001_Calibration_Module_20260901_170924\\K01-A-001_Calibration_Module.STEP",
+        "handoff\\K01-A-001_Calibration_Module_20260901_170924\\K01-A-001_Calibration_Module_CAD_AUDIT.json",
+        "handoff\\K01-A-001_Calibration_Module_20260901_170924\\K01-A-001_Calibration_Module_CURRENT.bmp",
+        "handoff\\K01-A-001_Calibration_Module_20260901_170924\\K01-A-001_Calibration_Module_FRONT.bmp",
+        "handoff\\K01-A-001_Calibration_Module_20260901_170924\\K01-A-001_Calibration_Module_HANDOFF.zip",
+        "handoff\\K01-A-001_Calibration_Module_20260901_170924\\K01-A-001_Calibration_Module_ISO.bmp",
+        "handoff\\K01-A-001_Calibration_Module_20260901_170924\\K01-A-001_Calibration_Module_RIGHT.bmp",
+        "handoff\\K01-A-001_Calibration_Module_20260901_170924\\K01-A-001_Calibration_Module_TOP.bmp",
+        "handoff\\K01-A-001_Calibration_Module_20260901_170924\\MANIFEST.json",
+        "handoff\\K01-P-007_Hermetic_Magnetic_Can_20260901_173122\\K01-P-007_Hermetic_Magnetic_Can.STEP",
+        "handoff\\K01-P-007_Hermetic_Magnetic_Can_20260901_173122\\K01-P-007_Hermetic_Magnetic_Can_CAD_AUDIT.json",
+        "handoff\\K01-P-007_Hermetic_Magnetic_Can_20260901_173122\\K01-P-007_Hermetic_Magnetic_Can_CURRENT.bmp",
+        "handoff\\K01-P-007_Hermetic_Magnetic_Can_20260901_173122\\K01-P-007_Hermetic_Magnetic_Can_FRONT.bmp",
+        "handoff\\K01-P-007_Hermetic_Magnetic_Can_20260901_173122\\K01-P-007_Hermetic_Magnetic_Can_HANDOFF.zip",
+        "handoff\\K01-P-007_Hermetic_Magnetic_Can_20260901_173122\\K01-P-007_Hermetic_Magnetic_Can_ISO.bmp",
+        "handoff\\K01-P-007_Hermetic_Magnetic_Can_20260901_173122\\K01-P-007_Hermetic_Magnetic_Can_RIGHT.bmp"
+      ]
+    },
+    {
+      "directory": "master",
+      "files": 5,
+      "tracked": 1,
+      "untracked": 4,
+      "extensions": {
+        ".json": 4,
+        ".py": 1
+      },
+      "samples": [
+        "master\\cad_contracts.json",
+        "master\\K01_master.json",
+        "master\\K01_master.pre_P013_sync_20260901_224331.json",
+        "master\\K01_master_v4_proposed.json",
+        "master\\k01_params_v4_proposed.py"
+      ]
+    },
+    {
+      "directory": "params",
+      "files": 1,
+      "tracked": 1,
+      "untracked": 0,
+      "extensions": {
+        ".py": 1
+      },
+      "samples": [
+        "params\\k01_params.py"
+      ]
+    },
+    {
+      "directory": "reference",
+      "files": 9,
+      "tracked": 0,
+      "untracked": 9,
+      "extensions": {
+        ".step": 5,
+        ".json": 3,
+        ".dxf": 1
+      },
+      "samples": [
+        "reference\\K01-P-003_GATE03E_COLLAR_ADDON_REFERENCE.step",
+        "reference\\K01-P-007_GATE03B_PROFILE.dxf",
+        "reference\\K01-P-007_GATE03B_REFERENCE.step",
+        "reference\\K01-P-007_GATE03B_V4_BLIND_END_REFERENCE.step",
+        "reference\\K01-P-007_GATE03E_V5_REFERENCE.step",
+        "reference\\K01-P-017_Datum_C_Clocking_Pin_REFERENCE.step",
+        "reference\\K01_GATE03E_V5_SPEC.json",
+        "reference\\K01_P003_P007_GATE03B_SPEC.json",
+        "reference\\K01_P007_GATE03B_V4_SPEC.json"
+      ]
+    },
+    {
+      "directory": "reports",
+      "files": 38,
+      "tracked": 3,
+      "untracked": 35,
+      "extensions": {
+        ".json": 38
+      },
+      "samples": [
+        "reports\\CAD_AUDIT_K01-P-002_Guide_Bushing.json",
+        "reports\\CAD_AUDIT_K01-P-003_Cartridge_Body.json",
+        "reports\\CAD_AUDIT_K01-P-004_Front_Guide_Bushing.json",
+        "reports\\CAD_SNAPSHOT_K01-P-003_Cartridge_Body.json",
+        "reports\\CAD_SNAPSHOT_K01-P-016_Long_Run_Interface_Boss.json",
+        "reports\\CAD_SNAPSHOT_probe_v06.json",
+        "reports\\cad\\current\\K01-A-001_Calibration_Module_ASSEMBLY_MANIFEST.json",
+        "reports\\cad\\current\\K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.json",
+        "reports\\cad\\current\\K01-P-001_Calibration_Rod.json",
+        "reports\\cad\\current\\K01-P-002_Guide_Bushing.json",
+        "reports\\cad\\current\\K01-P-003_Cartridge_Body.json",
+        "reports\\cad\\current\\K01-P-004_Front_Guide_Bushing.json",
+        "reports\\cad\\current\\K01-P-006_Retaining_Plug.json",
+        "reports\\cad\\current\\K01-P-007_Hermetic_Magnetic_Can.json",
+        "reports\\cad\\current\\K01-P-008_Internal_Magnetic_Follower.json",
+        "reports\\cad\\current\\K01-P-009_Rear_Stop_Washer.json"
+      ]
+    },
+    {
+      "directory": "review_upload",
+      "files": 6,
+      "tracked": 0,
+      "untracked": 6,
+      "extensions": {
+        ".json": 4,
+        ".bmp": 1,
+        ".step": 1
+      },
+      "samples": [
+        "review_upload\\K01-P-003_Cartridge_Body_REVIEW_V04.json",
+        "review_upload\\K01-P-007_Hermetic_Magnetic_Can_CURRENT.bmp",
+        "review_upload\\K01-P-007_Hermetic_Magnetic_Can_REVIEW.json",
+        "review_upload\\K01-P-007_Hermetic_Magnetic_Can_REVIEW.STEP",
+        "review_upload\\K01-P-007_Hermetic_Magnetic_Can_REVIEW_V04.json",
+        "review_upload\\LAST_EXPORT_STATUS.json"
+      ]
+    },
+    {
+      "directory": "scripts",
+      "files": 5,
+      "tracked": 0,
+      "untracked": 5,
+      "extensions": {
+        ".py": 3,
+        ".cmd": 2
+      },
+      "samples": [
+        "scripts\\K01_CANDIDATES_CLEANUP.py",
+        "scripts\\K01_PROMOTE_P003_P007.py",
+        "scripts\\K01_REPO_CLEANUP.py",
+        "scripts\\RUN_K01_PROMOTE_P003_P007_APPLY.cmd",
+        "scripts\\RUN_K01_PROMOTE_P003_P007_DRYRUN.cmd"
+      ]
+    },
+    {
+      "directory": "spec",
+      "files": 5,
+      "tracked": 0,
+      "untracked": 5,
+      "extensions": {
+        ".json": 5
+      },
+      "samples": [
+        "spec\\K01_CFD_OUT_0MM_RESULT_20260903.json",
+        "spec\\K01_DATUM_C_FREEZE_SPEC.json",
+        "spec\\K01_J2_SERVICE_JOINT_v4.json",
+        "spec\\K01_P003_P007_SERVICEABLE_INTERFACE.json",
+        "spec\\K01_SERVICEABLE_JOINT_ARCHITECTURE_v3.json"
+      ]
+    },
+    {
+      "directory": "tests",
+      "files": 2,
+      "tracked": 2,
+      "untracked": 0,
+      "extensions": {
+        ".py": 2
+      },
+      "samples": [
+        "tests\\test_control_smoke.py",
+        "tests\\test_k01_master.py"
+      ]
+    },
+    {
+      "directory": "tools",
+      "files": 58,
+      "tracked": 0,
+      "untracked": 58,
+      "extensions": {
+        ".py": 46,
+        ".pyc": 12
+      },
+      "samples": [
+        "tools\\k01_audit.py",
+        "tools\\K01_CANDIDATES_CLEANUP_v2.py",
+        "tools\\K01_CANDIDATES_CLEANUP_v3.py",
+        "tools\\K01_CANDIDATES_FINALIZE_v1.py",
+        "tools\\K01_CANDIDATES_SWEEP_v5.py",
+        "tools\\K01_DELETE_ARCHIVED_LOCKS_v1.py",
+        "tools\\K01_GATE04B_FAILED_CLEANUP_v1.py",
+        "tools\\K01_MASTER_COMPLETENESS_PATCH_v1.py",
+        "tools\\K01_MASTER_COMPLETENESS_PATCH_v2.py",
+        "tools\\K01_REPO_CLEANUP_v2.py",
+        "tools\\K01_REPO_ROOT_NORMALIZE_v1.py",
+        "tools\\K01_REPO_ROOT_NORMALIZE_v2.py",
+        "tools\\K01_REPO_STRUCTURE_AUDIT_v1.py",
+        "tools\\K01_REPO_STRUCTURE_AUDIT_v2.py",
+        "tools\\sw_bom_projection_v1.py",
+        "tools\\sw_bom_projection_v2.py"
+      ]
+    }
+  ],
+  "root_files": [
+    {
+      "name": ".gitattributes",
+      "size": 544,
+      "tracked": true,
+      "snippet": "# Repository text/binary normalization * text=auto # Engineering source/control files: stable LF in Git *.py text eol=lf *.yml text eol=lf *.yaml text eol=lf *.toml text eol=lf *.j"
+    },
+    {
+      "name": ".gitignore",
+      "size": 605,
+      "tracked": true,
+      "snippet": "# Python __pycache__/ *.py[cod] .pytest_cache/ .venv/ venv/ # IDE / OS .vscode/ .idea/ Thumbs.db .DS_Store # Generated outputs generated/ reports/*.tmp *.log # SolidWorks working/b"
+    },
+    {
+      "name": "CHANGELOG.md",
+      "size": 83,
+      "tracked": true,
+      "snippet": "# Changelog ## Unreleased - Initial engineering-control repository structure."
+    },
+    {
+      "name": "pyproject.toml",
+      "size": 163,
+      "tracked": true,
+      "snippet": "[project] name = \"breshevengineering-k01\" version = \"0.1.0\" requires-python = \">=3.11\" [tool.pytest.ini_options] pythonpath = [\".\"] testpaths = [\"tests\"]"
+    },
+    {
+      "name": "README.md",
+      "size": 1073,
+      "tracked": true,
+      "snippet": "‣か‱慃楬牢瑡潩⁮潍畤敬䔠杮湩敥楲杮䌠湯牴汯਍਍牐癩瑡⁥湥楧敮牥湩⁧敲潰楳潴祲映牯琠敨䬠㄰挠污扩慲楴湯洠捥慨楮浳മഊ⌊‣畐灲獯൥吊楨⁳敲潰楳潴祲猠潴敲⁳湥楧敮牥湩⁧潬楧Ᵽ爠煥極敲敭瑮ⱳ瀠牡浡瑥牥ⱳ瘠牥晩捩瑡潩⁮潣敤愠摮愠摵瑩漠瑵異獴മ上瑡癩⁥潓楬坤牯獫䌠䑁⠠占䑌剐恔‬占䑌十恍‬占䑌剄恗 獩渠瑯琠敨瀠楲慭祲䜠瑩瀠祡潬摡※瑩戠汥湯獧椠⁮潓楬坤牯獫倠䵄眠敨⁮䑐⁍獩"
+    },
+    {
+      "name": "README.txt",
+      "size": 128,
+      "tracked": false,
+      "snippet": "Copy contents into D:\\\\BreshevEngineering\\\\marvilon-k01\\nThen run RUN_K01_P003_P007_INTERFACE_PROBE.cmd with K01-A-001 active.\\n"
+    },
+    {
+      "name": "README_COM_FIX.md",
+      "size": 1702,
+      "tracked": false,
+      "snippet": "# K01 CAD control — COM compatibility fix The uploaded diagnostic files prove that the previous exporter was still double-invoking late-bound COM values. Observed: - Assembly manif"
+    },
+    {
+      "name": "README_CURRENT.md",
+      "size": 661,
+      "tracked": false,
+      "snippet": "# K01 Stage3 Control V5 — current order 1. Ignore old cleanup/repo APPLY scripts. 2. Extract this package over `D:\\BreshevEngineering\\marvilon-k01`. 3. Run `control\\01_CANDIDATES_S"
+    },
+    {
+      "name": "README_CURRENT.txt",
+      "size": 1377,
+      "tracked": false,
+      "snippet": "K01 STAGE3 CONTROL V9 — CURRENT ORDER KEY CORRECTIONS 1) Gate04B v6 failed only because P016 was the active document. Gate04B v7 auto-opens/activates stable K01-A-001. 2) The 78-ch"
+    },
+    {
+      "name": "README_K01_CAD_CONTROL.md",
+      "size": 2409,
+      "tracked": false,
+      "snippet": "# K01 CAD control pipeline — stable filenames This package replaces the experimental `sw_review_export_v04/v05...` sequence. ## Why the last v05 failed The active SOLIDWORKS docume"
+    },
+    {
+      "name": "├Ш8.20",
+      "size": 55,
+      "tracked": false,
+      "snippet": "K01 Gate04A - P008 MAGNET POCKET NATIVE EDIT Ø8.10 -"
+    }
+  ],
+  "duplicate_small_file_sets": [
+    [
+      "cad_api\\sw_api_probe.py",
+      "cad_api\\sw_api_probe_v04.py"
+    ],
+    [
+      "control\\01_DELETE_ARCHIVED_LOCKS_DRYRUN.cmd",
+      "control\\05_DELETE_ARCHIVED_LOCKS_DRYRUN.cmd"
+    ],
+    [
+      "control\\04_REPO_DEEP_STRUCTURE_AUDIT_V2.cmd",
+      "control\\06_REPO_DEEP_STRUCTURE_AUDIT_V2.cmd"
+    ],
+    [
+      "tools\\sw_gate03g_build_native_p003_candidate.pre_v2_20260902_122205.py",
+      "tools\\sw_gate03g_build_native_p003_candidate.pre_v2_20260902_122247.py",
+      "tools\\sw_gate03g_build_native_p003_candidate.pre_v2_20260902_122250.py",
+      "tools\\sw_gate03g_build_native_p003_candidate.py"
+    ]
+  ]
+}

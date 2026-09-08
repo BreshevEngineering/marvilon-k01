@@ -1,0 +1,10 @@
+{
+  "schema": "medtas.build_record.v1",
+  "node_id": "K01.TOL.A001",
+  "built_state_hash": "85b5581c60551804d625f1e4f0f6be9f15814c959ac78065dd5f39c0bb63cfe2",
+  "artifact_hash": "5c38f91c3452323dad4b137eed20ae172294073170e7cbe8c3bf80338a208b59",
+  "producer": {
+    "tool": "build_downstream_v1_8.py",
+    "stage": "tolerance_v1_4"
+  }
+}

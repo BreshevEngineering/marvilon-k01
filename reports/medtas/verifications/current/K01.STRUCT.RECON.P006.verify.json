@@ -1,0 +1,12 @@
+{
+  "schema": "medtas.verification_record.v1",
+  "node_id": "K01.STRUCT.RECON.P006",
+  "verified_state_hash": "85b9462805ae1dab079a34b17775960e9efdb1d0439e9eb886ea621e41772a87",
+  "verified_artifact_hash": "5055e487cb589c8f2f2ba02434110ec30660bff12a006f5a0dbe06f11ac56105",
+  "verdict": "PASS_WITH_LIMITATIONS",
+  "metrics": {},
+  "limitations": [
+    "CCX-001: independent CalculiX run not yet available"
+  ],
+  "notes": "Sufficient for current engineering screen; not a production-release cross-solver closure."
+}

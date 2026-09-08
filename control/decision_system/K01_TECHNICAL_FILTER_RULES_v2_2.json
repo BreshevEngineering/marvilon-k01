@@ -1,0 +1,179 @@
+{
+  "schema": "k01.technical_filter_rules.v2_2",
+  "rules": [
+    {
+      "pattern": [
+        "REQ",
+        "REQUIREMENT"
+      ],
+      "categories": [
+        "01",
+        "21",
+        "24"
+      ],
+      "rationale": "Requirement identity, acceptance and traceability."
+    },
+    {
+      "pattern": [
+        "CAD",
+        "SNAPSHOT",
+        "GEOMETRY",
+        "IDENTITY"
+      ],
+      "categories": [
+        "02",
+        "03",
+        "15",
+        "16",
+        "17",
+        "24"
+      ],
+      "rationale": "Geometry, interfaces, assembly and traceability."
+    },
+    {
+      "pattern": [
+        "MAT",
+        "MATERIAL",
+        "PARTS.REGISTRY"
+      ],
+      "categories": [
+        "14",
+        "16",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Material/environment, process, sourcing, value and traceability."
+    },
+    {
+      "pattern": [
+        "TOL",
+        "MBD",
+        "PMI"
+      ],
+      "categories": [
+        "03",
+        "15",
+        "16",
+        "19",
+        "24"
+      ],
+      "rationale": "Datum/tolerance definition, manufacturability, inspection and traceability."
+    },
+    {
+      "pattern": [
+        "STRUCT",
+        "SWSIM",
+        "CCX"
+      ],
+      "categories": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "16",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case."
+    },
+    {
+      "pattern": [
+        "FEMM",
+        "MAG"
+      ],
+      "categories": [
+        "04",
+        "13",
+        "14",
+        "20",
+        "24"
+      ],
+      "rationale": "Magnetic load/actuation, material and reliability evidence."
+    },
+    {
+      "pattern": [
+        "DRAWING"
+      ],
+      "categories": [
+        "03",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "24"
+      ],
+      "rationale": "Manufacturing definition and verification presentation."
+    },
+    {
+      "pattern": [
+        "BOM",
+        "EBOM",
+        "MBOM"
+      ],
+      "categories": [
+        "14",
+        "16",
+        "17",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Product/manufacturing structure, supply and traceability."
+    },
+    {
+      "pattern": [
+        "VERIFY",
+        "RELEASE",
+        "BASELINE"
+      ],
+      "categories": [
+        "01",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Release evidence, inspection, reliability/safety and traceability."
+    },
+    {
+      "pattern": [
+        "FLOW",
+        "CFD"
+      ],
+      "categories": [
+        "04",
+        "12",
+        "09",
+        "21",
+        "24"
+      ],
+      "rationale": "Fluid/thermal environment and safety evidence."
+    },
+    {
+      "pattern": [
+        "WELD",
+        "LEAK",
+        "CONTAIN"
+      ],
+      "categories": [
+        "11",
+        "14",
+        "16",
+        "19",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Containment process and leak integrity."
+    }
+  ]
+}

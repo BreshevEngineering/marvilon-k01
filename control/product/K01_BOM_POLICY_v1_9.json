@@ -1,0 +1,27 @@
+{
+  "design_release_view": "EBOM",
+  "manufacturing_release_view": "MBOM",
+  "manufacturing_transformations": [
+    {
+      "engineering_item": "K01-P-007",
+      "id": "MBOM-P007-WELDED-CONSTRUCTION",
+      "inputs": [],
+      "mbom_representation": "WELDED_ASSEMBLY_PENDING_DECOMPOSITION",
+      "note": "Current CAD/EBOM treats K01-P-007 as one engineering item. Manufacturing decomposition into sleeve/flange inputs is not invented until controlled identities/process route exist.",
+      "status": "OPEN_SUBCOMPONENT_IDENTITIES",
+      "type": "WELDED_CONSTRUCTION"
+    }
+  ],
+  "principles": [
+    "CAD owns modeled occurrence and quantity.",
+    "control/product/parts.json owns identity and product metadata.",
+    "Non-modeled required items are explicit registry inclusions.",
+    "Suppressed CAD occurrences never disappear silently; disposition is mandatory.",
+    "EBOM and MBOM are separate derived views and never silently overwrite one another."
+  ],
+  "release_logic": {
+    "EBOM": "Required for design/product-definition release.",
+    "MBOM": "Required for manufacturing-release handoff; may remain HOLD while engineering drawings are being closed."
+  },
+  "schema": "k01.bom_policy.v1_9"
+}

@@ -1,0 +1,32 @@
+{
+  "limitations": [
+    "K01-CHAR-A001-ROD-TRAVEL",
+    "K01-CHAR-P003-SEAT-ID",
+    "K01-D003-DATUM-A",
+    "K01-D003-DATUM-B",
+    "K01-D003-FASTENER-PATTERN",
+    "K01-D003-PILOT",
+    "K01-D005-BORE",
+    "K01-D005-SERVICE-DRIVE",
+    "K01-D005-THREAD",
+    "K01-D006-BLIND-END",
+    "K01-D006-CONCENTRICITY",
+    "K01-D006-LOCATOR",
+    "K01-D006-THIN-WALL",
+    "K01-D006-WELD",
+    "K01-D012-IN-OUT",
+    "K01-D012-LONG-RUN",
+    "K01-D012-OPTICAL-DATUM"
+  ],
+  "metrics": {
+    "blocking_items": 17,
+    "drawings": 4,
+    "ready_drawings": 0
+  },
+  "node_id": "K01.DRAWING.RELEASE.PLAN.GATE04E",
+  "notes": "",
+  "schema": "medtas.verification_record.v1",
+  "verdict": "HOLD",
+  "verified_artifact_hash": "812f0df10116f5ea446b638b5204077a855ee148c88a52344e30c447f5512a60",
+  "verified_state_hash": "347b3e9bcd07adb498539184068130d515052f283aa3896c313b05c27494e499"
+}

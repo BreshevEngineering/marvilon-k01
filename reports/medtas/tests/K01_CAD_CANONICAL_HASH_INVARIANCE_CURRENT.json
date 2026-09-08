@@ -1,0 +1,32 @@
+{
+  "deterministic_repeat_equal": true,
+  "native_binary_changed_after_saves": false,
+  "native_binary_changed_repeat": false,
+  "post_save_equal": true,
+  "rule": "Canonical payload hash and MEDTAS STATE_HASH must remain equal. Native binary SHA is diagnostic only.",
+  "runs": [
+    {
+      "artifact_hash": "cbeed3671b3a37d83e75c63bbc2eb1d0b742054e0b3eab9fcbe1c76f98a1c960",
+      "assembly": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\verification\\K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+      "binary_sha256": "34c7c9e5a395c872c366d7d4d34a82e04621b4a2bc913da5bdd071de56c989e0",
+      "canonical_hash": "de8e56baa8a6e3ef90d5c2ae909c0c0f7b31a41f7ed9dabfebd664e1522a1fb0",
+      "state_hash": "9ace131cc9b27f0d4e168638ba34145f8282d4ee46a575f6c549b184d09788ad"
+    },
+    {
+      "artifact_hash": "cbeed3671b3a37d83e75c63bbc2eb1d0b742054e0b3eab9fcbe1c76f98a1c960",
+      "assembly": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\verification\\K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+      "binary_sha256": "34c7c9e5a395c872c366d7d4d34a82e04621b4a2bc913da5bdd071de56c989e0",
+      "canonical_hash": "de8e56baa8a6e3ef90d5c2ae909c0c0f7b31a41f7ed9dabfebd664e1522a1fb0",
+      "state_hash": "9ace131cc9b27f0d4e168638ba34145f8282d4ee46a575f6c549b184d09788ad"
+    },
+    {
+      "artifact_hash": "cbeed3671b3a37d83e75c63bbc2eb1d0b742054e0b3eab9fcbe1c76f98a1c960",
+      "assembly": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\verification\\K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+      "binary_sha256": "34c7c9e5a395c872c366d7d4d34a82e04621b4a2bc913da5bdd071de56c989e0",
+      "canonical_hash": "de8e56baa8a6e3ef90d5c2ae909c0c0f7b31a41f7ed9dabfebd664e1522a1fb0",
+      "state_hash": "9ace131cc9b27f0d4e168638ba34145f8282d4ee46a575f6c549b184d09788ad"
+    }
+  ],
+  "schema": "k01.canonical_hash_invariance.v1_6",
+  "verdict": "PASS"
+}

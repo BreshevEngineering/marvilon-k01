@@ -1,0 +1,14 @@
+{
+  "K01Gate04C_VerifyV2.cs": {
+    "bytes": 19339,
+    "sha256": "59ab80a94c68092411598a2e886ebab669f2c17b1f9bddda3b753d181819291d"
+  },
+  "README.txt": {
+    "bytes": 875,
+    "sha256": "fb35c09bd7259ecd3b44e2d10db9bbd5a40db6f5563a8d800fb99408bb580cdf"
+  },
+  "RUN_GATE04C_VERIFY_V2.cmd": {
+    "bytes": 1772,
+    "sha256": "9b4e1010ba9413f2f973c5e5931d05a0f8bca0236c394e1324c5ca80c3708c4c"
+  }
+}

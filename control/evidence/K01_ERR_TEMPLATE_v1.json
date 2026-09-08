@@ -1,0 +1,16 @@
+{
+  "schema": "k01_evidence_reference_record_v1",
+  "err_id": "ERR-XXX",
+  "source_id": "SRC-...",
+  "source_type": "standard|handbook|paper|supplier|calculation|test|cad_readback|field",
+  "title": "",
+  "edition_version": "",
+  "author_publisher": "",
+  "section_page_figure_table": "",
+  "url_or_controlled_path": "",
+  "claim_supported": "",
+  "applicability_to_K01": "",
+  "limitations_assumptions": "",
+  "checked_date": "",
+  "status": "CURRENT|SUPERSEDED|OPEN"
+}

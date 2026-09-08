@@ -1,0 +1,27 @@
+{
+  "schema": "k01.tolerance_mbd_map.v1",
+  "purpose": "Controlled characteristic IDs to be authored in native SOLIDWORKS MBD/DimXpert. IDs are definitions, not claims that annotations already exist.",
+  "unit_policy": "DimXpert linear SI values are converted from m to mm before tolerance analysis.",
+  "chains": {
+    "K01-TOL-P004-SEAT": {
+      "contributors": [
+        {"characteristic_id": "K01-CHAR-P003-SEAT-ID", "part_no": "K01-P-003", "sign": 1.0, "role": "P003 seat internal diameter", "statistical_model": "UNASSIGNED"},
+        {"characteristic_id": "K01-CHAR-P004-OD", "part_no": "K01-P-004", "sign": -1.0, "role": "P004 guide outside diameter", "statistical_model": "UNASSIGNED"}
+      ]
+    },
+    "K01-TOL-P001-P008-M4-BOTTOM": {
+      "contributors": [
+        {"characteristic_id": "K01-CHAR-P008-M4-USABLE-DEPTH", "part_no": "K01-P-008", "sign": 1.0, "role": "P008 usable female thread depth", "statistical_model": "UNASSIGNED"},
+        {"characteristic_id": "K01-CHAR-P001-M4-MALE-LENGTH", "part_no": "K01-P-001", "sign": -1.0, "role": "P001 male thread length", "statistical_model": "UNASSIGNED"}
+      ]
+    },
+    "K01-TOL-ROD-TRAVEL": {
+      "direct_characteristic": {"characteristic_id": "K01-CHAR-A001-ROD-TRAVEL", "scope": "assembly", "role": "functional hard-stop travel"}
+    },
+    "K01-TOL-P002-AXIAL-FLOAT": {
+      "contributors": [],
+      "mapping_status": "OPEN_CONTRIBUTOR_DECOMPOSITION",
+      "note": "Do not invent the contributor chain. Bind exact native characteristics after the final P002/P006 seating definition is confirmed."
+    }
+  }
+}

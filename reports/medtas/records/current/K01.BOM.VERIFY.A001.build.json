@@ -1,0 +1,10 @@
+{
+  "schema": "medtas.build_record.v1",
+  "node_id": "K01.BOM.VERIFY.A001",
+  "built_state_hash": "213a5b86c4f43a930b1e4093e3622f16d5a84898b1e97e5f67004f04780b2516",
+  "artifact_hash": "a41ca082d349866a3f845e150d512d5daf3ebabe134d5fd13eb85e3685e756ae",
+  "producer": {
+    "tool": "build_bom_artifact_v1_5.py",
+    "stage": "semantic_parity"
+  }
+}

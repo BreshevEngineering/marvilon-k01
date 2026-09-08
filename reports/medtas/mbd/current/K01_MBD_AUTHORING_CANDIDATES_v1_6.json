@@ -1,0 +1,77 @@
+{
+  "policy": "READ_ONLY. Candidate discovery never writes SOLIDWORKS and never infers a tolerance from nominal equality alone. Characteristic ownership must be reviewed before any MBD write.",
+  "rows": [
+    {
+      "candidates": [],
+      "characteristic_id": "K01-CHAR-P003-SEAT-ID",
+      "nominal_mm": 6.6,
+      "part_no": "K01-P-003",
+      "role": "P003 seat internal diameter",
+      "search_tolerance_mm": 0.0005,
+      "status": "NOT_FOUND"
+    },
+    {
+      "candidates": [],
+      "characteristic_id": "K01-CHAR-P004-OD",
+      "nominal_mm": 6.54,
+      "part_no": "K01-P-004",
+      "role": "P004 guide outside diameter",
+      "search_tolerance_mm": 0.0005,
+      "status": "NOT_FOUND"
+    },
+    {
+      "candidates": [
+        {
+          "delta_mm": 0.0,
+          "full_name": "D2@Hole Thread1@K01-P-008_Internal_Magnetic_Follower.Part",
+          "system_value_SI": "0.004",
+          "value_mm": 4.0
+        },
+        {
+          "delta_mm": 0.0,
+          "full_name": "D2@Hole Thread2@K01-P-008_Internal_Magnetic_Follower.Part",
+          "system_value_SI": "0.004",
+          "value_mm": 4.0
+        }
+      ],
+      "characteristic_id": "K01-CHAR-P008-M4-USABLE-DEPTH",
+      "nominal_mm": 4.0,
+      "part_no": "K01-P-008",
+      "role": "P008 usable female thread depth",
+      "search_tolerance_mm": 0.0005,
+      "status": "AMBIGUOUS"
+    },
+    {
+      "candidates": [
+        {
+          "delta_mm": 0.0,
+          "full_name": "D4@Sketch1@K01-P-001_Calibration_Rod.Part",
+          "system_value_SI": "0.0035",
+          "value_mm": 3.5
+        }
+      ],
+      "characteristic_id": "K01-CHAR-P001-M4-MALE-LENGTH",
+      "nominal_mm": 3.5,
+      "part_no": "K01-P-001",
+      "role": "P001 male thread length",
+      "search_tolerance_mm": 0.0005,
+      "status": "CANDIDATE_UNIQUE"
+    },
+    {
+      "candidates": [],
+      "characteristic_id": "K01-CHAR-A001-ROD-TRAVEL",
+      "mapping_status": "MANUAL_SEMANTIC_BIND_REQUIRED",
+      "nominal_mm": 10.0,
+      "role": "functional hard-stop travel",
+      "scope": "assembly",
+      "status": "MANUAL_SEMANTIC_BIND_REQUIRED"
+    }
+  ],
+  "schema": "k01.mbd_authoring_candidates.v1_6",
+  "summary": {
+    "AMBIGUOUS": 1,
+    "CANDIDATE_UNIQUE": 1,
+    "MANUAL_SEMANTIC_BIND_REQUIRED": 1,
+    "NOT_FOUND": 2
+  }
+}

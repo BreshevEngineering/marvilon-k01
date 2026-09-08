@@ -1,0 +1,1189 @@
+{
+  "schema": "k01.command_center.medtas_feed.v1_2",
+  "project": "K01",
+  "summary": {
+    "counts": {
+      "PASS": 20,
+      "STALE": 7,
+      "MISSING": 4,
+      "PASS_WITH_LIMITATIONS": 9,
+      "HOLD": 5,
+      "BLOCKED": 8
+    },
+    "frontier_count": 3
+  },
+  "cad_semantic": {
+    "state": "PASS",
+    "state_hash": "f02750df76c6c51f9c7ad21b308a4541f87f0bb69834744c4187d2f4d5ec9a17",
+    "artifact_hash": "d4ad5636e4d185855d1ac5093c033065f3c90a1e4c1de619b98ba823a1993177"
+  },
+  "frontier": [
+    {
+      "node_id": "K01.CAD.PROPS.PROJECTION.A001",
+      "title": "A001 registry-to-CAD property projection audit",
+      "state": "MISSING",
+      "next_action": "build/verify this node",
+      "reasons": [
+        "no build_record"
+      ]
+    },
+    {
+      "node_id": "K01.MBOM.VERIFY.A001",
+      "title": "A001 MBOM verification",
+      "state": "MISSING",
+      "next_action": "build/verify this node",
+      "reasons": [
+        "no build_record"
+      ]
+    },
+    {
+      "node_id": "K01.AI.HANDOFF.CURRENT",
+      "title": "Current AI engineering handoff ZIP",
+      "state": "MISSING",
+      "next_action": "build/verify this node",
+      "reasons": [
+        "no build_record"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "node_id": "K01.PROJECT.STRUCTURE",
+      "title": "K01 canonical project/repository structure audit",
+      "kind": "project_structure",
+      "state": "PASS",
+      "state_hash": "b029acd528992f49be4bf4a45fe1e5129a135151d2451ffad173f9115a1605a0",
+      "artifact_hash": "4a39b1506eacf450059cd02a1d2ab8de1f851b572208cea68fb1f598f8218810",
+      "reasons": [],
+      "criticality": "evidence",
+      "outputs": [
+        {
+          "output_id": "project_structure",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/control/K01_PROJECT_STRUCTURE_CURRENT.json"
+        },
+        {
+          "output_id": "migration_plan",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/control/K01_PROJECT_MIGRATION_PLAN_CURRENT.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.REQ.GATE04E",
+      "title": "K01 controlled requirements registry",
+      "kind": "requirement",
+      "state": "PASS",
+      "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419",
+      "artifact_hash": null,
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": []
+    },
+    {
+      "node_id": "K01.PARAM.GATE04E",
+      "title": "Gate04E controlled parameters",
+      "kind": "parameter_set",
+      "state": "PASS",
+      "state_hash": "6e70a110469cf973a4389a7217042c927182181ab5ed5bca80e76ad197fccf69",
+      "artifact_hash": null,
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": []
+    },
+    {
+      "node_id": "K01.PARAM.INTERFACE.J2",
+      "title": "J2 controlled interface parameters",
+      "kind": "parameter_set",
+      "state": "PASS",
+      "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f",
+      "artifact_hash": null,
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": []
+    },
+    {
+      "node_id": "K01.MAT.GATE04E",
+      "title": "Gate04E material state",
+      "kind": "material_spec",
+      "state": "PASS",
+      "state_hash": "55f197d3d349cc43387326c450f2f6bd974f85d7ca9a64ccc1f237c0e20f1bd3",
+      "artifact_hash": null,
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": []
+    },
+    {
+      "node_id": "K01.PARTS.REGISTRY",
+      "title": "K01 canonical parts registry",
+      "kind": "product_registry",
+      "state": "PASS",
+      "state_hash": "a5f3c9fec3121a7fb0f4fdb41c12154ca69bbd80eb401d0aafa0fe40b3facfb8",
+      "artifact_hash": null,
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": []
+    },
+    {
+      "node_id": "K01.CAD.SEM.A001",
+      "title": "A001 CAD semantic state",
+      "kind": "cad_semantic_state",
+      "state": "PASS",
+      "state_hash": "f02750df76c6c51f9c7ad21b308a4541f87f0bb69834744c4187d2f4d5ec9a17",
+      "artifact_hash": "d4ad5636e4d185855d1ac5093c033065f3c90a1e4c1de619b98ba823a1993177",
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": [
+        {
+          "output_id": "cad_semantic_json",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/cad/current/K01_CAD_SEM_A001.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.CAD.PROPS.PROJECTION.A001",
+      "title": "A001 registry-to-CAD property projection audit",
+      "kind": "verification",
+      "state": "MISSING",
+      "state_hash": "070c20d04c1f9c6f05ccf7fadeab853513ad0833c619cff68a8e88da93d05fa8",
+      "artifact_hash": "a12e78f050bd608cb50d78988eea9c2f30711e4ff488ade8b6329356941ae6f4",
+      "reasons": [
+        "no build_record"
+      ],
+      "criticality": "evidence",
+      "outputs": [
+        {
+          "output_id": "property_projection",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/bom/current/K01_PARTS_PROPERTY_PROJECTION_CURRENT.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.CAD.HASH.QUAL.A001",
+      "title": "A001 canonical save-invariance qualification",
+      "kind": "verification",
+      "state": "STALE",
+      "state_hash": "16d10a6e9f1aec5814fbb7e8401873beda45d5449e43a463fec1be34294b35f6",
+      "artifact_hash": "6d352627944eb015a4af72882b5484da356297d940dc056b7b2d0004b27b5d69",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "criticality": "assurance_optional",
+      "outputs": [
+        {
+          "output_id": "hash_qualification",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/tests/K01_CAD_CANONICAL_HASH_INVARIANCE_CURRENT.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.MBD.A001",
+      "title": "A001 model-based definition / DimXpert state",
+      "kind": "mbd_semantic_state",
+      "state": "PASS_WITH_LIMITATIONS",
+      "state_hash": "fdaf68c7c944b6ad4b19fabe39847437deb02549932c4613f0154302b540812e",
+      "artifact_hash": "e210e4a8c9fafdf9d32a8c80b72a5fa0a8e028a6dd63478e6bd03bea3e88fa6d",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "mbd_semantic_json",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/mbd/current/K01_MBD_A001_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.SNAPSHOT.A001",
+      "title": "A001 canonical engineering snapshot",
+      "kind": "canonical_snapshot",
+      "state": "PASS",
+      "state_hash": "8c6a0755a7c59baddc18b1ed3a70201a4289f852327c3711033981a7035aaeed",
+      "artifact_hash": "10ea24c7fd25c736e7e38dd14f7dee059185aa1268327a45bbb6ef3dd41eaf64",
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": [
+        {
+          "output_id": "canonical_snapshot",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/snapshot/current/K01_CANONICAL_ENGINEERING_SNAPSHOT_A001_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.TOL.A001",
+      "title": "A001 tolerance-chain analysis",
+      "kind": "tolerance_chain",
+      "state": "PASS_WITH_LIMITATIONS",
+      "state_hash": "85b5581c60551804d625f1e4f0f6be9f15814c959ac78065dd5f39c0bb63cfe2",
+      "artifact_hash": "5c38f91c3452323dad4b137eed20ae172294073170e7cbe8c3bf80338a208b59",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "tolerance_report",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/tolerance/current/K01_TOLERANCE_A001_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.MBD.AUTHORING.PLAN",
+      "title": "A001 MBD authoring / semantic binding plan",
+      "kind": "verification",
+      "state": "HOLD",
+      "state_hash": "63f01e0829524b9ff13760bf1b17fd34ab73921f0c89942102814dd5ae45df0d",
+      "artifact_hash": "4e5efc9d67aaaff94966dd4269d4049dbae71c3f827f5e3922b831304e928d01",
+      "reasons": [],
+      "criticality": "migration_optional",
+      "outputs": [
+        {
+          "output_id": "mbd_authoring_plan",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/mbd/current/K01_MBD_AUTHORING_PLAN_v1_7.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.STRUCT.MODEL.P006",
+      "title": "P006 solver-neutral structural model",
+      "kind": "structural_model",
+      "state": "PASS_WITH_LIMITATIONS",
+      "state_hash": "45276114fa2cbecd9317b25670d4b941983b4647eed4e1f7bcfa787d24e08b72",
+      "artifact_hash": "661e2a1fa50b05d49aa3249307d4fb4745a11f4b920e6008978bfc2139a97e32",
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": [
+        {
+          "output_id": "structural_model",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_MODEL_P006_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.STRUCT.FACE_MAP.P006",
+      "title": "P006 solver-neutral boundary face map",
+      "kind": "boundary_role_map",
+      "state": "STALE",
+      "state_hash": "1ffd8863cf2c43c2fd8089e13466d8e186fc9de4665239b3186f1f0290e0cf8a",
+      "artifact_hash": "f5d37c5e536f2ee1f300e5d6b1f31143c75c096e2b757220c8535356ea68be43",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "criticality": "assurance_optional",
+      "outputs": [
+        {
+          "output_id": "face_map",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_FACE_MAP_P006_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.STRUCT.FACE_MAP.QUAL.P006",
+      "title": "P006 persistent face-map invariance qualification",
+      "kind": "verification",
+      "state": "STALE",
+      "state_hash": "6af4e341778812ae071e8817ba7f728e6b50371f28f708d04e74151dcb5d8524",
+      "artifact_hash": "7a733d6fd281f418a6eda0a8730242f31f4feb1e8011e0b2310fb8fda56210bd",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "criticality": "assurance_optional",
+      "outputs": [
+        {
+          "output_id": "face_map_qualification",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_FACE_MAP_QUAL_P006_v1_7.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.STRUCT.BOLT_EQUIV.P006",
+      "title": "P006 bolt/preload cross-solver equivalence",
+      "kind": "verification",
+      "state": "STALE",
+      "state_hash": "366e80180fd9c49f900211d191425f8614d0083f1310e8b51d44e384a36b4593",
+      "artifact_hash": "ffdc9d9dafa3dcbca1df4a2a649fe0fd624e935c2962e700ca24fe880f225208",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "criticality": "assurance_optional",
+      "outputs": [
+        {
+          "output_id": "bolt_equiv",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_BOLT_EQUIV_P006_v1_7.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.STRUCT.NEUTRAL.GEOMETRY.P006",
+      "title": "P006 solver-neutral P003/P007 geometry",
+      "kind": "neutral_geometry",
+      "state": "PASS",
+      "state_hash": "9e1a24dc4e384a16eef56298c3097f77d78f69cdf0e12ed9482d0bc354778309",
+      "artifact_hash": "b97fb78f9e63cad9ae54a3d86848d9cd7a8a7a46dbfd65b59680a7a68f55e2b2",
+      "reasons": [],
+      "criticality": "assurance_optional",
+      "outputs": [
+        {
+          "output_id": "neutral_geometry_manifest",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_NEUTRAL_GEOMETRY_P006_v1_7.json"
+        },
+        {
+          "output_id": "neutral_step_files",
+          "required": true,
+          "hash_mode": "tree",
+          "media_type": "model/step",
+          "path": "reports/medtas/structural/current/neutral_geometry_p006"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.STRUCT.MESH.P006",
+      "title": "P006 controlled quadratic neutral mesh",
+      "kind": "mesh",
+      "state": "MISSING",
+      "state_hash": "dbff4ec2bb2762d99348c8c72d140905f2d7f6680de8b1ae6782ff1e2e987125",
+      "artifact_hash": "850d6f33005075d82ca6eb8222e1cb79d98bdea51213a1b92b7821c4100403b3",
+      "reasons": [
+        "neutral_mesh:MISSING"
+      ],
+      "criticality": "assurance_optional",
+      "outputs": [
+        {
+          "output_id": "mesh_manifest",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/calculix/current/K01_STRUCTURAL_MESH_P006_v1_7.json"
+        },
+        {
+          "output_id": "neutral_mesh",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/octet-stream",
+          "path": "reports/medtas/calculix/current/K01_P006_NEUTRAL_MESH.msh"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.STRUCT.CCX.INPUT.P006",
+      "title": "P006 deterministic CalculiX input deck",
+      "kind": "solver_input",
+      "state": "BLOCKED",
+      "state_hash": "bc28cd51339a6f600bae220e47a5858a1a5f06897fdcb49d50c1d7fec5d363db",
+      "artifact_hash": "6df828a885b6eb60675f503009d751c6e709f452a71cb7df2a4001e95307b581",
+      "reasons": [
+        "blocked by K01.STRUCT.MESH.P006:MISSING"
+      ],
+      "criticality": "assurance_optional",
+      "outputs": [
+        {
+          "output_id": "ccx_input_manifest",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/calculix/current/K01_CALCULIX_INPUT_P006_v1_7.json"
+        },
+        {
+          "output_id": "ccx_input_deck",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "text/plain",
+          "path": "reports/medtas/calculix/current/K01_CCX_P006/K01_P006.inp"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.STRUCT.SWSIM.P006",
+      "title": "SolidWorks Simulation P006 service run",
+      "kind": "solver_run",
+      "state": "PASS",
+      "state_hash": "2cabfb43a6718e9d75a2c50b60ce8203bae90bff9d57ecb2afa1e9921770088e",
+      "artifact_hash": "24d6eb2be1da2cd2afb76bfdd615d77e890c66b22c4096c8ac69e22da5c04b9f",
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": [
+        {
+          "output_id": "sw_report",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "path": "reports/engineering/current/source/K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.STRUCT.CCX.P006",
+      "title": "CalculiX independent P006 service run",
+      "kind": "solver_run",
+      "state": "BLOCKED",
+      "state_hash": "856324b293038c15cf146e281fb374fd41b81234e8a8a34d4d4b47856274c02e",
+      "artifact_hash": null,
+      "reasons": [
+        "blocked by K01.STRUCT.CCX.INPUT.P006:BLOCKED"
+      ],
+      "criticality": "assurance_optional",
+      "outputs": [
+        {
+          "output_id": "ccx_results",
+          "required": true,
+          "hash_mode": "tree",
+          "media_type": "application/octet-stream",
+          "path": "reports/medtas/calculix/current/K01_CCX_P006"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.STRUCT.RECON.P006",
+      "title": "Structural solver reconciliation",
+      "kind": "verification",
+      "state": "STALE",
+      "state_hash": "d6d967f6d4c400654a4a47a0f98c17b25dbcec4403b1dd11ba5166fcbf79ff9a",
+      "artifact_hash": "5055e487cb589c8f2f2ba02434110ec30660bff12a006f5a0dbe06f11ac56105",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "criticality": "assurance_optional",
+      "outputs": [
+        {
+          "output_id": "structural_reconciliation",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_RECON_P006_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.FEMM.MODEL.CURRENT",
+      "title": "FEMM current-position model",
+      "kind": "femm_model",
+      "state": "PASS_WITH_LIMITATIONS",
+      "state_hash": "ba4335fa7880ad4d65b1d11d67a16f597109d37a9fe307b3b4dd41c405b1b2db",
+      "artifact_hash": "edd737a6ad907b117c5aa8a644f839a70fd94f9d0a86def76a2805c91e1d7b36",
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": [
+        {
+          "output_id": "femm_model",
+          "required": true,
+          "hash_mode": "tree",
+          "media_type": "application/json",
+          "path": "reports/medtas/femm/current/K01_FEMM_MODEL_CURRENT_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.FEMM.RUN.A",
+      "title": "FEMM Coil A screening",
+      "kind": "solver_run",
+      "state": "PASS",
+      "state_hash": "952d9ec043c462e181ec57b7d53f5db8cd29571358b17d6d4d2dd9cc671e82df",
+      "artifact_hash": "931ce45836f2169a113a5f449e94eede631133768d25ec0fb341341369f05b73",
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": [
+        {
+          "output_id": "done",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "text/plain",
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_DONE.txt"
+        },
+        {
+          "output_id": "field_plot",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "image/png",
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_B.png"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.FEMM.RUN.B",
+      "title": "FEMM Coil B screening",
+      "kind": "solver_run",
+      "state": "PASS",
+      "state_hash": "58079046fd211309065796140b239742e1ccc0a158310d1d4966c735ae3a201e",
+      "artifact_hash": "b0aaaa15a0ac7968049d10e557d7650a8de113d92f8cd33d24cac7d4826d5edd",
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": [
+        {
+          "output_id": "done",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "text/plain",
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_DONE.txt"
+        },
+        {
+          "output_id": "field_plot",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "image/png",
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_B.png"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.FEMM.VERIFY.CURRENT",
+      "title": "FEMM current-position verification",
+      "kind": "verification",
+      "state": "PASS_WITH_LIMITATIONS",
+      "state_hash": "b636bddbdc922bf7e2455e2dee7fb52cdfa4e2005a75061c8e803ed9162642c3",
+      "artifact_hash": "b02f380b24b4d4916040992ae71a063e70f16f39a7a467f88ed0d354e62a1e9d",
+      "reasons": [],
+      "criticality": "required_for_gate",
+      "outputs": [
+        {
+          "output_id": "femm_verification",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/femm/current/K01_FEMM_VERIFY_CURRENT_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.PRODUCT.DEFINITION.GATE04E",
+      "title": "Gate04E canonical product definition",
+      "kind": "product_definition",
+      "state": "PASS_WITH_LIMITATIONS",
+      "state_hash": "26f8a15fbe284035c43544b6499ed7c4e273de425005424749f98ef41ab52ed9",
+      "artifact_hash": "e227340b67023cc7442e181266e5a978abc2c3770fb1d6280ae23dc67888b0c0",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "product_definition",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/product_definition/current/K01_PRODUCT_DEFINITION_GATE04E_v1_8.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.DRAWING.MODEL.GATE04E",
+      "title": "Gate04E drawing semantic model",
+      "kind": "drawing_model",
+      "state": "PASS_WITH_LIMITATIONS",
+      "state_hash": "cbd577a66a37f5ae07f75e160f12d80d81ca40fc5389346f2daaf46b1c20366a",
+      "artifact_hash": "681bb2f90e8d3014ded76fbd9af83f257ec969c22f98c9e5c7fb5de67184e0b1",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "drawing_semantics",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/drawing/current/K01_DRAWING_MODEL_GATE04E_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.DRAWING.P007.EXEMPLAR.PLAN",
+      "title": "K01-D-006 / P007 first exemplar drawing plan",
+      "kind": "verification",
+      "state": "HOLD",
+      "state_hash": "86cc50fd60be93ea14cc274d8c49c4c45e648d64ff7efc534dfe6b54fab09696",
+      "artifact_hash": "f43f452b3f2800610732a5cb58806cb98b58583da3615bf8d44c78e14b057187",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "p007_exemplar_plan",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/drawing/current/K01-D-006_P007_EXEMPLAR_PLAN_CURRENT.json"
+        },
+        {
+          "output_id": "p007_inspection_characteristics",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "text/csv",
+          "path": "reports/inspection/current/K01-D-006_P007_CHARACTERISTICS_CURRENT.csv"
+        },
+        {
+          "output_id": "p007_mbd_checklist",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "text/markdown",
+          "path": "reports/drawing/current/K01-D-006_P007_MBD_AUTHORING_CHECKLIST.md"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.DRAWING.RELEASE.PLAN.GATE04E",
+      "title": "Gate04E drawing release-definition plan",
+      "kind": "verification",
+      "state": "HOLD",
+      "state_hash": "347b3e9bcd07adb498539184068130d515052f283aa3896c313b05c27494e499",
+      "artifact_hash": "812f0df10116f5ea446b638b5204077a855ee148c88a52344e30c447f5512a60",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "drawing_release_plan",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/drawing/current/K01_DRAWING_RELEASE_PLAN_CURRENT.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.DRAWING.ARTIFACT.GATE04E",
+      "title": "Gate04E production drawing pack",
+      "kind": "drawing_artifact",
+      "state": "BLOCKED",
+      "state_hash": "9ca5132a8e543bd5035082f7bd7259831b021eb8cb159a000366cc4269ec8a4c",
+      "artifact_hash": null,
+      "reasons": [
+        "blocked by K01.DRAWING.RELEASE.PLAN.GATE04E:HOLD"
+      ],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "drawing_pack",
+          "required": true,
+          "hash_mode": "tree",
+          "media_type": "application/octet-stream",
+          "path": "drawings/release_candidate/gate04e"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.DRAWING.VERIFY.GATE04E",
+      "title": "Drawing verification",
+      "kind": "verification",
+      "state": "BLOCKED",
+      "state_hash": "34bec4381afea4ad22c2a6b1edbee85d220bdef80141c0653870b1a3aaf05a0e",
+      "artifact_hash": "a4595c31987db9ae2d13e1f40277a6c38a953e89e2d828c942af31f6df3133ab",
+      "reasons": [
+        "blocked by K01.DRAWING.ARTIFACT.GATE04E:BLOCKED"
+      ],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "drawing_verify",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/drawing/current/K01_DRAWING_VERIFY_GATE04E_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.BOM.MODEL.A001",
+      "title": "A001 Engineering BOM (EBOM) model",
+      "kind": "bom_model",
+      "state": "PASS_WITH_LIMITATIONS",
+      "state_hash": "ea493322446a3db2bd4bfd505343951709380fead4b12c561ea106b9e5f5a652",
+      "artifact_hash": "11cb2266a9d4dc5439d4adc64df3048d133525700b17399e4bfd4398b92344ec",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "bom_json",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/bom/current/K01_BOM_MODEL_A001_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.BOM.ARTIFACT.A001",
+      "title": "A001 EBOM JSON/CSV artifacts",
+      "kind": "bom_artifact",
+      "state": "PASS",
+      "state_hash": "4eaf58e902dc38ad48b17f3372a26979a6bd85615b9108db3bd94781b9270138",
+      "artifact_hash": "8f21fb729aa65183cdde7a85a9ed6faa8df0422dd27308c97814be774010c72c",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "ebom_json",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/bom/current/K01_EBOM_A001_CURRENT.json"
+        },
+        {
+          "output_id": "ebom_csv",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "text/csv",
+          "path": "reports/bom/current/K01_EBOM_A001_CURRENT.csv"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.BOM.VERIFY.A001",
+      "title": "A001 EBOM verification",
+      "kind": "verification",
+      "state": "STALE",
+      "state_hash": "947733dd2ef8740ffef989db34c12bd01bf395f2bfafe70a7932f830b7fb99b7",
+      "artifact_hash": "0e3c5bd733186eba5b90fb5392043a33b5737307474351c899dc8767a4ccbb69",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "bom_verify",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/bom/current/K01_BOM_VERIFY_A001_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.MBOM.MODEL.A001",
+      "title": "A001 Manufacturing BOM (MBOM) model",
+      "kind": "bom_model",
+      "state": "PASS",
+      "state_hash": "1c86582abb60eab53708d0320151379a4d800b4941436efbb9f63c4e46d86a96",
+      "artifact_hash": "41d065fae136f8bbbac2a53d50f0f9cd48f1720d94a0267cffe999dd49e4be92",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "mbom_model",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/bom/current/K01_MBOM_MODEL_A001_v1_9.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.MBOM.ARTIFACT.A001",
+      "title": "A001 MBOM JSON/CSV artifacts",
+      "kind": "bom_artifact",
+      "state": "PASS",
+      "state_hash": "ae51642c0f30ae2efa73c8ddf2cb798cbe8852bb77428351498fa7b86eb85972",
+      "artifact_hash": "44db89d971367fbf8c8ed91ce49a40972db0ac0e6df311686426d2231a8ae527",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "mbom_json",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/bom/current/K01_MBOM_A001_CURRENT.json"
+        },
+        {
+          "output_id": "mbom_csv",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "text/csv",
+          "path": "reports/bom/current/K01_MBOM_A001_CURRENT.csv"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.MBOM.VERIFY.A001",
+      "title": "A001 MBOM verification",
+      "kind": "verification",
+      "state": "MISSING",
+      "state_hash": "ebd57cac00b309b06d1026947eaffb191293c9fd6628c3c91713ca227a4a5603",
+      "artifact_hash": "f0bc2abd76b925a7b8375c74b23a1583224debff317c1a23875d18ff0b33a195",
+      "reasons": [
+        "no build_record"
+      ],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "mbom_verify",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/bom/current/K01_MBOM_VERIFY_A001_v1_9.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.EVIDENCE.GATE04E.REPORT",
+      "title": "Gate04E FEM/FEMM verification report",
+      "kind": "evidence_report",
+      "state": "PASS",
+      "state_hash": "0fc7d52a8f0d9b3c1e8fbe4db324401f75b90a218fb8ad451f8f06a364c48272",
+      "artifact_hash": "e3d852c30827d2ee909d6a4040f689add6d05af61f553435c2a63771bd7d7277",
+      "reasons": [],
+      "criticality": "evidence",
+      "outputs": [
+        {
+          "output_id": "report_docx",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "path": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.docx"
+        },
+        {
+          "output_id": "report_md",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "text/markdown",
+          "path": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.md"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.VERIFY.GATE04E",
+      "title": "Gate04E engineering verification",
+      "kind": "verification",
+      "state": "STALE",
+      "state_hash": "d5a5b512222aeac289c5ef433007088232feb288cc1a43009712b7778a87d2ae",
+      "artifact_hash": "d0d730250a2898aee6798e6c6b1d01ba0253a6af948911b106118e3fa1652bf0",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "criticality": "required_for_gate",
+      "outputs": [
+        {
+          "output_id": "gate04e_verify",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/verification/current/K01_VERIFY_GATE04E_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.BASELINE.GATE04E",
+      "title": "Gate04E baseline manifest",
+      "kind": "baseline",
+      "state": "BLOCKED",
+      "state_hash": "027def162300ac95b7a9ad9fa3552001bc6f6e8f0fe75cd4f5a136d3b8fe8eb0",
+      "artifact_hash": null,
+      "reasons": [
+        "blocked by K01.CHARACTERISTICS.REGISTRY:BLOCKED",
+        "blocked by K01.DRAWING.VERIFY.GATE04E:BLOCKED",
+        "blocked by K01.IDENTITY.AUDIT:HOLD",
+        "blocked by K01.INSPECTION.RESULTS:BLOCKED",
+        "blocked by K01.REQ.COVERAGE:HOLD"
+      ],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "baseline_manifest",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json",
+          "path": "reports/medtas/baseline/current/K01_BASELINE_GATE04E_v1.json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.IDENTITY.POLICY",
+      "title": "K01 stable identity policy",
+      "kind": "identity_policy",
+      "state": "PASS",
+      "state_hash": "c9d45f2bc4707be46d556e2c66e9fd016a77f80dd8ffcee567999bb819685725",
+      "artifact_hash": null,
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": []
+    },
+    {
+      "node_id": "K01.IDENTITY.REGISTRY",
+      "title": "K01 stable engineering identity registry",
+      "kind": "identity_registry",
+      "state": "PASS",
+      "state_hash": "3e0f8b7bfac41422deddb26f6fece46959bf915fd8b7de669f74712921589d78",
+      "artifact_hash": null,
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": []
+    },
+    {
+      "node_id": "K01.EVIDENCE.REGISTRY",
+      "title": "K01 evidence registry",
+      "kind": "evidence_registry",
+      "state": "PASS",
+      "state_hash": "ef501006a58ef3abdb7239d5a7e619561f1ed6826cbd1b4bba29a856d1284215",
+      "artifact_hash": null,
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": []
+    },
+    {
+      "node_id": "K01.IDENTITY.AUDIT",
+      "title": "Native CAD identity audit",
+      "kind": "verification",
+      "state": "HOLD",
+      "state_hash": "0df71207292651416bea1111d142e0939f82139468788fc06761de593f49ea7d",
+      "artifact_hash": "3ccfe6c8c2704dc279f76013960a5731f42216fda0e47b8a16a40d8741ea3ddc",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "report",
+          "path": "reports/control/K01_IDENTITY_AUDIT_CURRENT.json",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.REQ.COVERAGE",
+      "title": "Requirement-to-evidence coverage",
+      "kind": "verification",
+      "state": "HOLD",
+      "state_hash": "3a955d734fd05508d26b2588aa7e2d93252fbb23410e3d5d71e84a84f8166051",
+      "artifact_hash": "3a6aaccdb6f3ad9827ad479b6e79a06cb9f8ce5cde985aa5c72afe38f962a77a",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "report",
+          "path": "reports/control/K01_REQUIREMENTS_COVERAGE_CURRENT.json",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.CHARACTERISTICS.REGISTRY",
+      "title": "Release characteristic registry",
+      "kind": "verification",
+      "state": "BLOCKED",
+      "state_hash": "0342f27db86d8052dde5345c3449d183e99e95d6ce73fec99dd37a2c3bae2ea7",
+      "artifact_hash": "2857733d9d523319d077bd112334b76ee27763219acfa8c8f92d838f5d2aecbb",
+      "reasons": [
+        "blocked by K01.DRAWING.P007.EXEMPLAR.PLAN:HOLD"
+      ],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "report",
+          "path": "reports/inspection/current/K01_RELEASE_CHARACTERISTICS_CURRENT.json",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.INSPECTION.RESULTS",
+      "title": "Inspection / acceptance results",
+      "kind": "verification",
+      "state": "BLOCKED",
+      "state_hash": "d837e4c61039282368bf85672be76e12153dd594fe0a4fcb3e0b03d0bff6b50e",
+      "artifact_hash": null,
+      "reasons": [
+        "blocked by K01.CHARACTERISTICS.REGISTRY:BLOCKED"
+      ],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "report",
+          "path": "reports/inspection/current/K01_INSPECTION_RESULTS_CURRENT.json",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.DRAWING.P007.EXEMPLAR.SPEC",
+      "title": "K01-D-006 P007 exemplar characteristic specification",
+      "kind": "drawing_definition",
+      "state": "PASS",
+      "state_hash": "cde3f9a409aeb05c144ff214d079d3ecc94dbf26256c1240dd4a8639a3100652",
+      "artifact_hash": null,
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": []
+    },
+    {
+      "node_id": "K01.IDENTITY.MIGRATION.PLAN",
+      "title": "One-time stable CAD identity migration work order",
+      "kind": "migration_plan",
+      "state": "BLOCKED",
+      "state_hash": "abdacc91984cf5a89db6967cb0171677018ab8ad73cdf53e2dd686bb3430d978",
+      "artifact_hash": "3cd49885a11bf353d566366a25b33fd3a23bb6cce2a73271c5fa87f793c719f6",
+      "reasons": [
+        "blocked by K01.IDENTITY.AUDIT:HOLD"
+      ],
+      "criticality": "advisory",
+      "outputs": [
+        {
+          "output_id": "identity_migration_plan",
+          "path": "reports/control/K01_IDENTITY_MIGRATION_PLAN_CURRENT.json",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.DRAWING.P007.LIVE.GEOMETRY",
+      "title": "P007 live CAD geometry and legacy-draft reconciliation",
+      "kind": "drawing_geometry_authority",
+      "state": "PASS_WITH_LIMITATIONS",
+      "state_hash": "c5b9fa0e4c66cee587e790118a73f79db1f6838ab43e75cc80c0ceb7cbd4f424",
+      "artifact_hash": "b75df589b2884473e4d665c9f843665866676ae571d3c24d1e0d35396943c0a5",
+      "reasons": [],
+      "criticality": "required_for_release",
+      "outputs": [
+        {
+          "output_id": "p007_live_geometry",
+          "path": "reports/drawing/current/K01-D-006_P007_LIVE_GEOMETRY_CURRENT.json",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/json"
+        }
+      ]
+    },
+    {
+      "node_id": "K01.AI.HANDOFF.CURRENT",
+      "title": "Current AI engineering handoff ZIP",
+      "kind": "evidence_bundle",
+      "state": "MISSING",
+      "state_hash": "838296cf35fc69d314ebb4f151466d167b6bc5b7a89108f0562d490318e36ebb",
+      "artifact_hash": "957a213986da329190e14bb3cf6182f45342a50c426c9b239dc39cee025990dc",
+      "reasons": [
+        "no build_record"
+      ],
+      "criticality": "evidence",
+      "outputs": [
+        {
+          "output_id": "ai_handoff_zip",
+          "path": "reports/control/K01_AI_HANDOFF_CURRENT.zip",
+          "required": true,
+          "hash_mode": "file",
+          "media_type": "application/zip"
+        }
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "K01-EV-GATE04E-FEM-FEMM-REPORT-001",
+      "title": "Gate04E FEM/FEMM Verification Report",
+      "category": "engineering_verification_report",
+      "status": "CURRENT",
+      "node_ids": [
+        "K01.STRUCT.SWSIM.P006",
+        "K01.FEMM.VERIFY.CURRENT",
+        "K01.VERIFY.GATE04E"
+      ],
+      "files": [
+        {
+          "path": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.docx",
+          "exists": true,
+          "size": 139001
+        },
+        {
+          "path": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.md",
+          "exists": true,
+          "size": 3768
+        }
+      ],
+      "summary": "Registered engineering evidence. SolidWorks service screen PASS; FEMM field/automation screen PASS_WITH_LIMITATIONS."
+    },
+    {
+      "evidence_id": "K01-EV-SWSIM-P006-001",
+      "title": "SolidWorks Simulation P006 source report",
+      "category": "solver_source_report",
+      "status": "CURRENT",
+      "node_ids": [
+        "K01.STRUCT.SWSIM.P006"
+      ],
+      "files": [
+        {
+          "path": "reports/engineering/current/source/K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx",
+          "exists": true,
+          "size": 658836
+        }
+      ],
+      "summary": "Source report used for the MEDTAS structural solver node: EN 1.4404, 300 N service force, 0.02 MPa pressure, 3x M2.5 preload 300 N, sigma_vm,max 40.66 MPa, URES,max 0.002171 mm."
+    },
+    {
+      "evidence_id": "K01-EV-FEMM-CURRENT-001",
+      "title": "FEMM current-position run evidence",
+      "category": "solver_run_evidence",
+      "status": "CURRENT",
+      "node_ids": [
+        "K01.FEMM.RUN.A",
+        "K01.FEMM.RUN.B",
+        "K01.FEMM.VERIFY.CURRENT"
+      ],
+      "files": [
+        {
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_DONE.txt",
+          "exists": true,
+          "size": 31
+        },
+        {
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_DONE.txt",
+          "exists": true,
+          "size": 31
+        },
+        {
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_B.png",
+          "exists": true,
+          "size": 53981
+        },
+        {
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_B.png",
+          "exists": true,
+          "size": 54091
+        },
+        {
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_RESULTS.csv",
+          "exists": true,
+          "size": 170
+        }
+      ],
+      "summary": "Both solver scripts completed and field plots exist. Force extraction remains non-release evidence; Coil B CSV record is incomplete."
+    }
+  ],
+  "last_failure": null,
+  "principle": "Command Center consumes generated state/evidence. Filenames and timestamps are not engineering truth."
+}

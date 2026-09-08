@@ -1,0 +1,34 @@
+{
+  "schema": "k01_datum_c_freeze_spec_v2",
+  "status": "PROPOSED_FOR_GATE04B",
+  "design_rationale": "Datum A and cylindrical pilot Datum B already remove five rigid-body DOF. Datum C must remove only rotation about B. Therefore the mating feature on P003 is a radial slot, not a second round locating hole; this avoids redundant radial constraint and assembly binding from PCD tolerances.",
+  "datum_scheme": {
+    "A": "P003/P016 metal-to-metal mating face; primary axial datum",
+    "B": "Ø10 H7/g6 pilot axis; secondary transverse locating datum",
+    "C": "peripheral clocking pin against the width faces of a radial slot; tertiary angular datum"
+  },
+  "clocking_geometry": {
+    "radius_from_B_mm": 12.0,
+    "angle_deg": 0.0,
+    "P016_pin_hole": "Ø3 H7 x 4.0 blind from Datum A",
+    "P003_radial_slot": "width 3.02 +0.01/0, overall radial length 4.00, THRU flange, center at R12 / 0 deg",
+    "P017_pin": "Ø3 p6 x 6.0; EN 1.4404 / AISI 316L; C0.2 both ends",
+    "pin_press_depth_in_P016_mm": 4.0,
+    "pin_protrusion_mm": 2.0
+  },
+  "assembly_rule": [
+    "Seat Datum A without bolt preload.",
+    "Engage Datum B pilot freely; fasteners shall not be used to force concentricity.",
+    "Engage P017 in P003 radial slot; slot long axis is radial to Datum B.",
+    "The slot width constrains tangential motion/clocking only; radial slot freedom prevents redundant radial location.",
+    "Tighten 3x M4 only after A/B/C are seated.",
+    "M4 fasteners clamp only; they are not locating features."
+  ],
+  "inspection": [
+    "Inspect Datum-A face after P016-to-Long-Run joining and cooling.",
+    "Inspect/finish Ø10 H7 Datum B relative to actual Ø20 Long Run channel axis.",
+    "Inspect P016 pin-hole R12/0deg relative to B.",
+    "Inspect P003 slot center plane relative to B and A.",
+    "Assembly check: P003 seats on A and B without forcing; pin enters slot before M4 tightening."
+  ]
+}

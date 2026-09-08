@@ -1,0 +1,977 @@
+{
+  "schema": "k01_sw_review_export_2",
+  "export_status": "PASS",
+  "document": {
+    "title": "K01-P-003_Cartridge_Body.SLDPRT",
+    "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT",
+    "doc_type": 1
+  },
+  "source_file": {
+    "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT",
+    "exists": true,
+    "size_bytes": 134954,
+    "mtime_ns": 1788249872996481700,
+    "sha256": "b27c3d294bc9f43fea8092c464b44bc52c2ef8b96193d923f78795fac93bbee2",
+    "error": null
+  },
+  "material": {
+    "raw": "SOLIDWORKS Materials|AISI Type 316L stainless steel|98",
+    "name": "AISI Type 316L stainless steel",
+    "assigned": true,
+    "errors": []
+  },
+  "body": {
+    "solid_body_count": 1,
+    "errors": []
+  },
+  "custom_properties": {
+    "values": {},
+    "errors": []
+  },
+  "equations": {
+    "available": true,
+    "count": 0,
+    "link_to_file": false,
+    "file_path": "",
+    "items": [],
+    "errors": []
+  },
+  "feature_tree": {
+    "features": [
+      {
+        "path": "Comments",
+        "name": "Comments",
+        "type": "CommentsFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Favorites",
+        "name": "Favorites",
+        "type": "FavoriteFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "History",
+        "name": "History",
+        "type": "HistoryFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Selection Sets",
+        "name": "Selection Sets",
+        "type": "SelectionSetFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Sensors",
+        "name": "Sensors",
+        "type": "SensorFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Design Binder",
+        "name": "Design Binder",
+        "type": "DocsFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Annotations",
+        "name": "Annotations",
+        "type": "DetailCabinet",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [
+          {
+            "path": "Annotations/Notes",
+            "name": "Notes",
+            "type": "NotesAreaFtrFolder",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Annotations/Notes1___EndTag___",
+            "name": "Notes1___EndTag___",
+            "type": "NotesAreaFtrFolder",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      },
+      {
+        "path": "Surface Bodies",
+        "name": "Surface Bodies",
+        "type": "SurfaceBodyFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Solid Bodies",
+        "name": "Solid Bodies",
+        "type": "SolidBodyFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Lights, Cameras and Scene",
+        "name": "Lights, Cameras and Scene",
+        "type": "EnvFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [
+          {
+            "path": "Lights, Cameras and Scene/Ambient",
+            "name": "Ambient",
+            "type": "AmbientLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Lights, Cameras and Scene/Directional1",
+            "name": "Directional1",
+            "type": "DirectionLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Lights, Cameras and Scene/Directional2",
+            "name": "Directional2",
+            "type": "DirectionLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Lights, Cameras and Scene/Directional3",
+            "name": "Directional3",
+            "type": "DirectionLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      },
+      {
+        "path": "Equations",
+        "name": "Equations",
+        "type": "EqnFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "AISI Type 316L stainless steel",
+        "name": "AISI Type 316L stainless steel",
+        "type": "MaterialFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Front Plane",
+        "name": "Front Plane",
+        "type": "RefPlane",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Top Plane",
+        "name": "Top Plane",
+        "type": "RefPlane",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Right Plane",
+        "name": "Right Plane",
+        "type": "RefPlane",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Origin",
+        "name": "Origin",
+        "type": "OriginProfileFeature",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Sketch2",
+        "name": "Sketch2",
+        "type": "ProfileFeature",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D2",
+            "full_name": "D2@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.038000000000000006,
+            "value_mm": 38.00000000000001,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D1",
+            "full_name": "D1@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.007,
+            "value_mm": 7.0,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D3",
+            "full_name": "D3@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0027999999999999987,
+            "value_mm": 2.7999999999999985,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D4",
+            "full_name": "D4@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0032999999999999995,
+            "value_mm": 3.2999999999999994,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D5",
+            "full_name": "D5@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0034999999999999996,
+            "value_mm": 3.4999999999999996,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D6",
+            "full_name": "D6@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.003949999999999997,
+            "value_mm": 3.949999999999997,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D7",
+            "full_name": "D7@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0043,
+            "value_mm": 4.3,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D8",
+            "full_name": "D8@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.004515,
+            "value_mm": 4.515,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D9",
+            "full_name": "D9@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.005458499999999999,
+            "value_mm": 5.458499999999999,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D10",
+            "full_name": "D10@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.010000000000000002,
+            "value_mm": 10.000000000000002,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Revolve1",
+        "name": "Revolve1",
+        "type": "Revolution",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D1",
+            "full_name": "D1@Revolve1@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 1,
+            "system_value_SI": 6.2831853071796,
+            "value_mm": 6283.1853071796,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D2",
+            "full_name": "D2@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.038000000000000006,
+            "value_mm": 38.00000000000001,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D1",
+            "full_name": "D1@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.007,
+            "value_mm": 7.0,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D3",
+            "full_name": "D3@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0027999999999999987,
+            "value_mm": 2.7999999999999985,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D4",
+            "full_name": "D4@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0032999999999999995,
+            "value_mm": 3.2999999999999994,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D5",
+            "full_name": "D5@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0034999999999999996,
+            "value_mm": 3.4999999999999996,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D6",
+            "full_name": "D6@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.003949999999999997,
+            "value_mm": 3.949999999999997,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D7",
+            "full_name": "D7@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0043,
+            "value_mm": 4.3,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D8",
+            "full_name": "D8@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.004515,
+            "value_mm": 4.515,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D9",
+            "full_name": "D9@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.005458499999999999,
+            "value_mm": 5.458499999999999,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D10",
+            "full_name": "D10@Sketch2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.010000000000000002,
+            "value_mm": 10.000000000000002,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [
+          {
+            "path": "Revolve1/Sketch2",
+            "name": "Sketch2",
+            "type": "ProfileFeature",
+            "suppressed": false,
+            "dimensions": [
+              {
+                "name": "D2",
+                "full_name": "D2@Sketch2@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.038000000000000006,
+                "value_mm": 38.00000000000001,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D1",
+                "full_name": "D1@Sketch2@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.007,
+                "value_mm": 7.0,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D3",
+                "full_name": "D3@Sketch2@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.0027999999999999987,
+                "value_mm": 2.7999999999999985,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D4",
+                "full_name": "D4@Sketch2@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.0032999999999999995,
+                "value_mm": 3.2999999999999994,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D5",
+                "full_name": "D5@Sketch2@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.0034999999999999996,
+                "value_mm": 3.4999999999999996,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D6",
+                "full_name": "D6@Sketch2@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.003949999999999997,
+                "value_mm": 3.949999999999997,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D7",
+                "full_name": "D7@Sketch2@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.0043,
+                "value_mm": 4.3,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D8",
+                "full_name": "D8@Sketch2@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.004515,
+                "value_mm": 4.515,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D9",
+                "full_name": "D9@Sketch2@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.005458499999999999,
+                "value_mm": 5.458499999999999,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D10",
+                "full_name": "D10@Sketch2@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.010000000000000002,
+                "value_mm": 10.000000000000002,
+                "value_deg": null,
+                "errors": []
+              }
+            ],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      },
+      {
+        "path": "Sketch4",
+        "name": "Sketch4",
+        "type": "ProfileFeature",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D2",
+            "full_name": "D2@Sketch4@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.013999999999999953,
+            "value_mm": 13.999999999999954,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D3",
+            "full_name": "D3@Sketch4@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.03400000000000001,
+            "value_mm": 34.00000000000001,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D4",
+            "full_name": "D4@Sketch4@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.024000000000000004,
+            "value_mm": 24.000000000000004,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D5",
+            "full_name": "D5@Sketch4@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 1,
+            "system_value_SI": 2.0943951023932024,
+            "value_mm": 2094.3951023932023,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Boss-Extrude1",
+        "name": "Boss-Extrude1",
+        "type": "ICE",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D1",
+            "full_name": "D1@Boss-Extrude1@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.003,
+            "value_mm": 3.0,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D2",
+            "full_name": "D2@Sketch4@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.013999999999999953,
+            "value_mm": 13.999999999999954,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D3",
+            "full_name": "D3@Sketch4@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.03400000000000001,
+            "value_mm": 34.00000000000001,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D4",
+            "full_name": "D4@Sketch4@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.024000000000000004,
+            "value_mm": 24.000000000000004,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D5",
+            "full_name": "D5@Sketch4@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 1,
+            "system_value_SI": 2.0943951023932024,
+            "value_mm": 2094.3951023932023,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [
+          {
+            "path": "Boss-Extrude1/Sketch4",
+            "name": "Sketch4",
+            "type": "ProfileFeature",
+            "suppressed": false,
+            "dimensions": [
+              {
+                "name": "D2",
+                "full_name": "D2@Sketch4@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.013999999999999953,
+                "value_mm": 13.999999999999954,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D3",
+                "full_name": "D3@Sketch4@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.03400000000000001,
+                "value_mm": 34.00000000000001,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D4",
+                "full_name": "D4@Sketch4@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.024000000000000004,
+                "value_mm": 24.000000000000004,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D5",
+                "full_name": "D5@Sketch4@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 1,
+                "system_value_SI": 2.0943951023932024,
+                "value_mm": 2094.3951023932023,
+                "value_deg": null,
+                "errors": []
+              }
+            ],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      },
+      {
+        "path": "K01_DATUM_A_MATING",
+        "name": "K01_DATUM_A_MATING",
+        "type": "RefPlane",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "K01_DATUM_B_AXIS",
+        "name": "K01_DATUM_B_AXIS",
+        "type": "RefAxis",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Sketch5",
+        "name": "Sketch5",
+        "type": "ProfileFeature",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D1",
+            "full_name": "D1@Sketch5@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.004499999999999999,
+            "value_mm": 4.499999999999999,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D2",
+            "full_name": "D2@Sketch5@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.013999999999999953,
+            "value_mm": 13.999999999999954,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D3",
+            "full_name": "D3@Sketch5@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.03400000000000001,
+            "value_mm": 34.00000000000001,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D4",
+            "full_name": "D4@Sketch5@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.024000000000000004,
+            "value_mm": 24.000000000000004,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D5",
+            "full_name": "D5@Sketch5@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 1,
+            "system_value_SI": 2.0943951023932024,
+            "value_mm": 2094.3951023932023,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "M4 Clearance Hole1",
+        "name": "M4 Clearance Hole1",
+        "type": "HoleWzd",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "Thru Hole Dia.",
+            "full_name": "Thru Hole Dia.@Sketch6@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0045000000000000005,
+            "value_mm": 4.500000000000001,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "Thru Hole Depth",
+            "full_name": "Thru Hole Depth@Sketch6@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.003,
+            "value_mm": 3.0,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [
+          {
+            "path": "M4 Clearance Hole1/3DSketch1",
+            "name": "3DSketch1",
+            "type": "3DProfileFeature",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "M4 Clearance Hole1/Sketch6",
+            "name": "Sketch6",
+            "type": "ProfileFeature",
+            "suppressed": false,
+            "dimensions": [
+              {
+                "name": "Thru Hole Dia.",
+                "full_name": "Thru Hole Dia.@Sketch6@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.0045000000000000005,
+                "value_mm": 4.500000000000001,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "Thru Hole Depth",
+                "full_name": "Thru Hole Depth@Sketch6@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.003,
+                "value_mm": 3.0,
+                "value_deg": null,
+                "errors": []
+              }
+            ],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      },
+      {
+        "path": "CirPattern1",
+        "name": "CirPattern1",
+        "type": "CirPattern",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D2",
+            "full_name": "D2@CirPattern1@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 1,
+            "system_value_SI": 2.0943951023932,
+            "value_mm": 2094.3951023932,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D1",
+            "full_name": "D1@CirPattern1@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 2,
+            "system_value_SI": 3.0,
+            "value_mm": 3000.0,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Combine1",
+        "name": "Combine1",
+        "type": "CombineBodies",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Sketch7",
+        "name": "Sketch7",
+        "type": "ProfileFeature",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D1",
+            "full_name": "D1@Sketch7@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0002,
+            "value_mm": 0.2,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D2",
+            "full_name": "D2@Sketch7@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0033,
+            "value_mm": 3.3,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Boss-Extrude2",
+        "name": "Boss-Extrude2",
+        "type": "ICE",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D1",
+            "full_name": "D1@Boss-Extrude2@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.008,
+            "value_mm": 8.0,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D1",
+            "full_name": "D1@Sketch7@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0002,
+            "value_mm": 0.2,
+            "value_deg": null,
+            "errors": []
+          },
+          {
+            "name": "D2",
+            "full_name": "D2@Sketch7@K01-P-003_Cartridge_Body.Part",
+            "type_raw": 0,
+            "system_value_SI": 0.0033,
+            "value_mm": 3.3,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [
+          {
+            "path": "Boss-Extrude2/Sketch7",
+            "name": "Sketch7",
+            "type": "ProfileFeature",
+            "suppressed": false,
+            "dimensions": [
+              {
+                "name": "D1",
+                "full_name": "D1@Sketch7@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.0002,
+                "value_mm": 0.2,
+                "value_deg": null,
+                "errors": []
+              },
+              {
+                "name": "D2",
+                "full_name": "D2@Sketch7@K01-P-003_Cartridge_Body.Part",
+                "type_raw": 0,
+                "system_value_SI": 0.0033,
+                "value_mm": 3.3,
+                "value_deg": null,
+                "errors": []
+              }
+            ],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "errors": []
+  },
+  "summary": {
+    "dimension_count": 62,
+    "top_level_feature_count": 28
+  },
+  "errors": []
+}

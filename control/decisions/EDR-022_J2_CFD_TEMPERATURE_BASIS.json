@@ -1,0 +1,8 @@
+﻿{
+    "schema":  "k01.edr.v1",
+    "id":  "EDR-022",
+    "title":  "J2 CFD thermal basis",
+    "status":  "DECIDED",
+    "decision":  "Accept existing CFD 50-55 degC as sufficient current J2 thermal evidence; use 55 degC as design maximum.",
+    "reopen_condition":  "Controlled geometry, flow, cooling or thermal-boundary change."
+}

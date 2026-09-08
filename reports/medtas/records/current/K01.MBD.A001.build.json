@@ -1,0 +1,13 @@
+{
+  "artifact_hash": "e210e4a8c9fafdf9d32a8c80b72a5fa0a8e028a6dd63478e6bd03bea3e88fa6d",
+  "built_state_hash": "fdaf68c7c944b6ad4b19fabe39847437deb02549932c4613f0154302b540812e",
+  "limitations": [
+    "MBD-COVERAGE-001: no DimXpert annotations extracted; current tolerance chain remains controlled-seed-backed until model PMI is authored"
+  ],
+  "node_id": "K01.MBD.A001",
+  "producer": {
+    "mode": "SolidWorks DimXpert extraction",
+    "tool": "build_mbd_a001_v1_6.py"
+  },
+  "schema": "medtas.build_record.v1"
+}

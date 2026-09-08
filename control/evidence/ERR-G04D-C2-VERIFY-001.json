@@ -1,0 +1,17 @@
+{
+  "schema": "k01_evidence_reference_record_v1",
+  "err_id": "ERR-G04D-C2-VERIFY-001",
+  "source_id": "ERR-G04D-C2-VERIFY-001",
+  "source_type": "cad_readback",
+  "title": "Gate04D-C2 Assembly Verify PASS",
+  "edition_version": "2026-09-04",
+  "author_publisher": "K01 MEDTAS / SOLIDWORKS 2018 API",
+  "section_page_figure_table": "complete JSON + timestamp log",
+  "url_or_controlled_path": "reports/cad/current/K01_GATE04D_C2_VERIFY.json",
+  "claim_supported": "C2 P003/P007 inserted in verification A001; guarded legacy mates suppressed; pilot/metal-face/M2.5 clocking mates created; active mate errors=0.",
+  "applicability_to_K01": "Gate04D-C2 / EDR-003/005 / CI-J2",
+  "limitations_assumptions": "Does not independently prove mechanical, sealing, thermal, service or manufacturing adequacy.",
+  "checked_date": "2026-09-04",
+  "status": "CURRENT",
+  "sha256": "f9e58e51ccef0d9fa8c6a58402fc54e47882dd94c40b67a3882994f44ee90474"
+}

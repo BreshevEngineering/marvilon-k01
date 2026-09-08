@@ -1,0 +1,101 @@
+{
+  "schema": "k01_medtas_digital_thread_architecture_v1",
+  "name": "MARVILON MEDTAS — Engineering Digital Thread & Assurance System",
+  "status": "ACTIVE_ARCHITECTURE / K01 PILOT",
+  "purpose": "Connect engineering intent, native CAD, analysis, product data, technical decisions, manufacturing/inspection evidence and release state in a bidirectional, traceable and fail-closed workflow.",
+  "core_principles": [
+    "No single file is the truth for the entire project; authority is partitioned by artifact class.",
+    "Every important requirement/decision/characteristic/evidence object receives a persistent ID.",
+    "Current state is derived from evidence; UI actions do not mark gates PASS by themselves.",
+    "Every write into CAD/product data is an explicit controlled command with backup/readback/verification.",
+    "Rejected alternatives and reasons remain first-class thread objects.",
+    "Feedback flows back from analysis/manufacturing/inspection/test to design, not only downstream from CAD.",
+    "Release is fail-closed when evidence is missing, stale, inconsistent or belongs to another geometry/input revision."
+  ],
+  "four_layers": [
+    {
+      "layer": "L1 TOOL ADAPTERS",
+      "responsibility": "Bidirectional connectors to authoring/execution tools.",
+      "connectors": [
+        "SOLIDWORKS native CAD/drawings",
+        "SOLIDWORKS Simulation/Flow",
+        "FEMM/pyFEMM",
+        "BOM/product-data projection",
+        "bench/inspection/leak-test evidence",
+        "Git/GitHub for text/code/control",
+        "future SOLIDWORKS PDM/vault for multi-user native CAD"
+      ]
+    },
+    {
+      "layer": "L2 CANONICAL EVIDENCE & PROVENANCE",
+      "responsibility": "Artifact registry, persistent IDs, hashes, timestamps, source links, geometry/input fingerprints and event ledger."
+    },
+    {
+      "layer": "L3 ORCHESTRATION & ASSURANCE",
+      "responsibility": "State reducer, dependency graph, EDR/CI/RVM, 24-gate technical filter, change impact and fail-closed release logic."
+    },
+    {
+      "layer": "L4 ENGINEERING EXPERIENCE",
+      "responsibility": "Command Center, engineering dossier, production release board, drawing assurance, team review and AI Handoff."
+    }
+  ],
+  "solidworks_bidirectional_contract": {
+    "center_to_solidworks": [
+      "open/reveal controlled CAD artifact",
+      "run candidate builders",
+      "run BOM metadata projection",
+      "generate native drawings",
+      "run verification/interference automation"
+    ],
+    "solidworks_to_center": [
+      "live connection state",
+      "active document path/type/configuration",
+      "dirty/save flag",
+      "feature count",
+      "assembly component count",
+      "candidate/stable recognition",
+      "future save/rebuild/document-change event hooks and geometry fingerprints"
+    ],
+    "write_rule": "No background geometry/property write without an explicit MEDTAS command. Readback evidence is mandatory after each controlled write."
+  },
+  "thread_object_types": [
+    "REQ requirement",
+    "EDR decision",
+    "CI configuration item",
+    "CHAR release/inspection characteristic",
+    "CAD model/configuration",
+    "AN analysis",
+    "BOM product-data row",
+    "PROC manufacturing/service process",
+    "TEST inspection/bench evidence",
+    "SRC source",
+    "REL release decision"
+  ],
+  "recommended_edge_types": [
+    "SATISFIED_BY",
+    "DERIVED_FROM",
+    "VERIFIED_BY",
+    "IMPLEMENTS",
+    "DEPENDS_ON",
+    "SUPERSEDES",
+    "REJECTED_BECAUSE",
+    "AFFECTS",
+    "MANUFACTURED_BY",
+    "INSPECTED_BY",
+    "RELEASED_BY"
+  ],
+  "near_term_K01_implementation": [
+    "v8.1: SOLIDWORKS live bridge + direct Center actions/readback",
+    "v8.x: solver adapters and automatic evidence ingestion for Static/Buckling/FEMM",
+    "after K01 freeze/SW2026 migration: CAD-aware PDM/vault and team permissions",
+    "future product: generic MEDTAS connector SDK plus reusable technical-filter/drawing-assurance modules"
+  ],
+  "sources": [
+    "SRC-DT-NIST-001",
+    "SRC-DT-NIST-ARCH-001",
+    "SRC-DT-NIST-UUID-001",
+    "SRC-DT-ISO23247-5-001",
+    "SRC-TPD-SIMMONS-001",
+    "SRC-TOL-FISCHER-001"
+  ]
+}

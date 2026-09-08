@@ -1,0 +1,26 @@
+{
+  "K01Gate04C_Build.cs": {
+    "braces_balanced": true,
+    "Face2_dot_Select4_absent": true,
+    "Entity_Select4_present": true,
+    "OpenDoc6_ref_absent": true,
+    "Save3_ref_absent": true,
+    "AddMate5_ref_absent": true
+  },
+  "K01Gate04C_Verify.cs": {
+    "braces_balanced": true,
+    "Face2_dot_Select4_absent": true,
+    "Entity_Select4_present": true,
+    "OpenDoc6_ref_absent": true,
+    "Save3_ref_absent": true,
+    "AddMate5_ref_absent": true
+  },
+  "K01Gate04C_Drawings.cs": {
+    "braces_balanced": true,
+    "Face2_dot_Select4_absent": true,
+    "Entity_Select4_present": true,
+    "OpenDoc6_ref_absent": true,
+    "Save3_ref_absent": true,
+    "AddMate5_ref_absent": true
+  }
+}

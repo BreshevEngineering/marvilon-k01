@@ -1,0 +1,401 @@
+{
+  "schema": "k01_file_registry_v8",
+  "entries": [
+    {
+      "id": "CAD-A001",
+      "name": "Production A001 assembly",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "assemblies/K01-A-001_Calibration_Module.SLDASM"
+      ]
+    },
+    {
+      "id": "CAD-R1-ASM",
+      "name": "C2R1 verification assembly",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "candidates/gate04d_c2r1/verification/K01-A-001_GATE04D_C2R1_VERIFY.SLDASM"
+      ]
+    },
+    {
+      "id": "CAD-R1-P003",
+      "name": "C2R1 P003 candidate",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "candidates/gate04d_c2r1/K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE.SLDPRT"
+      ]
+    },
+    {
+      "id": "CAD-R1-P007",
+      "name": "C2R1 P007 candidate",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "candidates/gate04d_c2r1/K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT"
+      ]
+    },
+    {
+      "id": "CAD-P006-SERVICE",
+      "name": "P006 service-drive candidate",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "candidates/gate04e_p006_service/K01-P-006_Retaining_Plug_GATE04E_SERVICE_CANDIDATE.SLDPRT"
+      ]
+    },
+    {
+      "id": "R1-BUILD",
+      "name": "C2R1 native build report",
+      "domain": "EVIDENCE",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_TYPED_BUILD.json"
+      ]
+    },
+    {
+      "id": "R1-VERIFY",
+      "name": "C2R1 assembly verify report",
+      "domain": "EVIDENCE",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_VERIFY.json"
+      ]
+    },
+    {
+      "id": "R1-INT",
+      "name": "C2R1 interference report",
+      "domain": "EVIDENCE",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_INTERFERENCE.json"
+      ]
+    },
+    {
+      "id": "P006-BUILD",
+      "name": "P006 service-drive build report",
+      "domain": "EVIDENCE",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04E_P006_SERVICE_BUILD.json"
+      ]
+    },
+    {
+      "id": "STATE-V8",
+      "name": "Current derived state v8",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "control/state/K01_STATE_CURRENT_v8.json"
+      ]
+    },
+    {
+      "id": "EVENTS-V8",
+      "name": "Engineering event ledger v8",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "control/state/K01_EVENT_LEDGER_v8.jsonl"
+      ]
+    },
+    {
+      "id": "RELEASE-J2",
+      "name": "J2 C2R1 production-release package",
+      "domain": "RELEASE",
+      "root": "repo",
+      "candidates": [
+        "control/release/K01_J2_C2R1_PRODUCTION_RELEASE_PACKAGE_v1.json"
+      ]
+    },
+    {
+      "id": "FILTER-J2",
+      "name": "J2 24-gate technical filter",
+      "domain": "RELEASE",
+      "root": "repo",
+      "candidates": [
+        "control/technical_filter/K01_J2_C2R1_TECHNICAL_FILTER_v1.json"
+      ]
+    },
+    {
+      "id": "WP-T03",
+      "name": "T03 tolerance/service-drive work package",
+      "domain": "WORK",
+      "root": "repo",
+      "candidates": [
+        "control/workpacks/K01_T03_PILOT_TOOL_WORKPACKAGE_v2.json"
+      ]
+    },
+    {
+      "id": "WP-T04",
+      "name": "T04 seal/preload work package",
+      "domain": "WORK",
+      "root": "repo",
+      "candidates": [
+        "control/workpacks/K01_T04_SEAL_PRELOAD_WORKPACKAGE_v1.json"
+      ]
+    },
+    {
+      "id": "MEDIA-T04",
+      "name": "T04 J2 media envelope",
+      "domain": "WORK",
+      "root": "repo",
+      "candidates": [
+        "control/workpacks/K01_T04_MEDIA_ENVELOPE_v1.json"
+      ]
+    },
+    {
+      "id": "WP-T05",
+      "name": "T05 M2.5/clamp work package",
+      "domain": "WORK",
+      "root": "repo",
+      "candidates": [
+        "control/workpacks/K01_T05_J2_CLAMP_STRENGTH_WORKPACKAGE_v1.json"
+      ]
+    },
+    {
+      "id": "WP-T06",
+      "name": "T06 thermal/galling/service work package",
+      "domain": "WORK",
+      "root": "repo",
+      "candidates": [
+        "control/workpacks/K01_T06_THERMAL_GALLING_SERVICE_WORKPACKAGE_v1.json"
+      ]
+    },
+    {
+      "id": "WP-T07",
+      "name": "T07 P007 structural refresh",
+      "domain": "WORK",
+      "root": "repo",
+      "candidates": [
+        "control/workpacks/K01_T07_P007_STRUCTURAL_REFRESH_v1.json"
+      ]
+    },
+    {
+      "id": "WP-T08",
+      "name": "T08 BOM property projection",
+      "domain": "WORK",
+      "root": "repo",
+      "candidates": [
+        "control/workpacks/K01_T08_BOM_PROPERTY_PROJECTION_v1.json"
+      ]
+    },
+    {
+      "id": "WP-T09",
+      "name": "T09 drawing/TPD release",
+      "domain": "WORK",
+      "root": "repo",
+      "candidates": [
+        "control/workpacks/K01_T09_DRAWING_TPD_RELEASE_v1.json"
+      ]
+    },
+    {
+      "id": "WP-T10",
+      "name": "T10 FEMM/bench release",
+      "domain": "WORK",
+      "root": "repo",
+      "candidates": [
+        "control/workpacks/K01_T10_FEMM_BENCH_RELEASE_v1.json"
+      ]
+    },
+    {
+      "id": "BOM-REC",
+      "name": "C2R1 reconciled BOM report",
+      "domain": "BOM",
+      "root": "repo",
+      "candidates": [
+        "reports/bom/K01_BOM_RECONCILIATION_study_c2r1.json"
+      ]
+    },
+    {
+      "id": "BOM-PROJ",
+      "name": "BOM property projection report",
+      "domain": "BOM",
+      "root": "repo",
+      "candidates": [
+        "reports/bom/K01_BOM_PROPERTY_PROJECTION_CURRENT.json"
+      ]
+    },
+    {
+      "id": "DRAW-LINT",
+      "name": "Drawing semantic-lint report",
+      "domain": "DRAWING",
+      "root": "repo",
+      "candidates": [
+        "reports/drawings/K01_DRAWING_INTENT_LINT_CURRENT.json"
+      ]
+    },
+    {
+      "id": "DRAW-VIS",
+      "name": "Drawing visual-approval report",
+      "domain": "DRAWING",
+      "root": "repo",
+      "candidates": [
+        "reports/drawings/K01_DRAWING_VISUAL_APPROVAL_CURRENT.json"
+      ]
+    },
+    {
+      "id": "DRAW-V3",
+      "name": "Drawing V3 native report",
+      "domain": "DRAWING",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04D_C2R1_TYPED_DRAWINGS_V3.json"
+      ]
+    },
+    {
+      "id": "DRAW-P003",
+      "name": "P003 TPD V3 PDF",
+      "domain": "DRAWING",
+      "root": "cad",
+      "patterns": [
+        "drawings/gate04d_c2r1_draft/K01-D-003*K01-P-003*C2R1_TPD_V3.PDF"
+      ]
+    },
+    {
+      "id": "DRAW-P007",
+      "name": "P007 TPD V3 PDF",
+      "domain": "DRAWING",
+      "root": "cad",
+      "patterns": [
+        "drawings/gate04d_c2r1_draft/K01-D-006*K01-P-007*C2R1_TPD_V3.PDF"
+      ]
+    },
+    {
+      "id": "GIT-CLASS",
+      "name": "Git classification v2",
+      "domain": "GIT",
+      "root": "repo",
+      "candidates": [
+        "reports/git/K01_GIT_CLASSIFICATION_CURRENT.json"
+      ]
+    },
+    {
+      "id": "GIT-PLAN",
+      "name": "Git checkpoint plan",
+      "domain": "GIT",
+      "root": "repo",
+      "candidates": [
+        "reports/git/K01_GIT_CHECKPOINT_PLAN_CURRENT.json"
+      ]
+    },
+    {
+      "id": "AI-HANDOFF",
+      "name": "Current AI engineering handoff",
+      "domain": "HANDOFF",
+      "root": "repo",
+      "candidates": [
+        "handoff/current/K01_AI_HANDOFF_CURRENT.zip"
+      ]
+    },
+    {
+      "id": "SOURCES",
+      "name": "Engineering source registry",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "control/evidence/K01_SOURCE_REGISTRY_v2.json"
+      ]
+    },
+    {
+      "id": "DOS-J2-V2",
+      "name": "J2 C2R1 engineering dossier v2",
+      "domain": "DECISION",
+      "root": "repo",
+      "candidates": [
+        "control/decision_system/K01_J2_C2R1_ENGINEERING_DOSSIER_v2.json"
+      ]
+    },
+    {
+      "id": "DT-ARCH",
+      "name": "MEDTAS digital-thread architecture",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "control/digital_thread/K01_MEDTAS_DIGITAL_THREAD_ARCHITECTURE_v2.json"
+      ]
+    },
+    {
+      "id": "SW-LIVE",
+      "name": "SOLIDWORKS live bridge state",
+      "domain": "LIVE",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/live/K01_SOLIDWORKS_LIVE_STATE.json"
+      ]
+    },
+    {
+      "id": "FEMM-SETUP",
+      "name": "FEMM setup baseline",
+      "domain": "FEMM",
+      "root": "repo",
+      "candidates": [
+        "control/femm/K01_FEMM_SETUP_v1.json"
+      ]
+    },
+    {
+      "id": "FEMM-INSTALL",
+      "name": "FEMM installation report",
+      "domain": "FEMM",
+      "root": "repo",
+      "candidates": [
+        "reports/femm/K01_FEMM_INSTALL_CURRENT.json"
+      ]
+    },
+    {
+      "id": "FEMM-PLAN",
+      "name": "FEMM screening/release plan",
+      "domain": "FEMM",
+      "root": "repo",
+      "candidates": [
+        "control/femm/K01_FEMM_SCREENING_PLAN_v1.json"
+      ]
+    },
+    {
+      "id": "GITHUB-REMOTE",
+      "name": "GitHub remote health",
+      "domain": "GIT",
+      "root": "repo",
+      "candidates": [
+        "reports/git/K01_GITHUB_REMOTE_HEALTH_CURRENT.json"
+      ]
+    },
+    {
+      "id": "A001-MATURITY",
+      "name": "A001 assembly maturity definition",
+      "domain": "ASSEMBLY",
+      "root": "repo",
+      "candidates": [
+        "control/assembly/K01_A001_ASSEMBLY_MATURITY_v1.json"
+      ]
+    },
+    {
+      "id": "CAD-P006-VERIFY",
+      "name": "Gate04E full C2R1 + P006 verification assembly",
+      "domain": "CAD",
+      "root": "cad",
+      "candidates": [
+        "candidates/gate04e_p006_service/verification/K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM"
+      ]
+    },
+    {
+      "id": "P006-VERIFY",
+      "name": "P006 service full-assembly verify report",
+      "domain": "EVIDENCE",
+      "root": "repo",
+      "candidates": [
+        "reports/cad/current/K01_GATE04E_P006_SERVICE_VERIFY.json"
+      ]
+    },
+    {
+      "id": "VISUAL-POLICY",
+      "name": "MEDTAS visual-context policy",
+      "domain": "CONTROL",
+      "root": "repo",
+      "candidates": [
+        "control/visualization/K01_VISUAL_CONTEXT_POLICY_v1.json"
+      ]
+    }
+  ]
+}

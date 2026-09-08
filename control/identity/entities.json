@@ -1,0 +1,12 @@
+{
+  "schema": "k01.identity_registry.v1_9",
+  "project": "K01",
+  "authority": "Stable non-part engineering identities used by MEDTAS. Lifecycle state and revision are metadata, not filename identity.",
+  "entities": {
+    "K01-A-001": {"type":"ASSEMBLY","description":"Calibration Module","canonical_filename":"K01-A-001_Calibration_Module.SLDASM"},
+    "K01-D-003": {"type":"DRAWING","description":"Cartridge Body","model":"K01-P-003","canonical_filename":"K01-D-003_Cartridge_Body.SLDDRW"},
+    "K01-D-005": {"type":"DRAWING","description":"Retaining Plug","model":"K01-P-006","canonical_filename":"K01-D-005_Retaining_Plug.SLDDRW"},
+    "K01-D-006": {"type":"DRAWING","description":"Hermetic Magnetic Can","model":"K01-P-007","canonical_filename":"K01-D-006_Hermetic_Magnetic_Can.SLDDRW"},
+    "K01-D-012": {"type":"DRAWING","description":"Calibration Module Assembly","model":"K01-A-001","canonical_filename":"K01-D-012_Calibration_Module_Assembly.SLDDRW"}
+  }
+}

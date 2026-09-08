@@ -1,0 +1,20 @@
+{
+  "schema": "k01.swsim_study_binding.p006.v1_7",
+  "study_name": "Static 1",
+  "loads": {
+    "FIXED_INTERFACE_FACE": {"name":"Fixed-1","expected_entity_count":1},
+    "SERVICE_FORCE_FACE": {"name":"Force-1","expected_entity_count":1},
+    "PRESSURE_FACES": {"name":"Pressure-1","expected_entity_count":5}
+  },
+  "contact": {
+    "expected_mode": "GLOBAL_NO_PENETRATION_SURFACE_TO_SURFACE",
+    "body_pair": ["K01-P-003","K01-P-007"],
+    "policy": "If explicit contact sets exist, extract them. If the study uses Global Contact, preserve component/body-level global-contact semantics; do not invent an arbitrary two-face pair."
+  },
+  "qualification": {
+    "no_op_rebuild_required": true,
+    "ambiguity_policy": "HOLD",
+    "zero_match_policy": "HOLD",
+    "role_count_change_policy": "HOLD"
+  }
+}

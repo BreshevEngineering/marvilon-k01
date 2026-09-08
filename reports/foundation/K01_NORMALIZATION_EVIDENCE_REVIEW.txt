@@ -1,0 +1,13 @@
+reports/ai/
+reports/analysis/
+reports/bom/
+reports/cad/
+reports/calculations/
+reports/control/
+reports/engineering/
+reports/femm/
+reports/foundation/
+reports/git/
+reports/inspection/
+reports/medtas/
+reports/recovery/

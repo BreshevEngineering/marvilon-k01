@@ -1,0 +1,48 @@
+{
+  "schema": "k01_cad_contracts_2",
+  "params_file": "params/k01_params.py",
+  "master_file": "master/K01_master.json",
+  "notes": [
+    "Materials are read from K01_master.json; never hard-coded in the audit tool.",
+    "Numeric dimensions are read from k01_params.py; no duplicate numeric authority here.",
+    "Controlled SOLIDWORKS dimension names begin as WARN migration gates and become ERROR only after renaming/linking is completed.",
+    "Current P007 material baseline remains AISI 316L / EN 1.4404 unless master is deliberately changed."
+  ],
+  "parts": {
+    "K01-P-003_Cartridge_Body": {
+      "part_no": "K01-P-003",
+      "single_solid": true,
+      "check_material": true,
+      "snapshot_severity": "ERROR",
+      "equation_link": {
+        "required": true,
+        "file_hint": "K01_equations",
+        "severity": "WARN"
+      },
+      "dimensions": {}
+    },
+    "K01-P-007_Hermetic_Magnetic_Can": {
+      "part_no": "K01-P-007",
+      "single_solid": true,
+      "check_material": true,
+      "snapshot_severity": "ERROR",
+      "equation_link": {
+        "required": true,
+        "file_hint": "K01_equations",
+        "severity": "WARN"
+      },
+      "dimensions": {
+        "CAN_OD": {
+          "param": "P007_THIN_OD_MM",
+          "tol_mm": 0.005,
+          "severity": "WARN"
+        },
+        "CAN_BORE": {
+          "param": "P007_THIN_ID_MM",
+          "tol_mm": 0.005,
+          "severity": "WARN"
+        }
+      }
+    }
+  }
+}

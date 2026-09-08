@@ -1,0 +1,38 @@
+{
+  "schema": "k01.revision_policy.v1",
+  "title": "K01 Configuration and revision policy",
+  "industry_alignment": [
+    "ISO 10007:2017",
+    "SAE EIA-649C"
+  ],
+  "states": [
+    "DRAFT",
+    "REVIEW",
+    "RELEASED",
+    "SUPERSEDED",
+    "OBSOLETE"
+  ],
+  "rules": [
+    "A RELEASED artifact is immutable.",
+    "Any engineering change to a RELEASED artifact creates a new revision/controlled successor; in-place editing is prohibited.",
+    "Each baseline records the exact set of controlled artifact IDs plus hashes/revisions.",
+    "Rejected alternatives remain in decision history and are never deleted to make the baseline appear cleaner.",
+    "Configuration status accounting reports current, superseded and open-change states for every controlled configuration item.",
+    "A promotion is an explicit baseline transition, not a file copy alone.",
+    "Native CAD revision history belongs in a CAD-aware vault/PDM once multi-user SW2026 operation begins; Git remains authoritative for text/code/control artifacts."
+  ],
+  "review_vocabulary": {
+    "SRR": "System Requirements Review — requirements sufficiently defined to proceed.",
+    "PDR": "Preliminary Design Review — architecture and major interfaces are credible; major risks understood.",
+    "CDR": "Critical Design Review — detailed design definition and analyses support fabrication/release preparation.",
+    "TRR": "Test Readiness Review — test article, procedure, instrumentation and acceptance criteria are ready.",
+    "PRR": "Production/Release Readiness Review — product definition, BOM, process, inspection, evidence and configuration baseline are ready for release."
+  },
+  "K01_mapping": {
+    "current": "CDR closure / production-release preparation",
+    "next_reviews": [
+      "TRR for final magnetic/bench acceptance",
+      "PRR before atomic A001 promotion"
+    ]
+  }
+}

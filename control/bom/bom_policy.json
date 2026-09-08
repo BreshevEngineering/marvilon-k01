@@ -1,0 +1,40 @@
+{
+  "schema": "k01.bom_policy.v1",
+  "title": "K01 BOM / product-data authority policy",
+  "principle": "A BOM exists even when metadata is incomplete. Metadata HOLD is not equivalent to 'no BOM'.",
+  "authority": {
+    "CAD assembly": [
+      "component occurrence",
+      "quantity",
+      "configuration",
+      "component file identity"
+    ],
+    "controlled product data": [
+      "PartNo",
+      "Description",
+      "Revision/Lifecycle",
+      "MaterialSpec/MaterialStatus",
+      "Make/Buy",
+      "Supplier/MPN",
+      "Unit"
+    ],
+    "MEDTAS": [
+      "reconciliation",
+      "unexplained delta detection",
+      "controlled metadata projection",
+      "release status"
+    ]
+  },
+  "workflow": [
+    "read-only BOM extraction from the controlled assembly",
+    "reconcile CAD rows with controlled identity/material data",
+    "display BOM immediately, including OPEN/HOLD fields",
+    "optional controlled metadata projection back to CAD after review",
+    "rerun extraction and require zero unexplained delta before PRR"
+  ],
+  "prohibited": [
+    "hiding the BOM until metadata projection is applied",
+    "inventing OPEN material/supplier data merely to remove a HOLD",
+    "treating an external spreadsheet as quantity authority when CAD assembly is controlled"
+  ]
+}

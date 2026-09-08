@@ -1,0 +1,31 @@
+{
+  "schema": "k01_t04_seal_baseline_v3",
+  "id": "T04",
+  "status": "PASS_DESIGN_BASELINE / SUPPLIER_COMPOUND_AND_LEAK_TEST_REMAIN",
+  "thermal_basis": {
+    "CFD_local_C": [
+      50,
+      55
+    ],
+    "design_max_C": 55
+  },
+  "seal": {
+    "size": "16 x 1.5 mm",
+    "material_family": "FKM",
+    "hardness": "75 Shore A nominal",
+    "gland_ID_mm": 16.0,
+    "gland_width_mm": 2.1,
+    "gland_depth_mm": 1.1,
+    "nominal_squeeze_percent": 26.67
+  },
+  "decision": [
+    "Current C2R1 gland geometry is retained.",
+    "55 degC is not a thermal blocker for an FKM design baseline.",
+    "Exact supplier compound/media compatibility and physical leak acceptance remain release evidence; they do not reopen geometry unless compatibility fails."
+  ],
+  "sources": [
+    "Trelleborg O-Rings & Back-up Rings compression-force/gland guidance",
+    "Parker O-Ring Handbook compression-force/face-seal guidance",
+    "accepted K01 CFD 50-55 degC"
+  ]
+}

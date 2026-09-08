@@ -1,0 +1,50 @@
+{
+  "schema": "k01_configuration_item_dossier_v1",
+  "ci_id": "CI-P003-P006",
+  "name": "P003 Cartridge Body ↔ P006 Retaining Plug threaded retention interface",
+  "type": "interface",
+  "parent_ci": "CI-A001",
+  "current_baseline": "P003 M12×1-6H internal / P006 M12×1-6g male, nominal engagement 6 mm",
+  "requirements": [
+    "Retain P002 rear guide without crushing the polymer bushing",
+    "Remain removable for service",
+    "Front relief Ø9.10×0.06 controls P002 axial float",
+    "Thread engagement shall not be interpreted as a new C2 collision when its stable-vs-candidate signature is unchanged"
+  ],
+  "materials": [
+    {
+      "item": "P003",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "CONTROLLED"
+    },
+    {
+      "item": "P006",
+      "material": "AISI 316L / EN 1.4404",
+      "status": "CONTROLLED"
+    }
+  ],
+  "controlled_parameters": [
+    "P003 M12×1-6H",
+    "P006 M12×1-6g",
+    "engagement 6 mm",
+    "P006 front relief Ø9.10×0.06"
+  ],
+  "evidence_records": [
+    "K01_PROJECT_CONTROL.xlsx / Build Queue",
+    "BUILD_K01_v14.md",
+    "Gate04D-C2 raw interference report",
+    "Gate04D-C2 stable-vs-C2 interference delta report when generated"
+  ],
+  "change_history": [
+    {
+      "date": "2026-09-04",
+      "event": "Raw C2 interference QA reported P003↔P006 15.396684 mm³ as NEW_OR_UNCLASSIFIED",
+      "disposition": "Do not whitelist blindly. Compare with stable A001 and accept only if unchanged."
+    }
+  ],
+  "risks_open_items": [
+    "anti-galling/service-tool strategy remains under EDR-010/017",
+    "exact modeled thread representation may create volumetric interference even for a valid mating thread"
+  ],
+  "release_status": "CONTROLLED FUNCTIONAL INTERFACE / DELTA QA OPEN"
+}

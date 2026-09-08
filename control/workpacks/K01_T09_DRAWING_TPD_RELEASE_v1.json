@@ -1,0 +1,24 @@
+{
+  "schema": "k01_workpackage_v1",
+  "task_id": "T09",
+  "title": "Production drawing / TPD release",
+  "status": "DRAWING_V3_TOOL_READY / NATIVE_OUTPUT_REVIEW_OPEN",
+  "method": "MEDTAS TPD limited-dimension / model-authority drawing. No AutoDimension. Explicit characteristic IDs/tolerances/GD&T/inspection methods come from drawing-intent specs; marked model dimensions from named C2R1 features are imported only where intentional.",
+  "required_outputs": [
+    "K01-D-003 P003 native SLDDRW+PDF",
+    "K01-D-006 P007 native SLDDRW+PDF",
+    "K01-D-005 P006 after service-feature candidate"
+  ],
+  "quality": [
+    "semantic linter PASS",
+    "visual review PASS",
+    "no uncontrolled dimension dump",
+    "section view exposes J2 geometry",
+    "title/material/revision/projection",
+    "all release characteristics trace to source + inspection"
+  ],
+  "source_basis": [
+    "Manual of Engineering Drawing production drawing / duality principle",
+    "Mechanical Tolerance Stackup and Analysis functional dimensioning / GD&T / stackup reporting"
+  ]
+}

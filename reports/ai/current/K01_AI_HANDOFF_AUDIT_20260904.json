@@ -1,0 +1,15 @@
+{
+  "schema": "k01_ai_handoff_audit_v1",
+  "checked": "2026-09-04T17:16:00+03:00",
+  "status": "PASS_AS_ARCHIVE / STALE_RELATIVE_TO_LATER_REPORTS",
+  "zip_file": "K01_AI_HANDOFF_CURRENT.zip",
+  "zip_sha256": "e4555f7cfb8cefbb5662415b5d2d17fd748683c33f9cb73aa4ec52ded2d9b252",
+  "file_count": 16,
+  "manifest_present": true,
+  "manifest_created": "2026-09-04T17:00:06.8781584+03:00",
+  "contains_build": true,
+  "contains_verify": true,
+  "contains_interference": false,
+  "contains_bom": false,
+  "finding": "The uploaded handoff is valid and contains 16 controlled files plus manifest, but it was created at 17:00:06+03:00 before the interference report (~17:05) and BOM report (~17:06), so those later artifacts are correctly absent. Rebuild handoff after v5/after current reports to include them."
+}

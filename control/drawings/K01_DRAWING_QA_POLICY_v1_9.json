@@ -1,0 +1,23 @@
+{
+  "schema": "k01.drawing_qa_policy.v1_9",
+  "authority": "Native SOLIDWORKS model PMI/MBD + parts registry + revision thread. Drawing is a derived manufacturing representation.",
+  "release_rules": [
+    "No released dimensional, tolerance, datum or GD&T statement may exist only in the drawing; it must be traceable to native model PMI/MBD.",
+    "SOLIDWORKS custom properties used by the title block are projections from control/product/parts.json.",
+    "A released drawing revision is immutable; changes create a new revision and artifact hash.",
+    "AutoDimension and blanket automatic dimension placement are prohibited.",
+    "Every controlled characteristic uses a stable characteristic/balloon ID that is reused by inspection results."
+  ],
+  "mandatory_checks": [
+    {"id":"DQA-001","check":"drawing_exists_for_release_item","source":"drawing plan + artifact manifest"},
+    {"id":"DQA-002","check":"title_block_identity_description_revision_match_parts_registry","source":"drawing readback + parts.json"},
+    {"id":"DQA-003","check":"drawing_model_reference_and_revision_parity","source":"native drawing readback + CAD semantic state"},
+    {"id":"DQA-004","check":"no_dangling_or_broken_dimension_geometry_references","source":"native drawing readback"},
+    {"id":"DQA-005","check":"sheet_scale_and_required_views_defined_and_nonoverlapping","source":"native drawing readback"},
+    {"id":"DQA-006","check":"each_manufacturing_dimension_has_explicit_tolerance_or_controlled_general_tolerance","source":"drawing readback + drawing policy"},
+    {"id":"DQA-007","check":"drawing_dimensional_annotations_match_model_PMI","source":"drawing readback + MBD semantic state"},
+    {"id":"DQA-008","check":"controlled_characteristic_balloon_ids_complete_and_unique","source":"drawing readback + characteristic registry"},
+    {"id":"DQA-009","check":"visual_QA_current_for_exact_artifact_set_hash","source":"visual approval + artifact manifest"}
+  ],
+  "unknown_or_unreadable_policy": "HOLD"
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "k01_p007_buckling_release_v1",
+  "status": "OPEN",
+  "study": "K01_P007_BUCKLING_DP_NEG_020bar_C2R1_RELEASE",
+  "model_hash": "OPEN",
+  "delta_p_bar": -0.2,
+  "lambda1": "OPEN",
+  "criterion_lambda1_min": 10,
+  "mode_review": "OPEN",
+  "mesh/convergence": "OPEN",
+  "evidence_files": []
+}

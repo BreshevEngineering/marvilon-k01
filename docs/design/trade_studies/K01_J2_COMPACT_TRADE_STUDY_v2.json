@@ -1,0 +1,86 @@
+{
+  "schema": "k01_j2_compact_trade_study_v2",
+  "status": "C2 SELECTED FOR NEXT CAD STUDY / NOT RELEASED",
+  "fixed_architecture": {
+    "P003_material": "316L/1.4404",
+    "P007_material": "316L/1.4404",
+    "pilot": "Ø14.10 H7/g6",
+    "male_pilot_L_mm": 1.5,
+    "female_depth_mm": 1.7,
+    "P007_OAL_mm": 35.0,
+    "P007_flange_t_mm": 3.0,
+    "P003_J2_zone_mm": 5.0,
+    "seal": "16×1.5",
+    "gland_ID_mm": 16.0,
+    "gland_width_mm": 2.1,
+    "gland_depth_mm": 1.1,
+    "gland_OD_design_worst_mm": 20.6
+  },
+  "alternatives": [
+    {
+      "id": "C0",
+      "flange": "round OD36",
+      "fastener": "3×M3",
+      "hole_mm": 3.4,
+      "PCD_mm": 28.0,
+      "inner_lig_mm": 2.0,
+      "outer_lig_mm": 2.3,
+      "status": "VERIFIED REFERENCE"
+    },
+    {
+      "id": "C1",
+      "flange": "round OD34",
+      "fastener": "3×M3",
+      "hole_mm": 3.4,
+      "PCD_mm": 27.0,
+      "inner_lig_mm": 1.5,
+      "outer_lig_mm": 1.8,
+      "status": "BACKUP"
+    },
+    {
+      "id": "C2",
+      "flange": "round OD33",
+      "fastener": "3×M2.5",
+      "hole_mm": 2.9,
+      "PCD_mm": 26.5,
+      "inner_lig_mm": 1.5,
+      "outer_lig_mm": 1.8,
+      "status": "SELECTED NEXT STUDY"
+    },
+    {
+      "id": "C3",
+      "flange": "three-lobed",
+      "fastener": "3×M2.5",
+      "hole_mm": 2.9,
+      "PCD_mm": 26.5,
+      "inner_lig_mm": 1.5,
+      "outer_lig_mm": "local",
+      "status": "ONLY IF C2 STILL TOO LARGE"
+    }
+  ],
+  "screening": {
+    "M2_5_stress_area_mm2": 3.390795089543035,
+    "M3_stress_area_mm2": 5.03083244349935,
+    "A4_70_Rp02_screen_MPa": 450.0,
+    "M2_5_Rp02_load_per_screw_N": 1525.8577902943657,
+    "M3_Rp02_load_per_screw_N": 2263.8745995747076,
+    "pressure_reaction_N": 3.1225,
+    "pressure_as_percent_of_3x_M2_5_Rp02": 0.06821299730249027
+  },
+  "C2_open_gates": [
+    "exact screw standard/head/length/grade/finish",
+    "P003 M2.5 thread engagement and stripping",
+    "local flange bearing/bending",
+    "seal compression / flange separation",
+    "preload/torque scatter",
+    "stainless galling/service-cycle strategy",
+    "thermal expansion/preload",
+    "P015/tool/service envelope",
+    "P007 +0.20 bar static refresh",
+    "P007 -0.20 bar buckling refresh",
+    "manufacturing operation and inspection",
+    "BOM/availability",
+    "assembly/interference verification"
+  ],
+  "decision": "Proceed to Gate04D-C2 native CAD candidate. Promotion remains blocked."
+}

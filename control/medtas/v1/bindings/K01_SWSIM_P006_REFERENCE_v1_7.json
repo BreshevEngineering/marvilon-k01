@@ -1,0 +1,24 @@
+{
+  "schema": "k01.swsim_p006_reference.v1_7",
+  "node_id": "K01.STRUCT.SWSIM.P006",
+  "source_report": "reports/engineering/current/source/K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx",
+  "study_name": "Static 1",
+  "analysis_type": "linear_static",
+  "metrics": {
+    "sigma_vm_max_MPa": 40.66,
+    "displacement_max_mm": 0.002171,
+    "equivalent_strain_max": 0.0001207,
+    "reaction_resultant_N": 302.262,
+    "mesh_nodes": 102923,
+    "mesh_elements": 63800,
+    "maximum_aspect_ratio": 13.093,
+    "distorted_elements_percent": 0.0
+  },
+  "material_check": {
+    "designation": "1.4404 (X2CrNiMo17-12-2)",
+    "yield_strength_MPa": 400.0,
+    "simple_yield_margin": 9.84
+  },
+  "verification_scope": "current Gate04E P006 linear-static service screening",
+  "verdict": "PASS"
+}

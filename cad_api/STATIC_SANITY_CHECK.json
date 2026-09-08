@@ -1,0 +1,35 @@
+{
+  "K01Gate04C_Build.cs": {
+    "bytes": 32765,
+    "braces_balanced": true,
+    "typed_interop": true,
+    "marshal_active_object": true,
+    "pywin32_absent": true,
+    "vba_absent": true,
+    "FeatureExtrusion2": true,
+    "FeatureCut4": true,
+    "FeatureCircularPattern5": true
+  },
+  "K01Gate04C_Verify.cs": {
+    "bytes": 17539,
+    "braces_balanced": true,
+    "typed_interop": true,
+    "marshal_active_object": true,
+    "pywin32_absent": true,
+    "vba_absent": true,
+    "ReplaceComponents2": true,
+    "AddMate5": true,
+    "InterferenceDetectionManager": true
+  },
+  "K01Gate04C_Drawings.cs": {
+    "bytes": 16190,
+    "braces_balanced": true,
+    "typed_interop": true,
+    "marshal_active_object": true,
+    "pywin32_absent": true,
+    "vba_absent": true,
+    "Create3rdAngleViews2": true,
+    "InsertModelAnnotations3": true,
+    "PDF": true
+  }
+}

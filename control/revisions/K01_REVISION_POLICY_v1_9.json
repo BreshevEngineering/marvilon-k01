@@ -1,0 +1,19 @@
+{
+  "overwrite_existing_release": false,
+  "principles": [
+    "Released revisions are immutable.",
+    "Revision table is generated from controlled release history, not typed independently into the drawing.",
+    "A changed released artifact requires a new revision and a new artifact hash."
+  ],
+  "released_root": "drawings/released",
+  "required_manifest_fields": [
+    "drawing_no",
+    "part_number",
+    "revision",
+    "state_hash",
+    "artifact_hash",
+    "released_at",
+    "source_verification"
+  ],
+  "schema": "k01.revision_policy.v1_9"
+}

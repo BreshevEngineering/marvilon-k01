@@ -1,0 +1,10 @@
+{
+  "schema": "medtas.build_record.v1",
+  "node_id": "K01.STRUCT.RECON.P006",
+  "built_state_hash": "85b9462805ae1dab079a34b17775960e9efdb1d0439e9eb886ea621e41772a87",
+  "artifact_hash": "5055e487cb589c8f2f2ba02434110ec30660bff12a006f5a0dbe06f11ac56105",
+  "producer": {
+    "tool": "build_downstream_v1_8.py",
+    "stage": "reconciliation"
+  }
+}

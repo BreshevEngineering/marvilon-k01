@@ -1,0 +1,9 @@
+{
+  "schema": "k01.next_actions.v1",
+  "center": "FREEZE. No new UI/features now. Use it only for navigation/state/handoff and bug-fix only when an engineering task is blocked.",
+  "next_1": "Run T05 local contact FEA in SOLIDWORKS Simulation using K01_T05_LOCAL_FEA_DEFINITION.json.",
+  "next_2": "If T05 passes, run T07 final P007 Static/Buckling refresh.",
+  "parallel_1": "Run the P006 read-only drawing probe; do not generate another V3-like drawing.",
+  "parallel_2": "Prepare FEMM screening geometry/model; no claim of FEMM result until force sweep + mesh convergence exist.",
+  "later": "T06 service/galling qualification, final BOM projection, selective Git cleanup/checkpoint, final drawings, final FEMM, bench, PRR."
+}

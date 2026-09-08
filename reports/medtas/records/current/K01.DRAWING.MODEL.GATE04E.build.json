@@ -1,0 +1,10 @@
+{
+  "schema": "medtas.build_record.v1",
+  "node_id": "K01.DRAWING.MODEL.GATE04E",
+  "built_state_hash": "cbd577a66a37f5ae07f75e160f12d80d81ca40fc5389346f2daaf46b1c20366a",
+  "artifact_hash": "681bb2f90e8d3014ded76fbd9af83f257ec969c22f98c9e5c7fb5de67184e0b1",
+  "producer": {
+    "tool": "build_downstream_v1_8.py",
+    "stage": "drawing_intent"
+  }
+}

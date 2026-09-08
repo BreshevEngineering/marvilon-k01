@@ -1,0 +1,43 @@
+{
+  "schema": "k01_workpackage_v1",
+  "task_id": "T07",
+  "title": "Final P007 structural refresh",
+  "status": "RUN_REQUIRED_IN_SOLIDWORKS",
+  "model": "K01-P-007 Gate04D-C2R1 final mechanical candidate",
+  "material": "AISI 316L / EN 1.4404",
+  "studies": [
+    {
+      "name": "K01_P007_STATIC_DP_POS_020bar_C2R1_RELEASE",
+      "type": "Linear Static",
+      "load": "Δp=+0.20 bar on pressure boundary; final J2 face support; local J2 preload/contact verified separately or included if practical",
+      "outputs": [
+        "max von Mises excluding singularities",
+        "max displacement",
+        "reaction"
+      ],
+      "criteria": [
+        "stress SF ≥2 against controlled screening yield",
+        "no contact/separation contradiction with T05"
+      ]
+    },
+    {
+      "name": "K01_P007_BUCKLING_DP_NEG_020bar_C2R1_RELEASE",
+      "type": "Linear Buckling",
+      "load": "Δp=-0.20 bar compressive/external case per historical sign convention",
+      "outputs": [
+        "first eigenvalue λ1",
+        "mode shape"
+      ],
+      "criteria": [
+        "λ1 ≥10 project release floor",
+        "mode is physically meaningful and not an unconstrained artifact"
+      ]
+    }
+  ],
+  "history_reference": {
+    "static_pressure_reaction_N": 3.1225,
+    "buckling_lambda1": 1883.6,
+    "status": "HISTORICAL_ONLY_NOT_RELEASE"
+  },
+  "automation_policy": "Do not rewrite a new fragile Simulation API path unless existing SW Simulation interface is proven. The Center must import solver evidence and close T07 only after the current candidate reports are present."
+}

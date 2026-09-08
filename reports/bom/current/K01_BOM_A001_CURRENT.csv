@@ -1,0 +1,16 @@
+﻿registry_key,part_number,description,item_type,make_buy,quantity,unit,revision,material_authority,material_status,cad_native_material,supplier,manufacturer_part_number,standard_or_specification,release_state,source,parent,note
+K01-B-001,K01-B-001,Internal SmCo Magnet,PURCHASED,BUY,1,ea,,Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN,OPEN LOT DATA,Sm2Co17 S280 — MTS SM-SA-8x8,,,,HOLD,CAD_MODELED,,
+K01-P-001,K01-P-001,Calibration Rod,MANUFACTURED,MAKE,1,ea,,AISI 316L / EN 1.4404,CONTROLLED,AISI Type 316L stainless steel,,,,PASS,CAD_MODELED,,
+K01-P-002,K01-P-002,Rear Guide / Anti-Rotation Bushing,MANUFACTURED,MAKE,1,ea,,TECAPEEK PVX black baseline,BASELINE / PRODUCTION GRADE REVIEW,TECAPEEK PVX black (Ensinger),,,,HOLD,CAD_MODELED,,
+K01-P-003,K01-P-003,Cartridge Body,MANUFACTURED,MAKE,1,ea,,AISI 316L / EN 1.4404,CONTROLLED,AISI Type 316L stainless steel,,,,PASS,CAD_MODELED,,
+K01-P-004,K01-P-004,Front Guide Bushing,MANUFACTURED,MAKE,1,ea,,TECAPEEK PVX black baseline,BASELINE / PRODUCTION GRADE REVIEW,TECAPEEK PVX black (Ensinger),,,,HOLD,CAD_MODELED,,
+K01-P-006,K01-P-006,Retaining Plug,MANUFACTURED,MAKE,1,ea,,AISI 316L / EN 1.4404,CONTROLLED,AISI Type 316L stainless steel,,,,PASS,CAD_MODELED,,
+K01-P-007,K01-P-007,Hermetic Magnetic Can,MANUFACTURED,MAKE,1,ea,,AISI 316L / EN 1.4404,CONTROLLED,AISI Type 316L stainless steel,,,,PASS,CAD_MODELED,,
+K01-P-008,K01-P-008,Internal Magnetic Follower,MANUFACTURED,MAKE,1,ea,,AISI 316L / EN 1.4404,CONTROLLED,1.4404 (X2CrNiMo17-12-2),,,,PASS,CAD_MODELED,,
+K01-P-009,K01-P-009,Rear Stop Washer,MANUFACTURED,MAKE,1,ea,,AISI 316L / EN 1.4404,CONTROLLED,AISI Type 316L stainless steel,,,,PASS,CAD_MODELED,,
+K01-P-013,K01-P-013,Follower End Cap,MANUFACTURED,MAKE,1,ea,,AISI 316L / EN 1.4404,CONTROLLED / RETENTION QUALIFICATION OPEN,AISI Type 316L stainless steel,,,,HOLD,CAD_MODELED,,
+K01-P-014,K01-P-014,Front Guide Retaining Ring / IN Stop,MANUFACTURED,MAKE,1,ea,,OPEN; 1.4310 / AISI 301 candidate,OPEN,Material <not specified>,,,,HOLD,CAD_MODELED,,
+K01-P-015,K01-P-015,Dual Coil Bobbin,MANUFACTURED,MAKE,1,ea,,Prototype/current CAD material not production release; PPS grade/winding/leads OPEN,OPEN,PPS,,,,HOLD,CAD_MODELED,,
+K01-P-016,K01-P-016,Long Run Interface Boss,MANUFACTURED,MAKE,1,ea,,AISI 316L current CAD; production Long Run compatibility/weld route OPEN,CONDITIONAL / OPEN,AISI Type 316L stainless steel,,,,HOLD,CAD_MODELED,,
+NM-J2-SEAL,,J2 static face seal / O-ring,PURCHASED_NON_MODELED,BUY,1,ea,,OPEN,OPEN_SPEC,,,,,HOLD,REGISTRY_NON_MODELED,K01-A-001,"Seal architecture exists, but released compound/supplier/part number is not yet controlled. No value is guessed."
+NM-J2-CLAMP-SCREW,,J2 clamp screw M2.5,PURCHASED_NON_MODELED,BUY,3,ea,,OPEN,OPEN_SPEC,,,,,HOLD,REGISTRY_NON_MODELED,K01-A-001,Thread size/count are controlled by current interface definition. Exact screw length/grade/finish/lubrication/locking route remain OPEN.

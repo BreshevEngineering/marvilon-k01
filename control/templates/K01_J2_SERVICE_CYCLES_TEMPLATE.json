@@ -1,0 +1,11 @@
+{
+  "schema": "k01_j2_service_cycle_qualification_v1",
+  "status": "OPEN",
+  "cycles_target": 50,
+  "cycles_completed": 0,
+  "thread_damage": "OPEN",
+  "driver_damage": "OPEN",
+  "fit_drift": "OPEN",
+  "leak_after_cycles": "OPEN",
+  "evidence_files": []
+}

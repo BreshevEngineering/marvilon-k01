@@ -1,0 +1,35 @@
+{
+  "schema": "k01.t07.p007_structural_refresh.v2",
+  "title": "T07 — final P007 structural refresh",
+  "status": "READY_AFTER_T05",
+  "material": "AISI 316L / EN 1.4404",
+  "studies": [
+    {
+      "name": "K01_P007_STATIC_DP_POS_020bar",
+      "type": "Static",
+      "load": "+0.20 bar qualification differential pressure",
+      "outputs": [
+        "max von Mises",
+        "max displacement",
+        "reaction",
+        "minimum safety factor"
+      ]
+    },
+    {
+      "name": "K01_P007_BUCKLING_DP_NEG_020bar",
+      "type": "Linear buckling",
+      "load": "-0.20 bar qualification differential pressure",
+      "outputs": [
+        "first positive eigenvalue",
+        "mode shape",
+        "comparison to historical lambda1=1883.6"
+      ]
+    }
+  ],
+  "rule": "Use the final C2R1 geometry. Historical results are comparison only, not release evidence.",
+  "acceptance": [
+    "Static: no yielding; report minimum SF to controlled material yield.",
+    "Buckling: first positive eigenvalue >> 1 and no local numerical artefact controlling the mode.",
+    "Save study definitions and result hashes/fingerprints."
+  ]
+}

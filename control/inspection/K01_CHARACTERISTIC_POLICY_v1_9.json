@@ -1,0 +1,13 @@
+{
+  "schema": "k01.characteristic_policy.v1_9",
+  "project": "K01",
+  "principles": [
+    "A released characteristic has one stable machine key shared by model PMI, drawing balloon, inspection plan and measurement result.",
+    "A drawing balloon is presentation; the acceptance definition remains in the controlled requirement/MBD/product-definition source.",
+    "Measured values are data and are evaluated automatically against the current released acceptance definition.",
+    "Unknown or open acceptance criteria fail closed."
+  ],
+  "id_format": "K01-Dxxx-Cnn",
+  "balloon_format": "Cnn",
+  "external_exchange": "Use standard inspection/export formats where practical; do not invent a proprietary external exchange format. AP242 with PMI is the preferred neutral product-definition exchange when required."
+}

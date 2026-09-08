@@ -1,0 +1,16 @@
+{
+  "annotation_policy": "MBD_ONLY_REVIEWED_CHARACTERISTICS",
+  "auto_dimension": false,
+  "native_format": "SLDDRW",
+  "output_root": "drawings/release_candidate/gate04e",
+  "release_format": "PDF",
+  "schema": "k01.drawing_generation_binding.v1_7",
+  "status": "TEMPLATE_BOUND_MBD_PENDING",
+  "template_binding_authority": "unique discovered template; review before production release",
+  "template_path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\data\\templates\\iso.drwdot",
+  "views": [
+    "Front",
+    "Right",
+    "Isometric"
+  ]
+}

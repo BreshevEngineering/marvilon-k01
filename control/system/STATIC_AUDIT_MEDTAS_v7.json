@@ -1,0 +1,50 @@
+{
+  "schema": "k01_medtas_v7_static_audit",
+  "date": "2026-09-04",
+  "command_center": {
+    "html_present": true,
+    "server_present": true,
+    "auto_refresh_6s": true,
+    "event_ledger_ui": true,
+    "engineering_dossier_ui": true,
+    "derived_state_api": true,
+    "json_error_guard": true,
+    "no_python_runtime_dependency": true
+  },
+  "state_engine": {
+    "event_ledger": true,
+    "task_register": true,
+    "derived_eds": true,
+    "derived_rvm": true,
+    "evidence_hashes": true,
+    "first_unresolved_is_current": true
+  },
+  "current_evidence": {
+    "r1_build_pass": true,
+    "r1_verify_pass": true,
+    "r1_interference_pass": true,
+    "bom_hold": true
+  },
+  "drawing_v2": {
+    "source_present": true,
+    "brace_balance": true,
+    "a3_first_angle": true,
+    "section_view": true,
+    "autodimension": true,
+    "critical_table": true,
+    "title_table": true,
+    "quality_gate": true,
+    "local_sw2018_compile_verified": false,
+    "note": "Official SW2018 API signatures were checked for SetupSheet5, AutoDimension, CreateSectionViewAt5, swDwgTemplateA3size/swDwgPaperA3size, and ITableAnnotation Text2 availability. Local SW2018 interop remains final compile authority."
+  },
+  "git": {
+    "read_only_classifier": true,
+    "does_not_stage_or_commit": true,
+    "classifies_generated_and_cad": true
+  },
+  "t03": {
+    "workpackage_present": true,
+    "tolerance_candidate": true,
+    "tool_architecture": true
+  }
+}

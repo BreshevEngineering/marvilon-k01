@@ -1,0 +1,69 @@
+{
+  "schema": "k01_workpackage_v1",
+  "task_id": "T04",
+  "title": "J2 static O-ring material + compression envelope",
+  "status": "MEDIA_ENVELOPE_PARTIAL / FKM_CANDIDATE / COMPOUND_QUALIFICATION_OPEN",
+  "environment_facts": [
+    "MARV containment may contain toxic, hot and potentially explosive sample gas",
+    "protective purge gas is nitrogen",
+    "product scope includes wet metallurgical and potentially petrochemical service",
+    "exact universal list/concentration of media at J2 is not fully bounded in current documentation"
+  ],
+  "seal_baseline": {
+    "part_id": "K01-B-011",
+    "size": "16×1.5 metric O-ring",
+    "quality": "ISO 3601-1 class B dimensional quality or supplier equivalent",
+    "production_candidate": "post-cured low-outgassing FKM, nominal 75 Shore A",
+    "candidate_status": "PREFERRED_FOR_CURRENT_BOF_BASELINE / NOT RELEASED",
+    "reason": "current K01 evidence already uses FKM as the low-permeability baseline; current BOF release must also satisfy cost and supply-chain criteria",
+    "fallback": "FFKM 75A when the bounded media/temperature envelope cannot be approved for FKM",
+    "exact_compound": "OPEN — supplier compound, cure system, temperature/chemical compatibility and CoC required"
+  },
+  "gland_production_spec": {
+    "ID_mm": 16.0,
+    "radial_width_mm": "2.10 +0.10/0",
+    "depth_mm": "1.10 +0.05/0",
+    "corner_radius_mm": "0.30±0.20",
+    "nominal_OD_mm": 20.2,
+    "max_OD_mm": 20.4
+  },
+  "tolerance_stack": {
+    "o_ring_d2_mm": "1.50±0.08",
+    "nominal_squeeze_pct": 26.67,
+    "worst_squeeze_pct": [
+      19.01,
+      30.38
+    ],
+    "nominal_gland_fill_pct": 76.5,
+    "worst_gland_fill_pct": [
+      62.6,
+      84.88
+    ],
+    "interpretation": "Tighter machining tolerances keep worst-case gland fill within ≈61–85% while retaining a bounded squeeze range."
+  },
+  "compression_force_acceptance": {
+    "design_envelope_total_N": 300,
+    "status": "REQUIREMENT_NOT_MATERIAL_PROPERTY",
+    "method": "supplier calculator/data for exact compound plus platen compression qualification to the released gland gap across temperature envelope",
+    "reason": "total compression force is compound/hardness/temperature-dependent and must not be invented from geometry alone"
+  },
+  "release_tests": [
+    "freeze J2-local temperature envelope",
+    "freeze released process/cleaning media envelope",
+    "supplier compound compatibility statement/CoC for that envelope",
+    "compression force ≤300 N total at the worst qualified temperature in the released gland",
+    "leak test acceptance defined and passed",
+    "aging/compression-set/service interval disposition"
+  ],
+  "sources": [
+    "Parker O-Ring Handbook",
+    "Trelleborg O-Ring technical information / ISO 3601",
+    "SRC-K01-PFEIFFER-ELASTOMER-001",
+    "MARV protection concept / user manual / EIC application"
+  ],
+  "environment_control": {
+    "source": "K01_T04_MEDIA_ENVELOPE_v1.json",
+    "critical_hold": "J2-local temperature and complete released media envelope are not yet bounded by the current documents",
+    "rule": "No elastomer release from generic family name alone."
+  }
+}

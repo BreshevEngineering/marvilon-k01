@@ -1,0 +1,20 @@
+{
+  "schema": "k01.femm.screening_plan.v3",
+  "status": "READY_TO_PREPARE_SCREENING_MODEL",
+  "screening_now": [
+    "Use current CAD geometry as the geometric basis.",
+    "Use nominal B001 D8x8 reference geometry only as a SCREENING assumption.",
+    "Parameterize magnet remanence and coil ampere-turns/current density; do not disguise these as released production values.",
+    "Evaluate stroke positions 0, 5 and 10 mm plus the minimum-clearance end positions.",
+    "Record axial force, force coefficient and magnetic flux density in the can/follower critical regions.",
+    "Run mesh refinement until force change is acceptably small; record the criterion explicitly."
+  ],
+  "final_release_requires": [
+    "actual B001 lot D/L",
+    "supplier/lot Br(T), coercivity/demagnetization and temperature data",
+    "P015 production grade, wire, turns, fill, leads, resistance/current limits",
+    "final CAD fingerprint",
+    "mesh-convergence evidence",
+    "bench force-vs-position comparison"
+  ]
+}

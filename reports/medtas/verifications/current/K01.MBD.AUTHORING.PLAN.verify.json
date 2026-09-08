@@ -1,0 +1,19 @@
+{
+  "limitations": [
+    "MBD-AUTHORING-OPEN:K01-CHAR-P003-SEAT-ID",
+    "MBD-AUTHORING-OPEN:K01-CHAR-P004-OD",
+    "MBD-AUTHORING-OPEN:K01-CHAR-P008-M4-USABLE-DEPTH",
+    "MBD-AUTHORING-OPEN:K01-CHAR-P001-M4-MALE-LENGTH",
+    "MBD-AUTHORING-OPEN:K01-CHAR-A001-ROD-TRAVEL"
+  ],
+  "metrics": {
+    "blocking_characteristics": 5,
+    "rows": 5
+  },
+  "node_id": "K01.MBD.AUTHORING.PLAN",
+  "notes": "",
+  "schema": "medtas.verification_record.v1",
+  "verdict": "HOLD",
+  "verified_artifact_hash": "4e5efc9d67aaaff94966dd4269d4049dbae71c3f827f5e3922b831304e928d01",
+  "verified_state_hash": "63f01e0829524b9ff13760bf1b17fd34ab73921f0c89942102814dd5ae45df0d"
+}

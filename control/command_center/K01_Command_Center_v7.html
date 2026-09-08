@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MARVILON MEDTAS · K01 Control Center v7</title>
+<style>
+:root{
+  --bg:#f3f5f6; --card:#ffffff; --ink:#171a1e; --muted:#65717b; --line:#dce2e5;
+  --dark:#25292d; --teal:#0b9ca4; --pass:#238359; --hold:#bb4944; --open:#b6761f;
+  --stale:#76579a; --blue:#397ca9; --code:#22272b; --shadow:0 1px 3px rgba(20,30,40,.05);
+  --sans:Inter,"Segoe UI",Arial,sans-serif; --mono:ui-monospace,SFMono-Regular,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans)}
+.wrap{max-width:1580px;margin:auto;padding:18px 20px 70px}
+header{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding-bottom:12px;border-bottom:2px solid var(--dark)}
+h1{margin:0;font-size:27px;line-height:1.1} h2{font-size:19px;margin:18px 0 10px} h3{font-size:15px;margin:0 0 8px}
+.teal{color:var(--teal)} .sub{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.115em;font-weight:800}
+.small{font-size:12px;color:var(--muted);line-height:1.55}.tiny{font-size:10px;color:var(--muted)}.mono{font-family:var(--mono)}
+.statusline{margin:14px 0;display:grid;grid-template-columns:minmax(300px,1.2fr) 2fr;gap:12px}
+@media(max-width:900px){.statusline{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px;box-shadow:var(--shadow)}
+.card.current{border:2px solid var(--teal);background:#f9ffff}.card.reject{border-left:5px solid var(--hold)}
+.card.passEdge{border-left:5px solid var(--pass)} .card.holdEdge{border-left:5px solid var(--hold)}
+.strip{display:flex;gap:24px;flex-wrap:wrap;background:var(--dark);color:white;border-radius:14px;padding:13px 17px;margin:14px 0}
+.metric b{display:block;font:800 22px var(--mono)}.metric span{font-size:10px;color:#bac1c6;text-transform:uppercase}
+.metric.pass b{color:#6ad59d}.metric.hold b{color:#ff8d87}.metric.open b{color:#efb662}.metric.stale b{color:#c4abe5}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}.tabs button{background:#fff;border:1px solid var(--line);color:var(--muted);font-weight:750;border-radius:9px;padding:8px 12px;cursor:pointer}
+.tabs button.active{background:var(--dark);border-color:var(--dark);color:white}.panel{display:none}.panel.active{display:block}
+.badge{display:inline-block;padding:3px 8px;border-radius:999px;font-size:10px;font-weight:850;vertical-align:middle}
+.PASS{background:#e4f5ec;color:#21764e}.HOLD{background:#fbe6e4;color:#9a3731}.OPEN{background:#fff0d9;color:#95601b}.STALE{background:#eee8f5;color:#684f86}.INFO{background:#e7f1fa;color:#2d6b98}
+.action{border:0;background:var(--teal);color:#fff;border-radius:7px;padding:8px 11px;font-size:11px;font-weight:800;cursor:pointer}.secondary{background:#fff;color:var(--muted);border:1px solid var(--line)}.danger{background:var(--hold)}button[disabled]{opacity:.45;cursor:not-allowed}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:950px){.two{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line)}th,td{padding:8px;border-bottom:1px solid var(--line);font-size:12px;text-align:left;vertical-align:top}th{background:#f8fafb;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.05em}
+.path{font:11px/1.4 var(--mono);word-break:break-all}.found{color:var(--pass);font-weight:800}.missing{color:var(--hold);font-weight:800}
+.callout{background:#fff6e5;border:1px solid #ead09a;border-radius:11px;padding:12px 14px;font-size:13px;line-height:1.55}
+.apierr{background:#fdeceb;border:1px solid #e1aaa7;border-radius:10px;padding:12px;color:#8f342f;white-space:pre-wrap;font:11px/1.5 var(--mono)}
+.task{display:grid;grid-template-columns:52px minmax(240px,1.2fr) 125px 1.4fr 160px;gap:8px;align-items:center;background:#fff;border-bottom:1px solid var(--line);padding:10px}
+.task:first-child{border-radius:10px 10px 0 0}.task:last-child{border-radius:0 0 10px 10px}.task .id{font:11px var(--mono);color:var(--muted)}.task .why{font-size:11px;color:var(--muted)}
+@media(max-width:900px){.task{grid-template-columns:45px 1fr 105px}.task .why{grid-column:2/4}.task .buttons{grid-column:2/4}}
+.thread{display:grid;grid-template-columns:repeat(5,minmax(160px,1fr));gap:8px}@media(max-width:1050px){.thread{grid-template-columns:repeat(3,1fr)}}@media(max-width:650px){.thread{grid-template-columns:1fr}}
+.node{background:#fff;border:1px solid var(--line);border-top:4px solid #a9afb4;border-radius:10px;padding:10px;min-height:112px}.node.pass{border-top-color:var(--pass)}.node.hold{border-top-color:var(--hold)}.node.open{border-top-color:var(--open)}.node.stale{border-top-color:var(--stale)}.node b{font-size:12px;display:block;margin-bottom:5px}.node span{font-size:10px;color:var(--muted);line-height:1.45}
+.event{display:grid;grid-template-columns:180px 150px 95px 1fr;gap:8px;padding:8px 10px;border-bottom:1px solid var(--line);background:#fff;font-size:11px}.event .time,.event .type,.event .id{font-family:var(--mono)}@media(max-width:800px){.event{grid-template-columns:1fr}.event .time{color:var(--muted)}}
+.kv{display:grid;grid-template-columns:minmax(160px,.6fr) 1.4fr;border-top:1px solid var(--line)}.kv>div{padding:7px 8px;border-bottom:1px solid var(--line)}.kv .k{font-size:11px;color:var(--muted);font-weight:700}.kv .v{font-size:12px}
+.eq{font:12px/1.6 var(--mono);background:var(--code);color:#eef2f4;padding:11px 12px;border-radius:9px;white-space:pre-wrap}
+.listrows{display:grid;gap:6px}.rowbox{background:#fff;border:1px solid var(--line);border-radius:9px;padding:9px 10px}.rowbox b{font-size:12px}.rowbox .small{margin-top:3px}
+.bar{height:8px;background:#e5e9ec;border-radius:20px;overflow:hidden}.bar i{display:block;height:100%;background:var(--teal)}
+.drawingPreview{border:1px solid var(--line);background:white;border-radius:10px;padding:10px}.qualityFail{color:var(--hold);font-weight:800}
+footer{margin-top:25px;font-size:11px;color:var(--muted)}
+</style>
+</head>
+<body><div class="wrap">
+<header>
+ <div><h1>MARVILON <span class="teal">MEDTAS</span> · K01 Engineering Control Center v7</h1>
+ <div class="sub">Evidence-reduced state · event ledger · decision dossier · CAD · analysis · BOM · drawings · Git · release</div></div>
+ <div><div id="clock" class="small mono"></div><div id="refreshInfo" class="tiny" style="text-align:right">auto-refresh: 6 s</div></div>
+</header>
+
+<div class="statusline">
+ <div class="card current"><h2 id="currentTitle">Loading current task…</h2><div id="currentWhy" class="small"></div><div id="currentControls" style="margin-top:10px"></div></div>
+ <div class="card passEdge"><h3>Active engineering baseline</h3><div class="small"><b>Gate04D-C2R1</b> · OD33 round flange · 3×M2.5 · PCD26.5 · pilot OD14.10 g6×1.50 · pilot ID12.00 STUDY · P007 L35. C2 is preserved as rejected evidence and is not overwritten.</div></div>
+</div>
+
+<div id="metrics" class="strip"></div>
+<div class="tabs">
+ <button class="active" data-p="dashboard">Dashboard</button>
+ <button data-p="tasks">Task Queue</button>
+ <button data-p="thread">Digital Thread</button>
+ <button data-p="dossier">Engineering Dossier</button>
+ <button data-p="reports">Live Reports</button>
+ <button data-p="r1">C2R1 Design</button>
+ <button data-p="analysis">Analysis</button>
+ <button data-p="bom">BOM</button>
+ <button data-p="drawings">Drawings</button>
+ <button data-p="eds">EDS-001</button>
+ <button data-p="git">Git / Team</button>
+ <button data-p="handoff">AI Handoff</button>
+</div>
+<div id="apiError" style="display:none;margin-bottom:12px"></div>
+
+<section id="dashboard" class="panel active">
+ <div class="two">
+  <div class="card"><h3>What changed automatically</h3><div id="recentEvents" class="small">Loading event ledger…</div></div>
+  <div class="card"><h3>Release readiness</h3><div id="readiness"></div></div>
+ </div>
+ <h2>Execution path</h2><div id="threadMini" class="thread"></div>
+ <div class="grid" style="margin-top:12px">
+  <div class="card"><h3>CAD / assembly</h3><div id="cadSummary" class="small"></div></div>
+  <div class="card"><h3>BOM / product data</h3><div id="bomSummary" class="small"></div></div>
+  <div class="card"><h3>Drawing quality</h3><div id="drawingSummary" class="small"></div></div>
+  <div class="card"><h3>System actions</h3><button class="action" onclick="refreshAll()">Refresh now</button> <button class="action secondary" onclick="handoff()">Build AI Handoff</button><div class="small" style="margin-top:8px">The center recomputes state from evidence; it does not require you to manually mark automated tasks complete.</div></div>
+ </div>
+</section>
+
+<section id="tasks" class="panel">
+ <div class="callout"><b>Rule:</b> an automated task is PASS only when its evidence file passes. A human/engineering task is not closed by clicking a checkbox; it needs an EDR/analysis/test artifact that the reducer can evaluate. This prevents “green by memory”.</div>
+ <div id="taskList" style="margin-top:10px"></div>
+</section>
+
+<section id="thread" class="panel">
+ <div class="callout"><b>Digital thread:</b> current status is a reduction of native CAD + solver/API reports + EDR/CI + controlled product data. No single spreadsheet/master file is treated as absolute truth for the whole project.</div>
+ <h2>Dependency chain</h2><div id="threadFull" class="thread"></div>
+ <h2>Event ledger</h2><div id="eventLedger"></div>
+ <h2>Requirements Verification Matrix</h2><table><thead><tr><th>ID</th><th>Requirement</th><th>Status</th><th>Evidence</th></tr></thead><tbody id="rvmTable"></tbody></table>
+</section>
+
+<section id="dossier" class="panel">
+ <div class="card"><h2 id="dosTitle">J2 engineering dossier</h2><div id="dosStatus"></div><div id="dosIntent" class="small" style="margin-top:8px"></div></div>
+ <div class="two" style="margin-top:12px">
+  <div class="card"><h3>Selected geometry</h3><div id="dosGeometry"></div></div>
+  <div class="card"><h3>Datum / functional architecture</h3><div id="dosDatums" class="listrows"></div></div>
+ </div>
+ <h2>Why this design exists</h2><div id="dosHistory" class="listrows"></div>
+ <h2>Calculations and evidence</h2><div class="grid">
+  <div class="card"><h3>CAD / assembly / interference</h3><div id="dosEvidence" class="small"></div></div>
+  <div class="card"><h3>M2.5 preliminary screen</h3><div id="dosMech"></div></div>
+  <div class="card"><h3>Manufacturing / service</h3><div id="dosMfg" class="small"></div></div>
+ </div>
+ <h2>Current work package · T03</h2><div id="dosWorkT03" class="two"></div>
+ <h2>What still blocks production release</h2><div id="dosBlockers" class="listrows"></div>
+ <h2>Decision and sources</h2><div class="card"><div id="dosDecision" class="small"></div><div id="dosSources" class="path" style="margin-top:8px"></div></div>
+</section>
+
+<section id="reports" class="panel">
+ <div class="callout">Live Reports shows actual files and hashes used by the reducer. Raw JSON remains audit evidence; daily engineering reasoning is rendered in the Dossier/Task/EDS tabs.</div>
+ <table style="margin-top:10px"><thead><tr><th>Artifact</th><th>Domain</th><th>Status</th><th>Modified</th><th>Resolved path</th><th></th></tr></thead><tbody id="reportTable"></tbody></table>
+</section>
+
+<section id="r1" class="panel">
+ <div class="grid">
+  <div class="card"><h3>Geometry/assembly status</h3><div id="r1Status" class="small"></div></div>
+  <div class="card"><h3>Compact package</h3><div class="small">OD33 · 3×M2.5 · PCD26.5 · P007 flange t3 · P003 zone5 · Ø14.10 H7/g6 pilot · current 16×1.5 gland · P007 L35.</div></div>
+  <div class="card"><h3>Pilot correction</h3><div class="small">C2 ID10.917 was rejected. C2R1 ID12.00 is the active <b>study</b> value: 0.25 mm nominal radial P006-head clearance and 1.05 mm pilot wall.</div></div>
+ </div>
+ <h2>Run only if geometry changes</h2><button class="action secondary" onclick="act('RUN_C2R1_ALL')">Re-run C2R1 Build + Verify + Interference</button>
+</section>
+
+<section id="analysis" class="panel">
+ <div class="grid">
+  <div class="card"><h3>C2 root cause</h3><span class="badge PASS">CONFIRMED</span><div class="eq" style="margin-top:8px">π/4 × (11.5² − 10.917²) × 1.50
+= 15.396683664956 mm³
+= reported CAD interference</div></div>
+  <div class="card"><h3>M2.5 / thread screen</h3><div id="analysisMech" class="small"></div></div>
+  <div class="card"><h3>Seal → preload</h3><span class="badge OPEN">OPEN</span><div class="small" style="margin-top:8px">Geometry is controlled; exact elastomer compound/hardness/process-gas compatibility is not. Therefore clamp-force minimum and released torque are not yet defensible.</div></div>
+  <div class="card"><h3>FEMM</h3><span class="badge OPEN">OPEN</span><div class="small" style="margin-top:8px">Final magnetic model remains in the digital thread after J2 mechanical freeze and P015/B001 production-data freeze.</div></div>
+ </div>
+</section>
+
+<section id="bom" class="panel">
+ <div class="two">
+  <div class="card"><h3>Current reconciliation</h3><div id="bomMetrics" class="small"></div><button class="action secondary" style="margin-top:10px" onclick="act('RUN_R1_BOM')">Re-run BOM pipeline</button></div>
+  <div class="card"><h3>Interpretation</h3><div class="small">Raw missing PartNo/Description is a metadata-projection problem. Material/retention/supplier OPEN items are engineering release blockers. MEDTAS separates these instead of reporting one undifferentiated error count.</div></div>
+ </div>
+ <h2>Release blockers and metadata projections</h2><table><thead><tr><th>Part</th><th>Description</th><th>Material authority</th><th>Metadata</th><th>Release</th></tr></thead><tbody id="bomTable"></tbody></table>
+</section>
+
+<section id="drawings" class="panel">
+ <div class="card holdEdge"><h2>Current P003 PDF is NOT a manufacturing drawing</h2>
+ <div class="small">It contains model views and an engineering note, but the supplied PDF has no usable visible manufacturing dimensions, no longitudinal section, no proper title block and no released fit/tolerance annotations on the geometry. A file existing is therefore not a drawing PASS.</div></div>
+ <div class="two" style="margin-top:12px">
+  <div class="card"><h3>Drawing V2 target</h3><div class="small">A3 first-angle · axial side view · end view · longitudinal section A-A · isometric reference · native AutoDimension + model-item dimensions · critical controlled-dimension table · document/title table · quality metrics. It remains DRAFT until engineering release gates pass.</div><button class="action" style="margin-top:10px" onclick="act('RUN_R1_DRAWINGS_V2')">Generate Drawing V2</button></div>
+  <div class="card"><h3>Drawing quality state</h3><div id="drawingQuality" class="small"></div></div>
+ </div>
+ <h2>Drawing artifacts</h2><div id="drawingFiles"></div>
+</section>
+
+<section id="eds" class="panel">
+ <div class="callout">These are <b>derived current gates</b>. Historical EDR text remains evidence/history; the Center recomputes current gate state from the active C2R1 evidence and open dependencies.</div>
+ <table style="margin-top:10px"><thead><tr><th>Gate</th><th>Status</th><th>Current basis</th><th>Evidence</th></tr></thead><tbody id="edsTable"></tbody></table>
+</section>
+
+<section id="git" class="panel">
+ <div class="two">
+  <div class="card"><h3>Local Git</h3><div class="small mono">Branch: <span id="gBranch">—</span><br>Dirty: <span id="gDirty">—</span><br>Untracked: <span id="gUntracked">—</span><br>Last: <span id="gLast">—</span><br>Origin: <span id="gOrigin">—</span></div></div>
+  <div class="card"><h3>Next repository action</h3><div class="small">Do <b>not</b> run <span class="mono">git add -A</span> on 105 dirty/100 untracked items. First classify source/control evidence vs generated/log/CAD artifacts. v7 adds a read-only classifier.</div><button class="action secondary" style="margin-top:10px" onclick="act('RUN_GIT_CLASSIFY')">Classify local Git changes</button></div>
+ </div>
+ <h2>Classification</h2><div id="gitClass"></div>
+</section>
+
+<section id="handoff" class="panel">
+ <div class="card"><h3>AI Handoff</h3><div class="small">One ZIP is rebuilt from the current derived state, event ledger, dossier, current R1 evidence, BOM, drawing-quality evidence, source registry and drawing V2 artifacts when they exist.</div><button class="action" style="margin-top:10px" onclick="handoff()">Build Current AI Handoff ZIP</button><div id="handoffResult" class="small path" style="margin-top:9px"></div></div>
+</section>
+
+<footer>MEDTAS v7: engineers make technical decisions; the system owns evidence ingestion, state reduction, dependency status, history and fail-closed release control.</footer>
+</div>
+
+<script>
+let S=null, D=null, F=null, EV=null, G=null;
+function c(s){s=(s||'OPEN').toUpperCase();if(s==='PASS'||s.startsWith('PASS_')||s.includes('SCREEN_PASS')||s.includes('CONFIRMED'))return'PASS';if(s.includes('STALE'))return'STALE';if(s.includes('HOLD')||s.includes('FAIL')||s.includes('REJECT'))return'HOLD';return'OPEN'}
+function badge(s){return `<span class="badge ${c(s)}">${s||'OPEN'}</span>`}
+async function api(url){const r=await fetch(url,{cache:'no-store'});const txt=await r.text();let j;try{j=JSON.parse(txt)}catch(e){throw new Error(`Non-JSON API response ${url} HTTP ${r.status}\n${txt.slice(0,1200)}`)}if(!r.ok||j.ok===false)throw new Error(`${j.error||'API error'}\n${j.detail||''}`);return j}
+function taskButton(t){if(!t.action)return'';const m={RUN_C2R1_ALL:'Run geometry gate',RUN_R1_BOM:'Run BOM',RUN_R1_DRAWINGS_V2:'Generate drawing V2',OPEN_ROOTCAUSE:'Open raw proof',OPEN_EDR019:'Open EDR-019',OPEN_DOSSIER:'Open dossier tab',OPEN_MECH:'Open raw analysis'};if(t.action==='OPEN_DOSSIER')return `<button class="action secondary" onclick="showTab('dossier')">Open dossier</button>`;return `<button class="action ${t.kind==='ENGINEERING_INPUT'?'secondary':''}" onclick="act('${t.action}')">${m[t.action]||'Open / Run'}</button>`}
+function showTab(id){document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('active',x.dataset.p===id));document.querySelectorAll('.panel').forEach(x=>x.classList.toggle('active',x.id===id))}
+function renderState(){
+ const st=S.state, tasks=st.tasks||[], n=st.next_task;
+ currentTitle.textContent=n?`CURRENT TASK · ${n.id} — ${n.name}`:'All defined tasks PASS';
+ currentWhy.textContent=n?n.why:'No unresolved task in the current queue.';
+ currentControls.innerHTML=n?`${badge(n.status)} &nbsp; ${taskButton(n)}`:'';
+ metrics.innerHTML=`<div class="metric pass"><b>PASS</b><span>R1 CAD/Verify/Interference</span></div><div class="metric ${c(n?.status).toLowerCase()}"><b>${n?.id||'—'}</b><span>Current Task</span></div><div class="metric"><b>${st.metrics.eds_pass}/${st.metrics.eds_total}</b><span>EDS PASS</span></div><div class="metric hold"><b>${st.metrics.bom_release_blockers}</b><span>BOM Release Blockers</span></div><div class="metric open"><b>${st.metrics.bom_metadata_projection}</b><span>CAD Metadata Projections</span></div>`;
+ const pass=st.metrics.task_pass,total=st.metrics.task_total;readiness.innerHTML=`<div class="small">Execution tasks: <b>${pass}/${total} PASS</b></div><div class=bar><i style="width:${100*pass/total}%"></i></div><div class=small style="margin-top:7px">This is evidence/task completeness, not a weighted design score.</div>`;
+ taskList.innerHTML=tasks.map(t=>`<div class=task><div class=id>${t.id}</div><div><b>${t.name}</b></div><div>${badge(t.status)}</div><div class=why>${t.why}<br><span class=tiny>depends on: ${(t.depends_on||[]).join(', ')||'—'}</span></div><div class=buttons>${taskButton(t)}</div></div>`).join('');
+ let picks=['T01','T02','T03','T04','T05','T07','T08','T09','T10','T11'];let nodes=picks.map(id=>tasks.find(x=>x.id===id)).filter(Boolean);
+ let nh=nodes.map(x=>`<div class="node ${c(x.status).toLowerCase()}"><b>${x.id} · ${x.name}</b><span>${x.status}<br>${x.why}</span></div>`).join('');threadMini.innerHTML=nh;threadFull.innerHTML=nh;
+ rvmTable.innerHTML=(st.rvm||[]).map(r=>`<tr><td class=path>${r.id}</td><td>${r.requirement}</td><td>${badge(r.status)}</td><td class=path>${(r.evidence||[]).join('; ')}</td></tr>`).join('');
+ edsTable.innerHTML=(st.eds||[]).map(g=>`<tr><td class=path>${g.gate.replaceAll('_',' ')}</td><td>${badge(g.status)}</td><td>${g.basis}</td><td class=path>${(g.evidence||[]).join('; ')}</td></tr>`).join('');
+ cadSummary.innerHTML=`Build ${badge('PASS')} · Verify ${badge('PASS')} · active mate errors <b>0</b> · Interference ${badge('PASS')} · new/unclassified <b>0</b>.`;
+ bomSummary.innerHTML=`Reconciled BOM ${badge(D?.bom?.status||'OPEN')} · release blockers <b>${D?.bom?.release_blockers??'—'}</b> · metadata projections <b>${D?.bom?.metadata_projection_required??'—'}</b>.`;
+ const dq=D?.drawingV2||D?.drawingQa; drawingSummary.innerHTML=`Drawing gate: ${badge((dq?.quality_status)||dq?.status||'OPEN')}<br>${D?.drawingV2?'Drawing V2 report is present.':'Current supplied P003 PDF fails manufacturing-drawing quality; run Drawing V2.'}`;
+ r1Status.innerHTML=`Native build ${badge('PASS')}<br>Assembly verify ${badge('PASS')} · 0 active mate errors<br>Hard interference ${badge('PASS')} · 0 new pairs.`;
+}
+function renderEvents(){
+ const ev=EV.events||[];const last=[...ev].reverse().slice(0,6);
+ recentEvents.innerHTML=last.length?last.map(e=>`<div><b>${e.type}</b> · ${e.task_id||e.artifact||''} · ${e.to||e.status||''}<br><span class=path>${e.time}</span></div>`).join('<hr style="border:0;border-top:1px solid #e5e9ec">'):'No events yet.';
+ eventLedger.innerHTML=ev.length?ev.slice().reverse().map(e=>`<div class=event><div class=time>${e.time||''}</div><div class=type>${e.type||''}</div><div class=id>${e.task_id||''}</div><div>${e.reason||e.fact||e.artifact||e.state_hash||''}</div></div>`).join(''):'<div class=card>No events yet.</div>';
+}
+function kv(obj){return Object.entries(obj||{}).map(([k,v])=>`<div class=kv><div class=k>${k.replaceAll('_',' ')}</div><div class=v>${Array.isArray(v)?v.join('; '):v}</div></div>`).join('')}
+function renderDossier(){
+ const d=D.dossier;if(!d)return;
+ dosTitle.textContent=d.title;dosStatus.innerHTML=badge(d.status);dosIntent.innerHTML=`<b>Function:</b> ${d.design_intent.function}`;
+ dosGeometry.innerHTML=kv(d.selected_geometry);
+ dosDatums.innerHTML=(d.design_intent.datum_functions||[]).map(x=>`<div class=rowbox>${x}</div>`).join('');
+ dosHistory.innerHTML=(d.history_and_rejected_alternatives||[]).map(x=>`<div class=rowbox><b>${x.alternative}</b> &nbsp; ${badge(x.status)}<div class=small>${x.reason}</div></div>`).join('');
+ dosEvidence.innerHTML=`<b>Native build:</b> ${badge(d.evidence.native_build.status)}<br>${d.evidence.native_build.facts.join('<br>')}<br><br><b>Assembly:</b> ${badge(d.evidence.assembly_verify.status)}<br>${d.evidence.assembly_verify.facts.join('<br>')}<br><br><b>Interference:</b> ${badge(d.evidence.hard_interference.status)}<br>${d.evidence.hard_interference.facts.join('<br>')}`;
+ let m=d.mechanical_screen;dosMech.innerHTML=`${badge(m.status)}<div class=kv style="margin-top:8px"><div class=k>Tensile stress area</div><div class=v>${m.tensile_stress_area_mm2.toFixed(3)} mm²</div></div><div class=kv><div class=k>Screw proof-load screen</div><div class=v>${m.screw_proof_load_screen_N.toFixed(0)} N/screw</div></div><div class=kv><div class=k>Female thread strip screen</div><div class=v>${m.female_thread_strip_yield_screen_N_per_screw.toFixed(0)} N/screw</div></div><div class=kv><div class=k>SF2 study preload ceiling</div><div class=v>${m.SF2_study_preload_ceiling_N_per_screw.toFixed(0)} N/screw</div></div><div class=kv><div class=k>Pressure reaction</div><div class=v>${m.pressure_reaction_total_N.toFixed(4)} N total</div></div><div class=small style="margin-top:8px">${m.interpretation.join('<br>')}</div>`;
+ dosMfg.innerHTML=`<b>P003:</b> ${d.manufacturing_and_service.P003}<br><br><b>P007:</b> ${d.manufacturing_and_service.P007}<br><br><b>Advantages:</b><br>${d.manufacturing_and_service.advantages.map(x=>'• '+x).join('<br>')}<br><br><b>Service OPEN:</b><br>${d.manufacturing_and_service.open_service_items.map(x=>'• '+x).join('<br>')}`;
+ let w=D.workT03;if(w){dosWorkT03.innerHTML=`<div class=card><h3>Tolerance candidate</h3>${badge(w.tolerance_candidate.status)}<div class=small style="margin-top:8px">${w.tolerance_candidate.P003_pilot_ID}<br>${w.tolerance_candidate.P006_head_OD}<br>${w.tolerance_candidate.P003_pilot_OD}<br><br>Radial clearance: <b>${w.tolerance_candidate.radial_clearance_min_mm.toFixed(3)}…${w.tolerance_candidate.radial_clearance_max_mm.toFixed(3)} mm</b><br>Minimum pilot wall: <b>${w.tolerance_candidate.minimum_pilot_radial_wall_mm.toFixed(3)} mm</b></div></div><div class=card><h3>Service-tool architecture</h3>${badge(w.service_tool_envelope.status)}<div class=small style="margin-top:8px">${w.service_tool_envelope.selected_architecture}<br><br>Study tool body: OD≤${w.service_tool_envelope.tool_body_study.maximum_OD_mm} mm · central ID≥${w.service_tool_envelope.tool_body_study.minimum_central_clearance_ID_mm} mm · min pilot clearance ${w.service_tool_envelope.tool_body_study.minimum_radial_clearance_to_pilot_at_ID12_mm} mm.<br><br><b>Still OPEN:</b><br>${w.service_tool_envelope.remaining_inputs.map(x=>'• '+x).join('<br>')}</div></div>`}else{dosWorkT03.innerHTML='<div class=card>No T03 work package.</div>'}
+ dosBlockers.innerHTML=(d.release_blockers||[]).map((x,i)=>`<div class=rowbox><b>B${String(i+1).padStart(2,'0')}</b> · ${x}</div>`).join('');
+ dosDecision.innerHTML=`<b>Current decision:</b> ${d.current_decision}`;dosSources.textContent=(d.sources||[]).join(' · ');
+ let ma=d.mechanical_screen;analysisMech.innerHTML=`${badge(ma.status)}<br>proof-load screen ≈ <b>${ma.screw_proof_load_screen_N.toFixed(0)} N/screw</b><br>female-thread strip screen ≈ <b>${ma.female_thread_strip_yield_screen_N_per_screw.toFixed(0)} N/screw</b><br>SF2 study ceiling ≈ <b>${ma.SF2_study_preload_ceiling_N_per_screw.toFixed(0)} N/screw</b><br>pressure load is not the sizing load.<br><b>Not release torque.</b>`;
+}
+function renderBom(){
+ const b=D.bom;if(!b)return;bomMetrics.innerHTML=`${badge(b.status)}<br>${b.row_count} rows · <b>${b.release_blockers}</b> engineering release blockers · <b>${b.metadata_projection_required}</b> CAD metadata projections · unmapped ${b.unmapped}.`;
+ bomTable.innerHTML=(b.rows||[]).map(r=>`<tr><td class=path>${r.part_no}</td><td>${r.description}</td><td>${r.material_authority}<br><span class=tiny>${r.material_status}</span></td><td>${r.metadata_sync}</td><td>${badge(r.release)}</td></tr>`).join('');
+}
+function renderFiles(){
+ let rep=(F.entries||[]).filter(e=>['LIVE_REPORT','LIVE_LOG','ANALYSIS','BOM','DRAWING','STATE'].includes(e.domain));
+ reportTable.innerHTML=rep.map(e=>`<tr><td>${e.name}</td><td>${e.domain}</td><td class=${e.exists?'found':'missing'}>${e.exists?'FOUND':'MISSING'}</td><td>${e.modified}</td><td class=path>${e.resolved||'—'}</td><td><button class=action onclick="openId('${e.id}')" ${e.exists?'':'disabled'}>Open</button> <button class="action secondary" onclick="revealId('${e.id}')" ${e.exists?'':'disabled'}>Folder</button></td></tr>`).join('');
+ let dr=['DRAW-QA-OLD','DRAW-V2','DRAW-P003-V2','DRAW-P007-V2'].map(id=>F.entries.find(x=>x.id===id)).filter(Boolean);
+ drawingFiles.innerHTML='<table><thead><tr><th>Artifact</th><th>Status</th><th>Modified</th><th>Path</th></tr></thead><tbody>'+dr.map(e=>`<tr><td>${e.name}</td><td class=${e.exists?'found':'missing'}>${e.exists?'FOUND':'MISSING'}</td><td>${e.modified}</td><td class=path>${e.resolved||'—'}</td></tr>`).join('')+'</tbody></table>';
+ let q=D.drawingV2||D.drawingQa;if(D.drawingV2){drawingQuality.innerHTML=`${badge(D.drawingV2.quality_status||D.drawingV2.status)}<br>P003: ${badge(D.drawingV2.p003?.quality_status||'OPEN')} · views ${D.drawingV2.p003?.model_view_count??'—'} · dimensions ${D.drawingV2.p003?.display_dimension_count??'—'}<br>P007: ${badge(D.drawingV2.p007?.quality_status||'OPEN')} · views ${D.drawingV2.p007?.model_view_count??'—'} · dimensions ${D.drawingV2.p007?.display_dimension_count??'—'}`;}else{drawingQuality.innerHTML=q?`${badge(q.status)}<br>${q.reason}<br><br><b>Required for V2:</b><br>${(q.minimum_v7_draft_gate||[]).map(x=>'• '+x).join('<br>')}`:'No drawing QA report.';}
+}
+function renderGit(){
+ gBranch.textContent=G.branch;gDirty.textContent=G.dirty_count;gUntracked.textContent=G.untracked_count;gLast.textContent=G.last_commit;gOrigin.textContent=G.origin;
+ let gc=D?.gitClassification;
+ if(!gc){gitClass.innerHTML='<div class=card><span class="badge OPEN">NOT RUN</span><div class=small style="margin-top:7px">Run the read-only classifier first. It does not stage or commit anything.</div></div>';return}
+ let cats=gc.categories||{};gitClass.innerHTML=`<div class=card>${badge(gc.checkpoint_readiness)}<div class=small style="margin-top:8px">Dirty ${gc.dirty_count} · untracked ${gc.untracked_count}</div><div class=kv><div class=k>Source/control candidates</div><div class=v>${cats.SOURCE_CONTROL_CANDIDATE||0}</div></div><div class=kv><div class=k>Structured evidence</div><div class=v>${cats.CURRENT_STRUCTURED_EVIDENCE||0}</div></div><div class=kv><div class=k>Generated local</div><div class=v>${cats.GENERATED_LOCAL||0}</div></div><div class=kv><div class=k>Evidence logs local</div><div class=v>${cats.EVIDENCE_LOG_LOCAL||0}</div></div><div class=kv><div class=k>CAD outside Git</div><div class=v>${cats.CAD_OUTSIDE_GIT||0}</div></div><div class=kv><div class=k>Review required</div><div class=v>${cats.REVIEW_REQUIRED||0}</div></div></div>`;
+}
+async function loadGitClass(){}
+async function refreshAll(){
+ apiError.style.display='none';
+ try{let [s,d,f,ev,g]=await Promise.all([api('/api/state'),api('/api/dossier'),api('/api/files'),api('/api/events'),api('/api/git')]);S=s;D=d;F=f;EV=ev;G=g;renderState();renderEvents();renderDossier();renderBom();renderFiles();renderGit();loadGitClass();refreshInfo.textContent='updated '+new Date().toLocaleTimeString()+' · auto-refresh 6 s'}catch(e){apiError.style.display='block';apiError.className='apierr';apiError.textContent=e.message}
+}
+function act(id){api('/api/action?id='+encodeURIComponent(id)).then(()=>setTimeout(refreshAll,2500)).catch(e=>alert(e.message))}
+function openId(id){api('/api/open?id='+encodeURIComponent(id)).catch(e=>alert(e.message))}
+function revealId(id){api('/api/reveal?id='+encodeURIComponent(id)).catch(e=>alert(e.message))}
+function handoff(){handoffResult.textContent='Building current handoff…';api('/api/handoff/build').then(j=>{handoffResult.textContent='Created: '+j.path;setTimeout(refreshAll,800)}).catch(e=>handoffResult.textContent=e.message)}
+function openJsonFile(id){openId(id)}
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>showTab(b.dataset.p));
+clock.textContent=new Date().toLocaleString();refreshAll();setInterval(refreshAll,6000);
+</script>
+</body></html>

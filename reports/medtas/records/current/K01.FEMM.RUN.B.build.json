@@ -1,0 +1,10 @@
+{
+  "schema": "medtas.build_record.v1",
+  "node_id": "K01.FEMM.RUN.B",
+  "built_state_hash": "58079046fd211309065796140b239742e1ccc0a158310d1d4966c735ae3a201e",
+  "artifact_hash": "b0aaaa15a0ac7968049d10e557d7650a8de113d92f8cd33d24cac7d4826d5edd",
+  "producer": {
+    "tool": "MEDTAS evidence binding",
+    "source": "completed FEMM current-position run"
+  }
+}

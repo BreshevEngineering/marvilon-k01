@@ -1,0 +1,10 @@
+{
+  "schema": "medtas.build_record.v1",
+  "node_id": "K01.EVIDENCE.GATE04E.REPORT",
+  "built_state_hash": "0fc7d52a8f0d9b3c1e8fbe4db324401f75b90a218fb8ad451f8f06a364c48272",
+  "artifact_hash": "e3d852c30827d2ee909d6a4040f689add6d05af61f553435c2a63771bd7d7277",
+  "producer": {
+    "tool": "MEDTAS evidence registry",
+    "stage": "formal_report"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "k01.tpd_automation_architecture.v1",
+  "title": "K01 Professional Technical Product Definition / Drawing Compiler",
+  "current_v3_disposition": "REJECTED_FOR_PRODUCTION / RETAIN_AS_NEGATIVE_EVIDENCE",
+  "reason_for_rejection": [
+    "automatic view/dimension import created repeated and poorly organized dimensions",
+    "visible dimensions contradict controlled release characteristics in the generated PDFs",
+    "title block and notes are incomplete for a production drawing",
+    "critical fits/GD&T are not consistently represented by native drawing annotations tied to the actual model features",
+    "drawing hierarchy does not reflect manufacturing and inspection sequence"
+  ],
+  "source_methodology": [
+    "Manual of Engineering Drawing — functional dimensioning, datum-based dimensioning, production drawing practice, positional tolerancing",
+    "Mechanical Tolerance Stackup and Analysis — functional dimensioning, worst-case stacks, assembly shift, datum/position relationships"
+  ],
+  "compiler_pipeline": [
+    "1. Requirements/functional characteristic IDs",
+    "2. Released native CAD + model feature map",
+    "3. Datum Reference Frame definition",
+    "4. Worst-case tolerance stack report",
+    "5. Drawing Definition JSON: views, characteristics, native model dimensions, GD&T, hole/thread callouts, notes, inspection method",
+    "6. Corporate SOLIDWORKS DRWDOT template",
+    "7. Native SOLIDWORKS drawing writer — views/sections/details only from Drawing Definition",
+    "8. Native annotations: Hole Callout / datums / feature control frames / surface-finish / weld/process symbols",
+    "9. Deterministic annotation-lane layout; no AutoDimension",
+    "10. Semantic cross-check: no contradictory duplicate dimensions; every release characteristic appears exactly once",
+    "11. Visual review and manufacturing/inspection review",
+    "12. Release PDF + SLDDRW + hash-bound Drawing Definition"
+  ],
+  "implementation_rules": [
+    "No engineering number may be hard-coded in HTML or drawing-layout code.",
+    "A dimension value comes from native model data or the controlled requirement/characteristic object.",
+    "For hole patterns use true/basic dimensions plus positional tolerance rather than chained coordinate dimensions when functionally appropriate.",
+    "Dimensioning shall follow the manufacturing datum/process sequence rather than expose every sketch radius.",
+    "Non-rigid/thin P007 shall have free-state/assembly-state requirements explicitly decided if needed.",
+    "A drawing generator may return HOLD_DRAWING_DEFINITION; it must never fabricate a tolerance to complete a sheet."
+  ],
+  "P003_release_view_strategy": [
+    "primary longitudinal section through J2/service axis",
+    "front J2 end view",
+    "detail view of pilot + O-ring gland if required for readable tolerances",
+    "small isometric reference only",
+    "no duplicated secondary orthographic view unless it conveys a unique manufacturing characteristic"
+  ],
+  "P007_release_view_strategy": [
+    "primary longitudinal section showing thin-can wall, locator depth and flange",
+    "J2 end view for clearance-hole pattern",
+    "small isometric reference",
+    "explicit released OD/ID or wall-thickness tolerancing tied to structural/manufacturing evidence"
+  ],
+  "next_action": "Do not generate another production drawing until unresolved P003/P007 release characteristics are frozen and the Drawing Definition compiler is implemented."
+}

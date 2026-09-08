@@ -1,0 +1,38 @@
+{
+  "schema": "k01.tolerance_seed.v1",
+  "purpose": "Controlled seed of already-established K01 functional chains. It does not invent missing manufacturing tolerances.",
+  "chains": [
+    {
+      "chain_id": "K01-TOL-P004-SEAT",
+      "function": "P004 front guide must remain a slip fit in P003; full-length interference is prohibited.",
+      "nominal": {"P003_seat_ID_mm": 6.60, "P004_OD_mm": 6.54, "diametral_clearance_mm": 0.06},
+      "acceptance": {"type": "positive_clearance"},
+      "release_tolerance_state": "OPEN",
+      "source_basis": "K01 project control v22"
+    },
+    {
+      "chain_id": "K01-TOL-P002-AXIAL-FLOAT",
+      "function": "P002 rear guide axial float after P006 is fully seated.",
+      "nominal": {"target_mm": 0.06},
+      "acceptance": {"min_mm": 0.04, "max_mm": 0.08},
+      "release_tolerance_state": "PARTIALLY_DEFINED",
+      "source_basis": "K01 project control v22"
+    },
+    {
+      "chain_id": "K01-TOL-P001-P008-M4-BOTTOM",
+      "function": "P001 M4 male thread must shoulder and must not bottom in P008 blind female thread.",
+      "nominal": {"male_length_mm": 3.50, "female_usable_depth_mm": 4.00, "bottom_clearance_mm": 0.50},
+      "acceptance": {"type": "positive_bottom_clearance"},
+      "release_tolerance_state": "OPEN",
+      "source_basis": "K01 project control v22"
+    },
+    {
+      "chain_id": "K01-TOL-ROD-TRAVEL",
+      "function": "Functional rod travel between metallic hard-stop states.",
+      "nominal": {"functional_travel_mm": 10.00},
+      "acceptance": {"baseline_mm": 10.00},
+      "release_tolerance_state": "OPEN",
+      "source_basis": "K01 project control v22"
+    }
+  ]
+}

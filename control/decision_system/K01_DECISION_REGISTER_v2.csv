@@ -1,0 +1,20 @@
+﻿EDR_ID,Title,Subsystem,Class,Status,Baseline,Rationale,NextEvidence
+EDR-001,J2 removable service architecture,J2,A,DECIDED / FORMALIZATION OPEN,Removable static-sealed joint; permanent weld rejected,Service access to P006/follower is a system requirement,Backfill full evidence links
+EDR-002,J2 Ø14.10 H7/g6 pilot,J2,B,VERIFIED CANDIDATE,"Ø14.10 H7/g6, 1.50/1.70",Uses actual P007 locator and leaves 0.20 bottom clearance,Re-verify in C2
+EDR-003,J2 clamp fastener/pattern,J2,B,REOPENED,Gate04C 3×M3/PCD28 → study 3×M2.5/PCD26.5,Pressure load does not size screws; service/seal/thread issues govern,C2 strength/thread/service evidence
+EDR-004,J2 O-ring/gland,J2,B,PARTIAL,16×1.5; ID16.00×W2.10×D1.10,Limited-compression static face seal candidate,Elastomer chemistry + leak validation
+EDR-005,J2 flange geometry,J2,B,C2 REJECTED / C2R1 ACTIVE,OD33/3×M2.5 retained; pilot ID10.917→ID12.00 study,C2 interference root cause exactly proven against P006 head,C2R1 build/verify/interference
+EDR-006,P007 wall 0.30,P007,B,PARTIAL,OD10/ID9.4,Static/buckling screening PASS historically,Manufacturing/ovality/thermal + post-C2 refresh
+EDR-007,P008/P007 radial clearance,Follower,B,PARTIAL,0.30 mm radial,Passes geometric screen,Thermal/runout/misalignment/debris sensitivity
+EDR-008,J1 A/B/C datum architecture,J1,A,PARTIAL,A face + Ø10 pilot + C clocking,Separates axial/radial/angular location,Gate04B native C + Long Run route
+EDR-009,P017 relieved/diamond locator,J1,B,CAD OPEN,Relieved C locator,Avoids overconstraint because B already controls axis,Press fit / manufacturing / inspection
+EDR-010,P006 M12×1 retaining plug,P006,B,PARTIAL,M12×1×6,Packaging/service concept retained,Tool feature + galling/service-cycle review
+EDR-011,P014 retaining ring,P014,B,OPEN,1.4310/AISI301 candidate,Spring concept not production frozen,Material/temper/fatigue/temp/process
+EDR-012,P015 coil/bobbin,Actuator,A,OPEN,Current v1 geometry,Keep bobbin size for current magnetic study,PPS/winding/leads/thermal/electrical
+EDR-013,B001 SmCo selection,Actuator,B,OPEN,Sm2Co17/S280 candidate,Temperature-capable screening family,Supplier lot Br(T)/tol/temp data
+EDR-014,B001 retention,Actuator,B,OPEN,mechanical/adhesive concept,Laser weld not preferred; no magnet preload,Adhesive process / thermal cycle / pull-out / cleanliness
+EDR-015,Rod/guide bushing tribology,Guidance,B,PARTIAL,316L rod + polymer bushing baseline,Low-friction guidance architecture,"Final polymer, creep/wear/thermal clearance"
+EDR-016,Hermetic magnetic actuation principle,System,A,BASELINE / FORMAL EDR NEEDED,stationary metal can + magnetic coupling,Avoids moving shaft penetration,Backfill comparison vs bellows/dynamic shaft feedthrough
+EDR-017,Stainless fastener / anti-galling strategy,J1/J2,B,OPEN,A4 candidate,clean/corrosion compatible but service galling risk exists,grade/finish/lube/torque/preload/service cycles
+EDR-018,SW2018→SW2026 migration,Configuration,A,PLANNED,"2018 until freeze, 2026 after",Avoid mixed native CAD generations during unstable design,migration clone/fingerprint/rollback procedure
+EDR-019,J2 pilot inner clearance around P006 head,J2/P006,B,C2R1 ACTIVE,Pilot ID12.00 study,Eliminate exact C2 head/pilot collision while retaining 1.05 mm wall,C2R1 native build/verify/interference + tolerance/tool-access

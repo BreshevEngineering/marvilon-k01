@@ -1,0 +1,65 @@
+{
+  "schema": "k01_gate04d_c2_design_input_v1",
+  "status": "STUDY INPUT / NOT RELEASED",
+  "purpose": "Compact production J2 study while preserving verified Gate04C functional architecture",
+  "P003": {
+    "material": "AISI 316L / EN 1.4404",
+    "flange_OD_mm": 33.0,
+    "flange_depth_inward_mm": 5.0,
+    "pilot_OD_mm": 14.1,
+    "pilot_fit": "g6",
+    "pilot_L_mm": 1.5,
+    "gland_ID_mm": 16.0,
+    "gland_OD_nominal_mm": 20.2,
+    "gland_depth_mm": 1.1,
+    "thread_requirement": "M2.5x0.45-6H",
+    "tap_drill_screen_mm": 2.05
+  },
+  "P007": {
+    "material": "AISI 316L / EN 1.4404",
+    "overall_L_mm": 35.0,
+    "flange_OD_mm": 33.0,
+    "flange_depth_inward_mm": 3.0,
+    "locator_ID_mm": 14.1,
+    "locator_fit": "H7",
+    "thin_OD_mm": 10.0,
+    "thin_ID_mm": 9.4,
+    "clearance_hole_screen_mm": 2.9
+  },
+  "J2": {
+    "pattern_qty": 3,
+    "PCD_mm": 26.5,
+    "seed_angle_deg_local": 30.0,
+    "equal_spacing_deg": 120.0,
+    "seal": "16x1.5 metric O-ring",
+    "gland_OD_design_max_mm": 20.6,
+    "inner_ligament_screen_mm": 1.5,
+    "outer_ligament_screen_mm": 1.8,
+    "fastener_family": "ISO4762 M2.5 A4 candidate",
+    "fastener_length": "OPEN — stack/service check required",
+    "torque": "OPEN"
+  },
+  "must_preserve": [
+    "metal-face axial datum",
+    "D14.10 pilot/locator radial datum",
+    "one hole-axis clocking mate",
+    "P007 L35",
+    "P007 OD10/ID9.4 thin zone",
+    "removable/serviceable architecture"
+  ],
+  "mandatory_checks": [
+    "native CAD build",
+    "assembly mates",
+    "interference/tool access",
+    "thread engagement/stripping",
+    "head bearing/local flange bending",
+    "seal separation/compression",
+    "thermal/preload",
+    "service/galling",
+    "P007 static refresh",
+    "P007 buckling refresh",
+    "availability/BOM",
+    "technology/inspection",
+    "EDR-003/005 update"
+  ]
+}

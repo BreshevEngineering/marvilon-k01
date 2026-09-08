@@ -1,0 +1,66 @@
+{
+  "schema": "k01_tpd_drawing_assurance_standard_v1",
+  "name": "MEDTAS TPD / Drawing Assurance Module",
+  "status": "ACTIVE",
+  "design_principles": [
+    "Native SOLIDWORKS 3D defines nominal geometry; the 2D production drawing defines/references allowable variation, functional relationships, material/process and inspection requirements.",
+    "No AutoDimension dump. Dimensions are selected from function/manufacturing/inspection intent.",
+    "Every release-critical characteristic gets a unique characteristic ID, source parameter, tolerance/fit/GD&T, view/section, and verification method.",
+    "Datums follow assembly function; fasteners that only clamp are not used as redundant radial datums.",
+    "Tolerance chains are solved before tolerances are frozen on the drawing.",
+    "Drawing PASS requires semantic completeness plus visual review; existence of PDF/SLDDRW is not PASS."
+  ],
+  "source_basis": [
+    "Manual of Engineering Drawing, chapters 16, 21-29, 38",
+    "Mechanical Tolerance Stackup and Analysis, chapters 2, 7, 9, 13-19"
+  ],
+  "drawing_layers": [
+    "IDENTITY",
+    "VIEWS_SECTIONS",
+    "DATUMS_GDT",
+    "FUNCTIONAL_DIMENSIONS",
+    "MANUFACTURING_CALLOUTS",
+    "INSPECTION_CHARACTERISTICS",
+    "MATERIAL_SURFACE",
+    "PROCESS_NOTES",
+    "REVISION_APPROVAL"
+  ],
+  "quality_gates": {
+    "semantic": [
+      "all required characteristic IDs present",
+      "no missing tolerance/fit on release characteristic",
+      "all datum references resolve",
+      "all source variables resolve",
+      "all inspection methods assigned",
+      "no duplicate/conflicting controlled dimension"
+    ],
+    "visual": [
+      "no view overlap",
+      "no dimension/note overlap at plotted scale",
+      "section exposes internal geometry",
+      "text readable at A3",
+      "title/revision block readable",
+      "critical dimensions adjacent to relevant view or mapped to a feature table"
+    ],
+    "release": [
+      "technical filter applicable gates pass",
+      "drawing state RELEASED only after human visual approval + linter PASS + native PDF/SLDDRW pair"
+    ]
+  },
+  "delivery_package": {
+    "production_definition": [
+      "native SOLIDWORKS SLDPRT/SLDASM under CAD configuration control",
+      "neutral STEP for supplier/interchange review",
+      "SLDDRW + PDF technical product specification",
+      "drawing-intent characteristic JSON",
+      "inspection characteristic list"
+    ],
+    "principle": "Model and drawing are complementary authorities: model carries nominal topology/geometry; released drawing carries allowable variation, functional datum relationships, material/process/inspection requirements."
+  },
+  "automatic_layout_policy": {
+    "AutoDimension": "PROHIBITED_FOR_RELEASE_DRAWINGS",
+    "allowed": "model dimensions deliberately MarkedForDrawing + explicit controlled release characteristics",
+    "layout": "SOLIDWORKS initial placement followed by mandatory semantic lint and visual approval",
+    "fallback": "If an API cannot create an unambiguous GD&T or feature callout reliably in SW2018, keep it as a controlled characteristic and hold drawing release until it is explicitly placed in native SLDDRW."
+  }
+}

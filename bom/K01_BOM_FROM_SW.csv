@@ -1,0 +1,14 @@
+﻿PartNo,Qty,Description,MakeBuy,MaterialSpec,SWMaterial,Revision,LifecycleStatus,File,Source
+K01-B-001,1,Internal SmCo Magnet,BUY,Sm2Co17 / S280,,,SELECTED CANDIDATE / LOT DATA OPEN,D:\Marvilon\K01\cad\parts\K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.SLDPRT,ASSEMBLY
+K01-P-001,1,,MAKE,,,,,D:\Marvilon\K01\cad\parts\K01-P-001_Calibration_Rod.SLDPRT,ASSEMBLY
+K01-P-002,1,,MAKE,,,,,D:\Marvilon\K01\cad\parts\K01-P-002_Guide_Bushing.SLDPRT,ASSEMBLY
+K01-P-003,1,Cartridge Body,MAKE,AISI 316L / EN 1.4404,,,ACTIVE / P003-P016 A+B INTERFACE IMPLEMENTED,D:\Marvilon\K01\cad\parts\K01-P-003_Cartridge_Body.SLDPRT,ASSEMBLY
+K01-P-004,1,,MAKE,,,,,D:\Marvilon\K01\cad\parts\K01-P-004_Front_Guide_Bushing.SLDPRT,ASSEMBLY
+K01-P-006,1,,MAKE,,,,,D:\Marvilon\K01\cad\parts\K01-P-006_Retaining_Plug.SLDPRT,ASSEMBLY
+K01-P-007,1,Hermetic Magnetic Can,MAKE,AISI 316L / EN 1.4404,,,ACTIVE / NEXT MAJOR DESIGN GATE,D:\Marvilon\K01\cad\parts\K01-P-007_Hermetic_Magnetic_Can.SLDPRT,ASSEMBLY
+K01-P-008,1,,MAKE,,,,,D:\Marvilon\K01\cad\parts\K01-P-008_Internal_Magnetic_Follower.SLDPRT,ASSEMBLY
+K01-P-009,1,,MAKE,,,,,D:\Marvilon\K01\cad\parts\K01-P-009_Rear_Stop_Washer.SLDPRT,ASSEMBLY
+K01-P-013,1,Follower End Cap,MAKE,AISI 316L / EN 1.4404,,,ACTIVE / RETENTION PROCESS QUALIFICATION OPEN,D:\Marvilon\K01\cad\parts\K01-P-013_Follower_End_Cap.SLDPRT,ASSEMBLY
+K01-P-014,1,Front Guide Retaining Ring / IN Stop,MAKE,OPEN; 1.4310 / AISI 301 candidate,,,ACTIVE / MATERIAL OPEN,D:\Marvilon\K01\cad\parts\K01-P-014_Front_Guide_Retaining_Ring.SLDPRT,ASSEMBLY
+K01-P-015,1,Dual Coil Bobbin,MAKE,Prototype PLA; production OPEN,,,ACTIVE PROTOTYPE / PRODUCTION MATERIAL OPEN,D:\Marvilon\K01\cad\parts\K01-P-015_Dual_Coil_Bobbin.SLDPRT,ASSEMBLY
+K01-P-016,1,Long Run Interface Boss,MAKE,AISI 316L assigned in current CAD; compatibility with production Long Run material/weld route OPEN,,,ACTIVE / P003-P016 A+B INTERFACE IMPLEMENTED / LONG RUN INSTALLATION OPEN,D:\Marvilon\K01\cad\parts\K01-P-016_Long_Run_Interface_Boss.SLDPRT,ASSEMBLY

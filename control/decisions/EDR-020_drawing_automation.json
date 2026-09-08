@@ -1,0 +1,22 @@
+{
+  "schema": "k01.edr.v1",
+  "id": "EDR-020",
+  "title": "Reject Drawing V3 and replace ad-hoc drawing automation with TPD compiler",
+  "status": "DECIDED",
+  "decision": "K01 Drawing V3 PDFs are not eligible for production release. Retain them as negative evidence. Future drawings shall be compiled from requirements + released CAD + tolerance/GD&T definition using native SOLIDWORKS drawing objects and a controlled DRWDOT template.",
+  "rationale": "The V3 outputs contain contradictory visible/release dimensions and excessive model-derived annotations; these defects cannot be solved by additional visual polishing.",
+  "affected": [
+    "T09",
+    "P003 drawing",
+    "P007 drawing",
+    "Drawing Assurance"
+  ],
+  "evidence": [
+    "K01-D-003_K01-P-003_C2R1_TPD_V3.PDF",
+    "K01-D-006_K01-P-007_C2R1_TPD_V3.PDF"
+  ],
+  "sources": [
+    "Manual of Engineering Drawing",
+    "Mechanical Tolerance Stackup and Analysis"
+  ]
+}

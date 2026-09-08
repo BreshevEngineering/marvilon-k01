@@ -1,0 +1,66 @@
+﻿[
+    {
+        "role":  "R1-BUILD",
+        "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_BUILD.json",
+        "exists":  true,
+        "sha256":  "3A19086F0253D3D22689F2830A603ACB968CA947BE6F35C59CFBE59D42F4D2A0",
+        "modified":  "2026-09-04T15:49:46",
+        "status":  "PASS"
+    },
+    {
+        "role":  "R1-VERIFY",
+        "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_VERIFY.json",
+        "exists":  true,
+        "sha256":  "BD9BA6BF9F77CEF0E5816F86FD5751317EFB99F86380D528F0686CCF18B74A48",
+        "modified":  "2026-09-04T15:49:46",
+        "status":  "PASS"
+    },
+    {
+        "role":  "R1-INT",
+        "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_INTERFERENCE.json",
+        "exists":  true,
+        "sha256":  "7B15AC8A3B13ABF0B1C4498CE0C40F26BA4D559402C02D834EEC5C0F7038E9E1",
+        "modified":  "2026-09-04T15:49:46",
+        "status":  "PASS"
+    },
+    {
+        "role":  "BOM-REC",
+        "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\bom\\K01_BOM_RECONCILIATION_study_c2r1.json",
+        "exists":  true,
+        "sha256":  "A8BA068F3EDB7AB9E9B55FC4353447C089DBD48A8B38A04E35C25022F4F0551F",
+        "modified":  "2026-09-04T15:49:46",
+        "status":  "HOLD"
+    },
+    {
+        "role":  "DRAWING-V2",
+        "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_DRAWINGS_V2.json",
+        "exists":  true,
+        "sha256":  "BD483F54F2B11F5D71B73AF05634557871A35D468310726FF4179D61CEE9C6D0",
+        "modified":  "2026-09-04T22:47:37",
+        "status":  "PASS"
+    },
+    {
+        "role":  "DRAWING-QA",
+        "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_DRAWING_QUALITY_P003_C2R1_v1.json",
+        "exists":  true,
+        "sha256":  "0E5F7D894AE4C2F24619C53BC6D668CE0394845ABC16AF872AD1012A943F620B",
+        "modified":  "2026-09-04T15:54:18",
+        "status":  "HOLD_NOT_MANUFACTURING_DRAWING"
+    },
+    {
+        "role":  "MECH-SCREEN",
+        "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\analysis\\current\\K01_J2_C2_MECHANICAL_SCREEN_v1.json",
+        "exists":  true,
+        "sha256":  "4BB2C2BAD12C7925E194D1AC6C49D9159B47D8688D723ECEA7E4CB75CE888B9D",
+        "modified":  "2026-09-04T15:54:18",
+        "status":  "SCREEN_PASS_WITH_RELEASE_HOLDS"
+    },
+    {
+        "role":  "ROOTCAUSE",
+        "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\analysis\\current\\K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1.json",
+        "exists":  true,
+        "sha256":  "02F26EBC77DDA96757AC7695DC79A404A7C646142200BD26299C65B97ECC88FC",
+        "modified":  "2026-09-04T15:54:18",
+        "status":  "ROOT_CAUSE_CONFIRMED"
+    }
+]

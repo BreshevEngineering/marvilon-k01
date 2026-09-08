@@ -1,0 +1,358 @@
+{
+  "blocking_items": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07",
+    "C08",
+    "C10",
+    "C11",
+    "C12"
+  ],
+  "characteristics": [
+    {
+      "balloon_id": "C01",
+      "candidate_spec": "FLATNESS 0.03",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "id": "C01",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": null,
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": true,
+      "role": "J2 face / datum A flatness",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "GD&T"
+    },
+    {
+      "balloon_id": "C02",
+      "candidate_spec": "Ø14.10 H7 × 1.70",
+      "current_state": "LIVE_CAD_CONFLICT_REVIEW",
+      "id": "C02",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C02",
+        "details": [
+          {
+            "legacy_candidate": 14.1,
+            "live": 14.1,
+            "live_key": "locator_od_mm",
+            "status": "MATCH"
+          },
+          {
+            "legacy_candidate": 1.7,
+            "live": 2.0,
+            "live_key": "locator_length_mm",
+            "status": "MISMATCH"
+          }
+        ],
+        "source_candidate": "Ø14.10 H7 × 1.70",
+        "status": "CONFLICT"
+      },
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": true,
+      "role": "Locator / datum B",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "SIZE_FIT_DATUM"
+    },
+    {
+      "balloon_id": "C03",
+      "candidate_spec": "PERP Ø0.03 TO A",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "id": "C03",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": null,
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": true,
+      "role": "Locator axis perpendicularity to A",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "GD&T"
+    },
+    {
+      "balloon_id": "C04",
+      "candidate_spec": "3×Ø2.90 THRU; PCD26.50 BASIC; 120° BASIC; POS Ø0.15 |A|B",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "id": "C04",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C04",
+        "details": [
+          {
+            "legacy_candidate": 2.9,
+            "live": 2.9,
+            "live_key": "clearance_hole_diameter_mm",
+            "status": "MATCH"
+          },
+          {
+            "legacy_candidate": 26.5,
+            "live": 26.5,
+            "live_key": "fastener_pcd_mm",
+            "status": "MATCH"
+          }
+        ],
+        "source_candidate": "3×Ø2.90 THRU; PCD26.50 BASIC; 120° BASIC; POS Ø0.15 |A|B",
+        "status": "MATCH"
+      },
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": true,
+      "role": "J2 clamp clearance pattern",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "PATTERN_GD&T"
+    },
+    {
+      "balloon_id": "C05",
+      "candidate_spec": "Ø33.00 ±0.05 × 3.00 ±0.05",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "id": "C05",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C05",
+        "details": [
+          {
+            "legacy_candidate": 33.0,
+            "live": 33.0,
+            "live_key": "flange_od_mm",
+            "status": "MATCH"
+          },
+          {
+            "legacy_candidate": 3.0,
+            "live": 3.0,
+            "live_key": "flange_thickness_mm",
+            "status": "MATCH"
+          }
+        ],
+        "source_candidate": "Ø33.00 ±0.05 × 3.00 ±0.05",
+        "status": "MATCH"
+      },
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": true,
+      "role": "Flange size",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "SIZE_TOLERANCE"
+    },
+    {
+      "balloon_id": "C06",
+      "candidate_spec": "35.00 ±0.05",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "id": "C06",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C06",
+        "details": [
+          {
+            "legacy_candidate": 35.0,
+            "live": 35.0,
+            "live_key": "overall_length_mm",
+            "status": "MATCH"
+          }
+        ],
+        "source_candidate": "35.00 ±0.05",
+        "status": "MATCH"
+      },
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": true,
+      "role": "Overall length",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "type": "SIZE_TOLERANCE"
+    },
+    {
+      "balloon_id": "C07",
+      "candidate_spec": "Ø10.00; release tolerance/general-tolerance coverage OPEN",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "id": "C07",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C07",
+        "details": [
+          {
+            "legacy_candidate": 10.0,
+            "live": 10.0,
+            "live_key": "thin_can_od_mm",
+            "status": "MATCH"
+          }
+        ],
+        "source_candidate": "Ø10.00; release tolerance/general-tolerance coverage OPEN",
+        "status": "MATCH"
+      },
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": true,
+      "role": "Thin can OD",
+      "status": "OPEN_TOLERANCE_POLICY",
+      "type": "SIZE"
+    },
+    {
+      "balloon_id": "C08",
+      "candidate_spec": "Ø9.40; release tolerance/general-tolerance coverage OPEN",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "id": "C08",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C08",
+        "details": [
+          {
+            "legacy_candidate": 9.4,
+            "live": 9.4,
+            "live_key": "thin_can_id_mm",
+            "status": "MATCH"
+          }
+        ],
+        "source_candidate": "Ø9.40; release tolerance/general-tolerance coverage OPEN",
+        "status": "MATCH"
+      },
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": true,
+      "role": "Thin can ID",
+      "status": "OPEN_TOLERANCE_POLICY",
+      "type": "SIZE"
+    },
+    {
+      "balloon_id": "C09",
+      "candidate_spec": "AISI 316L / EN 1.4404",
+      "current_state": "CONTROLLED_PRODUCT_DATA",
+      "id": "C09",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": null,
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": false,
+      "role": "Material",
+      "status": "CONTROLLED_PRODUCT_DATA",
+      "type": "MATERIAL"
+    },
+    {
+      "balloon_id": "C10",
+      "candidate_spec": null,
+      "current_state": "OPEN_SPEC",
+      "id": "C10",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": null,
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": false,
+      "role": "Containment weld interface/process",
+      "status": "OPEN_SPEC",
+      "type": "PROCESS"
+    },
+    {
+      "balloon_id": "C11",
+      "candidate_spec": null,
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "id": "C11",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": null,
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": true,
+      "role": "Critical concentricity/coaxiality control",
+      "status": "OPEN_SPEC",
+      "type": "GD&T"
+    },
+    {
+      "balloon_id": "C12",
+      "candidate_spec": null,
+      "current_state": "OPEN_REQUIREMENT",
+      "id": "C12",
+      "inspection_method": "OPEN",
+      "inspection_result": "",
+      "inspection_status": "NOT_INSPECTED",
+      "live_geometry_reconciliation": null,
+      "mbd_binding": null,
+      "mbd_present": false,
+      "mbd_required": false,
+      "role": "Leak/containment acceptance reference",
+      "status": "OPEN_REQUIREMENT",
+      "type": "INSPECTION_REQUIREMENT"
+    }
+  ],
+  "drawing_no": "K01-D-006",
+  "engineering_decisions": [
+    {
+      "finding": "Live CAD locator is Ø14.10 × 2.00 mm while the legacy draft candidate says Ø14.10 H7 × 1.70.",
+      "id": "P007-DRAWING-DRIFT-C02",
+      "recommended_action": "Protect the verified frozen CAD geometry and supersede the 1.70-mm legacy draft candidate unless contrary functional evidence is produced. Do not resize P007 merely to make the draft match.",
+      "status": "REVIEW_REQUIRED"
+    }
+  ],
+  "live_geometry": {
+    "clearance_hole_count": 3,
+    "clearance_hole_diameter_mm": 2.9,
+    "fastener_pcd_mm": 26.5,
+    "flange_od_mm": 33.0,
+    "flange_thickness_mm": 3.0,
+    "locator_length_mm": 2.0,
+    "locator_od_mm": 14.1,
+    "overall_length_mm": 35.0,
+    "thin_can_id_mm": 9.4,
+    "thin_can_od_mm": 10.0
+  },
+  "live_geometry_status": "PASS_WITH_CONFLICTS",
+  "next_actions": [
+    "Resolve P007-DRAWING-DRIFT-C02 first: current verified CAD is 2.00 mm locator length; legacy 1.70-mm draft is not authority.",
+    "Author/verify C01-C08 and C11 in K01-P-007 native PMI/DimXpert. Do not type duplicate tolerances in the drawing.",
+    "Release a draft P007 weld/containment process definition (C10).",
+    "Link C12 to a quantitative leak/containment acceptance requirement when released.",
+    "Generate one native K01-D-006 exemplar from the controlled ISO template; obtain manufacturer feedback before batch drawing generation."
+  ],
+  "part_number": "K01-P-007",
+  "part_registry": {
+    "cad_identity_key": "K01-P-007",
+    "cad_property_projection": {
+      "Description": "Hermetic Magnetic Can",
+      "MakeBuy": "MAKE",
+      "MaterialAuthority": "AISI 316L / EN 1.4404",
+      "MaterialStatus": "CONTROLLED",
+      "PartNo": "K01-P-007",
+      "Revision": ""
+    },
+    "description": "Hermetic Magnetic Can",
+    "item_type": "MANUFACTURED",
+    "make_buy": "MAKE",
+    "manufacturer_part_number": null,
+    "material_authority": "AISI 316L / EN 1.4404",
+    "material_status": "CONTROLLED",
+    "part_number": "K01-P-007",
+    "release_state": "PASS",
+    "revision": null,
+    "revision_status": "OPEN_RELEASE_REVISION",
+    "standard_or_specification": null,
+    "supplier": null,
+    "unit": "ea"
+  },
+  "policy": "P007 is the first exemplar. Live canonical CAD is the nominal-geometry authority; legacy drawing values are candidates only. Dimensional/GD&T tolerances are released from native model PMI/MBD.",
+  "schema": "k01.drawing_p007_exemplar_plan.current.v2_0",
+  "status": "HOLD",
+  "template_path": "C:\\Program Files\\SOLIDWORKS Corp\\SOLIDWORKS\\data\\templates\\iso.drwdot",
+  "template_ready": true
+}

@@ -1,0 +1,287 @@
+{
+  "schema": "k01_sw_review_export_2",
+  "export_status": "PASS",
+  "document": {
+    "title": "K01-P-014_Front_Guide_Retaining_Ring.SLDPRT",
+    "native_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-014_Front_Guide_Retaining_Ring.SLDPRT",
+    "doc_type": 1
+  },
+  "source_file": {
+    "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-014_Front_Guide_Retaining_Ring.SLDPRT",
+    "exists": true,
+    "size_bytes": 69150,
+    "mtime_ns": 1787845076203798700,
+    "sha256": "d962af2ec68d7b672cc870239646153098027eb32441d897bdbaf25f34f42958",
+    "error": null
+  },
+  "material": {
+    "raw": "Steel",
+    "name": "Steel",
+    "assigned": true,
+    "errors": []
+  },
+  "body": {
+    "solid_body_count": 1,
+    "errors": []
+  },
+  "custom_properties": {
+    "values": {},
+    "errors": []
+  },
+  "equations": {
+    "available": true,
+    "count": 0,
+    "link_to_file": false,
+    "file_path": "",
+    "items": [],
+    "errors": []
+  },
+  "feature_tree": {
+    "features": [
+      {
+        "path": "Comments",
+        "name": "Comments",
+        "type": "CommentsFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Favorites",
+        "name": "Favorites",
+        "type": "FavoriteFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "History",
+        "name": "History",
+        "type": "HistoryFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Selection Sets",
+        "name": "Selection Sets",
+        "type": "SelectionSetFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Sensors",
+        "name": "Sensors",
+        "type": "SensorFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Design Binder",
+        "name": "Design Binder",
+        "type": "DocsFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Annotations",
+        "name": "Annotations",
+        "type": "DetailCabinet",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [
+          {
+            "path": "Annotations/Notes",
+            "name": "Notes",
+            "type": "NotesAreaFtrFolder",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Annotations/Notes1___EndTag___",
+            "name": "Notes1___EndTag___",
+            "type": "NotesAreaFtrFolder",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      },
+      {
+        "path": "Surface Bodies",
+        "name": "Surface Bodies",
+        "type": "SurfaceBodyFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Solid Bodies",
+        "name": "Solid Bodies",
+        "type": "SolidBodyFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Lights, Cameras and Scene",
+        "name": "Lights, Cameras and Scene",
+        "type": "EnvFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [
+          {
+            "path": "Lights, Cameras and Scene/Ambient",
+            "name": "Ambient",
+            "type": "AmbientLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Lights, Cameras and Scene/Directional1",
+            "name": "Directional1",
+            "type": "DirectionLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Lights, Cameras and Scene/Directional2",
+            "name": "Directional2",
+            "type": "DirectionLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          },
+          {
+            "path": "Lights, Cameras and Scene/Directional3",
+            "name": "Directional3",
+            "type": "DirectionLight",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      },
+      {
+        "path": "Equations",
+        "name": "Equations",
+        "type": "EqnFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Material <not specified>",
+        "name": "Material <not specified>",
+        "type": "MaterialFolder",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Front Plane",
+        "name": "Front Plane",
+        "type": "RefPlane",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Top Plane",
+        "name": "Top Plane",
+        "type": "RefPlane",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Right Plane",
+        "name": "Right Plane",
+        "type": "RefPlane",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Origin",
+        "name": "Origin",
+        "type": "OriginProfileFeature",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Sketch1",
+        "name": "Sketch1",
+        "type": "ProfileFeature",
+        "suppressed": false,
+        "dimensions": [],
+        "subfeatures": [],
+        "errors": []
+      },
+      {
+        "path": "Revolve1",
+        "name": "Revolve1",
+        "type": "Revolution",
+        "suppressed": false,
+        "dimensions": [
+          {
+            "name": "D1",
+            "full_name": "D1@Revolve1@K01-P-014_Front_Guide_Retaining_Ring.Part",
+            "type_raw": 1,
+            "system_value_SI": 6.2831853071796,
+            "value_mm": 6283.1853071796,
+            "value_deg": null,
+            "errors": []
+          }
+        ],
+        "subfeatures": [
+          {
+            "path": "Revolve1/Sketch1",
+            "name": "Sketch1",
+            "type": "ProfileFeature",
+            "suppressed": false,
+            "dimensions": [],
+            "subfeatures": [],
+            "errors": []
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "errors": []
+  },
+  "summary": {
+    "dimension_count": 1,
+    "top_level_feature_count": 18
+  },
+  "errors": []
+}

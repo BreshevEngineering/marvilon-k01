@@ -1,0 +1,13 @@
+{
+  "schema": "k01_closure_05_static_audit_v1",
+  "created": "2026-09-05",
+  "status": "PASS_STATIC_PACKAGE",
+  "checks": {
+    "includes_corrected_gate04e_v3": true,
+    "runner_reruns_gate_before_closure": true,
+    "closure_requires_v3": true,
+    "closure_does_not_gate_on_1000_coordinate": true,
+    "CFD_55C_accepted": true,
+    "T05_deterministic_screen": true
+  }
+}
