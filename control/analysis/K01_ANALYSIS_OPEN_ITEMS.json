@@ -1,0 +1,30 @@
+{
+  "schema": "k01.analysis_open_items.v1",
+  "generated_utc": "2026-09-08T07:23:34.603869+00:00",
+  "engineering_baseline": {
+    "assembly": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+    "sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4"
+  },
+  "items": [
+    {
+      "id": "K01-AN-MAG-FORCE-001",
+      "title": "Absolute magnetic actuation force qualification F(x)",
+      "domain": "MAGNETICS_FEMM",
+      "status": "OPEN",
+      "release_blocker": true,
+      "current_evidence": "Previous FEMM work is field/concept screening only; it is not an absolute-force release qualification.",
+      "required_output": "F_available(x) with nominal and worst-case envelopes over the functional stroke/critical positions.",
+      "closure_criteria": [
+        "Freeze authoritative magnetic geometry against current engineering baseline.",
+        "Confirm B001/B002 magnet dimensions, grade and supplier magnetic properties including Br(T) or equivalent data.",
+        "Calculate absolute magnetic force F(x), not only field maps.",
+        "Sweep critical dimensional gap/position tolerances.",
+        "Sweep critical operating temperature / magnetic-property variation.",
+        "Derive mechanical required-force envelope from K01 mechanism/friction/load requirements.",
+        "Demonstrate minimum available-force / maximum required-force design margin.",
+        "Correlate calculated force against bench measurements at defined positions."
+      ],
+      "prohibited_release_claim": "Do not mark magnetic release PASS from field screening alone."
+    }
+  ]
+}

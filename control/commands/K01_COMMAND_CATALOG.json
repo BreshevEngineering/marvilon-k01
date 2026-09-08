@@ -1,0 +1,1321 @@
+{
+  "schema": "k01.command_catalog.v1",
+  "generated_utc": "2026-09-08T07:23:34.601855+00:00",
+  "status": "MIGRATION_ACTIVE",
+  "canonical_entry": "run.cmd",
+  "policy": {
+    "one_user_entry": true,
+    "numeric_prefix_not_execution_order": true,
+    "legacy_root_commands_frozen": true,
+    "new_root_commands_forbidden": true,
+    "engineering_routes_enabled_only_after_domain_consolidation": true
+  },
+  "counts": {
+    "KEEP_ENGINEERING_OPEN": 32,
+    "KEEP_PENDING_CLI_ROUTE": 13,
+    "REVIEW": 4,
+    "RETIRED_ALIAS": 1,
+    "KEEP_DEFERRED_RELEASE_PATH": 6,
+    "CANONICAL_ENTRY": 1,
+    "RETIRED_ROUTED": 1
+  },
+  "commands": [
+    {
+      "launcher": "00_AUDIT_IDENTITY.cmd",
+      "domain": "cad_gate",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "cad",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\audit_identity_v2_0.py",
+          "resolved": "tools/medtas/audit_identity_v2_0.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "00_MEDTAS_PREFLIGHT.cmd",
+      "domain": "assurance",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "selftest/audit",
+      "targets": [
+        {
+          "raw": "%~dp0control\\system\\PREFLIGHT.ps1",
+          "resolved": null,
+          "exists": null
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "00_MEDTAS_V8_PREFLIGHT.cmd",
+      "domain": "assurance",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "selftest/audit",
+      "targets": [
+        {
+          "raw": "%~dp0control\\system\\K01_MEDTAS_V8_PREFLIGHT.ps1",
+          "resolved": null,
+          "exists": null
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "00B_BUILD_IDENTITY_MIGRATION_PLAN.cmd",
+      "domain": "other",
+      "status": "REVIEW",
+      "future_route": "review",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\audit_identity_v2_0.py",
+          "resolved": "tools/medtas/audit_identity_v2_0.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_identity_migration_plan_v2_0.py",
+          "resolved": "tools/medtas/build_identity_migration_plan_v2_0.py",
+          "exists": true
+        }
+      ],
+      "reason": "no safe automatic removal rule"
+    },
+    {
+      "launcher": "01_BUILD_REQUIREMENTS_COVERAGE.cmd",
+      "domain": "requirements",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "requirements",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_requirements_coverage_v1_9.py",
+          "resolved": "tools/medtas/build_requirements_coverage_v1_9.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "01_RUN_K01_NEXT_ENGINEERING.cmd",
+      "domain": "magnetics_femm",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "femm",
+      "targets": [
+        {
+          "raw": "%~dp000_MEDTAS_PREFLIGHT.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%~dp0cad_api\\gates\\gate04e_p006_service\\RUN_GATE04E_P006_SERVICE_BUILD.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%~dp0control\\femm\\CHECK_FEMM_INSTALL.cmd",
+          "resolved": null,
+          "exists": null
+        }
+      ],
+      "reason": "FEMM force qualification remains an open engineering blocker"
+    },
+    {
+      "launcher": "02_RUN_K01_ENGINEERING_RECOVERY.cmd",
+      "domain": "bom",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "bom",
+      "targets": [
+        {
+          "raw": "%~dp000_MEDTAS_PREFLIGHT.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%~dp0cad_api\\gates\\gate04e_p006_service\\RUN_GATE04E_P006_SERVICE_BUILD.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%~dp0control\\femm\\CHECK_FEMM_INSTALL.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%~dp0control\\bom\\NORMALIZE_BOM.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%~dp0control\\git\\RUN_K01_GIT_CLASSIFY.cmd",
+          "resolved": null,
+          "exists": null
+        }
+      ],
+      "reason": "BOM structure exists but release remains HOLD"
+    },
+    {
+      "launcher": "02_RUN_MEDTAS_ASSURANCE_TESTS.cmd",
+      "domain": "center_views",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "center/status",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\canonical_hash_selftest_v1_5.py",
+          "resolved": "tools/medtas/canonical_hash_selftest_v1_5.py",
+          "exists": true
+        },
+        {
+          "raw": "tests\\medtas\\state_reducer_fixtures_v1_9.py",
+          "resolved": "tests/medtas/state_reducer_fixtures_v1_9.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\registry_selftest_v1_9.py",
+          "resolved": "tools/medtas/registry_selftest_v1_9.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\status_model_selftest_v1_8.py",
+          "resolved": "tools/medtas/status_model_selftest_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\center_security_selftest_v2_0.py",
+          "resolved": "tools/medtas/center_security_selftest_v2_0.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\center_action_launch_selftest_v2_0.py",
+          "resolved": "tools/medtas/center_action_launch_selftest_v2_0.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\center_server_regression_v2_0.py",
+          "resolved": "tools/medtas/center_server_regression_v2_0.py",
+          "exists": true
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "03_RUN_K01_CLOSURE_03.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "%~dp0cad_api\\gates\\gate04e_p006_service\\RUN_GATE04E_P006_SERVICE_BUILD.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%~dp0control\\requirements\\APPLY_T03_DP_CLOSURE.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%~dp0cad_api\\drawings\\p006_probe\\RUN_P006_DRAWING_PROBE.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%~dp0control\\femm\\BUILD_FEMM_SCREENING_INPUT_PACK.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%~dp0control\\handoff\\BUILD_AI_HANDOFF.cmd",
+          "resolved": null,
+          "exists": null
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "03_RUN_MEDTAS_CAD_SEM_A001.cmd",
+      "domain": "cad_gate",
+      "status": "RETIRED_ALIAS",
+      "future_route": "cad (future consolidated route)",
+      "targets": [
+        {
+          "raw": "03_RUN_MEDTAS_PIPELINE.cmd",
+          "resolved": "03_RUN_MEDTAS_PIPELINE.cmd",
+          "exists": true
+        }
+      ],
+      "reason": "thin alias to MEDTAS pipeline"
+    },
+    {
+      "launcher": "03_RUN_MEDTAS_PIPELINE.cmd",
+      "domain": "center_views",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "center/status",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\pipeline_v2_0.py",
+          "resolved": "tools/medtas/pipeline_v2_0.py",
+          "exists": true
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "04_REBUILD_MEDTAS_CENTER.cmd",
+      "domain": "git_repo",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "audit",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_structure_v1_7.py",
+          "resolved": "tools/medtas/project_structure_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "04_RUN_K01_MODULE_CLOSURE.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "%ROOT%control\\project\\BUILD_MODULE_CLOSURE_STATUS.ps1",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%ROOT%control\\repo\\BUILD_REPO_CONSOLIDATION_PLAN.ps1",
+          "resolved": null,
+          "exists": null
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "05_CALCULIX_PREFLIGHT.cmd",
+      "domain": "analysis_structural",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "analysis",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\calculix_preflight_v1_7.py",
+          "resolved": "tools/medtas/calculix_preflight_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "05_RUN_K01_MODULE_CLOSURE.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "%ROOT%cad_api\\drawings\\p006_probe\\RUN_P006_DRAWING_PROBE.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%ROOT%control\\requirements\\APPLY_T03_DP_TEMP_CLOSURE.ps1",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%ROOT%control\\calculations\\RUN_T05_CLAMP_SCREEN.ps1",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%ROOT%control\\femm\\BUILD_FEMM_SCREENING_INPUT_PACK.ps1",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%ROOT%control\\handoff\\BUILD_AI_HANDOFF.ps1",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%ROOT%control\\project\\BUILD_MODULE_CLOSURE_STATUS.ps1",
+          "resolved": null,
+          "exists": null
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "06_RUN_K01_CONTINUE.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "%REPO%\\cad_api\\drawings\\p006_probe\\RUN_P006_DRAWING_PROBE.cmd",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%REPO%\\control\\requirements\\APPLY_T03_DP_TEMP_CLOSURE.ps1",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%REPO%\\control\\calculations\\RUN_T05_CLAMP_SCREEN.ps1",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%REPO%\\control\\femm\\BUILD_FEMM_SCREENING_INPUT_PACK.ps1",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%REPO%\\control\\handoff\\BUILD_AI_HANDOFF.ps1",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%REPO%\\control\\project\\BUILD_MODULE_CLOSURE_STATUS.ps1",
+          "resolved": null,
+          "exists": null
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "06_TEST_CAD_HASH_INVARIANCE.cmd",
+      "domain": "assurance",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "selftest/audit",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\cad_hash_invariance_test_v1_6.py",
+          "resolved": "tools/medtas/cad_hash_invariance_test_v1_6.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "07_STEP_CANONICAL_HASH.cmd",
+      "domain": "assurance",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "selftest/audit",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\step_canonical_hash_v1_4.py",
+          "resolved": "tools/medtas/step_canonical_hash_v1_4.py",
+          "exists": true
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "08_BUILD_BOM_ARTIFACT.cmd",
+      "domain": "bom",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "bom",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_bom_v1_9.py",
+          "resolved": "tools/medtas/build_bom_v1_9.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        }
+      ],
+      "reason": "BOM structure exists but release remains HOLD"
+    },
+    {
+      "launcher": "09_BUILD_DRAWING_MBD_WORKPACK.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_mbd_authoring_candidates_v1_6.py",
+          "resolved": "tools/medtas/build_mbd_authoring_candidates_v1_6.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_drawing_mbd_workpack_v1_6.py",
+          "resolved": "tools/medtas/build_drawing_mbd_workpack_v1_6.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "09_BUILD_MBD_AUTHORING_CANDIDATES.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_mbd_authoring_candidates_v1_7.py",
+          "resolved": "tools/medtas/build_mbd_authoring_candidates_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_mbd_authoring_plan_v1_7.py",
+          "resolved": "tools/medtas/build_mbd_authoring_plan_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_product_definition_v1_8.py",
+          "resolved": "tools/medtas/build_product_definition_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_drawing_release_plan_v1_8.py",
+          "resolved": "tools/medtas/build_drawing_release_plan_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "09B_BUILD_MBD_AUTHORING_PLAN.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_mbd_authoring_candidates_v1_7.py",
+          "resolved": "tools/medtas/build_mbd_authoring_candidates_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_mbd_authoring_plan_v1_7.py",
+          "resolved": "tools/medtas/build_mbd_authoring_plan_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_product_definition_v1_8.py",
+          "resolved": "tools/medtas/build_product_definition_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_drawing_release_plan_v1_8.py",
+          "resolved": "tools/medtas/build_drawing_release_plan_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "10_BIND_STRUCTURAL_FACE_ROLES.cmd",
+      "domain": "cad_gate",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "cad",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\auto_bind_structural_face_roles_v1_7.py",
+          "resolved": "tools/medtas/auto_bind_structural_face_roles_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "10B_QUALIFY_STRUCTURAL_FACE_MAP.cmd",
+      "domain": "analysis_structural",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "analysis",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\qualify_structural_face_map_v1_7.py",
+          "resolved": "tools/medtas/qualify_structural_face_map_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "11_EXPORT_STRUCTURAL_NEUTRAL_GEOMETRY.cmd",
+      "domain": "analysis_structural",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "analysis",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\export_structural_neutral_geometry_v1_7.py",
+          "resolved": "tools/medtas/export_structural_neutral_geometry_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "12_BUILD_BOLT_EQUIV_SCAFFOLD.cmd",
+      "domain": "analysis_structural",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "analysis",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_bolt_equiv_scaffold_v1_7.py",
+          "resolved": "tools/medtas/build_bolt_equiv_scaffold_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\calculix_preflight_v1_7.py",
+          "resolved": "tools/medtas/calculix_preflight_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "12_BUILD_STRUCTURAL_MESH.cmd",
+      "domain": "analysis_structural",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "analysis",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_structural_mesh_v1_7.py",
+          "resolved": "tools/medtas/build_structural_mesh_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\calculix_preflight_v1_7.py",
+          "resolved": "tools/medtas/calculix_preflight_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "13_BUILD_CALCULIX_INPUT.cmd",
+      "domain": "analysis_structural",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "analysis",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_calculix_input_v1_7.py",
+          "resolved": "tools/medtas/build_calculix_input_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\calculix_preflight_v1_7.py",
+          "resolved": "tools/medtas/calculix_preflight_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "14_AUDIT_PROJECT_STRUCTURE.cmd",
+      "domain": "git_repo",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "audit",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\project_structure_v1_7.py",
+          "resolved": "tools/medtas/project_structure_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "15_BUILD_DRAWING_RELEASE_PLAN.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_p007_exemplar_plan_v1_9.py",
+          "resolved": "tools/medtas/build_p007_exemplar_plan_v1_9.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_drawing_release_plan_v1_9.py",
+          "resolved": "tools/medtas/build_drawing_release_plan_v1_9.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "16_BUILD_NATIVE_DRAWING_PACK.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_product_definition_v1_8.py",
+          "resolved": "tools/medtas/build_product_definition_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_drawing_release_plan_v1_8.py",
+          "resolved": "tools/medtas/build_drawing_release_plan_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_native_drawing_pack_v1_8.py",
+          "resolved": "tools/medtas/build_native_drawing_pack_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "17_DISCOVER_ANALYSIS_TOOLCHAIN.cmd",
+      "domain": "analysis_structural",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "analysis",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\discover_analysis_toolchain_v1_7.py",
+          "resolved": "tools/medtas/discover_analysis_toolchain_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\calculix_preflight_v1_7.py",
+          "resolved": "tools/medtas/calculix_preflight_v1_7.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "18_RUN_CALCULIX_P006.cmd",
+      "domain": "analysis_structural",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "analysis",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\calculix_preflight_v1_7.py",
+          "resolved": "tools/medtas/calculix_preflight_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\run_calculix_p006_v1_7.py",
+          "resolved": "tools/medtas/run_calculix_p006_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "19_BUILD_RELEASE_PRIORITY.cmd",
+      "domain": "center_views",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "center/status",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "20_DISCOVER_DRAWING_TEMPLATE.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\discover_drawing_templates_v1_7.py",
+          "resolved": "tools/medtas/discover_drawing_templates_v1_7.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_product_definition_v1_8.py",
+          "resolved": "tools/medtas/build_product_definition_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_drawing_release_plan_v1_8.py",
+          "resolved": "tools/medtas/build_drawing_release_plan_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "21_RECORD_DRAWING_VISUAL_APPROVAL.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\record_drawing_visual_approval_v1_8.py",
+          "resolved": "tools/medtas/record_drawing_visual_approval_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\verify_drawing_pack_v1_8.py",
+          "resolved": "tools/medtas/verify_drawing_pack_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_release_priority_view_v1_8.py",
+          "resolved": "tools/medtas/build_release_priority_view_v1_8.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\project_view_v1_8.py",
+          "resolved": "tools/medtas/project_view_v1_8.py",
+          "exists": true
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "22_BUILD_AI_HANDOFF.cmd",
+      "domain": "evidence_handoff",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "evidence",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\ai_handoff_v2_0.py",
+          "resolved": "tools/medtas/ai_handoff_v2_0.py",
+          "exists": true
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "23_BUILD_EBOM_MBOM.cmd",
+      "domain": "bom",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "bom",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_bom_v1_9.py",
+          "resolved": "tools/medtas/build_bom_v1_9.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\rebuild_medtas_state.py",
+          "resolved": "tools/medtas/rebuild_medtas_state.py",
+          "exists": true
+        }
+      ],
+      "reason": "BOM structure exists but release remains HOLD"
+    },
+    {
+      "launcher": "24_SYNC_PARTS_REGISTRY_TO_CAD_PROPS.cmd",
+      "domain": "cad_gate",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "cad",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\sync_parts_registry_to_cad_props_v2_0.py",
+          "resolved": "tools/medtas/sync_parts_registry_to_cad_props_v2_0.py",
+          "exists": true
+        }
+      ],
+      "reason": "active engineering implementation candidate; do not delete before routing/authority review"
+    },
+    {
+      "launcher": "25_BUILD_P007_EXEMPLAR_PLAN.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_p007_geometry_authority_v2_0.py",
+          "resolved": "tools/medtas/build_p007_geometry_authority_v2_0.py",
+          "exists": true
+        },
+        {
+          "raw": "tools\\medtas\\build_p007_exemplar_plan_v2_0.py",
+          "resolved": "tools/medtas/build_p007_exemplar_plan_v2_0.py",
+          "exists": true
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "26_VERIFY_DRAWING_QA.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\drawing_qa_gate_v1_9.py",
+          "resolved": "tools/medtas/drawing_qa_gate_v1_9.py",
+          "exists": true
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "28_BUILD_P007_EXEMPLAR_SKELETON.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_p007_exemplar_skeleton_v1_9.py",
+          "resolved": "tools/medtas/build_p007_exemplar_skeleton_v1_9.py",
+          "exists": true
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "29_BUILD_INSPECTION_CHARACTERISTICS.cmd",
+      "domain": "drawings_dimxpert",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "drawings/dimxpert",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_inspection_characteristics_v1_9.py",
+          "resolved": "tools/medtas/build_inspection_characteristics_v1_9.py",
+          "exists": true
+        }
+      ],
+      "reason": "drawing/DimXpert consolidation not complete"
+    },
+    {
+      "launcher": "30_INGEST_INSPECTION_RESULTS.cmd",
+      "domain": "other",
+      "status": "REVIEW",
+      "future_route": "review",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\ingest_inspection_results_v1_9.py",
+          "resolved": "tools/medtas/ingest_inspection_results_v1_9.py",
+          "exists": true
+        }
+      ],
+      "reason": "no safe automatic removal rule"
+    },
+    {
+      "launcher": "31_BUILD_RELEASE_PROGRAM.cmd",
+      "domain": "other",
+      "status": "REVIEW",
+      "future_route": "review",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_release_program_v1_9.py",
+          "resolved": "tools/medtas/build_release_program_v1_9.py",
+          "exists": true
+        }
+      ],
+      "reason": "no safe automatic removal rule"
+    },
+    {
+      "launcher": "31_COMPILE_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "domain": "release_promotion",
+      "status": "KEEP_DEFERRED_RELEASE_PATH",
+      "future_route": "release",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\compile_packandgo_v2_2.py",
+          "resolved": "tools/medtas/compile_packandgo_v2_2.py",
+          "exists": true
+        }
+      ],
+      "reason": "R01/promotion is explicitly deferred; preserve implementation until release consolidation"
+    },
+    {
+      "launcher": "31A_PREFLIGHT_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "domain": "release_promotion",
+      "status": "KEEP_DEFERRED_RELEASE_PATH",
+      "future_route": "release",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\final_assembly_promotion_v2_2.py",
+          "resolved": "tools/medtas/final_assembly_promotion_v2_2.py",
+          "exists": true
+        }
+      ],
+      "reason": "R01/promotion is explicitly deferred; preserve implementation until release consolidation"
+    },
+    {
+      "launcher": "31B_APPLY_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "domain": "release_promotion",
+      "status": "KEEP_DEFERRED_RELEASE_PATH",
+      "future_route": "release",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\final_assembly_promotion_v2_2.py",
+          "resolved": "tools/medtas/final_assembly_promotion_v2_2.py",
+          "exists": true
+        }
+      ],
+      "reason": "R01/promotion is explicitly deferred; preserve implementation until release consolidation"
+    },
+    {
+      "launcher": "31C_VERIFY_FINAL_ASSEMBLY_PROMOTION.cmd",
+      "domain": "release_promotion",
+      "status": "KEEP_DEFERRED_RELEASE_PATH",
+      "future_route": "release",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\final_assembly_promotion_v2_2.py",
+          "resolved": "tools/medtas/final_assembly_promotion_v2_2.py",
+          "exists": true
+        }
+      ],
+      "reason": "R01/promotion is explicitly deferred; preserve implementation until release consolidation"
+    },
+    {
+      "launcher": "31D_VERIFY_FINAL_ASSEMBLY_SEMANTICS.cmd",
+      "domain": "release_promotion",
+      "status": "KEEP_DEFERRED_RELEASE_PATH",
+      "future_route": "release",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\final_assembly_semantic_verify_v2_2.py",
+          "resolved": "tools/medtas/final_assembly_semantic_verify_v2_2.py",
+          "exists": true
+        }
+      ],
+      "reason": "R01/promotion is explicitly deferred; preserve implementation until release consolidation"
+    },
+    {
+      "launcher": "35_GIT_AUDIT.cmd",
+      "domain": "git_repo",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "audit",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\git_audit_v2_2.py",
+          "resolved": "tools/medtas/git_audit_v2_2.py",
+          "exists": true
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "36_BUILD_TECHNICAL_FILTER_MAP.cmd",
+      "domain": "other",
+      "status": "REVIEW",
+      "future_route": "review",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\technical_filter_map_v2_2.py",
+          "resolved": "tools/medtas/technical_filter_map_v2_2.py",
+          "exists": true
+        }
+      ],
+      "reason": "no safe automatic removal rule"
+    },
+    {
+      "launcher": "37_AUDIT_PROJECT_STRUCTURE.cmd",
+      "domain": "git_repo",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "audit",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\project_structure_audit_v2_2.py",
+          "resolved": "tools/medtas/project_structure_audit_v2_2.py",
+          "exists": true
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "38_BUILD_CALCULATION_EVIDENCE_INDEX.cmd",
+      "domain": "evidence_handoff",
+      "status": "KEEP_PENDING_CLI_ROUTE",
+      "future_route": "evidence",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\calculation_evidence_index_v2_2.py",
+          "resolved": "tools/medtas/calculation_evidence_index_v2_2.py",
+          "exists": true
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "39_BUILD_FINAL_BOM_V2_2.cmd",
+      "domain": "bom",
+      "status": "KEEP_ENGINEERING_OPEN",
+      "future_route": "bom",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_bom_v2_2.py",
+          "resolved": "tools/medtas/build_bom_v2_2.py",
+          "exists": true
+        }
+      ],
+      "reason": "BOM structure exists but release remains HOLD"
+    },
+    {
+      "launcher": "40_BUILD_R01_RELEASE_CANDIDATE.cmd",
+      "domain": "release_promotion",
+      "status": "KEEP_DEFERRED_RELEASE_PATH",
+      "future_route": "release",
+      "targets": [
+        {
+          "raw": "tools\\medtas\\build_r01_release_candidate_v2_2.py",
+          "resolved": "tools/medtas/build_r01_release_candidate_v2_2.py",
+          "exists": true
+        }
+      ],
+      "reason": "R01/promotion is explicitly deferred; preserve implementation until release consolidation"
+    },
+    {
+      "launcher": "run.cmd",
+      "domain": "other",
+      "status": "CANONICAL_ENTRY",
+      "future_route": null,
+      "targets": [
+        {
+          "raw": "%ROOT%\\tools\\cli\\k01_cli.py",
+          "resolved": null,
+          "exists": null
+        }
+      ],
+      "reason": "canonical user entry"
+    },
+    {
+      "launcher": "START_K01_CENTER.cmd",
+      "domain": "assurance",
+      "status": "RETIRED_ROUTED",
+      "future_route": "center",
+      "targets": [
+        {
+          "raw": "%ROOT%\\center\\selftest.py",
+          "resolved": null,
+          "exists": null
+        },
+        {
+          "raw": "%ROOT%\\center\\server.py",
+          "resolved": null,
+          "exists": null
+        }
+      ],
+      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    }
+  ]
+}
