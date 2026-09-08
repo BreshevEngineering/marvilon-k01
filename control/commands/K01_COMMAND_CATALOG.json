@@ -1,6 +1,6 @@
 {
   "schema": "k01.command_catalog.v1",
-  "generated_utc": "2026-09-08T07:23:34.601855+00:00",
+  "generated_utc": "2026-09-08T07:34:32.016507+00:00",
   "status": "MIGRATION_ACTIVE",
   "canonical_entry": "run.cmd",
   "policy": {
@@ -12,12 +12,12 @@
   },
   "counts": {
     "KEEP_ENGINEERING_OPEN": 32,
-    "KEEP_PENDING_CLI_ROUTE": 13,
+    "RETIRED_ROUTED": 9,
     "REVIEW": 4,
     "RETIRED_ALIAS": 1,
+    "KEEP_PENDING_CLI_ROUTE": 5,
     "KEEP_DEFERRED_RELEASE_PATH": 6,
-    "CANONICAL_ENTRY": 1,
-    "RETIRED_ROUTED": 1
+    "CANONICAL_ENTRY": 1
   },
   "commands": [
     {
@@ -37,8 +37,8 @@
     {
       "launcher": "00_MEDTAS_PREFLIGHT.cmd",
       "domain": "assurance",
-      "status": "KEEP_PENDING_CLI_ROUTE",
-      "future_route": "selftest/audit",
+      "status": "RETIRED_ROUTED",
+      "future_route": "assurance",
       "targets": [
         {
           "raw": "%~dp0control\\system\\PREFLIGHT.ps1",
@@ -46,13 +46,14 @@
           "exists": null
         }
       ],
-      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+      "reason": "candidate to become run.cmd subcommand before wrapper removal",
+      "migration_note": "Wrapper removed after canonical CLI route installed; implementation source retained."
     },
     {
       "launcher": "00_MEDTAS_V8_PREFLIGHT.cmd",
       "domain": "assurance",
-      "status": "KEEP_PENDING_CLI_ROUTE",
-      "future_route": "selftest/audit",
+      "status": "RETIRED_ROUTED",
+      "future_route": "assurance",
       "targets": [
         {
           "raw": "%~dp0control\\system\\K01_MEDTAS_V8_PREFLIGHT.ps1",
@@ -60,7 +61,8 @@
           "exists": null
         }
       ],
-      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+      "reason": "candidate to become run.cmd subcommand before wrapper removal",
+      "migration_note": "Wrapper removed after canonical CLI route installed; implementation source retained."
     },
     {
       "launcher": "00B_BUILD_IDENTITY_MIGRATION_PLAN.cmd",
@@ -156,8 +158,8 @@
     {
       "launcher": "02_RUN_MEDTAS_ASSURANCE_TESTS.cmd",
       "domain": "center_views",
-      "status": "KEEP_PENDING_CLI_ROUTE",
-      "future_route": "center/status",
+      "status": "RETIRED_ROUTED",
+      "future_route": "assurance",
       "targets": [
         {
           "raw": "tools\\medtas\\canonical_hash_selftest_v1_5.py",
@@ -195,7 +197,8 @@
           "exists": true
         }
       ],
-      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+      "reason": "candidate to become run.cmd subcommand before wrapper removal",
+      "migration_note": "Wrapper removed after canonical CLI route installed; implementation source retained."
     },
     {
       "launcher": "03_RUN_K01_CLOSURE_03.cmd",
@@ -770,7 +773,7 @@
     {
       "launcher": "14_AUDIT_PROJECT_STRUCTURE.cmd",
       "domain": "git_repo",
-      "status": "KEEP_PENDING_CLI_ROUTE",
+      "status": "RETIRED_ROUTED",
       "future_route": "audit",
       "targets": [
         {
@@ -794,7 +797,8 @@
           "exists": true
         }
       ],
-      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+      "reason": "candidate to become run.cmd subcommand before wrapper removal",
+      "migration_note": "Wrapper removed after canonical CLI route installed; implementation source retained."
     },
     {
       "launcher": "15_BUILD_DRAWING_RELEASE_PLAN.cmd",
@@ -997,8 +1001,8 @@
     {
       "launcher": "22_BUILD_AI_HANDOFF.cmd",
       "domain": "evidence_handoff",
-      "status": "KEEP_PENDING_CLI_ROUTE",
-      "future_route": "evidence",
+      "status": "RETIRED_ROUTED",
+      "future_route": "handoff",
       "targets": [
         {
           "raw": "tools\\medtas\\ai_handoff_v2_0.py",
@@ -1006,7 +1010,8 @@
           "exists": true
         }
       ],
-      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+      "reason": "candidate to become run.cmd subcommand before wrapper removal",
+      "migration_note": "Wrapper removed after canonical CLI route installed; implementation source retained."
     },
     {
       "launcher": "23_BUILD_EBOM_MBOM.cmd",
@@ -1203,7 +1208,7 @@
     {
       "launcher": "35_GIT_AUDIT.cmd",
       "domain": "git_repo",
-      "status": "KEEP_PENDING_CLI_ROUTE",
+      "status": "RETIRED_ROUTED",
       "future_route": "audit",
       "targets": [
         {
@@ -1212,7 +1217,8 @@
           "exists": true
         }
       ],
-      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+      "reason": "candidate to become run.cmd subcommand before wrapper removal",
+      "migration_note": "Wrapper removed after canonical CLI route installed; implementation source retained."
     },
     {
       "launcher": "36_BUILD_TECHNICAL_FILTER_MAP.cmd",
@@ -1231,7 +1237,7 @@
     {
       "launcher": "37_AUDIT_PROJECT_STRUCTURE.cmd",
       "domain": "git_repo",
-      "status": "KEEP_PENDING_CLI_ROUTE",
+      "status": "RETIRED_ROUTED",
       "future_route": "audit",
       "targets": [
         {
@@ -1240,12 +1246,13 @@
           "exists": true
         }
       ],
-      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+      "reason": "candidate to become run.cmd subcommand before wrapper removal",
+      "migration_note": "Wrapper removed after canonical CLI route installed; implementation source retained."
     },
     {
       "launcher": "38_BUILD_CALCULATION_EVIDENCE_INDEX.cmd",
       "domain": "evidence_handoff",
-      "status": "KEEP_PENDING_CLI_ROUTE",
+      "status": "RETIRED_ROUTED",
       "future_route": "evidence",
       "targets": [
         {
@@ -1254,7 +1261,8 @@
           "exists": true
         }
       ],
-      "reason": "candidate to become run.cmd subcommand before wrapper removal"
+      "reason": "candidate to become run.cmd subcommand before wrapper removal",
+      "migration_note": "Wrapper removed after canonical CLI route installed; implementation source retained."
     },
     {
       "launcher": "39_BUILD_FINAL_BOM_V2_2.cmd",
@@ -1317,5 +1325,6 @@
       ],
       "reason": "candidate to become run.cmd subcommand before wrapper removal"
     }
-  ]
+  ],
+  "migration_step": "6E"
 }

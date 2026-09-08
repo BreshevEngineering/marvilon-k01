@@ -1,6 +1,6 @@
 {
   "schema": "k01.root_migration_allowlist.v1",
-  "generated_utc": "2026-09-08T07:23:34.608836+00:00",
+  "generated_utc": "2026-09-08T07:34:32.020496+00:00",
   "mode": "MIGRATION_SHRINK_ONLY",
   "snapshot_tag": "snapshot-2026-09-08",
   "writable_root_entries": [
@@ -30,13 +30,10 @@
     ".local_archive",
     "00B_BUILD_IDENTITY_MIGRATION_PLAN.cmd",
     "00_AUDIT_IDENTITY.cmd",
-    "00_MEDTAS_PREFLIGHT.cmd",
-    "00_MEDTAS_V8_PREFLIGHT.cmd",
     "00_admin",
     "01_BUILD_REQUIREMENTS_COVERAGE.cmd",
     "01_RUN_K01_NEXT_ENGINEERING.cmd",
     "02_RUN_K01_ENGINEERING_RECOVERY.cmd",
-    "02_RUN_MEDTAS_ASSURANCE_TESTS.cmd",
     "03_RUN_K01_CLOSURE_03.cmd",
     "03_RUN_MEDTAS_PIPELINE.cmd",
     "04_REBUILD_MEDTAS_CENTER.cmd",
@@ -56,7 +53,6 @@
     "12_BUILD_BOLT_EQUIV_SCAFFOLD.cmd",
     "12_BUILD_STRUCTURAL_MESH.cmd",
     "13_BUILD_CALCULIX_INPUT.cmd",
-    "14_AUDIT_PROJECT_STRUCTURE.cmd",
     "15_BUILD_DRAWING_RELEASE_PLAN.cmd",
     "16_BUILD_NATIVE_DRAWING_PACK.cmd",
     "17_DISCOVER_ANALYSIS_TOOLCHAIN.cmd",
@@ -64,7 +60,6 @@
     "19_BUILD_RELEASE_PRIORITY.cmd",
     "20_DISCOVER_DRAWING_TEMPLATE.cmd",
     "21_RECORD_DRAWING_VISUAL_APPROVAL.cmd",
-    "22_BUILD_AI_HANDOFF.cmd",
     "23_BUILD_EBOM_MBOM.cmd",
     "24_SYNC_PARTS_REGISTRY_TO_CAD_PROPS.cmd",
     "25_BUILD_P007_EXEMPLAR_PLAN.cmd",
@@ -78,10 +73,7 @@
     "31D_VERIFY_FINAL_ASSEMBLY_SEMANTICS.cmd",
     "31_BUILD_RELEASE_PROGRAM.cmd",
     "31_COMPILE_FINAL_ASSEMBLY_PROMOTION.cmd",
-    "35_GIT_AUDIT.cmd",
     "36_BUILD_TECHNICAL_FILTER_MAP.cmd",
-    "37_AUDIT_PROJECT_STRUCTURE.cmd",
-    "38_BUILD_CALCULATION_EVIDENCE_INDEX.cmd",
     "39_BUILD_FINAL_BOM_V2_2.cmd",
     "40_BUILD_R01_RELEASE_CANDIDATE.cmd",
     "Downloads",
@@ -103,7 +95,15 @@
     "├Ш8.20"
   ],
   "retired_root_entries": [
+    "00_MEDTAS_PREFLIGHT.cmd",
+    "00_MEDTAS_V8_PREFLIGHT.cmd",
+    "02_RUN_MEDTAS_ASSURANCE_TESTS.cmd",
     "03_RUN_MEDTAS_CAD_SEM_A001.cmd",
+    "14_AUDIT_PROJECT_STRUCTURE.cmd",
+    "22_BUILD_AI_HANDOFF.cmd",
+    "35_GIT_AUDIT.cmd",
+    "37_AUDIT_PROJECT_STRUCTURE.cmd",
+    "38_BUILD_CALCULATION_EVIDENCE_INDEX.cmd",
     "START_K01_CENTER.cmd"
   ],
   "policy": {
@@ -111,5 +111,6 @@
     "grandfathered_legacy_modify": "BLOCK",
     "grandfathered_legacy_delete": "ALLOW",
     "retired_reintroduce": "BLOCK"
-  }
+  },
+  "last_migration_step": "6E"
 }
