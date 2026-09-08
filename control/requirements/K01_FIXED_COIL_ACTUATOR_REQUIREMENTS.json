@@ -1,0 +1,22 @@
+{
+  "schema": "k01.fixed_coil_actuator_requirements.v2",
+  "generated_utc": "2026-09-08T13:14:41.053258+00:00",
+  "status": "HOLD_REQ_ACT_001_NUMERIC_ACCEPTANCE",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "architecture": "1x B001 moving + 1x P015 Dual Coil Bobbin / 2 fixed coils",
+  "requirements": [
+    {
+      "id": "REQ-ACT-001",
+      "status": "OPEN_NUMERIC_ACCEPTANCE",
+      "text": "Fixed-coil actuator force criterion",
+      "numeric_acceptance": null,
+      "note": "Do not inherit legacy 5 N without an approved current fixed-coil requirement source."
+    },
+    {
+      "id": "REQ-ACT-STROKE",
+      "status": "PASS_NATIVE",
+      "value_mm": 10.0,
+      "verification": "Gate04E LimitDistance1 0...10 mm"
+    }
+  ]
+}

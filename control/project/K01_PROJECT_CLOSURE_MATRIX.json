@@ -1,6 +1,6 @@
 {
   "schema": "k01.project_closure_matrix.v1",
-  "generated_utc": "2026-09-08T08:39:01.215857+00:00",
+  "generated_utc": "2026-09-08T13:58:19.349769+00:00",
   "engineering_baseline": {
     "assembly": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
     "sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4"
@@ -9,24 +9,36 @@
   "domains": [
     {
       "id": "CAD_BASELINE",
-      "status": "PASS",
+      "status": "PASS_FRESH_SNAPSHOT",
       "authority": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
-      "evidence": "Gate04E baseline hash locked"
+      "evidence": "Gate04E baseline hash locked",
+      "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+      "passport": "reports/engineering/K01_GATE04E_AS_BUILT_PASSPORT_CURRENT.json",
+      "native_occurrence_count": 13
     },
     {
       "id": "STRUCTURAL_SIMULATION",
       "status": "PASS_EVIDENCE_CAPTURED",
       "authority": "SolidWorks Simulation on Gate04E baseline",
-      "evidence_files": 11
+      "evidence_files": 11,
+      "native_study_count": 1,
+      "native_result_file_count": 4
     },
     {
       "id": "BOM",
-      "status": "HOLD_RELEASE_OPEN_ITEMS",
+      "status": "HOLD_ACTIONABLE_BLOCKERS",
       "authority": "tools/medtas/build_bom_v1_9.py",
       "modeled_occurrences": 13,
       "ebom_rows": 15,
-      "ebom_open": 9,
-      "mbom_open": 11
+      "ebom_open": 2,
+      "mbom_open": 5,
+      "authority_status": "PASS_AUTHORITY_IDENTIFIED",
+      "worklist_status": "HOLD_OPEN_ITEMS",
+      "occurrence_preview": "reports/bom/current/K01_GATE04E_OCCURRENCE_EBOM_PREVIEW.json",
+      "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+      "ebom_blockers": 2,
+      "mbom_blockers": 5,
+      "diagnosis": "control/bom/K01_BOM_BLOCKER_DIAGNOSIS.json"
     },
     {
       "id": "P007_ENTITY_BINDING",
@@ -48,14 +60,22 @@
     },
     {
       "id": "DRAWINGS_DIMXPERT",
-      "status": "READY_FOR_FIRST_CONTROLLED_PMI_WRITE",
+      "status": "PASS_P007_NOMINAL_PMI_PILOT; HOLD_FULL_PRODUCT_DEFINITION",
       "next": "Author only defined+bound characteristics, then close remaining specs and finish drawing QA",
       "safe_scope_count": 6,
-      "blocked_scope_count": 7
+      "blocked_scope_count": 7,
+      "candidate_part": "D:\\Marvilon\\K01\\cad\\candidates\\p007_pmi_authoring\\step13_20260908_164745\\K01-P-007_Hermetic_Magnetic_Can_PMI_STEP13_CANDIDATE.SLDPRT",
+      "geometry_invariant": true,
+      "pilot_scope": "C02 locator nominal diameter + C05 flange OD nominal only; NOT RELEASED",
+      "pilot_report": "reports/cad/p007_pmi_step9b_v2/K01_P007_PMI_STEP9B_V2_CURRENT.json",
+      "note": "Prior v3 created Diameter annotations 14.1 and 33 with geometry invariant but did not save because checker assumed metre-scaled nominal.",
+      "scope": "C02/C05 nominal size pilot only; tolerances/datums/GD&T still controlled downstream",
+      "pilot_evidence": "control/product_definition/K01_P007_PMI_WRITE_EVIDENCE.json",
+      "next_scope": "Datum A/B + controlled C03/C04/tolerances only after authoring semantics are explicitly frozen"
     },
     {
       "id": "FEMM_MAGNETIC_FORCE",
-      "status": "HOLD_INPUT_DATA",
+      "status": "PASS_NORMALIZED_DIFFERENTIAL_FORCE_EXTRACTION; HOLD_REQ_ACT_001_AND_PHYSICAL_INPUTS",
       "release_blocker": true,
       "title": "Absolute magnetic actuation force qualification F(x)",
       "missing": {
@@ -75,18 +95,51 @@
           "K01-B-002:temperature_data"
         ]
       },
-      "recovery_status": "PASS_RECOVERY_EVIDENCE_FOUND"
+      "recovery_status": "PASS_RECOVERY_EVIDENCE_FOUND",
+      "input_adjudication_status": "HOLD_AUTHORITY_OR_PROPERTY_GAPS",
+      "input_summary": {
+        "requirements_promotable_current_structured": [],
+        "requirements_requiring_authority_review": [
+          "REQ-MAG-001",
+          "REQ-MAG-002",
+          "REQ-MAG-003"
+        ],
+        "magnets_complete_current_structured": [
+          "K01-B-001",
+          "K01-B-002"
+        ],
+        "magnet_property_gaps": {
+          "K01-B-001": [],
+          "K01-B-002": []
+        }
+      },
+      "missing_controlled_inputs": [
+        "K01-B-001:grade",
+        "K01-B-001:Br_or_remanence",
+        "K01-B-001:temperature_data",
+        "K01-B-002:record"
+      ],
+      "requirements_status": "CONTROLLED_TRANSCRIPTION",
+      "magnet_selection_status": "HOLD_MAGNET_SELECTION",
+      "input_manifest": "control/analysis/K01_FIXED_COIL_FEMM_INPUT_MANIFEST.json",
+      "architecture": "1x B001 + 1x P015 Dual Coil Bobbin / 2 fixed coils",
+      "legacy_passive_coupling": "NOT_APPLICABLE",
+      "normalized_benchmark_status": "PASS_NORMALIZED_FORCE_BENCHMARK",
+      "benchmark": "control/analysis/K01_FIXED_COIL_FEMM_BENCHMARK.json",
+      "verified_quantity": "differential force extraction; absolute physical force still blocked"
     },
     {
       "id": "CENTER",
-      "status": "PASS",
+      "status": "PASS_EXISTING_CENTER_INPUT_READY",
       "selftest_rc": 0,
-      "note": "Center operational; closure matrix integration into UI is next control-plane increment"
+      "note": "Center operational; closure matrix integration into UI is next control-plane increment",
+      "dependency_state": "control/project/K01_DEPENDENCY_STATE.json",
+      "closure_matrix": "control/project/K01_PROJECT_CLOSURE_MATRIX.json"
     },
     {
       "id": "GIT_GITHUB",
       "status": "HOLD_LOCAL_CHANGES_OR_UNSYNCED",
-      "dirty_lines": 21,
+      "dirty_lines": 35,
       "ahead": 0,
       "behind": 0,
       "note": "Remote synchronization is controlled by local git push; repository guard/pre-commit remain active"
@@ -118,10 +171,18 @@
   ],
   "control_rule": "Every engineering iteration must close or materially reduce at least one listed domain blocker without invalidating a PASS domain.",
   "next_engineering_actions": [
-    "Execute first controlled P007 PMI authoring on a candidate copy if Step9A is READY.",
-    "Resolve magnetic input authority from Step8D; do not run release FEMM force model until input data is controlled.",
-    "Close P007 open specs C07/C08/C10/C11/C12 and blind-end tolerance.",
-    "Then complete K01-D-006 drawing and inspection definition.",
-    "Close EBOM/MBOM release-open items before R01 promotion."
-  ]
+    "Freeze REQ-ACT-001 numeric acceptance criterion.",
+    "Freeze B001 supplier/lot Br(T), tolerance and temperature-dependent magnetic data.",
+    "Freeze P015 winding turns, wire, polarity/connection and driver pulse/duty.",
+    "Use the now-verified differential-force extraction path for physical F(x,I,T) only after those magnetic/electrical inputs are frozen.",
+    "Advance P007 PMI from nominal pilot to controlled Datum A/B + C03/C04/tolerances; keep open characteristics fail-closed.",
+    "Resolve 2 EBOM / 5 MBOM blockers at their source registries using K01_BOM_BLOCKER_DIAGNOSIS.json.",
+    "Existing Center consumes the same closure/dependency state; no parallel Center."
+  ],
+  "current_iteration_root_snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "step13_domain_statuses": {
+    "FEMM": "EXECUTION_ERROR",
+    "P007_PMI": "PASS",
+    "BOM_PRODUCER": "PASS"
+  }
 }

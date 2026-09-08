@@ -1,0 +1,13 @@
+{
+  "schema": "k01.center.input.v3",
+  "generated_utc": "2026-09-08T13:58:19.349769+00:00",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "closure_matrix": "control/project/K01_PROJECT_CLOSURE_MATRIX.json",
+  "dependency_state": "control/project/K01_DEPENDENCY_STATE.json",
+  "femm_benchmark": "control/analysis/K01_FIXED_COIL_FEMM_BENCHMARK.json",
+  "femm_qualification": "control/analysis/K01_MAGNETIC_FORCE_QUALIFICATION.json",
+  "p007_pmi_evidence": "control/product_definition/K01_P007_PMI_WRITE_EVIDENCE.json",
+  "bom_worklist": "control/bom/K01_BOM_RELEASE_WORKLIST.json",
+  "bom_diagnosis": "control/bom/K01_BOM_BLOCKER_DIAGNOSIS.json",
+  "policy": "Existing Center only; this contract is a projection, not another source of truth."
+}

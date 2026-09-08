@@ -1,0 +1,28 @@
+{
+  "schema": "k01.legacy_magnetic_requirements_history.v2",
+  "generated_utc": "2026-09-08T13:14:41.053258+00:00",
+  "status": "HISTORICAL_NOT_CURRENT",
+  "change_control_source": "control/K01_PROJECT_CONTROL_v2.xlsx",
+  "change_control_sha256": "44fef6df9f62147f799e1894537257ccb9175455f0d03e8f4cda982c3129c165",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "requirements": [
+    {
+      "id": "REQ-MAG-001",
+      "legacy_acceptance": ">=5 N operational magnetic transmission",
+      "current_status": "SUPERSEDED",
+      "replacement": "REQ-ACT-001 fixed-coil force criterion"
+    },
+    {
+      "id": "REQ-MAG-002",
+      "legacy_acceptance": ">=15 N passive coupling pull-out",
+      "current_status": "OBSOLETE",
+      "replacement": "No external permanent-magnet coupling"
+    },
+    {
+      "id": "REQ-MAG-003",
+      "legacy_acceptance": "12 mm external magnetic carriage travel",
+      "current_status": "OBSOLETE",
+      "replacement": "P015 fixed; native internal stroke 10 mm"
+    }
+  ]
+}

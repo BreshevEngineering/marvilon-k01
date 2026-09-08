@@ -1,0 +1,14 @@
+{
+  "schema": "k01.gate04e.snapshot_pointer.v2",
+  "generated_utc": "2026-09-08T13:14:41.050268+00:00",
+  "status": "PASS",
+  "snapshot_report": "reports/cad/gate04e_snapshot/K01_GATE04E_NATIVE_SNAPSHOT_CURRENT.json",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "assembly_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\verification\\K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+  "assembly_sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4",
+  "active_configuration": "Default",
+  "solidworks_revision": "26.0.1",
+  "interop_sldworks_assembly_version": "26.0.1.1",
+  "workstation_contract": "SOLIDWORKS 2018 / API revision 26",
+  "policy": "Downstream results in this iteration reference this exact snapshot SHA; no new CAD scan unless CAD inputs change."
+}

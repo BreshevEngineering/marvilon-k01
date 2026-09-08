@@ -1,104 +1,21 @@
 {
-  "schema": "k01.magnetic_force_qualification.v1",
-  "generated_utc": "2026-09-08T08:31:41.104182+00:00",
-  "status": "HOLD_INPUT_DATA",
-  "purpose": "Absolute magnetic actuation force qualification F(x); field screening alone is not release evidence.",
-  "requirements_found": {},
-  "magnet_parts": {
-    "K01-B-001": {
-      "cad_identity_key": "K01-B-001",
-      "cad_property_projection": {
-        "Description": "Internal SmCo Magnet",
-        "MakeBuy": "BUY",
-        "MaterialAuthority": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN",
-        "MaterialStatus": "OPEN LOT DATA",
-        "PartNo": "K01-B-001",
-        "Revision": ""
-      },
-      "description": "Internal SmCo Magnet",
-      "item_type": "PURCHASED",
-      "make_buy": "BUY",
-      "manufacturer_part_number": null,
-      "material_authority": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN",
-      "material_status": "OPEN LOT DATA",
-      "part_number": "K01-B-001",
-      "release_state": "HOLD",
-      "revision": null,
-      "revision_status": "OPEN_RELEASE_REVISION",
-      "standard_or_specification": null,
-      "supplier": null,
-      "unit": "ea"
-    }
-  },
-  "magnetic_data_state": {
-    "K01-B-001": {
-      "present": true,
-      "has_grade": false,
-      "has_br": true,
-      "has_temperature_data": false,
-      "fields": [
-        {
-          "key": "cad_identity_key",
-          "value": "K01-B-001"
-        },
-        {
-          "key": "cad_property_projection.MaterialAuthority",
-          "value": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN"
-        },
-        {
-          "key": "cad_property_projection.MaterialStatus",
-          "value": "OPEN LOT DATA"
-        },
-        {
-          "key": "material_authority",
-          "value": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN"
-        },
-        {
-          "key": "material_status",
-          "value": "OPEN LOT DATA"
-        }
-      ]
-    }
-  },
-  "missing": {
-    "requirements": [
-      "REQ-MAG-001",
-      "REQ-MAG-002",
-      "REQ-MAG-003"
-    ],
-    "parts": [
-      "K01-B-002"
-    ],
-    "magnetic_properties": [
-      "K01-B-001:grade",
-      "K01-B-001:temperature_data",
-      "K01-B-002:grade",
-      "K01-B-002:Br_or_remanence",
-      "K01-B-002:temperature_data"
-    ]
-  },
-  "existing_femm_files": [
-    "control/femm/BUILD_FEMM_SCREENING_INPUT_PACK.cmd",
-    "control/femm/BUILD_FEMM_SCREENING_INPUT_PACK.ps1",
-    "control/femm/CHECK_FEMM_INSTALL.cmd",
-    "control/femm/CHECK_FEMM_INSTALL.ps1",
-    "control/femm/CHECK_K01_FEMM_INSTALL.cmd",
-    "control/femm/CHECK_K01_FEMM_INSTALL.ps1",
-    "control/femm/FEMM_READINESS.json",
-    "control/femm/K01_FEMM_SCREENING_PLAN_CURRENT.json",
-    "control/femm/K01_FEMM_SCREENING_PLAN_v1.json",
-    "control/femm/K01_FEMM_SETUP_v1.json",
-    "control/femm/K01_FEMM_STATUS_CURRENT.json",
-    "reports/femm/FEMM_INSTALL_CURRENT.json"
-  ],
-  "required_force_model_outputs": [
-    "F_available(x) over the functional magnetic travel / critical positions",
-    "nominal magnetic-property case",
-    "minimum magnetic-property / worst-gap tolerance case",
-    "critical-temperature case",
-    "mechanical F_required,max envelope",
-    "minimum force design margin",
-    "bench correlation at defined positions"
-  ],
-  "release_rule": "Do not mark magnetic release PASS until absolute force and margin are evidenced."
+  "schema": "k01.fixed_coil_force_qualification.v3",
+  "generated_utc": "2026-09-08T13:58:19.349769+00:00",
+  "status": "PASS_NORMALIZED_DIFFERENTIAL_FORCE_EXTRACTION; HOLD_REQ_ACT_001_AND_PHYSICAL_INPUTS",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "requirements_authority": "control/requirements/K01_FIXED_COIL_ACTUATOR_REQUIREMENTS.json",
+  "input_manifest": "control/analysis/K01_FIXED_COIL_FEMM_INPUT_MANIFEST.json",
+  "legacy_REQ_MAG_applicability": "HISTORICAL_ONLY",
+  "release_rule": "PASS only after current force criterion, qualified F(x,I,T), complete mechanical load envelope and bench correlation.",
+  "normalized_benchmark": "control/analysis/K01_FIXED_COIL_FEMM_BENCHMARK.json",
+  "normalized_benchmark_status": "PASS_NORMALIZED_FORCE_BENCHMARK",
+  "normalized_quantity": "excitation-induced differential axial force",
+  "remaining_release_blockers": [
+    "REQ-ACT-001 numeric acceptance",
+    "B001 supplier/lot Br(T), tolerance and temperature-dependent magnetic properties",
+    "P015 winding turns/wire/polarity/connection and driver pulse/duty",
+    "measured breakaway hot/cold both directions",
+    "qualified mechanical/gas load envelope across stroke",
+    "physical F(x,I,T) and bench correlation"
+  ]
 }

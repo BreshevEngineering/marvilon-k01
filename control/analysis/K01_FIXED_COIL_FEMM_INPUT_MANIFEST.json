@@ -1,0 +1,199 @@
+{
+  "schema": "k01.fixed_coil_femm_input_manifest.v2",
+  "generated_utc": "2026-09-08T13:14:41.053258+00:00",
+  "status": "READY_FOR_AXISYMMETRIC_GEOMETRY_BENCHMARK; QUALIFIED_FORCE_SOLVE_BLOCKED",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "coordinate_system": {
+    "axis": "assembly +X",
+    "units": "mm"
+  },
+  "architecture": {
+    "status": "CONFIRMED_BY_GATE04E_SNAPSHOT",
+    "moving_internal_magnet": {
+      "id": "K01-B-001",
+      "occurrence_count": 1
+    },
+    "fixed_dual_coil_bobbin": {
+      "id": "K01-P-015",
+      "occurrence_count": 1,
+      "description": "Dual Coil Bobbin"
+    },
+    "coil_count_functional": 2,
+    "retired_external_coupling_occurrences": [],
+    "interpretation": "Two fixed coils are implemented within one K01-P-015 Dual Coil Bobbin occurrence; P015 is not expected twice."
+  },
+  "kinematics": {
+    "q_definition": "LimitDistance1 P001↔P014",
+    "IN_q_mm": 0.0,
+    "MID_q_mm": 5.0,
+    "OUT_q_mm": 10.0,
+    "CURRENT_q_mm": 7.700175058836272,
+    "B001_center_x_mm": {
+      "IN": {
+        "q_mm": 0.0,
+        "b001_center_x_mm": 45.00674870200468
+      },
+      "MID": {
+        "q_mm": 5.0,
+        "b001_center_x_mm": 50.00674870200468
+      },
+      "OUT": {
+        "q_mm": 10.0,
+        "b001_center_x_mm": 55.00674870200468
+      },
+      "CURRENT": {
+        "q_mm": 7.700175058836272,
+        "b001_center_x_mm": 52.70692376084095
+      }
+    }
+  },
+  "B001": {
+    "geometry": {
+      "OD_mm": 8.0,
+      "length_mm": 8.0,
+      "axis_assembly": "+X",
+      "center_states_mm": {
+        "IN": {
+          "q_mm": 0.0,
+          "b001_center_x_mm": 45.00674870200468
+        },
+        "MID": {
+          "q_mm": 5.0,
+          "b001_center_x_mm": 50.00674870200468
+        },
+        "OUT": {
+          "q_mm": 10.0,
+          "b001_center_x_mm": 55.00674870200468
+        },
+        "CURRENT": {
+          "q_mm": 7.700175058836272,
+          "b001_center_x_mm": 52.70692376084095
+        }
+      }
+    },
+    "cad_material_label": "Sm2Co17 S280 — MTS SM-SA-8x8",
+    "material_authority": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN",
+    "lot_data_status": "OPEN LOT DATA",
+    "Br_T": {
+      "value": null,
+      "status": "OPEN_SUPPLIER_LOT"
+    },
+    "recoil_permeability": {
+      "value": null,
+      "status": "OPEN_SUPPLIER_DATA"
+    },
+    "coercivity_demag_curve": {
+      "value": null,
+      "status": "OPEN_SUPPLIER_DATA"
+    }
+  },
+  "P015": {
+    "occurrences": 1,
+    "description": "Dual Coil Bobbin",
+    "bobbin_center_x_mm": 50.00674870200472,
+    "ID_mm": 10.4,
+    "outer_flange_OD_mm": 18.4,
+    "geometric_coil_zone_candidates": [
+      {
+        "diameter_mm": 11.4,
+        "length_mm": 6.0,
+        "x0_mm": 38.25674870200473,
+        "x1_mm": 44.25674870200472,
+        "center_x_mm": 41.25674870200473,
+        "feature": "Revolve1"
+      },
+      {
+        "diameter_mm": 11.4,
+        "length_mm": 5.999999999999998,
+        "x0_mm": 55.75674870200473,
+        "x1_mm": 61.75674870200473,
+        "center_x_mm": 58.75674870200473,
+        "feature": "Revolve1"
+      }
+    ],
+    "central_region": [
+      {
+        "diameter_mm": 11.4,
+        "length_mm": 8.5,
+        "x0_mm": 45.75674870200472,
+        "x1_mm": 54.25674870200472,
+        "center_x_mm": 50.00674870200472,
+        "feature": "Revolve1"
+      }
+    ],
+    "winding_spec": {
+      "turns_per_coil": null,
+      "wire_diameter_with_insulation_mm": null,
+      "polarity_connection": null,
+      "normal_current_A": 1.0,
+      "extended_bench_current_A": 1.25,
+      "pulse_duration_duty": null,
+      "status": "SCREENING_CURRENTS_FROM_CHANGE_CONTROL; WINDING/DRIVER SPEC OPEN"
+    }
+  },
+  "P007": {
+    "OD_mm": 10.0,
+    "ID_mm": 9.4,
+    "radial_wall_mm": 0.2999999999999998,
+    "outer_axial_interval_mm": [
+      33.206748702004724,
+      65.20674870200472
+    ],
+    "inner_axial_interval_mm": [
+      32.206748702004724,
+      64.20674870200472
+    ],
+    "blind_end_mm": 1.0,
+    "material": "AISI 316L / EN 1.4404",
+    "magnetic_property_for_screening": "mu_r≈1 may be used only as explicit screening assumption; release model requires controlled magnetic-property treatment if material processing makes this significant"
+  },
+  "clearances": {
+    "P015_ID_to_P007_OD_radial_mm": 0.20000000000000018,
+    "B001_OD_to_P007_ID_envelope_radial_mm": 0.7000000000000002
+  },
+  "relative_positions": {
+    "B001_center_minus_coil_zone_centers_mm": {
+      "IN": [
+        3.7499999999999503,
+        -13.75000000000005
+      ],
+      "MID": [
+        8.74999999999995,
+        -8.75000000000005
+      ],
+      "OUT": [
+        13.74999999999995,
+        -3.7500000000000497
+      ],
+      "CURRENT": [
+        11.450175058836223,
+        -6.049824941163777
+      ]
+    }
+  },
+  "change_control_screening_inputs": {
+    "CFD_axial_force_current_case_N": 0.185447243,
+    "inertia_allowance_N": 0.03,
+    "prototype_screening_safety_factor": 2.0,
+    "legacy_force_constant_N_per_A": 1.0,
+    "normal_pulse_current_A": 1.0,
+    "extended_bench_pulse_current_A": 1.25,
+    "status": "SCREENING_ONLY; not release-qualified force criterion"
+  },
+  "solver_sequence": [
+    "Build axisymmetric benchmark from B001/P007/P015 axial geometry and the two 6 mm coil-zone candidates.",
+    "Validate sign, units, A-turn convention and moving-body force group at one position.",
+    "Run IN/MID/OUT with Coil A only, Coil B only and intended working polarity once winding polarity is controlled.",
+    "Perform mesh convergence and outer-boundary convergence at the minimum-force position.",
+    "Run F(x,I,T) with local refinement around force minima.",
+    "Sweep B001 Br(T), current, critical clearances and tolerances after supplier/winding inputs are controlled.",
+    "Compare minimum directed force to complete mechanical required-force envelope."
+  ],
+  "release_blockers": [
+    "REQ-ACT-001 final numeric acceptance",
+    "B001 supplier/lot Br(T) and temperature/tolerance data",
+    "P015 turns, wire, polarity/connection and driver pulse/duty",
+    "breakaway hot/cold both directions",
+    "qualified load envelope across stroke"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "k01.bom_release_worklist.v4",
+  "generated_utc": "2026-09-08T13:48:37.014582+00:00",
+  "status": "HOLD_OPEN_ITEMS",
+  "authority": "tools/medtas/build_bom_v1_9.py",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "ebom": {
+    "open_count": 2,
+    "open_items": [
+      "BOM-NONMODELED-OPEN:NM-J2-CLAMP-SCREW",
+      "BOM-NONMODELED-OPEN:NM-J2-SEAL"
+    ]
+  },
+  "mbom": {
+    "open_count": 5,
+    "open_items": [
+      "BOM-NONMODELED-OPEN:NM-J2-CLAMP-SCREW",
+      "BOM-NONMODELED-OPEN:NM-J2-FASTENER-PROCESS",
+      "BOM-NONMODELED-OPEN:NM-J2-SEAL",
+      "BOM-NONMODELED-OPEN:NM-P007-WELD-PROCESS",
+      "MBOM-TRANSFORMATION-OPEN:MBOM-P007-WELDED-CONSTRUCTION"
+    ]
+  }
+}

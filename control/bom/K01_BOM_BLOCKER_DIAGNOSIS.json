@@ -1,0 +1,61 @@
+{
+  "schema": "k01.bom_blocker_diagnosis.v1",
+  "generated_utc": "2026-09-08T13:58:19.349769+00:00",
+  "status": "HOLD_ACTIONABLE_BLOCKERS",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "ebom_blocker_count": 2,
+  "mbom_blocker_count": 5,
+  "blockers": [
+    {
+      "id": "BOM-NONMODELED-OPEN:NM-J2-CLAMP-SCREW",
+      "owner_source": "controlled purchased/non-modeled product record",
+      "required_closure": [
+        "fastener designation/standard",
+        "thread/size consistent with current Gate04E interface",
+        "material/grade",
+        "quantity",
+        "release status"
+      ],
+      "do_not_infer": "Do not infer final screw only from a clearance-hole diameter."
+    },
+    {
+      "id": "BOM-NONMODELED-OPEN:NM-J2-SEAL",
+      "owner_source": "controlled seal specification",
+      "required_closure": [
+        "seal type/size",
+        "compound/material",
+        "chemical and temperature compatibility",
+        "quantity",
+        "release status"
+      ]
+    },
+    {
+      "id": "BOM-NONMODELED-OPEN:NM-J2-FASTENER-PROCESS",
+      "owner_source": "MBOM assembly process registry",
+      "required_closure": [
+        "assembly preload/torque basis",
+        "galling/lubrication/thread treatment policy as applicable",
+        "inspection/verification step"
+      ]
+    },
+    {
+      "id": "BOM-NONMODELED-OPEN:NM-P007-WELD-PROCESS",
+      "owner_source": "P007/P013 process applicability decision",
+      "required_closure": [
+        "confirm current process applicability against latest containment/cap baseline",
+        "if active: welding process/spec/inspection",
+        "if superseded: retire from active MBOM with change-control provenance"
+      ]
+    },
+    {
+      "id": "MBOM-TRANSFORMATION-OPEN:MBOM-P007-WELDED-CONSTRUCTION",
+      "owner_source": "MBOM transformation/applicability registry",
+      "required_closure": [
+        "confirm whether welded construction is current",
+        "if not current: supersede/retire transformation",
+        "if current: define transformation inputs/outputs and inspection"
+      ]
+    }
+  ],
+  "policy": "Close blockers in source registries; never hand-edit derived EBOM/MBOM rows."
+}

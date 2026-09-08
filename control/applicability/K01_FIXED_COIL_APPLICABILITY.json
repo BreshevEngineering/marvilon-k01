@@ -1,0 +1,23 @@
+{
+  "schema": "k01.fixed_coil_applicability.v2",
+  "generated_utc": "2026-09-08T13:14:41.053258+00:00",
+  "status": "PASS",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "active_architecture": [
+    "K01-B-001",
+    "K01-P-015 (one dual-coil bobbin, two functional coils)"
+  ],
+  "retired_from_K01-A-001": [
+    "K01-B-002",
+    "K01-B-003",
+    "K01-B-004",
+    "K01-B-005",
+    "K01-B-006",
+    "K01-P-010",
+    "K01-P-012"
+  ],
+  "moved_from_active_registry": [],
+  "B001_geometry": "Ø8×8 native CAD confirmed",
+  "B001_material_candidate": "Sm2Co17 S280 — MTS SM-SA-8x8",
+  "B001_supply_qualification": "OPEN LOT Br(T)/tolerance/temperature data"
+}

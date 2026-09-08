@@ -1,0 +1,129 @@
+{
+  "schema": "k01.dependency_state.v2",
+  "generated_utc": "2026-09-08T13:58:19.349769+00:00",
+  "root_snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "nodes": {
+    "Gate04E_snapshot": {
+      "status": "PASS",
+      "sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d"
+    },
+    "Gate04E_passport": {
+      "status": "PASS_FACTUAL_GATE04E_PASSPORT_WITH_OPEN_RELEASE_INPUTS",
+      "depends_on": [
+        "Gate04E_snapshot"
+      ]
+    },
+    "fixed_coil_applicability": {
+      "status": "PASS",
+      "depends_on": [
+        "Gate04E_snapshot",
+        "change_control_v2"
+      ]
+    },
+    "fixed_coil_FEMM_inputs": {
+      "status": "PASS_GEOMETRY_INPUT_MANIFEST",
+      "depends_on": [
+        "Gate04E_snapshot",
+        "fixed_coil_applicability",
+        "B001_supplier_data",
+        "P015_winding_spec",
+        "load_measurements",
+        "REQ-ACT-001"
+      ]
+    },
+    "canonical_BOM": {
+      "status": "PASS_RELEASE_COMPLETE",
+      "depends_on": [
+        "Gate04E_snapshot",
+        "product_registry",
+        "process_registry",
+        "fixed_coil_applicability"
+      ]
+    },
+    "P007_product_definition": {
+      "status": "HOLD_OPEN_SPEC",
+      "depends_on": [
+        "P007_native_hash"
+      ]
+    },
+    "P007_PMI": {
+      "status": "HOLD_SAVE_REOPEN_UNIT_READBACK",
+      "depends_on": [
+        "P007_product_definition"
+      ]
+    },
+    "Center": {
+      "status": "READY_TO_CONSUME_SINGLE_STATE",
+      "depends_on": [
+        "closure_matrix",
+        "dependency_state"
+      ]
+    },
+    "R01": {
+      "status": "DEFERRED",
+      "depends_on": [
+        "all_release_blockers_closed"
+      ]
+    },
+    "fixed_coil_FEMM_normalized_benchmark": {
+      "status": "PASS_NORMALIZED_FORCE_BENCHMARK",
+      "depends_on": [
+        "Gate04E_snapshot",
+        "fixed_coil_FEMM_inputs"
+      ],
+      "verified_quantity": "excitation-induced differential force"
+    },
+    "P007_PMI_pilot": {
+      "status": "PASS_PILOT_SAVE_CLOSE_REOPEN",
+      "depends_on": [
+        "P007_product_definition"
+      ],
+      "evidence": "control/product_definition/K01_P007_PMI_WRITE_EVIDENCE.json"
+    }
+  },
+  "staleness_rules": [
+    {
+      "change": "Gate04E component path/config/hash/transform",
+      "invalidate": [
+        "Gate04E_passport",
+        "fixed_coil_FEMM_inputs",
+        "canonical_BOM",
+        "Center"
+      ]
+    },
+    {
+      "change": "B001 supplier Br(T)/grade/tolerance",
+      "invalidate": [
+        "FEMM_results",
+        "force_qualification"
+      ]
+    },
+    {
+      "change": "P015 geometry/winding/driver",
+      "invalidate": [
+        "FEMM_results",
+        "thermal",
+        "force_qualification",
+        "drawing if geometry changed"
+      ]
+    },
+    {
+      "change": "P007 native hash",
+      "invalidate": [
+        "P007 bindings",
+        "PMI",
+        "K01-D-006",
+        "dependent structural results if interface/loads change"
+      ]
+    },
+    {
+      "change": "active/retired applicability",
+      "invalidate": [
+        "EBOM",
+        "MBOM",
+        "Center release state"
+      ]
+    }
+  ],
+  "iteration_rule": "A closed node reopens only when an input dependency changes or a contradiction is detected."
+}
