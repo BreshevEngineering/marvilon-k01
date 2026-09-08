@@ -1,0 +1,45 @@
+{
+  "schema": "k01.bom_authority.v1",
+  "generated_utc": "2026-09-08T07:48:14.906553+00:00",
+  "status": "PASS_AUTHORITY_IDENTIFIED",
+  "engineering_baseline": {
+    "assembly": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+    "sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4"
+  },
+  "authority": {
+    "producer": "tools/medtas/build_bom_v1_9.py",
+    "producer_name": "build_bom_v1_9.py",
+    "parts_registry": "control/product/parts.json",
+    "parts_registry_shape": "items",
+    "current_artifact_matches": [
+      {
+        "path": "reports/bom/current/K01_EBOM_A001_CURRENT.json",
+        "schema": "k01.ebom.v2_5",
+        "modeled": 13,
+        "rows": 15,
+        "status": "HOLD"
+      },
+      {
+        "path": "reports/medtas/bom/current/K01_EBOM_MODEL_A001_v1_9.json",
+        "schema": "k01.ebom_model.a001.v1_9",
+        "modeled": 13,
+        "rows": 15,
+        "status": "HOLD"
+      }
+    ],
+    "center_normalized_state": {
+      "ebom_status": "HOLD",
+      "modeled_instances": 13,
+      "ebom_rows": 15,
+      "mbom_status": "HOLD"
+    },
+    "evidence": [
+      "current EBOM schema is v1.9 model schema"
+    ]
+  },
+  "policy": {
+    "bom_is_derived_projection": true,
+    "no_hand_edited_second_truth": true,
+    "do_not_select_producer_by_filename_version_alone": true
+  }
+}

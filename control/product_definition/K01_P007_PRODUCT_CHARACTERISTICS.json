@@ -1,0 +1,423 @@
+{
+  "schema": "k01.p007.product_characteristics.v1",
+  "generated_utc": "2026-09-08T08:31:14.436167+00:00",
+  "status": "HOLD_OPEN_SPEC",
+  "engineering_baseline": {
+    "assembly": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+    "assembly_sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4"
+  },
+  "native_part": {
+    "path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
+    "sha256": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653",
+    "document_title": "K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
+    "semantic_document": "K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE"
+  },
+  "material": "AISI 316L / EN 1.4404",
+  "geometry_authority": "CURRENT_NATIVE_SOLIDWORKS_PART_REFERENCED_BY_GATE04E_BASELINE",
+  "datum_A": {
+    "binding_mode": "COMPOSITE_COPLANAR_FACE_SET",
+    "entities": [
+      {
+        "face_index": 0,
+        "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEARAAAABbtl2oDAAAA//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgASwAAAHzlmmoDAAAA/////wAAAAAAAAyAAAAFgAgAagAAAESBnGoHAAAA/////wAAAAAAAP//AQAYAG1vQ2lyUGF0dGVyblN1cmZJZFJlcDJfYwAABYAIAF8AAACD5ZpqDIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAEAAAAAAAAAAAARgAAABYAIAF8AAACD5ZpqDIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAIAAAAAAAAAAAAMgAAABYAIAFIAAACA5ZpqAwAAAP////8AAAAAAAAAAAAAAAAAAAAAAAA=",
+        "feature": "K01_F_TRIM_FRONT_SLEEVE_5MM",
+        "surface_type": "plane"
+      },
+      {
+        "face_index": 15,
+        "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEARAAAABbtl2oDAAAA//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgAagAAAESBnGoGAAAA/////wAAAAAAAAOAAAAFgAgAJwAAAFtUkGoOAAAAAAAAAAAAAAAAAAAAAAA=",
+        "feature": "K01_F_TRIM_FRONT_SLEEVE_5MM",
+        "surface_type": "plane"
+      }
+    ],
+    "plane_group_tolerance_mm": 0.0002
+  },
+  "characteristics": [
+    {
+      "id": "C01",
+      "role": "J2 face / datum A flatness",
+      "type": "GD&T",
+      "candidate_spec": "FLATNESS 0.03",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "mbd_required": true,
+      "live_geometry_reconciliation": null,
+      "authority_class": "OPEN_OR_CANDIDATE_REQUIREMENT",
+      "solidworks_binding": {
+        "binding_type": "COMPOSITE_COPLANAR_FACE_SET",
+        "entities": [
+          {
+            "face_index": 0,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEARAAAABbtl2oDAAAA//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgASwAAAHzlmmoDAAAA/////wAAAAAAAAyAAAAFgAgAagAAAESBnGoHAAAA/////wAAAAAAAP//AQAYAG1vQ2lyUGF0dGVyblN1cmZJZFJlcDJfYwAABYAIAF8AAACD5ZpqDIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAEAAAAAAAAAAAARgAAABYAIAF8AAACD5ZpqDIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAIAAAAAAAAAAAAMgAAABYAIAFIAAACA5ZpqAwAAAP////8AAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "K01_F_TRIM_FRONT_SLEEVE_5MM",
+            "surface_type": "plane"
+          },
+          {
+            "face_index": 15,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEARAAAABbtl2oDAAAA//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgAagAAAESBnGoGAAAA/////wAAAAAAAAOAAAAFgAgAJwAAAFtUkGoOAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "K01_F_TRIM_FRONT_SLEEVE_5MM",
+            "surface_type": "plane"
+          }
+        ]
+      },
+      "binding_status": "PASS"
+    },
+    {
+      "id": "C02",
+      "role": "Locator / datum B",
+      "type": "SIZE_FIT_DATUM",
+      "candidate_spec": "Ø14.10 H7 × 1.70",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "current_state": "LIVE_CAD_CONFLICT_REVIEW",
+      "mbd_required": true,
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C02",
+        "details": [
+          {
+            "legacy_candidate": 14.1,
+            "live": 14.1,
+            "live_key": "locator_od_mm",
+            "status": "MATCH"
+          },
+          {
+            "legacy_candidate": 1.7,
+            "live": 2.0,
+            "live_key": "locator_length_mm",
+            "status": "MISMATCH"
+          }
+        ],
+        "source_candidate": "Ø14.10 H7 × 1.70",
+        "status": "CONFLICT"
+      },
+      "authority_class": "CURRENT_NATIVE_GEOMETRY",
+      "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_FACE",
+        "entities": [
+          {
+            "face_index": 14,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEAJwAAAFtUkGoOAAAAA4AAAAWACAAnAAAAW1SQag0AAAAAAAOAAAAFgAgARAAAABbtl2oDAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "Revolve1",
+            "surface_type": "cylinder"
+          }
+        ]
+      },
+      "binding_status": "PASS"
+    },
+    {
+      "id": "C03",
+      "role": "Locator axis perpendicularity to A",
+      "type": "GD&T",
+      "candidate_spec": "PERP Ø0.03 TO A",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "mbd_required": true,
+      "live_geometry_reconciliation": null,
+      "authority_class": "OPEN_OR_CANDIDATE_REQUIREMENT",
+      "solidworks_binding": null,
+      "binding_status": "NOT_FACE_BOUND_OR_PENDING"
+    },
+    {
+      "id": "C04",
+      "role": "J2 clamp clearance pattern",
+      "type": "PATTERN_GD&T",
+      "candidate_spec": "3×Ø2.90 THRU; PCD26.50 BASIC; 120° BASIC; POS Ø0.15 |A|B",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "mbd_required": true,
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C04",
+        "details": [
+          {
+            "legacy_candidate": 2.9,
+            "live": 2.9,
+            "live_key": "clearance_hole_diameter_mm",
+            "status": "MATCH"
+          },
+          {
+            "legacy_candidate": 26.5,
+            "live": 26.5,
+            "live_key": "fastener_pcd_mm",
+            "status": "MATCH"
+          }
+        ],
+        "source_candidate": "3×Ø2.90 THRU; PCD26.50 BASIC; 120° BASIC; POS Ø0.15 |A|B",
+        "status": "MATCH"
+      },
+      "authority_class": "CURRENT_NATIVE_GEOMETRY",
+      "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_PATTERN_FACES",
+        "entities": [
+          {
+            "face_index": 5,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGwBtb0Zyb21Ta3RFbnQzSW50U3VyZklkUmVwX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/2lEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAYwBhAG4AZABpAGQAYQB0AGUAcwBcAGcAYQB0AGUAMAA0AGQAXwBjADIAcgAxAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgBfAEcAQQBUAEUAMAA0AEQAXwBDADIAUgAxAF8AQwBBAE4ARABJAEQAQQBUAEUALgBTAEwARABQAFIAVAAJgP/+/zZLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAFIAAACA5ZpqAwAAAP////8AAAAA//8BABcAbW9Gcm9tU2t0RW50U3VyZklkUmVwX2MAAAWACAAnAAAAW1SQagUAAAAAAAyAAAAFgAgARAAAABbtl2oDAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "K01_F_J2_C2_M2P5_CLEARANCE_SEED",
+            "surface_type": "cylinder"
+          },
+          {
+            "face_index": 6,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/2lEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAYwBhAG4AZABpAGQAYQB0AGUAcwBcAGcAYQB0AGUAMAA0AGQAXwBjADIAcgAxAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgBfAEcAQQBUAEUAMAA0AEQAXwBDADIAUgAxAF8AQwBBAE4ARABJAEQAQQBUAEUALgBTAEwARABQAFIAVAAJgP/+/zZLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAF8AAACD5Zpq//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAACAAAAAAAAAP//AQAXAG1vRnJvbVNrdEVudFN1cmZJZFJlcF9jAAAFgAgAJwAAAFtUkGoFAAAAAAAPgAAABYAIAEQAAAAW7ZdqAwAAAAAAAAAAAAAAAAAAAAAA",
+            "feature": "K01_F_J2_C2_M2P5_PATTERN_3X120",
+            "surface_type": "cylinder"
+          },
+          {
+            "face_index": 7,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/2lEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAYwBhAG4AZABpAGQAYQB0AGUAcwBcAGcAYQB0AGUAMAA0AGQAXwBjADIAcgAxAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgBfAEcAQQBUAEUAMAA0AEQAXwBDADIAUgAxAF8AQwBBAE4ARABJAEQAQQBUAEUALgBTAEwARABQAFIAVAAJgP/+/zZLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAF8AAACD5Zpq//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAABAAAAAAAAAP//AQAXAG1vRnJvbVNrdEVudFN1cmZJZFJlcF9jAAAFgAgAJwAAAFtUkGoFAAAAAAAPgAAABYAIAEQAAAAW7ZdqAwAAAAAAAAAAAAAAAAAAAAAA",
+            "feature": "K01_F_J2_C2_M2P5_PATTERN_3X120",
+            "surface_type": "cylinder"
+          }
+        ]
+      },
+      "binding_status": "PASS"
+    },
+    {
+      "id": "C05",
+      "role": "Flange size",
+      "type": "SIZE_TOLERANCE",
+      "candidate_spec": "Ø33.00 ±0.05 × 3.00 ±0.05",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "mbd_required": true,
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C05",
+        "details": [
+          {
+            "legacy_candidate": 33.0,
+            "live": 33.0,
+            "live_key": "flange_od_mm",
+            "status": "MATCH"
+          },
+          {
+            "legacy_candidate": 3.0,
+            "live": 3.0,
+            "live_key": "flange_thickness_mm",
+            "status": "MATCH"
+          }
+        ],
+        "source_candidate": "Ø33.00 ±0.05 × 3.00 ±0.05",
+        "status": "MATCH"
+      },
+      "authority_class": "CURRENT_NATIVE_GEOMETRY",
+      "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_FACE",
+        "entities": [
+          {
+            "face_index": 1,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGwBtb0Zyb21Ta3RFbnQzSW50U3VyZklkUmVwX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/2lEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAYwBhAG4AZABpAGQAYQB0AGUAcwBcAGcAYQB0AGUAMAA0AGQAXwBjADIAcgAxAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgBfAEcAQQBUAEUAMAA0AEQAXwBDADIAUgAxAF8AQwBBAE4ARABJAEQAQQBUAEUALgBTAEwARABQAFIAVAAJgP/+/zZLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEsAAAB85ZpqAwAAAP////8AAAAA//8BABcAbW9Gcm9tU2t0RW50U3VyZklkUmVwX2MAAAWACAAnAAAAW1SQagUAAAAAAAyAAAAFgAgARAAAABbtl2oDAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "K01_F_J2_C2_FLANGE_OD33_T3",
+            "surface_type": "cylinder"
+          }
+        ]
+      },
+      "binding_status": "PASS"
+    },
+    {
+      "id": "C06",
+      "role": "Overall length",
+      "type": "SIZE_TOLERANCE",
+      "candidate_spec": "35.00 ±0.05",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "mbd_required": true,
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C06",
+        "details": [
+          {
+            "legacy_candidate": 35.0,
+            "live": 35.0,
+            "live_key": "overall_length_mm",
+            "status": "MATCH"
+          }
+        ],
+        "source_candidate": "35.00 ±0.05",
+        "status": "MATCH"
+      },
+      "authority_class": "CURRENT_NATIVE_GEOMETRY",
+      "solidworks_binding": null,
+      "binding_status": "NOT_FACE_BOUND_OR_PENDING"
+    },
+    {
+      "id": "C07",
+      "role": "Thin can OD",
+      "type": "SIZE",
+      "candidate_spec": "Ø10.00; release tolerance/general-tolerance coverage OPEN",
+      "status": "OPEN_TOLERANCE_POLICY",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "mbd_required": true,
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C07",
+        "details": [
+          {
+            "legacy_candidate": 10.0,
+            "live": 10.0,
+            "live_key": "thin_can_od_mm",
+            "status": "MATCH"
+          }
+        ],
+        "source_candidate": "Ø10.00; release tolerance/general-tolerance coverage OPEN",
+        "status": "MATCH"
+      },
+      "authority_class": "CURRENT_NATIVE_GEOMETRY",
+      "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_FACE",
+        "entities": [
+          {
+            "face_index": 3,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEAJwAAAFtUkGoGAAAAA4AAAAWACAAnAAAAW1SQaggAAAAAAAOAAAAFgAgAJwAAAFtUkGoFAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "Revolve1",
+            "surface_type": "cylinder"
+          }
+        ]
+      },
+      "binding_status": "PASS"
+    },
+    {
+      "id": "C08",
+      "role": "Thin can ID",
+      "type": "SIZE",
+      "candidate_spec": "Ø9.40; release tolerance/general-tolerance coverage OPEN",
+      "status": "OPEN_TOLERANCE_POLICY",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "mbd_required": true,
+      "live_geometry_reconciliation": {
+        "characteristic_id": "C08",
+        "details": [
+          {
+            "legacy_candidate": 9.4,
+            "live": 9.4,
+            "live_key": "thin_can_id_mm",
+            "status": "MATCH"
+          }
+        ],
+        "source_candidate": "Ø9.40; release tolerance/general-tolerance coverage OPEN",
+        "status": "MATCH"
+      },
+      "authority_class": "CURRENT_NATIVE_GEOMETRY",
+      "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_FACE",
+        "entities": [
+          {
+            "face_index": 12,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEAJwAAAFtUkGoLAAAAA4AAAAWACAAnAAAAW1SQag0AAAAAAAOAAAAFgAgAJwAAAFtUkGoKAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "Revolve1",
+            "surface_type": "cylinder"
+          }
+        ]
+      },
+      "binding_status": "PASS"
+    },
+    {
+      "id": "C09",
+      "role": "Material",
+      "type": "MATERIAL",
+      "candidate_spec": "AISI 316L / EN 1.4404",
+      "status": "CONTROLLED_PRODUCT_DATA",
+      "current_state": "CONTROLLED_PRODUCT_DATA",
+      "mbd_required": false,
+      "live_geometry_reconciliation": null,
+      "authority_class": "CONTROLLED_PRODUCT_DATA",
+      "solidworks_binding": null,
+      "binding_status": "NOT_FACE_BOUND_OR_PENDING"
+    },
+    {
+      "id": "C10",
+      "role": "Containment weld interface/process",
+      "type": "PROCESS",
+      "candidate_spec": null,
+      "status": "OPEN_SPEC",
+      "current_state": "OPEN_SPEC",
+      "mbd_required": false,
+      "live_geometry_reconciliation": null,
+      "authority_class": "OPEN_OR_CANDIDATE_REQUIREMENT",
+      "solidworks_binding": null,
+      "binding_status": "NOT_FACE_BOUND_OR_PENDING"
+    },
+    {
+      "id": "C11",
+      "role": "Critical concentricity/coaxiality control",
+      "type": "GD&T",
+      "candidate_spec": null,
+      "status": "OPEN_SPEC",
+      "current_state": "MBD_AUTHORING_REQUIRED",
+      "mbd_required": true,
+      "live_geometry_reconciliation": null,
+      "authority_class": "OPEN_OR_CANDIDATE_REQUIREMENT",
+      "solidworks_binding": null,
+      "binding_status": "NOT_FACE_BOUND_OR_PENDING"
+    },
+    {
+      "id": "C12",
+      "role": "Leak/containment acceptance reference",
+      "type": "INSPECTION_REQUIREMENT",
+      "candidate_spec": null,
+      "status": "OPEN_REQUIREMENT",
+      "current_state": "OPEN_REQUIREMENT",
+      "mbd_required": false,
+      "live_geometry_reconciliation": null,
+      "authority_class": "OPEN_OR_CANDIDATE_REQUIREMENT",
+      "solidworks_binding": null,
+      "binding_status": "NOT_FACE_BOUND_OR_PENDING"
+    },
+    {
+      "id": "K01-D006-BLIND-END",
+      "role": "blind end geometry",
+      "type": "NATIVE_GEOMETRY",
+      "candidate_spec": null,
+      "status": null,
+      "current_state": "SEMANTIC_BIND_REQUIRED",
+      "mbd_required": true,
+      "live_geometry_reconciliation": null,
+      "authority_class": "CURRENT_NATIVE_GEOMETRY",
+      "note": "High-level release characteristic is not represented by a dedicated Cxx balloon in the current exemplar plan; do not lose it.",
+      "solidworks_binding": null,
+      "binding_status": "NOT_FACE_BOUND_OR_PENDING"
+    }
+  ],
+  "blind_end": {
+    "id": "K01-D006-BLIND-END",
+    "binding_type": "BLIND_END_FACE_PAIR",
+    "outer_entities": [
+      {
+        "face_index": 2,
+        "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAADAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEAJwAAAFtUkGoIAAAAA4AAAAWACAAnAAAAW1SQagYAAAAAAAAAAAAAAAAAAAAAAA==",
+        "feature": "Revolve1",
+        "surface_type": "plane"
+      }
+    ],
+    "inner_entities": [
+      {
+        "face_index": 11,
+        "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAADAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEAJwAAAFtUkGoKAAAAA4AAAAWACAAnAAAAW1SQagsAAAAAAAAAAAAAAAAAAAAAAA==",
+        "feature": "Revolve1",
+        "surface_type": "plane"
+      }
+    ],
+    "native_nominal_thickness_mm": 1.0000000000000009,
+    "tolerance_status": "OPEN",
+    "binding_status": "PASS"
+  },
+  "open_items": [
+    "C07",
+    "C08",
+    "C10",
+    "C11",
+    "C12",
+    "K01-D006-BLIND-END-TOLERANCE"
+  ],
+  "authoring_policy": {
+    "do_not_author_open_spec_characteristics": true,
+    "do_not_change_geometry_during_pmi_authoring": true,
+    "persistent_refs_bound_to_part_sha256": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653",
+    "geometry_hash_must_be_reverified_after_any_pmi_write": true
+  },
+  "next": {
+    "safe_pmi_scope": "DEFINED_AND_BOUND_CHARACTERISTICS_ONLY",
+    "blocked_until_spec_closed": [
+      "C07",
+      "C08",
+      "C10",
+      "C11",
+      "C12",
+      "K01-D006-BLIND-END-TOLERANCE"
+    ]
+  }
+}

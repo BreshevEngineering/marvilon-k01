@@ -1,0 +1,180 @@
+{
+  "schema": "k01.p007.pmi_authoring_scope.v1",
+  "generated_utc": "2026-09-08T08:38:51.096165+00:00",
+  "status": "READY_FOR_FIRST_CONTROLLED_PMI_WRITE",
+  "native_part": {
+    "path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
+    "sha256_before_write": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653"
+  },
+  "safe_authoring_scope": [
+    {
+      "id": "C01",
+      "authoring_kind": "DATUM_FEATURE_A",
+      "reason": "Functional mating plane is uniquely bound as a composite coplanar native face set.",
+      "dependencies": [],
+      "candidate_spec": "FLATNESS 0.03",
+      "solidworks_binding": {
+        "binding_type": "COMPOSITE_COPLANAR_FACE_SET",
+        "entities": [
+          {
+            "face_index": 0,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEARAAAABbtl2oDAAAA//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgASwAAAHzlmmoDAAAA/////wAAAAAAAAyAAAAFgAgAagAAAESBnGoHAAAA/////wAAAAAAAP//AQAYAG1vQ2lyUGF0dGVyblN1cmZJZFJlcDJfYwAABYAIAF8AAACD5ZpqDIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAEAAAAAAAAAAAARgAAABYAIAF8AAACD5ZpqDIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAIAAAAAAAAAAAAMgAAABYAIAFIAAACA5ZpqAwAAAP////8AAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "K01_F_TRIM_FRONT_SLEEVE_5MM",
+            "surface_type": "plane"
+          },
+          {
+            "face_index": 15,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEARAAAABbtl2oDAAAA//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgAagAAAESBnGoGAAAA/////wAAAAAAAAOAAAAFgAgAJwAAAFtUkGoOAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "K01_F_TRIM_FRONT_SLEEVE_5MM",
+            "surface_type": "plane"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C02",
+      "authoring_kind": "SIZE_AND_DATUM_FEATURE_B",
+      "reason": "Locator cylindrical face is uniquely bound; current CAD nominal Ø14.10 × 2.00 is authority. Do not invent locator-length tolerance.",
+      "dependencies": [],
+      "candidate_spec": "Ø14.10 H7 × 1.70",
+      "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_FACE",
+        "entities": [
+          {
+            "face_index": 14,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEAJwAAAFtUkGoOAAAAA4AAAAWACAAnAAAAW1SQag0AAAAAAAOAAAAFgAgARAAAABbtl2oDAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "Revolve1",
+            "surface_type": "cylinder"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C03",
+      "authoring_kind": "GEOMETRIC_TOLERANCE",
+      "reason": "Orientation control can reference the already bound Datum A and locator/Datum B.",
+      "dependencies": [
+        "C01",
+        "C02"
+      ],
+      "candidate_spec": "PERP Ø0.03 TO A",
+      "solidworks_binding": null
+    },
+    {
+      "id": "C04",
+      "authoring_kind": "HOLE_PATTERN_AND_POSITION",
+      "reason": "Exactly three Ø2.90 clearance cylinders are bound.",
+      "dependencies": [
+        "C01",
+        "C02"
+      ],
+      "candidate_spec": "3×Ø2.90 THRU; PCD26.50 BASIC; 120° BASIC; POS Ø0.15 |A|B",
+      "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_PATTERN_FACES",
+        "entities": [
+          {
+            "face_index": 5,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGwBtb0Zyb21Ta3RFbnQzSW50U3VyZklkUmVwX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/2lEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAYwBhAG4AZABpAGQAYQB0AGUAcwBcAGcAYQB0AGUAMAA0AGQAXwBjADIAcgAxAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgBfAEcAQQBUAEUAMAA0AEQAXwBDADIAUgAxAF8AQwBBAE4ARABJAEQAQQBUAEUALgBTAEwARABQAFIAVAAJgP/+/zZLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAFIAAACA5ZpqAwAAAP////8AAAAA//8BABcAbW9Gcm9tU2t0RW50U3VyZklkUmVwX2MAAAWACAAnAAAAW1SQagUAAAAAAAyAAAAFgAgARAAAABbtl2oDAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "K01_F_J2_C2_M2P5_CLEARANCE_SEED",
+            "surface_type": "cylinder"
+          },
+          {
+            "face_index": 6,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/2lEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAYwBhAG4AZABpAGQAYQB0AGUAcwBcAGcAYQB0AGUAMAA0AGQAXwBjADIAcgAxAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgBfAEcAQQBUAEUAMAA0AEQAXwBDADIAUgAxAF8AQwBBAE4ARABJAEQAQQBUAEUALgBTAEwARABQAFIAVAAJgP/+/zZLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAF8AAACD5Zpq//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAACAAAAAAAAAP//AQAXAG1vRnJvbVNrdEVudFN1cmZJZFJlcF9jAAAFgAgAJwAAAFtUkGoFAAAAAAAPgAAABYAIAEQAAAAW7ZdqAwAAAAAAAAAAAAAAAAAAAAAA",
+            "feature": "K01_F_J2_C2_M2P5_PATTERN_3X120",
+            "surface_type": "cylinder"
+          },
+          {
+            "face_index": 7,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/2lEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAYwBhAG4AZABpAGQAYQB0AGUAcwBcAGcAYQB0AGUAMAA0AGQAXwBjADIAcgAxAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgBfAEcAQQBUAEUAMAA0AEQAXwBDADIAUgAxAF8AQwBBAE4ARABJAEQAQQBUAEUALgBTAEwARABQAFIAVAAJgP/+/zZLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAF8AAACD5Zpq//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAABAAAAAAAAAP//AQAXAG1vRnJvbVNrdEVudFN1cmZJZFJlcF9jAAAFgAgAJwAAAFtUkGoFAAAAAAAPgAAABYAIAEQAAAAW7ZdqAwAAAAAAAAAAAAAAAAAAAAAA",
+            "feature": "K01_F_J2_C2_M2P5_PATTERN_3X120",
+            "surface_type": "cylinder"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C05",
+      "authoring_kind": "SIZE",
+      "reason": "Flange OD cylindrical face is uniquely bound.",
+      "dependencies": [],
+      "candidate_spec": "Ø33.00 ±0.05 × 3.00 ±0.05",
+      "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_FACE",
+        "entities": [
+          {
+            "face_index": 1,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGwBtb0Zyb21Ta3RFbnQzSW50U3VyZklkUmVwX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/2lEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAYwBhAG4AZABpAGQAYQB0AGUAcwBcAGcAYQB0AGUAMAA0AGQAXwBjADIAcgAxAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgBfAEcAQQBUAEUAMAA0AEQAXwBDADIAUgAxAF8AQwBBAE4ARABJAEQAQQBUAEUALgBTAEwARABQAFIAVAAJgP/+/zZLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEsAAAB85ZpqAwAAAP////8AAAAA//8BABcAbW9Gcm9tU2t0RW50U3VyZklkUmVwX2MAAAWACAAnAAAAW1SQagUAAAAAAAyAAAAFgAgARAAAABbtl2oDAAAAAAAAAAAAAAAAAAAAAAA=",
+            "feature": "K01_F_J2_C2_FLANGE_OD33_T3",
+            "surface_type": "cylinder"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C09",
+      "authoring_kind": "MODEL_PROPERTY_OR_DRAWING_NOTE",
+      "reason": "Material is controlled product data; not a face-bound DimXpert feature.",
+      "dependencies": [],
+      "candidate_spec": "AISI 316L / EN 1.4404",
+      "solidworks_binding": null
+    }
+  ],
+  "blocked_scope": [
+    {
+      "id": "C06",
+      "reason": "Specification may exist, but required native entity binding is not yet PASS",
+      "candidate_spec": "35.00 ±0.05",
+      "status": "MBD_AUTHORING_REQUIRED",
+      "current_state": "MBD_AUTHORING_REQUIRED"
+    },
+    {
+      "id": "C07",
+      "reason": "OPEN_SPEC / tolerance policy not closed",
+      "candidate_spec": "Ø10.00; release tolerance/general-tolerance coverage OPEN",
+      "status": "OPEN_TOLERANCE_POLICY",
+      "current_state": "MBD_AUTHORING_REQUIRED"
+    },
+    {
+      "id": "C08",
+      "reason": "OPEN_SPEC / tolerance policy not closed",
+      "candidate_spec": "Ø9.40; release tolerance/general-tolerance coverage OPEN",
+      "status": "OPEN_TOLERANCE_POLICY",
+      "current_state": "MBD_AUTHORING_REQUIRED"
+    },
+    {
+      "id": "C10",
+      "reason": "OPEN_SPEC / tolerance policy not closed",
+      "candidate_spec": null,
+      "status": "OPEN_SPEC",
+      "current_state": "OPEN_SPEC"
+    },
+    {
+      "id": "C11",
+      "reason": "OPEN_SPEC / tolerance policy not closed",
+      "candidate_spec": null,
+      "status": "OPEN_SPEC",
+      "current_state": "MBD_AUTHORING_REQUIRED"
+    },
+    {
+      "id": "C12",
+      "reason": "OPEN_SPEC / tolerance policy not closed",
+      "candidate_spec": null,
+      "status": "OPEN_REQUIREMENT",
+      "current_state": "OPEN_REQUIREMENT"
+    },
+    {
+      "id": "K01-D006-BLIND-END-TOLERANCE",
+      "reason": "Native nominal thickness 1.000 mm is proven, but release tolerance/inspection requirement is OPEN."
+    }
+  ],
+  "write_rules": {
+    "no_geometry_change": true,
+    "post_write_geometry_hash_or_semantic_geometry_must_match_pre_write": true,
+    "author_only_safe_scope": true,
+    "open_spec_characteristics_must_not_be_authored_as_released": true,
+    "save_to_controlled_candidate_copy_first": true,
+    "do_not_overwrite_gate04e_authority_part": true
+  },
+  "next_step": "SOLIDWORKS_PMI_AUTHORING_CANDIDATE_COPY"
+}

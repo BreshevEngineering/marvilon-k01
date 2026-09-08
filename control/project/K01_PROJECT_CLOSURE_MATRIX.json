@@ -1,0 +1,127 @@
+{
+  "schema": "k01.project_closure_matrix.v1",
+  "generated_utc": "2026-09-08T08:39:01.215857+00:00",
+  "engineering_baseline": {
+    "assembly": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+    "sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4"
+  },
+  "overall_status": "HOLD_ENGINEERING_CLOSURE",
+  "domains": [
+    {
+      "id": "CAD_BASELINE",
+      "status": "PASS",
+      "authority": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+      "evidence": "Gate04E baseline hash locked"
+    },
+    {
+      "id": "STRUCTURAL_SIMULATION",
+      "status": "PASS_EVIDENCE_CAPTURED",
+      "authority": "SolidWorks Simulation on Gate04E baseline",
+      "evidence_files": 11
+    },
+    {
+      "id": "BOM",
+      "status": "HOLD_RELEASE_OPEN_ITEMS",
+      "authority": "tools/medtas/build_bom_v1_9.py",
+      "modeled_occurrences": 13,
+      "ebom_rows": 15,
+      "ebom_open": 9,
+      "mbom_open": 11
+    },
+    {
+      "id": "P007_ENTITY_BINDING",
+      "status": "PASS",
+      "binding_mode": "COMPOSITE_COPLANAR_FACE_SET",
+      "bound_part_sha256": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653"
+    },
+    {
+      "id": "P007_PRODUCT_DEFINITION",
+      "status": "HOLD_OPEN_SPEC",
+      "open_items": [
+        "C07",
+        "C08",
+        "C10",
+        "C11",
+        "C12",
+        "K01-D006-BLIND-END-TOLERANCE"
+      ]
+    },
+    {
+      "id": "DRAWINGS_DIMXPERT",
+      "status": "READY_FOR_FIRST_CONTROLLED_PMI_WRITE",
+      "next": "Author only defined+bound characteristics, then close remaining specs and finish drawing QA",
+      "safe_scope_count": 6,
+      "blocked_scope_count": 7
+    },
+    {
+      "id": "FEMM_MAGNETIC_FORCE",
+      "status": "HOLD_INPUT_DATA",
+      "release_blocker": true,
+      "title": "Absolute magnetic actuation force qualification F(x)",
+      "missing": {
+        "requirements": [
+          "REQ-MAG-001",
+          "REQ-MAG-002",
+          "REQ-MAG-003"
+        ],
+        "parts": [
+          "K01-B-002"
+        ],
+        "magnetic_properties": [
+          "K01-B-001:grade",
+          "K01-B-001:temperature_data",
+          "K01-B-002:grade",
+          "K01-B-002:Br_or_remanence",
+          "K01-B-002:temperature_data"
+        ]
+      },
+      "recovery_status": "PASS_RECOVERY_EVIDENCE_FOUND"
+    },
+    {
+      "id": "CENTER",
+      "status": "PASS",
+      "selftest_rc": 0,
+      "note": "Center operational; closure matrix integration into UI is next control-plane increment"
+    },
+    {
+      "id": "GIT_GITHUB",
+      "status": "HOLD_LOCAL_CHANGES_OR_UNSYNCED",
+      "dirty_lines": 21,
+      "ahead": 0,
+      "behind": 0,
+      "note": "Remote synchronization is controlled by local git push; repository guard/pre-commit remain active"
+    },
+    {
+      "id": "R01_RELEASE",
+      "status": "DEFERRED",
+      "reason": "Engineering baseline remains Gate04E; R01 is not authority"
+    }
+  ],
+  "release_readiness": {
+    "status": "HOLD",
+    "reasons": [
+      "EBOM_RELEASE_HOLD",
+      "MBOM_RELEASE_HOLD",
+      "MBD_BIND_OPEN:14",
+      "PRODUCT_SPEC_OPEN:3",
+      "SOURCE_CONTROL_NOT_CLEAN"
+    ]
+  },
+  "priority_order": [
+    "P007_PRODUCT_DEFINITION",
+    "DRAWINGS_DIMXPERT",
+    "FEMM_MAGNETIC_FORCE",
+    "BOM",
+    "CENTER",
+    "GIT_GITHUB",
+    "R01_RELEASE"
+  ],
+  "control_rule": "Every engineering iteration must close or materially reduce at least one listed domain blocker without invalidating a PASS domain.",
+  "next_engineering_actions": [
+    "Execute first controlled P007 PMI authoring on a candidate copy if Step9A is READY.",
+    "Resolve magnetic input authority from Step8D; do not run release FEMM force model until input data is controlled.",
+    "Close P007 open specs C07/C08/C10/C11/C12 and blind-end tolerance.",
+    "Then complete K01-D-006 drawing and inspection definition.",
+    "Close EBOM/MBOM release-open items before R01 promotion."
+  ]
+}
