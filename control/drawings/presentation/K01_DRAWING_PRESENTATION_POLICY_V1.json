@@ -1,0 +1,41 @@
+{
+  "schema": "k01.drawing_presentation_policy.v1",
+  "sheet": {
+    "width_m": 0.420,
+    "height_m": 0.297,
+    "margin_m": 0.008
+  },
+  "reserved_regions": [
+    {
+      "id": "TITLE_BLOCK",
+      "xmin": 0.225,
+      "ymin": 0.000,
+      "xmax": 0.420,
+      "ymax": 0.065,
+      "severity": "HOLD_FOR_NOTES_AND_VIEWS"
+    }
+  ],
+  "leader_rules": {
+    "warn_length_m": 0.090,
+    "warn_if_more_than": 2
+  },
+  "scope": {
+    "hard_checks": [
+      "required semantic annotations captured uniquely",
+      "view outline remains inside sheet margins",
+      "view outline does not enter reserved title-block region"
+    ],
+    "phase_a_warning_checks": [
+      "semantic annotation origin outside sheet",
+      "note text extent enters reserved title-block region",
+      "long semantic leaders",
+      "leader point capture unavailable"
+    ],
+    "not_claimed": [
+      "full dimension/GTol bounding-box collision detection",
+      "leader-segment rerouting",
+      "automatic optimum layout",
+      "D8 human readability approval"
+    ]
+  }
+}

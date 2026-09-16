@@ -1,0 +1,18 @@
+{
+  "schema": "k01.drawing_candidate_retention_policy.v1",
+  "status": "CONTROLLED_NO_AUTO_DELETE",
+  "candidate_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates",
+  "policy": {
+    "auto_delete": false,
+    "keep_latest_generated_per_drawing": 3,
+    "always_keep_states": [
+      "PLACEMENT_CAPTURED",
+      "MANUAL_FINISH_IMPORTED",
+      "LEGACY_MANUAL_EXEMPLAR_REGISTERED",
+      "RELEASED"
+    ],
+    "archive_only_after_explicit_user_approval": true
+  },
+  "navigation_rule": "Routine users and Center navigate current/<drawing_id> and K01_DRAWING_CONTROL_CURRENT.json, not timestamp candidate folders.",
+  "reason": "Preserve evidence while removing timestamp-folder clutter from the normal working path."
+}

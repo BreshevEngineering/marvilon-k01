@@ -44,6 +44,7 @@ class CenterState:
             'DISCOVER_ANALYSIS_TOOLCHAIN':'17_DISCOVER_ANALYSIS_TOOLCHAIN.cmd',
             'RUN_CALCULIX_P006':'18_RUN_CALCULIX_P006.cmd',
             'REBUILD_MEDTAS_STATE':'04_REBUILD_MEDTAS_CENTER.cmd',
+            'RUN_DRAWING_CONTROL_REFRESH':'RUN_K01_DRAWING_CONTROL_REFRESH_V1.cmd',
         }
     def load(self, rel, default=None):
         p=self.root/rel
@@ -51,7 +52,7 @@ class CenterState:
         except Exception:return default
     def input_paths(self):
         rels=[
-            'reports/control/K01_PROJECT_VIEW_CURRENT.json','reports/control/K01_MEDTAS_CENTER_FEED_CURRENT.json',
+            'reports/control/K01_PROJECT_VIEW_CURRENT.json','reports/control/K01_MEDTAS_CENTER_FEED_CURRENT.json','reports/control/K01_DRAWING_CONTROL_CURRENT.json','control/drawings/K01_DRAWING_SYSTEM_CURRENT.json','control/drawings/K01_DRAWING_REGISTRY_CURRENT.json',
             'reports/control/K01_MEDTAS_DERIVED_STATE_CURRENT.json','reports/control/K01_CURRENT_STATE.json','control/state/K01_CURRENT_STATE.json',
             'control/requirements/requirements.json','reports/control/K01_REQUIREMENTS_COVERAGE_CURRENT.json','control/identity/K01_IDENTITY_POLICY_v1_9.json','control/identity/entities.json','reports/control/K01_IDENTITY_AUDIT_CURRENT.json','reports/control/K01_RELEASE_PROGRAM_CURRENT.json','control/inspection/K01_CHARACTERISTIC_POLICY_v1_9.json','reports/inspection/current/K01_RELEASE_CHARACTERISTICS_CURRENT.json','reports/inspection/current/K01_INSPECTION_RESULTS_CURRENT.json',
             'control/medtas/v1/spec/K01_STATUS_MODEL_v1_9.json','control/parameters/K01_J2_INTERFACE_PARAMETERS_v1_7.json',
@@ -120,6 +121,9 @@ class CenterState:
           ('BOM-VERIFY','BOM parity verification','reports/medtas/bom/current/K01_BOM_VERIFY_A001_v1.json','BOM'),
           ('MBD-CURRENT','Current MBD semantic state','reports/medtas/mbd/current/K01_MBD_A001_v1.json','MBD'),
           ('MBD-PLAN','MBD authoring plan','reports/medtas/mbd/current/K01_MBD_AUTHORING_PLAN_v1_7.json','MBD'),
+          ('DRAWING-SYSTEM','Drawing System canonical pointer','control/drawings/K01_DRAWING_SYSTEM_CURRENT.json','Drawing'),
+          ('DRAWING-REGISTRY','Drawing identity/trace registry','control/drawings/K01_DRAWING_REGISTRY_CURRENT.json','Drawing'),
+          ('DRAWING-CONTROL','Current drawing runtime/control projection','reports/control/K01_DRAWING_CONTROL_CURRENT.json','Drawing'),
           ('DRAWING-PLAN','Drawing release plan','reports/drawing/current/K01_DRAWING_RELEASE_PLAN_CURRENT.json','Drawing'),
           ('P007-EXEMPLAR-PLAN','P007 exemplar drawing plan','reports/drawing/current/K01-D-006_P007_EXEMPLAR_PLAN_CURRENT.json','Drawing'),
           ('P007-LIVE-GEOMETRY','P007 live CAD geometry authority','reports/drawing/current/K01-D-006_P007_LIVE_GEOMETRY_CURRENT.json','Drawing'),
@@ -153,6 +157,14 @@ class CenterState:
           ('INSPECTION-RESULTS','Current inspection result evaluation','reports/inspection/current/K01_INSPECTION_RESULTS_CURRENT.json','Inspection'),
         ]
         for x in known:add(*x)
+        drawing_control=self.load('reports/control/K01_DRAWING_CONTROL_CURRENT.json',{}) or {}
+        for did,row in (drawing_control.get('drawings') or {}).items():
+            cur=row.get('current') or {}
+            arts=cur.get('artifacts') or {}
+            for kind,label in [('drawing','SLDDRW'),('pdf','PDF'),('bmp','BMP')]:
+                rec=arts.get(kind) or {}
+                path=rec.get('path') if isinstance(rec,dict) else None
+                if path: add('DRAWING::'+str(did)+'::CURRENT_'+label, str(did)+' current '+label, path, 'Drawing')
         # Current native CAD assembly is registered server-side from the materialized semantic state; browser never supplies this path.
         cad=self.load('reports/medtas/cad/current/K01_CAD_SEM_A001.json',{}) or {}
         native=cad.get('source_assembly') or cad.get('assembly_path')
@@ -178,6 +190,9 @@ class CenterState:
               'product_definition':self.load('reports/medtas/product_definition/current/K01_PRODUCT_DEFINITION_GATE04E_v1_8.json',{}) or {},
               'mbd_candidates':self.load('reports/medtas/mbd/current/K01_MBD_AUTHORING_CANDIDATES_v1_7.json') or self.load('reports/medtas/mbd/current/K01_MBD_AUTHORING_CANDIDATES_v1_6.json',{}) or {},
               'mbd_plan':self.load('reports/medtas/mbd/current/K01_MBD_AUTHORING_PLAN_v1_7.json',{}) or {},
+              'drawing_system':self.load('control/drawings/K01_DRAWING_SYSTEM_CURRENT.json',{}) or {},
+              'drawing_registry':self.load('control/drawings/K01_DRAWING_REGISTRY_CURRENT.json',{}) or {},
+              'drawing_control':self.load('reports/control/K01_DRAWING_CONTROL_CURRENT.json',{}) or {},
               'drawing_plan':self.load('reports/drawing/current/K01_DRAWING_RELEASE_PLAN_CURRENT.json',{}) or {},
               'p007_exemplar':self.load('reports/drawing/current/K01-D-006_P007_EXEMPLAR_PLAN_CURRENT.json',{}) or {},
               'p007_live_geometry':self.load('reports/drawing/current/K01-D-006_P007_LIVE_GEOMETRY_CURRENT.json',{}) or {},
@@ -214,6 +229,7 @@ class CenterState:
           'RUN_PROJECT_STRUCTURE':['tools/medtas/project_structure_v1_7.py'],
           'RUN_DRAWING_PLAN':['tools/medtas/build_drawing_release_plan_v1_9.py'],
           'REBUILD_MEDTAS_STATE':['tools/medtas/rebuild_medtas_state.py'],
+          'RUN_DRAWING_CONTROL_REFRESH':['tools/medtas/drawing_control_v1.py'],
           'RUN_RELEASE_PROGRAM':['tools/medtas/build_release_program_v1_9.py'],
           'RUN_INSPECTION_CHARACTERISTICS':['tools/medtas/build_inspection_characteristics_v1_9.py'],
         }

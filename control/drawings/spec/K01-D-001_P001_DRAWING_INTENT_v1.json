@@ -1,0 +1,31 @@
+{
+  "schema": "k01.drawing_intent.v1",
+  "drawing_id": "K01-D-001",
+  "part_id": "K01-P-001",
+  "title": "Calibration Rod",
+  "status": "ENGINEERING_REVIEW",
+  "purpose": "Controlled projection of current P001 native geometry and already-controlled material/function links. This intent does not release missing manufacturing tolerances.",
+  "view_plan": [
+    "LONGITUDINAL MODEL VIEW",
+    "END VIEW FOR ANTI-ROTATION FEATURE"
+  ],
+  "required_contents": [
+    "rod diameters and axial segments",
+    "collar",
+    "working tip",
+    "male P008 interface",
+    "anti-rotation feature",
+    "material",
+    "straightness/runout and finish status"
+  ],
+  "authority_links": [
+    "control/product/parts.json",
+    "control/requirements/requirements.json",
+    "control/medtas/v1/bindings/K01_TOLERANCE_MBD_MAP_v1.json",
+    "reports/cad/current/K01-P-001_Calibration_Rod.json",
+    "reports/cad/gate04e_snapshot/K01_GATE04E_NATIVE_SNAPSHOT_CURRENT.json",
+    "docs/K01_DRAWING_RELEASE_MATRIX_v1.md",
+    "docs/K01_MANUFACTURING_ASSEMBLY_ROUTER_v1.md"
+  ],
+  "rule": "No missing tolerance, thread class, roughness or straightness/runout value may be invented in the drawing."
+}

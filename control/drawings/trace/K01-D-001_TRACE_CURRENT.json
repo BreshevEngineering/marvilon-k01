@@ -1,0 +1,33 @@
+{
+  "schema": "k01.drawing_traceability.v1",
+  "drawing_id": "K01-D-001",
+  "part_id": "K01-P-001",
+  "assembly_id": "K01-A-001",
+  "native_model": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-001_Calibration_Rod.SLDPRT",
+  "canonical_assembly": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+  "drawing_spec": "control/drawings/spec/K01-D-001_P001_DRAWING_SPEC_v1.json",
+  "drawing_intent": "control/drawings/spec/K01-D-001_P001_DRAWING_INTENT_v1.json",
+  "drawing_definition": "control/drawings/definitions/K01-D-001.drawing.json",
+  "product_registry": "control/product/parts.json",
+  "assembly_baseline": "control/baseline/K01_FINAL_ASSEMBLY_BASELINE_v2_2.json",
+  "assembly_maturity": "control/assembly/K01_A001_ASSEMBLY_MATURITY_v1.json",
+  "requirements": [
+    "REQ-K01-FUNC-001",
+    "REQ-K01-STROKE-001",
+    "REQ-K01-TPD-001"
+  ],
+  "requirement_registry": "control/requirements/requirements.json",
+  "tolerance_chains": [
+    "K01-TOL-P001-P008-M4-BOTTOM",
+    "K01-TOL-ROD-TRAVEL"
+  ],
+  "tolerance_registry": "control/medtas/v1/bindings/K01_TOLERANCE_MBD_MAP_v1.json",
+  "cad_evidence": [
+    "reports/cad/current/K01-P-001_Calibration_Rod.json",
+    "reports/cad/gate04e_snapshot/K01_GATE04E_NATIVE_SNAPSHOT_CURRENT.json"
+  ],
+  "manufacturing_route": "docs/K01_MANUFACTURING_ASSEMBLY_ROUTER_v1.md",
+  "drawing_release_matrix": "docs/K01_DRAWING_RELEASE_MATRIX_v1.md",
+  "drawing_system_pointer": "control/drawings/K01_DRAWING_SYSTEM_CURRENT.json",
+  "control_rule": "Any upstream model/spec/requirement/tolerance-chain change makes the drawing a rebuild/review target; drawing does not own engineering values."
+}

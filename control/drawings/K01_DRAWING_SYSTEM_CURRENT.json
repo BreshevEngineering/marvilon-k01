@@ -1,0 +1,153 @@
+{
+  "schema": "k01.drawing_system.current.v1",
+  "project": "K01",
+  "system": "MARVILON_DRAWING_SYSTEM_V1",
+  "status": "GENERIC_SEMANTIC_CORE_VALIDATED__MANUAL_VISUAL_FINISH_DEFAULT",
+  "updated": "2026-09-16",
+  "repo_root": "D:\\BreshevEngineering\\marvilon-k01",
+  "cad_root": "D:\\Marvilon\\K01\\cad",
+  "authority_rule": "Drawing System projects controlled Product Definition into drawings; it never becomes authority for engineering values.",
+  "canonical_read_order": [
+    "control/drawings/K01_DRAWING_SYSTEM_CURRENT.json",
+    "control/drawings/K01_DRAWING_REGISTRY_CURRENT.json",
+    "reports/control/K01_DRAWING_CONTROL_CURRENT.json",
+    "docs/architecture/MARVILON_DRAWING_CONTROL_PLANE_V1.md",
+    "docs/architecture/MARVILON_DRAWING_SYSTEM_V1.md",
+    "docs/architecture/K01_DRAWING_AUTHORING_ALGORITHM_ISO_GPS_v1.md",
+    "docs/architecture/MARVILON_DRAWING_CANDIDATE_LIFECYCLE_V1.md",
+    "control/drawings/spec/<drawing_id>_*_DRAWING_SPEC*.json"
+  ],
+  "implementation": {
+    "orchestrator": "tools/medtas/drawing_system_v1.py",
+    "solidworks_engine": "cad_api/solidworks_2018_proven/current/K01_DRAWING_SYSTEM_V1/K01DrawingSystemV1.cs",
+    "candidate_lifecycle": "tools/medtas/drawing_candidate_lifecycle_v1.py",
+    "placement_capture": "cad_api/solidworks_2018_proven/current/K01_DRAWING_PLACEMENT_V1/K01DrawingPlacementCaptureV1.cs",
+    "placement_root": "control/drawings/placement",
+    "drawing_specs_root": "control/drawings/spec",
+    "presentation_audit": "tools/medtas/drawing_presentation_audit_v1.py",
+    "presentation_capture": "cad_api/solidworks_2018_proven/current/K01_DRAWING_PRESENTATION_V1/K01DrawingPresentationAuditV1.cs",
+    "presentation_policy": "control/drawings/presentation/K01_DRAWING_PRESENTATION_POLICY_V1.json",
+    "drawing_control": "tools/medtas/drawing_control_v1.py",
+    "drawing_registry": "control/drawings/K01_DRAWING_REGISTRY_CURRENT.json",
+    "retention_policy": "control/drawings/K01_DRAWING_CANDIDATE_RETENTION_POLICY_CURRENT.json"
+  },
+  "entry_points": {
+    "status": "RUN_K01_DRAWING_SYSTEM_STATUS_V1.cmd",
+    "d003_build": "RUN_K01_D003_DRAWING_SYSTEM_V1.cmd",
+    "d003_prepare_manual": "RUN_K01_D003_PREPARE_MANUAL_FINISH_V1.cmd",
+    "d003_capture": "RUN_K01_D003_CAPTURE_PLACEMENT_V1.cmd",
+    "d006_register_exemplar": "RUN_K01_D006_REGISTER_EXEMPLAR_V1.cmd",
+    "handoff": "run.cmd handoff",
+    "d006_build": "RUN_K01_D006_DRAWING_SYSTEM_V1.cmd",
+    "d003_presentation_audit": "RUN_K01_D003_PRESENTATION_AUDIT_V1.cmd",
+    "d006_presentation_audit": "RUN_K01_D006_PRESENTATION_AUDIT_V1.cmd",
+    "d001_build": "RUN_K01_D001_DRAWING_SYSTEM_V1.cmd",
+    "d001_prepare_manual": "RUN_K01_D001_PREPARE_MANUAL_FINISH_V1.cmd",
+    "d001_capture": "RUN_K01_D001_CAPTURE_PLACEMENT_V1.cmd",
+    "control_refresh": "RUN_K01_DRAWING_CONTROL_REFRESH_V1.cmd",
+    "candidates_audit": "RUN_K01_DRAWING_CANDIDATES_AUDIT_V1.cmd"
+  },
+  "validation": {
+    "D006": {
+      "semantic_authoring": "PASS through generic Drawing System v1",
+      "generic_engine": "PASS_WORKSTATION_20260916",
+      "source_cad_invariance": "PASS",
+      "views": "2/2",
+      "datums": "2/2",
+      "controlled_dimensions": "9/9",
+      "controlled_gtols": "5/5",
+      "ted_boxes": "2/2",
+      "surface_finish": "1/1",
+      "release": "HOLD_BY_PRODUCT_AND_TEMPLATE_BLOCKERS",
+      "manual_iso_exemplar": "PASS_WITH_MINOR_TEMPLATE_CLEANUP"
+    },
+    "D003": {
+      "generic_engine_semantic_build": "PASS",
+      "source_cad_invariance": "PASS",
+      "views": "3/3",
+      "datums": "5/5",
+      "controlled_dimensions": "6/6",
+      "controlled_gtols": "2/2",
+      "ted_boxes": "4/4",
+      "release": "HOLD_BY_PRODUCT_DEFINITION_BLOCKERS",
+      "view_plan": "LONGITUDINAL_SECTION + J1_END + J2_END; accepted as functional minimum for two non-equivalent asymmetric interfaces."
+    },
+    "candidate_lifecycle": {
+      "candidate_structure": "PASS",
+      "prepare_manual_finish": "PASS",
+      "placement_capture_implementation": "IMPLEMENTED",
+      "placement_capture_runtime": "PASS_WORKSTATION_20260916",
+      "placement_replay_implementation": "IMPLEMENTED",
+      "placement_replay_runtime": "PASS_WORKSTATION_20260916",
+      "placement_roundtrip": "PASS"
+    },
+    "presentation_engine": {
+      "status": "EXPERIMENTAL_DEFERRED_NOT_RELEASE_BLOCKING",
+      "D003": "CAPTURE_CORE_PASS__POSTPROCESS_BLOCKED_BY_UTF8_BOM",
+      "D006": "CAPTURE_CORE_REACHED__SURFACE_FINISH_SEMANTIC_NAME_NOT_AVAILABLE",
+      "decision": "Do not spend further K01 closure time on presentation automation. Use generated semantic drawing + placement replay + controlled manual visual finish. Resume only if repeated manual layout effort becomes material."
+    },
+    "D001": {
+      "generic_engine": "PARTIAL_RUNTIME_BUILD_20260916__REJECTED_AS_INCOMPLETE",
+      "source_cad_evidence": "reports/cad/current/K01-P-001_Calibration_Rod.json",
+      "view_plan": "LONGITUDINAL MODEL VIEW + END VIEW; no section because the rod is solid and internal geometry is absent.",
+      "release": "HOLD_PRODUCT_DEFINITION",
+      "evidence_note": "Historical capability probe only. The generated candidate is not a routine/manufacturing current drawing; live state is derived only from reports/control/K01_DRAWING_CONTROL_CURRENT.json."
+    }
+  },
+  "capability_matrix": {
+    "PROVEN": [
+      "spec-driven view creation and scaling",
+      "controlled geometry binding with fail-closed ambiguity handling",
+      "diameter and linear dimensions",
+      "fits and symmetric/unilateral tolerances",
+      "datum tags",
+      "GTol/FCF authoring for supported modifiers",
+      "TED boxed notes",
+      "controlled notes",
+      "document custom properties",
+      "semantic annotation naming",
+      "source CAD hash invariance",
+      "PDF/BMP export",
+      "candidate generated/manual_finish/evidence structure",
+      "OPEN-item preservation in review mode",
+      "capture of named annotation positions",
+      "capture of view positions/scales",
+      "replay of captured positions/scales on next build",
+      "generic surface-finish authoring in Drawing System v1",
+      "generic CZ/MMC/total-runout representations required by D006",
+      "D006 rebuild through the same generic engine/spec path"
+    ],
+    "IMPLEMENTED_NOT_RUNTIME_PROVEN": [
+      "composite coplanar plane-set binding by controlled area signatures"
+    ],
+    "NOT_YET_IMPLEMENTED_OR_NOT_GENERIC": [
+      "leader-route capture/replay",
+      "automatic collision detection and layout optimization",
+      "graphical first-angle projection symbol in the sheet format",
+      "release-grade ISO 7200 title-block template/field binding",
+      "generic native thread/hole callout authoring",
+      "D8 automatic visual QA",
+      "CZR/SIM and other modern ISO pattern modifiers beyond currently proven CZ/MMC representation",
+      "supported leader attachment/style replay",
+      "full annotation collision detection and automatic layout optimization"
+    ],
+    "DEFERRED_EXPERIMENTAL": [
+      "presentation evidence/audit beyond view and annotation position capture",
+      "leader attachment/style replay",
+      "automatic collision detection and layout optimization",
+      "automatic D8 visual QA"
+    ]
+  },
+  "new_chat_resume_rule": "Upload the latest K01_AI_HANDOFF_CURRENT.zip built with `run.cmd handoff`. Read K01_START_HERE, then control/drawings/K01_DRAWING_SYSTEM_CURRENT.json, control/drawings/K01_DRAWING_REGISTRY_CURRENT.json, and reports/control/K01_DRAWING_CONTROL_CURRENT.json. Treat Drawing Control as the only live drawing-state authority; do not navigate timestamp candidate folders as current truth.",
+  "next_validation": "Do not rebuild K01-D-001 until upstream P001 Product Definition / drawing authoring readiness is READY. No new Drawing System feature work is authorized by this state; use reports/control/K01_DRAWING_CONTROL_CURRENT.json for live PASS/HOLD.",
+  "control_plane": {
+    "registry": "control/drawings/K01_DRAWING_REGISTRY_CURRENT.json",
+    "runtime_projection": "reports/control/K01_DRAWING_CONTROL_CURRENT.json",
+    "stable_cad_current_root": "D:\\Marvilon\\K01\\cad\\drawings\\current",
+    "candidate_history_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates",
+    "center_tracking": "Center/Project View consume the runtime projection and canonical system pointer; timestamp candidates are history only.",
+    "auto_delete_candidates": false,
+    "runtime_status_rule": "Live drawing PASS/HOLD, current artifact publication, candidate selection and holds are derived only by reports/control/K01_DRAWING_CONTROL_CURRENT.json. System pointer validation is historical capability evidence, not live drawing status."
+  }
+}

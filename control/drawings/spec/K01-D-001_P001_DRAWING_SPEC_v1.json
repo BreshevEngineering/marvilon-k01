@@ -1,0 +1,330 @@
+{
+  "schema": "k01.drawing_system_spec.v1",
+  "drawing_id": "K01-D-001",
+  "part_id": "K01-P-001",
+  "title": "Calibration Rod",
+  "status": "ENGINEERING_REVIEW",
+  "model_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-001_Calibration_Rod.SLDPRT",
+  "output_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-001",
+  "sheet": "A3",
+  "sheet_scale": 2.0,
+  "projection": "FIRST_ANGLE",
+  "units": "mm",
+  "material": "EN 1.4404 / AISI 316L",
+  "view_strategy": {
+    "primary_representation": "MODEL_VIEW",
+    "reason": "P001 is a solid rod with no internal geometry requiring a section; use the longitudinal profile plus one end view for the non-axisymmetric anti-rotation feature.",
+    "interface_end_views": [
+      {
+        "interface": "WORKING_END",
+        "view": "END",
+        "required": true,
+        "reason": "Anti-rotation feature is not fully communicated by the longitudinal profile alone."
+      }
+    ]
+  },
+  "datum_features": [],
+  "characteristics": [
+    {
+      "id": "D001-C01",
+      "interface": "GENERAL",
+      "role": "overall rod length",
+      "spec": "68.50 mm current native-CAD nominal",
+      "source": "reports/cad/current/K01-P-001_Calibration_Rod.json : Sketch1 D2",
+      "state": "CAD_OBSERVED_REVIEW__TOLERANCE_OPEN"
+    },
+    {
+      "id": "D001-C02",
+      "interface": "GUIDE",
+      "role": "guide/working rod diameter",
+      "spec": "Ø5.00 current native-CAD geometry",
+      "source": "reports/cad/gate04e_snapshot/K01_GATE04E_NATIVE_SNAPSHOT_CURRENT.json",
+      "state": "CAD_OBSERVED_REVIEW__TOLERANCE_OPEN"
+    },
+    {
+      "id": "D001-C03",
+      "interface": "COLLAR",
+      "role": "collar OD and axial thickness",
+      "spec": "Ø8.20; thickness 2.00 current native-CAD geometry",
+      "source": "reports/cad/gate04e_snapshot/K01_GATE04E_NATIVE_SNAPSHOT_CURRENT.json",
+      "state": "CAD_OBSERVED_REVIEW__TOLERANCE_OPEN"
+    },
+    {
+      "id": "D001-C04",
+      "interface": "P008",
+      "role": "male threaded end",
+      "spec": "Current CAD major cylinder Ø4.00; male-thread axial length 3.50 mm nominal. Functional M4 bottoming chain exists, but production pitch/class and length tolerance remain OPEN.",
+      "source": "control/medtas/v1/bindings/K01_TOLERANCE_MBD_MAP_v1.json / K01-CHAR-P001-M4-MALE-LENGTH",
+      "state": "FUNCTION_CONTROLLED__MANUFACTURING_DEFINITION_OPEN"
+    },
+    {
+      "id": "D001-C05",
+      "interface": "TIP",
+      "role": "working tip",
+      "spec": "1.00 mm current native-CAD axial tip segment",
+      "source": "reports/cad/current/K01-P-001_Calibration_Rod.json : Sketch1 D5",
+      "state": "CAD_OBSERVED_REVIEW__TOLERANCE_OPEN"
+    },
+    {
+      "id": "D001-C06",
+      "interface": "ANTI_ROTATION",
+      "role": "anti-rotation feature",
+      "spec": "Feature is present in current native CAD on the 27 mm working-shaft segment; final cross-section dimension/tolerance is OPEN and shall not be invented in the drawing.",
+      "source": "reports/cad/current/K01-P-001_Calibration_Rod.json : Cut-Extrude2 / Sketch3",
+      "state": "GEOMETRY_PRESENT__ACCEPTANCE_OPEN"
+    },
+    {
+      "id": "D001-C07",
+      "interface": "GENERAL",
+      "role": "material",
+      "spec": "EN 1.4404 / AISI 316L",
+      "source": "control/product/parts.json : K01-P-001",
+      "state": "CONTROLLED"
+    }
+  ],
+  "release_blockers": [
+    "P001 Product Definition is not manufacturing-complete: datum reference frame is not released.",
+    "P001 guide/axial production tolerances are not released, including the Ø5 guide function and axial chain.",
+    "P001 male M4×0.7 shoulder/thread class and manufacturing acceptance are not fully released.",
+    "P001 anti-rotation feature required over X38..57 is not dimensionally/inspection-defined in the drawing authority.",
+    "P001 Optical Target Datum / target-surface acceptance is not released.",
+    "P001 straightness/runout and gas-wetted/guide surface-finish or polish acceptance are not released.",
+    "Drawing title-block/projection-symbol template layer remains manual-finish/D9 controlled."
+  ],
+  "review_notes": [
+    "HOLD — PRODUCT DEFINITION INCOMPLETE. DO NOT USE AS MANUFACTURING DRAWING.",
+    "The prior D001 generic build is retained only as Drawing System evidence; it is not an acceptable K01-D-001 drawing.",
+    "Required minimum content is controlled by K01_PROJECT_CONTROL Drawing Content/Build Queue and the A001 functional interfaces.",
+    "Do not rebuild D001 until authoring_readiness becomes READY_FOR_AUTHORING."
+  ],
+  "view_definitions": [
+    {
+      "id": "LONG",
+      "kind": "MODEL_VIEW",
+      "orientation": "*Front",
+      "x_m": 0.17,
+      "y_m": 0.15,
+      "scale": 2.0
+    },
+    {
+      "id": "END",
+      "kind": "MODEL_VIEW",
+      "orientation": "*Left",
+      "x_m": 0.335,
+      "y_m": 0.15,
+      "scale": 2.0
+    }
+  ],
+  "bindings": {
+    "PART_MIN_X": {
+      "kind": "PLANE_EXTREME_X",
+      "side": "MIN_X"
+    },
+    "PART_MAX_X": {
+      "kind": "PLANE_EXTREME_X",
+      "side": "MAX_X"
+    },
+    "ROD_NEG": {
+      "kind": "CYLINDER",
+      "diameter_mm": 5.0,
+      "x_region": "NEGATIVE",
+      "count": 1
+    },
+    "COLLAR": {
+      "kind": "CYLINDER",
+      "diameter_mm": 8.2,
+      "count": 1
+    },
+    "COLLAR_MIN": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "COLLAR",
+      "end": "MIN_X",
+      "selection": "NEAREST_PLANE_TO_APPROX_CYL_TRIM_X__LARGEST_AREA_IF_COPLANAR"
+    },
+    "COLLAR_MAX": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "COLLAR",
+      "end": "MAX_X",
+      "selection": "NEAREST_PLANE_TO_APPROX_CYL_TRIM_X__LARGEST_AREA_IF_COPLANAR"
+    },
+    "THREAD_MAJOR": {
+      "kind": "CYLINDER",
+      "diameter_mm": 4.0,
+      "x_region": "POSITIVE",
+      "count": 1
+    },
+    "THREAD_START": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "THREAD_MAJOR",
+      "end": "MIN_X",
+      "selection": "NEAREST_PLANE_TO_APPROX_CYL_TRIM_X__LARGEST_AREA_IF_COPLANAR"
+    }
+  },
+  "annotations": [
+    {
+      "id": "D001-C01-OAL",
+      "kind": "LINEAR",
+      "view": "LONG",
+      "from_binding": "PART_MIN_X",
+      "to_binding": "PART_MAX_X",
+      "nominal_mm": 68.5,
+      "state": "CAD_OBSERVED_REVIEW",
+      "x_m": 0.17,
+      "y_m": 0.235
+    },
+    {
+      "id": "D001-C02-DIA",
+      "kind": "DIAMETER",
+      "view": "LONG",
+      "binding": "ROD_NEG",
+      "nominal_mm": 5.0,
+      "state": "CAD_OBSERVED_REVIEW",
+      "x_m": 0.135,
+      "y_m": 0.2
+    },
+    {
+      "id": "D001-C03-COLLAR-DIA",
+      "kind": "DIAMETER",
+      "view": "LONG",
+      "binding": "COLLAR",
+      "nominal_mm": 8.2,
+      "state": "CAD_OBSERVED_REVIEW",
+      "x_m": 0.205,
+      "y_m": 0.205
+    },
+    {
+      "id": "D001-C03-COLLAR-THK",
+      "kind": "LINEAR",
+      "view": "LONG",
+      "from_binding": "COLLAR_MIN",
+      "to_binding": "COLLAR_MAX",
+      "nominal_mm": 2.0,
+      "state": "CAD_OBSERVED_REVIEW",
+      "x_m": 0.205,
+      "y_m": 0.09
+    },
+    {
+      "id": "D001-C04-THREAD-DIA",
+      "kind": "DIAMETER",
+      "view": "LONG",
+      "binding": "THREAD_MAJOR",
+      "nominal_mm": 4.0,
+      "state": "CAD_OBSERVED_REVIEW",
+      "x_m": 0.245,
+      "y_m": 0.195
+    },
+    {
+      "id": "D001-C04-THREAD-LEN",
+      "kind": "LINEAR",
+      "view": "LONG",
+      "from_binding": "THREAD_START",
+      "to_binding": "PART_MAX_X",
+      "nominal_mm": 3.5,
+      "state": "CAD_OBSERVED_REVIEW",
+      "x_m": 0.255,
+      "y_m": 0.105
+    },
+    {
+      "id": "D001-RIGHT-SHAFT-LEN",
+      "kind": "LINEAR",
+      "view": "LONG",
+      "from_binding": "COLLAR_MAX",
+      "to_binding": "THREAD_START",
+      "nominal_mm": 27.0,
+      "state": "CAD_OBSERVED_REVIEW",
+      "x_m": 0.225,
+      "y_m": 0.075
+    },
+    {
+      "id": "D001-C04-M4-NOTE",
+      "kind": "NOTE",
+      "view": "LONG",
+      "text": "M4 FUNCTIONAL MALE INTERFACE — CURRENT CAD MAJOR Ø4.00 / L=3.50 NOM; PRODUCTION PITCH/CLASS/TOLERANCE OPEN",
+      "state": "OPEN",
+      "x_m": 0.165,
+      "y_m": 0.045
+    },
+    {
+      "id": "D001-C06-ANTIROT-NOTE",
+      "kind": "NOTE",
+      "view": "END",
+      "text": "ANTI-ROTATION FEATURE PRESENT — FINAL CROSS-SECTION DIMENSION/TOLERANCE OPEN",
+      "state": "OPEN",
+      "x_m": 0.325,
+      "y_m": 0.095
+    },
+    {
+      "id": "D001-MANUAL-DIMS-NOTE",
+      "kind": "NOTE",
+      "view": "LONG",
+      "text": "MANUAL FINISH: 1.00 TIP SEGMENT AND 35.00 LEFT-SHAFT SEGMENT ARE MODEL/SKETCH EVIDENCE BUT HAVE NO STABLE PHYSICAL B-REP SHOULDER FOR GENERIC AUTO-DIMENSIONING. DO NOT INFER VIRTUAL FACES.",
+      "state": "OPEN_MANUAL_FINISH",
+      "x_m": 0.17,
+      "y_m": 0.055
+    }
+  ],
+  "title_block_properties": {
+    "PartNo": "K01-P-001",
+    "DrawingNo": "K01-D-001",
+    "Description": "Calibration Rod",
+    "Material": "EN 1.4404 / AISI 316L",
+    "DrawingStatus": "ENGINEERING REVIEW",
+    "Units": "mm",
+    "Projection": "FIRST ANGLE"
+  },
+  "automation_scope": {
+    "policy": "SUPPORTED_PRIMITIVES_ONLY__MANUAL_FALLBACK_FOR_NON_TOPOLOGICAL_CHARACTERISTICS",
+    "rule": "The API authors only dimensions/symbols that have stable direct B-rep or already-proven semantic bindings. Sketch-only segmentation, inferred virtual shoulders, and unsupported presentation details are preserved as review notes/manual-finish work instead of blocking the entire drawing build.",
+    "hard_hold_on": [
+      "missing source model",
+      "ambiguous direct geometry binding",
+      "source CAD mutation",
+      "duplicate/missing required semantic controlled annotation"
+    ],
+    "manual_fallback_on": [
+      "characteristic has no stable B-rep boundary",
+      "sketch-only segment is not represented by a physical edge/face",
+      "unsupported presentation-only annotation"
+    ]
+  },
+  "authoring_readiness": {
+    "status": "HOLD_PRODUCT_DEFINITION",
+    "decision": "DO_NOT_USE_CURRENT_D001_AS_A_MANUFACTURING_DRAWING",
+    "reason": "The 2026-09-16 generic build proved file/control plumbing but not manufacturing-definition completeness. Drawing authoring is blocked until the minimum controlled content for P001 is defined and verified against native CAD and A001 interfaces.",
+    "authority_sources": [
+      "K01_PROJECT_CONTROL.xlsx / Drawing Content / K01-D-001",
+      "K01_PROJECT_CONTROL.xlsx / Build Queue / K01-P-001",
+      "D:\\Marvilon\\K01\\cad\\parts\\K01-P-001_Calibration_Rod.SLDPRT",
+      "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM"
+    ],
+    "required_minimum_content": [
+      "Ø5 guide rod functional feature and production acceptance",
+      "collar geometry and its functional axial reference",
+      "overall length 68.50 and controlled axial chain",
+      "M4 shoulder at X65 and male M4×0.7 L3.50 manufacturing definition",
+      "anti-rotation flat/feature over X38..57 with actual cross-section dimension, orientation and tolerance",
+      "Optical Target Datum and target-surface acceptance",
+      "functional datum reference frame derived from P002/P004 guidance, P008 threaded interface and anti-rotation function",
+      "straightness/runout/coaxiality requirements where required by the guide function",
+      "surface roughness/polish requirements on guide/gas-wetted/optical-relevant surfaces",
+      "material EN 1.4404 / AISI 316L and manufacturing/inspection notes"
+    ],
+    "known_from_existing_control": [
+      "OAL nominal 68.50",
+      "rod nominal Ø5",
+      "collar exists",
+      "male M4×0.7 L3.50 required by Drawing Content/Build Queue",
+      "anti-rotation feature location X38..57 required by Build Queue",
+      "Optical Target Datum required by Drawing Content",
+      "material EN 1.4404 / AISI 316L is controlled"
+    ],
+    "must_close_before_next_build": [
+      "verify current native P001 contains the required anti-rotation feature and expose its exact geometry",
+      "define/release P001 datum scheme from assembly function",
+      "define production fits/tolerances for Ø5 guidance and axial chain",
+      "define M4×0.7 class/shoulder/length acceptance",
+      "define Optical Target Datum and acceptance",
+      "define straightness/runout and surface-finish requirements"
+    ]
+  }
+}

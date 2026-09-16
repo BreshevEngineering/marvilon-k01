@@ -1,0 +1,45 @@
+{
+  "schema": "k01.drawing_registry.current.v1",
+  "project": "K01",
+  "authority": "Drawing identity and traceability registry. Runtime artifact paths/hashes are derived into reports/control/K01_DRAWING_CONTROL_CURRENT.json.",
+  "candidate_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates",
+  "current_root": "D:\\Marvilon\\K01\\cad\\drawings\\current",
+  "rules": [
+    "candidates/ is immutable build history; it is never the navigation entry point for routine work.",
+    "current/<drawing_id>/ is the stable current projection used by humans and Center.",
+    "No automatic deletion of candidates. Retention audit may mark archive eligibility only.",
+    "SLDDRW is linked to native 3D through the drawing-system spec/model path; PDF is a derivative, never authority.",
+    "Every controlled drawing must link part, assembly, requirement/product-definition sources and current build evidence.",
+    "Generic API scope is capability-bounded: unsupported or non-topological characteristics go to manual_finish instead of causing whole-drawing HOLD.",
+    "A PARTIAL/HOLD semantic build is evidence only and must never be promoted into current/<drawing_id> as a routine working drawing.",
+    "Registry status fields are declarative trace/readiness context only; live candidate/current PASS/HOLD is derived exclusively by reports/control/K01_DRAWING_CONTROL_CURRENT.json."
+  ],
+  "drawings": {
+    "K01-D-001": {
+      "part_id": "K01-P-001",
+      "title": "Calibration Rod",
+      "spec": "control/drawings/spec/K01-D-001_P001_DRAWING_SPEC_v1.json",
+      "trace": "control/drawings/trace/K01-D-001_TRACE_CURRENT.json",
+      "runner": "RUN_K01_D001_DRAWING_SYSTEM_V1.cmd",
+      "status": "HOLD_PRODUCT_DEFINITION__CURRENT_CANDIDATE_INCOMPLETE_DO_NOT_USE",
+      "authoring_readiness": "HOLD_PRODUCT_DEFINITION"
+    },
+    "K01-D-003": {
+      "part_id": "K01-P-003",
+      "title": "Cartridge Body",
+      "spec": "control/drawings/spec/K01-D-003_P003_DRAWING_SPEC_v2.json",
+      "runner": "RUN_K01_D003_DRAWING_SYSTEM_V1.cmd",
+      "status": "GENERIC_ENGINE_PASS__RELEASE_HOLD"
+    },
+    "K01-D-006": {
+      "part_id": "K01-P-007",
+      "title": "Hermetic Magnetic Can",
+      "spec": "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC_v1.json",
+      "runner": "RUN_K01_D006_DRAWING_SYSTEM_V1.cmd",
+      "status": "GENERIC_ENGINE_PASS_WORKSTATION_20260916__RELEASE_HOLD",
+      "view_plan": "LONGITUDINAL_SECTION + J2_END"
+    }
+  },
+  "api_scope_policy": "control/drawings/K01_DRAWING_API_SCOPE_CURRENT.json",
+  "runtime_status_authority": "reports/control/K01_DRAWING_CONTROL_CURRENT.json"
+}

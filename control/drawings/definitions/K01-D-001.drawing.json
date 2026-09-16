@@ -1,0 +1,51 @@
+{
+  "schema": "k01.drawing_definition.v1",
+  "drawing_id": "K01-D-001",
+  "part_id": "K01-P-001",
+  "status": "DRAFT",
+  "model": {
+    "authority": "NATIVE_SOLIDWORKS",
+    "path_ref": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-001_Calibration_Rod.SLDPRT"
+  },
+  "views": [
+    {
+      "id": "V1",
+      "type": "LONGITUDINAL",
+      "purpose": "Primary turning/grinding profile and axial chain"
+    },
+    {
+      "id": "V2",
+      "type": "END",
+      "purpose": "Anti-rotation/non-axisymmetric end geometry"
+    }
+  ],
+  "characteristics": [
+    {
+      "id": "CHAR-P001-MAT",
+      "purpose": "production material",
+      "source_ref": "control/product/parts.json/K01-P-001",
+      "annotation_type": "MATERIAL",
+      "view": "TITLE_BLOCK",
+      "inspection_method": "material certificate + BOM",
+      "status": "CONTROLLED"
+    },
+    {
+      "id": "CHAR-P001-M4-MALE-LENGTH",
+      "purpose": "P001↔P008 male-thread axial engagement contributor",
+      "source_ref": "K01-TOL-P001-P008-M4-BOTTOM",
+      "annotation_type": "MODEL_DIMENSION",
+      "view": "V1",
+      "inspection_method": "thread/length inspection after release",
+      "status": "OPEN_TOLERANCE"
+    },
+    {
+      "id": "CHAR-P001-GEOMETRY",
+      "purpose": "rod/collar/tip current native geometry",
+      "source_ref": "reports/cad/current/K01-P-001_Calibration_Rod.json",
+      "annotation_type": "MODEL_DIMENSION",
+      "view": "V1",
+      "inspection_method": "dimensional inspection after tolerance release",
+      "status": "REVIEW"
+    }
+  ]
+}

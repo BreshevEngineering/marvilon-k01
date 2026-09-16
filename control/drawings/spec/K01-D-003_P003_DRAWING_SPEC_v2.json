@@ -1,0 +1,486 @@
+{
+  "schema": "k01.drawing_system_spec.v1",
+  "drawing_id": "K01-D-003",
+  "part_id": "K01-P-003",
+  "title": "Cartridge Body",
+  "status": "ENGINEERING_REVIEW",
+  "model_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT",
+  "output_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-003",
+  "sheet": "A3",
+  "sheet_scale": 2.0,
+  "projection": "FIRST_ANGLE",
+  "units": "mm",
+  "material": "EN 1.4404 / AISI 316L",
+  "view_map": {
+    "longitudinal_parent": "*Front",
+    "j1_end": "*Left",
+    "j2_end": "*Right"
+  },
+  "datum_features": [
+    {
+      "id": "A",
+      "feature": "P003-P016 mating face",
+      "selector": "ADJACENT_MAX_TO_DIA_10",
+      "binding": "J1_MATING",
+      "interface_id": "J1",
+      "view": "J1_END"
+    },
+    {
+      "id": "B",
+      "feature": "Ø10 g6 pilot axis",
+      "selector": "CYL_DIA_10",
+      "binding": "J1_PILOT",
+      "interface_id": "J1",
+      "view": "J1_END"
+    },
+    {
+      "id": "C",
+      "feature": "Ø3.02 +0.01/0 clocking hole",
+      "selector": "CYL_DIA_3.02_J1",
+      "binding": "J1_DATUM_C_HOLE",
+      "interface_id": "J1",
+      "view": "J1_END"
+    },
+    {
+      "id": "D",
+      "feature": "P003-P007 mating face",
+      "selector": "ADJACENT_MIN_TO_DIA_14.10",
+      "binding": "J2_MATING",
+      "interface_id": "J2",
+      "view": "J2_END"
+    },
+    {
+      "id": "E",
+      "feature": "Ø14.10 g6 pilot axis",
+      "selector": "CYL_DIA_14.10",
+      "binding": "J2_PILOT",
+      "interface_id": "J2",
+      "view": "J2_END"
+    }
+  ],
+  "characteristics": [
+    {
+      "id": "D003-C01",
+      "interface": "J1",
+      "role": "J1 axial datum",
+      "spec": "DATUM A = P003-P016 mating face",
+      "source": "EDR-023",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "D003-C02",
+      "interface": "J1",
+      "role": "J1 radial locator",
+      "spec": "Ø10 g6 pilot; nominal engagement 3.00 mm",
+      "source": "EDR-023 / K01_SERVICEABLE_JOINT_ARCHITECTURE_v3",
+      "state": "CONTROLLED_SIZE__AXIAL_TOLERANCE_OPEN"
+    },
+    {
+      "id": "D003-C03",
+      "interface": "J1",
+      "role": "J1 clocking datum",
+      "spec": "Ø3.02 +0.01/0 THRU at TED R12 / TED 30°; DATUM C",
+      "source": "EDR-023",
+      "state": "CONTROLLED_SIZE__LOCATION_TOLERANCE_OPEN"
+    },
+    {
+      "id": "D003-C04",
+      "interface": "J1",
+      "role": "J1 clamp pattern",
+      "spec": "3× Ø4.50 THRU on PCD24 / 120°; fasteners clamp only",
+      "source": "EDR-023 / current CAD",
+      "state": "POSITION_TOLERANCE_OPEN"
+    },
+    {
+      "id": "D003-C05",
+      "interface": "J2",
+      "role": "J2 mating face",
+      "spec": "DATUM D; FLATNESS 0.03 engineering-review candidate",
+      "source": "K01-D-003_P003_DRAWING_INTENT_v1",
+      "state": "CANDIDATE"
+    },
+    {
+      "id": "D003-C06",
+      "interface": "J2",
+      "role": "J2 pilot / datum axis",
+      "spec": "Ø14.10 g6; length 1.50 ±0.05; PERP ⌀0.003(M) | D; DATUM E",
+      "source": "EDR-028 / EDR-032 / EDR-034",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "D003-C07",
+      "interface": "J2",
+      "role": "P006 service clearance",
+      "spec": "Ø12 H9",
+      "source": "K01_T03_PILOT_TOOL_WORKPACKAGE_v2",
+      "state": "ENGINEERING_DEFINITION_PASS"
+    },
+    {
+      "id": "D003-C08",
+      "interface": "J2",
+      "role": "static O-ring gland",
+      "spec": "ID16.00; radial width 2.10 +0.10/0; depth 1.10 +0.05/0; corner R0.30 ±0.20",
+      "source": "K01-D-003_P003_DRAWING_INTENT_v1 / T04",
+      "state": "GEOMETRY_CANDIDATE__SEAL_QUALIFICATION_OPEN"
+    },
+    {
+      "id": "D003-C09",
+      "interface": "J2",
+      "role": "clamp thread pattern",
+      "spec": "3× M2.5×0.45-6H depth 5.00; TED PCD Ø26.50; TED 120°; POSITION ⌀0.10 | D | E",
+      "source": "EDR-028 / EDR-034",
+      "state": "CONTROLLED_NUMERIC__ISO5458_PATTERN_CZ_DISPOSITION_OPEN"
+    },
+    {
+      "id": "D003-C10",
+      "interface": "J2",
+      "role": "flange OD",
+      "spec": "Ø33.00 ±0.05",
+      "source": "C2R1 drawing intent",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "D003-C11",
+      "interface": "GENERAL",
+      "role": "material",
+      "spec": "EN 1.4404 / AISI 316L",
+      "source": "controlled material",
+      "state": "CONTROLLED"
+    }
+  ],
+  "release_blockers": [
+    "J1 Ø10 pilot axial-length tolerance is not released.",
+    "J1 3×Ø4.50 clamp-pattern position tolerance is not released.",
+    "Datum-C hole location tolerance/acceptance relative to A|B is not released.",
+    "J2 thread-pattern strict ISO 5458 CZ disposition is not yet released for P003; do not copy P007 C04 semantics automatically.",
+    "P003 J2 gland seal compound/media/leak qualification and final surface-texture requirement remain open.",
+    "Drawing title-block template/projection-symbol layer is not yet D9-qualified."
+  ],
+  "review_notes": [
+    "ENGINEERING REVIEW — NOT FOR MANUFACTURE",
+    "J1 A/B/C = P016 interface; J2 D/E = P007 interface per EDR-034.",
+    "OPEN product-definition items are shown in the report and shall not be silently converted to released tolerances.",
+    "DO NOT SCALE DRAWING."
+  ],
+  "view_definitions": [
+    {
+      "id": "SECTION",
+      "kind": "LONGITUDINAL_SECTION",
+      "parent_orientation": "*Front",
+      "section_label": "S",
+      "x_m": 0.125,
+      "y_m": 0.145,
+      "scale": 2.0
+    },
+    {
+      "id": "J1_END",
+      "kind": "MODEL_VIEW",
+      "orientation": "*Left",
+      "x_m": 0.31,
+      "y_m": 0.205,
+      "scale": 2.0
+    },
+    {
+      "id": "J2_END",
+      "kind": "MODEL_VIEW",
+      "orientation": "*Right",
+      "x_m": 0.31,
+      "y_m": 0.095,
+      "scale": 2.0
+    }
+  ],
+  "bindings": {
+    "J1_PILOT": {
+      "kind": "CYLINDER",
+      "diameter_mm": 10.0,
+      "count": 1
+    },
+    "J1_MATING": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "J1_PILOT",
+      "end": "MAX_X",
+      "selection": "NEAREST_PLANE_TO_APPROX_CYL_TRIM_X__LARGEST_AREA_IF_COPLANAR"
+    },
+    "J1_PILOT_OUTER": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "J1_PILOT",
+      "end": "MIN_X",
+      "selection": "NEAREST_PLANE_TO_APPROX_CYL_TRIM_X__LARGEST_AREA_IF_COPLANAR"
+    },
+    "J1_DATUM_C_HOLE": {
+      "kind": "CYLINDER",
+      "diameter_mm": 3.02,
+      "x_region": "NEGATIVE",
+      "count": 1
+    },
+    "J1_CLAMP_HOLES": {
+      "kind": "CYLINDER_SET",
+      "diameter_mm": 4.5,
+      "x_region": "NEGATIVE",
+      "count": 3
+    },
+    "J2_FLANGE_OD": {
+      "kind": "CYLINDER",
+      "diameter_mm": 33.0,
+      "count": 1
+    },
+    "J2_PILOT": {
+      "kind": "CYLINDER",
+      "diameter_mm": 14.1,
+      "count": 1
+    },
+    "J2_PILOT_ID": {
+      "kind": "CYLINDER",
+      "diameter_mm": 12.0,
+      "count": 1
+    },
+    "J2_MATING": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "J2_PILOT",
+      "end": "MIN_X",
+      "selection": "NEAREST_PLANE_TO_APPROX_CYL_TRIM_X__LARGEST_AREA_IF_COPLANAR"
+    },
+    "J2_PILOT_OUTER": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "J2_PILOT",
+      "end": "MAX_X",
+      "selection": "NEAREST_PLANE_TO_APPROX_CYL_TRIM_X__LARGEST_AREA_IF_COPLANAR"
+    },
+    "J2_THREAD_DRILLS": {
+      "kind": "CYLINDER_SET",
+      "diameter_mm": 2.05,
+      "x_region": "POSITIVE",
+      "count": 3
+    }
+  },
+  "annotations": [
+    {
+      "id": "D003-C02-SIZE",
+      "kind": "DIAMETER",
+      "view": "J1_END",
+      "binding": "J1_PILOT",
+      "nominal_mm": 10.0,
+      "shaft_fit": "g6",
+      "state": "CONTROLLED",
+      "x_m": 0.257,
+      "y_m": 0.236
+    },
+    {
+      "id": "D003-C02-AXIAL-OPEN",
+      "kind": "NOTE",
+      "view": "SECTION",
+      "text": "J1 PILOT LENGTH 3.00 NOM — AXIAL TOLERANCE OPEN",
+      "state": "OPEN",
+      "x_m": 0.047,
+      "y_m": 0.096
+    },
+    {
+      "id": "D003-C03-SIZE",
+      "kind": "DIAMETER",
+      "view": "J1_END",
+      "binding": "J1_DATUM_C_HOLE",
+      "nominal_mm": 3.02,
+      "upper_tol_mm": 0.01,
+      "lower_tol_mm": 0.0,
+      "state": "CONTROLLED",
+      "x_m": 0.344,
+      "y_m": 0.235
+    },
+    {
+      "id": "D003-C03-TED-R",
+      "kind": "TED_NOTE",
+      "view": "J1_END",
+      "text": "R12",
+      "state": "CONTROLLED",
+      "x_m": 0.282,
+      "y_m": 0.252
+    },
+    {
+      "id": "D003-C03-TED-A",
+      "kind": "TED_NOTE",
+      "view": "J1_END",
+      "text": "30°",
+      "state": "CONTROLLED",
+      "x_m": 0.325,
+      "y_m": 0.252
+    },
+    {
+      "id": "D003-C03-OPEN",
+      "kind": "NOTE",
+      "view": "J1_END",
+      "text": "DATUM C LOCATION TOLERANCE OPEN — NOT RELEASED",
+      "state": "OPEN",
+      "x_m": 0.245,
+      "y_m": 0.17
+    },
+    {
+      "id": "D003-C04-OPEN",
+      "kind": "NOTE",
+      "view": "J1_END",
+      "text": "3× Ø4.50 THRU — PCD 24 / 120° — POSITION TOLERANCE OPEN",
+      "state": "OPEN",
+      "x_m": 0.24,
+      "y_m": 0.158
+    },
+    {
+      "id": "D003-C10-SIZE",
+      "kind": "DIAMETER",
+      "view": "J2_END",
+      "binding": "J2_FLANGE_OD",
+      "nominal_mm": 33.0,
+      "sym_tol_mm": 0.05,
+      "state": "CONTROLLED",
+      "x_m": 0.355,
+      "y_m": 0.135
+    },
+    {
+      "id": "D003-C06-SIZE",
+      "kind": "DIAMETER",
+      "view": "J2_END",
+      "binding": "J2_PILOT",
+      "nominal_mm": 14.1,
+      "shaft_fit": "g6",
+      "state": "CONTROLLED",
+      "x_m": 0.35,
+      "y_m": 0.112
+    },
+    {
+      "id": "D003-C07-SIZE",
+      "kind": "DIAMETER",
+      "view": "J2_END",
+      "binding": "J2_PILOT_ID",
+      "nominal_mm": 12.0,
+      "hole_fit": "H9",
+      "state": "CONTROLLED",
+      "x_m": 0.26,
+      "y_m": 0.115
+    },
+    {
+      "id": "D003-C06-LENGTH",
+      "kind": "LINEAR",
+      "view": "SECTION",
+      "from_binding": "J2_MATING",
+      "to_binding": "J2_PILOT_OUTER",
+      "nominal_mm": 1.5,
+      "sym_tol_mm": 0.05,
+      "state": "CONTROLLED",
+      "x_m": 0.202,
+      "y_m": 0.215
+    },
+    {
+      "id": "D003-C06-PERP",
+      "kind": "GTOL",
+      "view": "J2_END",
+      "binding": "J2_PILOT",
+      "symbol": "PERP",
+      "diameter_zone": true,
+      "tolerance_mm": 0.003,
+      "material_modifier": "M",
+      "datum_1": "D",
+      "state": "CONTROLLED",
+      "x_m": 0.345,
+      "y_m": 0.081
+    },
+    {
+      "id": "D003-C05-FLAT-CAND",
+      "kind": "GTOL",
+      "view": "SECTION",
+      "binding": "J2_MATING",
+      "symbol": "FLAT",
+      "diameter_zone": false,
+      "tolerance_mm": 0.03,
+      "state": "CANDIDATE",
+      "x_m": 0.055,
+      "y_m": 0.205
+    },
+    {
+      "id": "D003-C08-GLAND",
+      "kind": "NOTE",
+      "view": "J2_END",
+      "text": "GLAND CANDIDATE: ID 16.00; RADIAL W 2.10 +0.10/0; DEPTH 1.10 +0.05/0; R0.30 ±0.20",
+      "state": "CANDIDATE",
+      "x_m": 0.225,
+      "y_m": 0.051
+    },
+    {
+      "id": "D003-C09-THREAD",
+      "kind": "NOTE",
+      "view": "J2_END",
+      "text": "3× M2.5×0.45-6H DEEP 5.00",
+      "state": "CONTROLLED",
+      "x_m": 0.243,
+      "y_m": 0.149
+    },
+    {
+      "id": "D003-C09-TED-PCD",
+      "kind": "TED_NOTE",
+      "view": "J2_END",
+      "text": "Ø26.50",
+      "state": "CONTROLLED",
+      "x_m": 0.283,
+      "y_m": 0.159
+    },
+    {
+      "id": "D003-C09-TED-ANG",
+      "kind": "TED_NOTE",
+      "view": "J2_END",
+      "text": "120°",
+      "state": "CONTROLLED",
+      "x_m": 0.33,
+      "y_m": 0.159
+    },
+    {
+      "id": "D003-C09-POS",
+      "kind": "GTOL",
+      "view": "J2_END",
+      "binding": "J2_THREAD_DRILLS",
+      "symbol": "POSITION",
+      "diameter_zone": true,
+      "tolerance_mm": 0.1,
+      "datum_1": "D",
+      "datum_2": "E",
+      "state": "CONTROLLED_NUMERIC__CZ_OPEN",
+      "x_m": 0.303,
+      "y_m": 0.061
+    },
+    {
+      "id": "D003-C09-CZ-OPEN",
+      "kind": "NOTE",
+      "view": "J2_END",
+      "text": "ISO 5458 CZ DISPOSITION OPEN FOR P003 THREAD PATTERN — REVIEW ONLY",
+      "state": "OPEN",
+      "x_m": 0.225,
+      "y_m": 0.039
+    }
+  ],
+  "title_block_properties": {
+    "DrawingNo": "K01-D-003",
+    "PartNo": "K01-P-003",
+    "Title": "Cartridge Body",
+    "Material": "EN 1.4404 / AISI 316L",
+    "Status": "ENGINEERING REVIEW",
+    "Units": "mm",
+    "Projection": "FIRST_ANGLE",
+    "Scale": "2:1",
+    "Revision": ""
+  },
+  "view_strategy": {
+    "primary_representation": "LONGITUDINAL_SECTION",
+    "primary_reason": "Internal axial geometry and both interface stacks are manufacturing/inspection relevant; a full longitudinal section carries more information than an external frontal/profile view and avoids hidden-line dependence.",
+    "interface_end_views": [
+      {
+        "view": "J1_END",
+        "interface": "J1",
+        "required": true,
+        "reason": "J1 has unique non-axisymmetric clocking and clamp-pattern information that is not equivalent to J2."
+      },
+      {
+        "view": "J2_END",
+        "interface": "J2",
+        "required": true,
+        "reason": "J2 has a different locator/thread/gland interface and therefore cannot be inferred from J1 by symmetry."
+      }
+    ],
+    "minimum_view_rule": "Use the minimum set that fully and unambiguously defines manufacture and inspection. Omit an interface end view only when functional equivalence/symmetry is explicitly proven."
+  }
+}

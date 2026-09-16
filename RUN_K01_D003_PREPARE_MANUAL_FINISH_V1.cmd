@@ -1,0 +1,5 @@
+@echo off
+setlocal
+cd /d "%~dp0"
+py -3 tools\medtas\drawing_candidate_lifecycle_v1.py --repo-root "%CD%" prepare-manual --drawing-id K01-D-003
+exit /b %ERRORLEVEL%

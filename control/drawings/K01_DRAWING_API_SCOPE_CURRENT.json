@@ -1,0 +1,32 @@
+{
+  "schema": "k01.drawing_api_scope.current.v1",
+  "status": "CONTROLLED_BALANCED_AUTOMATION",
+  "objective": "Use the generic API where it is robust and deterministic; do not spend engineering time forcing API reconstruction of sketch-only or presentation-only details that are faster to finish manually.",
+  "auto_author": [
+    "views and sections from controlled view spec",
+    "diameters/fits on directly resolved cylindrical faces",
+    "linear dimensions between directly resolved physical planes/extreme faces",
+    "datums and proven GTOL/TED/surface-finish primitives",
+    "controlled notes and metadata",
+    "placement replay for semantically named annotations"
+  ],
+  "manual_finish": [
+    "dimensions whose endpoints exist only as sketch dimensions or virtual segmentation with no physical B-rep shoulder",
+    "leader routing and final collision cleanup",
+    "unsupported cosmetic/thread/presentation details",
+    "final D8 readability approval"
+  ],
+  "hard_hold_conditions": [
+    "source CAD missing or mutated",
+    "direct required geometry binding is ambiguous",
+    "required controlled characteristic is silently lost or duplicated",
+    "spec/model identity mismatch"
+  ],
+  "non_blocking_manual_fallback_rule": "If a characteristic is valid engineering evidence but cannot be bound deterministically to physical B-rep using a proven primitive, the build continues without inventing geometry. The item is emitted to manual_finish/review notes and remains traceable.",
+  "forbidden": "Do not create approximate virtual faces/shoulders solely to satisfy automatic dimension placement.",
+  "validated_on": [
+    "K01-D-003",
+    "K01-D-006"
+  ],
+  "current_validation": "K01-D-001 simplified supported-primitives build"
+}
