@@ -1,0 +1,18 @@
+{
+  "schema": "k01.magnetic_input_recovery.compaction_adjudication.v1",
+  "date": "2026-09-17",
+  "status": "ACCEPT_COMPACT_V2",
+  "path": "control/analysis/K01_MAGNETIC_INPUT_RECOVERY.json",
+  "current_bytes": 2064,
+  "current_sha256": "86089c4c530b20f7edd7aef2a912f09a50aa5e5a9cbe5bc1cccff2732dec5f22",
+  "head_bytes": 61439576,
+  "head_sha256": "59b5c8f873c8697487fabec7446e24f4a16aca38412b823c167a2892431230ca",
+  "decision": "Keep compact v2 as current. Do not restore the 61 MB duplicated raw search payload into CURRENT; full history remains recoverable in Git.",
+  "basis": [
+    "current file is valid JSON",
+    "schema explicitly identifies compact.v2",
+    "note explicitly states intentional replacement of raw duplicated payload",
+    "authority-relevant references are retained",
+    "unsupported legacy requirement IDs are fail-closed"
+  ]
+}

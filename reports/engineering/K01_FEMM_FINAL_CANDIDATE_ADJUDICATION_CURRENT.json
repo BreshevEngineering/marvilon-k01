@@ -1,0 +1,38 @@
+{
+  "schema": "k01.femm.final_candidate.adjudication.v1",
+  "date": "2026-09-17",
+  "status": "PASS_NUMERICAL_DESIGN_CANDIDATE",
+  "criterion_N_per_A": 0.930894486,
+  "selected_candidate": {
+    "turns_per_coil": 350,
+    "B001_Br_eff_min_T_at_55C": 1.0,
+    "nominal_current_A": 1.0,
+    "boost_current_A": 1.25
+  },
+  "results": {
+    "CANDIDATE_350_BR1_BOUND": {
+      "K_F_min_N_per_A": 1.0034713891159248,
+      "worst_z_mm": 5.0,
+      "criterion_N_per_A": 0.930894486,
+      "margin_pct": 7.796469332177858,
+      "positions": 11,
+      "verdict": "PASS_NUMERICAL_SCREEN"
+    },
+    "SENSITIVITY_350_BR095": {
+      "K_F_min_N_per_A": 0.9532594016191156,
+      "worst_z_mm": 5.0,
+      "criterion_N_per_A": 0.930894486,
+      "margin_pct": 2.4025188628215455,
+      "positions": 11,
+      "verdict": "PASS_NUMERICAL_SCREEN"
+    }
+  },
+  "worst_position_mm": 5.0,
+  "release_boundary": [
+    "P015 finished insulated wire OD and winding-pack release remain open",
+    "P015 thermal/duty qualification remains open",
+    "B001 actual supplier grade and lot Br(T) remain open for later qualification",
+    "physical magnetic force-current bench correlation remains open"
+  ],
+  "meaning": "FEMM numerical magnetic design is no longer an undefined OPEN item. It is a passed design candidate, not product release."
+}
