@@ -1,0 +1,32 @@
+{
+  "schema": "k01.current_registry.v1",
+  "policy": "docs/architecture/K01_TEMPORAL_AUTHORITY_POLICY_v1.md",
+  "classes": {
+    "STATE_CURRENT": [
+      "control/state/K01_STATE_EPOCH_CURRENT.json",
+      "control/project/K01_CURRENT_SESSION_MANIFEST.json",
+      "control/project/K01_GOAL_LOCK_CURRENT.json",
+      "control/project/K01_NEXT_ACTIONS_CURRENT.json",
+      "reports/control/K01_START_HERE.md",
+      "reports/control/K01_SESSION_CLOSE_CURRENT.md",
+      "reports/control/K01_RESUME_CURRENT.json",
+      "README_CURRENT.md"
+    ],
+    "DERIVED_CURRENT_ARTIFACT_BOUND": [
+      "control/drawings/K01_D006_VISUAL_QA_CURRENT.json"
+    ]
+  },
+  "known_legacy_or_non_global_current": [
+    {
+      "path": "reports/pds/K01_P007_J2_READINESS_CURRENT.md",
+      "classification": "DOMAIN_CURRENT",
+      "rule": "Refresh from tools/pds/k01_pds.py; never use as global state authority."
+    },
+    {
+      "path": "reports/drawing/current/K01-D-006_PROFESSIONAL_CANDIDATE_CURRENT.md",
+      "classification": "DOMAIN_CURRENT_HISTORY_COMPAT",
+      "rule": "Do not use as active D006 workspace identity; Goal Lock controls current drawing."
+    }
+  ],
+  "global_rule": "Only STATE_CURRENT files compete for global session state, and all must carry the same state_epoch. Other CURRENT files are domain/derived evidence only."
+}

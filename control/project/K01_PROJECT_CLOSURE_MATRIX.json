@@ -1,6 +1,6 @@
 {
   "schema": "k01.project_closure_matrix.v1",
-  "generated_utc": "2026-09-08T13:58:19.349769+00:00",
+  "generated_utc": "2026-09-08T19:16:12.849139+00:00",
   "engineering_baseline": {
     "assembly": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
     "sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4"
@@ -26,7 +26,7 @@
     },
     {
       "id": "BOM",
-      "status": "HOLD_ACTIONABLE_BLOCKERS",
+      "status": "HOLD_2_EBOM_5_MBOM_ACTIONABLE",
       "authority": "tools/medtas/build_bom_v1_9.py",
       "modeled_occurrences": 13,
       "ebom_rows": 15,
@@ -38,7 +38,10 @@
       "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
       "ebom_blockers": 2,
       "mbom_blockers": 5,
-      "diagnosis": "control/bom/K01_BOM_BLOCKER_DIAGNOSIS.json"
+      "diagnosis": "control/bom/K01_BOM_BLOCKER_DIAGNOSIS.json",
+      "owner_map": "control/bom/K01_BOM_BLOCKER_OWNER_MAP.json",
+      "nonmodeled_items": "control/product/K01_J2_NONMODELED_ITEMS.json",
+      "process_definition": "control/process/K01_J2_PROCESS_DEFINITION.json"
     },
     {
       "id": "P007_ENTITY_BINDING",
@@ -60,7 +63,7 @@
     },
     {
       "id": "DRAWINGS_DIMXPERT",
-      "status": "PASS_P007_NOMINAL_PMI_PILOT; HOLD_FULL_PRODUCT_DEFINITION",
+      "status": "D006_CANDIDATE_BUILT; HOLD_VISUAL_QA_AND_RELEASE_SPECS",
       "next": "Author only defined+bound characteristics, then close remaining specs and finish drawing QA",
       "safe_scope_count": 6,
       "blocked_scope_count": 7,
@@ -71,7 +74,10 @@
       "note": "Prior v3 created Diameter annotations 14.1 and 33 with geometry invariant but did not save because checker assumed metre-scaled nominal.",
       "scope": "C02/C05 nominal size pilot only; tolerances/datums/GD&T still controlled downstream",
       "pilot_evidence": "control/product_definition/K01_P007_PMI_WRITE_EVIDENCE.json",
-      "next_scope": "Datum A/B + controlled C03/C04/tolerances only after authoring semantics are explicitly frozen"
+      "next_scope": "Datum A/B + controlled C03/C04/tolerances only after authoring semantics are explicitly frozen",
+      "drawing_definition": "control/drawings/K01_D006_RELEASE_DEFINITION.json",
+      "drawing_program": "control/drawings/K01_DRAWING_PROGRAM_STATUS.json",
+      "candidate_verification": "reports/cad/d006_candidate/K01_D006_CANDIDATE_VERIFY_CURRENT.json"
     },
     {
       "id": "FEMM_MAGNETIC_FORCE",
@@ -126,7 +132,10 @@
       "legacy_passive_coupling": "NOT_APPLICABLE",
       "normalized_benchmark_status": "PASS_NORMALIZED_FORCE_BENCHMARK",
       "benchmark": "control/analysis/K01_FIXED_COIL_FEMM_BENCHMARK.json",
-      "verified_quantity": "differential force extraction; absolute physical force still blocked"
+      "verified_quantity": "differential force extraction; absolute physical force still blocked",
+      "current_requirement_id": "REQ-K01-ACT-FORCE-001",
+      "numeric_acceptance": "OPEN",
+      "requirement_source": "control/requirements/K01_RELEASE_REQUIREMENTS_CURRENT.json"
     },
     {
       "id": "CENTER",
@@ -171,13 +180,12 @@
   ],
   "control_rule": "Every engineering iteration must close or materially reduce at least one listed domain blocker without invalidating a PASS domain.",
   "next_engineering_actions": [
-    "Freeze REQ-ACT-001 numeric acceptance criterion.",
-    "Freeze B001 supplier/lot Br(T), tolerance and temperature-dependent magnetic data.",
-    "Freeze P015 winding turns, wire, polarity/connection and driver pulse/duty.",
-    "Use the now-verified differential-force extraction path for physical F(x,I,T) only after those magnetic/electrical inputs are frozen.",
-    "Advance P007 PMI from nominal pilot to controlled Datum A/B + C03/C04/tolerances; keep open characteristics fail-closed.",
-    "Resolve 2 EBOM / 5 MBOM blockers at their source registries using K01_BOM_BLOCKER_DIAGNOSIS.json.",
-    "Existing Center consumes the same closure/dependency state; no parallel Center."
+    "Freeze exact M2.5 screw standard/head/length/material/finish-lubrication and torque-preload calibration condition.",
+    "Freeze J2 media envelope and exact seal compound/supplier, then define leak acceptance.",
+    "Adjudicate P007/P013 containment process applicability; retire legacy weld MBOM items only with explicit current change-control evidence.",
+    "Advance K01-D-006 from release definition to candidate SLDDRW authoring: Datum A/B, C03/C04, C05 tolerance, C06 OAL, material; keep open specs visibly blocked.",
+    "Define numeric acceptance for REQ-K01-ACT-FORCE-001, then freeze B001 Br(T) and P015 winding/driver inputs before physical F(x,I,T).",
+    "Do not rescan Gate04E unless native CAD inputs change."
   ],
   "current_iteration_root_snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
   "step13_domain_statuses": {

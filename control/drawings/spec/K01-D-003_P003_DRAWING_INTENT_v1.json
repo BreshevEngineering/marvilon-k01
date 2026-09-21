@@ -36,10 +36,10 @@
       "id": "P003-C03",
       "feature": "J2 pilot axis",
       "type": "GD&T",
-      "spec": "perpendicularity Ø0.03 to A; datum feature B = pilot axis",
-      "source": "functional datum architecture",
+      "spec": "perpendicularity Ø0.003(M) to A; datum feature B = pilot axis",
+      "source": "EDR-028",
       "view": "SECTION_AA",
-      "inspection": "CMM"
+      "inspection": "CMM MMR / functional gage"
     },
     {
       "id": "P003-C04",

@@ -1,0 +1,105 @@
+{
+  "schema": "k01.drawing_architecture.current.v8",
+  "method": "PRODUCT_DEFINITION_COMPILED__HYBRID_MBD_PLUS_2D_DERIVATIVE",
+  "authority_chain": [
+    "requirement_or_interface_contract",
+    "requirement_allocation",
+    "engineering_decision_EDR_calculation",
+    "product_characteristic_Cxx",
+    "drawing_product_definition_slice_fingerprint",
+    "native_3D_geometry_binding",
+    "native_DimXpert_or_controlled_model_annotation",
+    "2D_drawing_projection",
+    "inspection_strategy_from_characteristic",
+    "inspection_realization",
+    "verification_result"
+  ],
+  "manual_last_mile": {
+    "allowed": [
+      "view/layout selection",
+      "annotation placement",
+      "leader routing",
+      "line/font/scale cleanup",
+      "section/detail placement",
+      "visual QA",
+      "final annotation placement after semantic import PASS"
+    ],
+    "prohibited": [
+      "manual retyping of released PMI values",
+      "uncontrolled duplicate dimensions",
+      "inventing tolerances",
+      "external graphic cleanup as engineering authority",
+      "manual rebuild of a drawing when a valid linked SLDDRW seed already exists",
+      "manual re-entry of Cxx/PMI semantic values when native PMI exists"
+    ]
+  },
+  "solidworks_2018": {
+    "DimXpert_transfer": "Native drawing-view Import annotations + DimXpert annotations is the required transfer mechanism; Design annotations must remain OFF for the controlled transfer.",
+    "direct_API_limit": "InsertModelAnnotations3 / Model Items is not the project path for DimXpert transfer in SW2018; direct IView.ImportAnnotations with a DimXpert flag is not available in the SW2018 API surface used by K01.",
+    "automation_boundary": "Reuse the existing linked SLDDRW. API performs copy/reference-safe relink/view/section/scale/position/cleanup/direct associative dimension projection/export/invariance work. The failed SW2018 PropertyManager UI-Automation transfer path is no longer an execution dependency. Human work is limited to the final visual last mile and any isolated dimension the native API cannot associate in one pass.",
+    "bridge_constraints": [
+      "never overwrite canonical P007 or the source linked drawing",
+      "Design annotations OFF",
+      "DimXpert annotations ON through the native SW2018 Drawing View UI path",
+      "C02 must verify as Cylinder1/Diameter2 and C05 as Cylinder2/Diameter4",
+      "DIMXPERT_COUNT=0 is HOLD, never PASS",
+      "source part and source drawing hashes must remain invariant"
+    ],
+    "Model_Items_for_DimXpert": "PROHIBITED_AS_TRANSFER_MECHANISM",
+    "deadline_projection": "V10 consumes only the V11 drawing Product Definition slice fingerprint for engineering projection semantics and reuses an existing linked SLDDRW. Native carriers are preferred when proven; otherwise controlled Cxx PROJECTION_FALLBACK notes are allowed in the editable design-review base. Fallback carrier class cannot satisfy release-native-carrier requirements by itself.",
+    "ui_automation_bridge_status": "REJECTED_FOR_DEADLINE_AFTER_BOUNDED_FAILURE; keep evidence only",
+    "direct_associative_dimension_path": [
+      "REJECTED_AS_PRIMARY_AFTER_V7_0_OF_8",
+      "Do not retry without new bounded evidence."
+    ],
+    "dimxpert_transport_evidence": "Use native Drawing View / Model View Import annotations + DimXpert annotations with compatible annotation views. Generic Model Items/InsertModelAnnotations3 is not accepted as proven DimXpert transport in K01 after V6 DIMXPERT_COUNT=0."
+  },
+  "current_D006": {
+    "generated_candidate_classification": "V10_SEMANTIC_BASE_PASS_9_OF_9__VISUAL_QA_PENDING",
+    "current_stage": "K01_D006_V12_MANUAL_EXEMPLAR_EXECUTION",
+    "next": "Prepare a dedicated V12 exemplar workspace from the preserved V10 base, author/verify only D1-authorized route-independent claims, manually exercise actual SW2018 annotation-view import/layout, capture evidence, then perform visual QA. Full D3/D7 precede D5 automation.",
+    "source_PMI": "reports/control/K01_P007_PMI_PROVEN_CURRENT.json",
+    "source_drawing_report": "reports/control/K01_D006_REFINED_EXISTING_CURRENT.json",
+    "last_native_transfer_verify": "reports/control/K01_D006_IMPORTED_PMI_VERIFY_CURRENT.json",
+    "material": "AISI 316L / EN 1.4404",
+    "human_last_mile_target": "10-20% visual placement/cleanup only after a compiled-definition-driven base drawing exists",
+    "product_definition_input": "reports/product_definition/current/K01_P007_PD_SLICE_DRAWING.json",
+    "drawing_authoring_gate": "reports/control/K01_D006_DRAWING_AUTHORING_GATE_CURRENT.json",
+    "drawing_projection_report": "reports/drawing/current/K01-D-006_PROJECTION_CURRENT.json",
+    "full_product_definition_trace": "reports/product_definition/current/K01_P007_PRODUCT_DEFINITION_COMPILED.json"
+  },
+  "standards_profile": [
+    "ISO 8015",
+    "ISO 129-1",
+    "ISO 1101",
+    "ISO 5459",
+    "ISO 14405-1",
+    "ISO 5457",
+    "ISO 7200",
+    "ISO 16792"
+  ],
+  "release_rule": "Drawing candidate requires DRAWING_CANDIDATE_READY. V10 semantic projection PASS requires all safe Product Characteristics projected from drawing_projection_sha256. Drawing release still requires DRAWING_RELEASE_READY + binding invariance + approved semantic carrier policy + human visual QA + technical filter + variation/manufacturing/inspection/configuration blockers closed.",
+  "drawing_pipeline_policy": "control/drawings/K01_DRAWING_PIPELINE_POLICY_CURRENT.json",
+  "drawing_pipeline_architecture": "docs/architecture/K01_DRAWING_PIPELINE_D1_D9_v2.md",
+  "lanes": {
+    "design_review": {
+      "method": "V10 compiled Product Definition projection with traceable PROJECTION_FALLBACK",
+      "release_authority": false,
+      "preserve_current_candidate": true
+    },
+    "release_native": {
+      "method": "D1-D9 claim-level model-PMI/native-annotation pipeline",
+      "release_authority": true,
+      "manual_semantic_authoring": "D2 only from D1 plan",
+      "human_layout": "D6 only"
+    },
+    "manual_exemplar": {
+      "method": "V12 dedicated P007 + D006 copies; D1 claim-scoped PMI authoring; human annotation-view import/layout; automated readback/capture",
+      "release_authority": false,
+      "purpose": "Produce the first controlled exemplar and empirical SW2018 transport/layout specification before D5 automation.",
+      "d2_scope": "Only d2_authorizable_claim_ids from current D1 plan.",
+      "release_boundary": "Manufacturing route and all release-native D3/D4/D7/D8/D9 gates remain authoritative HOLD/PARTIAL as applicable."
+    }
+  },
+  "semantic_rule": "The model/Product Definition owns semantic content. Drawing owns presentation. D2 semantic mutation is claim-scoped from D1; manufacturing-route OPEN does not authorize or prohibit unrelated claims by itself. No release tolerance/GD&T may exist only in SLDDRW free text."
+}

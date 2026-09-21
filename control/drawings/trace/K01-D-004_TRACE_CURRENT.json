@@ -1,0 +1,27 @@
+{
+  "schema": "k01.drawing_trace.current.v1",
+  "drawing_id": "K01-D-004",
+  "part_id": "K01-P-004",
+  "status": "ENGINEERING_REVIEW__RELEASE_HOLD",
+  "sources": [
+    "D:\\Marvilon\\K01\\cad\\parts\\K01-P-004_Front_Guide_Bushing.SLDPRT",
+    "REQ-GUIDE-001",
+    "REQ-GUIDE-002",
+    "control/drawings/K01_DRAWING_GOLDEN_RECIPE_CURRENT.json"
+  ],
+  "controlled_nominal_geometry": [
+    "Ø5.055 THRU",
+    "Ø6.54",
+    "7.99"
+  ],
+  "open_product_definition": [
+    "production tolerances",
+    "functional surface texture",
+    "production-grade material qualification"
+  ],
+  "rule": "Drawing must show open items as open; it must not invent release values.",
+  "configuration_basis": {
+    "authority": "control/decisions/EDR-047_P004_AXIAL_RECENTER.json",
+    "native_sha256": "6c5644913ce7694a46ceb557a5616a70598c50355d06e6f537b8a92a7c1ca779"
+  }
+}

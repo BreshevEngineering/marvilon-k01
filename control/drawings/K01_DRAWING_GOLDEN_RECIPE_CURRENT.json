@@ -1,0 +1,67 @@
+{
+  "schema": "k01.drawing_golden_recipe.current.v1",
+  "project": "K01",
+  "status": "FROZEN_REFERENCE_RECIPE",
+  "updated": "2026-09-16",
+  "drawing_system_checkpoint": "826cf15f0dff8a1013b35652b8ff2c3a26935ece",
+  "purpose": "Preserve the actual route that produced the accepted D003/D006 drawing quality. Semantic authoring alone is not a finished drawing.",
+  "golden_outputs": {
+    "K01-D-003": {
+      "role": "MULTI_INTERFACE_VIEW_PLAN_DATUM_NAMESPACE_REFERENCE",
+      "visual_reference": "D:\\Marvilon\\K01\\cad\\drawings\\exemplars\\K01-D-003\\K01-D-003_GOLDEN_VISUAL_APPROVED.PDF"
+    },
+    "K01-D-006": {
+      "role": "ISO_GPS_PRESENTATION_MANUFACTURING_ANNOTATION_REFERENCE",
+      "visual_reference": "D:\\Marvilon\\K01\\cad\\drawings\\exemplars\\K01-D-006\\K01-D-006_GOLDEN_VISUAL_APPROVED.PDF"
+    }
+  },
+  "required_route": [
+    "PRODUCT_DEFINITION_READINESS",
+    "DRAWING_FAMILY_VIEW_PLAN",
+    "SEMANTIC_AUTHORING",
+    "PRESENTATION_OR_EXEMPLAR_STAGE",
+    "PLACEMENT_CAPTURE_OR_FIXED_PROVEN_RECIPE",
+    "SEMANTIC_QA",
+    "D8_VISUAL_QA",
+    "DRAWING_CONTROL_PUBLICATION"
+  ],
+  "legacy_recipe_evidence": [
+    "control/drawings/K01_D006_EXEMPLAR_POLICY_CURRENT.json",
+    "reports/drawing/current/K01-D-006_EXEMPLAR_WORKSPACE_CURRENT.json",
+    "reports/drawing/current/K01-D-006_EXEMPLAR_CAPTURE_CURRENT.json",
+    "control/drawings/K01_DRAWING_FAMILY_RULES_CURRENT.json",
+    "control/drawings/K01_P007_DRAWING_FAMILY_BINDING_CURRENT.json",
+    "reports/drawing/current/K01-D-006_FAMILY_PLAN_CURRENT.json",
+    "reports/drawing/current/K01-P-007_D3_AUTHORING_VERIFY_CURRENT.json",
+    "reports/drawing/current/K01-D-006_D7_SEMANTIC_QA_CURRENT.json",
+    "control/drawings/placement/K01-D-003_PLACEMENT_CURRENT.json"
+  ],
+  "hard_rules": [
+    "Do not regress below D003/D006 accepted visual quality.",
+    "Semantic PASS is not presentation PASS and is not D8 PASS.",
+    "Raw generated candidates are not published when presentation_status exists and is not PASS_.",
+    "Never invent datum, tolerance, GPS, surface texture, thread or inspection values to make a drawing look complete.",
+    "Use minimum views that completely communicate controlled geometry and function.",
+    "For tiny/simple axisymmetric parts, a clean longitudinal model view plus end view may be preferable to a fragile automated section when the through feature is explicitly called out."
+  ],
+  "d004_trial": {
+    "part": "K01-P-004",
+    "drawing": "K01-D-004",
+    "route": "DEDICATED_FIXED_PRESENTATION_RECIPE_ON_TOP_OF_CONTROLLED_GEOMETRY",
+    "release": "HOLD_PRODUCT_DEFINITION",
+    "expected_views": "LONGITUDINAL MODEL VIEW + END VIEW",
+    "expected_scale": "10:1",
+    "controlled_nominals": [
+      "Ø5.055 THRU",
+      "Ø6.54",
+      "7.99"
+    ],
+    "presentation_gate": "HOLD_D8_VISUAL_REVIEW until PDF is visually inspected.",
+    "configuration_basis": {
+      "authority": "control/decisions/EDR-047_P004_AXIAL_RECENTER.json",
+      "native_sha256": "6c5644913ce7694a46ceb557a5616a70598c50355d06e6f537b8a92a7c1ca779"
+    }
+  },
+  "freeze_tool": "tools/medtas/drawing_recipe_freeze_v2.py",
+  "freeze_output_root": "D:\\Marvilon\\K01\\cad\\drawings\\exemplars\\recipe_evidence"
+}

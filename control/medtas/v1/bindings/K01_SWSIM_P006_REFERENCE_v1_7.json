@@ -1,7 +1,7 @@
 {
   "schema": "k01.swsim_p006_reference.v1_7",
   "node_id": "K01.STRUCT.SWSIM.P006",
-  "source_report": "reports/engineering/current/source/K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx",
+  "source_report": "evidence/immutable/fd44f0f9f5ca28d08fa8280a5717168aa68303219106d95216e4dcbb55cb9c16__K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx",
   "study_name": "Static 1",
   "analysis_type": "linear_static",
   "metrics": {

@@ -1,0 +1,44 @@
+{
+  "schema": "k01.p007.d3_execution_contract.v17",
+  "status": "ACTIVE",
+  "part": "K01-P-007",
+  "drawing": "K01-D-006",
+  "purpose": "Bridge controlled Product Definition semantics to the SW2018 D3 sensor without creating a second engineering authority.",
+  "authority_sources": {
+    "product_definition": "control/product_definition/K01_P007_PRODUCT_CHARACTERISTICS.json",
+    "d1_plan": "reports/drawing/current/K01-D-006_D1_AUTHORING_PLAN_CURRENT.json",
+    "parts_registry": "control/product/parts.json",
+    "workspace": "reports/drawing/current/K01-D-006_EXEMPLAR_WORKSPACE_CURRENT.json",
+    "requalification": "reports/drawing/current/K01-D-006_EXEMPLAR_REQUALIFICATION_CURRENT.json"
+  },
+  "C01.DATUM_A": {
+    "authority_binding_type": "COMPOSITE_COPLANAR_FACE_SET",
+    "authority_entity_count": 2,
+    "sw2018_symbol_attachment_semantics": "SINGLE_MEMBER_OF_CONTROLLED_COMPOSITE_DATUM_FEATURE",
+    "rule": "The Product Definition datum feature remains the full controlled coplanar face set. The native SW datum symbol may attach to one member face; D3 must prove that the attached face matches a member of the controlled set. A positional min/max-X heuristic is forbidden as acceptance authority.",
+    "acceptance": {
+      "attached_face_count": 1,
+      "attached_face_must_match_authority_member": true,
+      "surface_type": "plane"
+    }
+  },
+  "annotation_view_roles": {
+    "AV_J2_LONGITUDINAL": {
+      "status": "CONTROLLED_FOR_STANDARD_SW_VIEWS",
+      "main_part_axis": "X",
+      "allowed_standard_view_names": ["*Front", "*Back", "*Top", "*Bottom"],
+      "forbidden_end_view_names": ["*Right", "*Left"],
+      "rule": "For P007 the controlled J2/C02 axis is X. A longitudinal annotation view must look perpendicular to X. Built-in Right/Left views look along X and are end views, therefore they do not satisfy AV_J2_LONGITUDINAL. Custom annotation views remain HOLD until their orientation is qualified explicitly."
+    }
+  },
+  "material_projection": {
+    "authority": "AISI 316L / EN 1.4404",
+    "accepted_native_library_names": [
+      "AISI Type 316L stainless steel",
+      "1.4404 (X2CrNiMo17-12-2)",
+      "AISI 316L / EN 1.4404"
+    ],
+    "rule": "Accepted names are representation aliases only; the material authority remains AISI 316L / EN 1.4404."
+  },
+  "release_boundary": "This execution contract can make D3 coherent and deterministic. It does not close L3 perturb/restore, configuration/effectivity, D8, open Product Definition claims, BOM release, or other engineering-domain gates."
+}

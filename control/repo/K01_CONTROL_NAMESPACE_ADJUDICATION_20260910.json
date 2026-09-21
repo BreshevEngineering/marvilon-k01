@@ -1,0 +1,55 @@
+{
+  "schema": "k01.control_namespace_adjudication.v1",
+  "id": "K01-NS-ADJ-20260910-LEGACY-UI-FAMILIES",
+  "date": "2026-09-10",
+  "status": "ACCEPT_EXISTING_AS_DECLARED_MIGRATION_DEBT_NON_AUTHORITY",
+  "trigger": "After V3B root cleanup, live repo_guard discovered two pre-existing version families absent from the handoff-derived namespace baseline.",
+  "source_evidence": [
+    "reports/control/K01_ROOT_CLEANUP_CURRENT.json",
+    "reports/control/K01_CONTROL_NAMESPACE_GUARD_CURRENT.json"
+  ],
+  "families": [
+    {
+      "family": "control/K01_ENGINEERING_CONTROL_CENTER.xlsx",
+      "members": [
+        "control/K01_ENGINEERING_CONTROL_CENTER_v2.xlsx",
+        "control/K01_ENGINEERING_CONTROL_CENTER_v3.xlsx",
+        "control/K01_ENGINEERING_CONTROL_CENTER_v4.xlsx",
+        "control/K01_ENGINEERING_CONTROL_CENTER_v5.xlsx"
+      ],
+      "authority_disposition": "NON_AUTHORITY",
+      "system_role": "LEGACY_UI_WORKBOOK_HISTORY",
+      "action_now": "GRANDFATHER_AS_SHRINK_ONLY_MIGRATION_DEBT",
+      "future_target": "remove/migrate after active Baseline-02C promotion; do not create v6"
+    },
+    {
+      "family": "control/command_center/K01_Command_Center.html",
+      "members": [
+        "control/command_center/K01_Command_Center_v1.html",
+        "control/command_center/K01_Command_Center_v2.html",
+        "control/command_center/K01_Command_Center_v3.html",
+        "control/command_center/K01_Command_Center_v4.html",
+        "control/command_center/K01_Command_Center_v5.html",
+        "control/command_center/K01_Command_Center_v6.html",
+        "control/command_center/K01_Command_Center_v7.html",
+        "control/command_center/K01_Command_Center_v8.html"
+      ],
+      "authority_disposition": "NON_AUTHORITY",
+      "system_role": "LEGACY_COMMAND_CENTER_UI_HISTORY",
+      "action_now": "GRANDFATHER_AS_SHRINK_ONLY_MIGRATION_DEBT",
+      "future_target": "remove/migrate after active Baseline-02C promotion; do not create v9 under control/command_center"
+    }
+  ],
+  "decision": "Do not move/delete these families during the active CAD authority transition because historical servers/manifests still reference them. Freeze exact membership as non-authority debt so it may shrink but cannot grow.",
+  "safety": {
+    "native_CAD_mutated": false,
+    "engineering_authority_changed": false,
+    "new_version_creation_authorized": false
+  },
+  "expected_guard_after_apply": {
+    "status": "PASS_WITH_DECLARED_MIGRATION_DEBT",
+    "declared_version_family_count": 35,
+    "declared_legacy_sibling_debt": 79,
+    "new_violations": 0
+  }
+}

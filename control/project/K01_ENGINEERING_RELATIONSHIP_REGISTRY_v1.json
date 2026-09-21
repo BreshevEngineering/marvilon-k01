@@ -1,0 +1,269 @@
+{
+  "schema": "k01.engineering_relationship_registry.v2_1",
+  "project": "K01",
+  "purpose": "Map engineering entities to authoritative MEDTAS graph seed nodes and expose shared-interface counterpart review. Numerical requirements remain in their domain authorities.",
+  "entities": {
+    "K01-A-001": {
+      "type": "assembly",
+      "graph_seeds_by_domain": {
+        "geometry": [
+          "K01.CAD.SEM.A001"
+        ],
+        "material": [
+          "K01.CAD.SEM.A001",
+          "K01.MAT.GATE04E"
+        ],
+        "metadata": [
+          "K01.PARTS.REGISTRY"
+        ]
+      },
+      "path_patterns": [
+        "*K01-A-001*",
+        "*K01_A001*"
+      ]
+    },
+    "K01-P-003": {
+      "type": "part",
+      "interfaces": [
+        "K01-IF-J2"
+      ],
+      "drawings": [
+        "K01-D-003"
+      ],
+      "assemblies": [
+        "K01-A-001"
+      ],
+      "graph_seeds_by_domain": {
+        "geometry": [
+          "K01.CAD.SEM.A001"
+        ],
+        "interface_geometry": [
+          "K01.CAD.SEM.A001",
+          "K01.PARAM.INTERFACE.J2"
+        ],
+        "material": [
+          "K01.CAD.SEM.A001",
+          "K01.MAT.GATE04E"
+        ],
+        "metadata": [
+          "K01.PARTS.REGISTRY"
+        ]
+      },
+      "path_patterns": [
+        "*K01-P-003*",
+        "control/drawings/spec/K01-D-003*"
+      ]
+    },
+    "K01-P-007": {
+      "type": "part",
+      "interfaces": [
+        "K01-IF-J2"
+      ],
+      "drawings": [
+        "K01-D-006"
+      ],
+      "assemblies": [
+        "K01-A-001"
+      ],
+      "graph_seeds_by_domain": {
+        "geometry": [
+          "K01.CAD.SEM.A001"
+        ],
+        "interface_geometry": [
+          "K01.CAD.SEM.A001",
+          "K01.PARAM.INTERFACE.J2"
+        ],
+        "material": [
+          "K01.CAD.SEM.A001",
+          "K01.MAT.GATE04E"
+        ],
+        "product_definition": [
+          "K01.PD.P007.DECISIONS"
+        ],
+        "pmi": [
+          "K01.MBD.A001"
+        ],
+        "manufacturing_process": [
+          "K01.PD.P007.DECISIONS",
+          "K01.PD.P007.CONTEXT.MANUFACTURING",
+          "K01.MFG.P007.FEASIBILITY",
+          "K01.MBOM.MODEL.A001"
+        ],
+        "metadata": [
+          "K01.PARTS.REGISTRY"
+        ],
+        "requirement_allocation": [
+          "K01.REQ.ALLOCATION"
+        ],
+        "derived_input": [
+          "K01.DERIVED.INPUTS"
+        ],
+        "datum_scheme": [
+          "K01.DATUM.SYSTEMS",
+          "K01.PD.P007.CONTEXT.DATUM"
+        ],
+        "measurement_condition": [
+          "K01.PD.P007.CONTEXT.MEASUREMENT"
+        ],
+        "binding_invariance": [
+          "K01.CAD.BINDING.POLICY",
+          "K01.PD.P007.CONTEXT.BINDING"
+        ],
+        "variation_input": [
+          "K01.PD.P007.DECISIONS",
+          "K01.PD.P007.CONTEXT.DATUM",
+          "K01.PD.P007.CONTEXT.MEASUREMENT"
+        ],
+        "inspection_strategy": [
+          "K01.PD.P007.CONTEXT.INSPECTION"
+        ],
+        "supplier_capability": [
+          "K01.MFG.P007.FEASIBILITY"
+        ],
+        "configuration_effectivity": [
+          "K01.CONFIG.EFFECTIVITY",
+          "K01.PD.P007.CONTEXT.CONFIGURATION"
+        ],
+        "engineering_feedback": [
+          "K01.ENGINEERING.FEEDBACK.REGISTRY"
+        ]
+      },
+      "path_patterns": [
+        "*K01-P-007*",
+        "control/product_definition/K01_P007_*"
+      ]
+    },
+    "K01-IF-J2": {
+      "type": "interface",
+      "participants": [
+        "K01-P-003",
+        "K01-P-007"
+      ],
+      "graph_seeds_by_domain": {
+        "requirement": [
+          "K01.REQ.GATE04E",
+          "K01.PARAM.INTERFACE.J2"
+        ],
+        "interface_requirement": [
+          "K01.PARAM.INTERFACE.J2"
+        ],
+        "interface_geometry": [
+          "K01.PARAM.INTERFACE.J2",
+          "K01.CAD.SEM.A001"
+        ],
+        "material": [
+          "K01.MAT.GATE04E",
+          "K01.PARAM.INTERFACE.J2"
+        ],
+        "manufacturing_process": [
+          "K01.MBOM.MODEL.A001"
+        ],
+        "requirement_allocation": [
+          "K01.REQ.ALLOCATION"
+        ],
+        "derived_input": [
+          "K01.DERIVED.INPUTS"
+        ],
+        "datum_scheme": [
+          "K01.DATUM.SYSTEMS"
+        ],
+        "variation_input": [
+          "K01.PD.P007.VARIATION_SLICE"
+        ],
+        "supplier_capability": [
+          "K01.MFG.P007.FEASIBILITY"
+        ],
+        "configuration_effectivity": [
+          "K01.CONFIG.EFFECTIVITY"
+        ]
+      },
+      "authority_evidence": [
+        "control/parameters/K01_J2_INTERFACE_PARAMETERS_v1_7.json",
+        "control/product_definition/K01_J2_FACTUAL_INTERFACE.json"
+      ],
+      "path_patterns": [
+        "control/parameters/K01_J2_*",
+        "control/product_definition/K01_J2_*",
+        "*K01_J2_*"
+      ]
+    },
+    "K01-D-006": {
+      "type": "drawing",
+      "part": "K01-P-007",
+      "graph_seeds_by_domain": {
+        "drawing_visual": [
+          "K01.DRAWING.D006.PROJECTION",
+          "K01.DRAWING.VERIFY.GATE04E"
+        ],
+        "product_definition": [
+          "K01.PD.P007.DRAWING_SLICE",
+          "K01.DRAWING.D006.PROJECTION"
+        ]
+      },
+      "path_patterns": [
+        "*K01-D-006*",
+        "*K01_D006_*"
+      ]
+    },
+    "K01-ACTUATOR-SUBSYSTEM": {
+      "type": "subsystem",
+      "participants": [
+        "K01-P-015",
+        "K01-B-001"
+      ],
+      "graph_seeds_by_domain": {
+        "requirement": [
+          "K01.REQ.GATE04E"
+        ],
+        "requirement_allocation": [
+          "K01.REQ.ALLOCATION"
+        ],
+        "derived_input": [
+          "K01.DERIVED.INPUTS"
+        ],
+        "physics_input": [
+          "K01.FEMM.MODEL.CURRENT"
+        ]
+      },
+      "path_patterns": [
+        "*ACTUATOR*",
+        "*FEMM*",
+        "*P015*",
+        "*B001*"
+      ]
+    }
+  },
+  "relations": [
+    {
+      "type": "contains",
+      "from": "K01-A-001",
+      "to": "K01-P-003",
+      "evidence": "canonical A001 CAD occurrence tree"
+    },
+    {
+      "type": "contains",
+      "from": "K01-A-001",
+      "to": "K01-P-007",
+      "evidence": "canonical A001 CAD occurrence tree"
+    },
+    {
+      "type": "interface_participant",
+      "from": "K01-P-003",
+      "to": "K01-IF-J2",
+      "evidence": "control/product_definition/K01_J2_FACTUAL_INTERFACE.json::clamp.P003_native_tap_drill_diameter_mm"
+    },
+    {
+      "type": "interface_participant",
+      "from": "K01-P-007",
+      "to": "K01-IF-J2",
+      "evidence": "control/product_definition/K01_J2_FACTUAL_INTERFACE.json::locator/flange/clamp"
+    },
+    {
+      "type": "defines",
+      "from": "K01-P-007",
+      "to": "K01-D-006",
+      "evidence": "control/product_definition/K01_P007_DEFINITION_DECISIONS_CURRENT.json"
+    }
+  ],
+  "scope_note": "Only controlled relationships are listed. Allocation/derived-input/datum/configuration links are explicit objects; do not infer coupling from equal values or filename similarity."
+}

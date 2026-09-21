@@ -1,0 +1,20 @@
+{
+  "schema": "k01.d006.visual_qa.current.v3",
+  "state_epoch": "K01-SE-fccd982b0c077a50",
+  "generated_utc": "2026-09-20T09:27:04.560281+00:00",
+  "source_state_fingerprint": "dc91f0d70e821f11eca71c61da46ca6ddaa13e9627b37017311797961da6e864",
+  "status": "PENDING_VISUAL_QA_CURRENT_WORKSPACE",
+  "source_drawing": "D:\\Marvilon\\K01\\cad\\drawings\\current\\K01-D-006\\K01-D-006.SLDDRW",
+  "source_pdf": "D:\\Marvilon\\K01\\cad\\drawings\\current\\K01-D-006\\K01-D-006.PDF",
+  "source_bmp": null,
+  "automated_prechecks": "NOT_REASSERTED_BY_STATE_REDUCER",
+  "required_visual_checks": [
+    "views readable and non-overlapping",
+    "section exposes thin can and blind end",
+    "native datum/GD&T/surface-finish semantics remain correct",
+    "title/status block is release-quality",
+    "OPEN/CANDIDATE requirements are not shown as released"
+  ],
+  "release_boundary": "ENGINEERING REVIEW CANDIDATE ONLY until drawing release gates close.",
+  "rule": "This CURRENT file is bound to Goal Lock current_artifact; an older PDF path is temporal incoherence."
+}

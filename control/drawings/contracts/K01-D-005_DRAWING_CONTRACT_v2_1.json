@@ -1,0 +1,304 @@
+{
+  "schema": "marvilon.drawing_contract.v2_1",
+  "drawing_id": "K01-D-005",
+  "part_id": "K01-P-006",
+  "part_family": "CYLINDRICAL_THREADED_RETENTION_PLUG",
+  "drawing_family": "CYLINDRICAL_TWO_VIEW_V1",
+  "document": {
+    "sheet": "A3",
+    "units": "mm",
+    "projection": "FIRST_ANGLE",
+    "scale": "8:1",
+    "title": "Retaining Plug",
+    "material": "AISI 316L / EN 1.4404",
+    "general_tolerance": {
+      "state": "OPEN",
+      "standard": null,
+      "class": null,
+      "note": "No controlled general-tolerance standard/class is currently released."
+    },
+    "surface_texture": {
+      "state": "OPEN",
+      "general_ra_um": null,
+      "note": "General/functional roughness requirements are not currently released."
+    },
+    "revision": {
+      "state": "OPEN",
+      "value": null
+    }
+  },
+  "views": [
+    {
+      "id": "LONGITUDINAL_PARENT",
+      "kind": "DEPENDENCY_PARENT",
+      "published": false,
+      "role": "Native section dependency",
+      "orientation": "*Front",
+      "dependency_of": "LONGITUDINAL_SECTION"
+    },
+    {
+      "id": "LONGITUDINAL_SECTION",
+      "kind": "LONGITUDINAL_SECTION",
+      "published": true,
+      "role": "Primary manufacturing view",
+      "orientation": "*Front",
+      "dependency_of": null
+    },
+    {
+      "id": "END_VIEW",
+      "kind": "END_VIEW",
+      "published": true,
+      "role": "Service-hole pattern and diameters",
+      "orientation": "*Right",
+      "dependency_of": null
+    }
+  ],
+  "model_bindings": {
+    "THREAD_AXIS": {
+      "kind": "AXIS",
+      "state": "OPEN",
+      "semantic_id": "P006_THREAD_AXIS",
+      "named_entity": null,
+      "named_feature": null,
+      "geometry_signature": null,
+      "persistent_ref": null,
+      "notes": "Semantic binding/datum designator still open."
+    },
+    "THREAD_REGION": {
+      "kind": "THREAD_SEMANTIC",
+      "state": "CONTROLLED",
+      "semantic_id": "P006_THREAD_REGION",
+      "named_entity": null,
+      "named_feature": null,
+      "geometry_signature": {
+        "nominal_major_diameter_mm": 12.0,
+        "length_mm": 6.0,
+        "model_geometry_diameter_mm": 10.8
+      },
+      "persistent_ref": null,
+      "notes": "Thread class comes from Product Definition, not B-rep."
+    },
+    "HEAD_OD": {
+      "kind": "CYLINDER",
+      "state": "CONTROLLED",
+      "semantic_id": "P006_HEAD_OD",
+      "named_entity": null,
+      "named_feature": null,
+      "geometry_signature": {
+        "diameter_mm": 11.5,
+        "count": 1
+      },
+      "persistent_ref": null,
+      "notes": null
+    },
+    "THROUGH_BORE": {
+      "kind": "CYLINDER",
+      "state": "CONTROLLED",
+      "semantic_id": "P006_THROUGH_BORE",
+      "named_entity": null,
+      "named_feature": null,
+      "geometry_signature": {
+        "diameter_mm": 6.0,
+        "count": 1,
+        "through": true
+      },
+      "persistent_ref": null,
+      "notes": null
+    },
+    "SERVICE_HOLES": {
+      "kind": "CYLINDER_SET",
+      "state": "CONTROLLED",
+      "semantic_id": "P006_SERVICE_HOLES",
+      "named_entity": null,
+      "named_feature": null,
+      "geometry_signature": {
+        "diameter_mm": 1.5,
+        "count": 2,
+        "pcd_mm": 8.5,
+        "angle_deg": 180.0
+      },
+      "persistent_ref": null,
+      "notes": null
+    },
+    "RELIEF_OD": {
+      "kind": "CYLINDER",
+      "state": "CONTROLLED",
+      "semantic_id": "P006_RELIEF_OD",
+      "named_entity": null,
+      "named_feature": null,
+      "geometry_signature": {
+        "diameter_mm": 9.1,
+        "count": 1
+      },
+      "persistent_ref": null,
+      "notes": null
+    },
+    "RELIEF_ENDS": {
+      "kind": "PLANE_PAIR",
+      "state": "CONTROLLED",
+      "semantic_id": "P006_RELIEF_ENDS",
+      "named_entity": null,
+      "named_feature": null,
+      "geometry_signature": {
+        "separation_mm": 0.06
+      },
+      "persistent_ref": null,
+      "notes": null
+    }
+  },
+  "characteristics": [
+    {
+      "id": "P006-C01",
+      "semantic_class": "THREAD_EXTERNAL",
+      "state": "CONTROLLED",
+      "source_authority": "Product Definition / Drawing Intent",
+      "requirement": {
+        "designation": "M12×1",
+        "tolerance_class": "6g",
+        "length_mm": 6.0
+      },
+      "bindings": [
+        "THREAD_REGION"
+      ],
+      "view_id": "LONGITUDINAL_SECTION",
+      "drawing_projection": "REQUIRED",
+      "inspection": null,
+      "notes": null
+    },
+    {
+      "id": "P006-C02",
+      "semantic_class": "DIAMETER_FIT_SHAFT",
+      "state": "CONTROLLED",
+      "source_authority": "Product Definition / Drawing Intent",
+      "requirement": {
+        "diameter_mm": 11.5,
+        "fit": "h9"
+      },
+      "bindings": [
+        "HEAD_OD"
+      ],
+      "view_id": "END_VIEW",
+      "drawing_projection": "REQUIRED",
+      "inspection": null,
+      "notes": null
+    },
+    {
+      "id": "P006-C03",
+      "semantic_class": "DIAMETER_THROUGH",
+      "state": "CONTROLLED",
+      "source_authority": "Product Definition / Drawing Intent",
+      "requirement": {
+        "diameter_mm": 6.0,
+        "through": true
+      },
+      "bindings": [
+        "THROUGH_BORE"
+      ],
+      "view_id": "LONGITUDINAL_SECTION",
+      "drawing_projection": "REQUIRED",
+      "inspection": null,
+      "notes": null
+    },
+    {
+      "id": "P006-C04",
+      "semantic_class": "BLIND_HOLE_PATTERN",
+      "state": "CONTROLLED",
+      "source_authority": "Product Definition / Drawing Intent",
+      "requirement": {
+        "count": 2,
+        "diameter_mm": 1.5,
+        "upper_tol_mm": 0.05,
+        "lower_tol_mm": 0.0,
+        "blind": true,
+        "depth_mm": 1.2,
+        "depth_sym_tol_mm": 0.05,
+        "pcd_mm": 8.5,
+        "pcd_basic": true,
+        "angle_deg": 180.0,
+        "angle_basic": true
+      },
+      "bindings": [
+        "SERVICE_HOLES"
+      ],
+      "view_id": "END_VIEW",
+      "drawing_projection": "REQUIRED",
+      "inspection": null,
+      "notes": null
+    },
+    {
+      "id": "P006-C05",
+      "semantic_class": "GTOL_POSITION",
+      "state": "CONTROLLED_WITH_OPEN_SUBREQUIREMENT",
+      "source_authority": "Product Definition / Drawing Intent",
+      "requirement": {
+        "diameter_zone": true,
+        "tolerance_mm": 0.1,
+        "reference_axis": "THREAD_AXIS",
+        "datum_designator": null
+      },
+      "bindings": [
+        "SERVICE_HOLES",
+        "THREAD_AXIS"
+      ],
+      "view_id": "END_VIEW",
+      "drawing_projection": "PROHIBITED_UNTIL_RELEASED",
+      "inspection": null,
+      "notes": "Numeric value is controlled; datum designator / semantic axis release remains open."
+    },
+    {
+      "id": "P006-C06",
+      "semantic_class": "FUNCTIONAL_RELIEF",
+      "state": "CONTROLLED",
+      "source_authority": "Product Definition / Drawing Intent",
+      "requirement": {
+        "diameter_mm": 9.1,
+        "width_mm": 0.06,
+        "resulting_axial_float_mm": [
+          0.04,
+          0.08
+        ]
+      },
+      "bindings": [
+        "RELIEF_OD",
+        "RELIEF_ENDS"
+      ],
+      "view_id": "LONGITUDINAL_SECTION",
+      "drawing_projection": "REQUIRED",
+      "inspection": null,
+      "notes": null
+    },
+    {
+      "id": "MAT",
+      "semantic_class": "MATERIAL",
+      "state": "CONTROLLED",
+      "source_authority": "Product Definition",
+      "requirement": {
+        "material": "AISI 316L / EN 1.4404"
+      },
+      "bindings": [],
+      "view_id": "TITLE_BLOCK",
+      "drawing_projection": "REQUIRED",
+      "inspection": null,
+      "notes": null
+    }
+  ],
+  "release": {
+    "review_build_allowed": true,
+    "manufacturing_build_allowed": false,
+    "blockers": [
+      "general tolerance standard/class",
+      "surface texture requirements",
+      "position-tolerance datum designator / thread-axis semantic binding",
+      "release revision"
+    ]
+  },
+  "model": {
+    "canonical_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-006_Retaining_Plug.SLDPRT",
+    "source_invariance_required": true
+  },
+  "execution_policy": {
+    "result_first": true,
+    "generate_review_on_release_hold": true,
+    "return_success_if_artifact_generated": true
+  }
+}

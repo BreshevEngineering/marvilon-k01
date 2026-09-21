@@ -1,0 +1,77 @@
+{
+  "schema": "k01.d006.exemplar_policy.current.v2",
+  "drawing": "K01-D-006",
+  "part": "K01-P-007",
+  "purpose": "HISTORICAL SW2018 EXEMPLAR EVIDENCE ONLY. It proved selected PMI transport behavior; it is not a full manufacturing-drawing content authority.",
+  "lane": "HISTORICAL_EXEMPLAR_NOT_RELEASE_AUTHORITY",
+  "source_rule": "Reuse the current V10 linked drawing base and a dedicated copied P007 authoring model. Never mutate proven evidence sources or canonical CAD.",
+  "manufacturing_route_rule": {
+    "selection": "OPEN_FOR_RELEASE",
+    "exemplar_context": "CURRENT_SINGLE_BODY_CAD / MONOLITHIC_CANDIDATE_CONTEXT_ONLY",
+    "effect": "Route OPEN blocks route/process-dependent release claims, but does not block D2 authoring of route-independent controlled claims C01.DATUM_A, C02.DIAMETER_FIT and C09.MATERIAL."
+  },
+  "d2_authoring_scope": {
+    "allowed_claims_from_d1": "d2_authorizable_claim_ids",
+    "expected_now": [
+      "C01.DATUM_A",
+      "C02.DIAMETER_FIT",
+      "C09.MATERIAL"
+    ],
+    "model_semantics": {
+      "C01.DATUM_A": "Native datum A on the controlled J2 mating face; target annotation-view role AV_J2_LONGITUDINAL.",
+      "C02.DIAMETER_FIT": "Native DimXpert diameter Ø14.10 H7, no shaft fit; target annotation-view role AV_J2_LONGITUDINAL.",
+      "C09.MATERIAL": "AISI 316L / EN 1.4404 native material/property and title-block projection."
+    },
+    "support_only_not_release": [
+      "C05 Diameter4 may remain Ø33.00 with tolerance NONE for design-review support; it is not D7 release-native coverage until its release variation semantics are controlled."
+    ]
+  },
+  "manual_drawing_sequence": [
+    "Open the prepared linked exemplar SLDDRW; do not create a new drawing.",
+    "Use an axial full section as the PRIMARY longitudinal representation for P007. The external longitudinal view is redundant for the current hollow/stepped geometry and may be hidden.",
+    "Use the flange end view as SECONDARY for the 3-hole pattern, flange/locator semantics and end-view readability.",
+    "Use one isometric view only as an AUXILIARY form-comprehension view; it carries no release dimension authority.",
+    "For relevant drawing views use SOLIDWORKS native Import annotations ON + DimXpert annotations ON + Design annotations OFF.",
+    "Historical action superseded: preserve valid C05 Ø33. Full release drawing content is coverage-based from current Product Definition.",
+    "D6 is layout only: move views/annotations/leaders, set permitted scales, resolve overlaps; edit no engineering value/tolerance.",
+    "Save the same SLDDRW and export/update PDF for D3/D7/D8 evidence."
+  ],
+  "prohibited": [
+    "manual retyping of H7 or any released tolerance into the drawing",
+    "inventing numeric C03/C04/C05/C06/C07/C08/C10/C11/C12 release values",
+    "using Design annotations bulk import",
+    "AutoDimensionScheme",
+    "editing the proven Step13 PMI candidate or canonical P007",
+    "calling this exemplar a released manufacturing drawing"
+  ],
+  "exemplar_acceptance": {
+    "minimum": [
+      "prepared drawing remains linked to the dedicated P007 exemplar model",
+      "C02 native model PMI reads as Ø14.10 H7 after save/reopen",
+      "C02 native DimXpert annotation is present in the drawing after manual import",
+      "C09 material remains AISI 316L / EN 1.4404",
+      "V10 fallback semantic base remains traceable to the current drawing slice fingerprint",
+      "manual layout does not introduce a new tolerance/GD&T value",
+      "PDF is visually reviewed"
+    ],
+    "release_boundary": "Exemplar acceptance is not P6 release. Full D3/D4/D5/D7/D8/D9 release-native chain remains required."
+  },
+  "release_eligible": false,
+  "expected_d2_authorizable_claims": [
+    "C01.DATUM_A",
+    "C02.DIAMETER_FIT",
+    "C09.MATERIAL"
+  ],
+  "family_profile": "control/drawings/K01_P007_DRAWING_FAMILY_BINDING_CURRENT.json",
+  "authoring_order": [
+    "DATUM_DRF",
+    "SIZE_FIT",
+    "LOCATION_PATTERN",
+    "GDT",
+    "SURFACE",
+    "MATERIAL_PROCESS_PROPERTY"
+  ],
+  "active_manufacturing_authority": false,
+  "information_regression_rule": "Never delete/hide a valid Product Definition characteristic merely to satisfy this historical exemplar scope.",
+  "superseded_for_release_by": "P007 Product Definition Closure -> full K01-D-006 coverage-based authoring workflow"
+}

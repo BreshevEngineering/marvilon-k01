@@ -1,0 +1,30 @@
+{
+  "schema": "k01.d004.nominal_delta.v1",
+  "drawing_id": "K01-D-004",
+  "part_id": "K01-P-004",
+  "status": "ENGINEERING_REVIEW_UPDATE_REQUIRED__NOT_FOR_MANUFACTURE",
+  "source_decision": "EDR-047",
+  "change": [
+    {
+      "characteristic": "P004 OAL",
+      "from": "8.00",
+      "to": "7.99",
+      "tolerance": "OPEN",
+      "surface_texture": "OPEN"
+    }
+  ],
+  "preserve": [
+    "Ø6.54 nominal OD",
+    "Ø5.055 THRU nominal guide bore",
+    "TECAPEEK PVX material review state",
+    "SLIP FIT / no full-length interference note",
+    "P014 axial retention / no adhesive / no axial preload note",
+    "ENGINEERING REVIEW - NOT FOR MANUFACTURE"
+  ],
+  "do_not_author": [
+    "±0.015 on OAL",
+    "±0.015 on OD",
+    "Ra 1.6",
+    "any production tolerance not released by Product Definition"
+  ]
+}

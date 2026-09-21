@@ -1,0 +1,44 @@
+{
+  "schema": "k01.operator_control_contract.current.v1",
+  "title": "K01 Operator Control Contract",
+  "status": "RC1",
+  "user_side_rule": "The user controls intent, acceptance and promotion. The system controls coverage, traceability, coherence, freshness and bookkeeping.",
+  "session_start": [
+    "Confirm the current Goal Lock shown by the system, or explicitly replace it.",
+    "Confirm the single ACTIVE engineering workpack, or explicitly park/replace it.",
+    "Review only typed blockers that affect the active workpack; do not manually audit all 17 domains.",
+    "If the system reports a CONTROL/CONFIGURATION/PROJECTION hold that does not block_active_workpack, continue engineering and park the control debt.",
+    "Before any mutation, confirm the action class: ENGINEERING_MUTATION / CONTROL_MUTATION / READ_ONLY / PROMOTION."
+  ],
+  "during_work": [
+    "Do not open a second executable engineering workpack.",
+    "If new work appears, classify it WAITING_EXTERNAL / WAITING_DEPENDENCY / LATER / DEBT unless it replaces the active workpack by explicit decision.",
+    "Do not accept a PASS without scope (local/workpack/domain/product/release).",
+    "Do not promote generated reports to authority.",
+    "For a decision that uses a book/standard/manual, require source applicability and exact reference to be recorded."
+  ],
+  "close_workpack": [
+    "Evidence exists and is bound to the exact input configuration.",
+    "Expected decision was reached or an explicit redesign/reopen trigger was created.",
+    "Affected downstream domains are refreshed or marked stale.",
+    "Parked/resume-trigger state is updated.",
+    "System recomputes the global project state and proposes the next executable workpack."
+  ],
+  "explicit_operator_commands": {
+    "goal": "GOAL LOCK = <deliverable>",
+    "activate": "AUTHORIZE ACTIVE WORKPACK = <id/name>",
+    "park": "PARK <id> | reason=<...> | resume=<...>",
+    "resume": "RESUME <id> | evidence=<...>",
+    "mutation": "AUTHORIZE MUTATION = <scope>",
+    "waiver": "ACCEPT WAIVER <id> | limitation=<...>",
+    "promotion": "PROMOTE <artifact/state> | evidence=<...>",
+    "reject": "REJECT <proposal> | reason=<...>"
+  },
+  "user_does_not_need_to_do": [
+    "Manually remember all engineering domains",
+    "Manually reconcile duplicate source files",
+    "Manually inspect Git dirt unless the system reports a real configuration conflict",
+    "Manually track books/standards applicability outside the source registry",
+    "Treat every control-system defect as an engineering stop"
+  ]
+}

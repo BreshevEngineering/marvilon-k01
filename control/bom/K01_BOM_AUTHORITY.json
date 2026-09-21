@@ -13,14 +13,14 @@
     "parts_registry_shape": "items",
     "current_artifact_matches": [
       {
-        "path": "reports/bom/current/K01_EBOM_A001_CURRENT.json",
+        "path": "evidence/immutable/de9fe91427e021bca88d810f80e737e8153ad9327b15c07db0b14bc364c6a3c1__K01_EBOM_A001_CURRENT.json",
         "schema": "k01.ebom.v2_5",
         "modeled": 13,
         "rows": 15,
         "status": "HOLD"
       },
       {
-        "path": "reports/medtas/bom/current/K01_EBOM_MODEL_A001_v1_9.json",
+        "path": "evidence/immutable/de9fe91427e021bca88d810f80e737e8153ad9327b15c07db0b14bc364c6a3c1__K01_EBOM_MODEL_A001_v1_9.json",
         "schema": "k01.ebom_model.a001.v1_9",
         "modeled": 13,
         "rows": 15,

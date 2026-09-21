@@ -1,0 +1,130 @@
+{
+  "schema": "k01.d003.controlled_refinement.scope.v1",
+  "status": "READY_TO_RUN__NEW_MUTATION_OPERATION_NOT_YET_PROVEN",
+  "source_drawing": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-003\\drawing_system_v1_20260917_110205\\d8_api_pass1_v2_20260917_113022\\d8_layout_refine_v1_20260917_122102\\K01-D-003.SLDDRW",
+  "source_model": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT",
+  "mode": "CANDIDATE_COPY_ONLY",
+  "preflight": [
+    "exact source drawing is not open; unrelated SolidWorks documents are allowed",
+    "source drawing exists",
+    "P003 exists",
+    "SW2018 revision 26 runtime bind probe passes",
+    "complete annotation inventory created",
+    "all semantic mutation targets resolved uniquely before first mutation"
+  ],
+  "mutations": [
+    {
+      "id": "D003-N01",
+      "target": "K01DS_D003-C03-SIZE",
+      "action": "set native asymmetric tolerance +0.01/0",
+      "authority": "existing D003 semantic evidence / Product Definition",
+      "guard": "reference/drawing dimension only"
+    },
+    {
+      "id": "D003-N02",
+      "targets": [
+        {
+          "nominal_mm": 39.5,
+          "tol_min_mm": -0.2,
+          "tol_max_mm": 0.2
+        },
+        {
+          "nominal_mm": 3.0,
+          "tol_min_mm": -0.5,
+          "tol_max_mm": 0.5
+        },
+        {
+          "nominal_mm": 5.0,
+          "tol_min_mm": -0.5,
+          "tol_max_mm": 0.5
+        },
+        {
+          "nominal_mm": 27.0,
+          "tol_min_mm": -0.1,
+          "tol_max_mm": 0.1
+        },
+        {
+          "nominal_mm": 2.0,
+          "tol_min_mm": -0.05,
+          "tol_max_mm": 0.05
+        },
+        {
+          "nominal_mm": 6.6,
+          "tol_min_mm": -0.3,
+          "tol_max_mm": 0.3
+        }
+      ],
+      "action": "remove unsupported explicit tolerance; preserve nominal",
+      "guard": "each signature unique + reference/drawing dimension only"
+    },
+    {
+      "id": "D003-N03",
+      "target": {
+        "nominal_mm": 12.0,
+        "tol_min_mm": -0.2,
+        "tol_max_mm": 0.2
+      },
+      "action": "hide duplicate section dimension",
+      "preserve": "named J2 Ø12 H9",
+      "guard": "unique signature"
+    },
+    {
+      "id": "D003-N04",
+      "target": "K01DS_D003-J1-OPEN-REF",
+      "action": "reuse existing note object as J1 clamp callout and show it",
+      "text": "J1 CLAMP: 3× Ø4.50 THRU\r\nPCD Ø24; 120° EQ SP",
+      "position_m": [
+        0.19,
+        0.205,
+        0.0
+      ],
+      "authority": "proven D8 V2 semantic recovery"
+    },
+    {
+      "id": "D003-N05",
+      "action": "normalize selected visible linear-size display precision to two decimals",
+      "nominals_mm": [
+        39.5,
+        3,
+        5,
+        27,
+        2,
+        6.6,
+        5.6,
+        7.9,
+        8.6,
+        9.03,
+        0.95,
+        8,
+        12,
+        6
+      ],
+      "semantic_effect": "NONE_PRESENTATION_ONLY",
+      "execution_state": "DEFERRED_UNTIL_SEMANTIC_TARGETS_ARE_UNIQUELY_PROVEN",
+      "proof_v1": "NOT_REQUIRED_FOR_R01_R09_REFINE_PROOF"
+    }
+  ],
+  "verify": [
+    "source D003 SHA invariant",
+    "source P003 SHA invariant",
+    "candidate drawing saved",
+    "datum-C size tolerance reads 0/+0.01",
+    "unsupported tolerance signatures no longer visible",
+    "duplicate Ø12 ±0.2 hidden",
+    "J1 clamp callout visible",
+    "named J2 Ø12 H9 preserved",
+    "M12×1-6H still visible or explicitly reported if the API cannot semantically extract its text",
+    "no view creation/deletion",
+    "Section B-B preserved"
+  ],
+  "non_actions": [
+    "no 3D mutation",
+    "no Section B-B recreation",
+    "no nominal rounding",
+    "no general tolerance assignment",
+    "no thread depth inference",
+    "no Ra assignment",
+    "no new position/CZ tolerance"
+  ],
+  "proof_v1_scope": "R01-R09 executable refine job only; D003-N05 presentation precision normalization is deferred and requires unique proven semantic targets."
+}

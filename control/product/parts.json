@@ -312,6 +312,30 @@
       "standard_or_specification": null,
       "supplier": null,
       "unit": "ea"
+    },
+    "K01-P-017": {
+      "cad_identity_key": "K01-P-017",
+      "cad_property_projection": {
+        "Description": "Datum C Relieved Locator",
+        "MakeBuy": "MAKE",
+        "MaterialAuthority": "AISI 316L / EN 1.4404 baseline; native material-card assignment OPEN",
+        "MaterialStatus": "BASELINE_NATIVE_ASSIGNMENT_OPEN",
+        "PartNo": "K01-P-017",
+        "Revision": ""
+      },
+      "description": "Datum C Relieved Locator",
+      "item_type": "MANUFACTURED",
+      "make_buy": "MAKE",
+      "manufacturer_part_number": null,
+      "material_authority": "AISI 316L / EN 1.4404 baseline; native material-card assignment OPEN",
+      "material_status": "BASELINE_NATIVE_ASSIGNMENT_OPEN",
+      "part_number": "K01-P-017",
+      "release_state": "HOLD",
+      "revision": null,
+      "revision_status": "OPEN_RELEASE_REVISION",
+      "standard_or_specification": null,
+      "supplier": null,
+      "unit": "ea"
     }
   },
   "non_modeled_inclusions": [
@@ -353,19 +377,18 @@
       "unit": "ea"
     },
     {
-      "bom_views": [
-        "MBOM"
-      ],
-      "description": "P007 containment weld process / filler definition",
+      "bom_views": [],
+      "description": "Legacy P007/P003 containment weld process — superseded for active C2R1",
       "item_type": "PROCESS_AUXILIARY",
-      "note": "May be autogenous or use filler; process/filler is intentionally not assumed until welding route is released.",
+      "note": "SUPERSEDED by EDR-025. Active C2R1 uses monolithic P007 with integral blind end and a removable O-ring-sealed P003↔P007 joint. Preserve as history only; do not emit to active EBOM/MBOM.",
       "parent": "K01-P-007",
       "part_number": null,
       "quantity": null,
       "registry_key": "NM-P007-WELD-PROCESS",
-      "release_blocker": true,
-      "status": "OPEN_PROCESS",
-      "unit": "process"
+      "release_blocker": false,
+      "status": "SUPERSEDED_NOT_APPLICABLE",
+      "unit": "process",
+      "superseded_by": "EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE"
     },
     {
       "bom_views": [
@@ -403,7 +426,7 @@
   ],
   "project": "K01",
   "schema": "k01.parts_registry.v1_9",
-  "source_note": "Seeded from the current reconciled K01 BOM state supplied 2026-09-07. OPEN fields remain OPEN.",
+  "source_note": "Seeded from the current reconciled K01 BOM state supplied 2026-09-07. OPEN fields remain OPEN. K01-P-017 added from EDR-023 / Baseline-02C Assembly-QA PASS; native material-card assignment remains OPEN.",
   "suppression_policy": {
     "dispositions": {},
     "rule": "Any suppressed CAD occurrence requires an explicit disposition before BOM verification can PASS. Silent disappearance is prohibited."

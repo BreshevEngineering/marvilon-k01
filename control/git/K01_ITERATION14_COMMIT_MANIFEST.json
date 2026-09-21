@@ -1,0 +1,24 @@
+{
+  "schema": "k01.iteration14.git_manifest.v1",
+  "generated_utc": "2026-09-08T14:09:48.393192+00:00",
+  "status": "READY_FOR_REVIEW",
+  "stage_paths": [
+    "control/requirements/K01_RELEASE_REQUIREMENTS_CURRENT.json",
+    "control/requirements/K01_FIXED_COIL_ACTUATOR_REQUIREMENTS.json",
+    "control/product_definition/K01_J2_FACTUAL_INTERFACE.json",
+    "control/product/K01_J2_NONMODELED_ITEMS.json",
+    "control/process/K01_J2_PROCESS_DEFINITION.json",
+    "control/bom/K01_BOM_BLOCKER_OWNER_MAP.json",
+    "control/drawings/K01_D006_RELEASE_DEFINITION.json",
+    "control/drawings/K01_DRAWING_PROGRAM_STATUS.json",
+    "control/project/K01_PROJECT_CLOSURE_MATRIX.json",
+    "control/center/K01_CENTER_INPUT_CURRENT.json"
+  ],
+  "do_not_stage": [
+    "reports/**",
+    "**/build/**",
+    "*.exe",
+    "*.dll"
+  ],
+  "recommended_commit_message": "engineering: reconcile release requirements and prepare K01-D-006 drawing definition"
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "k01.control_system.rc1.v1",
+  "title": "K01 CONTROL SYSTEM RC1",
+  "date": "2026-09-19",
+  "status": "RC1_CANDIDATE",
+  "purpose": "Provide one coherent project-control layer over the existing K01 authorities without creating a parallel engineering taxonomy or replacing existing engineering authorities.",
+  "principle": "SEE EVERYTHING -> DO ONE THING -> CLOSE IT -> REPLAN EVERYTHING -> DO THE NEXT ONE",
+  "authority_rule": "Generated reports, Center, dashboards, handoff bundles and Git status are projections/evidence. They are never engineering authority by themselves.",
+  "planes": {
+    "project_coverage_plane": "All mandatory engineering domains remain visible until CLOSED/RELEASED/explicit NOT_APPLICABLE.",
+    "execution_plane": "Exactly one active executable engineering workpack. WAITING_EXTERNAL / WAITING_DEPENDENCY / LATER / DEBT do not consume engineering WIP."
+  },
+  "canonical_existing_sources": [
+    "reports/control/K01_START_HERE.md",
+    "reports/control/K01_ENGINEERING_CONTROL_PANEL_CURRENT.md",
+    "control/project/K01_CHECKPOINT_CURRENT.json",
+    "control/project/K01_AUTHORITY_MAP_CURRENT.json",
+    "control/project/K01_P0_P6_GATE_MATRIX_CURRENT.json",
+    "control/project/K01_HANDOFF_REQUIRED_SOURCES_CURRENT.json",
+    "control/project/K01_NEXT_ACTIONS_CURRENT.json",
+    "control/state/K01_COMPLETION_FRONTIER_CURRENT.json",
+    "control/state/K01_STATE_EPOCH_CURRENT.json",
+    "control/system/K01_ENGINEERING_DOMAIN_REGISTRY_CURRENT.json",
+    "control/evidence/K01_SOURCE_REGISTRY_v2.json"
+  ],
+  "hold_types": [
+    "ENGINEERING_HOLD",
+    "CONTROL_SYSTEM_HOLD",
+    "CONFIGURATION_HOLD",
+    "EXTERNAL_DEPENDENCY",
+    "PROJECTION_HOLD",
+    "RELEASE_HOLD"
+  ],
+  "hold_contract": {
+    "required_fields": [
+      "type",
+      "id",
+      "subject",
+      "reason",
+      "blocks_active_workpack",
+      "blocks_lifecycle_exit",
+      "blocks_release",
+      "authority_or_evidence",
+      "resume_trigger"
+    ],
+    "rule": "A HOLD may stop the active engineering workpack only when blocks_active_workpack=true. CONTROL_SYSTEM_HOLD, CONFIGURATION_HOLD and PROJECTION_HOLD are not automatically ENGINEERING_HOLD."
+  },
+  "control_levels": {
+    "FAST_CONTROL": {
+      "when": "At session start, before selecting/continuing an engineering workpack, and after a workpack closes.",
+      "behavior": "Read-only. No project mutations. No Git staging/cleanup. Produces a current control projection."
+    },
+    "DEEP_ASSURANCE": {
+      "when": "Only after control-system code changes, authority promotion, baseline/release promotion, or explicit user request.",
+      "behavior": "May run regression/idempotence/configuration checks. Must not displace engineering work indefinitely."
+    }
+  },
+  "operator_authorities": [
+    "Approve/change Goal Lock",
+    "Approve/change the single active engineering workpack",
+    "Approve explicit engineering mutation when required",
+    "Accept/reject a waiver or limitation",
+    "Accept/reject promotion to a higher authority/maturity/release state",
+    "Provide/confirm external evidence and resume triggers"
+  ],
+  "system_responsibilities": [
+    "Maintain coverage of the full engineering domain registry",
+    "Detect duplicate decision identity and conflicting controlled values",
+    "Maintain dependency/freshness and typed HOLDs",
+    "Keep parked work and resume triggers visible",
+    "Keep books/standards/source applicability visible",
+    "Distinguish engineering/control/configuration/projection/release states",
+    "Build verified handoff outputs",
+    "Show Git/GitHub state without making unrelated dirt an engineering blocker",
+    "Ensure generated projections do not become authority"
+  ],
+  "prohibited_patterns": [
+    "Create a parallel engineering-domain taxonomy",
+    "Treat a generated report or Center as engineering authority",
+    "Treat all HOLDs as blockers of the active workpack",
+    "Treat a local PASS as product/release PASS",
+    "Use git add . or git clean as a normal control workflow",
+    "Start a new engineering workpack before the previous executable workpack is closed/parked",
+    "Let a control-system debugging loop displace the product indefinitely"
+  ]
+}

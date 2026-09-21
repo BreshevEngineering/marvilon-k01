@@ -1,5 +1,5 @@
 {
-  "schema": "k01.root_migration_allowlist.v1",
+  "schema": "k01.root_migration_allowlist.v2",
   "generated_utc": "2026-09-08T07:34:32.020496+00:00",
   "mode": "MIGRATION_SHRINK_ONLY",
   "snapshot_tag": "snapshot-2026-09-08",
@@ -73,7 +73,6 @@
     "31D_VERIFY_FINAL_ASSEMBLY_SEMANTICS.cmd",
     "31_BUILD_RELEASE_PROGRAM.cmd",
     "31_COMPILE_FINAL_ASSEMBLY_PROMOTION.cmd",
-    "36_BUILD_TECHNICAL_FILTER_MAP.cmd",
     "39_BUILD_FINAL_BOM_V2_2.cmd",
     "40_BUILD_R01_RELEASE_CANDIDATE.cmd",
     "Downloads",
@@ -102,6 +101,7 @@
     "14_AUDIT_PROJECT_STRUCTURE.cmd",
     "22_BUILD_AI_HANDOFF.cmd",
     "35_GIT_AUDIT.cmd",
+    "36_BUILD_TECHNICAL_FILTER_MAP.cmd",
     "37_AUDIT_PROJECT_STRUCTURE.cmd",
     "38_BUILD_CALCULATION_EVIDENCE_INDEX.cmd",
     "START_K01_CENTER.cmd"
@@ -112,5 +112,25 @@
     "grandfathered_legacy_delete": "ALLOW",
     "retired_reintroduce": "BLOCK"
   },
-  "last_migration_step": "6E"
+  "last_migration_step": "P0-CONTROL-HARDENING-V3A",
+  "post_snapshot_frozen_root_sha256": {
+    "RUN_K01_D001_CAPTURE_PLACEMENT_V1.cmd": "2b103ef23579bda771b0c2d9a85bf5ac7cebcd1c2a3fbb084828f468db558760",
+    "RUN_K01_D001_DRAWING_SYSTEM_V1.cmd": "1d0147bfc676a3ace9316e0b812aa08cb9c137593ae377aad5b31b84f3b5f06b",
+    "RUN_K01_D001_PREPARE_MANUAL_FINISH_V1.cmd": "589170f1e548c5e786e7667cb8861e5101b1b28bf7a2398a021ecde48a638259",
+    "RUN_K01_D003_CAPTURE_PLACEMENT_V1.cmd": "7c699bff08b63e80b7aafa17e4f45dd1eb18142598594988396c3d13b8e56d4f",
+    "RUN_K01_D003_DRAWING_SYSTEM_V1.cmd": "c6ec717c54eed0149d2d89cc8eb18e6e800db215d6b4e9af6a8d92c890770e11",
+    "RUN_K01_D003_PREPARE_MANUAL_FINISH_V1.cmd": "0df8ed00d47075141a29c01b6d5fc03a2bbdd9d1f7f487d2d9ad02253ef2513c",
+    "RUN_K01_D003_PRESENTATION_AUDIT_V1.cmd": "ce1e9733237315779565698f69863e80b15eebd9dbfebc606efb7627af998c9a",
+    "RUN_K01_D006_DRAWING_SYSTEM_V1.cmd": "5a8f483d40fb74786e6f752eefa28a96f4416081824881df61a3034c88a45929",
+    "RUN_K01_D006_PRESENTATION_AUDIT_V1.cmd": "167481ecf1106a860ef3c465cc0be8383e134f4432f6cd649a9bfec764680094",
+    "RUN_K01_D006_REGISTER_EXEMPLAR_V1.cmd": "22c806d001ef4114551011a09931754b30ee99c9cca49eaa14dea468f4fe2e0b",
+    "RUN_K01_DRAWING_CANDIDATES_AUDIT_V1.cmd": "9f05daa2b44a4073929bd85c6144c17b57fead48a6ee6e76bb917ef51b1126e2",
+    "RUN_K01_DRAWING_CONTROL_REFRESH_V1.cmd": "74f8892ac1f14cd17820d669dcf7402c1c74d1822817b4da42b2975299dc2f9c",
+    "RUN_K01_DRAWING_SYSTEM_STATUS_V1.cmd": "ee5e4d946be1c273d8eafd2df6066826d366c3ecf2f204c1239805b154be69b5"
+  },
+  "post_snapshot_frozen_basis": {
+    "checkpoint": "826cf15f0dff8a1013b35652b8ff2c3a26935ece",
+    "tag": "k01-drawing-system-v1-recovery-20260916",
+    "rule": "Exact-hash freeze of validated Drawing System v1 compatibility entrypoints; no new root launchers permitted."
+  }
 }

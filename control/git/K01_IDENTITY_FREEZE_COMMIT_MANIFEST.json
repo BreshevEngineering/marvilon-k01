@@ -1,0 +1,20 @@
+{
+  "schema": "k01.identity_freeze.commit_manifest.v1",
+  "generated_utc": "2026-09-09T08:45:41.528392+00:00",
+  "status": "READY_FOR_REVIEW",
+  "stage_paths": [
+    "control/identity/K01_IDENTITY_FREEZE_CURRENT.json",
+    "control/assembly/K01_ASSEMBLY_APPROVAL_CHECKLIST_CURRENT.json",
+    "control/equations/K01_SHARED_EQUATIONS_PLAN.json",
+    "evidence/K01_ARTIFACT_LEDGER.json",
+    "reports/cad/identity_freeze/K01_IDENTITY_FREEZE_VERIFY_CURRENT.json",
+    "reports/cad/current/K01_A001_SEMANTIC_RAW_API_v2_0_IDENTITY_FREEZE.json"
+  ],
+  "do_not_stage": [
+    "reports/cad/current/*.log",
+    "cad_api/medtas/bin/*",
+    "migration_checkpoints/*"
+  ],
+  "recommended_commit_message": "cad: freeze canonical K01 identities and verify A001 references",
+  "identity_adjudication": "reports/cad/identity_freeze/K01_IDENTITY_FREEZE_ADJUDICATION_CURRENT.json"
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "k01.magnet_selection_conflicts.v1",
+  "generated_utc": "2026-09-08T09:15:56.381526+00:00",
+  "status": "HOLD_MAGNET_SELECTION",
+  "B001": {
+    "product_record_status": "OPEN LOT DATA",
+    "product_material_authority": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN",
+    "project_control_reference_envelope": "Ø8x10 axial envelope",
+    "current_cad_reference_indication": "not detected by current record",
+    "conflict": "Project-control reference envelope is Ø8x10 while current CAD/reference evidence indicates D8x8. Do not select final supplier grade or run release FEMM until the actual B001 geometry is frozen.",
+    "resolution_required": [
+      "confirm actual intended B001 dimensions",
+      "select actual supplier and grade",
+      "capture Br(T), magnetic tolerance, max operating temperature / temperature coefficient",
+      "update product registry and CAD/reference model consistently"
+    ]
+  },
+  "B002": {
+    "project_control_reference_envelope": "OD25 ID11.5 L10 axial",
+    "material": "NdFeB high-temperature grade candidate",
+    "supplier": "OPEN",
+    "grade": "OPEN",
+    "Br_T": "OPEN",
+    "temperature_data": "OPEN",
+    "registry_status": "exact record present after this step"
+  }
+}

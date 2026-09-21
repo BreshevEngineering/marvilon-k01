@@ -2,7 +2,7 @@
   "schema": "k01.drawing_system.current.v1",
   "project": "K01",
   "system": "MARVILON_DRAWING_SYSTEM_V1",
-  "status": "GENERIC_SEMANTIC_CORE_VALIDATED__MANUAL_VISUAL_FINISH_DEFAULT",
+  "status": "GENERIC_SEMANTIC_CORE_VALIDATED__PRESENTATION_GATE_REQUIRED",
   "updated": "2026-09-16",
   "repo_root": "D:\\BreshevEngineering\\marvilon-k01",
   "cad_root": "D:\\Marvilon\\K01\\cad",
@@ -11,6 +11,7 @@
     "control/drawings/K01_DRAWING_SYSTEM_CURRENT.json",
     "control/drawings/K01_DRAWING_REGISTRY_CURRENT.json",
     "reports/control/K01_DRAWING_CONTROL_CURRENT.json",
+    "control/drawings/K01_DRAWING_GOLDEN_RECIPE_CURRENT.json",
     "docs/architecture/MARVILON_DRAWING_CONTROL_PLANE_V1.md",
     "docs/architecture/MARVILON_DRAWING_SYSTEM_V1.md",
     "docs/architecture/K01_DRAWING_AUTHORING_ALGORITHM_ISO_GPS_v1.md",
@@ -29,7 +30,10 @@
     "presentation_policy": "control/drawings/presentation/K01_DRAWING_PRESENTATION_POLICY_V1.json",
     "drawing_control": "tools/medtas/drawing_control_v1.py",
     "drawing_registry": "control/drawings/K01_DRAWING_REGISTRY_CURRENT.json",
-    "retention_policy": "control/drawings/K01_DRAWING_CANDIDATE_RETENTION_POLICY_CURRENT.json"
+    "retention_policy": "control/drawings/K01_DRAWING_CANDIDATE_RETENTION_POLICY_CURRENT.json",
+    "golden_recipe": "control/drawings/K01_DRAWING_GOLDEN_RECIPE_CURRENT.json",
+    "d004_iso_exemplar": "tools/medtas/d004_iso_exemplar_v1.py",
+    "golden_recipe_freeze": "tools/medtas/drawing_recipe_freeze_v2.py"
   },
   "entry_points": {
     "status": "RUN_K01_DRAWING_SYSTEM_STATUS_V1.cmd",
@@ -45,7 +49,8 @@
     "d001_prepare_manual": "RUN_K01_D001_PREPARE_MANUAL_FINISH_V1.cmd",
     "d001_capture": "RUN_K01_D001_CAPTURE_PLACEMENT_V1.cmd",
     "control_refresh": "RUN_K01_DRAWING_CONTROL_REFRESH_V1.cmd",
-    "candidates_audit": "RUN_K01_DRAWING_CANDIDATES_AUDIT_V1.cmd"
+    "candidates_audit": "RUN_K01_DRAWING_CANDIDATES_AUDIT_V1.cmd",
+    "d004_iso_exemplar": "tools/commands/drawing/RUN_K01_D004_ISO_EXEMPLAR_V1.cmd"
   },
   "validation": {
     "D006": {
@@ -93,6 +98,14 @@
       "view_plan": "LONGITUDINAL MODEL VIEW + END VIEW; no section because the rod is solid and internal geometry is absent.",
       "release": "HOLD_PRODUCT_DEFINITION",
       "evidence_note": "Historical capability probe only. The generated candidate is not a routine/manufacturing current drawing; live state is derived only from reports/control/K01_DRAWING_CONTROL_CURRENT.json."
+    },
+    "presentation_gate_v2": {
+      "status": "REQUIRED_FOR_NEW_CANDIDATES",
+      "rule": "Semantic authoring PASS is not an overall drawing PASS. New candidates remain HOLD_PRESENTATION until an accepted presentation/manual-finish stage records PASS_D8_*.",
+      "golden_references": [
+        "K01-D-003",
+        "K01-D-006"
+      ]
     }
   },
   "capability_matrix": {
@@ -116,7 +129,10 @@
       "replay of captured positions/scales on next build",
       "generic surface-finish authoring in Drawing System v1",
       "generic CZ/MMC/total-runout representations required by D006",
-      "D006 rebuild through the same generic engine/spec path"
+      "D006 rebuild through the same generic engine/spec path",
+      "fail-closed presentation gate for new candidate manifests",
+      "D004 fixed exemplar recipe on controlled native geometry",
+      "per-annotation dimension decimal precision override"
     ],
     "IMPLEMENTED_NOT_RUNTIME_PROVEN": [
       "composite coplanar plane-set binding by controlled area signatures"
@@ -139,8 +155,8 @@
       "automatic D8 visual QA"
     ]
   },
-  "new_chat_resume_rule": "Upload the latest K01_AI_HANDOFF_CURRENT.zip built with `run.cmd handoff`. Read K01_START_HERE, then control/drawings/K01_DRAWING_SYSTEM_CURRENT.json, control/drawings/K01_DRAWING_REGISTRY_CURRENT.json, and reports/control/K01_DRAWING_CONTROL_CURRENT.json. Treat Drawing Control as the only live drawing-state authority; do not navigate timestamp candidate folders as current truth.",
-  "next_validation": "Do not rebuild K01-D-001 until upstream P001 Product Definition / drawing authoring readiness is READY. No new Drawing System feature work is authorized by this state; use reports/control/K01_DRAWING_CONTROL_CURRENT.json for live PASS/HOLD.",
+  "new_chat_resume_rule": "Upload latest K01_AI_HANDOFF_CURRENT.zip. Read K01_START_HERE, K01_DRAWING_SYSTEM_CURRENT, K01_DRAWING_GOLDEN_RECIPE_CURRENT, K01_DRAWING_REGISTRY_CURRENT and K01_DRAWING_CONTROL_CURRENT. Preserve D003/D006 golden drawing quality; semantic PASS alone is never D8 PASS.",
+  "next_validation": "Validate K01-D-004 through the frozen D003/D006 golden recipe using d004_iso_exemplar_v1. Do not regress to raw semantic-candidate layout and do not infer open production tolerances.",
   "control_plane": {
     "registry": "control/drawings/K01_DRAWING_REGISTRY_CURRENT.json",
     "runtime_projection": "reports/control/K01_DRAWING_CONTROL_CURRENT.json",

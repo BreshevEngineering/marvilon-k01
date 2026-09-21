@@ -1,0 +1,90 @@
+{
+  "schema": "k01.active_workpack.execution_contract.v1",
+  "created_utc": "2026-09-20T07:52:21.438314+00:00",
+  "status": "CONTROLLED_ACTIVE_WORKPACK_EXECUTION_CONTRACT",
+  "goal_lock": "K01-A-001 CALIBRATION MODULE DESIGN FREEZE",
+  "active_engineering_object": "K01-J2 P003-P007 SERVICE JOINT",
+  "active_workpack_id": "K01-NA-T05-J2-LOCAL-FEA",
+  "active_workpack_text": "Execute T05 local J2 contact/separation FEA on the frozen final C2R1 P003/P007 geometry. Run 200 and 300 N preload per screw, seal-reaction sensitivity 0/300/600 N, +0.20 bar pressure, no-penetration metal contact, local mesh <=0.20 mm at fastener/gland/pilot/flange-root regions, then refine the critical case. Report P003/P007 von Mises stress, maximum face separation, contact pressure, bolt axial force and J2 datum-face displacement. Do not mutate CAD geometry. If LC2 with 600 N seal reaction passes, retain OD33; otherwise trigger local J2 redesign.",
+  "action_class": "ENGINEERING_MUTATION",
+  "action_subclass": "ANALYSIS_EVIDENCE_CREATION__NO_CANONICAL_CAD_GEOMETRY_MUTATION",
+  "required_inputs": [
+    {
+      "id": "T05-WORKPACKAGE",
+      "root": "CONTROL_REPOSITORY",
+      "path": "control/workpacks/K01_T05_J2_CLAMP_STRENGTH_WORKPACKAGE_v1.json",
+      "sha256": "c71ea0792b88c239d0a68f6f0c30221508ab1acd52d14d64f00dad340b1c7bbf",
+      "freshness_rule": "SHA256_EQUALS_CONTRACT",
+      "binding": "BIND_LIVE_AT_RC1_2_INSTALL"
+    },
+    {
+      "id": "T05-FEA-DEFINITION",
+      "root": "CONTROL_REPOSITORY",
+      "path": "control/analysis/K01_T05_LOCAL_FEA_DEFINITION.json",
+      "sha256": "6e77265822be212b94d3ce995b08e20ec8c87196413005b24d0fd74253da9bd1",
+      "freshness_rule": "SHA256_EQUALS_CONTRACT",
+      "binding": "BIND_LIVE_AT_RC1_2_INSTALL"
+    },
+    {
+      "id": "T05-CLAMP-SCREEN-INPUT",
+      "root": "CONTROL_REPOSITORY",
+      "path": "control/calculations/K01_T05_CLAMP_SCREEN_INPUT.json",
+      "sha256": "df891b09ec65f7e154d4ec048b67031bfb0160aa337538c0a1f3b7f390927169",
+      "freshness_rule": "SHA256_EQUALS_CONTRACT",
+      "binding": "BIND_LIVE_AT_RC1_2_INSTALL"
+    },
+    {
+      "id": "J2-TECHNICAL-FILTER",
+      "root": "CONTROL_REPOSITORY",
+      "path": "control/technical_filter/K01_J2_C2R1_TECHNICAL_FILTER_v1.json",
+      "sha256": "26c5e05dda9043d4fd5d0d7b8753aeafb7ad2e5b9796499dea0bb1bfc5fb715d",
+      "freshness_rule": "SHA256_EQUALS_CONTRACT",
+      "binding": "BIND_LIVE_AT_RC1_2_INSTALL"
+    },
+    {
+      "id": "J2-ENGINEERING-DOSSIER",
+      "root": "CONTROL_REPOSITORY",
+      "path": "control/decision_system/K01_J2_C2R1_ENGINEERING_DOSSIER_v2.json",
+      "sha256": "fb1ec18f8980d37c5279584bbc425aa4a1bfefac8667b3451969fcaa1344797a",
+      "freshness_rule": "SHA256_EQUALS_CONTRACT",
+      "binding": "BIND_LIVE_AT_RC1_2_INSTALL"
+    },
+    {
+      "id": "P003-C2R1-FROZEN-GEOMETRY",
+      "root": "CAD_WORKSPACE",
+      "absolute_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "sha256": "40eb4afebcb53f13fe845699dd4601d329115cd8c3cbb822dacdeb536d442e7e",
+      "freshness_rule": "SHA256_EQUALS_FROZEN_IDENTITY",
+      "binding": "FROZEN_C2R1_IDENTITY"
+    },
+    {
+      "id": "P007-C2R1-FROZEN-GEOMETRY",
+      "root": "CAD_WORKSPACE",
+      "absolute_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "sha256": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653",
+      "freshness_rule": "SHA256_EQUALS_FROZEN_IDENTITY",
+      "binding": "FROZEN_C2R1_IDENTITY"
+    }
+  ],
+  "mutation_scope": {
+    "allowed": [
+      "create isolated analysis working copies",
+      "create/modify analysis study setup on working copies",
+      "generate solver results, reports, plots and controlled analysis evidence"
+    ],
+    "forbidden": [
+      "mutate canonical/frozen C2R1 CAD geometry",
+      "promote CAD or release state",
+      "change Goal Lock or ACTIVE workpack",
+      "commit/push Git as a side effect of T05 execution"
+    ]
+  },
+  "expected_result": "PASS_T05_LOCAL_CONTACT_FEA__J2_GEOMETRY_RETAINED_OR_REDESIGN_TRIGGERED",
+  "freshness_policy": "Any required input path missing or SHA mismatch makes ACTIVE workpack gate HOLD. A legitimate engineering change requires a deliberate new contract/binding.",
+  "operator_lock_binding": {
+    "operator_lock_path": "control/system/K01_OPERATOR_LOCK_CURRENT.json",
+    "operator_lock_sha256_at_contract_creation": "867f841af215218682f6abeb0f3933c5f906666a01be97b72ad639348257a7ec",
+    "frontier_sha256": "7d6eaa4bf4637c3373064dd2259f7f8fac4292ea5df16ce41c2ff931f6585053",
+    "goal_lock_sha256": "e8cd93ee0be55fad6b2d58ab9ce8faeaa97994caceeb13112ad724d00f0ad8c6"
+  }
+}

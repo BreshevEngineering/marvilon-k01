@@ -1,0 +1,25 @@
+{
+  "schema": "k01.engineering_feedback_policy.v1",
+  "project": "K01",
+  "purpose": "Make downstream-to-upstream engineering feedback explicit. A manufacturability, analysis, variation, drawing or inspection finding may reopen an engineering decision but may never silently edit a characteristic.",
+  "feedback_sources": ["S2_PRODUCT_DEFINITION", "S3_CAD_BINDING_MBD", "S4A_PHYSICS_ANALYSIS", "S4B_VARIATION_CAPABILITY", "S5_DRAWING_PROJECTION_QA", "S6_INSPECTION_REALIZATION"],
+  "states": ["OPEN", "TRIAGED", "DECISION_REOPEN_REQUIRED", "DISPOSITIONED", "CLOSED"],
+  "required_fields": [
+    "id",
+    "source_stage",
+    "source_artifact_or_evidence",
+    "affected_entities",
+    "affected_characteristic_ids",
+    "finding",
+    "severity",
+    "requested_action",
+    "decision_or_change_record",
+    "status"
+  ],
+  "rules": [
+    "Feedback creates an Engineering Feedback Record (EFR) and, when design intent changes, an EDR/change record before Product Definition mutation.",
+    "A downstream artifact cannot self-correct its upstream authority.",
+    "Disposition must identify which upstream stage is reopened and then run pre-change impact before write.",
+    "Rejected feedback/dispositions remain in history."
+  ]
+}

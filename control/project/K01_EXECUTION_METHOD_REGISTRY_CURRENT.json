@@ -1,0 +1,139 @@
+{
+  "schema": "k01.execution_method_registry.current.v15",
+  "purpose": "Prevent repeated execution-method loops. Engineering strategy changes are recorded before another implementation attempt.",
+  "methods": [
+    {
+      "id": "D006_EXISTING_DRAWING_STRUCTURE_REFINEMENT",
+      "status": "PROVEN_PARTIAL_CAPABILITY",
+      "result": "Existing linked SLDDRW copy/view/section/scale/position/export/source-invariance path works.",
+      "reuse": "YES"
+    },
+    {
+      "id": "D006_SW2018_DIMXPERT_UI_AUTOMATION",
+      "status": "REJECTED_FOR_DEADLINE",
+      "failure_evidence": "Drawing View PropertyManager controls not exposed through attempted UI Automation bridge; toggles=0 across views.",
+      "reuse": "NO unless new bounded evidence changes feasibility"
+    },
+    {
+      "id": "D006_DIRECT_DRAWING_ENTITY_DIMENSIONING_V7",
+      "status": "REJECTED_AFTER_BOUNDED_EXPERIMENT",
+      "failure_evidence": "V7 generated 0/8 controlled dimensions.",
+      "reuse": "NO as primary path"
+    },
+    {
+      "id": "PRODUCT_DEFINITION_COMPILER_V8",
+      "status": "SUPERSEDED_BY_V11_CURRENT_CHAIN",
+      "objective": "Compile authoritative characteristic semantics/readiness before any further drawing projection.",
+      "reuse": "NO for current chain; retained as history"
+    },
+    {
+      "id": "MODEL_SEMANTIC_ANNOTATION_TO_DRAWING_PROJECTION",
+      "status": "ACTIVE_V10",
+      "objective": "V10 projection compiler consumes compiled Product Definition only. Existing/proven native carriers may be reused; unresolved drawing-native carrier gaps use explicit controlled PROJECTION_FALLBACK notes in a design-review base, never invented semantics.",
+      "acceptance": "All safe_projection_ids read back in candidate; compiled fingerprint bound; source seed invariant; visual QA remains separate; release remains governed upstream."
+    },
+    {
+      "id": "D006_PROJECTION_COMPILER_V10",
+      "status": "ACTIVE_DESIGN_REVIEW_BASE_ONLY",
+      "mechanism": "existing linked SLDDRW structural refinement + compiled-definition-driven controlled callout projection + semantic readback",
+      "not_same_as": [
+        "D006_SW2018_DIMXPERT_UI_AUTOMATION",
+        "D006_DIRECT_DRAWING_ENTITY_DIMENSIONING_V7"
+      ],
+      "failure_budget": "2 bounded attempts for structural/API defects; semantic source is fixed by compiled Product Definition",
+      "success_boundary": "Produces editable design-review SLDDRW with complete safe-characteristic projection and explicit carrier classification; does not claim manufacturing release.",
+      "acceptance": "Consumes V11 K01.PD.P007.DRAWING_SLICE / drawing_projection_sha256; all safe_projection_ids read back; source invariant; visual QA separate; release governed upstream.",
+      "semantic_source": "reports/product_definition/current/K01_P007_PD_SLICE_DRAWING.json",
+      "release_native_eligible": false,
+      "note": "Preserve current V10 base; do not confuse 9/9 fallback projection with D1-D9 release-native PMI provenance."
+    },
+    {
+      "id": "ENGINEERING_CHAIN_GUARD_V11",
+      "status": "ACTIVE",
+      "objective": "Validate first-class requirement allocation, derived-input identity, characteristic context, feedback, configuration/effectivity and graph structure before downstream semantic work."
+    },
+    {
+      "id": "PRODUCT_DEFINITION_COMPILER_V11",
+      "status": "ACTIVE",
+      "objective": "Compile full P007 Product Definition plus drawing/variation/inspection/physics/manufacturing/configuration domain slices and fingerprints; preserve OPEN and release blockers."
+    },
+    {
+      "id": "DOMAIN_SLICE_FRESHNESS_V11",
+      "status": "ACTIVE",
+      "objective": "Use JSON-projected context source hashes and direct-authority Product Definition slices so unrelated context/domain changes do not churn every downstream consumer."
+    },
+    {
+      "id": "DEPENDENCY_REFRESH_V11",
+      "status": "ACTIVE",
+      "objective": "Run chain guard -> Product Definition V11 -> authoritative MEDTAS freshness -> focused D006 rebuild plan."
+    },
+    {
+      "id": "DRAWING_D1_AUTHORING_PLAN_V11",
+      "status": "ACTIVE",
+      "objective": "Compile claim-level PMI authoring/verification plan from controlled drawing slice/context without CAD mutation.",
+      "command": "tools/commands/workflows_20260916/RUN_K01_DRAWING_D1_AUTHORING_PLAN_V11.cmd"
+    },
+    {
+      "id": "DRAWING_D2_MANUAL_PMI_AUTHORING",
+      "status": "ACTIVE_CLAIM_SCOPED_MANUAL_STEP",
+      "objective": "Engineer authors/repairs native PMI only for D1-authorized claims on dedicated candidate copies and assigns actual annotation views; manufacturing-route OPEN blocks only route/process-dependent claims and release, not route-independent controlled claims.",
+      "authorization": "Claim-level from D1: CONTROLLED_CLAIM + deterministic binding + manufacturing_route_dependency NONE/ROUTE_INDEPENDENT.",
+      "release_boundary": "D2 authorization is not drawing release and does not close route/process/capability blockers."
+    },
+    {
+      "id": "DRAWING_D3_AUTHORING_VERIFY",
+      "status": "ACTIVE_V15_L1_L2__L3_RELEASE_PENDING",
+      "objective": "Read P007 native PMI/datum/material, verify claim identity/value/annotation-view identity, semantic geometry binding, L1 save/reopen and L2 ForceRebuild invariance on the existing V12 exemplar. L3 controlled perturb/restore remains mandatory for release.",
+      "command": "tools/commands/workflows_20260916/RUN_K01_D3_VERIFY_P007_V15.cmd",
+      "report": "reports/drawing/current/K01-P-007_D3_AUTHORING_VERIFY_CURRENT.json",
+      "release_boundary": "PASS_D3_EXEMPLAR_L1_L2 is PASS_WITH_LIMITATIONS for exemplar assurance, never release-native D3 PASS until L3 controlled recipe passes."
+    },
+    {
+      "id": "DRAWING_D7_SEMANTIC_QA",
+      "status": "ACTIVE_V15_FIRST_EXEMPLAR_SCOPE",
+      "objective": "Read saved V12 SLDDRW and enforce provenance/authorization/dangling/manual-dimension/unit/ISO/first-angle/A3 checks for currently authorized C01/C02/C09 scope.",
+      "command": "tools/commands/workflows_20260916/RUN_K01_D7_QA_D006_V15.cmd",
+      "report": "reports/drawing/current/K01-D-006_D7_SEMANTIC_QA_CURRENT.json",
+      "release_boundary": "First-exemplar D7 PASS proves current authorized semantic cleanliness only. Full release D7 remains HOLD on D3 L3, full release claims, configuration/effectivity, D6 fingerprint and D8."
+    },
+    {
+      "id": "DRAWING_D5_RELEASE_NATIVE_GENERATOR",
+      "status": "DEFER_UNTIL_EXEMPLAR_D3_D7_EVIDENCE",
+      "objective": "Automate only the DimXpert/import behavior proven on manual P007 exemplar; seed reuse allowed."
+    },
+    {
+      "id": "D006_MANUAL_EXEMPLAR_V12",
+      "status": "NATIVE_TRANSPORT_PROVEN__D6_VISUAL_BASE_ACTIVE",
+      "objective": "Create one bounded, editable P007/D006 design-review exemplar on dedicated copies using D1-authorized route-independent native PMI, manual annotation-view assignment/import and human layout.",
+      "producer": "tools/commands/workflows_20260916/RUN_K01_D006_PREPARE_EXEMPLAR_V12.cmd",
+      "capture": "tools/commands/workflows_20260916/RUN_K01_D006_CAPTURE_EXEMPLAR_V12.cmd",
+      "acceptance": "Native transport proven in saved linked exemplar: C01 Datum A, C02 Ø14.10 H7, MMGS and P007 link. Exemplar remains non-release; D3/D7/D8 pending.",
+      "release_native_eligible": false,
+      "learning_role": "Actual SW2018 annotation-view/import/layout evidence becomes specification input for later D3/D7 and D5 automation."
+    },
+    {
+      "id": "D006_D2_CLAIM_SCOPED_AUTHORIZATION_V12",
+      "status": "ACTIVE",
+      "objective": "Prevent coarse manufacturing-route holds from blocking independent controlled claims while preserving route/process-dependent release holds.",
+      "acceptance": "C01.DATUM_A, C02.DIAMETER_FIT and C09.MATERIAL are authorizable when D1-controlled and deterministically bound; route-dependent claims remain HOLD."
+    },
+    {
+      "id": "DRAWING_FAMILY_PLANNER_V13",
+      "status": "ACTIVE",
+      "objective": "Reusable view-selection and claim-routing algorithm for rotational/flanged/hollow parts without auto-dimensioning or semantic invention.",
+      "authority": "control/drawings/K01_DRAWING_FAMILY_RULES_CURRENT.json",
+      "p007_binding": "control/drawings/K01_P007_DRAWING_FAMILY_BINDING_CURRENT.json",
+      "command": "tools/commands/workflows_20260916/RUN_K01_DRAWING_FAMILY_PLAN_V13.cmd",
+      "acceptance": "For P007 selects AXIAL_FULL_SECTION + FLANGE_END + optional ISOMETRIC, omits redundant AXIAL_EXTERNAL, routes every D1 claim, preserves D2 authorization/release state."
+    },
+    {
+      "id": "ENGINEERING_SYSTEM_COVERAGE_GUARD_V14",
+      "status": "ACTIVE",
+      "objective": "Audit the complete engineering system against the domain registry and authoritative graph so active disciplines cannot silently disappear when work focuses on one branch.",
+      "acceptance": "All GRAPH_REQUIRED domains have declared authority paths and graph nodes; unimplemented active domains are explicit declared gaps with actions; runtime solver/BOM limitations remain visible; coverage PASS never implies release PASS.",
+      "command": "tools/commands/workflows_20260916/RUN_K01_ENGINEERING_SYSTEM_GUARD_V14.cmd",
+      "report": "reports/control/K01_ENGINEERING_SYSTEM_COVERAGE_CURRENT.json"
+    }
+  ],
+  "rule": "After two failed attempts of the same mechanism, stop implementation and perform architecture review. Release-native drawing work follows D1-D9. V10 and V12 are explicitly non-release lanes. D2 authorization is claim-scoped; a global process-route OPEN may not blanket-block unrelated controlled claims. A rejected method cannot be retried by renaming/repackaging."
+}

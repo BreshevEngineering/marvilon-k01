@@ -125,5 +125,9 @@
       ]
     }
   ],
-  "iteration_rule": "A closed node reopens only when an input dependency changes or a contradiction is detected."
+  "iteration_rule": "A closed node reopens only when an input dependency changes or a contradiction is detected.",
+  "status": "LEGACY_QUARANTINED_DO_NOT_CONSUME_AS_CURRENT_AUTHORITY",
+  "authority": false,
+  "superseded_by": "reports/control/K01_MEDTAS_DERIVED_STATE_CURRENT.json",
+  "quarantine_note": "Compatibility/history snapshot only. Current dependency authority is Authority Map -> engineering_build_graph; current materialized state is K01_MEDTAS_DERIVED_STATE_CURRENT.json."
 }

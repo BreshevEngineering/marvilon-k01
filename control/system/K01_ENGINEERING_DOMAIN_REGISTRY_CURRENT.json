@@ -1,0 +1,331 @@
+{
+  "schema": "k01.engineering_domain_registry.current.v15",
+  "project": "K01",
+  "purpose": "Master coverage contract for scalable K01 engineering. Every active engineering domain must be represented by an authority, graph nodes/evidence path, stale-propagation rule and release disposition. Missing active domains are explicit gaps, never silently omitted.",
+  "principles": [
+    "The lifecycle is a DAG with one main definition spine and parallel evidence/product-structure lanes, not a single sequential checklist.",
+    "Product Definition owns engineering semantics; solver/drawing/BOM/inspection artifacts are downstream evidence/projections.",
+    "Every derived output is bound to input fingerprints, toolchain identity and configuration/effectivity.",
+    "A domain may be OPEN or not yet graph-backed, but that state must be declared here with an owner/action; silent absence is prohibited.",
+    "Physics evidence families are independent: structural, magnetic, flow, thermal, pressure/vacuum and other applicable domains stale independently.",
+    "EBOM and MBOM are different controlled products: EBOM from product/CAD structure; MBOM additionally consumes manufacturing transformation/route.",
+    "CalculiX / CCX is the controlled name for the independent structural cross-check branch.",
+    "FEMM is magnetic-field evidence; unverified force extraction must not become release evidence.",
+    "Center is a projection/orchestration surface and never a second authority database."
+  ],
+  "main_spine": [
+    "S0_REQUIREMENT_INTERFACE",
+    "S0A_REQUIREMENT_ALLOCATION",
+    "S1_ENGINEERING_DECISION",
+    "S1A_DERIVED_INPUTS",
+    "S1B_MANUFACTURING_SUPPLY_STRATEGY",
+    "S2_PRODUCT_DEFINITION",
+    "S3_CAD_BINDING_MBD",
+    "S4A_PHYSICS_ANALYSIS",
+    "S4B_VARIATION_CAPABILITY",
+    "S4C_COMPILED_PRODUCT_DEFINITION",
+    "S5_DRAWING_PROJECTION_QA",
+    "S6_INSPECTION_REALIZATION",
+    "S7_CONFIGURATION_RELEASE_EFFECTIVITY"
+  ],
+  "domains": [
+    {
+      "id": "REQ_ALLOC_DECISION",
+      "title": "Requirements / allocation / engineering decision / technical filter",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "authority_paths": [
+        "control/requirements/requirements.json",
+        "control/requirements/K01_REQUIREMENT_ALLOCATION_REGISTRY_v1.json",
+        "control/project/K01_ENGINEERING_EXECUTION_CONTRACT_CURRENT.json"
+      ],
+      "graph_nodes": [
+        "K01.REQ.GATE04E",
+        "K01.REQ.ALLOCATION",
+        "K01.EXEC.CONTRACT.CURRENT"
+      ],
+      "status_note": "Technical-filter evidence remains a cross-cutting decision gate and must be linked by changes/nodes; equal numeric values never imply shared identity."
+    },
+    {
+      "id": "DERIVED_INPUTS",
+      "title": "Derived loads / limits / screening inputs",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_IF_APPLICABLE",
+      "authority_paths": [
+        "control/engineering/K01_DERIVED_ENGINEERING_INPUTS_v1.json"
+      ],
+      "graph_nodes": [
+        "K01.DERIVED.INPUTS"
+      ],
+      "status_note": "Derived quantities have stable IDs, quantity kind, derivation and consumers; they are not requirements."
+    },
+    {
+      "id": "PRODUCT_DEFINITION",
+      "title": "Product Characteristics / datums / measurement / effectivity",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "authority_paths": [
+        "control/product_definition/K01_PRODUCT_DEFINITION_POLICY_CURRENT.json",
+        "control/product_definition/K01_P007_DEFINITION_DECISIONS_CURRENT.json",
+        "control/product_definition/K01_DATUM_REFERENCE_SYSTEM_REGISTRY_v1.json",
+        "control/product_definition/K01_CHARACTERISTIC_CONTEXT_CURRENT.json"
+      ],
+      "graph_nodes": [
+        "K01.PD.POLICY.CURRENT",
+        "K01.PD.P007.DECISIONS",
+        "K01.DATUM.SYSTEMS",
+        "K01.PD.P007.CONTEXT",
+        "K01.PD.P007.COMPILED"
+      ],
+      "status_note": "Nominal, fit/tolerance/GD&T, datum/DRF, measurement condition, material/surface/process, inspection strategy and OPEN/PARTIAL/CONTROLLED state live here."
+    },
+    {
+      "id": "CAD_MBD_BINDING",
+      "title": "Native CAD / semantic binding / MBD-PMI",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "authority_paths": [
+        "control/verification/K01_CAD_BINDING_INVARIANCE_POLICY_v1.json"
+      ],
+      "graph_nodes": [
+        "K01.CAD.SEM.A001",
+        "K01.CAD.BINDING.POLICY",
+        "K01.MBD.A001"
+      ],
+      "status_note": "Runtime face IDs are not authority. Critical binding requires semantic/geometric signature plus reopen/rebuild/perturb invariance as applicable."
+    },
+    {
+      "id": "DRAWING_D1_D9",
+      "title": "Drawing authoring / projection / D1-D9 QA",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "authority_paths": [
+        "control/drawings/K01_DRAWING_PIPELINE_POLICY_CURRENT.json",
+        "control/drawings/K01_DRAWING_FAMILY_RULES_CURRENT.json",
+        "control/drawings/K01_D006_EXEMPLAR_POLICY_CURRENT.json"
+      ],
+      "graph_nodes": [
+        "K01.DRAWING.D006.D1.AUTHORING_PLAN",
+        "K01.DRAWING.D006.EXEMPLAR.CAPTURE",
+        "K01.DRAWING.D006.FAMILY.PLAN",
+        "K01.DRAWING.D006.D3.AUTHORING_VERIFY",
+        "K01.DRAWING.D006.D7.SEMANTIC_QA",
+        "K01.DRAWING.D006.EXEMPLAR.REQUALIFICATION",
+        "K01.DRAWING.D006.D3.EXECUTION.CONTRACT"
+      ],
+      "declared_gaps": [
+        "D8 controlled visual QA for exemplar",
+        "D9 release export/baseline for D006",
+        "D3 L3 controlled perturb/restore recipe and execution for release-native binding invariance",
+        "D7 full release scope after all Product Definition claims/configuration/effectivity are closed"
+      ],
+      "status_note": "V17 makes exemplar provenance and D3 authority/execution mapping explicit. Current exemplar still must pass D3 semantic corrections, then D7/D8/D9; release remains incomplete until D3 L3/full D7/D8/D9 and upstream blockers close."
+    },
+    {
+      "id": "TOLERANCE_VARIATION",
+      "title": "Tolerance stack / variation / process capability / inspectability",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "authority_paths": [
+        "evidence/immutable/06c919a10cd091843498d9c03ccce4e65347a9a9379f29c37ba138a82ed7a552__K01_TOLERANCE_A001_v1.json"
+      ],
+      "graph_nodes": [
+        "K01.PD.P007.VARIATION_SLICE",
+        "K01.TOL.A001"
+      ],
+      "status_note": "Variation evidence is separate from physics and stales on tolerance/datum/measurement/manufacturing changes."
+    },
+    {
+      "id": "STRUCTURAL_FEA",
+      "title": "Structural FEA — SolidWorks Simulation primary screen + CalculiX independent branch",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_IF_APPLICABLE",
+      "authority_paths": [
+        "evidence/immutable/48439d610299f5ef00e5163d2a8c148073e61bdc8ce586088a5b1f68b977f08e__K01_GATE04E_FEM_FEMM_Verification_Report_v1.md",
+        "evidence/immutable/f3d27501ba44d518bc4279f70fa2314b6a737daf0c734f16b6892aa97ec720d7__K01_CALCULIX_PREFLIGHT_CURRENT.json"
+      ],
+      "graph_nodes": [
+        "K01.STRUCT.SWSIM.P006",
+        "K01.STRUCT.CCX.INPUT.P006",
+        "K01.STRUCT.CCX.P006",
+        "K01.STRUCT.RECON.P006"
+      ],
+      "runtime_probe": {
+        "path": "reports/medtas/calculix/current/K01_CALCULIX_PREFLIGHT_CURRENT.json",
+        "kind": "calculix_preflight"
+      },
+      "status_note": "SolidWorks linear-static screen has evidence. CalculiX/CCX is independent reconciliation and may remain blocked until neutral mesh/toolchain is available; a controlled waiver would be required for release if cross-check remains mandatory."
+    },
+    {
+      "id": "MAGNETIC_FEMM",
+      "title": "Magnetic FEM — FEMM",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_IF_APPLICABLE",
+      "authority_paths": [
+        "control/femm/K01_FEMM_STATUS_CURRENT.json",
+        "evidence/immutable/48439d610299f5ef00e5163d2a8c148073e61bdc8ce586088a5b1f68b977f08e__K01_GATE04E_FEM_FEMM_Verification_Report_v1.md"
+      ],
+      "graph_nodes": [
+        "K01.FEMM.MODEL.CURRENT",
+        "K01.FEMM.RUN.A",
+        "K01.FEMM.RUN.B",
+        "K01.FEMM.VERIFY.CURRENT"
+      ],
+      "runtime_probe": {
+        "path": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.md",
+        "kind": "femm_verification"
+      },
+      "status_note": "Solver/field screening evidence exists with limitations. Absolute force extraction remains unverified and cannot be used as release evidence until fixed/validated."
+    },
+    {
+      "id": "FLOW_CFD",
+      "title": "Flow / purge / pressure-drop CFD",
+      "mode": "DECLARED_GAP_ALLOWED",
+      "release_relevance": "BLOCKS_IF_APPLICABLE",
+      "authority_paths": [],
+      "graph_nodes": [],
+      "declared_gaps": [
+        "Current Flow Simulation evidence/goals are not yet normalized into authoritative MEDTAS graph nodes and fingerprints."
+      ],
+      "gap_action": "Create controlled FLOW input-case/evidence nodes when flow requirements enter a release decision; bind inlet/outlet/purge/temperature assumptions and solver version."
+    },
+    {
+      "id": "THERMAL",
+      "title": "Thermal / thermal-preload / galling-service evidence",
+      "mode": "DECLARED_GAP_ALLOWED",
+      "release_relevance": "BLOCKS_IF_APPLICABLE",
+      "authority_paths": [
+        "control/workpacks/K01_T06_THERMAL_GALLING_SERVICE_WORKPACKAGE_v1.json"
+      ],
+      "graph_nodes": [],
+      "declared_gaps": [
+        "Thermal workpack exists but no dedicated thermal solver/evidence node is yet in authoritative graph."
+      ],
+      "gap_action": "Split thermal loads/material properties/contact/preload effects into fingerprinted thermal evidence node(s) before thermal release claims."
+    },
+    {
+      "id": "PRESSURE_VACUUM_CONTAINMENT",
+      "title": "Pressure / vacuum / containment / leak",
+      "mode": "DECLARED_GAP_ALLOWED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "authority_paths": [
+        "control/decisions/EDR-021_J2_DIFFERENTIAL_PRESSURE_ENVELOPE.json"
+      ],
+      "graph_nodes": [],
+      "declared_gaps": [
+        "Pressure/vacuum envelope is controlled by EDR, but containment/leak calculation/test acceptance is not yet a dedicated graph evidence family."
+      ],
+      "gap_action": "Create pressure/containment and leak-test evidence nodes consuming C07/C08/C10/C12, material/process and pressure envelope."
+    },
+    {
+      "id": "MATERIALS_JOINING_MANUFACTURING",
+      "title": "Materials / joining / manufacturing route / supplier capability",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "authority_paths": [
+        "control/manufacturing/K01_P007_MANUFACTURING_FEASIBILITY_CURRENT.json"
+      ],
+      "graph_nodes": [
+        "K01.MAT.GATE04E",
+        "K01.MFG.P007.FEASIBILITY",
+        "K01.PD.P007.MANUFACTURING_SLICE"
+      ],
+      "status_note": "P007 monolithic vs joined/welded route remains release-significant. Process-dependent characteristics may not be closed before route/capability evidence."
+    },
+    {
+      "id": "EBOM",
+      "title": "Engineering BOM (EBOM)",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "authority_paths": [
+        "control/bom/K01_BOM_AUTHORITY.json",
+        "evidence/immutable/c4de79bb6ca208c1f61542d5663088d2aff514c87492a78e1d2b44c23d3cc228__K01_BOM_VERIFY_A001_v1.json"
+      ],
+      "graph_nodes": [
+        "K01.BOM.MODEL.A001",
+        "K01.BOM.ARTIFACT.A001",
+        "K01.BOM.VERIFY.A001"
+      ],
+      "runtime_probe": {
+        "path": "reports/medtas/bom/current/K01_BOM_VERIFY_A001_v1.json",
+        "kind": "bom_verify"
+      },
+      "status_note": "EBOM is computed from controlled CAD occurrence tree + product registry. Manual BOM tables are not authority."
+    },
+    {
+      "id": "MBOM",
+      "title": "Manufacturing BOM (MBOM) / manufacturing transformation",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "authority_paths": [
+        "evidence/immutable/4ac352273832c4ddf61fbefcdb306fbe25bd536032aa71678cc0930b9c54fb74__K01_MBOM_VERIFY_A001_v1_9.json"
+      ],
+      "graph_nodes": [
+        "K01.MBOM.MODEL.A001",
+        "K01.MBOM.ARTIFACT.A001",
+        "K01.MBOM.VERIFY.A001"
+      ],
+      "runtime_probe": {
+        "path": "reports/medtas/bom/current/K01_MBOM_VERIFY_A001_v1_9.json",
+        "kind": "mbom_verify"
+      },
+      "status_note": "MBOM consumes EBOM plus manufacturing route/process decomposition; open P007 route must propagate here."
+    },
+    {
+      "id": "INSPECTION_METROLOGY",
+      "title": "Inspection / metrology / acceptance",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "authority_paths": [
+        "evidence/immutable/2ed96f4773a1926cacaf78cf447ac6c60a03c573665fff67209bb1a167720614__K01_RELEASE_CHARACTERISTICS_CURRENT.json"
+      ],
+      "graph_nodes": [
+        "K01.CHARACTERISTICS.REGISTRY",
+        "K01.INSPECTION.RESULTS",
+        "K01.PD.P007.INSPECTION_SLICE"
+      ],
+      "status_note": "Inspection strategy is defined with characteristics; S6 owns procedure/results. Measurement condition and capability are release semantics, especially for thin-wall P007."
+    },
+    {
+      "id": "CONFIGURATION_RELEASE_BASELINE",
+      "title": "Configuration / effectivity / release baseline",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "authority_paths": [
+        "control/configuration/K01_EFFECTIVITY_POLICY_v1.json",
+        "control/baseline/K01_ENGINEERING_BASELINE.json"
+      ],
+      "graph_nodes": [
+        "K01.CONFIG.EFFECTIVITY",
+        "K01.BASELINE.GATE04E"
+      ],
+      "status_note": "Historical released revisions are immutable. As-built/as-inspected evidence pins exact released fingerprints."
+    },
+    {
+      "id": "REPO_HANDOFF_TOOLCHAIN",
+      "title": "Repository / Git / handoff / toolchain reproducibility",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "EVIDENCE_ONLY",
+      "authority_paths": [
+        "control/project/K01_AI_SESSION_RULES_CURRENT.json",
+        "control/project/K01_HANDOFF_REQUIRED_SOURCES_CURRENT.json",
+        "control/project/K01_AUTHORITY_MAP_CURRENT.json"
+      ],
+      "graph_nodes": [
+        "K01.PROJECT.STRUCTURE",
+        "K01.AI.HANDOFF.CURRENT",
+        "K01.IDENTITY.AUDIT"
+      ],
+      "status_note": "Patch-first controlled changes, source/toolchain hashes and complete AI handoff prevent branch/session drift."
+    }
+  ],
+  "center_requirements": {
+    "show_domain_matrix": true,
+    "show_gap_not_silence": true,
+    "show_runtime_solver_status": true,
+    "show_why_stale": true,
+    "separate_ebom_mbom": true,
+    "separate_physics_domains": true,
+    "separate_definition_from_evidence": true
+  }
+}

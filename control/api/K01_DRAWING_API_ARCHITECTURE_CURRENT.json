@@ -1,0 +1,109 @@
+{
+  "schema": "k01.drawing_api_architecture.v1",
+  "date": "2026-09-19",
+  "status": "CONTROLLED_CANDIDATE_FOR_REPO_INSTALL",
+  "goal": "Two stable drawing APIs over one SW2018 runtime core; no per-dimension runner proliferation.",
+  "layers": {
+    "runtime_core": {
+      "id": "K01_SW2018_RUNTIME_CORE_V1",
+      "path": "cad_api/solidworks_2018_proven/runtime_core",
+      "responsibilities": [
+        "locate exact SW2018 interops",
+        "compile C#5 x64 helpers",
+        "deploy interops beside EXE",
+        "runtime bind probe",
+        "attach to existing SolidWorks or start a controlled instance",
+        "never require all of SolidWorks to be closed",
+        "hold only when the exact target source drawing is already open",
+        "source/candidate SHA guards",
+        "Save/Close/file-IO ordering",
+        "reporting and candidate directory lifecycle"
+      ]
+    },
+    "drawing_build_api": {
+      "id": "K01_DRAWING_BUILD_API_V1",
+      "path": "cad_api/solidworks_2018_proven/drawing_build",
+      "purpose": "Base construction of drawing candidates.",
+      "rights": [
+        "create drawing candidate",
+        "create/insert approved views",
+        "create approved native section views",
+        "place dimensions from controlled Drawing Spec/Product Definition",
+        "create datum tags and GTol/FCF from controlled authority",
+        "create notes and semantic annotation names",
+        "save only candidate output unless a separate promotion transaction is executed"
+      ],
+      "prohibited": [
+        "invent tolerance, fit, datum scheme, surface texture, thread class or inspection acceptance",
+        "directly promote candidate to canonical drawing",
+        "rebuild a validated native section without explicit authorization"
+      ],
+      "implementation": "Stable facade over registered build adapters. Existing K01 Drawing System engines remain adapters; they are not duplicated."
+    },
+    "drawing_refine_api": {
+      "id": "K01_DRAWING_REFINE_API_V1",
+      "path": "cad_api/solidworks_2018_proven/drawing_refine",
+      "purpose": "Controlled refinement of an existing SLDDRW.",
+      "rights": [
+        "inventory existing annotations",
+        "resolve annotations by semantic ID or exact unique signature",
+        "change note text",
+        "change released dimension tolerance",
+        "clear unsupported drawing tolerance while preserving nominal",
+        "change display precision",
+        "change visibility",
+        "change annotation position",
+        "hide duplicates",
+        "preserve existing view layout and validated native section"
+      ],
+      "prohibited": [
+        "round nominal values because they look unusual",
+        "invent production tolerance",
+        "invent general tolerance class",
+        "infer thread depth from B-rep span",
+        "mutate 3D model from a drawing-refinement job",
+        "create/delete views unless the job explicitly authorizes a view operation"
+      ],
+      "preflight": "Resolve every mutation target uniquely before first mutation; ambiguity means zero mutation and HOLD."
+    }
+  },
+  "drawing_authority_chain": [
+    "3D geometry",
+    "functional/interface meaning",
+    "Product Definition",
+    "Drawing Spec",
+    "DRAWING BUILD API",
+    "DRAWING REFINE API",
+    "semantic QA",
+    "visual QA",
+    "release/promotion"
+  ],
+  "active_d003": {
+    "source": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-003\\drawing_system_v1_20260917_110205\\d8_api_pass1_v2_20260917_113022\\d8_layout_refine_v1_20260917_122102\\K01-D-003.SLDDRW",
+    "strategy": "Refine existing drawing; do not rebuild from zero.",
+    "protected": [
+      "native Section B-B",
+      "existing view layout",
+      "functional non-round nominals"
+    ],
+    "known_cleanup": [
+      "datum-C Ø3.02 -> +0.01/0",
+      "clear unsupported tolerances on 39.5, 3, 5, 27, 2, Ø6.6",
+      "hide duplicate section Ø12 ±0.2 while preserving J2 Ø12 H9",
+      "restore/preserve J1 clamp callout",
+      "normalize selected display precision only",
+      "preserve already-present M12×1-6H; do not add duplicate or DEPTH 6"
+    ]
+  },
+  "anti_loop": {
+    "wip_limit": 1,
+    "rule": "No new per-characteristic API runner. New drawing operations must be implemented as a BUILD adapter capability or REFINE job operation.",
+    "stop_condition": "Two consecutive API actions that do not reduce the active drawing Definition of Done -> stop and reassess."
+  },
+  "implementation_conformance": {
+    "build_job_contract": "adapter_id only; launcher resolved through K01_DRAWING_BUILD_ADAPTER_REGISTRY_CURRENT.json",
+    "refine_inventory_primitive": "IView.GetFirstAnnotation3 -> IAnnotation.GetNext3",
+    "refine_execution_status": "PASS_DRAWING_REFINE_EXECUTION__SEMANTIC_QA_REQUIRED",
+    "d003_proof_v1": "R01-R09 only; selected precision normalization deferred until unique semantic targets are proven"
+  }
+}

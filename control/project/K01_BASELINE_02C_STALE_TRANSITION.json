@@ -1,0 +1,26 @@
+{
+  "schema": "k01.stale_transition_spec.v1",
+  "trigger": "K01-BASELINE-02C canonical promotion",
+  "status": "PLANNED_NOT_APPLIED",
+  "rule": "Impact declaration only; actual FRESH/STALE state is recomputed by MEDTAS graph/hash reducers.",
+  "must_refresh": [
+    "canonical snapshot",
+    "canonical EBOM",
+    "MBOM product/process projection",
+    "D003/P003 drawing product-definition path",
+    "D012/A001 assembly drawing path",
+    "P017 product/inspection definition",
+    "Center/materialized views",
+    "AI handoff"
+  ],
+  "conditional_re_evaluation": [
+    "FEMM geometry input manifest if it consumes changed canonical-root semantics; FEMM method qualification itself stays PASS",
+    "structural/thermal analyses only when their declared dependencies consume changed P003/P016/A001 semantics"
+  ],
+  "do_not_invalidate_by_default": [
+    "requirements definitions",
+    "FEMM solver/method qualification",
+    "P007 native geometry",
+    "K01-D-006 solely because Datum C changed"
+  ]
+}

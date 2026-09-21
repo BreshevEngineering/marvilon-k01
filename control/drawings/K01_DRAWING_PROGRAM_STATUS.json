@@ -1,0 +1,32 @@
+{
+  "schema": "k01.drawing_program_status.v1",
+  "generated_utc": "2026-09-08T14:09:48.393192+00:00",
+  "status": "ACTIVE",
+  "priority": [
+    {
+      "drawing": "K01-D-006",
+      "model": "K01-P-007",
+      "priority": 1,
+      "reason": "PMI pilot proven; highest-value drawing exemplar; containment/J2 release dependency."
+    },
+    {
+      "drawing": "K01-D-003",
+      "model": "K01-P-003",
+      "priority": 2,
+      "reason": "Mating half of J2 interface and clamp/seal geometry."
+    },
+    {
+      "drawing": "K01-D-005",
+      "model": "K01-P-006",
+      "priority": 3,
+      "reason": "Service-drive/thread definition."
+    },
+    {
+      "drawing": "K01-D-012",
+      "model": "K01-A-001",
+      "priority": 4,
+      "reason": "Assembly IN/OUT, BOM, Long Run interface and optical datum."
+    }
+  ],
+  "current_action": "Prepare K01-D-006 candidate authoring after Step14 release-definition review; do not restart C02/C05 pilot."
+}

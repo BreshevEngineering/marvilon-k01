@@ -1,0 +1,89 @@
+{
+  "schema": "k01.baseline_promotion_transaction.v3",
+  "id": "K01-BASELINE-02C-PROMOTION",
+  "status": "DRYRUN_PASS_APPLY_IMPLEMENTATION_READY_FRESH_STEP_GATE_REQUIRED",
+  "mutation_allowed": false,
+  "checkpoint": "K01-CP-20260910-BASELINE-02C-DATUM-C-VERIFIED",
+  "toolchain_review": {
+    "tools/sw_gate04b_close_datum_c.py": "SUPERSEDED_DO_NOT_EXECUTE_FOR_BASELINE_02C; supplied source builds the older P003 RADIAL SLOT candidate at R12/0 and does not promote current EDR-023 round-hole/P017 architecture.",
+    "tools/medtas/final_assembly_promotion_v2_2.py": "NOT_APPLICABLE_TO_THIS_TRANSITION; it Pack-and-Go promotes a separate final-candidate/R01 path into repo cad/final_candidate and explicitly targets the final assembly baseline.",
+    "tools/sw_post_promotion_qa.py": "REVIEWED PRECEDENT; reuse/adapt pattern only. Existing checks are hard-coded to the older P003/P007 transition.",
+    "scripts/K01_PROMOTE_P003_P007.py": "REVIEWED EXISTING ATOMIC STABLE-PROMOTION PRECEDENT; reusable guards/backup/hash manifest identified. Not sufficient unchanged for P003/P016/P017/A001; Baseline-02C adaptation must start as READ-ONLY dry-run.",
+    "tools/medtas/baseline_02c_promotion_apply.py": "NEW CONTROLLED APPLY ORCHESTRATOR; backup/staging/stable-reference rewrite/full staging QA/canonical QA/rollback."
+  },
+  "frozen_evidence": {
+    "producer": "reports/cad/current/K01_GATE04B_DATUM_C_BUILD.json",
+    "assembly_QA": "reports/cad/current/K01_GATE04B_DATUM_C_ASSEMBLY_QA.json",
+    "canonical_A001": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+    "canonical_A001_sha256": "a6bc1c6227075c2736a2383a73ecf2f95e109f7cbcfa34ef01ccf8bfa45cdd33",
+    "verification_A001": "D:\\Marvilon\\K01\\cad\\candidates\\gate04b_datumc\\verification\\K01-A-001_GATE04B_DATUMC_VERIFY.SLDASM",
+    "verification_A001_sha256": "48763f29e18a7a699aab203ee695b9adc29760203c1e39aa33a313a5e23c7a12",
+    "P003_candidate": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-003_Cartridge_Body_GATE04B_DATUMC_V6_20260909_231939.SLDPRT",
+    "P016_candidate": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-016_Long_Run_Interface_Boss_GATE04B_DATUMC_V6_20260909_231939.SLDPRT",
+    "P017_candidate": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-017_Datum_C_Relieved_Locator_GATE04B_V7_20260909_231939.SLDPRT"
+  },
+  "phases": [
+    {
+      "id": "T0_CHECKPOINT",
+      "status": "PASS"
+    },
+    {
+      "id": "T1_READ_ONLY_PREFLIGHT",
+      "status": "PASS"
+    },
+    {
+      "id": "T2_APPLICABLE_EXISTING_PROMOTION_SOURCE_REVIEW",
+      "status": "PASS_PRECEDENT_REVIEWED_AND_APPLY_IMPLEMENTED",
+      "required": "Fresh APPLY-intent step gate + SOLIDWORKS closed before write."
+    },
+    {
+      "id": "T3_BACKUP_AND_ROLLBACK_BOUNDARY",
+      "status": "IMPLEMENTED_NOT_RUN"
+    },
+    {
+      "id": "T4_REFERENCE_SAFE_APPLY",
+      "status": "IMPLEMENTED_NOT_RUN"
+    },
+    {
+      "id": "T5_POST_PROMOTION_SEMANTIC_ASSEMBLY_QA",
+      "status": "IMPLEMENTED_NOT_RUN",
+      "action": "Reopen stable canonical A001, run fresh native semantic export plus mate/component/Datum-C/integration QA."
+    },
+    {
+      "id": "T6_CANONICAL_SNAPSHOT",
+      "status": "NOT_RUN",
+      "action": "Generate new canonical semantic/hash snapshot from the promoted stable assembly."
+    },
+    {
+      "id": "T7_DEPENDENCY_STALE_REDUCTION",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "T8_EBOM_MBOM_REFRESH",
+      "status": "NOT_RUN",
+      "action": "Build EBOM/MBOM only from the fresh post-promotion semantic occurrence export + parts/process registries; prove 14 modeled occurrences and K01-P-017 qty=1."
+    },
+    {
+      "id": "T9_GIT_AND_HANDOFF_CHECKPOINT",
+      "status": "NOT_RUN"
+    }
+  ],
+  "success_condition": "Canonical stable identities contain the exact verified Datum-C design, A001 reopens and passes semantic/assembly QA, new canonical snapshot exists, dependency state is recomputed, EBOM proves 14 modeled occurrences and K01-P-017 qty=1, and Git/handoff checkpoint captures the transaction.",
+  "prohibited": [
+    "execute tools/sw_gate04b_close_datum_c.py for current EDR-023",
+    "use final_assembly_promotion_v2_2.py as Baseline-02C canonical stable promotion",
+    "copy verification assembly over canonical without reference-safe identity handling",
+    "manual EBOM edits",
+    "manual stale painting",
+    "R01 declaration"
+  ],
+  "next": "Run fresh `run.cmd prewrite-check`; if PASS_TO_BASELINE02C_PROMOTION_APPLY, close SOLIDWORKS and execute `run.cmd baseline02c-promotion-apply`. On PASS continue snapshot/stale/BOM; on failure inspect automatic rollback report.",
+  "authority_transition_rule": "K01.CAD.SEM.A001 and downstream BOM must follow control/baseline/K01_ENGINEERING_BASELINE.json after promotion; candidate verification paths are never implicit fallback authority.",
+  "control_hardening": {
+    "V3B": "APPLIED",
+    "root_cleanup_actions": "APPLIED; final guard held only on two previously omitted legacy UI version families",
+    "namespace_adjudication": "control/repo/K01_CONTROL_NAMESPACE_ADJUDICATION_20260910.json",
+    "next_acceptance": "Rerun root-cleanup-apply idempotently and prewrite-check. Required result: repo_guard PASS; namespace PASS_WITH_DECLARED_MIGRATION_DEBT; technical filter PASS; engineering step PASS_TO_PROMOTION_DRYRUN with mutation_authorized=false."
+  },
+  "filesystem_rule": "No existing folder relocation. APPLY creates only timestamped backup/staging directories under D:\\Marvilon\\K01\\cad and copies/replaces the exact declared stable CAD files."
+}

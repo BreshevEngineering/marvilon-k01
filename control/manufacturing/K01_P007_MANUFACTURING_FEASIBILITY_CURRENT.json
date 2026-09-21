@@ -1,0 +1,63 @@
+{
+  "schema": "k01.p007.manufacturing_feasibility.current.v1",
+  "part": "K01-P-007",
+  "route_id": "MFG-P007-ROUTE-001",
+  "status": "PARTIAL_ROUTE_CONTROLLED__CAPABILITY_QUALIFICATION_OPEN",
+  "purpose": "Keep manufacturing route/supplier capability upstream of released tolerances and process notes.",
+  "current_facts": [
+    "C2R1 architecture requires a removable static-sealed P003↔P007 service boundary; permanent P003↔P007 welding is rejected.",
+    "P007 is controlled as one manufactured engineering item with monolithic 316L construction and integral blind end.",
+    "Selected route is deep-bore/finish thin can with supported OD finishing, integral blind-end retention, flange machining and 3-hole drilling.",
+    "Supplier/process capability evidence remains open for 0.30 mm wall ovality/runout, blind-end thickness, measurement method and first-article process capability.",
+    "EDR-032 closes the coupled short J2 axial locator stack as P007 locator depth 2.00 ±0.05 mm and P003 pilot length 1.50 ±0.05 mm, giving 0.40..0.60 mm worst-case non-bottoming clearance; first-article capability confirmation remains required.",
+    "EDR-033 closes C04 as an ISO 5458 combined-zone pattern: 3×Ø2.90 H10 THRU; TED PCD Ø26.50; TED 120°; POSITION ⌀0.15 CZ Ⓜ | A | B. Datum B remains RFS; no datum shift is claimed."
+  ],
+  "alternatives": [
+    {
+      "id": "MFG-P007-MONOLITHIC",
+      "status": "SELECTED_BASELINE__CAPABILITY_QUALIFICATION_OPEN",
+      "route": "Certified 316L stock -> deep-bore ID9.4 leaving integral blind end -> finish Ø14.10 H7 locator -> supported finish OD10 thin wall -> machine OD33×3 flange / OAL35 -> drill 3×Ø2.90 on PCD26.5 -> clean/passivate as required -> inspect",
+      "required_capability_evidence": [
+        "0.30 mm wall manufacturability without unacceptable ovality/collapse",
+        "OD/ID coaxiality/runout capability",
+        "blind-end thickness capability",
+        "fixture/support strategy during machining and inspection",
+        "supplier capability / first-article evidence",
+        "cost/lead-time/service implications"
+      ]
+    },
+    {
+      "id": "MFG-P007-WELDED",
+      "status": "REJECTED_FOR_C2R1_P003_P007_SERVICE_BOUNDARY",
+      "route": "Legacy permanent P003↔P007 containment weld route; not applicable to active removable C2R1 architecture.",
+      "required_capability_evidence": [
+        "weld/joining process qualification for 316L thin wall",
+        "distortion and coaxiality impact",
+        "heat-affected-zone / corrosion / cleaning implications",
+        "quantitative leak qualification",
+        "inspection access and repair/service implications",
+        "cost/lead-time/supplier availability"
+      ],
+      "rejection_reason": "Permanent P003↔P007 weld destroys required service access and conflicts with selected removable static-sealed J2."
+    }
+  ],
+  "selection": "MFG-P007-MONOLITHIC",
+  "release_rule": "Route architecture is selected. Do not release process-dependent tolerances/roughness or supplier capability claims until thin-wall/blind-end capability and inspection evidence are controlled. J2 seal/fastener/leak qualification remains separate.",
+  "decision_source": "EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE",
+  "released_product_requirements_from_EDR_029": {
+    "C07": "Ø10 h9",
+    "C08": "Ø9.40 H9; wall 0.30 REF",
+    "C11": "TOTAL RUNOUT 0.02 | B on OD and ID"
+  },
+  "capability_boundary": "EDR-029 defines C07/C08/C11 product requirements and EDR-032/033 define C02/C04 release semantics. First-article proof remains required for the selected monolithic route: H9/h9 and 0.02 total runout, blind-end/thin-wall capability, and confirmation that the short C02/P003 ±0.05 axial features are reproducible. Definition closure does not equal supplier/process qualification PASS.",
+  "released_product_requirements_from_EDR_032_033": {
+    "C02_depth": "2.00 ±0.05 mm from Datum-A mating plane; P003 pilot length 1.50 ±0.05 mm; bottom clearance 0.40..0.60 mm",
+    "C04": "3× Ø2.90 H10 THRU; TED PCD Ø26.50; TED 120°; POSITION ⌀0.15 CZ Ⓜ | A | B; Datum B RFS"
+  },
+  "release_decision": {
+    "authority": "EDR-037",
+    "status": "ACCEPTED_DESIGN_ROUTE__PHYSICAL_FAI_CAPABILITY_OPEN",
+    "interpretation": "Manufacturing route is sufficiently defined for Product Definition. Physical capability/FAI remains L8 qualification.",
+    "generated_utc": "2026-09-17T06:43:55.140229+00:00"
+  }
+}

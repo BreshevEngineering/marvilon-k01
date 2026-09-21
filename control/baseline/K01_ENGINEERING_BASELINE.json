@@ -4,15 +4,17 @@
   "status": "ACTIVE_ENGINEERING_BASELINE",
   "created_utc": "2026-09-08T06:25:55.130485+00:00",
   "cad": {
-    "assembly": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\verification\\K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
-    "logical_source": "cad/candidates/gate04e_p006_service/verification/K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
-    "sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4",
-    "component_count": 13,
-    "authority": "DESIGN_AND_ANALYSIS"
+    "assembly": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+    "logical_source": "cad/assemblies/K01-A-001_Calibration_Module.SLDASM",
+    "sha256": "c829fac9c94ba94e1c6fc53dcb9f8afb2a91610673a0e727d59bd6fbbbfba82c",
+    "component_count": 14,
+    "authority": "DESIGN_AND_ANALYSIS",
+    "promotion_checkpoint": "BASELINE_02C",
+    "post_promotion_qa": "reports/cad/current/K01_BASELINE_02C_POST_PROMOTION_ASSEMBLY_QA.json"
   },
   "simulation": {
     "study": "Static 1",
-    "assembly_binding": "same_as_cad_baseline",
+    "assembly_binding": "HISTORICAL_PRE_BASELINE02C_CAD",
     "evidence_count": 11,
     "evidence": [
       {
@@ -106,11 +108,34 @@
       "max_displacement_mm": "0.000e+00",
       "max_equivalent_strain": "3.422e-09"
     },
-    "authority": "CURRENT_SOLIDWORKS_SIMULATION_EVIDENCE"
+    "authority": "CURRENT_SOLIDWORKS_SIMULATION_EVIDENCE",
+    "bound_cad": {
+      "assembly": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\verification\\K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+      "logical_source": "cad/candidates/gate04e_p006_service/verification/K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+      "sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4",
+      "component_count": 13,
+      "authority": "DESIGN_AND_ANALYSIS"
+    },
+    "freshness": "STALE_RELATIVE_TO_CURRENT_CAD_BASELINE",
+    "stale_reason": "Preserved historical Simulation evidence is not silently rebound after A001/P003/P016 promotion and P017 addition."
   },
   "release_package": {
     "status": "NOT_AUTHORITY",
     "r01_authority": false
   },
-  "change_rule": "Any replacement requires an explicit baseline-change decision and evidence invalidation/revalidation."
+  "change_rule": "Any replacement requires an explicit baseline-change decision and evidence invalidation/revalidation.",
+  "updated_utc": "2026-09-10T19:48:05.762545+00:00",
+  "baseline_transition": {
+    "id": "K01-BASELINE-02C",
+    "previous_cad": {
+      "assembly": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\verification\\K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+      "logical_source": "cad/candidates/gate04e_p006_service/verification/K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+      "sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4",
+      "component_count": 13,
+      "authority": "DESIGN_AND_ANALYSIS"
+    },
+    "promotion_report": "reports/control/K01_BASELINE_02C_PROMOTION_APPLY_CURRENT.json",
+    "post_promotion_qa": "reports/cad/current/K01_BASELINE_02C_POST_PROMOTION_ASSEMBLY_QA.json",
+    "rule": "CAD authority promoted; release-only OPEN items remain OPEN."
+  }
 }

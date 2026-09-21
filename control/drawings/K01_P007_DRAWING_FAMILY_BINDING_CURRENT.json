@@ -1,0 +1,79 @@
+{
+  "schema": "k01.p007.drawing_family_binding.current.v1",
+  "part": "K01-P-007",
+  "drawing": "K01-D-006",
+  "family": "ROTATIONAL_FLANGED_HOLLOW",
+  "classification": {
+    "rotational_axis": true,
+    "internal_coaxial_geometry": true,
+    "flange": true,
+    "non_axisymmetric_end_features": true,
+    "form_communication_useful": true,
+    "evidence": "P007 CAD + V12 manual exemplar. Three-hole flange pattern requires an end view; internal stepped/coaxial form makes the axial section the useful longitudinal representation."
+  },
+  "view_plan": {
+    "primary": {
+      "role": "AXIAL_FULL_SECTION",
+      "required": true,
+      "preferred_scale": "5:1",
+      "manual_exemplar_observation": "The saved B-B axial section communicates internal form; redundant external longitudinal view was removed."
+    },
+    "secondary": {
+      "role": "FLANGE_END",
+      "required": true,
+      "preferred_scale": "5:1",
+      "manual_exemplar_observation": "Required for 3-hole pattern and flange/locator reading; native C01/C02 transport proven in a linked end/orientation view."
+    },
+    "auxiliary": {
+      "role": "ISOMETRIC",
+      "required": false,
+      "preferred_scale": "2:1",
+      "manual_exemplar_observation": "Keep only for shape comprehension; no release dimension authority."
+    },
+    "omit": [
+      {
+        "role": "AXIAL_EXTERNAL",
+        "reason": "Redundant once AXIAL_FULL_SECTION exists for current controlled/future claim set."
+      }
+    ]
+  },
+  "learned_exemplar_rules": [
+    "MMGS is mandatory; IPS caused correct model values to display as inch values.",
+    "Native Datum A and C02 Ø14.10 H7 transport to linked drawing has been proven in SW2018.",
+    "Historical C01/C02-only exemplar scope is not manufacturing-drawing authority. Release drawing QA is coverage-based from the current Product Definition; valid C05 Ø33 and other required characteristics must be preserved.",
+    "Information-regression guard: no valid characteristic may be deleted/hidden solely to make a temporary exemplar verifier PASS.",
+    "Datum/DRF authoring precedes size/fit and GD&T authoring.",
+    "External longitudinal view is redundant for current P007 communication; axial section is primary.",
+    "V10 fallback notes are design-review carriers and must be absent from release-native D7 scope."
+  ],
+  "claim_role_overrides": {
+    "C01.DATUM_A": "DATUM_FACE",
+    "C02.DIAMETER_FIT": "LOCATING_INTERNAL_DIAMETER",
+    "C02.BORE_DEPTH": "AXIAL_LENGTH",
+    "C04.HOLE_PATTERN": "HOLE_PATTERN",
+    "C05.FLANGE_OD": "FLANGE_OD",
+    "C05.FLANGE_THICKNESS": "AXIAL_THICKNESS",
+    "C06.OAL": "AXIAL_LENGTH",
+    "C07.CAN_OD": "EXTERNAL_DIAMETER",
+    "C08.CAN_ID": "INTERNAL_DIAMETER",
+    "C08.WALL": "WALL_THICKNESS",
+    "C09.MATERIAL": "MATERIAL",
+    "C10.JOINING_PROCESS": "PROCESS_NOTE",
+    "C11.COAXIALITY": "COAXIAL_GDT",
+    "C12.LEAK_ACCEPTANCE": "PROCESS_NOTE",
+    "K01-D006-BLIND-END.THICKNESS": "AXIAL_THICKNESS",
+    "C03.ORIENTATION": "AXIS_ORIENTATION_GDT"
+  },
+  "current_exemplar_evidence": {
+    "capture_status_expected": "PASS_D006_EXEMPLAR_NATIVE_TRANSPORT__D6_CLEANUP_REQUIRED",
+    "native_claims_proven": [
+      "C01.DATUM_A",
+      "C02.DIAMETER_FIT"
+    ],
+    "environment": {
+      "length_unit": "MMGS"
+    },
+    "release": "HOLD"
+  },
+  "release_drawing_rule": "REQUIRED CHARACTERISTICS COME FROM CURRENT PRODUCT DEFINITION FINGERPRINT; no hard-coded C01/C02 allowlist."
+}

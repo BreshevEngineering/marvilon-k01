@@ -1,0 +1,92 @@
+{
+  "schema": "k01.p007.functional_tolerance_plan.v1",
+  "generated_utc": "2026-09-15T12:55:00+00:00",
+  "status": "ACTIVE_ENGINEERING_CLOSURE_PLAN",
+  "change_id": "CHG-K01-D006-CANDIDATE-001",
+  "drawing": "K01-D-006",
+  "model": "K01-P-007",
+  "principle": "Tolerances are derived from functional interfaces and verified by stackup/inspection; manufacturing capability alone is not the acceptance basis.",
+  "functional_chain": [
+    {
+      "id": "FT-01",
+      "function": "Seat P007 repeatably against mating structure",
+      "datum_or_feature": "Datum A = functional mating face set",
+      "drawing_characteristics": [
+        "C01 flatness/orientation strategy"
+      ],
+      "method": "derive from J2 contact/seal/preload function and inspection setup",
+      "numeric_status": "OPEN"
+    },
+    {
+      "id": "FT-02",
+      "function": "Locate P007 axis relative to J2",
+      "datum_or_feature": "Datum B = locator cylindrical feature / axis",
+      "drawing_characteristics": [
+        "C02 locator size/fit",
+        "C03 orientation to A"
+      ],
+      "method": "H7/g6 radial fit plus controlled non-bottoming axial stack: P007 depth 2.00 ±0.05 / P003 pilot length 1.50 ±0.05",
+      "numeric_status": "CONTROLLED_EDR_028_EDR_032__FAI_CAPABILITY_CONFIRMATION_REQUIRED",
+      "release_definition": {
+        "C02": "Ø14.10 H7; depth 2.00 ±0.05 mm from Datum A",
+        "C03": "PERP ⌀0.003(M) | A",
+        "P003_counterpart": "Ø14.10 g6; pilot length 1.50 ±0.05 mm",
+        "bottom_clearance_mm": [
+          0.4,
+          0.6
+        ]
+      }
+    },
+    {
+      "id": "FT-03",
+      "function": "Permit 3-fastener assembly without forcing/misalignment",
+      "datum_or_feature": "3-hole pattern",
+      "drawing_characteristics": [
+        "C04 hole size/pattern/position"
+      ],
+      "method": "ISO 5458 combined-zone pattern with TED PCD/equal spacing; MMR on P007 clearance-hole position preserves the T03 virtual boundary",
+      "numeric_status": "CONTROLLED_EDR_033__INSPECTION_CAPABILITY_CONFIRMATION_REQUIRED",
+      "release_definition": {
+        "C04": "3× Ø2.90 H10 THRU; TED PCD Ø26.50; TED 120°; POSITION ⌀0.15 CZ Ⓜ | A | B",
+        "hole_limits_mm": [
+          2.9,
+          2.94
+        ],
+        "position_at_MMC_mm": 0.15,
+        "position_at_LMC_mm": 0.19,
+        "datum_B_condition": "RFS"
+      }
+    },
+    {
+      "id": "FT-04",
+      "function": "Maintain magnetic/containment radial envelope",
+      "datum_or_feature": "P007 OD10 / ID9.4 thin can zone",
+      "drawing_characteristics": [
+        "C07",
+        "C08",
+        "C11"
+      ],
+      "method": "P007-side radial envelope: unilateral H9/h9 size limits preserve nominal clearances; TOTAL RUNOUT 0.02 to datum B allocates P007 alignment error. Counterpart P008/P015 production/alignment remain separate interface-release items.",
+      "numeric_status": "CONTROLLED_P007_SIDE_EDR_029__COUNTERPART_INTERFACE_RELEASE_SEPARATE",
+      "release_definition": {
+        "C07": "Ø10 h9 = 9.964..10.000 mm",
+        "C08": "Ø9.40 H9 = 9.400..9.436 mm; wall 0.30 REF",
+        "C11": "TOTAL RUNOUT 0.02 | B on OD and ID"
+      }
+    },
+    {
+      "id": "FT-05",
+      "function": "Maintain containment end-wall integrity",
+      "datum_or_feature": "blind end",
+      "drawing_characteristics": [
+        "blind-end tolerance"
+      ],
+      "method": "strength/stability/manufacturing/inspection closure",
+      "numeric_status": "CONTROLLED_EDR_030__FIRST_ARTICLE_CAPABILITY_CONFIRMATION_REQUIRED",
+      "release_definition": {
+        "blind_end": "1.00 ±0.10 mm"
+      }
+    }
+  ],
+  "release_rule": "K01-D-006 cannot be promoted until required functional tolerances have numeric limits, stackup/analysis evidence and inspection method."
+}

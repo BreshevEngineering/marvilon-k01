@@ -1,0 +1,20 @@
+{
+  "schema": "k01.control_namespace_policy.v1",
+  "status": "ACTIVE_MIGRATION_GUARD",
+  "principles": [
+    "One declared authority per critical logical control family.",
+    "Version number in a live control filename is migration debt, not authority selection.",
+    "CURRENT means a current pointer/materialized projection, not a versioning scheme.",
+    "Existing version families may shrink; new sibling versions are blocked.",
+    "Legacy siblings may remain for history but must not become implicit fallback authority.",
+    "Stable unversioned authority names are the migration target; migration is separate and controlled."
+  ],
+  "authority_map": "control/project/K01_AUTHORITY_MAP_CURRENT.json",
+  "namespace_baseline": "control/repo/K01_CONTROL_NAMESPACE_BASELINE.json",
+  "guard": "tools/repo/control_namespace_guard.py",
+  "report": "reports/control/K01_CONTROL_NAMESPACE_GUARD_CURRENT.json",
+  "current_rule": {
+    "allowed": "one logical CURRENT artifact per entity; multiple formats such as JSON+CSV are allowed",
+    "blocked": "new _CURRENT_vN or _Vn_CURRENT siblings, or new same-format CURRENT family conflicts"
+  }
+}

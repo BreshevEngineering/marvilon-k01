@@ -1,7 +1,7 @@
 {
   "schema": "k01.drawing_registry.current.v1",
   "project": "K01",
-  "authority": "Drawing identity and traceability registry. Runtime artifact paths/hashes are derived into reports/control/K01_DRAWING_CONTROL_CURRENT.json.",
+  "authority": "Drawing identity and traceability registry. Runtime artifact paths/hashes are derived into evidence/immutable/ca53a873527cf19e76ac71a9c9089f707b121e9e5b93581e5f97b521e36ac6bd__K01_DRAWING_CONTROL_CURRENT.json.",
   "candidate_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates",
   "current_root": "D:\\Marvilon\\K01\\cad\\drawings\\current",
   "rules": [
@@ -12,7 +12,8 @@
     "Every controlled drawing must link part, assembly, requirement/product-definition sources and current build evidence.",
     "Generic API scope is capability-bounded: unsupported or non-topological characteristics go to manual_finish instead of causing whole-drawing HOLD.",
     "A PARTIAL/HOLD semantic build is evidence only and must never be promoted into current/<drawing_id> as a routine working drawing.",
-    "Registry status fields are declarative trace/readiness context only; live candidate/current PASS/HOLD is derived exclusively by reports/control/K01_DRAWING_CONTROL_CURRENT.json."
+    "Registry status fields are declarative trace/readiness context only; live candidate/current PASS/HOLD is derived exclusively by reports/control/K01_DRAWING_CONTROL_CURRENT.json.",
+    "For candidates created after presentation-gate v2, semantic PASS alone is not publishable; presentation_status must start with PASS_."
   ],
   "drawings": {
     "K01-D-001": {
@@ -34,10 +35,20 @@
     "K01-D-006": {
       "part_id": "K01-P-007",
       "title": "Hermetic Magnetic Can",
-      "spec": "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC_v1.json",
-      "runner": "RUN_K01_D006_DRAWING_SYSTEM_V1.cmd",
-      "status": "GENERIC_ENGINE_PASS_WORKSTATION_20260916__RELEASE_HOLD",
+      "spec": "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC_v2.json",
+      "runner": "RUN_K01_D006_DRAWING_SYSTEM_V2.cmd",
+      "status": "SPEC_V2_PROMOTED__NATIVE_CANDIDATE_AUTHORING_PENDING",
       "view_plan": "LONGITUDINAL_SECTION + J2_END"
+    },
+    "K01-D-004": {
+      "part_id": "K01-P-004",
+      "title": "Front Guide Bushing",
+      "spec": "control/drawings/spec/K01-D-004_P004_DRAWING_SPEC_v1.json",
+      "trace": "control/drawings/trace/K01-D-004_TRACE_CURRENT.json",
+      "runner": "tools/commands/drawing/RUN_K01_D004_ISO_EXEMPLAR_V1.cmd",
+      "status": "ISO_EXEMPLAR_TRIAL__RELEASE_HOLD_PRODUCT_DEFINITION",
+      "authoring_readiness": "READY_FOR_ENGINEERING_REVIEW_ONLY",
+      "view_plan": "LONGITUDINAL MODEL VIEW + END VIEW; Ø5.055 explicitly marked THRU; nominal geometry only while production tolerances/texture remain open."
     }
   },
   "api_scope_policy": "control/drawings/K01_DRAWING_API_SCOPE_CURRENT.json",

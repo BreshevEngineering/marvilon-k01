@@ -1,0 +1,40 @@
+{
+  "schema": "k01.nonmodeled_j2_items.v1",
+  "generated_utc": "2026-09-08T14:09:48.393192+00:00",
+  "status": "HOLD_SUPPLIER_PROCESS_FIELDS",
+  "source_interface": "control/product_definition/K01_J2_FACTUAL_INTERFACE.json",
+  "items": {
+    "NM-J2-CLAMP-SCREW": {
+      "description": "J2 clamp screw",
+      "qty": 3,
+      "make_buy": "BUY",
+      "thread_size": "M2.5",
+      "architecture_status": "CONTROLLED",
+      "release_status": "HOLD",
+      "open_fields": [
+        "standard/head form",
+        "length",
+        "material/grade",
+        "finish/lubrication",
+        "supplier/MPN"
+      ]
+    },
+    "NM-J2-SEAL": {
+      "description": "J2 static O-ring face seal",
+      "qty": 1,
+      "make_buy": "BUY",
+      "nominal_size": "16 x 1.5 mm",
+      "candidate_material": "FKM 75A",
+      "controlled_fallback": "FFKM",
+      "architecture_status": "CONTROLLED",
+      "release_status": "HOLD",
+      "open_fields": [
+        "media compatibility",
+        "exact supplier compound",
+        "supplier/MPN",
+        "compression force",
+        "leak acceptance"
+      ]
+    }
+  }
+}

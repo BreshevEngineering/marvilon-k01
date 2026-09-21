@@ -1,0 +1,166 @@
+{
+  "schema": "k01.d006.release_definition.v1",
+  "generated_utc": "2026-09-14T06:55:00+00:00",
+  "drawing_no": "K01-D-006",
+  "title": "Hermetic Magnetic Can",
+  "model": "K01-P-007",
+  "status": "HOLD_PRODUCT_DEFINITION_RELEASE_CLOSURE__FULL_MANUFACTURING_DRAWING_NOT_AUTHORIZED",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "requirements": {
+    "production_technical_definition": "REQ-K01-TPD-001",
+    "material": "REQ-K01-MAT-P007-001",
+    "locator": "REQ-K01-J2-LOC-001",
+    "overall_length": "REQ-K01-P007-L-001",
+    "pressure_envelope": "REQ-K01-ENV-DP-001"
+  },
+  "already_proven": {
+    "material": "AISI 316L / EN 1.4404",
+    "overall_length_mm": 35.0,
+    "locator_nominal_mm": 14.1,
+    "locator_fit_architecture": "H7/g6 pair",
+    "flange_OD_nominal_mm": 33.0,
+    "clamp_pattern": "3 x Ø2.90 clearance on PCD 26.5",
+    "thin_zone_nominal": "OD10.0 / ID9.4 / radial wall 0.30 mm",
+    "blind_end_native_nominal_mm": 1.0,
+    "PMI_nominal_pilot": {
+      "C02": "PASS save/close/reopen",
+      "C05": "PASS save/close/reopen"
+    }
+  },
+  "next_authoring_scope": [
+    "C01 functional Datum A representation from composite coplanar mating-face set",
+    "C02 Datum B symbol / released locator size-fit semantics",
+    "C03 released perpendicularity semantics if still controlled",
+    "C04 3-hole pattern + position semantics if still controlled",
+    "C05 released flange size tolerance semantics",
+    "C06 P007 OAL 35.0 binding",
+    "C09 material note",
+    "C07 released thin-can OD size",
+    "C08 released thin-can ID size / wall reference",
+    "C11 released total-runout semantics"
+  ],
+  "release_blockers": [
+    "DRAWING-TEMPLATE-BINDING",
+    "C12 quantitative leak/containment acceptance",
+    "thin-wall/blind-end manufacturing capability",
+    "inspection/release measurement conditions",
+    "surface texture on functionally required surfaces",
+    "configuration/effectivity + final binding-invariance qualification"
+  ],
+  "source_product_characteristics_status": "HOLD_OPEN_SPEC",
+  "source_pmi_scope_status": "READY_FOR_FIRST_CONTROLLED_PMI_WRITE",
+  "source_pmi_write_evidence_status": "PASS_PILOT_SAVE_CLOSE_REOPEN",
+  "legacy_drawing_plan_entry": {
+    "blocking_items": [
+      "K01-D006-LOCATOR",
+      "K01-D006-THIN-WALL",
+      "K01-D006-BLIND-END",
+      "K01-D006-CONCENTRICITY"
+    ],
+    "characteristics": [
+      {
+        "authority": "material_state",
+        "definition_state": "DERIVED_NON_DIMENSIONAL",
+        "drawing_release_authority": "READY",
+        "evidence": {},
+        "id": "K01-D006-MAT",
+        "role": "material",
+        "source": "material_state",
+        "tolerance_release_state": null
+      },
+      {
+        "authority": "interface_parameter+native_geometry",
+        "definition_state": "CONTROLLED_PARAMETER_VERIFIED",
+        "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+        "evidence": {
+          "cad_model_present": true,
+          "controlled_parameters": {
+            "pilot_fit": "H7/g6",
+            "pilot_nominal_diameter_mm": 14.1
+          }
+        },
+        "id": "K01-D006-LOCATOR",
+        "role": "J2 mating locator characteristic",
+        "source": "controlled_parameter+cad_presence",
+        "tolerance_release_state": null
+      },
+      {
+        "authority": "EDR-029",
+        "definition_state": "CONTROLLED_REQUIREMENT",
+        "drawing_release_authority": "MBD_BIND_REQUIRED",
+        "evidence": {},
+        "id": "K01-D006-THIN-WALL",
+        "role": "containment thin-wall zone",
+        "source": "control/decisions/EDR-029_P007_C07_C08_C11_RADIAL_ENVELOPE_RELEASE.json",
+        "tolerance_release_state": null
+      },
+      {
+        "id": "K01-D006-J2-PROCESS-ARCH",
+        "role": "removable J2 process architecture",
+        "authority": "EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE",
+        "source": "control/decisions/EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE.json",
+        "definition_state": "CONTROLLED",
+        "drawing_release_authority": "NO_WELD_SYMBOL; assembly/process reference only when released",
+        "tolerance_release_state": null,
+        "evidence": {
+          "permanent_P003_P007_weld": "REJECTED"
+        }
+      },
+      {
+        "authority": "native_geometry",
+        "definition_state": "SEMANTIC_BIND_REQUIRED",
+        "drawing_release_authority": "MBD_REQUIRED_FOR_DRAWING",
+        "evidence": {},
+        "id": "K01-D006-BLIND-END",
+        "role": "blind end geometry",
+        "source": null,
+        "tolerance_release_state": null
+      },
+      {
+        "authority": "EDR-029",
+        "definition_state": "CONTROLLED_REQUIREMENT",
+        "drawing_release_authority": "MBD_BIND_REQUIRED",
+        "evidence": {},
+        "id": "K01-D006-CONCENTRICITY",
+        "role": "critical concentricity/coaxiality control",
+        "source": "control/decisions/EDR-029_P007_C07_C08_C11_RADIAL_ENVELOPE_RELEASE.json",
+        "tolerance_release_state": null
+      }
+    ],
+    "drawing_no": "K01-D-006",
+    "model": "K01-P-007",
+    "status": "BLOCKED_PRODUCT_DEFINITION",
+    "title": "Hermetic Magnetic Can"
+  },
+  "policy": "Do not generate a released SLDDRW/PDF until required MBD/spec characteristics and template binding are closed. A candidate drawing may be generated next, but open tolerances must remain visibly OPEN and must not be invented.",
+  "candidate_state": "CURRENT_PROFESSIONAL_DESIGN_REVIEW_CANDIDATE_BUILT",
+  "candidate_slddrw": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-006\\professional_20260911_180818\\K01-D-006_Hermetic_Magnetic_Can_PROFESSIONAL_CANDIDATE_20260911_180839.SLDDRW",
+  "candidate_pdf": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-006\\professional_20260911_180818\\K01-D-006_Hermetic_Magnetic_Can_PROFESSIONAL_CANDIDATE_20260911_180839.PDF",
+  "candidate_bmp_preview": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-006\\professional_20260911_180818\\K01-D-006_Hermetic_Magnetic_Can_PROFESSIONAL_CANDIDATE_20260911_180839.BMP",
+  "candidate_verification": "reports/control/K01_D006_PROFESSIONAL_CANDIDATE_CURRENT.json",
+  "current_pmi_evidence": "reports/control/K01_P007_PMI_PROVEN_CURRENT.json",
+  "C10_process_architecture": {
+    "status": "CONTROLLED",
+    "decision": "EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE",
+    "P007": "MONOLITHIC_MACHINED_316L_INTEGRAL_BLIND_END",
+    "J2": "REMOVABLE_STATIC_O_RING_3XM2P5_CLAMP",
+    "drawing_rule": "NO P003↔P007 WELD SYMBOL"
+  },
+  "policy_note": "Full drawing is coverage-based from Product Definition. Valid C05 and other required characteristics must not be hidden/deleted merely to satisfy a historical exemplar gate.",
+  "C07_C08_C11_radial_envelope": {
+    "status": "CONTROLLED",
+    "decision": "EDR-029_P007_C07_C08_C11_RADIAL_ENVELOPE_RELEASE",
+    "C07": "Ø10 h9",
+    "C08": "Ø9.40 H9; wall 0.30 REF",
+    "C11": "TOTAL RUNOUT 0.02 | B on OD and ID",
+    "counterpart_boundary": "P008/P015 production/alignment remain separate interface release items"
+  },
+  "EDR_030_primary_dimensions": {
+    "status": "CONTROLLED",
+    "C01": "FLATNESS 0.03 CZ on Datum-A two-patch set",
+    "C05": "Ø33.00 ±0.05; thickness 3.00 ±0.05",
+    "C06": "35.00 ±0.05",
+    "blind_end": "1.00 ±0.10",
+    "edge_condition": "CONTROLLED_NONFUNCTIONAL_0P1_TO_0P2_WITH_FUNCTIONAL_EXCLUSIONS"
+  }
+}

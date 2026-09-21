@@ -1,0 +1,13 @@
+{
+  "schema": "k01.assembly_approval.stage_a.commit_manifest.v1",
+  "generated_utc": "2026-09-09T09:11:42.116791+00:00",
+  "status": "READY_FOR_REVIEW",
+  "stage_paths": [
+    "reports/cad/assembly_approval/K01_ASSEMBLY_APPROVAL_NATIVE_CURRENT.json",
+    "reports/cad/assembly_approval/K01_ASSEMBLY_APPROVAL_STAGE_A_CURRENT.json",
+    "reports/cad/assembly_approval/K01_ASSEMBLY_APPROVAL_STAGE_A_CURRENT.md",
+    "reports/cad/assembly_approval/K01_SHARED_EQUATION_BINDING_REVIEW_CURRENT.json",
+    "reports/cad/assembly_approval/K01_SHARED_EQUATION_BINDING_REVIEW_CURRENT.csv"
+  ],
+  "recommended_commit_message": "cad: audit canonical A001 assembly approval stage A"
+}

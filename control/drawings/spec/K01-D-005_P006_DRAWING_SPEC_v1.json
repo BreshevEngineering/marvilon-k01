@@ -1,0 +1,345 @@
+{
+  "schema": "k01.drawing_system_spec.v1",
+  "drawing_id": "K01-D-005",
+  "part_id": "K01-P-006",
+  "title": "Retaining Plug",
+  "status": "ENGINEERING_REVIEW__SYSTEM_QUALIFICATION",
+  "model_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-006_Retaining_Plug.SLDPRT",
+  "output_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-005",
+  "sheet": "A3",
+  "sheet_scale": 8.0,
+  "projection": "FIRST_ANGLE",
+  "units": "mm",
+  "material": "AISI 316L / EN 1.4404",
+  "view_definitions": [
+    {
+      "id": "SECTION_AA",
+      "kind": "LONGITUDINAL_SECTION",
+      "parent_orientation": "*Front",
+      "section_label": "A",
+      "x_m": 0.118,
+      "y_m": 0.122,
+      "scale": 8.0,
+      "show_parent": true,
+      "parent_x_m": 0.118,
+      "parent_y_m": 0.224,
+      "section_depth_m": 0.0
+    },
+    {
+      "id": "END_SERVICE",
+      "kind": "MODEL_VIEW",
+      "orientation": "*Right",
+      "x_m": 0.292,
+      "y_m": 0.157,
+      "scale": 8.0
+    },
+    {
+      "id": "ISOMETRIC_REFERENCE",
+      "kind": "MODEL_VIEW",
+      "orientation": "*Isometric",
+      "x_m": 0.315,
+      "y_m": 0.238,
+      "scale": 4.0
+    }
+  ],
+  "bindings": {
+    "THROUGH_BORE": {
+      "kind": "CYLINDER",
+      "diameter_mm": 6.0,
+      "count": 1
+    },
+    "HEAD_OD": {
+      "kind": "CYLINDER",
+      "diameter_mm": 11.5,
+      "count": 1
+    },
+    "THREAD_GEOM_AXIS": {
+      "kind": "CYLINDER",
+      "diameter_mm": 10.8,
+      "count": 1
+    },
+    "RELIEF_OD": {
+      "kind": "CYLINDER",
+      "diameter_mm": 9.1,
+      "count": 1
+    },
+    "SERVICE_HOLES": {
+      "kind": "CYLINDER_SET",
+      "diameter_mm": 1.5,
+      "count": 2
+    },
+    "THREAD_END_1": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "THREAD_GEOM_AXIS",
+      "end": "MIN_X",
+      "selection": "NEAREST_PLANE_TO_APPROX_CYL_TRIM_X__LARGEST_AREA_IF_COPLANAR"
+    },
+    "THREAD_END_2": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "THREAD_GEOM_AXIS",
+      "end": "MAX_X",
+      "selection": "NEAREST_PLANE_TO_APPROX_CYL_TRIM_X__LARGEST_AREA_IF_COPLANAR"
+    },
+    "RELIEF_END_1": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "RELIEF_OD",
+      "end": "MIN_X",
+      "selection": "NEAREST_PLANE_TO_APPROX_CYL_TRIM_X__LARGEST_AREA_IF_COPLANAR"
+    },
+    "RELIEF_END_2": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "RELIEF_OD",
+      "end": "MAX_X",
+      "selection": "NEAREST_PLANE_TO_APPROX_CYL_TRIM_X__LARGEST_AREA_IF_COPLANAR"
+    }
+  },
+  "datum_features": [],
+  "characteristics": [
+    {
+      "id": "P006-C01",
+      "interface": "P006",
+      "role": "retaining thread",
+      "spec": "M12×1-6g ×6",
+      "source": "controlled P006",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "P006-C02",
+      "interface": "P006",
+      "role": "head OD",
+      "spec": "Ø11.50 h9 (11.457…11.500)",
+      "source": "WP-T03",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "P006-C03",
+      "interface": "P006",
+      "role": "through bore",
+      "spec": "Ø6.00",
+      "source": "controlled P006",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "P006-C04",
+      "interface": "P006",
+      "role": "service drive",
+      "spec": "2× Ø1.50 +0.05/0 blind ×1.20±0.05 deep on PCD Ø8.50 BASIC, 180° BASIC",
+      "source": "WP-T03",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "P006-C05",
+      "interface": "P006",
+      "role": "service drive position",
+      "spec": "position Ø0.10 relative to P006 thread axis",
+      "source": "WP-T03",
+      "state": "CONTROLLED_NUMERIC__DATUM_SEMANTIC_BINDING_OPEN"
+    },
+    {
+      "id": "P006-C06",
+      "interface": "P006",
+      "role": "P002 axial relief",
+      "spec": "Ø9.10×0.06 relief; resulting P002 float 0.04…0.08",
+      "source": "K01 assembly/service router",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "P006-C07",
+      "interface": "P006",
+      "role": "material",
+      "spec": "AISI 316L / EN 1.4404",
+      "source": "controlled material",
+      "state": "CONTROLLED"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "P006-C01-THREAD",
+      "kind": "NOTE",
+      "view": "SECTION_AA",
+      "text": "M12×1-6g",
+      "state": "CONTROLLED",
+      "x_m": 0.052,
+      "y_m": 0.177
+    },
+    {
+      "id": "P006-C01-LENGTH",
+      "kind": "LINEAR",
+      "view": "SECTION_AA",
+      "from_binding": "THREAD_END_1",
+      "to_binding": "THREAD_END_2",
+      "nominal_mm": 6.0,
+      "precision": 2,
+      "state": "CONTROLLED",
+      "x_m": 0.118,
+      "y_m": 0.182
+    },
+    {
+      "id": "P006-C02-HEAD-OD",
+      "kind": "DIAMETER",
+      "view": "END_SERVICE",
+      "binding": "HEAD_OD",
+      "nominal_mm": 11.5,
+      "shaft_fit": "h9",
+      "precision": 2,
+      "state": "CONTROLLED",
+      "x_m": 0.343,
+      "y_m": 0.176
+    },
+    {
+      "id": "P006-C03-BORE",
+      "kind": "DIAMETER",
+      "view": "END_SERVICE",
+      "binding": "THROUGH_BORE",
+      "nominal_mm": 6.0,
+      "precision": 2,
+      "state": "CONTROLLED",
+      "x_m": 0.344,
+      "y_m": 0.142
+    },
+    {
+      "id": "P006-C04-HOLE-SIZE",
+      "kind": "DIAMETER_SET",
+      "view": "END_SERVICE",
+      "binding": "SERVICE_HOLES",
+      "nominal_mm": 1.5,
+      "upper_tol_mm": 0.05,
+      "lower_tol_mm": 0.0,
+      "precision": 2,
+      "prefix": "2× ",
+      "suffix": " BLIND",
+      "state": "CONTROLLED",
+      "x_m": 0.348,
+      "y_m": 0.201
+    },
+    {
+      "id": "P006-C04-DEPTH",
+      "kind": "NOTE",
+      "view": "END_SERVICE",
+      "text": "2× BLIND DEPTH 1.20 ±0.05",
+      "state": "CONTROLLED",
+      "x_m": 0.247,
+      "y_m": 0.204
+    },
+    {
+      "id": "P006-C04-PCD",
+      "kind": "TED_NOTE",
+      "view": "END_SERVICE",
+      "text": "Ø8.50",
+      "state": "CONTROLLED",
+      "x_m": 0.273,
+      "y_m": 0.222
+    },
+    {
+      "id": "P006-C04-ANGLE",
+      "kind": "TED_NOTE",
+      "view": "END_SERVICE",
+      "text": "180°",
+      "state": "CONTROLLED",
+      "x_m": 0.321,
+      "y_m": 0.222
+    },
+    {
+      "id": "P006-C05-POS-CAND",
+      "kind": "GTOL",
+      "view": "END_SERVICE",
+      "binding": "SERVICE_HOLES",
+      "symbol": "POSITION",
+      "diameter_zone": true,
+      "tolerance_mm": 0.1,
+      "state": "CANDIDATE_NUMERIC__THREAD_AXIS_DATUM_DESIGNATOR_OPEN",
+      "x_m": 0.3,
+      "y_m": 0.105
+    },
+    {
+      "id": "P006-C05-AXIS-RELATION",
+      "kind": "NOTE",
+      "view": "END_SERVICE",
+      "text": "POSITION Ø0.10 RELATIVE TO P006 THREAD AXIS — DATUM DESIGNATOR / SEMANTIC BINDING OPEN",
+      "state": "OPEN",
+      "x_m": 0.222,
+      "y_m": 0.086
+    },
+    {
+      "id": "P006-C06-RELIEF-OD",
+      "kind": "DIAMETER",
+      "view": "SECTION_AA",
+      "binding": "RELIEF_OD",
+      "nominal_mm": 9.1,
+      "precision": 2,
+      "state": "CONTROLLED",
+      "x_m": 0.173,
+      "y_m": 0.145
+    },
+    {
+      "id": "P006-C06-RELIEF-WIDTH",
+      "kind": "LINEAR",
+      "view": "SECTION_AA",
+      "from_binding": "RELIEF_END_1",
+      "to_binding": "RELIEF_END_2",
+      "nominal_mm": 0.06,
+      "precision": 2,
+      "state": "CONTROLLED",
+      "x_m": 0.166,
+      "y_m": 0.093
+    },
+    {
+      "id": "P006-C06-FUNCTION",
+      "kind": "NOTE",
+      "view": "SECTION_AA",
+      "text": "P002 AXIAL RELIEF: Ø9.10×0.06; RESULTING P002 FLOAT 0.04…0.08",
+      "state": "CONTROLLED_FUNCTIONAL",
+      "x_m": 0.045,
+      "y_m": 0.075
+    }
+  ],
+  "title_block_properties": {
+    "DrawingNo": "K01-D-005",
+    "PartNo": "K01-P-006",
+    "Title": "Retaining Plug",
+    "Material": "AISI 316L / EN 1.4404",
+    "Status": "ENGINEERING REVIEW",
+    "Units": "mm",
+    "Projection": "FIRST_ANGLE",
+    "Scale": "8:1",
+    "Revision": ""
+  },
+  "release_blockers": [
+    "D005 Product Definition remains BLOCKED_PRODUCT_DEFINITION in the current release plan.",
+    "Service-drive position tolerance requires released datum designator / semantic binding to the P006 thread axis.",
+    "Drawing revision remains OPEN_RELEASE_REVISION.",
+    "Automatic section presentation remains subject to D8 visual qualification in SOLIDWORKS 2018."
+  ],
+  "review_notes": [
+    "ENGINEERING REVIEW — NOT FOR MANUFACTURE",
+    "UNSPECIFIED NOMINAL GEOMETRY: CONTROLLED NATIVE SOLIDWORKS MODEL. DO NOT SCALE DRAWING.",
+    "DEBURR; BREAK SHARP EDGES 0.1–0.2 UNLESS FUNCTIONAL EDGE IS SPECIFIED.",
+    "CLEAN/PASSIVATE 316L AS APPROVED PROCESS; NO ABRASIVE DAMAGE ON SEAL/FIT SURFACES.",
+    "OPEN: P006 SERVICE-DRIVE POSITION DATUM DESIGNATOR / SEMANTIC BINDING.",
+    "MATERIAL: AISI 316L / EN 1.4404"
+  ],
+  "review_note_x_m": 0.025,
+  "review_note_y_m": 0.066,
+  "review_note_step_m": 0.0075,
+  "view_strategy": {
+    "primary_representation": "LONGITUDINAL_SECTION",
+    "primary_reason": "Thread length, through bore and 0.06 axial relief require an axial manufacturing view; section presentation must be visually qualified.",
+    "interface_end_views": [
+      {
+        "view": "END_SERVICE",
+        "interface": "SERVICE_END",
+        "required": true,
+        "reason": "Two-pin service pattern, PCD/TED and head/bore diameters are end-view characteristics."
+      }
+    ],
+    "minimum_view_rule": "SECTION_AA + END_SERVICE carry production semantics; isometric is reference only."
+  },
+  "spec_revision": "v1_system_qualification_20260920",
+  "source_intent": "K01-D-005_P006_DRAWING_INTENT_v1.json",
+  "compiler_notes": [
+    "The source intent lists SECTION_AA, END_SERVICE and ISOMETRIC_REFERENCE as views.",
+    "P006-C06 names DETAIL_RELIEF although DETAIL_RELIEF is absent from the source view list.",
+    "For this qualification P006-C06 is projected on SECTION_AA so no unapproved fourth view is invented.",
+    "P006-C05 numeric position requirement is drawn as candidate/open because the release plan still requires thread-axis semantic/datum binding."
+  ]
+}

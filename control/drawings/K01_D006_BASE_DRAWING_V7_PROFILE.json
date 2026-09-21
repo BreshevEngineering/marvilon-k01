@@ -1,0 +1,23 @@
+{
+  "schema": "k01.d006.base_drawing_v7.profile.v1",
+  "status": "CONTROLLED_DRAWING_AUTHORING_INPUT",
+  "drawing": "K01-D-006",
+  "part": "K01-P-007",
+  "material": "AISI 316L / EN 1.4404",
+  "policy": "Build a usable native linked base drawing from model geometry and controlled characteristics. Do not invent OPEN tolerances. Direct associative drawing reference dimensions are permitted as a SW2018 compatibility projection from the same bound model entities; native model PMI remains semantic authority.",
+  "characteristics": {
+    "C02": {"diameter_mm": 14.10, "fit": "H7", "depth_mm_nominal": 2.00, "depth_tolerance": "OPEN"},
+    "C04": {"quantity": 3, "hole_diameter_mm": 2.90, "pcd_mm_nominal": 26.50, "angle_deg_basic": 120.0, "position_tolerance": "OPEN"},
+    "C05": {"flange_od_mm": 33.00, "flange_thickness_mm": 3.00, "release_tolerance": "OPEN"},
+    "C06": {"overall_length_mm": 35.00, "release_tolerance": "OPEN"},
+    "C07": {"thin_can_od_mm": 10.00, "release_tolerance": "OPEN"},
+    "C08": {"thin_can_id_mm": 9.40, "radial_wall_mm_nominal": 0.30, "release_tolerance": "OPEN"},
+    "BLIND_END": {"thickness_mm_nominal": 1.00, "release_tolerance": "OPEN"}
+  },
+  "release_boundary": [
+    "C05/C06/C07/C08/BLIND_END are nominal-only until release tolerances close",
+    "C04 position tolerance remains OPEN",
+    "C02 bore depth tolerance remains OPEN",
+    "C10/C11/C12 remain OPEN and are not authored by this base-drawing pass"
+  ]
+}

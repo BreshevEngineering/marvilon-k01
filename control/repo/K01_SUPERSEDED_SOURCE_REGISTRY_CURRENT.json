@@ -1,0 +1,46 @@
+{
+  "schema": "k01.superseded_source_registry.current.v1",
+  "generated_utc": "2026-09-14T06:55:00+00:00",
+  "status": "MIGRATION_REQUIRED_UNTIL_RUNNER_PASSES",
+  "archive_root": "archive/",
+  "policy": "Confirmed superseded/history sources live only under archive/. Archive/history are excluded from default AI handoff and never compete with active authority.",
+  "move_units": [
+    {
+      "source_path": ".local_archive",
+      "archive_path": "archive/legacy/local_archive",
+      "kind": "DIRECTORY",
+      "source_file_count": 56,
+      "source_tree_sha256": "eec3df140adae3059b460b14a8705dcda542ef1b86b9caa2977ff29fb639570b"
+    },
+    {
+      "source_path": "docs/history",
+      "archive_path": "archive/legacy/docs/history",
+      "kind": "DIRECTORY",
+      "source_file_count": 4,
+      "source_tree_sha256": "3878564bf90830b06a32a24d3f30123155c6b38dc9f1fe6443a3814775f2fbfa"
+    },
+    {
+      "source_path": "cad_api/history",
+      "archive_path": "archive/legacy/cad_api/history",
+      "kind": "DIRECTORY",
+      "source_file_count": 1,
+      "source_tree_sha256": "80b6ca11775149d5983af51f87de3154abfcdedb8b81194d9b1382e4a5caf6eb"
+    },
+    {
+      "source_path": "docs/K01_P003_P007_MANUFACTURING_ASSEMBLY.md",
+      "archive_path": "archive/superseded/20260914/docs/K01_P003_P007_MANUFACTURING_ASSEMBLY.md",
+      "kind": "FILE",
+      "source_sha256": "a012976ba8d6d3bc0a4e15bc873c044dc4b4b553cad37bbbb32d5e1898969fb6"
+    }
+  ],
+  "must_be_absent_from_active_tree": [
+    ".local_archive",
+    "docs/history",
+    "cad_api/history",
+    "docs/K01_P003_P007_MANUFACTURING_ASSEMBLY.md"
+  ],
+  "active_replacements": {
+    "docs/K01_P003_P007_MANUFACTURING_ASSEMBLY.md": "docs/K01_P007_J2_MANUFACTURING_BASELINE_CURRENT.md"
+  },
+  "authority_rule": "No newest-file-wins. Active authority is explicit in authority map/decision/Product Definition; archive content is decision history only."
+}

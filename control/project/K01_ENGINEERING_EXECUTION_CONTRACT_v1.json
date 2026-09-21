@@ -1,0 +1,61 @@
+{
+  "schema": "k01.engineering_execution_contract.v1_2",
+  "project": "K01",
+  "purpose": "Stage-entry contract. Prevents work from jumping ahead or drifting sideways when a predecessor definition is incomplete.",
+  "stages": [
+    {
+      "id": "S0_REQUIREMENT",
+      "entry": "need/problem exists",
+      "exit": "requirement/interface envelope is explicit with acceptance or explicit OPEN state"
+    },
+    {
+      "id": "S1_ENGINEERING_DECISION",
+      "entry": "S0 complete",
+      "exit": "selected concept/alternative rationale and technical-filter disposition recorded"
+    },
+    {
+      "id": "S2_PRODUCT_DEFINITION",
+      "entry": "S1 complete",
+      "exit": "stable characteristic IDs define nominal, variation semantics, material/process and release/open disposition"
+    },
+    {
+      "id": "S3_CAD_BINDING_MBD",
+      "entry": "S2 DRAWING_CANDIDATE_READY or PMI_AUTHORING_READY as applicable",
+      "exit": "deterministic CAD binding + native PMI/annotation semantic readback"
+    },
+    {
+      "id": "S4_ANALYSIS_VARIATION",
+      "entry": "required inputs from S2/S3 controlled",
+      "exit": "strength/thermal/magnetic/tolerance/process evidence closes applicable characteristic decisions"
+    },
+    {
+      "id": "S5_DRAWING_PROJECTION",
+      "entry": "Product Definition guard PASS_DRAWING_CANDIDATE_READY",
+      "exit": "SLDDRW contains only compiled controlled values or explicit OPEN callouts; semantic QA PASS"
+    },
+    {
+      "id": "S6_INSPECTION_ACCEPTANCE",
+      "entry": "characteristics defined",
+      "exit": "inspection method/acceptance linked for release characteristics"
+    },
+    {
+      "id": "S7_RELEASE",
+      "entry": "all release blockers closed; semantic+visual+technical-filter QA PASS",
+      "exit": "promoted released artifacts + immutable evidence"
+    }
+  ],
+  "hard_rules": [
+    "No S5 implementation may read raw legacy candidate_spec text as drawing authority.",
+    "No stage may silently convert OPEN into a numeric value.",
+    "Any method pivot updates decision log, next actions, architecture and execution-method registry before implementation.",
+    "Any generated artifact carries source fingerprints and compiled-definition fingerprint.",
+    "Center is derived visualization/orchestration and cannot override stage/gate state.",
+    "Every Class A/B change must run pre-change impact analysis against the authoritative engineering build graph before implementation.",
+    "Every derived artifact is stale when its consumed upstream state fingerprint changes; manual PASS/status edits cannot restore freshness.",
+    "A shared-interface change triggers COUNTERPART_REVIEW_REQUIRED for all controlled participants; the system must never auto-edit the counterpart part.",
+    "Rebuild/reverification follows topological dependency order; release remains HOLD while any required release-path node is STALE, DRIFT, BLOCKED or HOLD.",
+    "At S5, a controlled PROJECTION_FALLBACK callout may satisfy design-review semantic projection only when it is generated from the compiled Product Definition, carries the compiled fingerprint in evidence, and is explicitly classified as fallback. It cannot by itself satisfy release-native-carrier requirements.",
+    "Semantic drawing QA and visual drawing QA are independent. Complete semantic projection does not imply professional visual quality or release readiness."
+  ],
+  "change_propagation": "docs/architecture/K01_ENGINEERING_CHANGE_PROPAGATION_v1.md"
+}

@@ -1,0 +1,517 @@
+{
+  "schema": "k01.drawing_system_spec.v1",
+  "drawing_id": "K01-D-006",
+  "part_id": "K01-P-007",
+  "title": "Hermetic Magnetic Can",
+  "status": "RELEASE_CANDIDATE_AUTHORING",
+  "model_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+  "output_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-006",
+  "sheet": "A3",
+  "sheet_scale": 2.0,
+  "projection": "FIRST_ANGLE",
+  "units": "mm",
+  "material": "EN 1.4404 / AISI 316L",
+  "datum_features": [
+    {
+      "id": "A",
+      "feature": "J2 mating/seal-contact plane",
+      "selector": "J2_MATING_TAG",
+      "binding": "J2_MATING_TAG",
+      "interface_id": "J2",
+      "view": "SECTION"
+    },
+    {
+      "id": "B",
+      "feature": "Ø14.10 H7 locator-bore derived axis",
+      "selector": "CYL_DIA_14.10",
+      "binding": "J2_LOCATOR_BORE",
+      "interface_id": "J2",
+      "view": "J2_END"
+    }
+  ],
+  "characteristics": [
+    {
+      "id": "C01",
+      "interface": "J2",
+      "role": "mating/seal plane datum and combined flatness",
+      "spec": "DATUM A; FLATNESS 0.03 CZ across two controlled coplanar J2 contact patches",
+      "source": "EDR-030 / K01_P007_PRODUCT_CHARACTERISTICS.datum_A",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "C02",
+      "interface": "J2",
+      "role": "radial locator and engagement depth",
+      "spec": "Ø14.10 H7; depth 2.00 ±0.05",
+      "source": "EDR-024 / EDR-032",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "C03",
+      "interface": "J2",
+      "role": "locator-axis orientation",
+      "spec": "PERP ⌀0.003(M) | A on Ø14.10 H7 locator-bore derived axis",
+      "source": "EDR-028",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "C04",
+      "interface": "J2",
+      "role": "three-hole clamp pattern",
+      "spec": "3× Ø2.90 H10 THRU; TED Ø26.50; TED 120°; POSITION ⌀0.15 CZ Ⓜ | A | B",
+      "source": "EDR-033",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "C05",
+      "interface": "J2",
+      "role": "flange size",
+      "spec": "Ø33.00 ±0.05; flange thickness 3.00 ±0.05",
+      "source": "EDR-030",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "C06",
+      "interface": "GENERAL",
+      "role": "overall length",
+      "spec": "35.00 ±0.05",
+      "source": "EDR-030",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "C07",
+      "interface": "CAN",
+      "role": "thin-can OD",
+      "spec": "Ø10.00 h9; TOTAL RUNOUT 0.02 | B",
+      "source": "EDR-029",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "C08",
+      "interface": "CAN",
+      "role": "thin-can ID",
+      "spec": "Ø9.40 H9; TOTAL RUNOUT 0.02 | B",
+      "source": "EDR-029",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "BLIND",
+      "interface": "CAN",
+      "role": "integral blind-end containment wall",
+      "spec": "1.00 ±0.10",
+      "source": "EDR-030",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "WALL",
+      "interface": "CAN",
+      "role": "derived nominal wall",
+      "spec": "0.30 REF",
+      "source": "EDR-029",
+      "state": "REFERENCE_DERIVED"
+    },
+    {
+      "id": "SURFACE_J2",
+      "interface": "J2",
+      "role": "seal-contact surface texture",
+      "spec": "Ra ≤ 0.8 µm on J2 Datum-A seal-contact face only",
+      "source": "EDR-037",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "MATERIAL",
+      "interface": "GENERAL",
+      "role": "material",
+      "spec": "EN 1.4404 / AISI 316L",
+      "source": "controlled material",
+      "state": "CONTROLLED"
+    },
+    {
+      "id": "C12",
+      "interface": "J2",
+      "role": "assembled J2 quantitative leak acceptance",
+      "spec": "ASSEMBLED J2: q_He ≤ 1.0e-5 mbar·L/s at |Δp| = 0.20 bar, 20 ±5 °C; both directions unless equivalence is justified",
+      "source": "EDR-035",
+      "state": "CONTROLLED_INTERFACE_ACCEPTANCE"
+    }
+  ],
+  "release_blockers": [
+    "Drawing title-block/projection-symbol template layer is not yet D9-qualified.",
+    "C03 0.003(M) manufacturing and inspection capability requires first-article evidence before product release.",
+    "Thin-wall OD/ID/runout/local-wall capability requires first-article manufacturing evidence before product release."
+  ],
+  "review_notes": [
+    "ENGINEERING REVIEW — NOT FOR MANUFACTURE",
+    "P007 MONOLITHIC; NO PERMANENT P003↔P007 WELD.",
+    "DEBURR; BREAK NON-FUNCTIONAL SHARP EDGES 0.1–0.2 mm.",
+    "DO NOT BREAK/ABRADE DATUM A, Ø14.10 H7 LOCATOR OR SEAL-CONTACT EDGES.",
+    "DO NOT SCALE DRAWING.",
+    "O-RING GLAND IS ON P003; K01-D-006 DEFINES P007 ONLY.",
+    "C12 IS AN ASSEMBLED-J2 ACCEPTANCE; DO NOT INTERPRET qHe AS A BARE-P007 PART LEAK TEST."
+  ],
+  "view_definitions": [
+    {
+      "id": "SECTION",
+      "kind": "LONGITUDINAL_SECTION",
+      "parent_orientation": "*Front",
+      "section_label": "B",
+      "x_m": 0.125,
+      "y_m": 0.15,
+      "scale": 2.0
+    },
+    {
+      "id": "J2_END",
+      "kind": "MODEL_VIEW",
+      "orientation": "*Left",
+      "x_m": 0.305,
+      "y_m": 0.15,
+      "scale": 2.0
+    }
+  ],
+  "bindings": {
+    "J2_LOCATOR_BORE": {
+      "kind": "CYLINDER",
+      "diameter_mm": 14.1,
+      "count": 1
+    },
+    "J2_MATING_TAG": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "J2_LOCATOR_BORE",
+      "end": "MIN_X",
+      "selection": "LARGEST_AREA_COPLANAR"
+    },
+    "J2_MATING_CZ": {
+      "kind": "PLANE_SET_AT_CYL_END",
+      "cylinder": "J2_LOCATOR_BORE",
+      "end": "MIN_X",
+      "area_m2_targets": [
+        0.0005213237389183243,
+        4.491692096470008e-05
+      ]
+    },
+    "J2_LOCATOR_BACK": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "J2_LOCATOR_BORE",
+      "end": "MAX_X"
+    },
+    "FLANGE_OD": {
+      "kind": "CYLINDER",
+      "diameter_mm": 33.0,
+      "count": 1
+    },
+    "FLANGE_BACK": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "FLANGE_OD",
+      "end": "MAX_X"
+    },
+    "CAN_OD": {
+      "kind": "CYLINDER",
+      "diameter_mm": 10.0,
+      "count": 1
+    },
+    "CAN_ID": {
+      "kind": "CYLINDER",
+      "diameter_mm": 9.4,
+      "count": 1
+    },
+    "CAN_OUTER_END": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "CAN_OD",
+      "end": "MAX_X"
+    },
+    "CAN_INNER_END": {
+      "kind": "PLANE_AT_CYL_END",
+      "cylinder": "CAN_ID",
+      "end": "MAX_X"
+    },
+    "CLAMP_HOLES": {
+      "kind": "CYLINDER_SET",
+      "diameter_mm": 2.9,
+      "count": 3
+    }
+  },
+  "annotations": [
+    {
+      "id": "D006-C02-DIA",
+      "kind": "DIAMETER",
+      "view": "J2_END",
+      "binding": "J2_LOCATOR_BORE",
+      "nominal_mm": 14.1,
+      "hole_fit": "H7",
+      "state": "CONTROLLED",
+      "x_m": 0.355,
+      "y_m": 0.155
+    },
+    {
+      "id": "D006-C02-DEPTH",
+      "kind": "LINEAR",
+      "view": "SECTION",
+      "from_binding": "J2_MATING_TAG",
+      "to_binding": "J2_LOCATOR_BACK",
+      "nominal_mm": 2.0,
+      "sym_tol_mm": 0.05,
+      "state": "CONTROLLED",
+      "x_m": 0.105,
+      "y_m": 0.08
+    },
+    {
+      "id": "D006-C04-HOLES",
+      "kind": "DIAMETER_SET",
+      "view": "J2_END",
+      "binding": "CLAMP_HOLES",
+      "nominal_mm": 2.9,
+      "hole_fit": "H10",
+      "prefix": "3× ",
+      "state": "CONTROLLED",
+      "x_m": 0.355,
+      "y_m": 0.11,
+      "suffix": " THRU"
+    },
+    {
+      "id": "D006-C04-TED-PCD",
+      "kind": "TED_NOTE",
+      "view": "J2_END",
+      "text": "Ø26.50",
+      "state": "CONTROLLED",
+      "x_m": 0.275,
+      "y_m": 0.235
+    },
+    {
+      "id": "D006-C04-TED-ANG",
+      "kind": "TED_NOTE",
+      "view": "J2_END",
+      "text": "120°",
+      "state": "CONTROLLED",
+      "x_m": 0.33,
+      "y_m": 0.235
+    },
+    {
+      "id": "D006-C05-OD",
+      "kind": "DIAMETER",
+      "view": "J2_END",
+      "binding": "FLANGE_OD",
+      "nominal_mm": 33.0,
+      "sym_tol_mm": 0.05,
+      "state": "CONTROLLED",
+      "x_m": 0.355,
+      "y_m": 0.185
+    },
+    {
+      "id": "D006-C05-THK",
+      "kind": "LINEAR",
+      "view": "SECTION",
+      "from_binding": "J2_MATING_TAG",
+      "to_binding": "FLANGE_BACK",
+      "nominal_mm": 3.0,
+      "sym_tol_mm": 0.05,
+      "state": "CONTROLLED",
+      "x_m": 0.1,
+      "y_m": 0.225
+    },
+    {
+      "id": "D006-C06-OAL",
+      "kind": "LINEAR",
+      "view": "SECTION",
+      "from_binding": "J2_MATING_TAG",
+      "to_binding": "CAN_OUTER_END",
+      "nominal_mm": 35.0,
+      "sym_tol_mm": 0.05,
+      "state": "CONTROLLED",
+      "x_m": 0.155,
+      "y_m": 0.245
+    },
+    {
+      "id": "D006-C07-OD",
+      "kind": "DIAMETER",
+      "view": "J2_END",
+      "binding": "CAN_OD",
+      "nominal_mm": 10.0,
+      "shaft_fit": "h9",
+      "state": "CONTROLLED",
+      "x_m": 0.255,
+      "y_m": 0.205
+    },
+    {
+      "id": "D006-C08-ID",
+      "kind": "DIAMETER",
+      "view": "J2_END",
+      "binding": "CAN_ID",
+      "nominal_mm": 9.4,
+      "hole_fit": "H9",
+      "state": "CONTROLLED",
+      "x_m": 0.255,
+      "y_m": 0.1
+    },
+    {
+      "id": "D006-BLIND-THK",
+      "kind": "LINEAR",
+      "view": "SECTION",
+      "from_binding": "CAN_INNER_END",
+      "to_binding": "CAN_OUTER_END",
+      "nominal_mm": 1.0,
+      "sym_tol_mm": 0.1,
+      "state": "CONTROLLED",
+      "x_m": 0.205,
+      "y_m": 0.22
+    },
+    {
+      "id": "D006-C01-FLATNESS",
+      "kind": "GTOL",
+      "view": "SECTION",
+      "binding": "J2_MATING_CZ",
+      "symbol": "FLAT",
+      "diameter_zone": false,
+      "tolerance_mm": 0.03,
+      "zone_modifier": "CZ",
+      "state": "CONTROLLED",
+      "x_m": 0.075,
+      "y_m": 0.19
+    },
+    {
+      "id": "D006-C03-PERP",
+      "kind": "GTOL",
+      "view": "SECTION",
+      "binding": "J2_LOCATOR_BORE",
+      "symbol": "PERP",
+      "diameter_zone": true,
+      "tolerance_mm": 0.003,
+      "material_modifier": "M",
+      "datum_1": "A",
+      "state": "CONTROLLED",
+      "x_m": 0.075,
+      "y_m": 0.12
+    },
+    {
+      "id": "D006-C04-POS",
+      "kind": "GTOL",
+      "view": "J2_END",
+      "binding": "CLAMP_HOLES",
+      "symbol": "POSITION",
+      "diameter_zone": true,
+      "tolerance_mm": 0.15,
+      "zone_modifier": "CZ",
+      "material_modifier": "M",
+      "datum_1": "A",
+      "datum_2": "B",
+      "state": "CONTROLLED",
+      "x_m": 0.3,
+      "y_m": 0.075
+    },
+    {
+      "id": "D006-C11-OD-RUNOUT",
+      "kind": "GTOL",
+      "view": "SECTION",
+      "binding": "CAN_OD",
+      "symbol": "TOTAL_RUNOUT",
+      "diameter_zone": false,
+      "tolerance_mm": 0.02,
+      "datum_1": "B",
+      "state": "CONTROLLED",
+      "x_m": 0.205,
+      "y_m": 0.17
+    },
+    {
+      "id": "D006-C11-ID-RUNOUT",
+      "kind": "GTOL",
+      "view": "SECTION",
+      "binding": "CAN_ID",
+      "symbol": "TOTAL_RUNOUT",
+      "diameter_zone": false,
+      "tolerance_mm": 0.02,
+      "datum_1": "B",
+      "state": "CONTROLLED",
+      "x_m": 0.205,
+      "y_m": 0.135
+    },
+    {
+      "id": "D006-J2-RA08",
+      "kind": "SURFACE_FINISH",
+      "view": "SECTION",
+      "binding": "J2_MATING_TAG",
+      "ra_um": 0.8,
+      "state": "CONTROLLED",
+      "x_m": 0.07,
+      "y_m": 0.16
+    },
+    {
+      "id": "D006-WALL-REF",
+      "kind": "NOTE",
+      "view": "SECTION",
+      "text": "WALL 0.30 REF",
+      "state": "REFERENCE",
+      "x_m": 0.125,
+      "y_m": 0.075
+    },
+    {
+      "id": "D006-C12-J2-LEAK",
+      "kind": "NOTE",
+      "view": "SECTION",
+      "text": "J2 ASSEMBLY ACCEPTANCE: qHe ≤ 1×10^-5 mbar·L/s @ |Δp|=0.20 bar, 20±5°C; TEST PER EDR-035.",
+      "state": "CONTROLLED_INTERFACE_ACCEPTANCE",
+      "x_m": 0.17,
+      "y_m": 0.055
+    },
+    {
+      "id": "D006-INSPECTION-REF",
+      "kind": "NOTE",
+      "view": "SECTION",
+      "text": "CONTROLLED CHARACTERISTICS: INSPECT PER K01-P-007 INSPECTION PLAN. C12 IS ASSEMBLED-J2 ACCEPTANCE.",
+      "state": "CONTROLLED",
+      "x_m": 0.25,
+      "y_m": 0.055
+    }
+  ],
+  "title_block_properties": {
+    "DrawingNo": "K01-D-006",
+    "PartNo": "K01-P-007",
+    "Title": "Hermetic Magnetic Can",
+    "Material": "EN 1.4404 / AISI 316L",
+    "Status": "ENGINEERING REVIEW",
+    "Units": "mm",
+    "Projection": "FIRST_ANGLE",
+    "Scale": "2:1",
+    "Revision": ""
+  },
+  "view_strategy": {
+    "primary_representation": "LONGITUDINAL_SECTION",
+    "primary_reason": "The thin-walled hollow can, locator depth, flange thickness and blind-end thickness are manufacturing/inspection relevant and are most directly defined in longitudinal section.",
+    "interface_end_views": [
+      {
+        "view": "J2_END",
+        "interface": "J2",
+        "required": true,
+        "reason": "The flange OD, locator bore and three-hole clamp pattern require a mating-side end view; no additional external longitudinal view adds independent manufacturing information."
+      }
+    ],
+    "minimum_view_rule": "Use the minimum set that fully and unambiguously defines manufacture and inspection. For P007 the functional minimum is LONGITUDINAL_SECTION + J2_END."
+  },
+  "release_basis": [
+    "EDR-025",
+    "EDR-027",
+    "EDR-028",
+    "EDR-029",
+    "EDR-030",
+    "EDR-032",
+    "EDR-033",
+    "EDR-035",
+    "EDR-036",
+    "EDR-037"
+  ],
+  "lifecycle": {
+    "current_level": "L6",
+    "product_definition": "READY",
+    "drawing_tpd": "CANDIDATE",
+    "physical_qualification": "OPEN_L8",
+    "release": "HOLD"
+  },
+  "carry_forward_qualification": [
+    "C12 physical leak qualification",
+    "J2 50-cycle service qualification",
+    "P007 thin-wall/runout/critical-GPS FAI capability",
+    "purchased seal/screw incoming qualification"
+  ],
+  "trace_dispositions": {
+    "EDR-036_FASTENER": "ASSEMBLY_BOM_SERVICE_AUTHORITY__NOT_DIRECT_P007_PART_CHARACTERISTIC",
+    "inspection_plan": "control/inspection/K01_P007_INSPECTION_PLAN_CURRENT.json"
+  }
+}

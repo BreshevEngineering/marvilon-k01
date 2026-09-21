@@ -1,0 +1,14 @@
+{
+  "schema": "k01.bom_blocker_owner_map.v1",
+  "generated_utc": "2026-09-08T14:09:48.393192+00:00",
+  "status": "PASS_SOURCE_OWNER_MAPPED",
+  "canonical_producer": "tools/medtas/build_bom_v1_9.py",
+  "blockers": {
+    "NM-J2-CLAMP-SCREW": [],
+    "NM-J2-SEAL": [],
+    "NM-J2-FASTENER-PROCESS": [],
+    "NM-P007-WELD-PROCESS": [],
+    "MBOM-P007-WELDED-CONSTRUCTION": []
+  },
+  "policy": "Next BOM write must modify the actual source registry/producer input, not a derived EBOM/MBOM row."
+}

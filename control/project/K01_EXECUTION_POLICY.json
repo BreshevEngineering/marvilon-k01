@@ -1,0 +1,50 @@
+{
+  "schema": "k01.execution.policy.v2",
+  "generated_utc": "2026-09-08T18:31:45.568921+00:00",
+  "status": "ACTIVE_BASELINE_02C_PROMOTION",
+  "lanes": [
+    {
+      "lane": "BASELINE",
+      "next": "K01-BASELINE-02C: read-only preflight -> exact existing promotion-source review -> backup/apply -> post-verify -> snapshot -> stale reduction -> EBOM/MBOM."
+    },
+    {
+      "lane": "GOVERNANCE",
+      "next": "Commit/push tested Step15R2; enable GitHub required checks after workflow green."
+    },
+    {
+      "lane": "DRAWINGS",
+      "sequence": [
+        "K01-D-006",
+        "K01-D-003",
+        "K01-D-005",
+        "K01-D-012"
+      ],
+      "next": "PAUSED as active write line until Baseline-02C promotion and applicable P1-P3 definition gates are controlled. K01-D-006/P007 remains first DimXpert/drawing exemplar."
+    },
+    {
+      "lane": "BOM",
+      "next": "After Baseline-02C promotion and fresh canonical semantic export: rebuild EBOM from actual occurrence tree + parts registry, prove 14 modeled occurrences / P017 qty=1, then rebuild MBOM and close remaining process/supply blockers at source."
+    },
+    {
+      "lane": "J2",
+      "next": "Exact M2.5 screw purchasing spec; seal compound/media/leak acceptance; torque-preload calibration."
+    },
+    {
+      "lane": "MAGNETIC",
+      "next": "REQ-K01-ACT-FORCE-001 numeric acceptance; B001 Br(T); P015 winding/driver; physical F(x,I,T); bench."
+    },
+    {
+      "lane": "SIMULATION",
+      "next": "Do not upgrade screening evidence to release PASS. Recompute only when declared inputs are stale; P007 external-pressure/buckling and independent reconciliation/waiver remain open until evidenced."
+    },
+    {
+      "lane": "CENTER",
+      "next": "Remove hardcoded engineering values/actions; UI only consumes evidence/current/K01_CENTER_VIEW.json."
+    },
+    {
+      "lane": "RELEASE",
+      "next": "R01 remains DEFERRED until release blockers close."
+    }
+  ],
+  "rule": "Execution ordering only. Before each step: checkpoint -> authority -> dependency/freshness -> technical filter -> material/BOM/drawing impact -> evidence/rollback. P0-P6 is maturity, not a second state engine."
+}

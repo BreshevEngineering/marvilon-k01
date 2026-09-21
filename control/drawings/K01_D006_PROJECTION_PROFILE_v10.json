@@ -1,0 +1,65 @@
+{
+  "schema": "k01.d006.projection_profile.v10",
+  "drawing": "K01-D-006",
+  "part": "K01-P-007",
+  "sheet": "A3_LANDSCAPE_EXISTING_FORMAT",
+  "projection": "FIRST_ANGLE_PROJECT_CONVENTION",
+  "policy": "Layout-only profile. Engineering values are prohibited here; they come only from the compiled Product Definition.",
+  "view_layout": [
+    {"selector": "Drawing View1", "x_m": 0.082, "y_m": 0.183, "scale": 5.0, "role": "FLANGE_END"},
+    {"selector": "SECTION", "x_m": 0.282, "y_m": 0.183, "scale": 5.0, "role": "SECTION_A_A"},
+    {"selector": "Drawing View2", "x_m": 0.120, "y_m": 0.092, "scale": 2.0, "role": "SIDE_PARENT"},
+    {"selector": "Drawing View3", "x_m": 0.300, "y_m": 0.092, "scale": 2.0, "role": "ISOMETRIC"}
+  ],
+  "callout_zones": {
+    "END": {"x_m": 0.012, "y_start_m": 0.268, "y_step_m": 0.012},
+    "SECTION": {"x_m": 0.216, "y_start_m": 0.268, "y_step_m": 0.012},
+    "OPEN": {"x_m": 0.012, "y_start_m": 0.070, "y_step_m": 0.010},
+    "META": {"x_m": 0.216, "y_start_m": 0.070, "y_step_m": 0.010}
+  },
+  "characteristic_zone": {
+    "C01": "END",
+    "C02": "END",
+    "C04": "END",
+    "C05": "SECTION",
+    "C06": "SECTION",
+    "C07": "SECTION",
+    "C08": "SECTION",
+    "C09": "META",
+    "K01-D006-BLIND-END": "SECTION"
+  },
+  "open_zone": "OPEN",
+  "cleanup": {
+    "delete_general_tables": true,
+    "delete_note_prefixes": [
+      "K01-D-006 | K01-P-007",
+      "DESIGN REVIEW CANDIDATE",
+      "MODEL-BASED DESIGN REVIEW CANDIDATE",
+      "CURRENT PROVEN NATIVE PMI",
+      "3X Ø2.90 THRU",
+      "C02 BORE DEPTH",
+      "MATERIAL:",
+      "OPEN:",
+      "CONTROLLED PROJECTION",
+      "[C01]",
+      "[C02]",
+      "[C04]",
+      "[C05]",
+      "[C06]",
+      "[C07]",
+      "[C08]",
+      "[C09]",
+      "[K01-D006-BLIND-END]",
+      "[C10]",
+      "[C11]",
+      "[C12]",
+      "[PDG-"
+    ]
+  },
+  "acceptance": {
+    "all_safe_projection_ids_must_read_back": true,
+    "source_seed_must_remain_invariant": true,
+    "visual_qa": "REQUIRED_AFTER_SEMANTIC_PROJECTION",
+    "release_allowed": false
+  }
+}

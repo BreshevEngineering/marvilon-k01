@@ -1,0 +1,203 @@
+{
+  "schema": "k01.engineering_reference_registry.current.v1",
+  "generated_utc": "2026-09-19T12:45:00+00:00",
+  "status": "CONTROLLED_REFERENCE_INDEX",
+  "policy": [
+    "Reference sources are persistent project inputs and must not disappear from handoff/project context.",
+    "A book/standard is REFERENCE_ONLY unless a requirement/decision explicitly cites it as authority.",
+    "Every engineering decision that uses a reference should record exact source title/standard revision and applicability.",
+    "Reference registry presence is configuration/data-management evidence, not proof that every source has been reviewed for every decision."
+  ],
+  "references": [
+    {
+      "id": "REF-SE-NASA-001",
+      "title": "NASA Systems Engineering Handbook Rev 2 (NASA/SP-2016-6105 Rev2)",
+      "domain_tags": [
+        "SYSTEMS_ENGINEERING",
+        "CONFIGURATION",
+        "TECHNICAL_DATA",
+        "TECHNICAL_ASSESSMENT"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Methodological project-control reference; tailor to K01. Not a product requirement by itself."
+    },
+    {
+      "id": "REF-TOL-001",
+      "title": "Mechanical Tolerance Stackup and Analysis",
+      "domain_tags": [
+        "TOLERANCE_VARIATION",
+        "GPS",
+        "ASSEMBLY"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Tolerance stack-up and variation-analysis methods."
+    },
+    {
+      "id": "REF-GPS-ISO1101",
+      "title": "ISO 1101:2017 — Geometrical product specifications (GPS) — Geometrical tolerancing",
+      "domain_tags": [
+        "GPS",
+        "DRAWING",
+        "INSPECTION"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Normative geometric-tolerancing reference when explicitly invoked by released Product Definition/drawing."
+    },
+    {
+      "id": "REF-DRAW-001",
+      "title": "Tornincasa — Technical Drawing for Product Design",
+      "domain_tags": [
+        "DRAWING",
+        "GPS",
+        "MBD"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Drawing/GPS explanatory reference."
+    },
+    {
+      "id": "REF-DRAW-002",
+      "title": "Simmons, Maguire, Phelps — Manual of Engineering Drawing",
+      "domain_tags": [
+        "DRAWING",
+        "MANUFACTURING",
+        "GPS"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Engineering drawing/manufacturing communication reference."
+    },
+    {
+      "id": "REF-VAC-ROTH",
+      "title": "Roth — Vacuum Sealing Techniques",
+      "domain_tags": [
+        "PRESSURE_VACUUM_CONTAINMENT",
+        "SEALS",
+        "JOINING"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Vacuum sealing and joint-design reference."
+    },
+    {
+      "id": "REF-VAC-002",
+      "title": "Vacuum Technology Book II Part 2",
+      "domain_tags": [
+        "PRESSURE_VACUUM_CONTAINMENT",
+        "VACUUM"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Vacuum engineering reference."
+    },
+    {
+      "id": "REF-VAC-003",
+      "title": "vacuum_technology_en.pdf",
+      "domain_tags": [
+        "PRESSURE_VACUUM_CONTAINMENT",
+        "VACUUM"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Vacuum engineering reference."
+    },
+    {
+      "id": "REF-TRIB-SPACE",
+      "title": "Space Tribology",
+      "domain_tags": [
+        "TRIBOLOGY",
+        "MATERIALS",
+        "RELIABILITY"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Tribology reference for sliding/contact interfaces."
+    },
+    {
+      "id": "REF-MAG-FURLANI",
+      "title": "Furlani — Permanent Magnet and Electromechanical Devices",
+      "domain_tags": [
+        "MAGNETIC_FEMM",
+        "MAGNETS"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Permanent-magnet analytical/design reference."
+    },
+    {
+      "id": "REF-MAG-BRAUER",
+      "title": "Brauer — Magnetic Actuators and Sensors",
+      "domain_tags": [
+        "MAGNETIC_FEMM",
+        "MAGNETS"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Magnetic actuator/sensor design reference."
+    },
+    {
+      "id": "REF-MAG-PYATIN",
+      "title": "Пятин Ю.М. (ред.) — Постоянные магниты (справочник)",
+      "domain_tags": [
+        "MAGNETIC_FEMM",
+        "MAGNETS"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Permanent-magnet handbook."
+    },
+    {
+      "id": "REF-THERM-VDI",
+      "title": "VDI Heat Atlas",
+      "domain_tags": [
+        "THERMAL",
+        "FLOW_CFD"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Heat-transfer and thermophysical-property reference."
+    },
+    {
+      "id": "REF-PV-MOSS",
+      "title": "Moss — Pressure Vessel Design Manual",
+      "domain_tags": [
+        "PRESSURE_VACUUM_CONTAINMENT",
+        "STRUCTURAL_FEA"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Pressure-vessel structural design reference."
+    },
+    {
+      "id": "REF-PREC-SLOCUM",
+      "title": "Slocum — Precision Machine Design",
+      "domain_tags": [
+        "TOLERANCE_VARIATION",
+        "MACHINE_DESIGN",
+        "METROLOGY"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Precision machine design and error-budget reference."
+    },
+    {
+      "id": "REF-SIM-SW",
+      "title": "Алямовский — SolidWorks Simulation: инженерный анализ",
+      "domain_tags": [
+        "STRUCTURAL_FEA",
+        "SOLIDWORKS_SIMULATION"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Solver workflow/reference; not an independent verification authority."
+    },
+    {
+      "id": "REF-WELD-LIPPOLD",
+      "title": "Lippold & Kotecki — Welding Metallurgy and Weldability",
+      "domain_tags": [
+        "MATERIALS_JOINING_MANUFACTURING",
+        "WELDING"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Welding metallurgy/weldability reference."
+    },
+    {
+      "id": "REF-JOIN-001",
+      "title": "Справочник — Сварка, пайка, склейка и резка металлов и пластмасс",
+      "domain_tags": [
+        "MATERIALS_JOINING_MANUFACTURING",
+        "WELDING",
+        "BONDING"
+      ],
+      "role": "REFERENCE_ONLY_NOT_RELEASE_AUTHORITY",
+      "applicability": "Joining-process reference."
+    }
+  ]
+}

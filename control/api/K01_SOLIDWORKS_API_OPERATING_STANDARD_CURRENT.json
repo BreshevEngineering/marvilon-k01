@@ -1,0 +1,104 @@
+{
+  "schema": "k01.solidworks_api_operating_standard.v3.1",
+  "date": "2026-09-18",
+  "status": "CONTROLLED_CANDIDATE_FOR_REPO_INSTALL",
+  "platform": {
+    "solidworks": "2018",
+    "revision_major": 26,
+    "interop_sldworks": "26.0.1.1",
+    "interop_swconst": "26.0.1.1",
+    "dotnet": "Framework 4",
+    "csharp": "5",
+    "platform": "x64"
+  },
+  "authority_chain": [
+    "Requirements",
+    "Decisions",
+    "Interfaces",
+    "3D",
+    "Product Definition",
+    "Drawing Spec",
+    "Drawing",
+    "Verification",
+    "Manufacturing/Inspection"
+  ],
+  "hard_rules": {
+    "strong_typing": true,
+    "dynamic_core_logic": false,
+    "explicit_com_casts": true,
+    "local_interop_deployment": true,
+    "runtime_probe": true,
+    "candidate_first": true,
+    "fail_closed": true,
+    "source_hash_guard": true,
+    "automatic_rollback_for_canonical_mutation": true,
+    "api_may_invent_engineering_values": false,
+    "wip_limit": 1
+  },
+  "annotation": {
+    "inventory": "IView.GetFirstAnnotation3 + IAnnotation.GetNext3",
+    "mutation": "IView.GetAnnotations array + IAnnotation.GetSpecificAnnotation",
+    "d003_proven_inventory_count": 104
+  },
+  "known_failures": [
+    {
+      "id": "F-001",
+      "failure": "SW2018 COM object-return compile errors",
+      "prevention": "explicit typed casts"
+    },
+    {
+      "id": "F-002",
+      "failure": "interop FileNotFound at runtime",
+      "prevention": "copy exact SW2018 interops beside EXE + runtime probe"
+    },
+    {
+      "id": "F-003",
+      "failure": "same dimension counted three times",
+      "prevention": "direct semantic Parameter binding or dedupe by FullName"
+    },
+    {
+      "id": "F-004",
+      "failure": "file locked during SHA",
+      "prevention": "Save -> CloseDoc -> bounded-retry filesystem IO"
+    },
+    {
+      "id": "F-005",
+      "failure": "legitimate 0.010-mm assembly translation treated as failure",
+      "prevention": "functional transform decomposition"
+    },
+    {
+      "id": "F-006",
+      "failure": "mixed JSON string/double compile error",
+      "prevention": "typed schema + spec probe before SolidWorks"
+    },
+    {
+      "id": "F-007",
+      "failure": "stale current drawing produced false mismatches",
+      "prevention": "lock exact active source artifact before audit/mutation"
+    }
+  ],
+  "d003": {
+    "source": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-003\\drawing_system_v1_20260917_110205\\d8_api_pass1_v2_20260917_113022\\d8_layout_refine_v1_20260917_122102\\K01-D-003.SLDDRW",
+    "preserve_section": true,
+    "preserve_nominals": [
+      "5.60",
+      "7.90",
+      "8.60",
+      "9.03",
+      "0.95"
+    ],
+    "remove_unsupported_tolerances": [
+      "39.5 ±0.2",
+      "3 ±0.5",
+      "5 ±0.5",
+      "27 ±0.1",
+      "2 ±0.05",
+      "6.6 ±0.3"
+    ],
+    "hide_duplicate": "section Ø12 ±0.2",
+    "datum_c_size": "Ø3.02 +0.01/0",
+    "m12_thread": "already visible; verify exactly one; do not infer DEPTH 6",
+    "restore_j1_clamp": "3× Ø4.50 THRU; PCD Ø24; 120° EQ SP",
+    "general_tolerance": "OPEN_DO_NOT_INVENT"
+  }
+}

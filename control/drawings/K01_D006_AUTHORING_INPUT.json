@@ -1,0 +1,53 @@
+{
+  "schema": "k01.d006.authoring_input.v1",
+  "generated_utc": "2026-09-14T06:55:00+00:00",
+  "status": "HOLD_FULL_MANUFACTURING_DRAWING_PENDING_PRODUCT_DEFINITION_RELEASE_CLOSURE",
+  "change_id": "CHG-K01-D006-CANDIDATE-001",
+  "change_class": "B",
+  "prechange_impact_status": "PASS_PRECHANGE",
+  "drawing_definition": "control/drawings/K01_D006_RELEASE_DEFINITION.json",
+  "pmi_write_evidence": "control/product_definition/K01_P007_PMI_WRITE_EVIDENCE.json",
+  "product_characteristics": "control/product_definition/K01_P007_PRODUCT_CHARACTERISTICS.json",
+  "already_proven": {
+    "PMI_pilot_status": "PASS_PILOT_SAVE_CLOSE_REOPEN",
+    "material": "AISI 316L / EN 1.4404",
+    "overall_length_mm": 35.0,
+    "locator_nominal_mm": 14.1,
+    "flange_OD_nominal_mm": 33.0
+  },
+  "next_authoring_scope": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C09",
+    "C07",
+    "C08",
+    "C11"
+  ],
+  "release_blockers": [
+    "DRAWING-TEMPLATE-BINDING",
+    "C12 quantitative leak/containment acceptance",
+    "thin-wall/blind-end manufacturing capability",
+    "inspection/release measurement conditions"
+  ],
+  "policy": "Candidate drawing may expose OPEN items explicitly but must not invent unresolved tolerances/process/leak acceptance.",
+  "canonical_reconciliation_status": "PASS_C02_2P00_NOMINAL",
+  "canonical_p007": {
+    "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+    "sha256": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85"
+  },
+  "C02_decision": "EDR-024_P007_C02_LOCATOR_DEPTH_BASELINE",
+  "persistent_reference_status": "PASS_CANONICAL_REBOUND",
+  "persistent_reference_report": "reports/cad/p007_pmi_authoring/K01_P007_CANONICAL_PERSISTENT_REBIND_RAW.json",
+  "authoring_authorized": false,
+  "deliverable_class": "FULL_MANUFACTURING_DRAWING",
+  "goal_lock": "DO_NOT_DOWNGRADE_TO_MINIMAL_EXEMPLAR_FOR_RELEASE",
+  "upstream_blocker_rule": "Use reports/control/K01_P007_PRODUCT_DEFINITION_READINESS_CURRENT.json. Full K01-D-006 authoring remains HOLD while release blockers exist; do not use the old C01/C02 exemplar allowlist as manufacturing-drawing authority.",
+  "C10_architecture": "CONTROLLED_BY_EDR_025__NO_P003_P007_WELD_SYMBOL",
+  "next_action": "Author/refresh the full-geometry K01-D-006 engineering-review candidate from the current controlled Product Definition while keeping remaining process/release holds explicit.",
+  "radial_envelope_decision": "CONTROLLED_BY_EDR_029",
+  "primary_dimension_decision": "CONTROLLED_BY_EDR_030"
+}

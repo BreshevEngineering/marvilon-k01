@@ -1,0 +1,61 @@
+{
+  "schema": "k01.prechange_impact.v3",
+  "generated_utc": "2026-09-08T18:31:47.205342+00:00",
+  "change_id": "CHG-K01-D006-CANDIDATE-001",
+  "change_class": "B",
+  "status": "PASS_PRECHANGE_IMPACT_ANALYZED",
+  "planned_paths": [
+    "control/drawings/K01_D006_RELEASE_DEFINITION.json",
+    "control/product_definition/K01_P007_PRODUCT_CHARACTERISTICS.json",
+    "cad/candidates/K01-D-006/**"
+  ],
+  "planned_nodes": [
+    "P007_PMI_pilot",
+    "K01-D-006_candidate"
+  ],
+  "impact": {
+    "dependency_state_schema": "k01.dependency_state.v2",
+    "root_snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+    "impacted_nodes": [
+      "Center",
+      "K01-D-006",
+      "K01-D-006_candidate",
+      "P007 bindings",
+      "P007_PMI_pilot",
+      "PMI",
+      "dependent structural results if interface/loads change"
+    ],
+    "rule_matches": [
+      {
+        "rule": "P007 native hash",
+        "invalidate": [
+          "P007 bindings",
+          "PMI",
+          "K01-D-006",
+          "dependent structural results if interface/loads change"
+        ]
+      },
+      {
+        "rule": "K01-D-006 candidate authoring",
+        "invalidate": [
+          "P007_PMI_pilot",
+          "K01-D-006_candidate",
+          "Center"
+        ]
+      }
+    ]
+  },
+  "required_reverification": [
+    "Center",
+    "K01-D-006",
+    "K01-D-006_candidate",
+    "P007 bindings",
+    "P007_PMI_pilot",
+    "PMI",
+    "dependent structural results if interface/loads change"
+  ],
+  "policy": {
+    "analysis_precedes_write": true,
+    "closed_nodes_reopen_only_if_dependency_changes_or_contradiction_detected": true
+  }
+}

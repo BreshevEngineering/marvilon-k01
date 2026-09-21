@@ -1,0 +1,14 @@
+{
+  "schema": "k01.current_index.current.v2_lifecycle",
+  "state_epoch": "K01-SE-fccd982b0c077a50",
+  "generated_utc": "2026-09-20T09:27:04.560281+00:00",
+  "state_current": [
+    "control/state/K01_STATE_EPOCH_CURRENT.json",
+    "control/project/K01_CURRENT_SESSION_MANIFEST.json",
+    "control/project/K01_GOAL_LOCK_CURRENT.json",
+    "control/state/K01_COMPLETION_FRONTIER_CURRENT.json",
+    "control/project/K01_NEXT_ACTIONS_CURRENT.json",
+    "control/project/K01_ACTIVE_STEP_GATE.json"
+  ],
+  "domain_current_rule": "Domain CURRENT cannot override global state; engineering values remain in domain authorities."
+}

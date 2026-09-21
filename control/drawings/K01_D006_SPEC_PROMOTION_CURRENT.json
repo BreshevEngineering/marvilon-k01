@@ -1,0 +1,20 @@
+{
+  "schema": "k01.d006.spec_promotion.current.v1",
+  "generated_utc": "2026-09-17T08:21:54.051706+00:00",
+  "status": "PASS_D006_SPEC_PROMOTED__READY_FOR_NATIVE_CANDIDATE_LEASE",
+  "drawing_id": "K01-D-006",
+  "source_spec": "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC_v1.json",
+  "source_spec_sha256": "2875af0337f00bd1fed2d5b36812608ccf1c1aba40e03c17d13aad3ede514dfa",
+  "release_candidate_wrapper": "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC_RELEASE_CANDIDATE.json",
+  "release_candidate_wrapper_sha256": "4edb271684e72a05d8ddfa3d093877a5c0fab64bcd5cd0f165b8e9714bc9b6a5",
+  "promoted_spec": "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC_v2.json",
+  "promoted_spec_sha256": "ac3a8f58554a25840ed2aa39abe59a7e2aed5cc1944feaf39051aa85f47286e3",
+  "registry_spec": "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC_v2.json",
+  "runner": "RUN_K01_D006_DRAWING_SYSTEM_V2.cmd",
+  "adjudication": {
+    "SURFACE_J2": "EDR-037 promoted to CONTROLLED",
+    "C12": "projected as assembled-J2 interface acceptance note",
+    "EDR-036_FASTENER": "trace only; not a direct P007 part characteristic",
+    "physical_qualification": "carried to L8"
+  }
+}

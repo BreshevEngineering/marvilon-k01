@@ -1,0 +1,78 @@
+{
+  "schema": "k01.engineering_strategy.current.v11",
+  "project": "K01",
+  "objective": "Deliver a verified, manufacturable, inspectable and releasable K01 product definition while simultaneously building a reusable Marvilon engineering digital-thread system.",
+  "current_phase": "P007 Product Definition V11 chain freeze + K01-D-006 visual QA/release-blocker closure",
+  "architecture": "requirement/interface -> explicit allocation -> engineering decision/technical filter -> derived inputs + manufacturing/supplier strategy -> Product Characteristics with datum/measurement/inspection/configuration context -> deterministic CAD/PMI binding + binding-invariance verification -> split physics and variation/capability evidence -> compiled Product Definition domain slices -> drawing projection/QA -> inspection realization -> configuration/effectivity release; downstream failures return by EFR/change control",
+  "system_goal": "Every expensive lesson becomes a reusable contract/tool/checkpoint so later K01 nodes and future Marvilon projects require less manual rediscovery.",
+  "non_negotiables": [
+    "one active engineering line",
+    "no new source of truth when an authority already exists",
+    "candidate verification and canonical authority change are separate",
+    "technical filter is mandatory",
+    "materials always explicit or OPEN",
+    "rejected alternatives preserved",
+    "drawings derive from controlled product definition; DimXpert/PMI is preferred machine-readable tolerance/GD&T carrier",
+    "EBOM is computed from CAD occurrence tree + product registry; MBOM adds manufacturing/process structure",
+    "screening PASS never silently becomes release PASS",
+    "staleness is derived from dependencies/hashes, not manually assigned",
+    "Git and AI handoff preserve history/context but do not replace engineering authority",
+    "CURRENT is a pointer/projection convention; version numbers do not select authority",
+    "AI handoff completeness is transport assurance, not an engineering authority; active step gates check required source availability directly",
+    "no file or folder relocation is implicit; any relocation requires an explicit user-invoked action and explicit destination where applicable",
+    "Product Definition guard is a hard predecessor of drawing authoring; OPEN never becomes numeric by default"
+  ],
+  "drawing_exemplar": "K01-P-007 / K01-D-006 remains the first exemplar. Design-review drawing authoring may proceed only when DRAWING_CANDIDATE_READY=PASS and must consume the compiled Product Definition fingerprint. Release waits for DRAWING_RELEASE_READY.",
+  "release_target": "R01 only after P6 zero-blocker condition",
+  "control_entrypoints": {
+    "current_checkpoint": "control/project/K01_CHECKPOINT_CURRENT.json",
+    "maturity": "control/project/K01_P0_P6_GATE_MATRIX_CURRENT.json",
+    "authority": "control/project/K01_AUTHORITY_MAP_CURRENT.json",
+    "technical_filter": "control/project/K01_TECHNICAL_FILTER_POLICY.json",
+    "dependency_graph": "control/project/K01_AUTHORITY_MAP_CURRENT.json::control_families.engineering_build_graph",
+    "handoff_source_contract": "control/project/K01_HANDOFF_REQUIRED_SOURCES_CURRENT.json",
+    "control_panel": "reports/control/K01_ENGINEERING_CONTROL_PANEL_CURRENT.html",
+    "control_namespace": "control/project/K01_AUTHORITY_MAP_CURRENT.json::control_families + tools/repo/control_namespace_guard.py",
+    "engineering_step_gate": "control/project/K01_ACTIVE_STEP_GATE.json + tools/assurance/engineering_step_gate.py",
+    "handoff": "run.cmd handoff",
+    "root_cleanup": "run.cmd root-cleanup / root-cleanup-apply",
+    "prewrite_control": "run.cmd prewrite-check",
+    "product_definition_guard": "tools/commands/workflows_20260916/RUN_K01_PRODUCT_DEFINITION_GUARD_V8.cmd -> reports/control/K01_P007_PRODUCT_DEFINITION_READINESS_CURRENT.json",
+    "execution_contract": "control/project/K01_ENGINEERING_EXECUTION_CONTRACT_v1.json",
+    "method_registry": "control/project/K01_EXECUTION_METHOD_REGISTRY_CURRENT.json"
+  },
+  "control_plane_hardening": {
+    "status": "BASELINE_02C_COMPLETE_NORMAL_OPERATION",
+    "rules": [
+      "critical control authority is exact-path declared",
+      "existing version-family debt may only shrink",
+      "new version siblings are blocked",
+      "new hard-coded version selectors in source are blocked",
+      "requirements evidence link does not equal qualification",
+      "CAD semantic/BOM source follows explicit engineering baseline authority",
+      "run.cmd is the single user CLI entry"
+    ]
+  },
+  "drawing_and_bom_design_rule": "Every change evaluates Product Characteristic/compiled Product Definition/DimXpert/drawing/inspection and EBOM/MBOM impact before mutation; downstream artifacts never become independent authority.",
+  "repository_identity_policy": "Keep BreshevEngineering/marvilon-k01 as the single project repository through current engineering-baseline cleanup. Use checkpoints/branches/worktrees for clean migration; create a new repository only under an explicit migration decision with identity/evidence/history transfer manifest.",
+  "filesystem_mutation_policy": {
+    "status": "ACTIVE",
+    "rule": "No existing file or folder is moved outside its current location by generic cleanup/apply commands without an explicit per-action user command. No default destination on C: is permitted.",
+    "engineering_exception": "Promotion may create new backup/staging directories and copy/replace explicitly listed canonical CAD files on D: only after the APPLY step gate passes; this is declared in the promotion manifest before execution."
+  },
+  "current_plan": "control/project/K01_NEXT_ACTIONS_CURRENT.json + control/project/K01_ACTIVE_STEP_GATE.json + control/project/K01_P0_P6_GATE_MATRIX_CURRENT.json; rendered for the user in reports/control/K01_ENGINEERING_CONTROL_PANEL_CURRENT.html",
+  "dependency_strategy": "Hash-DAG + domain slices: every consumer binds to the narrowest sufficient semantic slice; shared-interface changes trigger counterpart review; stale propagation is automatic, engineering counterpart mutation is never automatic.",
+  "change_strategy": "Pre-change impact analysis precedes Class A/B writes. Runtime stale state comes from MEDTAS state hashes/build records; legacy manual dependency lists are compatibility only.",
+  "engineering_chain_controls": {
+    "requirement_allocation": "control/requirements/K01_REQUIREMENT_ALLOCATION_REGISTRY_v1.json",
+    "derived_inputs": "control/engineering/K01_DERIVED_ENGINEERING_INPUTS_v1.json",
+    "datum_systems": "control/product_definition/K01_DATUM_REFERENCE_SYSTEM_REGISTRY_v1.json",
+    "characteristic_context": "control/product_definition/K01_CHARACTERISTIC_CONTEXT_CURRENT.json",
+    "manufacturing_feasibility": "control/manufacturing/K01_P007_MANUFACTURING_FEASIBILITY_CURRENT.json",
+    "configuration_effectivity": "control/configuration/K01_EFFECTIVITY_POLICY_v1.json",
+    "binding_invariance": "control/verification/K01_CAD_BINDING_INVARIANCE_POLICY_v1.json",
+    "feedback_policy": "control/change/K01_ENGINEERING_FEEDBACK_POLICY_v1.json",
+    "graph": "control/medtas/v1/graph/K01_engineering_build_graph_v2_2.json"
+  },
+  "drawing_pipeline_rule": "Release-native drawings follow controlled D1-D9; design-review V10 is separate and non-release. Automate only deterministic/proven transport; human owns PMI authoring and visual layout at declared steps."
+}

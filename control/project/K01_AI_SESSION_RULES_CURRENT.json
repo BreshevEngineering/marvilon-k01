@@ -1,0 +1,318 @@
+{
+  "schema": "k01.ai_session_rules.current.v16",
+  "project": "K01 / Marvilon",
+  "purpose": "Mandatory AI/new-chat operating contract. Prevents repeated engineering work, parallel executors and loss of proven API knowledge.",
+  "first_read_order": [
+    "control/state/K01_STATE_EPOCH_CURRENT.json",
+    "control/project/K01_CURRENT_SESSION_MANIFEST.json",
+    "reports/control/K01_SESSION_CLOSE_CURRENT.md",
+    "reports/control/K01_START_HERE.md",
+    "control/project/K01_GOAL_LOCK_CURRENT.json",
+    "control/state/K01_COMPLETION_FRONTIER_CURRENT.json",
+    "control/analysis/K01_T05_LOCAL_FEA_DEFINITION.json",
+    "reports/calculations/K01_T05_CLAMP_SCREEN_CURRENT.json",
+    "control/workpacks/K01_T05_J2_CLAMP_STRENGTH_WORKPACKAGE_v1.json",
+    "control/decisions/EDR-027_T07A_PRESSURE_SHELL_SCREEN_ACCEPTANCE.json"
+  ],
+  "permanent_rules": [
+    {
+      "id": "R01",
+      "rule": "Resume from current checkpoint/active gate. Never rerun an earlier PASS gate unless dependency/staleness evidence explicitly invalidates it."
+    },
+    {
+      "id": "R02",
+      "rule": "PROVEN FIRST: before writing SOLIDWORKS/API code, query the proven capability registry and inspect the exact proven source. Reuse/adapt before creating a parallel implementation."
+    },
+    {
+      "id": "R03",
+      "rule": "A proven capability must freeze all transitive executable sources (Python/C#/VBA/CMD/etc.) with SHA-256 and evidence. An outer wrapper alone is not a complete freeze."
+    },
+    {
+      "id": "R04",
+      "rule": "For adapted reuse, preserve the proven core byte-for-byte where possible. Change only current authority/hash/input adapters; record the proven-core SHA in run evidence."
+    },
+    {
+      "id": "R05",
+      "rule": "Engineering characteristic binding and API primitive are separate concepts. Composite bindings require an explicit deterministic selector/input contract; never assume len(entities)==1."
+    },
+    {
+      "id": "R06",
+      "rule": "Installed SOLIDWORKS 2018 interop DLL + local compiler are the exact C# signature authority. Web docs are semantic reference, not guaranteed local marshaling syntax."
+    },
+    {
+      "id": "R07",
+      "rule": "Canonical/stable native CAD is never the first write target. Compile/preflight -> timestamped candidate -> write -> save -> close -> reopen -> semantic/geometry/assembly QA -> explicit promotion."
+    },
+    {
+      "id": "R08",
+      "rule": "SOLIDWORKS API return booleans are diagnostic only when proven anomalous. Engineering PASS comes from semantic readback, persistent-reference resolution, geometry/assembly invariance and explicit acceptance criteria."
+    },
+    {
+      "id": "R09",
+      "rule": "For PMI-only writes, file SHA may change but solid geometry fingerprint must remain invariant. Canonical source SHA must remain unchanged during candidate-only authoring."
+    },
+    {
+      "id": "R10",
+      "rule": "Use analytic geometry parameters and persistent references for engineering identity. IFace2.GetBox is approximate and not a tolerance-level acceptance primitive."
+    },
+    {
+      "id": "R11",
+      "rule": "Materials are explicit at every part/release review. Unknown material is OPEN; never infer it. P007 material currently controlled as AISI 316L / EN 1.4404."
+    },
+    {
+      "id": "R12",
+      "rule": "Preserve rejected alternatives and reasons in change control/backlog; do not erase design history."
+    },
+    {
+      "id": "R13",
+      "rule": "Complex non-axisymmetric parts require full professional drawing + exact/native 3D reference from the controlled source. DXF is mainly for simple 2D/axisymmetric items."
+    },
+    {
+      "id": "R14",
+      "rule": "Center is a materialized human view, not engineering authority. Engineering control/evidence -> generated feeds -> Center. Center actions delegate to canonical run.cmd routes; no second status/graph/BOM/CAD executor."
+    },
+    {
+      "id": "R15",
+      "rule": "No automatic relocation of existing files/folders. No automatic C: or %LOCALAPPDATA% project destination. Copy/freeze is allowed only to declared D:/repo locations."
+    },
+    {
+      "id": "R16",
+      "rule": "Git changes are surgical. Do not use git add -A on the historically dirty repo. Git/history is evidence and continuity, not product authority."
+    },
+    {
+      "id": "R17",
+      "rule": "Screening PASS must never be silently promoted to release PASS. OPEN acceptance requirements stay OPEN and block the relevant release only."
+    },
+    {
+      "id": "R18",
+      "rule": "Handoff archive is transport/resume context, not product authority. Native SOLIDWORKS binaries are indexed, not packed."
+    },
+    {
+      "id": "R19",
+      "rule": "2D drawing is a derivative presentation of controlled product definition; do not create a second independent dimensional authority."
+    },
+    {
+      "id": "R20",
+      "rule": "Released drawing dimensions/GD&T should originate in native DimXpert/PMI or another controlled model annotation. Manual layout is allowed; manual retyping of released semantic values is not."
+    },
+    {
+      "id": "R21",
+      "rule": "For K01-D-006 preserve/refine the existing linked SLDDRW. Rejected mechanisms (SW2018 PropertyManager DimXpert UI automation and V7 direct drawing-entity auto-dimensioning) are not retried as primary paths. Drawing projection must consume the compiled Product Definition contract and registered CAD/PMI context; manual work is visual last-mile only."
+    },
+    {
+      "id": "R22",
+      "rule": "Professional drawing quality has two gates: automated semantic QA and human visual QA. File creation alone is not a professional-drawing PASS."
+    },
+    {
+      "id": "R23",
+      "rule": "Project/debug/open-item tables belong in workpacks/inspection evidence, not on the final manufacturing sheet unless the controlled drawing standard explicitly requires them."
+    },
+    {
+      "id": "R24",
+      "rule": "Use one controlled title block and property-linked document metadata. Never use a full native filename as visible drawing title/number."
+    },
+    {
+      "id": "R25",
+      "rule": "PRODUCT DEFINITION FIRST: before any drawing-authoring implementation, run the Product Definition guard. Drawing work is prohibited unless DRAWING_CANDIDATE_READY=PASS; release is prohibited unless DRAWING_RELEASE_READY=PASS."
+    },
+    {
+      "id": "R26",
+      "rule": "Drawing/inspection code may consume only the compiled Product Definition contract for engineering values. Raw legacy candidate_spec text, template/general tolerances, drawing free text and PDF text are non-authorities."
+    },
+    {
+      "id": "R27",
+      "rule": "Any execution-method pivot must atomically update K01_NEXT_ACTIONS_CURRENT, relevant architecture/policy, DECISION_LOG, K01_EXECUTION_METHOD_REGISTRY_CURRENT and an acceptance gate/test before the new implementation is attempted."
+    },
+    {
+      "id": "R28",
+      "rule": "Same-mechanism failure budget is two bounded attempts. After the second failure, stop implementation and perform architecture review. Repackaging/renaming a rejected mechanism does not reset the budget."
+    },
+    {
+      "id": "R29",
+      "rule": "Every downstream generated artifact must carry or reference the compiled Product Definition fingerprint and source fingerprints so staleness/drift can be derived."
+    },
+    {
+      "id": "R30",
+      "rule": "OPEN is a controlled engineering state. No assistant/tool/CAD default may replace OPEN with a numeric tolerance, fit, GD&T, roughness, process or acceptance value."
+    },
+    {
+      "id": "R31",
+      "rule": "The Center must expose Requirement -> Decision/Evidence -> Characteristic -> CAD/PMI -> Drawing -> Inspection traceability and readiness blockers, but remains a derived UI/orchestrator and never edits engineering authority directly."
+    },
+    {
+      "id": "R32",
+      "rule": "AUTHORITATIVE DAG FIRST: before Class A/B implementation or any claim that prior work remains valid, use Authority Map -> engineering_build_graph and current MEDTAS derived state. Legacy K01_DEPENDENCY_STATE.json / K01_DEPENDENCY_GRAPH_v2.json are compatibility only."
+    },
+    {
+      "id": "R33",
+      "rule": "Every Class A/B change declares an engineering entity and change domain, runs pre-change impact, and records direct seeds, transitive consumers, counterpart reviews and topological rebuild/reverification order before write."
+    },
+    {
+      "id": "R34",
+      "rule": "Shared-interface changes never auto-edit counterpart parts. All controlled participants become COUNTERPART_REVIEW_REQUIRED; design mutation requires its own engineering decision/change record."
+    },
+    {
+      "id": "R35",
+      "rule": "Freshness is fingerprint-derived. If a consumed upstream state hash changes, downstream build/verification records become STALE/FRESH_UNVERIFIED/DRIFT as computed. Never manually set PASS to bypass rebuild/reverification."
+    },
+    {
+      "id": "R36",
+      "rule": "Automatic stale propagation is mandatory; automatic engineering mutation is not. Safe pure-derived compilers may rebuild automatically, while CAD/solver/release actions still require their registered producer/gate."
+    },
+    {
+      "id": "R37",
+      "rule": "For design-review drawing projection, controlled PROJECTION_FALLBACK callouts are allowed only when generated from the compiled Product Definition and explicitly recorded per Cxx with source fingerprint and fallback class. They are not released dimensional/GD&T authority."
+    },
+    {
+      "id": "R38",
+      "rule": "Drawing semantic projection coverage and drawing visual QA are separate gates. A semantically complete editable base may proceed to human 10-20% visual cleanup while release remains HOLD; visual cleanup may not invent or alter engineering semantics."
+    },
+    {
+      "id": "R39",
+      "rule": "A drawing projection compiler must fail closed if safe_projection_ids are not fully represented or if the consumed compiled_definition_sha256 differs from the current drawing authoring gate. It must never recover by reading legacy drawing text or candidate_spec."
+    },
+    {
+      "id": "R40",
+      "rule": "BINDING INVARIANCE: PMI existence/save-reopen is not enough. Release-critical geometry bindings require the declared L2/L3 rebuild/perturbation qualification; runtime face indices are non-authoritative."
+    },
+    {
+      "id": "R41",
+      "rule": "ANALYSIS SPLIT: physics/behavior evidence and variation/tolerance/process-capability evidence are separate dependency domains and must not be invalidated/reused as if interchangeable."
+    },
+    {
+      "id": "R42",
+      "rule": "FEEDBACK LOOP: downstream manufacturing/analysis/drawing/inspection problems create EFR/change-control feedback and reopen the upstream decision. No downstream artifact silently fixes upstream Product Definition."
+    },
+    {
+      "id": "R43",
+      "rule": "INSPECTION SEQUENCE: inspection method/capability is part of S2 characteristic definition; S6 contains released procedures and actual results only."
+    },
+    {
+      "id": "R44",
+      "rule": "CONFIGURATION/EFFECTIVITY: every released characteristic/artifact states applicable revision/baseline/effectivity. Historical released definitions are immutable."
+    },
+    {
+      "id": "R45",
+      "rule": "MANUFACTURING FEASIBILITY: process/supplier capability and route selection precede release of process-dependent tolerances, roughness, joining notes and MBOM route."
+    },
+    {
+      "id": "R46",
+      "rule": "DOMAIN SLICE FRESHNESS: consumers depend on the narrowest Product Definition slice sufficient for their function; avoid both under-invalidation and unnecessary full-project rebuilds."
+    },
+    {
+      "id": "R47",
+      "rule": "D2 AUTHORIZATION IS CLAIM-SCOPED: manufacturing-route/process/supplier OPEN blocks only claims whose declared route dependency requires it plus release. It must not blanket-block route-independent CONTROLLED claims."
+    },
+    {
+      "id": "R48",
+      "rule": "MANUAL EXEMPLAR BEFORE D5: use one bounded P007/D006 exemplar on dedicated copies to record actual SW2018 annotation-view/import/layout behavior. Do not write D5 release-native automation ahead of exemplar evidence."
+    },
+    {
+      "id": "R49",
+      "rule": "ANNOTATION VIEW IS CLAIM CONTEXT: normalized annotation-view role is defined per claim in Product Definition; actual SOLIDWORKS annotation-view identity/orientation is D2/D3 evidence. One Cxx may legitimately span multiple views."
+    },
+    {
+      "id": "R50",
+      "rule": "EXEMPLAR IS NOT RELEASE: V10 design-review projection and V12 manual exemplar may be semantically useful but cannot satisfy D3/D4/D7/D8/D9 release gates by status naming, visual appearance or returncode=0."
+    },
+    {
+      "id": "R51",
+      "rule": "D3 THEN D7 ON THE SAME EXEMPLAR: after V12 native transport PASS, do not regenerate D006. Verify model PMI/binding first, then run drawing semantic QA. Presentation-only D7 defects are fixed on the same V12 SLDDRW."
+    },
+    {
+      "id": "R52",
+      "rule": "D3 IS LAYERED: L1 save/reopen and L2 ForceRebuild may close first-exemplar assurance. L3 perturb/restore is release-critical and may run only after a real benign P007 parameter, allowed delta and restore acceptance are controlled; never guess a perturbation."
+    },
+    {
+      "id": "R53",
+      "rule": "D7 EXEMPLAR PASS IS BOUNDED: it proves only the currently authorized C01/C02/C09 drawing scope. It cannot close open Product Definition claims, configuration/effectivity, D3 L3, D8 visual QA or D9 release."
+    },
+    {
+      "id": "R54",
+      "rule": "D7 is a defect list, not an authoring authority. If fixing a D7 finding requires changing nominal/tolerance/fit/GD&T/datum/material/process semantics, stop drawing edits and open EFR/change control."
+    },
+    {
+      "id": "R_META01",
+      "rule": "Before any mutation or stage transition, cross-layer assurance coherence must be machine-proven across authority -> executor -> evidence -> graph/derived state -> handoff. Current artifacts may not be reinterpreted through changed *_CURRENT inputs without explicit fingerprint requalification."
+    },
+    {
+      "id": "R55",
+      "rule": "TEMPORAL PRECEDENCE: filename CURRENT is not global authority. Global STATE_CURRENT files must share K01_STATE_EPOCH_CURRENT; handoff must fail closed on temporal-coherence HOLD. Domain CURRENT files cannot override the Current Session Manifest."
+    }
+  ],
+  "solidworks_current_proven_fact": {
+    "capability": "P007_DIMXPERT_WRITE_C02_C05",
+    "status": "PROVEN_CURRENT_CANONICAL",
+    "core_sha256": "2d6546a84b32261c3e99bbe7f8754d205ecf7b8f741069722b822a71bdf8c636",
+    "current_report": "reports/control/K01_P007_PMI_PROVEN_CURRENT.json",
+    "current_result": "PASS_P007_CURRENT_CANONICAL_PMI_C02_C05_PROVEN_STEP13_CORE",
+    "input_contract": {
+      "C02": "From current canonical rebind binding, select the unique cylindrical entity radius 7.05 mm (Ø14.10).",
+      "C05": "C05 is composite. Select the unique cylindrical entity radius 16.50 mm (Ø33.00) from FLANGE_OD_PLUS_AXIAL_FACE_SET."
+    },
+    "acceptance": [
+      "C02 semantic_pass=true",
+      "C05 semantic_pass=true",
+      "save/close/reopen pass",
+      "persistent states 0/0",
+      "solid geometry invariant",
+      "canonical P007 unchanged"
+    ],
+    "known_anomaly": "InsertSizeDimension may return False while native DimXpert feature/annotation is created; semantic reopen evidence is authoritative."
+  },
+  "handoff_protocol": {
+    "normal_new_chat_command": "run.cmd handoff",
+    "normal_upload": "reports/control/K01_AI_HANDOFF_CURRENT.zip",
+    "extra_native_file_rule": "Upload the specific current SLDPRT/SLDASM/SLDDRW separately only when the next task requires direct native CAD inspection/modification; handoff ZIP intentionally excludes native SOLIDWORKS binaries.",
+    "proven_freeze_rule": "RUN_FREEZE_PROVEN_API.cmd is NOT required for every new chat. Run it when a capability becomes newly PROVEN or the proven implementation/source set changes, then run handoff.",
+    "completion_rule": "If K01_AI_HANDOFF_COMPLETENESS_CURRENT.json is HOLD, do not start engineering work in the new chat until missing required context/source is restored."
+  },
+  "rules": [
+    {
+      "id": "R47",
+      "rule": "REQUIREMENT ALLOCATION FIRST: before a system/interface requirement drives part Product Definition, create/verify an allocation object identifying responsible entity/characteristic and share/budget/complementary responsibility. Requirement text is not copied into a part without allocation."
+    },
+    {
+      "id": "R48",
+      "rule": "DERIVED INPUT IDENTITY: calculated/screening loads, preloads, reactions and intermediate values have stable DER-* identity, quantity kind, units, derivation/status and consumers. Equal numeric values never imply common requirement identity."
+    },
+    {
+      "id": "R49",
+      "rule": "CHARACTERISTIC CONTEXT: Product Characteristics carry datum/reference-system semantics and declared measurement conditions where relevant. Thin-wall dimensions cannot be released with temperature/fixture/state/measurement-force applicability silently unspecified."
+    },
+    {
+      "id": "R50",
+      "rule": "DRAWING DOMAIN FINGERPRINT: K01-D-006 projection consumes K01.PD.P007.DRAWING_SLICE and drawing_projection_sha256. Changes confined to physics/manufacturing/configuration/inspection slices do not force drawing regeneration unless graph-declared drawing inputs also change."
+    },
+    {
+      "id": "R51",
+      "rule": "DRAWING TWO-LANE CONTROL: V10 PROJECTION_FALLBACK is design-review only. Release-native drawing semantics follow D1-D9 and require proven model carrier/provenance; never promote fallback text by visual cleanup."
+    },
+    {
+      "id": "R52",
+      "rule": "CLAIM-LEVEL AUTHORING: plan annotation/drawing view by claim_id, not one annotation_view per whole characteristic. A Cxx may legitimately map to multiple views."
+    },
+    {
+      "id": "R53",
+      "rule": "DIMXPERT TRANSPORT CAPABILITY: for SW2018 do not assume InsertModelAnnotations3/Model Items transports DimXpert. Use a capability-qualified native import method proven by exemplar evidence; rejected PropertyManager UI automation remains rejected."
+    },
+    {
+      "id": "R54",
+      "rule": "D6 LAYOUT INVARIANCE: human layout/leader work must preserve semantic fingerprint. Any semantic delta opens EFR/change control."
+    },
+    {
+      "id": "R55",
+      "rule": "D7 PROVENANCE: a drawing tolerance/GD&T is release-valid only when identity links characteristic/claim -> model PMI/native annotation -> drawing annotation. Numeric equality alone is not provenance."
+    },
+    {
+      "id": "R56",
+      "rule": "GENERAL DEFAULTS CONDITIONAL: general tolerance/default roughness exists only if controlled Product Definition policy explicitly authorizes it. Template defaults never close OPEN."
+    },
+    "Before declaring a subsystem/domain complete, check K01_ENGINEERING_DOMAIN_REGISTRY_CURRENT and current coverage report; never omit FEMM, CalculiX/CCX, Flow/thermal/containment, tolerance, BOM/MBOM, inspection or configuration merely because the active chat is focused elsewhere.",
+    "Use exact controlled tool names in records: CalculiX/CCX, FEMM, SolidWorks Simulation/Flow Simulation. Solver evidence is downstream evidence, never Product Definition authority.",
+    "When introducing a new engineering discipline or solver, add its authority/evidence/fingerprint/stale-propagation contract to the domain registry and MEDTAS graph in the same controlled change."
+  ],
+  "state_epoch": "K01-SE-fccd982b0c077a50",
+  "generated_utc": "2026-09-20T09:27:04.560281+00:00",
+  "startup_mode": "TARGETED_STATE_RECONCILIATION"
+}

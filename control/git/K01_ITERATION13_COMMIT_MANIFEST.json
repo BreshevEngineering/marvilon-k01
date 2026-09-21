@@ -1,0 +1,38 @@
+{
+  "schema": "k01.iteration13.git_manifest.v1",
+  "generated_utc": "2026-09-08T13:48:37.024577+00:00",
+  "status": "READY_FOR_REVIEW",
+  "domain_statuses": {
+    "FEMM": "EXECUTION_ERROR",
+    "P007_PMI": "PASS",
+    "BOM_PRODUCER": "PASS",
+    "CENTER_REFRESH": "PASS"
+  },
+  "stage_paths": [
+    "control/environment/K01_SOLIDWORKS_2018_RUNTIME.json",
+    "control/snapshot/K01_GATE04E_CURRENT_SNAPSHOT.json",
+    "control/product/parts.json",
+    "control/product/retired_items.json",
+    "control/requirements/K01_MAGNETIC_REQUIREMENTS.json",
+    "control/requirements/K01_FIXED_COIL_ACTUATOR_REQUIREMENTS.json",
+    "control/applicability/K01_FIXED_COIL_APPLICABILITY.json",
+    "control/analysis/K01_FIXED_COIL_FEMM_INPUT_MANIFEST.json",
+    "control/analysis/K01_MAGNETIC_FORCE_QUALIFICATION.json",
+    "control/bom/K01_BOM_RELEASE_WORKLIST.json",
+    "control/project/K01_DEPENDENCY_STATE.json",
+    "control/project/K01_PROJECT_CLOSURE_MATRIX.json",
+    "control/center/K01_CENTER_INPUT_CURRENT.json"
+  ],
+  "do_not_stage": [
+    "reports/**",
+    "**/build/**",
+    "*.exe",
+    "*.dll"
+  ],
+  "recommended_commit_message": "engineering: anchor Gate04E factual state and validate fixed-coil benchmark",
+  "git_before_commit": {
+    "dirty_lines": 59,
+    "ahead": 0,
+    "behind": 0
+  }
+}

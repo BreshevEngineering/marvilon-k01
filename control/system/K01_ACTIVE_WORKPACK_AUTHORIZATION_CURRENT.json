@@ -1,0 +1,70 @@
+{
+  "schema": "k01.active_workpack.authorization.current.v1",
+  "authorized_utc": "2026-09-20T08:01:57.130813+00:00",
+  "authorized_by": "HUMAN_OPERATOR",
+  "goal_lock": "K01-A-001 CALIBRATION MODULE DESIGN FREEZE",
+  "active_engineering_object": "K01-J2 P003-P007 SERVICE JOINT",
+  "active_workpack_id": "K01-NA-T05-J2-LOCAL-FEA",
+  "action_class": "ENGINEERING_MUTATION",
+  "authorization_scope_sha256": "5c34183192f83e3763262738aeb2c35835f29def3db91310c477f33d4c2068af",
+  "contract_path": "control/system/K01_ACTIVE_WORKPACK_EXECUTION_CONTRACT_CURRENT.json",
+  "contract_sha256": "c339182507823207a6bd4c53d1ad0a66f32e2a7e54bee84895b5766eb15fe2da",
+  "operator_lock_path": "control/system/K01_OPERATOR_LOCK_CURRENT.json",
+  "operator_lock_sha256": "867f841af215218682f6abeb0f3933c5f906666a01be97b72ad639348257a7ec",
+  "frontier_path": "control/state/K01_COMPLETION_FRONTIER_CURRENT.json",
+  "frontier_sha256": "7d6eaa4bf4637c3373064dd2259f7f8fac4292ea5df16ce41c2ff931f6585053",
+  "required_inputs": [
+    {
+      "id": "T05-WORKPACKAGE",
+      "resolved_path": "D:\\BreshevEngineering\\marvilon-k01\\control\\workpacks\\K01_T05_J2_CLAMP_STRENGTH_WORKPACKAGE_v1.json",
+      "sha256": "c71ea0792b88c239d0a68f6f0c30221508ab1acd52d14d64f00dad340b1c7bbf"
+    },
+    {
+      "id": "T05-FEA-DEFINITION",
+      "resolved_path": "D:\\BreshevEngineering\\marvilon-k01\\control\\analysis\\K01_T05_LOCAL_FEA_DEFINITION.json",
+      "sha256": "6e77265822be212b94d3ce995b08e20ec8c87196413005b24d0fd74253da9bd1"
+    },
+    {
+      "id": "T05-CLAMP-SCREEN-INPUT",
+      "resolved_path": "D:\\BreshevEngineering\\marvilon-k01\\control\\calculations\\K01_T05_CLAMP_SCREEN_INPUT.json",
+      "sha256": "df891b09ec65f7e154d4ec048b67031bfb0160aa337538c0a1f3b7f390927169"
+    },
+    {
+      "id": "J2-TECHNICAL-FILTER",
+      "resolved_path": "D:\\BreshevEngineering\\marvilon-k01\\control\\technical_filter\\K01_J2_C2R1_TECHNICAL_FILTER_v1.json",
+      "sha256": "26c5e05dda9043d4fd5d0d7b8753aeafb7ad2e5b9796499dea0bb1bfc5fb715d"
+    },
+    {
+      "id": "J2-ENGINEERING-DOSSIER",
+      "resolved_path": "D:\\BreshevEngineering\\marvilon-k01\\control\\decision_system\\K01_J2_C2R1_ENGINEERING_DOSSIER_v2.json",
+      "sha256": "fb1ec18f8980d37c5279584bbc425aa4a1bfefac8667b3451969fcaa1344797a"
+    },
+    {
+      "id": "P003-C2R1-FROZEN-GEOMETRY",
+      "resolved_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-003_Cartridge_Body_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "sha256": "40eb4afebcb53f13fe845699dd4601d329115cd8c3cbb822dacdeb536d442e7e"
+    },
+    {
+      "id": "P007-C2R1-FROZEN-GEOMETRY",
+      "resolved_path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
+      "sha256": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653"
+    }
+  ],
+  "mutation_scope": {
+    "allowed": [
+      "create isolated analysis working copies",
+      "create/modify analysis study setup on working copies",
+      "generate solver results, reports, plots and controlled analysis evidence"
+    ],
+    "forbidden": [
+      "mutate canonical/frozen C2R1 CAD geometry",
+      "promote CAD or release state",
+      "change Goal Lock or ACTIVE workpack",
+      "commit/push Git as a side effect of T05 execution"
+    ]
+  },
+  "expected_result": "PASS_T05_LOCAL_CONTACT_FEA__J2_GEOMETRY_RETAINED_OR_REDESIGN_TRIGGERED",
+  "valid_until": "ACTIVE workpack, action class, execution contract, Operator Lock, Completion Frontier or any bound input identity changes; or workpack closes.",
+  "promotion_included": false,
+  "rule": "Authorization is human authority for this bounded mutation scope only; it is not release/promotion approval unless action_class=PROMOTION."
+}

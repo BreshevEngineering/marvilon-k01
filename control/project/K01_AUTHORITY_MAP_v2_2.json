@@ -6,7 +6,7 @@
     "requirements": "control/requirements/requirements.json",
     "product_metadata": "control/product/parts.json",
     "native_geometry": "verified stable-name SolidWorks CAD promoted from Gate04E",
-    "canonical_semantics": "reports/medtas/cad/current/K01_CAD_SEM_A001.json",
+    "canonical_semantics": "evidence/immutable/983c85018ab000834abb5142e3cd7344642a80fcc03e9fd22c8454f5db0af4c3__K01_CAD_SEM_A001.json",
     "parameters": "control/parameters/*.json",
     "materials": "control/product/parts.json + control/materials/*.json",
     "tolerances_gdt": "native SolidWorks MBD/DimXpert PMI",

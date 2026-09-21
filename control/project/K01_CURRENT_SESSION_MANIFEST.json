@@ -1,0 +1,143 @@
+{
+  "schema": "k01.current_session_manifest.v2_lifecycle",
+  "state_epoch": "K01-SE-fccd982b0c077a50",
+  "generated_utc": "2026-09-20T09:27:04.560281+00:00",
+  "source_state_fingerprint": "fccd982b0c077a50e669e7fb8d1fa80b834326f7b16c7bff14ae1ba519023cfc",
+  "project": "K01 / MARVILON",
+  "checkpoint": {
+    "schema": "k01.checkpoint.current.v1",
+    "project": "K01",
+    "checkpoint_id": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+    "path": "control/checkpoints/K01-CP-20260910-BASELINE-02C-PROMOTED.json",
+    "status": "CANONICAL_ENGINEERING_BASELINE_PROMOTED",
+    "active_line": "K01-P007-PROFESSIONAL-PRODUCT-DEFINITION",
+    "previous_checkpoint": "K01-CP-20260910-BASELINE-02C-DATUM-C-VERIFIED",
+    "next_expected_checkpoint": "P007 professional DimXpert/PMI candidate checkpoint after geometry-invariant save/close/reopen readback",
+    "rule": "Pointer only; domain authorities remain in K01_AUTHORITY_MAP_CURRENT.json."
+  },
+  "goal": {
+    "current_lifecycle_level": "L5",
+    "current_deliverable": "K01-A-001 CALIBRATION MODULE DESIGN FREEZE",
+    "deliverable_class": "MODULE DESIGN FREEZE / L5 CLOSURE",
+    "wip_limit": 1,
+    "active_engineering_object": "K01-J2 P003-P007 SERVICE JOINT",
+    "active_dependency": "T05 LOCAL CONTACT / SEPARATION VERIFICATION",
+    "execution_mode": "MANUAL_CONTROLLED_SOLIDWORKS_SIMULATION__NO_GEOMETRY_MUTATION"
+  },
+  "active_artifact": {
+    "drawing": "D:\\Marvilon\\K01\\cad\\drawings\\current\\K01-D-006\\K01-D-006.SLDDRW",
+    "pdf": "D:\\Marvilon\\K01\\cad\\drawings\\current\\K01-D-006\\K01-D-006.PDF",
+    "status": "PASS_DRAWING_SYSTEM_V1_REVIEW_CANDIDATE__RELEASE_HOLD"
+  },
+  "engineering_state": {
+    "last_closed": {
+      "id": "EDR-053",
+      "n": 53,
+      "status": "ACCEPTED_PROGRAM_FRONTIER_ADVANCE__P004_WAITING_EXTERNAL__T05_ACTIVE",
+      "summary": "P004 external-evidence dependency classification and module completion frontier advance",
+      "path": "control/decisions/EDR-053_P004_WAITING_EXTERNAL_MODULE_FRONTIER_ADVANCE.json",
+      "sha256": "f6576d16bda24e3972c5aa7f838d9d2f2ff48199777b8bbd364ea6c286d9b0a4"
+    },
+    "latest_activity": {
+      "id": "EDR-053",
+      "n": 53,
+      "status": "ACCEPTED_PROGRAM_FRONTIER_ADVANCE__P004_WAITING_EXTERNAL__T05_ACTIVE",
+      "summary": "P004 external-evidence dependency classification and module completion frontier advance",
+      "path": "control/decisions/EDR-053_P004_WAITING_EXTERNAL_MODULE_FRONTIER_ADVANCE.json",
+      "sha256": "f6576d16bda24e3972c5aa7f838d9d2f2ff48199777b8bbd364ea6c286d9b0a4"
+    },
+    "latest_candidate": {
+      "id": "EDR-031",
+      "n": 31,
+      "status": "ACCEPT_ENGINEERING_REVIEW_CANDIDATE__RELEASE_CONDITIONAL",
+      "summary": "P007 J2 seal-contact surface texture for K01-D-006 engineering review",
+      "path": "control/decisions/EDR-031_P007_J2_SEAL_FACE_SURFACE_TEXTURE_ENGINEERING_REVIEW.json",
+      "sha256": "e21ae00963a428a3221731bf4861c3003706590e063ead7a917981d44b3f65bd"
+    },
+    "closed_do_not_restart": [
+      "EDR-025",
+      "EDR-026_T07_PRESSURE_ONLY_SCOPE",
+      "EDR-027",
+      "EDR-028",
+      "EDR-029",
+      "EDR-030",
+      "EDR-032_P007_C02_LOCATOR_DEPTH_RELEASE",
+      "EDR-033_P007_C04_ISO5458_PATTERN_RELEASE",
+      "EDR-034",
+      "EDR-035",
+      "EDR-036",
+      "EDR-037",
+      "EDR-038",
+      "EDR-039",
+      "EDR-041",
+      "EDR-043",
+      "EDR-044",
+      "EDR-045",
+      "EDR-046",
+      "EDR-048",
+      "EDR-049",
+      "EDR-050",
+      "EDR-051",
+      "EDR-052",
+      "EDR-053"
+    ],
+    "candidate_not_release": [
+      "EDR-031"
+    ]
+  },
+  "completion_frontier": {
+    "active_blocker": "J2-T05-LOCAL-CONTACT-FEA",
+    "next_action_id": "K01-NA-T05-J2-LOCAL-FEA",
+    "expected_closure": "PASS_T05_LOCAL_CONTACT_FEA__J2_GEOMETRY_RETAINED_OR_REDESIGN_TRIGGERED",
+    "timing": {
+      "ACTIVE_NOW": [
+        "J2-T05-LOCAL-CONTACT-FEA"
+      ],
+      "WAITING_EXTERNAL": [
+        "P004-EXTERNAL-EVIDENCE-ACQUISITION — physical/FAI/metrology evidence; K01-P-004 remains OPEN",
+        "K01-D-006 USER-CONTROLLED DRAWING FINALIZATION",
+        "P004/P003/P014 numeric production tolerance split — supplier/FAI/metrology capability evidence",
+        "P004 production lot/stock CoC and supplier process effectivity",
+        "P004/P001 guide numeric acceptance — stakeholder/system requirement or controlled characterization tied to acceptance basis",
+        "P004/P001 guide production tolerance split — P001/P004 process + metrology capability",
+        "P004 EDR-052 physical evidence data package",
+        "controlled stakeholder/system guide-repeatability acceptance if available",
+        "P004/P001/P003/P014 manufacturing/metrology capability and material/process traceability"
+      ],
+      "WAITING_DEPENDENCY": [
+        "Final BOM release waits for P014/P015/B001/J2 component/process decisions",
+        "L6 Candidate TPD waits for executable L5 module closure fronts",
+        "P004 completion waits for its external evidence/requirement inputs"
+      ],
+      "LATER": [
+        "P014 material / retention definition",
+        "P015 production bobbin + winding + lead/driver definition",
+        "B001 design-grade / magnetic-property specification for design freeze",
+        "Final CFD OUT/MID/IN force envelope on frozen gas-wetted geometry",
+        "FEMM design-candidate re-adjudication after P015/B001 freeze; rerun only if stale",
+        "Independent structural FEM/CalculiX cross-check or controlled waiver",
+        "EBOM/MBOM release reconciliation after component/process decisions",
+        "All-node / all-joint Technical Filter closure",
+        "L6 Candidate TPD integration"
+      ],
+      "DEBT": [
+        "Drawing System fresh-section defect",
+        "broad repository cleanup",
+        "Center UI refinements"
+      ]
+    }
+  },
+  "next_allowed_action": {
+    "id": "K01-NA-T05-J2-LOCAL-FEA",
+    "text": "Execute T05 local J2 contact/separation FEA on the frozen final C2R1 P003/P007 geometry. Run 200 and 300 N preload per screw, seal-reaction sensitivity 0/300/600 N, +0.20 bar pressure, no-penetration metal contact, local mesh <=0.20 mm at fastener/gland/pilot/flange-root regions, then refine the critical case. Report P003/P007 von Mises stress, maximum face separation, contact pressure, bolt axial force and J2 datum-face displacement. Do not mutate CAD geometry. If LC2 with 600 N seal reaction passes, retain OD33; otherwise trigger local J2 redesign.",
+    "expected_closure": "PASS_T05_LOCAL_CONTACT_FEA__J2_GEOMETRY_RETAINED_OR_REDESIGN_TRIGGERED",
+    "authority_set": [
+      "control/analysis/K01_T05_LOCAL_FEA_DEFINITION.json",
+      "evidence/immutable/ed7dcf0f0376bc2f77d8e1223b9b097697af1d7f583df160ccc2123c1ee6942c__K01_T05_CLAMP_SCREEN_CURRENT.json",
+      "control/workpacks/K01_T05_J2_CLAMP_STRENGTH_WORKPACKAGE_v1.json",
+      "control/decisions/EDR-027_T07A_PRESSURE_SHELL_SCREEN_ACCEPTANCE.json"
+    ]
+  },
+  "authority_rule": "Manifest controls current-session navigation only; engineering values remain in domain authorities.",
+  "center_mode": "PROJECTION_ONLY"
+}

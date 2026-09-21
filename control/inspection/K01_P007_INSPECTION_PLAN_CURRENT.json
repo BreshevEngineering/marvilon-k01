@@ -1,0 +1,112 @@
+{
+  "schema": "k01.inspection_plan.p007.v1",
+  "generated_utc": "2026-09-17T06:43:55.139233+00:00",
+  "status": "DEFINED_FOR_PRODUCT_DEFINITION__FAI_PHYSICAL_EXECUTION_OPEN",
+  "part": "K01-P-007",
+  "measurement_conditions": {
+    "reference_temperature_C": 20.0,
+    "allowed_lab_temperature_C": "20 ±2",
+    "stabilization": "part and measuring equipment thermally stabilized before acceptance measurement",
+    "FAI": "required for first released manufacturing route and after process/source change affecting characteristic"
+  },
+  "characteristics": [
+    {
+      "id": "C01",
+      "role": "Datum-A flatness / common zone",
+      "method": "CMM or validated surface-mapping setup",
+      "authority": "EDR-030",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "C02",
+      "role": "Ø14.10 H7 locator + 2.00 ±0.05 depth",
+      "method": "calibrated bore gauge/CMM + depth measurement",
+      "authority": "EDR-032",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "C03",
+      "role": "locator-axis orientation to Datum A",
+      "method": "CMM",
+      "authority": "EDR-028",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "C04",
+      "role": "3x Ø2.90 H10 / PCD26.50 / 120° / position",
+      "method": "CMM",
+      "authority": "EDR-033",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "C05",
+      "role": "Ø33.00 ±0.05 / flange thickness 3.00 ±0.05",
+      "method": "micrometer/CMM",
+      "authority": "EDR-030",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "C06",
+      "role": "overall length 35.00 ±0.05",
+      "method": "micrometer/CMM",
+      "authority": "EDR-030",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "C07",
+      "role": "thin-can OD Ø10 h9",
+      "method": "low-force micrometer or roundness/CMM setup avoiding collapse",
+      "authority": "EDR-029",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "C08",
+      "role": "thin-can ID Ø9.40 H9 / wall reference",
+      "method": "air/bore gauge or CMM/roundness method qualified for thin wall",
+      "authority": "EDR-029",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "C09",
+      "role": "can internal functional length",
+      "method": "CMM/depth method",
+      "authority": "controlled Product Definition",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "C10",
+      "role": "containment construction/process",
+      "method": "route/visual/process-record verification",
+      "authority": "EDR-025 + EDR-037",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "C11",
+      "role": "total runout 0.02 to datum axis B",
+      "method": "roundness tester or validated CMM/mandrel setup",
+      "authority": "EDR-029",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "C12",
+      "role": "J2 leak acceptance qHe <= 1e-5 mbar L/s",
+      "method": "calibrated helium tracer-gas leak test",
+      "authority": "EDR-035",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "K01-D006-BLIND-END",
+      "role": "blind-end thickness 1.00 ±0.10",
+      "method": "CMM/depth or qualified ultrasonic/section-equivalent method",
+      "authority": "EDR-030",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    },
+    {
+      "id": "SURFACE-J2",
+      "role": "J2 seal-contact surface Ra <= 0.8 µm",
+      "method": "profilometer",
+      "authority": "EDR-037",
+      "result_state": "NOT_YET_MEASURED_PHYSICAL_QUALIFICATION"
+    }
+  ]
+}

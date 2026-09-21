@@ -6,10 +6,11 @@
       "engineering_item": "K01-P-007",
       "id": "MBOM-P007-WELDED-CONSTRUCTION",
       "inputs": [],
-      "mbom_representation": "WELDED_ASSEMBLY_PENDING_DECOMPOSITION",
-      "note": "Current CAD/EBOM treats K01-P-007 as one engineering item. Manufacturing decomposition into sleeve/flange inputs is not invented until controlled identities/process route exist.",
-      "status": "OPEN_SUBCOMPONENT_IDENTITIES",
-      "type": "WELDED_CONSTRUCTION"
+      "mbom_representation": "MONOLITHIC_MACHINED_P007_NO_WELDED_DECOMPOSITION",
+      "note": "Active C2R1 P007 is one monolithic machined 316L part with integral blind end. Legacy welded-construction decomposition is superseded by EDR-025; no sleeve/flange manufacturing subitems are created.",
+      "status": "RELEASED",
+      "type": "MONOLITHIC_MACHINED_PART",
+      "decision_source": "EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE"
     }
   ],
   "principles": [

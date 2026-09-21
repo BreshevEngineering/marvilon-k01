@@ -1,0 +1,22 @@
+{
+  "schema": "k01.drawing_delivery_capability.current.v1",
+  "project": "K01",
+  "part": "K01-P-007",
+  "drawing": "K01-D-006",
+  "status": "OPEN_DELIVERY_PROFILE",
+  "manufacturer_or_supplier": {
+    "id": "OPEN",
+    "step_ap242_pmi_acceptance": "OPEN",
+    "required_2d_pdf": "OPEN",
+    "required_dxf": "OPEN_BY_PART_OR_PROCESS",
+    "notes": "Do not reduce drawing scope based on AP242 until recipient acceptance is recorded."
+  },
+  "local_capability": {
+    "solidworks_version": "2018",
+    "step_ap242_pmi_product_help_capability": "AVAILABLE_WITH_MBD_WORKFLOW",
+    "license_and_end_to_end_export_verify": "OPEN",
+    "pdf_export": "PROVEN_IN_K01",
+    "dxf_export": "CONDITIONAL_NOT_GLOBAL_REQUIREMENT"
+  },
+  "release_rule": "D9 exports only formats required by controlled delivery profile and proven locally. STEP AP242 PMI is conditional on recipient acceptance and local capability/license verification."
+}

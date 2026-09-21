@@ -18,17 +18,17 @@
       "id": "P007-C01",
       "feature": "J2 mating face",
       "type": "DATUM",
-      "spec": "DATUM A; flatness 0.03",
-      "source": "CI-J2",
+      "spec": "DATUM A; FLATNESS 0.03 CZ across controlled two-patch mating-face set",
+      "source": "EDR-030 + canonical Datum-A binding",
       "view": "SECTION_AA",
-      "inspection": "surface plate/CMM"
+      "inspection": "CMM common-zone flatness / functional datum setup"
     },
     {
       "id": "P007-C02",
       "feature": "locator bore",
       "type": "FIT",
-      "spec": "Ø14.10 H7 ×1.70; datum feature B = bore axis",
-      "source": "C2R1",
+      "spec": "Ø14.10 H7 ×2.00; datum feature B = bore axis",
+      "source": "EDR-024 + C2R1",
       "view": "SECTION_AA",
       "inspection": "plug gauge/CMM"
     },
@@ -36,55 +36,55 @@
       "id": "P007-C03",
       "feature": "locator axis",
       "type": "GD&T",
-      "spec": "perpendicularity Ø0.03 to A",
-      "source": "functional datum architecture",
+      "spec": "perpendicularity Ø0.003(M) to A",
+      "source": "EDR-028",
       "view": "SECTION_AA",
-      "inspection": "CMM"
+      "inspection": "CMM MMR / functional gage"
     },
     {
       "id": "P007-C04",
       "feature": "clearance-hole pattern",
       "type": "HOLE_GDT",
-      "spec": "3× Ø2.90 THRU; PCD Ø26.50 BASIC, 120° BASIC; position Ø0.15 | A | B",
-      "source": "WP-T03 fastener stack",
+      "spec": "3× Ø2.90 H10 THRU; PCD Ø26.50 BASIC, 120° BASIC; position Ø0.15 | A | B",
+      "source": "EDR-028 + WP-T03",
       "view": "END_J2",
-      "inspection": "pin gauge + CMM"
+      "inspection": "2.900 GO / 2.940 NO-GO limit gage + CMM"
     },
     {
       "id": "P007-C05",
       "feature": "J2 flange",
       "type": "SIZE",
-      "spec": "Ø33.00 ±0.05 ×3.00 ±0.05 within OAL",
-      "source": "C2R1",
+      "spec": "Ø33.00 ±0.05 × 3.00 ±0.05 within OAL",
+      "source": "EDR-030 + WP-T05",
       "view": "SECTION_AA",
-      "inspection": "micrometer/CMM"
+      "inspection": "OD micrometer/CMM + flange thickness"
     },
     {
       "id": "P007-C06",
       "feature": "overall length",
       "type": "SIZE",
       "spec": "35.00 ±0.05",
-      "source": "controlled P007 OAL",
+      "source": "EDR-030 + REQ-K01-P007-L-001",
       "view": "SECTION_AA",
-      "inspection": "CMM"
+      "inspection": "CMM from functional Datum-A setup"
     },
     {
       "id": "P007-C07",
       "feature": "thin can OD",
       "type": "SIZE",
-      "spec": "Ø10.00",
-      "source": "controlled baseline; local tolerance to be taken from native stable definition",
+      "spec": "Ø10 h9 (9.964..10.000)",
+      "source": "EDR-029",
       "view": "SECTION_AA",
-      "inspection": "micrometer/CMM"
+      "inspection": "supported low-force OD/CMM + total runout"
     },
     {
       "id": "P007-C08",
       "feature": "thin can ID",
       "type": "SIZE",
-      "spec": "Ø9.40",
-      "source": "controlled baseline; local tolerance to be taken from native stable definition",
+      "spec": "Ø9.40 H9 (9.400..9.436); wall 0.30 REF",
+      "source": "EDR-029",
       "view": "SECTION_AA",
-      "inspection": "bore gauge/CMM"
+      "inspection": "supported bore/CMM + total runout"
     },
     {
       "id": "P007-C09",
@@ -94,12 +94,30 @@
       "source": "controlled material",
       "view": "TITLE",
       "inspection": "CoC/material traceability"
+    },
+    {
+      "id": "P007-C11",
+      "feature": "thin-can OD and ID relative to locator datum B axis",
+      "type": "GD&T",
+      "spec": "TOTAL RUNOUT 0.02 | B on OD and ID",
+      "source": "EDR-029",
+      "view": "SECTION_AA",
+      "inspection": "CMM / low-force total-runout setup to datum B"
+    },
+    {
+      "id": "P007-BLIND-END",
+      "feature": "integral blind-end thickness",
+      "type": "SIZE_CONTAINMENT",
+      "spec": "1.00 ±0.10",
+      "source": "EDR-030 + EDR-027",
+      "view": "SECTION_AA",
+      "inspection": "CMM/depth-difference or qualified thickness method"
     }
   ],
   "general_notes": [
     "UNLESS IDENTIFIED AS REFERENCE, RELEASE CHARACTERISTICS SHALL BE INSPECTABLE TO THE SPECIFIED LIMITS.",
     "UNSPECIFIED NOMINAL GEOMETRY: CONTROLLED NATIVE SOLIDWORKS MODEL. DO NOT SCALE DRAWING.",
-    "DEBURR; BREAK SHARP EDGES 0.1–0.2 UNLESS FUNCTIONAL EDGE IS SPECIFIED.",
-    "CLEAN/PASSIVATE 316L AS APPROVED PROCESS; NO ABRASIVE DAMAGE ON SEAL/FIT SURFACES."
+    "CLEAN/PASSIVATE 316L AS APPROVED PROCESS; NO ABRASIVE DAMAGE ON SEAL/FIT SURFACES.",
+    "DEBURR; BREAK NON-FUNCTIONAL SHARP EDGES 0.1–0.2. DO NOT BREAK OR ABRADE DATUM A, Ø14.10 H7 LOCATOR, SEAL-CONTACT, OR OTHER EXPLICITLY CONTROLLED FUNCTIONAL EDGES."
   ]
 }

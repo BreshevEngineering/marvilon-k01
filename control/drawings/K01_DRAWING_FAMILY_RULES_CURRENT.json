@@ -1,0 +1,111 @@
+{
+  "schema": "k01.drawing_family_rules.current.v1",
+  "project": "K01",
+  "purpose": "Reusable presentation/routing rules for drawing families. Geometry may classify presentation roles, but never creates engineering requirements. Product Definition remains semantic authority.",
+  "standards_basis": {
+    "views_sections": "ISO 128-3:2022",
+    "dimension_presentation": "ISO 129-1:2018",
+    "orthographic_projection": "ISO 5456-2:1996",
+    "scales": "ISO 5455:1979",
+    "project_standard_profile": "control/drawings/K01_DRAWING_STANDARD_PROFILE_CURRENT.json"
+  },
+  "global_rules": {
+    "semantic_authority": "Controlled Product Characteristics / compiled Product Definition only",
+    "geometry_role": "Geometry may select/rank views and route already-controlled claims; it must not invent dimensions, tolerances, datums or GD&T.",
+    "minimum_views": "Use the minimum set of views/sections that unambiguously communicates manufacture and inspection.",
+    "internal_geometry": "For rotational parts with significant coaxial internal geometry, prefer an axial section as the primary longitudinal representation instead of a redundant external longitudinal view.",
+    "section_choice": "Full versus half section is an engineering presentation choice. Default profile for K01 ROTATIONAL_FLANGED_HOLLOW is axial full section; half section requires an explicit readability exception.",
+    "unauthorized_native_pmi": "A native PMI annotation may exist in the model but must be hidden from a release drawing when its claim is not D2/release-authorized.",
+    "layout": "Automatic layout may propose positions/scales only. Human D6 retains leader routing, overlap resolution and final readability judgment."
+  },
+  "authoring_order": [
+    {
+      "order": 10,
+      "class": "DATUM_DRF",
+      "rule": "Create/verify datum features and datum reference system before dependent dimensions/GD&T."
+    },
+    {
+      "order": 20,
+      "class": "SIZE_FIT",
+      "rule": "Author controlled sizes and fits."
+    },
+    {
+      "order": 30,
+      "class": "LOCATION_PATTERN",
+      "rule": "Author controlled location/basic/pattern semantics after datum framework exists."
+    },
+    {
+      "order": 40,
+      "class": "GDT",
+      "rule": "Author geometric tolerances only after referenced datums/DRF are controlled."
+    },
+    {
+      "order": 50,
+      "class": "SURFACE",
+      "rule": "Author controlled surface texture/edge-condition semantics."
+    },
+    {
+      "order": 60,
+      "class": "MATERIAL_PROCESS_PROPERTY",
+      "rule": "Verify/project material, process and title-block/spec properties."
+    }
+  ],
+  "families": {
+    "ROTATIONAL_FLANGED_HOLLOW": {
+      "description": "Predominantly rotational part with an axial body, flange/shoulder, coaxial internal geometry and possible non-axisymmetric flange features.",
+      "classifier_inputs": [
+        "rotational_axis",
+        "internal_coaxial_geometry",
+        "flange",
+        "non_axisymmetric_end_features"
+      ],
+      "view_rules": [
+        {
+          "priority": 10,
+          "role": "AXIAL_FULL_SECTION",
+          "condition": "internal_coaxial_geometry == true",
+          "required": true,
+          "purpose": "Primary representation of axial steps, bores, wall thicknesses, shoulders and end thickness."
+        },
+        {
+          "priority": 20,
+          "role": "FLANGE_END",
+          "condition": "flange == true and/or non_axisymmetric_end_features == true",
+          "required": true,
+          "purpose": "Flange OD, locating bore, hole pattern/PCD and datum/readability support."
+        },
+        {
+          "priority": 30,
+          "role": "ISOMETRIC",
+          "condition": "form_communication_useful == true",
+          "required": false,
+          "purpose": "Form comprehension only; normally not dimension authority."
+        }
+      ],
+      "suppression_rules": [
+        {
+          "role": "AXIAL_EXTERNAL",
+          "when": "AXIAL_FULL_SECTION is present and no external-only controlled claim requires a separate external view",
+          "disposition": "OMIT_AS_REDUNDANT"
+        }
+      ],
+      "claim_routing": {
+        "DATUM_FACE": "AXIAL_FULL_SECTION",
+        "LOCATING_INTERNAL_DIAMETER": "AXIAL_FULL_SECTION",
+        "LOCATING_EXTERNAL_DIAMETER": "AXIAL_FULL_SECTION",
+        "AXIAL_LENGTH": "AXIAL_FULL_SECTION",
+        "AXIAL_THICKNESS": "AXIAL_FULL_SECTION",
+        "EXTERNAL_DIAMETER": "AXIAL_FULL_SECTION",
+        "INTERNAL_DIAMETER": "AXIAL_FULL_SECTION",
+        "WALL_THICKNESS": "AXIAL_FULL_SECTION",
+        "COAXIAL_GDT": "AXIAL_FULL_SECTION",
+        "FLANGE_OD": "FLANGE_END",
+        "HOLE_PATTERN": "FLANGE_END",
+        "PCD": "FLANGE_END",
+        "MATERIAL": "TITLE_BLOCK",
+        "PROCESS_NOTE": "GENERAL_NOTE_OR_SPEC_REFERENCE",
+        "AXIS_ORIENTATION_GDT": "AXIAL_FULL_SECTION"
+      }
+    }
+  }
+}

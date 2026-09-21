@@ -1,0 +1,76 @@
+{
+  "schema": "k01.s2.configuration_baseline_recovery.v3",
+  "generated_utc": "2026-09-21T10:50:59.826481+00:00",
+  "source_dirty_head": "213a9fc32e8fff54231104734fb67fe219654860",
+  "trusted_remote_main_head": "3b3aaf8850305aa47809dd32695348de8a88dc31",
+  "source_dirty_count": 1262,
+  "concurrent_new_count": 107,
+  "concurrent_known_byte_drift_count": 6,
+  "staged_input_count": 7,
+  "source_snapshot_fingerprint": "6b5027641742996a4752758f871344d0a6077002d5d21e53c1c812f112445daa",
+  "recovery_branch": "recovery/s2-configuration-baseline-v7-20260921",
+  "commit_groups": {
+    "C1": 208,
+    "C2": 181,
+    "C3": 114,
+    "C4": 136,
+    "C5": 60,
+    "C6": 6
+  },
+  "quarantine_excluded_from_baseline": 40,
+  "baseline_quarantine_count": 0,
+  "immutable_evidence_promoted": 42,
+  "cad_manifest_items": 22,
+  "migration_guard_remediation": {
+    "schema": "k01.s2.v7.migration_guard_remediation.v1",
+    "generated_utc": "2026-09-21T10:50:57.065022+00:00",
+    "action_count": 6,
+    "actions": [
+      {
+        "path": "tools/repo/control_namespace_guard.py",
+        "action": "SCAN_IMMUTABLE_EVIDENCE"
+      },
+      {
+        "path": "tools/assurance/center_assurance_coherence.py",
+        "action": "REMOVE_HARDCODED_GRAPH_VERSION_FALLBACK"
+      },
+      {
+        "path": "tools/medtas/engineering_chain_guard_v11.py",
+        "action": "RESOLVE_GRAPH_THROUGH_CONTROL_AUTHORITY"
+      },
+      {
+        "path": "control/drawings/spec/K01-D-003_P003_DRAWING_SPEC.json",
+        "action": "FREEZE_VERSION_FAMILY",
+        "members": [
+          "control/drawings/spec/K01-D-003_P003_DRAWING_SPEC_v2.json",
+          "control/drawings/spec/K01-D-003_P003_DRAWING_SPEC_v3.json",
+          "control/drawings/spec/K01-D-003_P003_DRAWING_SPEC_v4.json",
+          "control/drawings/spec/K01-D-003_P003_DRAWING_SPEC_v5.json"
+        ]
+      },
+      {
+        "path": "control/drawings/spec/K01-D-005_P006_DRAWING_SPEC.json",
+        "action": "FREEZE_VERSION_FAMILY",
+        "members": [
+          "control/drawings/spec/K01-D-005_P006_DRAWING_SPEC_v1.json",
+          "control/drawings/spec/K01-D-005_P006_DRAWING_SPEC_v2.json"
+        ]
+      },
+      {
+        "path": "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC.json",
+        "action": "FREEZE_VERSION_FAMILY",
+        "members": [
+          "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC_v1.json",
+          "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC_v2.json"
+        ]
+      }
+    ]
+  },
+  "rules": [
+    "trusted GitHub gate already exists on protected main before this recovery",
+    "reports/** is runtime and never authority",
+    "authoritative report content is promoted to evidence/immutable/** by SHA-256",
+    "configuration state requires clean Git HEAD plus matching CAD manifest",
+    "source dirty main remains read-only; recovery is built from trusted remote main in isolated worktree"
+  ]
+}

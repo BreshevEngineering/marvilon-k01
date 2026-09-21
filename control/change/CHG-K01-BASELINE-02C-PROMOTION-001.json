@@ -1,0 +1,50 @@
+{
+  "schema": "k01.change_record.v3",
+  "id": "CHG-K01-BASELINE-02C-PROMOTION-001",
+  "created_utc": "2026-09-10T06:33:00+00:00",
+  "updated_utc": "2026-09-10T19:50:56.892797+00:00",
+  "status": "CLOSED_ENGINEERING_BASELINE_PROMOTED",
+  "class": "B",
+  "title": "Promote verified K01-BASELINE-02C Datum-C candidate to canonical engineering baseline",
+  "reason": "Candidate Datum-C producer and A001 integration QA have passed; canonical stable product structure still predates P017.",
+  "planned_paths": [
+    "canonical stable P003/P016/P017/A001 via existing reference-safe promotion path",
+    "canonical snapshot",
+    "dependency state",
+    "EBOM/MBOM",
+    "D003/D012 freshness/product definition"
+  ],
+  "planned_nodes": [
+    "K01-BASELINE-02C",
+    "canonical_A001",
+    "canonical_snapshot",
+    "EBOM",
+    "MBOM",
+    "D003",
+    "D012"
+  ],
+  "requirements": [],
+  "rationale": "EDR-023 + Gate04B producer PASS + candidate A001 Assembly-QA PASS.",
+  "verification_plan": [
+    "read-only frozen-hash preflight",
+    "exact existing stable-promotion source review",
+    "pre-write backup",
+    "reference-safe apply",
+    "post-promotion semantic/assembly QA",
+    "snapshot rebuild",
+    "stale reduction",
+    "EBOM/MBOM rebuild",
+    "Git/handoff checkpoint"
+  ],
+  "impact_status": "PASS_PRECHANGE_DEFINED",
+  "impact_report": "control/project/K01_BASELINE_02C_STALE_TRANSITION.json",
+  "implementation_status": "COMPLETE",
+  "verification_status": "PASS_POST_PROMOTION_QA_SNAPSHOT_BOM_PARITY",
+  "verification_evidence": [
+    "reports/cad/current/K01_GATE04B_DATUM_C_BUILD.json",
+    "reports/cad/current/K01_GATE04B_DATUM_C_ASSEMBLY_QA.json",
+    "control/change/K01_BASELINE_02C_PROMOTION_TECHNICAL_FILTER_REVIEW.json"
+  ],
+  "promotion_status": "PROMOTED",
+  "promotion_decision": "PASS_CANONICAL_ENGINEERING_BASELINE; R01_NOT_RELEASED"
+}

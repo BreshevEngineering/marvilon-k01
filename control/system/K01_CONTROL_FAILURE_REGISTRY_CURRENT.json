@@ -1,0 +1,127 @@
+{
+  "schema": "k01.control_failure_registry.current.v1",
+  "date": "2026-09-19",
+  "status": "ACTIVE_REGRESSION_SET",
+  "rule": "Every listed failure is a permanent regression case. Closing a defect does not remove its regression test.",
+  "failures": [
+    {
+      "id": "CF-001",
+      "title": "Duplicate active decision identity",
+      "control_area": "Decision identity",
+      "required_rule": "Duplicate active EDR ID is a hard configuration/control defect; exactly one current authority must remain.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-002",
+      "title": "Conflicting controlled engineering values",
+      "control_area": "Engineering value coherence",
+      "required_rule": "A release-relevant characteristic cannot have different active values across EDR/Product Definition/CAD/drawing/analysis/inspection.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-003",
+      "title": "Text-based semantic validation",
+      "control_area": "Guard quality",
+      "required_rule": "A guard must validate structured values/provenance, not display strings.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-004",
+      "title": "Rollback implementation failure",
+      "control_area": "Transaction safety",
+      "required_rule": "Rollback must be independently executable/tested and must not be assumed merely because a backup exists.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-005",
+      "title": "State Epoch churn without engineering change",
+      "control_area": "State identity",
+      "required_rule": "Same semantic authorities/frontier must yield the same State Epoch.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-006",
+      "title": "Stale remote-tracking ref treated as GitHub freshness",
+      "control_area": "Configuration",
+      "required_rule": "Fresh remote state requires actual fetch/ls-remote before claiming GitHub freshness.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-007",
+      "title": "Staged Git index stops unrelated engineering",
+      "control_area": "Configuration vs engineering",
+      "required_rule": "Staged state is configuration work unless it invalidates active-workpack input identity.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-008",
+      "title": "Required package component omitted",
+      "control_area": "Packaging",
+      "required_rule": "Package acceptance requires required-members verification.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-009",
+      "title": "Artifact path reported but artifact unavailable",
+      "control_area": "Handoff integrity",
+      "required_rule": "Creation message is not evidence; verify exists, nonzero size, hash, archive readability and required members.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-010",
+      "title": "Center projection diverges from authority",
+      "control_area": "Projection coherence",
+      "required_rule": "Center is projection only; mismatch creates PROJECTION_HOLD, not rewritten engineering truth.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-011",
+      "title": "CONTROL HOLD displaced product work",
+      "control_area": "Hold typing",
+      "required_rule": "Only a typed hold with blocks_active_workpack=true stops the active engineering workpack.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-012",
+      "title": "Generated report used too close to authority semantics",
+      "control_area": "Authority boundary",
+      "required_rule": "Generated reports may summarize/evidence but cannot silently become source of engineering truth.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-013",
+      "title": "Known SW2018 API failure rediscovered",
+      "control_area": "Toolchain regression",
+      "required_rule": "Known toolchain constraints become persistent operating standards/regression tests.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-014",
+      "title": "Books/standards not bound to decision applicability",
+      "control_area": "Source control",
+      "required_rule": "Sources need role, revision/version, applicability and links to requirement/calculation/decision when used.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-015",
+      "title": "Local PASS confused with product/release PASS",
+      "control_area": "Maturity semantics",
+      "required_rule": "PASS must be scoped: local/node/workpack/domain/product/release.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-017",
+      "title": "Workpack target mislabeled as pre-execution blocker",
+      "control_area": "HOLD semantics",
+      "required_rule": "A closure target of the ACTIVE workpack must not use blocks_active_workpack=true unless it genuinely prevents starting that workpack.",
+      "regression_required": true
+    },
+    {
+      "id": "CF-018",
+      "title": "Mutation executed without scope-bound human authorization",
+      "control_area": "Operator authority",
+      "required_rule": "ENGINEERING_MUTATION, CONTROL_MUTATION and PROMOTION require explicit authorization bound to workpack, action class, contract, Operator Lock, Completion Frontier and input identities.",
+      "regression_required": true
+    }
+  ]
+}
