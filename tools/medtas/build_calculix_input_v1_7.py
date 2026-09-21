@@ -1,18 +1,19 @@
 from __future__ import annotations
 import argparse,sys
 from pathlib import Path
+from control_authority import require_control_family
 from medtas_v16_common import load,dump,evaluate,register_build,register_verify,sha256_file
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--repo-root',required=True);a=ap.parse_args();root=Path(a.repo_root).resolve()
-    out=root/'reports/medtas/calculix/current/K01_CALCULIX_INPUT_P006_v1_7.json';deck=root/'reports/medtas/calculix/current/K01_CCX_P006/K01_P006.inp';base=root/'reports/medtas/calculix/current/K01_P006_MESH_BASE.inp';bp=root/'control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING_v1_7.json'
+    out=root/'reports/medtas/calculix/current/K01_CALCULIX_INPUT_P006_v1_7.json';deck=root/'reports/medtas/calculix/current/K01_CCX_P006/K01_P006.inp';base=root/'reports/medtas/calculix/current/K01_P006_MESH_BASE.inp';bp=require_control_family(root,'bolt_equiv_p006_binding')
     d=evaluate(root);blocking=[]
     for nid in ('K01.STRUCT.FACE_MAP.P006','K01.STRUCT.FACE_MAP.QUAL.P006','K01.STRUCT.MESH.P006','K01.STRUCT.BOLT_EQUIV.P006'):
         st=d.get(nid,{}).get('state')
         if st!='PASS':blocking.append(nid+':'+str(st))
     b=load(bp) if bp.exists() else {};frag=str((b.get('calculix_representation') or {}).get('approved_ccx_tail_fragment') or '').strip();fragp=(root/frag).resolve() if frag else None
     if not base.exists():blocking.append('CCX-INPUT-BASE-001: Gmsh/Abaqus base mesh input missing')
-    if not frag:blocking.append('CCX-INPUT-EQUIV-001: approved_ccx_tail_fragment is not bound in K01_BOLT_EQUIV_P006_BINDING_v1_7.json')
+    if not frag:blocking.append('CCX-INPUT-EQUIV-001: approved_ccx_tail_fragment is not bound in declared bolt-equivalence binding authority')
     elif not fragp.exists():blocking.append('CCX-INPUT-EQUIV-002: approved tail fragment file missing: '+str(fragp))
     if blocking:
         if deck.exists():deck.unlink()

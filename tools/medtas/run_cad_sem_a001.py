@@ -5,6 +5,8 @@ from pathlib import Path
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE))
 import medtas_state_engine_v1_1 as eng
+from v22_common import authority_path
+from control_authority import require_domain_authority
 
 def load(p): return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def dump(p,obj):
@@ -74,13 +76,20 @@ def canonicalize(raw):
     return {'schema':'medtas.k01.cad_sem_a001.v1_4','assembly':{'assembly_id':stem_title(asm.get('title') or asm.get('native_path')),'configuration':asm.get('configuration') or '','component_instance_count':len(instances)},'instances':instances,'documents':docs,'mates':mates,'completeness':{'component_instances':bool(instances),'assembly_configuration':bool(asm.get('configuration')),'component_transforms':all(x['suppressed'] or bool(x['transform']) for x in instances),'part_feature_semantics':all(bool(x['feature_states']) for x in docs) if docs else False,'material_assignments':all(bool(x['materials']) for x in docs) if docs else False,'mate_features':bool(mates)},'limitations':sorted(set(limitations))}
 
 def choose_assembly(root,binding):
-    src=binding['source_selection']; p=root/src['preferred_gate_verify']
-    if p.exists():
-        j=load(p); cand=j.get(src['preferred_gate_verify_field'])
-        if cand and Path(cand).exists(): return cand,'gate04e_verify'
-    fb=root/src['fallback_assembly']
-    if fb.exists(): return str(fb),'fallback_production'
-    raise FileNotFoundError('No assembly found. Checked '+str(p)+' and '+str(fb))
+    src=binding.get('source_selection') or {}
+    if src.get('mode')!='ENGINEERING_BASELINE_AUTHORITY':
+        raise RuntimeError('CAD semantic binding source mode must be ENGINEERING_BASELINE_AUTHORITY')
+    bp=require_domain_authority(root,src.get('authority_key') or 'engineering_baseline')
+    baseline=load(bp); value=baseline
+    for key in src.get('authority_field') or ['cad','assembly']:
+        if not isinstance(value,dict) or key not in value:
+            raise RuntimeError(f'Engineering baseline field missing: {src.get("authority_field")}')
+        value=value[key]
+    assembly=str(value or '').strip()
+    if not assembly: raise RuntimeError('Engineering baseline assembly path is empty')
+    p=Path(assembly)
+    if not p.exists(): raise FileNotFoundError('Engineering baseline assembly missing: '+assembly)
+    return assembly,'engineering_baseline_authority'
 
 def write_failure(root,stage,exc,extra=None):
     out=root/'reports/control/K01_MEDTAS_LAST_FAILURE.json'
@@ -94,12 +103,8 @@ def write_failure(root,stage,exc,extra=None):
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--repo-root',required=True); a=ap.parse_args(); root=Path(a.repo_root).resolve()
-    binding_path=root/'control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_6.json'
-    if not binding_path.exists(): binding_path=root/'control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_5.json'
-    if not binding_path.exists(): binding_path=root/'control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_4.json'
-    if not binding_path.exists(): binding_path=root/'control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_3.json'
-    if not binding_path.exists(): binding_path=root/'control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_2.json'
-    if not binding_path.exists(): binding_path=root/'control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1.json'
+    binding_path=authority_path(root,'cad_sem_a001_binding')
+    if binding_path is None: raise RuntimeError('Declared CAD semantic binding authority missing')
     try:
         binding=load(binding_path); assembly,source=choose_assembly(root,binding)
         raw=root/binding['raw_api_output']; canonical=root/binding['canonical_output']; record=root/binding['build_record']
@@ -138,15 +143,8 @@ def main():
         if not raw.exists(): raise RuntimeError('Exporter returned success but raw JSON is missing: '+str(raw))
         rawj=load(raw); canon=canonicalize(rawj); dump(canonical,canon)
         # Rebuild once to compute the current hash before writing its build record.
-        graph_path=root/'control/medtas/v1/graph/K01_engineering_build_graph_v2_0.json'
-        if not graph_path.exists(): graph_path=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_9.json'
-        if not graph_path.exists(): graph_path=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_8.json'
-        if not graph_path.exists(): graph_path=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_7.json'
-        if not graph_path.exists(): graph_path=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_5.json'
-        if not graph_path.exists(): graph_path=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_4.json'
-        if not graph_path.exists(): graph_path=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_3.json'
-        if not graph_path.exists(): graph_path=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_2.json'
-        if not graph_path.exists(): graph_path=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_1.json'
+        graph_path=authority_path(root,'engineering_build_graph')
+        if graph_path is None: raise RuntimeError('Declared engineering build graph authority missing')
         graph=load(graph_path); records=eng.load_record_store(record.parent); verifs=eng.load_record_store(root/'reports/medtas/verifications/current')
         derived=eng.evaluate_graph(graph,root,records,verifs); c=derived['K01.CAD.SEM.A001']
         br={'schema':'medtas.build_record.v1','node_id':'K01.CAD.SEM.A001','built_state_hash':c['state_hash'],'artifact_hash':c['artifact_hash'],'producer':{'raw_api_adapter':adapter,'csharp_exporter':'cad_api/medtas/bin/K01CadSemanticA001.exe','pywin32_fallback':'tools/medtas/sw_semantic_pywin32_v1_5.py','canonicalizer':'tools/medtas/run_cad_sem_a001.py'},'source_assembly':{'selection':source,'display_name':Path(assembly).name},'raw_snapshot':binding['raw_api_output'],'canonical_snapshot':binding['canonical_output'],'completeness':canon.get('completeness',{}),'limitations':canon.get('limitations',[])}

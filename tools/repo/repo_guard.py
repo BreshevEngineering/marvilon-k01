@@ -7,13 +7,18 @@ Purpose:
 - grandfathered legacy root entries are frozen: delete is allowed, modify/re-add is not;
 - current writable engineering roots remain usable;
 - forbidden generated/binary artefacts cannot be added to Git;
+- control namespace cannot silently proliferate version/CURRENT authorities;
 - non-zero exit blocks pre-commit and CI.
 
 This is intentionally a migration guard. A stricter final guard replaces it
 after command/tool normalization is complete.
 """
 from __future__ import annotations
-import argparse, json, subprocess, sys
+import argparse, json, subprocess, sys, re
+try:
+    from control_namespace_guard import audit as audit_control_namespace
+except ImportError:
+    from tools.repo.control_namespace_guard import audit as audit_control_namespace
 from pathlib import Path
 
 SNAPSHOT_TAG = "snapshot-2026-09-08"
@@ -29,6 +34,15 @@ CANONICAL_WRITABLE_ROOT = {
     ".github", ".githooks", ".gitignore", ".gitattributes",
 }
 ALLOWLIST_PATH = Path("control/repo/K01_ROOT_MIGRATION_ALLOWLIST.json")
+HARD_CODED_CONTROL_PATTERNS = (
+    re.compile(r"K01_engineering_build_graph_v\d", re.I),
+    re.compile(r"K01_CAD_SEM_A001_BINDING_v\d", re.I),
+    re.compile(r"K01_EVIDENCE_REGISTRY_v\d", re.I),
+    re.compile(r"K01_STATUS_MODEL_v\d", re.I),
+    re.compile(r"K01_BOLT_EQUIV_P006_BINDING_v\d", re.I),
+)
+SOURCE_PREFIXES=("tools/","scripts/","cad_api/","center/")
+SOURCE_SUFFIXES=(".py",".cs",".ps1",".cmd",".bat")
 
 def git(repo: Path, *args):
     p = subprocess.run(
@@ -58,6 +72,7 @@ class Guard:
             raise SystemExit(f"repo_guard HOLD — migration allowlist missing: {p}")
         obj = load_json(p)
         self.frozen = set(obj.get("grandfathered_frozen_root_entries", []))
+        self.post_snapshot_frozen = dict(obj.get("post_snapshot_frozen_root_sha256", {}))
         self.retired = set(obj.get("retired_root_entries", []))
         self.writable = set(obj.get("writable_root_entries", [])) | CANONICAL_WRITABLE_ROOT
 
@@ -67,7 +82,7 @@ class Guard:
     def check_live_root(self):
         names = {p.name for p in self.repo.iterdir()}
         names.discard(".git")
-        allowed = self.writable | self.frozen
+        allowed = self.writable | self.frozen | set(self.post_snapshot_frozen)
         for name in sorted(names - allowed):
             self.err(name, "root closed", "new/unclassified root entry")
         for name in sorted(names & self.retired):
@@ -101,11 +116,33 @@ class Guard:
             if root in self.frozen and not status.startswith("D"):
                 self.err(path, "legacy root frozen",
                          "grandfathered legacy may only be deleted; route work through canonical locations")
+            if root in self.post_snapshot_frozen and not status.startswith("D"):
+                self.err(path, "post-snapshot validated root frozen",
+                         "validated compatibility entrypoint may only be deleted; do not modify/re-add it")
 
-            if root not in self.writable and root not in self.frozen and root not in self.retired:
+            if root not in self.writable and root not in self.frozen and root not in self.post_snapshot_frozen and root not in self.retired and not status.startswith("D"):
                 self.err(path, "root closed", "staged path introduces an unapproved root entry")
 
         self.check_tracked_forbidden(staged_paths)
+
+        # New source changes may not re-introduce filename-based selection of critical control versions.
+        rc, patch, err = git(self.repo, "diff", "--cached", "-U0", "--", "tools", "scripts", "cad_api", "center")
+        if rc != 0:
+            self.err("<git>", "cannot inspect staged source patch", err)
+        else:
+            current_path=None
+            for line in patch:
+                if line.startswith("+++ b/"):
+                    current_path=line[6:]
+                    continue
+                if not current_path or not current_path.startswith(SOURCE_PREFIXES) or not current_path.lower().endswith(SOURCE_SUFFIXES):
+                    continue
+                if not line.startswith("+") or line.startswith("+++"):
+                    continue
+                if "control_authority" in line:
+                    continue
+                if any(p.search(line) for p in HARD_CODED_CONTROL_PATTERNS):
+                    self.err(current_path, "hard-coded control version selector", "new source must resolve critical control authority through tools/medtas/control_authority.py")
 
     def check_ci(self):
         rc, names, err = git(self.repo, "ls-files")
@@ -131,6 +168,19 @@ class Guard:
             if root in self.frozen and not status.startswith("D"):
                 self.err(path, "legacy root frozen", "modified after protected snapshot")
 
+        # A small number of entrypoints were validated and committed after the
+        # 2026-09-08 migration snapshot (Drawing System v1). Freeze them by
+        # exact content hash instead of pretending they existed at the old tag.
+        for name, expected in sorted(self.post_snapshot_frozen.items()):
+            p=self.repo/name
+            if not p.is_file():
+                self.err(name, "post-snapshot validated root missing", "validated compatibility entrypoint was removed")
+                continue
+            import hashlib
+            h=hashlib.sha256(p.read_bytes()).hexdigest()
+            if h.lower()!=str(expected).lower():
+                self.err(name, "post-snapshot validated root changed", f"sha256 {h} != {expected}")
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo-root", default=".")
@@ -149,6 +199,11 @@ def main():
         g.check_ci()
     else:
         g.check_live_root()
+
+    ns=audit_control_namespace(repo)
+    for v in ns.get("violations",[]):
+        g.err(v.get("path") or v.get("family") or "<control-namespace>",
+              "control namespace", json.dumps(v,ensure_ascii=False))
 
     if not g.errors:
         print("repo_guard MIGRATION PASS")

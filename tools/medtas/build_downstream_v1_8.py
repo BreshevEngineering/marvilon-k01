@@ -5,6 +5,7 @@ from pathlib import Path
 HERE=Path(__file__).resolve().parent
 sys.path.insert(0,str(HERE))
 import medtas_state_engine_v1_1 as eng
+from v22_common import authority_path
 
 ID_RE=re.compile(r'(K01-[PBA]-\d{3})',re.I)
 
@@ -16,15 +17,8 @@ def base_id(text):
     return m.group(1).upper() if m else str(text or '')
 
 def load_graph(root):
-    p=root/'control/medtas/v1/graph/K01_engineering_build_graph_v2_0.json'
-    if not p.exists(): p=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_9.json'
-    if not p.exists(): p=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_8.json'
-    if not p.exists(): p=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_7.json'
-    if not p.exists(): p=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_6.json'
-    if not p.exists(): p=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_5.json'
-    if not p.exists(): p=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_4.json'
-    if not p.exists(): p=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_3.json'
-    if not p.exists(): p=root/'control/medtas/v1/graph/K01_engineering_build_graph_v1_2.json'
+    p=authority_path(root,'engineering_build_graph')
+    if p is None: raise RuntimeError('Declared engineering build graph authority missing')
     return load(p)
 def stores(root): return eng.load_record_store(root/'reports/medtas/records/current'), eng.load_record_store(root/'reports/medtas/verifications/current')
 def evaluate(root):

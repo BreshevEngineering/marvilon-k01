@@ -175,11 +175,135 @@ def cmd_evidence(repo: Path) -> int:
         return 2
     return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
 
+
+def cmd_namespace_guard(repo: Path) -> int:
+    p=repo/"tools"/"repo"/"control_namespace_guard.py"
+    return run_process([sys.executable,str(p),"--repo-root",str(repo),"--write-report"],cwd=str(repo))
+
+def cmd_tech_filter(repo: Path) -> int:
+    p=repo/"tools"/"medtas"/"technical_filter_map_v2_2.py"
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_step_gate(repo: Path) -> int:
+    p=repo/"tools"/"assurance"/"engineering_step_gate.py"
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_requirements_coverage(repo: Path) -> int:
+    p=repo/"tools"/"medtas"/"build_requirements_coverage_v1_9.py"
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_baseline_preflight(repo: Path) -> int:
+    p=repo/"tools"/"medtas"/"baseline_02c_promotion_preflight.py"
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_baseline_promotion_dryrun(repo: Path) -> int:
+    p=repo/"tools"/"medtas"/"baseline_02c_promotion_dryrun.py"
+    if not p.exists():
+        print("HOLD: Baseline-02C promotion dry-run implementation missing:", p)
+        return 2
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_baseline_promotion_apply(repo: Path) -> int:
+    p=repo/"tools"/"medtas"/"baseline_02c_promotion_apply.py"
+    if not p.exists():
+        print("HOLD: Baseline-02C promotion apply implementation missing:", p)
+        return 2
+    return run_process([sys.executable,str(p),"--repo-root",str(repo),"--apply"],cwd=str(repo))
+
+def cmd_baseline_candidate_requalify(repo: Path) -> int:
+    p=repo/"tools"/"medtas"/"baseline_02c_candidate_requalify.py"
+    if not p.exists():
+        print("HOLD: Baseline-02C candidate requalification implementation missing:", p)
+        return 2
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_baseline_promote_verified(repo: Path) -> int:
+    # One user-facing engineering command: refresh the generic pre-write controls,
+    # semantically requalify any artifact-SHA drift, then promote only if all gates pass.
+    rc=cmd_prewrite(repo)
+    if rc!=0:
+        print("HOLD: prewrite control did not PASS; candidate requalification/promotion not started")
+        return rc
+    rc=cmd_baseline_candidate_requalify(repo)
+    if rc!=0:
+        print("HOLD: candidate requalification did not PASS; canonical promotion not started")
+        return rc
+    return cmd_baseline_promotion_apply(repo)
+
+def cmd_baseline_finalize(repo: Path) -> int:
+    p=repo/"tools"/"medtas"/"baseline_02c_post_promotion_finalize.py"
+    if not p.exists():
+        print("HOLD: Baseline-02C post-promotion finalizer missing:",p)
+        return 2
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_p007_professional_start(repo: Path) -> int:
+    p=repo/"tools"/"medtas"/"p007_professional_start_v1.py"
+    if not p.exists():
+        print("HOLD: P007 professional-start implementation missing:",p)
+        return 2
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_p007_rebind(repo: Path) -> int:
+    p=repo/"tools"/"medtas"/"p007_persistent_ref_rebind_v1.py"
+    if not p.exists():
+        print("HOLD: P007 persistent-reference rebind tool missing:",p)
+        return 2
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_p007_pmi_phase_a(repo: Path) -> int:
+    p=repo/"tools"/"medtas"/"p007_dimxpert_phase_a_v1.py"
+    if not p.exists():
+        print("HOLD: P007 DimXpert Phase-A tool missing:",p)
+        return 2
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_panel(repo: Path) -> int:
+    p=repo/"tools"/"assurance"/"build_engineering_dashboard.py"
+    if not p.exists():
+        print("HOLD: engineering dashboard builder missing:", p)
+        return 2
+    return run_process([sys.executable,str(p),"--repo-root",str(repo),"--open"],cwd=str(repo))
+
+def cmd_state_sync(repo: Path) -> int:
+    p=repo/"tools"/"state"/"k01_state_sync_v3.py"
+    if not p.exists():
+        print("HOLD: global project state sync v3 missing:",p)
+        return 2
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_temporal_guard(repo: Path) -> int:
+    p=repo/"tools"/"state"/"k01_temporal_coherence_guard_v1.py"
+    if not p.exists():
+        print("HOLD: temporal-coherence guard missing:",p)
+        return 2
+    return run_process([sys.executable,str(p),"--repo-root",str(repo),"--write-report"],cwd=str(repo))
+
 def cmd_handoff(repo: Path) -> int:
+    # Handoff completeness is not only file presence. First synchronize all global
+    # STATE_CURRENT views from one reducer, then fail closed on temporal inconsistency.
+    rc=cmd_state_sync(repo)
+    if rc!=0:
+        print("HOLD: state synchronization failed; handoff not built")
+        return rc
+    rc=cmd_temporal_guard(repo)
+    if rc!=0:
+        print("HOLD: temporal coherence failed; handoff not built")
+        return rc
     p = repo/"tools"/"medtas"/"ai_handoff_v2_0.py"
     if not p.exists():
         print("HOLD: handoff implementation missing:", p)
         return 2
+    return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
+
+def cmd_root_cleanup(repo: Path, apply: bool=False) -> int:
+    p=repo/"tools"/"repo"/"root_cleanup.py"
+    cmd=[sys.executable,str(p),"--repo-root",str(repo)]
+    if apply: cmd.append("--apply")
+    return run_process(cmd,cwd=str(repo))
+
+def cmd_prewrite(repo: Path) -> int:
+    p=repo/"tools"/"assurance"/"prewrite_control.py"
     return run_process([sys.executable,str(p),"--repo-root",str(repo)],cwd=str(repo))
 
 def main():
@@ -195,7 +319,26 @@ def main():
         ("assurance","Run canonical assurance suite"),
         ("audit","Run blocking repo guard + project selftest"),
         ("evidence","Build calculation evidence index"),
-        ("handoff","Build AI handoff package"),
+        ("handoff","Build temporally coherent AI handoff package"),
+        ("state-sync","Regenerate all global STATE_CURRENT views from one reducer"),
+        ("temporal-guard","Verify state-epoch / current-file temporal coherence"),
+        ("requirements-coverage","Rebuild requirement-to-registered-evidence coverage"),
+        ("baseline02c-preflight","Run read-only Baseline-02C promotion preflight"),
+        ("baseline02c-promotion-dryrun","Build read-only Baseline-02C stable-promotion transaction manifest"),
+        ("baseline02c-promotion-apply","Execute guarded Baseline-02C stable promotion with backup/staging/full QA/rollback"),
+        ("baseline02c-requalify","Requalify current Datum-C candidate geometry/assembly after artifact SHA drift"),
+        ("baseline02c-promote-verified","Requalify current verified candidate and promote it only if all QA passes"),
+        ("baseline02c-finalize","Finalize promoted canonical A001: semantic snapshot, freshness, EBOM/MBOM, CP-P, next P007 gate"),
+        ("p007-start","Reconcile canonical P007, close C02 draft drift, prepare canonical PMI rebinding work"),
+        ("p007-rebind","Regenerate canonical P007 persistent references and prove close/reopen resolution"),
+        ("p007-pmi-a","Create timestamped P007 candidate and author verified native DimXpert Phase-A PMI"),
+        ("panel","Build and open the visual K01 engineering control panel"),
+        ("namespace-guard","Validate control authority/version namespace"),
+        ("tech-filter","Rebuild 24-category technical-filter map"),
+        ("step-gate","Run the current checkpoint/step gate"),
+        ("root-cleanup","Dry-run controlled repository-root cleanup"),
+        ("root-cleanup-apply","Apply validated repository-root cleanup"),
+        ("prewrite-check","Refresh generic controls and run the current step gate"),
         ("help","Show available commands"),
     ]:
         sub.add_parser(name, help=help_text)
@@ -218,6 +361,25 @@ def main():
         print("  run.cmd audit")
         print("  run.cmd evidence")
         print("  run.cmd handoff")
+        print("  run.cmd state-sync")
+        print("  run.cmd temporal-guard")
+        print("  run.cmd requirements-coverage")
+        print("  run.cmd baseline02c-preflight")
+        print("  run.cmd baseline02c-promotion-dryrun")
+        print("  run.cmd baseline02c-promotion-apply")
+        print("  run.cmd baseline02c-requalify")
+        print("  run.cmd baseline02c-promote-verified")
+        print("  run.cmd baseline02c-finalize")
+        print("  run.cmd p007-start")
+        print("  run.cmd p007-rebind")
+        print("  run.cmd p007-pmi-a")
+        print("  run.cmd panel")
+        print("  run.cmd namespace-guard")
+        print("  run.cmd tech-filter")
+        print("  run.cmd step-gate")
+        print("  run.cmd root-cleanup")
+        print("  run.cmd root-cleanup-apply")
+        print("  run.cmd prewrite-check")
         print("  run.cmd center")
         print()
         print("Engineering execution routes (BOM, CAD, drawings, DimXpert, FEMM,")
@@ -228,6 +390,21 @@ def main():
         "selftest":cmd_selftest, "center":cmd_center, "status":cmd_status,
         "commands":cmd_commands, "blockers":cmd_blockers, "assurance":cmd_assurance,
         "audit":cmd_audit, "evidence":cmd_evidence, "handoff":cmd_handoff,
+        "state-sync":cmd_state_sync, "temporal-guard":cmd_temporal_guard,
+        "requirements-coverage":cmd_requirements_coverage, "baseline02c-preflight":cmd_baseline_preflight,
+        "baseline02c-promotion-dryrun":cmd_baseline_promotion_dryrun,
+        "baseline02c-promotion-apply":cmd_baseline_promotion_apply,
+        "baseline02c-requalify":cmd_baseline_candidate_requalify,
+        "baseline02c-promote-verified":cmd_baseline_promote_verified,
+        "baseline02c-finalize":cmd_baseline_finalize,
+        "p007-start":cmd_p007_professional_start,
+        "p007-rebind":cmd_p007_rebind,
+        "p007-pmi-a":cmd_p007_pmi_phase_a,
+        "panel":cmd_panel,
+        "namespace-guard":cmd_namespace_guard, "tech-filter":cmd_tech_filter, "step-gate":cmd_step_gate,
+        "root-cleanup":lambda r: cmd_root_cleanup(r,False),
+        "root-cleanup-apply":lambda r: cmd_root_cleanup(r,True),
+        "prewrite-check":cmd_prewrite,
     }
     return dispatch[a.command](repo)
 

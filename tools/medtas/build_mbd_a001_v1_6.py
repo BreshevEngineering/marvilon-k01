@@ -1,6 +1,7 @@
 from __future__ import annotations
 import argparse,json,subprocess,sys
 from pathlib import Path
+from control_authority import require_control_family
 from medtas_v16_common import load,dump,graph_path,register_build
 
 def norm_num(v):
@@ -27,8 +28,7 @@ def canonical_doc(raw,document_id):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--repo-root',required=True);a=ap.parse_args();root=Path(a.repo_root).resolve()
-    bindp=root/'control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_6.json'
-    if not bindp.exists():bindp=root/'control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_5.json'
+    bindp=require_control_family(root,'cad_sem_a001_binding')
     binding=load(bindp)
     rawp=root/binding['raw_api_output'];out=root/'reports/medtas/mbd/current/K01_MBD_A001_v1.json';exe=root/'cad_api/medtas/bin/K01MbdDimXpertPart.exe';log=root/'reports/medtas/logs/current/K01_MBD_DIMXPERT_EXPORT.log'
     limitations=[];docs=[]

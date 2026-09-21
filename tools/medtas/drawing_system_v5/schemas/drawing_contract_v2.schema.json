@@ -1,0 +1,369 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marvilon.local/schemas/drawing-contract-v2.schema.json",
+  "title": "Marvilon Drawing Contract V2",
+  "type": "object",
+  "required": [
+    "schema",
+    "drawing_id",
+    "part_id",
+    "part_family",
+    "drawing_family",
+    "document",
+    "views",
+    "characteristics",
+    "model_bindings",
+    "release",
+    "model"
+  ],
+  "properties": {
+    "schema": {
+      "enum": [
+        "marvilon.drawing_contract.v2",
+        "marvilon.drawing_contract.v2_1"
+      ]
+    },
+    "drawing_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "part_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "part_family": {
+      "type": "string",
+      "minLength": 1
+    },
+    "drawing_family": {
+      "type": "string",
+      "minLength": 1
+    },
+    "document": {
+      "type": "object",
+      "required": [
+        "sheet",
+        "units",
+        "projection",
+        "scale",
+        "title",
+        "material"
+      ],
+      "properties": {
+        "sheet": {
+          "type": "string"
+        },
+        "units": {
+          "type": "string"
+        },
+        "projection": {
+          "enum": [
+            "FIRST_ANGLE",
+            "THIRD_ANGLE"
+          ]
+        },
+        "scale": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "material": {
+          "type": "string"
+        },
+        "general_tolerance": {
+          "type": "object",
+          "required": [
+            "state"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "CONTROLLED",
+                "OPEN",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "standard": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "class": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "surface_texture": {
+          "type": "object",
+          "required": [
+            "state"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "CONTROLLED",
+                "OPEN",
+                "NOT_APPLICABLE"
+              ]
+            },
+            "general_ra_um": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "note": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "revision": {
+          "type": "object",
+          "required": [
+            "state"
+          ],
+          "properties": {
+            "state": {
+              "enum": [
+                "CONTROLLED",
+                "OPEN"
+              ]
+            },
+            "value": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "views": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "published",
+          "role"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "kind": {
+            "enum": [
+              "LONGITUDINAL_SECTION",
+              "END_VIEW",
+              "MODEL_VIEW",
+              "DETAIL",
+              "ISOMETRIC",
+              "DEPENDENCY_PARENT"
+            ]
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "role": {
+            "type": "string"
+          },
+          "orientation": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "dependency_of": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "model_bindings": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "kind",
+          "state"
+        ],
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "state": {
+            "enum": [
+              "CONTROLLED",
+              "OPEN"
+            ]
+          },
+          "semantic_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "named_entity": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "named_feature": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "geometry_signature": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "persistent_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "characteristics": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "semantic_class",
+          "state",
+          "source_authority",
+          "requirement",
+          "view_id",
+          "drawing_projection"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "semantic_class": {
+            "type": "string"
+          },
+          "state": {
+            "enum": [
+              "CONTROLLED",
+              "CONTROLLED_WITH_OPEN_SUBREQUIREMENT",
+              "CANDIDATE",
+              "OPEN",
+              "REFERENCE"
+            ]
+          },
+          "source_authority": {
+            "type": "string"
+          },
+          "requirement": {
+            "type": "object"
+          },
+          "bindings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "view_id": {
+            "type": "string"
+          },
+          "drawing_projection": {
+            "enum": [
+              "REQUIRED",
+              "REFERENCE",
+              "NOT_REQUIRED",
+              "PROHIBITED_UNTIL_RELEASED"
+            ]
+          },
+          "inspection": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "release": {
+      "type": "object",
+      "required": [
+        "review_build_allowed",
+        "manufacturing_build_allowed",
+        "blockers"
+      ],
+      "properties": {
+        "review_build_allowed": {
+          "type": "boolean"
+        },
+        "manufacturing_build_allowed": {
+          "type": "boolean"
+        },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": [
+        "canonical_path",
+        "source_invariance_required"
+      ],
+      "properties": {
+        "canonical_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_invariance_required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "execution_policy": {
+      "type": "object"
+    }
+  }
+}

@@ -1,7 +1,7 @@
 """BOM from the actual v1.4 instances + v1.9 items contract. Never release stale CAD."""
 from pathlib import Path
 import argparse,csv,re
-from v22_common import load,save,sha256_file
+from v22_common import load,save,sha256_file,authority_path
 
 def partno_from_name(s):
     m=re.search(r'(K01-(?:P|B)-\d{3})',s or '',re.I)
@@ -50,7 +50,10 @@ def build(raw,reg):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--repo-root',required=True);a=ap.parse_args();r=Path(a.repo_root).resolve()
-    binding=load(r/'control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_6.json',{}) or {}
+    bindingp=authority_path(r,'cad_sem_a001_binding')
+    if bindingp is None:
+        raise SystemExit('HOLD: declared CAD semantic binding authority missing')
+    binding=load(bindingp,{}) or {}
     rawp=r/binding.get('raw_api_output','reports/cad/current/K01_A001_SEMANTIC_RAW_API_v1_4.json')
     regp=r/'control/product/parts.json'; reg=load(regp,{}) or {}; eb=build(load(rawp,{}) or {},reg)
     eb['input_hashes']={str(p.relative_to(r)):sha256_file(p) for p in (rawp,regp) if p.is_file()}

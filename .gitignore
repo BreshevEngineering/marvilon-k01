@@ -48,3 +48,19 @@ review_upload/
 *.SL3
 cad_api/bin/
 # <<< K01 SNAPSHOT RUNTIME EXCLUSIONS <<<
+
+# Controlled local history archive; indexed by control/repo registry, excluded from active Git/handoff context.
+archive/
+
+# BEGIN K01 GENERATED RUNTIME SIMPLE V1
+/reports/
+/evidence/current/
+/_hotfix_backup/
+/handoff/
+/Downloads/
+/review_upload/
+/K01_AI_HANDOFF_MANIFEST.json
+__pycache__/
+*.pyc
+!/evidence/immutable/**
+# END K01 GENERATED RUNTIME SIMPLE V1

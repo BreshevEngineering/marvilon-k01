@@ -1,0 +1,374 @@
+{
+  "schema": "k01.control_namespace_baseline.v1",
+  "captured_from": "K01_AI_HANDOFF_CURRENT(20260910-081017) + workstation namespace adjudication 2026-09-10",
+  "mode": "FREEZE_EXISTING_VERSION_FAMILIES_SHRINK_ONLY",
+  "rule": "Existing version families are migration debt. Deletion/shrink is allowed. Adding a new version sibling or a new version-family ambiguity is blocked unless this reviewed baseline is deliberately revised.",
+  "version_families": {
+    "control/01_GATE04C1_J2_NATIVE_PREFLIGHT.cmd": {
+      "members": [
+        "control/01_GATE04C1_J2_NATIVE_PREFLIGHT_V01.cmd",
+        "control/01_GATE04C1_J2_NATIVE_PREFLIGHT_V02.cmd"
+      ],
+      "member_count": 2
+    },
+    "control/03_GATE04B_DATUM_C.cmd": {
+      "members": [
+        "control/03_GATE04B_DATUM_C_V5.cmd",
+        "control/03_GATE04B_DATUM_C_V6.cmd"
+      ],
+      "member_count": 2
+    },
+    "control/command_center/OPEN_K01_COMMAND_CENTER.cmd": {
+      "members": [
+        "control/command_center/OPEN_K01_COMMAND_CENTER_V2.cmd",
+        "control/command_center/OPEN_K01_COMMAND_CENTER_V3.cmd",
+        "control/command_center/OPEN_K01_COMMAND_CENTER_V4.cmd",
+        "control/command_center/OPEN_K01_COMMAND_CENTER_V5.cmd",
+        "control/command_center/OPEN_K01_COMMAND_CENTER_V6.cmd",
+        "control/command_center/OPEN_K01_COMMAND_CENTER_V7.cmd",
+        "control/command_center/OPEN_K01_COMMAND_CENTER_V8.cmd"
+      ],
+      "member_count": 7
+    },
+    "control/command_center/cc_server.ps1": {
+      "members": [
+        "control/command_center/cc_server_v4.ps1",
+        "control/command_center/cc_server_v5.ps1",
+        "control/command_center/cc_server_v6.ps1",
+        "control/command_center/cc_server_v7.ps1",
+        "control/command_center/cc_server_v8.ps1"
+      ],
+      "member_count": 5
+    },
+    "control/command_center/data/K01_FILE_REGISTRY.json": {
+      "members": [
+        "control/command_center/data/K01_FILE_REGISTRY_v1.json",
+        "control/command_center/data/K01_FILE_REGISTRY_v2.json",
+        "control/command_center/data/K01_FILE_REGISTRY_v3.json",
+        "control/command_center/data/K01_FILE_REGISTRY_v5.json",
+        "control/command_center/data/K01_FILE_REGISTRY_v6.json",
+        "control/command_center/data/K01_FILE_REGISTRY_v7.json",
+        "control/command_center/data/K01_FILE_REGISTRY_v8.json"
+      ],
+      "member_count": 7
+    },
+    "control/command_center/data/K01_MACHINE_PROFILES.json": {
+      "members": [
+        "control/command_center/data/K01_MACHINE_PROFILES_v1.json",
+        "control/command_center/data/K01_MACHINE_PROFILES_v2.json"
+      ],
+      "member_count": 2
+    },
+    "control/decision_system/K01_DECISION_REGISTER.csv": {
+      "members": [
+        "control/decision_system/K01_DECISION_REGISTER_v1.csv",
+        "control/decision_system/K01_DECISION_REGISTER_v2.csv"
+      ],
+      "member_count": 2
+    },
+    "control/decision_system/K01_ENGINEERING_DECISION_STANDARD_EDS001.md": {
+      "members": [
+        "control/decision_system/K01_ENGINEERING_DECISION_STANDARD_EDS001_v1.md",
+        "control/decision_system/K01_ENGINEERING_DECISION_STANDARD_EDS001_v2.md"
+      ],
+      "member_count": 2
+    },
+    "control/decision_system/K01_J2_C2R1_ENGINEERING_DOSSIER.json": {
+      "members": [
+        "control/decision_system/K01_J2_C2R1_ENGINEERING_DOSSIER_v1.json",
+        "control/decision_system/K01_J2_C2R1_ENGINEERING_DOSSIER_v2.json"
+      ],
+      "member_count": 2
+    },
+    "control/digital_thread/K01_MEDTAS_DIGITAL_THREAD_ARCHITECTURE.json": {
+      "members": [
+        "control/digital_thread/K01_MEDTAS_DIGITAL_THREAD_ARCHITECTURE_v1.json",
+        "control/digital_thread/K01_MEDTAS_DIGITAL_THREAD_ARCHITECTURE_v2.json"
+      ],
+      "member_count": 2
+    },
+    "control/evidence/K01_SOURCE_REGISTRY.json": {
+      "members": [
+        "control/evidence/K01_SOURCE_REGISTRY_v1.json",
+        "control/evidence/K01_SOURCE_REGISTRY_v2.json"
+      ],
+      "member_count": 2
+    },
+    "control/git/K01_GIT_CLASSIFY.ps1": {
+      "members": [
+        "control/git/K01_GIT_CLASSIFY_v1.ps1",
+        "control/git/K01_GIT_CLASSIFY_v2.ps1"
+      ],
+      "member_count": 2
+    },
+    "control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING.json": {
+      "members": [
+        "control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING_v1_6.json",
+        "control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING_v1_7.json"
+      ],
+      "member_count": 2
+    },
+    "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING.json": {
+      "members": [
+        "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1.json",
+        "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_2.json",
+        "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_3.json",
+        "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_4.json",
+        "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_5.json",
+        "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_6.json"
+      ],
+      "member_count": 6
+    },
+    "control/medtas/v1/graph/K01_engineering_build_graph.json": {
+      "members": [
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_1.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_2.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_3.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_4.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_5.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_6.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_7.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_8.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_9.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_0.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_1.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_2.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_3.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_4.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_5.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_6.json"
+      ],
+      "member_count": 16,
+      "adjudication": "Authority Map declares v2.6 authority and v2.1..v2.5 legacy; baseline updated during 2026-09-16 stabilization without changing domain authority."
+    },
+    "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY.json": {
+      "members": [
+        "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY_v1.json",
+        "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY_v1_2.json"
+      ],
+      "member_count": 2
+    },
+    "control/medtas/v1/spec/CANONICAL_HASH_AND_MBD_POLICY.md": {
+      "members": [
+        "control/medtas/v1/spec/CANONICAL_HASH_AND_MBD_POLICY_v1_4.md",
+        "control/medtas/v1/spec/CANONICAL_HASH_AND_MBD_POLICY_v1_5.md"
+      ],
+      "member_count": 2
+    },
+    "control/medtas/v1/spec/K01_RELEASE_PRIORITY_POLICY.json": {
+      "members": [
+        "control/medtas/v1/spec/K01_RELEASE_PRIORITY_POLICY_v1_8.json",
+        "control/medtas/v1/spec/K01_RELEASE_PRIORITY_POLICY_v1_9.json"
+      ],
+      "member_count": 2
+    },
+    "control/medtas/v1/spec/K01_STATUS_MODEL.json": {
+      "members": [
+        "control/medtas/v1/spec/K01_STATUS_MODEL_v1_7.json",
+        "control/medtas/v1/spec/K01_STATUS_MODEL_v1_8.json",
+        "control/medtas/v1/spec/K01_STATUS_MODEL_v1_9.json"
+      ],
+      "member_count": 3
+    },
+    "control/state/K01_STATE_ENGINE.ps1": {
+      "members": [
+        "control/state/K01_STATE_ENGINE_v7.ps1",
+        "control/state/K01_STATE_ENGINE_v8.ps1"
+      ],
+      "member_count": 2
+    },
+    "control/system/K01_DATA_AUTHORITY.md": {
+      "members": [
+        "control/system/K01_DATA_AUTHORITY_v1.md",
+        "control/system/K01_DATA_AUTHORITY_v2.md"
+      ],
+      "member_count": 2
+    },
+    "control/system/K01_MEDTAS_PACKAGE_MANIFEST.json": {
+      "members": [
+        "control/system/K01_MEDTAS_PACKAGE_MANIFEST_v3.json",
+        "control/system/K01_MEDTAS_PACKAGE_MANIFEST_v4.json",
+        "control/system/K01_MEDTAS_PACKAGE_MANIFEST_v5.json",
+        "control/system/K01_MEDTAS_PACKAGE_MANIFEST_v6.json",
+        "control/system/K01_MEDTAS_PACKAGE_MANIFEST_v7.json"
+      ],
+      "member_count": 5
+    },
+    "control/system/STATIC_AUDIT_MEDTAS.json": {
+      "members": [
+        "control/system/STATIC_AUDIT_MEDTAS_v4.json",
+        "control/system/STATIC_AUDIT_MEDTAS_v5.json",
+        "control/system/STATIC_AUDIT_MEDTAS_v6.json",
+        "control/system/STATIC_AUDIT_MEDTAS_v7.json",
+        "control/system/STATIC_AUDIT_MEDTAS_v8.json",
+        "control/system/STATIC_AUDIT_MEDTAS_v8_1.json",
+        "control/system/STATIC_AUDIT_MEDTAS_v8_2.json",
+        "control/system/STATIC_AUDIT_MEDTAS_v8_3.json",
+        "control/system/STATIC_AUDIT_MEDTAS_v8_4.json"
+      ],
+      "member_count": 9
+    },
+    "control/workpacks/K01_T03_PILOT_TOOL_WORKPACKAGE.json": {
+      "members": [
+        "control/workpacks/K01_T03_PILOT_TOOL_WORKPACKAGE_v1.json",
+        "control/workpacks/K01_T03_PILOT_TOOL_WORKPACKAGE_v2.json"
+      ],
+      "member_count": 2
+    },
+    "reports/cad/current/K01_A001_SEMANTIC_RAW_API.json": {
+      "members": [
+        "reports/cad/current/K01_A001_SEMANTIC_RAW_API_v1_2.json",
+        "reports/cad/current/K01_A001_SEMANTIC_RAW_API_v1_4.json"
+      ],
+      "member_count": 2
+    },
+    "reports/cad/current/K01_GATE04D_C2R1_TYPED_DRAWINGS.json": {
+      "members": [
+        "reports/cad/current/K01_GATE04D_C2R1_TYPED_DRAWINGS_V2.json",
+        "reports/cad/current/K01_GATE04D_C2R1_TYPED_DRAWINGS_V3.json"
+      ],
+      "member_count": 2
+    },
+    "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_CURRENT.json": {
+      "members": [
+        "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_V2_CURRENT.json",
+        "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_V3_CURRENT.json"
+      ],
+      "member_count": 2
+    },
+    "reports/medtas/calculix/current/K01_CALCULIX_INPUT_P006.json": {
+      "members": [
+        "reports/medtas/calculix/current/K01_CALCULIX_INPUT_P006_v1_6.json",
+        "reports/medtas/calculix/current/K01_CALCULIX_INPUT_P006_v1_7.json"
+      ],
+      "member_count": 2
+    },
+    "reports/medtas/calculix/current/K01_STRUCTURAL_MESH_P006.json": {
+      "members": [
+        "reports/medtas/calculix/current/K01_STRUCTURAL_MESH_P006_v1_6.json",
+        "reports/medtas/calculix/current/K01_STRUCTURAL_MESH_P006_v1_7.json"
+      ],
+      "member_count": 2
+    },
+    "reports/medtas/drawing/current/K01_DRAWING_MBD_RELEASE_WORKPACK.json": {
+      "members": [
+        "reports/medtas/drawing/current/K01_DRAWING_MBD_RELEASE_WORKPACK_v1_5.json",
+        "reports/medtas/drawing/current/K01_DRAWING_MBD_RELEASE_WORKPACK_v1_6.json"
+      ],
+      "member_count": 2
+    },
+    "reports/medtas/mbd/current/K01_MBD_AUTHORING_CANDIDATES.json": {
+      "members": [
+        "reports/medtas/mbd/current/K01_MBD_AUTHORING_CANDIDATES_v1_6.json",
+        "reports/medtas/mbd/current/K01_MBD_AUTHORING_CANDIDATES_v1_7.json"
+      ],
+      "member_count": 2
+    },
+    "reports/medtas/structural/current/K01_STRUCTURAL_BOLT_EQUIV_P006.json": {
+      "members": [
+        "reports/medtas/structural/current/K01_STRUCTURAL_BOLT_EQUIV_P006_v1_6.json",
+        "reports/medtas/structural/current/K01_STRUCTURAL_BOLT_EQUIV_P006_v1_7.json"
+      ],
+      "member_count": 2
+    },
+    "reports/medtas/structural/current/K01_STRUCTURAL_NEUTRAL_GEOMETRY_P006.json": {
+      "members": [
+        "reports/medtas/structural/current/K01_STRUCTURAL_NEUTRAL_GEOMETRY_P006_v1_6.json",
+        "reports/medtas/structural/current/K01_STRUCTURAL_NEUTRAL_GEOMETRY_P006_v1_7.json"
+      ],
+      "member_count": 2
+    },
+    "control/K01_ENGINEERING_CONTROL_CENTER.xlsx": {
+      "members": [
+        "control/K01_ENGINEERING_CONTROL_CENTER_v2.xlsx",
+        "control/K01_ENGINEERING_CONTROL_CENTER_v3.xlsx",
+        "control/K01_ENGINEERING_CONTROL_CENTER_v4.xlsx",
+        "control/K01_ENGINEERING_CONTROL_CENTER_v5.xlsx"
+      ],
+      "member_count": 4,
+      "disposition": "LEGACY_NON_AUTHORITY_UI_WORKBOOK_HISTORY",
+      "adjudication": "control/repo/K01_CONTROL_NAMESPACE_ADJUDICATION_20260910.json"
+    },
+    "control/command_center/K01_Command_Center.html": {
+      "members": [
+        "control/command_center/K01_Command_Center_v1.html",
+        "control/command_center/K01_Command_Center_v2.html",
+        "control/command_center/K01_Command_Center_v3.html",
+        "control/command_center/K01_Command_Center_v4.html",
+        "control/command_center/K01_Command_Center_v5.html",
+        "control/command_center/K01_Command_Center_v6.html",
+        "control/command_center/K01_Command_Center_v7.html",
+        "control/command_center/K01_Command_Center_v8.html"
+      ],
+      "member_count": 8,
+      "disposition": "LEGACY_NON_AUTHORITY_COMMAND_CENTER_UI_HISTORY",
+      "adjudication": "control/repo/K01_CONTROL_NAMESPACE_ADJUDICATION_20260910.json"
+    },
+    "control/drawings/spec/K01-D-003_P003_DRAWING_SPEC.json": {
+      "members": [
+        "control/drawings/spec/K01-D-003_P003_DRAWING_SPEC_v2.json",
+        "control/drawings/spec/K01-D-003_P003_DRAWING_SPEC_v3.json",
+        "control/drawings/spec/K01-D-003_P003_DRAWING_SPEC_v4.json",
+        "control/drawings/spec/K01-D-003_P003_DRAWING_SPEC_v5.json"
+      ],
+      "member_count": 4,
+      "adjudication": "S2 V7 FREEZE_EXISTING_DRAWING_SPEC_VERSION_DEBT__NO_NEW_SIBLING_ALLOWED"
+    },
+    "control/drawings/spec/K01-D-005_P006_DRAWING_SPEC.json": {
+      "members": [
+        "control/drawings/spec/K01-D-005_P006_DRAWING_SPEC_v1.json",
+        "control/drawings/spec/K01-D-005_P006_DRAWING_SPEC_v2.json"
+      ],
+      "member_count": 2,
+      "adjudication": "S2 V7 FREEZE_EXISTING_DRAWING_SPEC_VERSION_DEBT__NO_NEW_SIBLING_ALLOWED"
+    },
+    "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC.json": {
+      "members": [
+        "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC_v1.json",
+        "control/drawings/spec/K01-D-006_P007_DRAWING_SPEC_v2.json"
+      ],
+      "member_count": 2,
+      "adjudication": "S2 V7 FREEZE_EXISTING_DRAWING_SPEC_VERSION_DEBT__NO_NEW_SIBLING_ALLOWED"
+    }
+  },
+  "current_conflict_families": {
+    "control/state/K01_STATE_CURRENT.json": [
+      "control/state/K01_STATE_CURRENT.json",
+      "control/state/K01_STATE_CURRENT_v8.json"
+    ],
+    "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_CURRENT.json": [
+      "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_CURRENT.json",
+      "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_V2_CURRENT.json",
+      "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_V3_CURRENT.json"
+    ]
+  },
+  "critical_authority_source": "control/project/K01_AUTHORITY_MAP_CURRENT.json::control_families",
+  "critical_legacy_sha256": {
+    "control/medtas/v1/graph/K01_engineering_build_graph_v1_1.json": "51c041acb3220bfbb2b07c5f90e99aee595cc947b28de4c384d25809ca6852a9",
+    "control/medtas/v1/graph/K01_engineering_build_graph_v1_2.json": "61bba6112c8ceca7569a35c18fb36ddedf470fe1eb48a7377fa0dabe7eb928a1",
+    "control/medtas/v1/graph/K01_engineering_build_graph_v1_3.json": "e26bea6dfdc8345153b7388fa9f8eafefcf1d2243b6392ddcd06a01e46a7ef8f",
+    "control/medtas/v1/graph/K01_engineering_build_graph_v1_4.json": "b44ac6960e7293e0192d060523d7d5638b2de7d3ef73be98a12b15cd93a345ae",
+    "control/medtas/v1/graph/K01_engineering_build_graph_v1_5.json": "a7a09f7ecf02510e92809a069770c5cec070c222bb039cf5ebccdf5daf30cf24",
+    "control/medtas/v1/graph/K01_engineering_build_graph_v1_6.json": "32f32bbdb026685bafeb1064c1e6170c733e71cccaf3f216a34bf2f6533c557b",
+    "control/medtas/v1/graph/K01_engineering_build_graph_v1_7.json": "f166870a82a0e6be8662dbeb15d3dd47e13e9971f175c1ca74ce7c0ed355b46d",
+    "control/medtas/v1/graph/K01_engineering_build_graph_v1_8.json": "9a760dc3c15a73f016e27f531892d838ca125f4b9a1feb1680384a9b34bacb88",
+    "control/medtas/v1/graph/K01_engineering_build_graph_v1_9.json": "1671510c001a5bc7e21b0679fec5f4d585d6e66ba5f3ffb4d2fd926d04027df6",
+    "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1.json": "698f3eeed476255ff5c1bf0516e3b4dfc5aea5633c5f18b82138e27ec0378f65",
+    "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_2.json": "21abd32a5446a841c2c9df1e39d6b6ea4e22c7659e2b6771555854f852010aab",
+    "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_3.json": "b26dd9475e9cd42ef10a0e5a0b8b997632880eb45dab653a6280117fff906121",
+    "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_4.json": "164628c667f4d6d99dbeded2f27ce5366e806d0aee77876fe37b773d68498cf5",
+    "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_5.json": "541b1f940e9679a65d953a9f640d4432b941936a7ce651090ce16ed9995e7a5c",
+    "control/medtas/v1/spec/K01_STATUS_MODEL_v1_7.json": "45a9f536bf72aad757a2963c612ca743e4c2eb7e178e4428ef94908ceb13cf97",
+    "control/medtas/v1/spec/K01_STATUS_MODEL_v1_8.json": "aa9a00025bb713542c3ef386867cd7b0730a2edc3fbb2eec557a2b308f0b3669",
+    "control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING_v1_6.json": "bf6f424d10b643e548c6833c393ddcecfe51c582b102e7abb114225e281f0347",
+    "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY_v1.json": "4bf7faaa31654d79636d806bc66be5a1810d6fc7ecde56c63abee898e1be75da",
+    "control/state/K01_STATE_CURRENT.json": "482c45dbb01182b1d41dae8c95a53b796f3992286a944e1f5666d93677264431",
+    "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_CURRENT.json": "bd9050befe2b614f313a1aad5e8b8b7cb07e18a6664534c87a7545574d25dacf",
+    "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_V2_CURRENT.json": "492ef43d1bf88cd517ed9f3a7405871c7784e6680f474d809141a3c56cd5a8b6"
+  },
+  "workstation_adjudication_rule": "A handoff may omit non-source binary/UI history. If live repo_guard discovers a pre-existing version family absent from this baseline, it MUST HOLD. The family may be added only by an explicit reviewed adjudication with exact members and non-authority/authority disposition; there is no automatic accept-all/bootstrap mode.",
+  "s2_v7_adjudication": {
+    "generated_utc": "2026-09-21T10:50:57.064026+00:00",
+    "rule": "Exact existing Drawing spec version families frozen as migration debt; additions remain blocked."
+  }
+}

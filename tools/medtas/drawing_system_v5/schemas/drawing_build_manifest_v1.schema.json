@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://marvilon.local/schemas/build-manifest-v1.schema.json",
+  "title": "Marvilon Drawing Build Manifest V1",
+  "type": "object",
+  "required": [
+    "schema",
+    "drawing_id",
+    "part_id",
+    "family_id",
+    "views",
+    "jobs",
+    "document",
+    "release"
+  ],
+  "properties": {
+    "schema": {
+      "const": "marvilon.drawing_build_manifest.v1"
+    },
+    "drawing_id": {
+      "type": "string"
+    },
+    "part_id": {
+      "type": "string"
+    },
+    "family_id": {
+      "type": "string"
+    },
+    "views": {
+      "type": "array"
+    },
+    "jobs": {
+      "type": "array"
+    },
+    "document": {
+      "type": "object"
+    },
+    "release": {
+      "type": "object"
+    }
+  }
+}

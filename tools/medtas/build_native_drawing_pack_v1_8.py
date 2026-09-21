@@ -1,13 +1,11 @@
 from __future__ import annotations
 import argparse,subprocess,sys
 from pathlib import Path
+from control_authority import require_control_family
 from medtas_v16_common import load,dump,base_id,register_build,register_verify,sha256_file
 
 def cad_binding(root):
-    for n in ('K01_CAD_SEM_A001_BINDING_v1_6.json','K01_CAD_SEM_A001_BINDING_v1_5.json'):
-        p=root/'control/medtas/v1/bindings'/n
-        if p.exists():return load(p)
-    return {}
+    return load(require_control_family(root,'cad_sem_a001_binding'),{}) or {}
 
 def native_paths(root):
     b=cad_binding(root);rawp=root/b.get('raw_api_output','reports/cad/current/K01_A001_SEMANTIC_RAW_API_v1_4.json');raw=load(rawp) if rawp.exists() else {};out={}
