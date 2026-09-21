@@ -1,9 +1,0 @@
-{
-  "artifact_hash": "6d352627944eb015a4af72882b5484da356297d940dc056b7b2d0004b27b5d69",
-  "built_state_hash": "6691594e4ffee50e2bc75d94b82a0b65d1a0a8e0b86950afb708363001294863",
-  "node_id": "K01.CAD.HASH.QUAL.A001",
-  "producer": {
-    "tool": "cad_hash_invariance_test_v1_6.py"
-  },
-  "schema": "medtas.build_record.v1"
-}

@@ -1,9 +1,0 @@
-{
-  "artifact_hash": "e227340b67023cc7442e181266e5a978abc2c3770fb1d6280ae23dc67888b0c0",
-  "built_state_hash": "26f8a15fbe284035c43544b6499ed7c4e273de425005424749f98ef41ab52ed9",
-  "node_id": "K01.PRODUCT.DEFINITION.GATE04E",
-  "producer": {
-    "tool": "build_product_definition_v1_8.py + harden_product_definition_v1_9.py"
-  },
-  "schema": "medtas.build_record.v1"
-}

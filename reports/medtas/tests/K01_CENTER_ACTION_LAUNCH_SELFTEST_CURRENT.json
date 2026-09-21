@@ -1,7 +1,0 @@
-{
-  "schema": "k01.center_action_launch_selftest.v2_0",
-  "verdict": "PASS",
-  "return_code": 0,
-  "launcher": "DIRECT_PYTHON_ARGV",
-  "issues": []
-}

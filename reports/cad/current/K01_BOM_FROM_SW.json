@@ -1,9 +1,0 @@
-{
-  "schema": "k01_bom_from_sw_v3",
-  "status": "PASS",
-  "created_utc": "2026-09-03T08:15:16.677587+00:00",
-  "instances": 13,
-  "rows": 13,
-  "csv": "D:\\BreshevEngineering\\marvilon-k01\\bom\\K01_BOM_FROM_SW.csv",
-  "authority": "Qty=SolidWorks assembly; properties=SW synchronized from master; master fallback allowed"
-}
