@@ -19,7 +19,7 @@ class TestControlNamespaceGuard(unittest.TestCase):
                 src=REPO/rel
                 if src.is_file():
                     dst=r/rel;dst.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(src,dst)
-            extra=r/'control/medtas/v1/graph/K01_engineering_build_graph_v2_1.json';extra.parent.mkdir(parents=True,exist_ok=True);extra.write_text('{}',encoding='utf-8')
+            extra=r/'control/medtas/v1/graph/K01_engineering_build_graph_v999_999.json';extra.parent.mkdir(parents=True,exist_ok=True);extra.write_text('{}',encoding='utf-8')
             rep=audit(r)
             self.assertEqual(rep['status'],'HOLD')
             self.assertTrue(any(x.get('rule') in ('NEW_VERSION_SIBLING','UNDECLARED_CRITICAL_SIBLING') for x in rep['violations']))
