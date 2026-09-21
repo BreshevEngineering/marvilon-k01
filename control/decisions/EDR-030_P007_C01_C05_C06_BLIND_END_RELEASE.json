@@ -1,0 +1,59 @@
+{
+  "schema": "k01.engineering_decision.v1",
+  "id": "EDR-030",
+  "date": "2026-09-14",
+  "title": "Release P007 Datum-A form, flange size, overall length, blind-end thickness and edge condition",
+  "scope": "K01-P-007 primary geometric Product Definition remaining after EDR-029",
+  "status": "ACCEPTED_RELEASE_DEFINITION",
+  "decision": {
+    "C01": {
+      "release_spec": "DATUM A; FLATNESS 0.03 CZ across the two controlled coplanar J2 mating-face patches",
+      "basis": "Datum A is the functional J2 mating reference and already has a canonical composite-coplanar persistent binding. The legacy 0.03 mm candidate is promoted only after revalidation as one common/combined form zone across the actual functional contact patches, avoiding independent-surface ambiguity.",
+      "inspection": "CMM/common-zone plane evaluation of both controlled patches in a clean free state without clamp distortion."
+    },
+    "C05": {
+      "release_spec": "Ø33.00 ±0.05; flange thickness 3.00 ±0.05",
+      "basis": "OD33×3 is the frozen C2R1 compact-flange architecture. T05 analytical preload/thread/contact screening retains this geometry; C04 at its maximum hole size still leaves positive flange ligament. The ±0.05 size band is retained as the widest existing controlled candidate that does not require tighter manufacturing precision.",
+      "inspection": "OD micrometer/CMM; flange thickness by CMM or qualified thickness/depth measurement."
+    },
+    "C06": {
+      "release_spec": "OAL 35.00 ±0.05",
+      "basis": "REQ-K01-P007-L-001 freezes the 35 mm C2R1 mechanical envelope. No downstream functional evidence requires a tighter band; the historical ±0.05 candidate is therefore promoted rather than replaced by a new invented value.",
+      "inspection": "CMM or qualified overall-length measurement from the functional Datum-A side to the external blind-end face."
+    },
+    "K01-D006-BLIND-END": {
+      "release_spec": "1.00 ±0.10",
+      "limits_mm": [0.9, 1.1],
+      "basis": "The integral blind end is a containment wall, not a precision locating feature. EDR-027 T07A shows very large global static and elastic-buckling margins at the released ±0.20 bar envelope; therefore no functional basis exists for a tighter precision band. ±0.10 mm is selected as a pragmatic machining/inspection band for the deep-bore monolithic route, subject to first-article capability confirmation.",
+      "inspection": "CMM/depth difference between external end face and internal blind-bottom face, or equivalent qualified thickness method."
+    },
+    "EDGE_CONDITION": {
+      "release_spec": "DEBURR; BREAK NON-FUNCTIONAL SHARP EDGES 0.1–0.2 mm. DO NOT BREAK/ABRADE DATUM A, Ø14.10 H7 LOCATOR, SEAL-CONTACT, OR OTHER EXPLICITLY CONTROLLED FUNCTIONAL EDGES UNLESS SPECIFICALLY DIMENSIONED.",
+      "basis": "Controls handling/manufacturing burrs without weakening or changing functional datum, fit or sealing geometry."
+    }
+  },
+  "technical_filter": {
+    "function": "Preserve J2 seating, compact flange envelope, 35 mm mechanical envelope and integral containment wall while avoiding unnecessary precision.",
+    "manufacturing": "Uses the selected monolithic 316L deep-bore/finish route; tolerances are intentionally not tightened beyond demonstrated functional need.",
+    "assembly": "Retains frozen C2R1 OD33×3 / 3×M2.5 / L35 architecture and controlled Datum-A seating.",
+    "inspectability": "All released characteristics have direct CMM/micrometer/depth inspection routes; thin-wall/blind-end capability remains first-article evidence.",
+    "calculation_evidence": "WP-T05 analytical clamp/contact screen + EDR-027 T07A global pressure-shell screen + canonical CAD geometry.",
+    "decision": "ACCEPT"
+  },
+  "standards_method_basis": [
+    "Tornincasa, Technical Drawing for Product Design: functional datums; geometrical specification as a function/manufacturing/inspection language; combined-zone semantics where one functional requirement spans multiple features.",
+    "ISO GPS profile already controlled by K01 drawing standard profile."
+  ],
+  "explicit_nonclaims": [
+    "EDR-030 does not close seal material, quantitative leak acceptance, fastener torque/lubrication, service cycles or surface texture on functionally sealing surfaces.",
+    "EDR-030 does not replace the final full-PMI binding-invariance qualification.",
+    "EDR-030 does not claim supplier/process capability evidence has already been collected; first-article capability remains a release verification item."
+  ],
+  "stale_triggers": [
+    "C2R1 J2 geometry or Datum-A architecture changes",
+    "released pressure envelope changes materially",
+    "seal/process choice imposes a tighter functional surface/form requirement",
+    "magnetic/travel axial stack demonstrates blind-end or OAL tolerance is insufficient",
+    "first-article capability proves a released tolerance impractical and forces a design/process trade-off"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "k01_t05_compact_flange_screen_v2",
+  "id": "T05",
+  "status": "SCREEN_PASS_WITH_RELEASE_HOLDS",
+  "design_basis": {
+    "flange_OD_mm": 33.0,
+    "fastener_pattern": "3 x M2.5",
+    "PCD_mm": 26.5,
+    "P007_clearance_hole_D_mm": 2.9,
+    "gland_worst_OD_mm": 20.6,
+    "qualification_dp_bar_abs": 0.2,
+    "candidate_preload_N_per_screw": 300.0,
+    "screw_count": 3,
+    "material": "P003/P007 AISI 316L / EN 1.4404"
+  },
+  "results": {
+    "outer_edge_ligament_mm": 1.8,
+    "gland_to_clearance_hole_ligament_mm": 1.5,
+    "pressure_separating_force_N": 4.8106,
+    "total_candidate_preload_N": 900.0,
+    "seal_compression_screen_upper_bound_N": 600.0,
+    "residual_clamp_screen_N": 295.1894,
+    "thread_strip_screen_SF": 3.1,
+    "local_bending_screen_stress_MPa": 135.6,
+    "local_bending_screen_SF_to_170MPa": 1.254
+  },
+  "decision": [
+    "OD33 / PCD26.5 / 3xM2.5 remains the preferred compact J2 flange; the analytical screen does not justify returning to OD36/M3.",
+    "Pressure load is negligible relative to seal compression and bolt preload.",
+    "The tightest analytical margin is the conservative local flange-bending screen, not screw tensile capacity or pressure separation.",
+    "Do one local contact/stress FEA with 300 N/screw preload and the seal-force upper-bound before mechanical release."
+  ],
+  "release_holds": [
+    "Local flange/contact FEA on final C2R1 geometry.",
+    "Exact screw grade/finish and anti-galling process.",
+    "Torque-preload production method; do not release a torque from a generic nut factor alone.",
+    "Exact supplier FKM compound compression-force confirmation / leak validation."
+  ],
+  "source_basis": [
+    "Current MEDTAS Technical Filter: thread-strip screen >=3.10 at 300 N/screw and conservative local screen 135.6 MPa vs 170 MPa.",
+    "Current C2R1 geometry and controlled J2 seal geometry."
+  ]
+}

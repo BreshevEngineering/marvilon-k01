@@ -1,0 +1,53 @@
+{
+  "schema": "k01.edr.v1",
+  "id": "EDR-036",
+  "title": "J2 M2.5 clamp fastener, preload, locking and service definition",
+  "generated_utc": "2026-09-17T06:43:55.137237+00:00",
+  "status": "ACCEPTED_RELEASE_DEFINITION",
+  "scope": "Three-screw P003↔P007 J2 clamp",
+  "decision": {
+    "fastener": {
+      "quantity": 3,
+      "standard": "ISO 4762",
+      "thread": "M2.5 x 0.45",
+      "length_mm": 6.0,
+      "material_grade": "A4-70 stainless steel",
+      "P007_clearance_hole": "Ø2.90 H10 released pattern",
+      "P003_thread": "M2.5 x 0.45-6H DEEP 5.00",
+      "nominal_thread_engagement_mm": 3.0,
+      "nominal_bottom_clearance_mm": 2.0,
+      "minimum_required_effective_engagement_mm": 2.5,
+      "minimum_required_bottom_clearance_mm": 1.0
+    },
+    "preload": {
+      "acceptance_N_per_screw": [
+        200.0,
+        300.0
+      ],
+      "target_N_per_screw": 250.0,
+      "basis": "Existing J2 local thread/proof/contact screening passes the 200–300 N/screw architecture."
+    },
+    "assembly_process": {
+      "locking": "low-strength anaerobic threadlocker for small fasteners; released baseline product LOCTITE 222 or procurement-controlled direct equivalent",
+      "screw_reuse": "single-use screw after a J2 opening",
+      "seal_reuse": "replace O-ring after each J2 opening",
+      "torque_policy": "No generic handbook torque is released. Production torque shall be calibrated with the released screw/thread/locking condition to achieve 200–300 N/screw, target 250 N/screw.",
+      "witness": "external torque/witness mark after final tightening",
+      "galling_control": "clean undamaged stainless threads; locking-process/torque qualification shall include galling inspection"
+    },
+    "service": {
+      "requirement_cycles_min": 50,
+      "cycle_definition": "complete J2 disassembly and reassembly",
+      "qualification": "P003/P007 threads, locating features and mating/seal surfaces shall survive 50 cycles with replacement seal and single-use clamp screws; C12 shall pass after qualification.",
+      "physical_verification_state": "OPEN_L8_QUALIFICATION"
+    }
+  },
+  "requirements_closed": [
+    "REQ-K01-SERVICE-CYCLES-001"
+  ],
+  "downstream": [
+    "J2 clamp process",
+    "EBOM/MBOM",
+    "service qualification"
+  ]
+}

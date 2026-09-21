@@ -1,0 +1,47 @@
+{
+  "schema": "k01.p004.joint_tolerance_allocation.current.v1",
+  "generated_utc": "2026-09-18T19:29:39.583982+00:00",
+  "status": "PASS_P004_SEAT_AXIAL_TOLERANCE_BUDGET_DECIDED__DOWNSTREAM_PART_ALLOCATIONS_EXPLICIT",
+  "part_id": "K01-P-004",
+  "reference_temperature_C": 20,
+  "seat": {
+    "P003_seat_nominal_ID_mm": 6.6,
+    "P004_nominal_OD_mm": 6.54,
+    "nominal_diametral_clearance_mm": 0.06,
+    "functional_window_20C_mm": [
+      0.04,
+      0.08
+    ],
+    "worst_case_constraints": [
+      "P003_ID_min - P004_OD_max >= 0.040 mm",
+      "P003_ID_max - P004_OD_min <= 0.080 mm"
+    ],
+    "budget_to_low_boundary_mm": 0.02,
+    "budget_to_high_boundary_mm": 0.02,
+    "part_level_split": "OPEN__CAPABILITY_EVIDENCE_REQUIRED"
+  },
+  "axial": {
+    "effective_retention_space_nominal_mm": 8.05,
+    "P004_nominal_length_mm": 8.0,
+    "nominal_float_mm": 0.05,
+    "functional_window_20C_mm": [
+      0.04,
+      0.08
+    ],
+    "worst_case_constraints": [
+      "H_P003_P014_min - L_P004_max >= 0.040 mm",
+      "H_P003_P014_max - L_P004_min <= 0.080 mm"
+    ],
+    "budget_toward_loss_of_float_mm": 0.01,
+    "budget_toward_excessive_float_mm": 0.03,
+    "part_level_split": "OPEN__CAPABILITY_EVIDENCE_REQUIRED",
+    "nominal_recentering_trigger": "If demonstrated manufacturing + inspection capability cannot reliably satisfy <=0.010 mm combined adverse-side variation, reopen nominal architecture and evaluate centering toward 0.060 mm; do not change geometry solely by arithmetic."
+  },
+  "released_part_tolerances": [],
+  "downstream_allocation_state": {
+    "P003": "REQUIREMENT_CREATED__PRODUCTION_VALUE_OPEN",
+    "P014": "REQUIREMENT_CREATED__PRODUCTION_VALUE_OPEN",
+    "P004": "JOINT_BUDGET_CONTROLLED__PRODUCTION_VALUE_OPEN_PENDING_CAPABILITY"
+  },
+  "native_mutation": "NONE"
+}

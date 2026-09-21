@@ -1,0 +1,41 @@
+{
+  "schema": "k01.engineering_decision_record.v1",
+  "decision_id": "EDR-026_T07_PRESSURE_ONLY_SCOPE",
+  "generated_utc": "2026-09-14T06:55:00+00:00",
+  "title": "Split global P007 pressure-shell refresh from local J2 contact/seal/preload qualification",
+  "status": "CONTROLLED_SCOPE_DECISION",
+  "scope": "K01-P-007 / T07",
+  "decision": {
+    "T07A_global_pressure_shell": {
+      "status": "EXECUTABLE_NOW_MANUAL_CONTROLLED",
+      "geometry": "current frozen C2R1 P007",
+      "material": "AISI 316L / EN 1.4404",
+      "cases": [
+        "Linear static Δp=+0.20 bar",
+        "Linear buckling Δp=-0.20 bar"
+      ],
+      "support_boundary": "J2 mating face support appropriate to global P007 shell screening; do not infer local clamp/seal contact acceptance",
+      "acceptance": [
+        "static minimum screening SF >= 2",
+        "first positive buckling eigenvalue lambda1 >= 10"
+      ]
+    },
+    "T07B_local_J2_contact": {
+      "status": "DEPENDENT_ON_T04_T05_T06",
+      "scope": [
+        "local metal-face contact/separation",
+        "seal compression",
+        "fastener preload/torque",
+        "thread/local flange/galling/service-cycle qualification"
+      ]
+    },
+    "separation_rule": "T07A may close pressure-shell structural refresh only. It shall not clear T04/T05/T06, C12 leak acceptance, or local J2 process/inspection requirements."
+  },
+  "reason": "The global ±0.20 bar shell stability check has released pressure and frozen geometry inputs and can be run without inventing unresolved local seal/preload assumptions. Local J2 contact/service qualification remains a separate dependent lane.",
+  "evidence_sources": [
+    "control/analysis/K01_T07_P007_STRUCTURAL_REFRESH.json",
+    "control/workpacks/K01_T07_P007_STRUCTURAL_REFRESH_v1.json",
+    "control/decisions/EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE.json"
+  ],
+  "rollback": "If T07A shows a geometry/material deficiency or becomes sensitive to unresolved local contact assumptions, return T07A to HOLD and reopen the relevant upstream design node."
+}

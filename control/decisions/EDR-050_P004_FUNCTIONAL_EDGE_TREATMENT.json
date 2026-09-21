@@ -1,0 +1,77 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-050",
+  "date": "2026-09-18",
+  "subject": "P004 functional edge/deburr requirement",
+  "status": "ACCEPTED_FUNCTIONAL_EDGE_REQUIREMENT__NO_INDEPENDENT_NUMERIC_EDGE_BREAK_RELEASED",
+  "goal": "Close P004 edge/deburr Product Definition using function and inspection needs without assigning an arbitrary generic chamfer or radius.",
+  "authority": [
+    "control/product_definition/K01_P004_PRODUCT_DEFINITION_WORKPACK_CURRENT.json",
+    "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json",
+    "control/decisions/EDR-044_P004_DATUM_FUNCTION_CORRECTION.json",
+    "evidence/immutable/084bb2e24931dd3d04dc674e3c9845e67177f742b3580a88b242653205a051ae__K01-P-004_INSPECTION_PROCEDURE_CURRENT.json"
+  ],
+  "inputs": {
+    "functions": {
+      "F01": "Radially guide P001 calibration rod.",
+      "F02": "Maintain controlled sliding clearance without binding.",
+      "F03": "Locate as a slip-fit bushing in P003 seat.",
+      "F04": "Be axially retained by P014 / housing stack without adhesive or preload.",
+      "F05": "Avoid binding across operating temperature/environment.",
+      "F06": "Remain manufacturable, inspectable and replaceable."
+    },
+    "material": "TECAPEEK PVX black",
+    "interfaces": [
+      "P001 sliding guide",
+      "P003 locating/slip seat",
+      "P003/P014 axial retention with intentional float"
+    ]
+  },
+  "engineering_question": "Which edge condition is functionally required, and does any edge need an independently controlled numeric chamfer/radius now?",
+  "options": [
+    {
+      "id": "A",
+      "description": "Assign a generic numeric edge break/chamfer from drafting habit.",
+      "disposition": "REJECTED_NO_FUNCTIONAL_AUTHORITY"
+    },
+    {
+      "id": "B",
+      "description": "Release functional burr-free/no-raised-material requirements and preserve controlled interface geometry, with no independent numeric edge break until function demands one.",
+      "disposition": "ACCEPTED"
+    },
+    {
+      "id": "C",
+      "description": "Leave all edge requirements undefined.",
+      "disposition": "REJECTED_ASSEMBLY_AND_INSPECTION_RISK"
+    }
+  ],
+  "technical_filter": {
+    "function": "PASS",
+    "tolerance": "PASS_NO_NEW_NUMERIC_VALUE",
+    "manufacturing": "PASS_CONTROLLED_DEBURR_ALLOWED",
+    "inspection": "PASS_VISUAL_OPTICAL_PLUS_FUNCTIONAL_CHECK",
+    "assembly": "PASS_PROTECTS_SLIDING_AND_SEATING",
+    "thermal": "NO_CHANGE",
+    "material": "PASS_NO_SHAVING_OR_LOOSE_PARTICLES",
+    "CAD": "NONE"
+  },
+  "decision": [
+    "All P004 edges created by machining/deburring shall be free of burrs, raised material and loose particles that could enter the P001 guide interface, P003 locating seat or P003/P014 axial-retention interface.",
+    "Edge treatment shall not reduce or locally distort the controlled guide-bore, locating-OD or axial-face functional geometry outside its released size/GPS acceptance.",
+    "Guide-bore entry/exit edges shall not shave, score or visibly damage P001 during controlled assembly/sliding checks.",
+    "Locating-OD and axial-face edges shall not prevent free insertion/removal or create a false seating condition.",
+    "No independent chamfer/radius/edge-break dimension is released by this EDR because no function currently requires a specific lead-in geometry. Any future intentional chamfer/radius that changes functional length/contact/clearance requires its own controlled Product Definition characteristic."
+  ],
+  "inspection": {
+    "method": "visual/optical examination under suitable inspection conditions plus controlled assembly/sliding evidence where applicable",
+    "acceptance": "no burr/raised material/loose particle; no shaving/scoring attributable to edge; controlled functional dimensions remain conforming",
+    "numeric_chamfer_radius": "NOT_RELEASED_NOT_CURRENTLY_REQUIRED"
+  },
+  "expected_closure": "PASS_P004_EDGE_FUNCTIONAL_REQUIREMENT_CONTROLLED__NO_ARBITRARY_EDGE_BREAK",
+  "impact": {
+    "CAD": "NONE",
+    "DimXpert": "NONE",
+    "drawing": "FUTURE_PRODUCT_DEFINITION_NOTE/ANNOTATION_ONLY_AFTER_P004_READY",
+    "native_mutation": "NONE"
+  }
+}

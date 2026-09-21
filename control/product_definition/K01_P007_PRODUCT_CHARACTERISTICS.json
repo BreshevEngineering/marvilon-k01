@@ -1,49 +1,142 @@
 {
   "schema": "k01.p007.product_characteristics.v1",
-  "generated_utc": "2026-09-08T08:31:14.436167+00:00",
-  "status": "HOLD_OPEN_SPEC",
+  "generated_utc": "2026-09-15T12:55:00+00:00",
+  "status": "HOLD_OPEN_SPEC__C10_ARCHITECTURE_CONTROLLED",
   "engineering_baseline": {
-    "assembly": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
-    "assembly_sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4"
+    "assembly": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+    "assembly_sha256": "c829fac9c94ba94e1c6fc53dcb9f8afb2a91610673a0e727d59bd6fbbbfba82c"
   },
   "native_part": {
-    "path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
-    "sha256": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653",
-    "document_title": "K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
-    "semantic_document": "K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE"
+    "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+    "sha256": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85",
+    "document_title": "K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+    "semantic_document": "K01-P-007_Hermetic_Magnetic_Can"
   },
   "material": "AISI 316L / EN 1.4404",
-  "geometry_authority": "CURRENT_NATIVE_SOLIDWORKS_PART_REFERENCED_BY_GATE04E_BASELINE",
+  "geometry_authority": "CANONICAL_NATIVE_SOLIDWORKS_PART_REFERENCED_BY_BASELINE_02C",
   "datum_A": {
     "binding_mode": "COMPOSITE_COPLANAR_FACE_SET",
+    "binding_status": "PASS_CANONICAL_PERSISTENT_REF",
     "entities": [
       {
-        "face_index": 0,
-        "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEARAAAABbtl2oDAAAA//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgASwAAAHzlmmoDAAAA/////wAAAAAAAAyAAAAFgAgAagAAAESBnGoHAAAA/////wAAAAAAAP//AQAYAG1vQ2lyUGF0dGVyblN1cmZJZFJlcDJfYwAABYAIAF8AAACD5ZpqDIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAEAAAAAAAAAAAARgAAABYAIAF8AAACD5ZpqDIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAIAAAAAAAAAAAAMgAAABYAIAFIAAACA5ZpqAwAAAP////8AAAAAAAAAAAAAAAAAAAAAAAA=",
-        "feature": "K01_F_TRIM_FRONT_SLEEVE_5MM",
-        "surface_type": "plane"
+        "runtime_face_index": 1,
+        "surface_type": "plane",
+        "area_m2": 0.0005213237389183243,
+        "box_m": [
+          -0.002601496728971953,
+          -0.0165,
+          -0.0165,
+          -0.002601496728971953,
+          0.0165,
+          0.0165
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "radius_mm": null,
+        "span_x_mm_diagnostic_only": 0,
+        "axis_x_abs": null,
+        "center_radius_yz_mm": null,
+        "plane_x_mm": -2.601497,
+        "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAEsAAAB85ZpqAwAAAP////8AAAAAAAAMgAAABYAIAGoAAABEgZxqBwAAAP////8AAAAAAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAABAAAAAAAAAAAAEYAAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAACAAAAAAAAAAAADIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAAAAAAAAAAAAAAAAAAA"
       },
       {
-        "face_index": 15,
-        "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEARAAAABbtl2oDAAAA//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgAagAAAESBnGoGAAAA/////wAAAAAAAAOAAAAFgAgAJwAAAFtUkGoOAAAAAAAAAAAAAAAAAAAAAAA=",
-        "feature": "K01_F_TRIM_FRONT_SLEEVE_5MM",
-        "surface_type": "plane"
+        "runtime_face_index": 16,
+        "surface_type": "plane",
+        "area_m2": 4.491692096470008e-05,
+        "box_m": [
+          -0.002601496728971953,
+          -0.008,
+          -0.008,
+          -0.002601496728971953,
+          0.008,
+          0.008
+        ],
+        "normal": [
+          -1,
+          0,
+          0
+        ],
+        "radius_mm": null,
+        "span_x_mm_diagnostic_only": 0,
+        "axis_x_abs": null,
+        "center_radius_yz_mm": null,
+        "plane_x_mm": -2.601497,
+        "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAGoAAABEgZxqBgAAAP////8AAAAAAAADgAAABYAIACcAAABbVJBqDgAAAAAAAAAAAAAAAAAAAAAA"
       }
     ],
-    "plane_group_tolerance_mm": 0.0002
+    "part_sha256": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85",
+    "checkpoint": "K01-CP-20260910-BASELINE-02C-PROMOTED"
   },
   "characteristics": [
     {
       "id": "C01",
       "role": "J2 face / datum A flatness",
       "type": "GD&T",
-      "candidate_spec": "FLATNESS 0.03",
-      "status": "MBD_AUTHORING_REQUIRED",
-      "current_state": "MBD_AUTHORING_REQUIRED",
+      "candidate_spec": "DATUM A; FLATNESS 0.03 CZ across controlled two-patch mating-face set",
+      "status": "CONTROLLED_BY_EDR_030",
+      "current_state": "CONTROLLED_RELEASE_DEFINITION",
       "mbd_required": true,
       "live_geometry_reconciliation": null,
-      "authority_class": "OPEN_OR_CANDIDATE_REQUIREMENT",
+      "authority_class": "EDR_030_CONTROLLED_REQUIREMENT",
       "solidworks_binding": {
+        "binding_type": "COMPOSITE_COPLANAR_FACE_SET",
+        "entities": [
+          {
+            "runtime_face_index": 1,
+            "surface_type": "plane",
+            "area_m2": 0.0005213237389183243,
+            "box_m": [
+              -0.002601496728971953,
+              -0.0165,
+              -0.0165,
+              -0.002601496728971953,
+              0.0165,
+              0.0165
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": -2.601497,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAEsAAAB85ZpqAwAAAP////8AAAAAAAAMgAAABYAIAGoAAABEgZxqBwAAAP////8AAAAAAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAABAAAAAAAAAAAAEYAAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAACAAAAAAAAAAAADIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 16,
+            "surface_type": "plane",
+            "area_m2": 4.491692096470008e-05,
+            "box_m": [
+              -0.002601496728971953,
+              -0.008,
+              -0.008,
+              -0.002601496728971953,
+              0.008,
+              0.008
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": -2.601497,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAGoAAABEgZxqBgAAAP////8AAAAAAAADgAAABYAIACcAAABbVJBqDgAAAAAAAAAAAAAAAAAAAAAA"
+          }
+        ],
+        "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
+      },
+      "binding_status": "PASS_CANONICAL_PERSISTENT_REF",
+      "historical_pre_cp_p_binding": {
         "binding_type": "COMPOSITE_COPLANAR_FACE_SET",
         "entities": [
           {
@@ -60,15 +153,16 @@
           }
         ]
       },
-      "binding_status": "PASS"
+      "binding_part_sha256": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85",
+      "binding_checkpoint": "K01-CP-20260910-BASELINE-02C-PROMOTED"
     },
     {
       "id": "C02",
       "role": "Locator / datum B",
       "type": "SIZE_FIT_DATUM",
-      "candidate_spec": "Ø14.10 H7 × 1.70",
-      "status": "MBD_AUTHORING_REQUIRED",
-      "current_state": "LIVE_CAD_CONFLICT_REVIEW",
+      "candidate_spec": "Ø14.10 H7; female locator bore depth 2.00 ±0.05 mm",
+      "status": "CONTROLLED_BY_EDR_032",
+      "current_state": "CONTROLLED_RELEASE_DEFINITION",
       "mbd_required": true,
       "live_geometry_reconciliation": {
         "characteristic_id": "C02",
@@ -89,8 +183,45 @@
         "source_candidate": "Ø14.10 H7 × 1.70",
         "status": "CONFLICT"
       },
-      "authority_class": "CURRENT_NATIVE_GEOMETRY",
+      "authority_class": "CURRENT_NATIVE_GEOMETRY_PLUS_EDR_032_VARIATION_SEMANTICS",
       "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_FACE",
+        "entities": [
+          {
+            "runtime_face_index": 15,
+            "surface_type": "cylinder",
+            "area_m2": 8.859291283123223e-05,
+            "box_m": [
+              -0.002601496728971953,
+              -0.00705,
+              -0.00705,
+              -0.0006014967289719522,
+              0.00705,
+              0.00705
+            ],
+            "normal": [
+              0,
+              0,
+              0
+            ],
+            "radius_mm": 7.05,
+            "span_x_mm_diagnostic_only": 2,
+            "axis_x_abs": 1,
+            "center_radius_yz_mm": 0,
+            "plane_x_mm": null,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhACcAAABbVJBqDgAAAAOAAAAFgAgAJwAAAFtUkGoNAAAAAAADgAAABYAIAEQAAAAW7ZdqAwAAAAAAAAAAAAAAAAAAAAAA"
+          }
+        ],
+        "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
+      },
+      "binding_status": "PASS_CANONICAL_PERSISTENT_REF",
+      "superseded_candidate_spec": "Ø14.10 H7 × 1.70",
+      "female_locator_bore_depth_nominal_mm": 2.0,
+      "depth_tolerance_status": "RELEASED_EDR_032",
+      "nominal_p003_pilot_engagement_mm": 1.5,
+      "nominal_bottom_clearance_mm": 0.5,
+      "decision": "EDR-032_P007_C02_LOCATOR_DEPTH_RELEASE",
+      "historical_pre_cp_p_binding": {
         "binding_type": "CYLINDRICAL_FACE",
         "entities": [
           {
@@ -101,28 +232,39 @@
           }
         ]
       },
-      "binding_status": "PASS"
+      "binding_part_sha256": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85",
+      "binding_checkpoint": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "depth_tolerance_mm": 0.05,
+      "p003_pilot_length_tolerance_mm": 0.05,
+      "bottom_clearance_limits_mm": [
+        0.4,
+        0.6
+      ]
     },
     {
       "id": "C03",
       "role": "Locator axis perpendicularity to A",
       "type": "GD&T",
       "candidate_spec": "PERP Ø0.03 TO A",
-      "status": "MBD_AUTHORING_REQUIRED",
-      "current_state": "MBD_AUTHORING_REQUIRED",
+      "status": "SUPERSEDED_BY_EDR_028",
+      "current_state": "SUPERSEDED_LEGACY_CANDIDATE",
       "mbd_required": true,
       "live_geometry_reconciliation": null,
-      "authority_class": "OPEN_OR_CANDIDATE_REQUIREMENT",
+      "authority_class": "HISTORICAL_CANDIDATE_ONLY",
       "solidworks_binding": null,
-      "binding_status": "NOT_FACE_BOUND_OR_PENDING"
+      "binding_status": "DERIVED_BINDING_READY_C02_AXIS_TO_DATUM_A",
+      "binding_dependencies": [
+        "C01",
+        "C02"
+      ]
     },
     {
       "id": "C04",
       "role": "J2 clamp clearance pattern",
       "type": "PATTERN_GD&T",
-      "candidate_spec": "3×Ø2.90 THRU; PCD26.50 BASIC; 120° BASIC; POS Ø0.15 |A|B",
-      "status": "MBD_AUTHORING_REQUIRED",
-      "current_state": "MBD_AUTHORING_REQUIRED",
+      "candidate_spec": "3×Ø2.90 H10 THRU; TED PCD Ø26.50; TED 120°; POS ⌀0.15 CZ Ⓜ |A|B",
+      "status": "CONTROLLED_BY_EDR_033_RELEASE_DEFINITION",
+      "current_state": "CONTROLLED_BY_EDR_033",
       "mbd_required": true,
       "live_geometry_reconciliation": {
         "characteristic_id": "C04",
@@ -143,8 +285,87 @@
         "source_candidate": "3×Ø2.90 THRU; PCD26.50 BASIC; 120° BASIC; POS Ø0.15 |A|B",
         "status": "MATCH"
       },
-      "authority_class": "CURRENT_NATIVE_GEOMETRY",
+      "authority_class": "NATIVE_GEOMETRY_PLUS_EDR_033_ISO5458_RELEASE_SEMANTICS",
       "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_PATTERN_FACES",
+        "entities": [
+          {
+            "runtime_face_index": 6,
+            "surface_type": "cylinder",
+            "area_m2": 2.7331856086231198e-05,
+            "box_m": [
+              -0.002601496728971953,
+              0.010024836600143812,
+              0.005174999999999999,
+              0.00039850327102804693,
+              0.012924836600143812,
+              0.008074999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              0
+            ],
+            "radius_mm": 1.45,
+            "span_x_mm_diagnostic_only": 3,
+            "axis_x_abs": 1,
+            "center_radius_yz_mm": 13.25,
+            "plane_x_mm": null,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGwBtb0Zyb21Ta3RFbnQzSW50U3VyZklkUmVwX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/0BEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAcABhAHIAdABzAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgAuAFMATABEAFAAUgBUAAmA//7/H0sAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AAgAAKVSQav/+/wD//v8AAGkAcwAAAAAAAAAAAAAAAAD//v8HRABlAGYAYQB1AGwAdAAAAAAAAAAAAHQAYQBSAAAAgOWaagMAAAD/////AAAAAP//AQAXAG1vRnJvbVNrdEVudFN1cmZJZFJlcF9jAAAFgAgAJwAAAFtUkGoFAAAAAAAMgAAABYAIAEQAAAAW7ZdqAwAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 7,
+            "surface_type": "cylinder",
+            "area_m2": 2.7331856086231198e-05,
+            "box_m": [
+              -0.002601496728971953,
+              -0.012924836600143815,
+              0.005174999999999996,
+              0.00039850327102804693,
+              -0.010024836600143815,
+              0.008074999999999995
+            ],
+            "normal": [
+              0,
+              0,
+              0
+            ],
+            "radius_mm": 1.45,
+            "span_x_mm_diagnostic_only": 3,
+            "axis_x_abs": 1,
+            "center_radius_yz_mm": 13.25,
+            "plane_x_mm": null,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/0BEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAcABhAHIAdABzAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgAuAFMATABEAFAAUgBUAAmA//7/H0sAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AAgAAKVSQav/+/wD//v8AAGkAcwAAAAAAAAAAAAAAAAD//v8HRABlAGYAYQB1AGwAdAAAAAAAAAAAAHQAYQBfAAAAg+Waav//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAFIAAACA5ZpqAwAAAP////8AAAAAAgAAAAAAAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAABYAIACcAAABbVJBqBQAAAAAAD4AAAAWACABEAAAAFu2XagMAAAAAAAAAAAAAAAAAAAAAAA=="
+          },
+          {
+            "runtime_face_index": 8,
+            "surface_type": "cylinder",
+            "area_m2": 2.7331856086231198e-05,
+            "box_m": [
+              -0.002601496728971953,
+              -0.0014499999999999986,
+              -0.014700000000000001,
+              0.00039850327102804693,
+              0.0014500000000000019,
+              -0.011800000000000001
+            ],
+            "normal": [
+              0,
+              0,
+              0
+            ],
+            "radius_mm": 1.45,
+            "span_x_mm_diagnostic_only": 3,
+            "axis_x_abs": 1,
+            "center_radius_yz_mm": 13.25,
+            "plane_x_mm": null,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/0BEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAcABhAHIAdABzAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgAuAFMATABEAFAAUgBUAAmA//7/H0sAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AAgAAKVSQav/+/wD//v8AAGkAcwAAAAAAAAAAAAAAAAD//v8HRABlAGYAYQB1AGwAdAAAAAAAAAAAAHQAYQBfAAAAg+Waav//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAFIAAACA5ZpqAwAAAP////8AAAAAAQAAAAAAAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAABYAIACcAAABbVJBqBQAAAAAAD4AAAAWACABEAAAAFu2XagMAAAAAAAAAAAAAAAAAAAAAAA=="
+          }
+        ],
+        "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
+      },
+      "binding_status": "PASS_CANONICAL_PERSISTENT_REF",
+      "historical_pre_cp_p_binding": {
         "binding_type": "CYLINDRICAL_PATTERN_FACES",
         "entities": [
           {
@@ -167,15 +388,20 @@
           }
         ]
       },
-      "binding_status": "PASS"
+      "binding_part_sha256": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85",
+      "binding_checkpoint": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "decision": "EDR-033_P007_C04_ISO5458_PATTERN_RELEASE",
+      "pattern_modifier": "CZ",
+      "position_material_requirement": "MMR",
+      "datum_B_material_boundary": "RFS"
     },
     {
       "id": "C05",
       "role": "Flange size",
       "type": "SIZE_TOLERANCE",
       "candidate_spec": "Ø33.00 ±0.05 × 3.00 ±0.05",
-      "status": "MBD_AUTHORING_REQUIRED",
-      "current_state": "MBD_AUTHORING_REQUIRED",
+      "status": "CONTROLLED_BY_EDR_030",
+      "current_state": "CONTROLLED_RELEASE_DEFINITION",
       "mbd_required": true,
       "live_geometry_reconciliation": {
         "characteristic_id": "C05",
@@ -196,8 +422,111 @@
         "source_candidate": "Ø33.00 ±0.05 × 3.00 ±0.05",
         "status": "MATCH"
       },
-      "authority_class": "CURRENT_NATIVE_GEOMETRY",
+      "authority_class": "CURRENT_NATIVE_GEOMETRY_PLUS_EDR_030",
       "solidworks_binding": {
+        "binding_type": "FLANGE_OD_PLUS_AXIAL_FACE_SET",
+        "entities": [
+          {
+            "runtime_face_index": 2,
+            "surface_type": "cylinder",
+            "area_m2": 0.00031101767270538957,
+            "box_m": [
+              -0.002601496728971953,
+              -0.0165,
+              -0.0165,
+              0.00039850327102804693,
+              0.0165,
+              0.0165
+            ],
+            "normal": [
+              0,
+              0,
+              0
+            ],
+            "radius_mm": 16.5,
+            "span_x_mm_diagnostic_only": 3,
+            "axis_x_abs": 1,
+            "center_radius_yz_mm": 0,
+            "plane_x_mm": null,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGwBtb0Zyb21Ta3RFbnQzSW50U3VyZklkUmVwX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/0BEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAcABhAHIAdABzAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgAuAFMATABEAFAAUgBUAAmA//7/H0sAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AAgAAKVSQav/+/wD//v8AAGkAcwAAAAAAAAAAAAAAAAD//v8HRABlAGYAYQB1AGwAdAAAAAAAAAAAAHQAYQBLAAAAfOWaagMAAAD/////AAAAAP//AQAXAG1vRnJvbVNrdEVudFN1cmZJZFJlcF9jAAAFgAgAJwAAAFtUkGoFAAAAAAAMgAAABYAIAEQAAAAW7ZdqAwAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 1,
+            "surface_type": "plane",
+            "area_m2": 0.0005213237389183243,
+            "box_m": [
+              -0.002601496728971953,
+              -0.0165,
+              -0.0165,
+              -0.002601496728971953,
+              0.0165,
+              0.0165
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": -2.601497,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAEsAAAB85ZpqAwAAAP////8AAAAAAAAMgAAABYAIAGoAAABEgZxqBwAAAP////8AAAAAAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAABAAAAAAAAAAAAEYAAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAACAAAAAAAAAAAADIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 16,
+            "surface_type": "plane",
+            "area_m2": 4.491692096470008e-05,
+            "box_m": [
+              -0.002601496728971953,
+              -0.008,
+              -0.008,
+              -0.002601496728971953,
+              0.008,
+              0.008
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": -2.601497,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAGoAAABEgZxqBgAAAP////8AAAAAAAADgAAABYAIACcAAABbVJBqDgAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 5,
+            "surface_type": "plane",
+            "area_m2": 0.0007569431879375589,
+            "box_m": [
+              0.00039850327102804693,
+              -0.0165,
+              -0.0165,
+              0.00039850327102804693,
+              0.0165,
+              0.0165
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": 0.398503,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhACcAAABbVJBqBQAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAEsAAAB85ZpqAwAAAP////8AAAAAAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAABAAAAAAAAAAAAD4AAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAACAAAAAAAAAAAADIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAAAA4AAAAWACAAnAAAAW1SQagYAAAAAAAAAAAAAAAAAAAAAAA=="
+          }
+        ],
+        "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
+      },
+      "binding_status": "PASS_CANONICAL_PERSISTENT_REF",
+      "historical_pre_cp_p_binding": {
         "binding_type": "CYLINDRICAL_FACE",
         "entities": [
           {
@@ -208,15 +537,16 @@
           }
         ]
       },
-      "binding_status": "PASS"
+      "binding_part_sha256": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85",
+      "binding_checkpoint": "K01-CP-20260910-BASELINE-02C-PROMOTED"
     },
     {
       "id": "C06",
       "role": "Overall length",
       "type": "SIZE_TOLERANCE",
       "candidate_spec": "35.00 ±0.05",
-      "status": "MBD_AUTHORING_REQUIRED",
-      "current_state": "MBD_AUTHORING_REQUIRED",
+      "status": "CONTROLLED_BY_EDR_030",
+      "current_state": "CONTROLLED_RELEASE_DEFINITION",
       "mbd_required": true,
       "live_geometry_reconciliation": {
         "characteristic_id": "C06",
@@ -231,17 +561,96 @@
         "source_candidate": "35.00 ±0.05",
         "status": "MATCH"
       },
-      "authority_class": "CURRENT_NATIVE_GEOMETRY",
-      "solidworks_binding": null,
-      "binding_status": "NOT_FACE_BOUND_OR_PENDING"
+      "authority_class": "CURRENT_NATIVE_GEOMETRY_PLUS_EDR_030",
+      "solidworks_binding": {
+        "binding_type": "OVERALL_LENGTH_AXIAL_FACE_SET",
+        "entities": [
+          {
+            "runtime_face_index": 1,
+            "surface_type": "plane",
+            "area_m2": 0.0005213237389183243,
+            "box_m": [
+              -0.002601496728971953,
+              -0.0165,
+              -0.0165,
+              -0.002601496728971953,
+              0.0165,
+              0.0165
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": -2.601497,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAEsAAAB85ZpqAwAAAP////8AAAAAAAAMgAAABYAIAGoAAABEgZxqBwAAAP////8AAAAAAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAABAAAAAAAAAAAAEYAAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAACAAAAAAAAAAAADIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 16,
+            "surface_type": "plane",
+            "area_m2": 4.491692096470008e-05,
+            "box_m": [
+              -0.002601496728971953,
+              -0.008,
+              -0.008,
+              -0.002601496728971953,
+              0.008,
+              0.008
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": -2.601497,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAGoAAABEgZxqBgAAAP////8AAAAAAAADgAAABYAIACcAAABbVJBqDgAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 3,
+            "surface_type": "plane",
+            "area_m2": 7.853981633974484e-05,
+            "box_m": [
+              0.03239850327102805,
+              -0.005,
+              -0.005,
+              0.03239850327102805,
+              0.005,
+              0.005
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": 32.398503,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAADAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhACcAAABbVJBqCAAAAAOAAAAFgAgAJwAAAFtUkGoGAAAAAAAAAAAAAAAAAAAAAAA="
+          }
+        ],
+        "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
+      },
+      "binding_status": "PASS_CANONICAL_PERSISTENT_REF",
+      "binding_part_sha256": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85",
+      "binding_checkpoint": "K01-CP-20260910-BASELINE-02C-PROMOTED"
     },
     {
       "id": "C07",
       "role": "Thin can OD",
       "type": "SIZE",
-      "candidate_spec": "Ø10.00; release tolerance/general-tolerance coverage OPEN",
-      "status": "OPEN_TOLERANCE_POLICY",
-      "current_state": "MBD_AUTHORING_REQUIRED",
+      "candidate_spec": "Ø10 h9 (9.964..10.000); TOTAL RUNOUT 0.02 | B",
+      "status": "CONTROLLED_BY_EDR_029",
+      "current_state": "CONTROLLED_RELEASE_DEFINITION",
       "mbd_required": true,
       "live_geometry_reconciliation": {
         "characteristic_id": "C07",
@@ -256,8 +665,10 @@
         "source_candidate": "Ø10.00; release tolerance/general-tolerance coverage OPEN",
         "status": "MATCH"
       },
-      "authority_class": "CURRENT_NATIVE_GEOMETRY",
-      "solidworks_binding": {
+      "authority_class": "CURRENT_NATIVE_GEOMETRY_PLUS_EDR_029",
+      "solidworks_binding": null,
+      "binding_status": "CANONICAL_REBIND_REQUIRED",
+      "historical_pre_cp_p_binding": {
         "binding_type": "CYLINDRICAL_FACE",
         "entities": [
           {
@@ -267,16 +678,15 @@
             "surface_type": "cylinder"
           }
         ]
-      },
-      "binding_status": "PASS"
+      }
     },
     {
       "id": "C08",
       "role": "Thin can ID",
       "type": "SIZE",
-      "candidate_spec": "Ø9.40; release tolerance/general-tolerance coverage OPEN",
-      "status": "OPEN_TOLERANCE_POLICY",
-      "current_state": "MBD_AUTHORING_REQUIRED",
+      "candidate_spec": "Ø9.40 H9 (9.400..9.436); wall 0.30 REF; TOTAL RUNOUT 0.02 | B",
+      "status": "CONTROLLED_BY_EDR_029",
+      "current_state": "CONTROLLED_RELEASE_DEFINITION",
       "mbd_required": true,
       "live_geometry_reconciliation": {
         "characteristic_id": "C08",
@@ -291,8 +701,10 @@
         "source_candidate": "Ø9.40; release tolerance/general-tolerance coverage OPEN",
         "status": "MATCH"
       },
-      "authority_class": "CURRENT_NATIVE_GEOMETRY",
-      "solidworks_binding": {
+      "authority_class": "CURRENT_NATIVE_GEOMETRY_PLUS_EDR_029",
+      "solidworks_binding": null,
+      "binding_status": "CANONICAL_REBIND_REQUIRED",
+      "historical_pre_cp_p_binding": {
         "binding_type": "CYLINDRICAL_FACE",
         "entities": [
           {
@@ -302,8 +714,7 @@
             "surface_type": "cylinder"
           }
         ]
-      },
-      "binding_status": "PASS"
+      }
     },
     {
       "id": "C09",
@@ -320,27 +731,29 @@
     },
     {
       "id": "C10",
-      "role": "Containment weld interface/process",
-      "type": "PROCESS",
-      "candidate_spec": null,
-      "status": "OPEN_SPEC",
-      "current_state": "OPEN_SPEC",
+      "role": "J2 removable containment/service-boundary process architecture",
+      "type": "INTERFACE_PROCESS_CONTAINMENT",
+      "candidate_spec": "P007 MONOLITHIC MACHINED 316L WITH INTEGRAL BLIND END; P003↔P007 J2 REMOVABLE METAL FACE + STATIC O-RING + 3×M2.5; PERMANENT P003↔P007 WELD PROHIBITED",
+      "status": "CONTROLLED_PROCESS_ARCHITECTURE",
+      "current_state": "CONTROLLED_PROCESS_ARCHITECTURE",
       "mbd_required": false,
       "live_geometry_reconciliation": null,
-      "authority_class": "OPEN_OR_CANDIDATE_REQUIREMENT",
+      "authority_class": "CONTROLLED_ENGINEERING_DECISION",
       "solidworks_binding": null,
-      "binding_status": "NOT_FACE_BOUND_OR_PENDING"
+      "binding_status": "NOT_FACE_BOUND_OR_PENDING",
+      "decision_source": "control/decisions/EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE.json",
+      "drawing_rule": "NO P003↔P007 WELD SYMBOL. P007 drawing defines monolithic part geometry; J2 seal/fastener/leak acceptance remains controlled assembly/inspection scope."
     },
     {
       "id": "C11",
       "role": "Critical concentricity/coaxiality control",
       "type": "GD&T",
-      "candidate_spec": null,
-      "status": "OPEN_SPEC",
-      "current_state": "MBD_AUTHORING_REQUIRED",
+      "candidate_spec": "TOTAL RUNOUT 0.02 | B on thin-can OD and ID",
+      "status": "CONTROLLED_BY_EDR_029",
+      "current_state": "CONTROLLED_RELEASE_DEFINITION",
       "mbd_required": true,
       "live_geometry_reconciliation": null,
-      "authority_class": "OPEN_OR_CANDIDATE_REQUIREMENT",
+      "authority_class": "EDR_029_CONTROLLED_REQUIREMENT",
       "solidworks_binding": null,
       "binding_status": "NOT_FACE_BOUND_OR_PENDING"
     },
@@ -361,12 +774,12 @@
       "id": "K01-D006-BLIND-END",
       "role": "blind end geometry",
       "type": "NATIVE_GEOMETRY",
-      "candidate_spec": null,
-      "status": null,
-      "current_state": "SEMANTIC_BIND_REQUIRED",
+      "candidate_spec": "1.00 ±0.10",
+      "status": "CONTROLLED_BY_EDR_030",
+      "current_state": "CONTROLLED_RELEASE_DEFINITION",
       "mbd_required": true,
       "live_geometry_reconciliation": null,
-      "authority_class": "CURRENT_NATIVE_GEOMETRY",
+      "authority_class": "CURRENT_NATIVE_GEOMETRY_PLUS_EDR_027_EDR_030",
       "note": "High-level release characteristic is not represented by a dedicated Cxx balloon in the current exemplar plan; do not lose it.",
       "solidworks_binding": null,
       "binding_status": "NOT_FACE_BOUND_OR_PENDING"
@@ -392,22 +805,24 @@
       }
     ],
     "native_nominal_thickness_mm": 1.0000000000000009,
-    "tolerance_status": "OPEN",
-    "binding_status": "PASS"
+    "tolerance_status": "CONTROLLED_EDR_030",
+    "binding_status": "PASS",
+    "release_tolerance": "1.00 ±0.10 mm"
   },
   "open_items": [
     "C07",
     "C08",
     "C10",
     "C11",
-    "C12",
-    "K01-D006-BLIND-END-TOLERANCE"
+    "C12"
   ],
   "authoring_policy": {
     "do_not_author_open_spec_characteristics": true,
     "do_not_change_geometry_during_pmi_authoring": true,
-    "persistent_refs_bound_to_part_sha256": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653",
-    "geometry_hash_must_be_reverified_after_any_pmi_write": true
+    "persistent_refs_bound_to_part_sha256": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85",
+    "geometry_hash_must_be_reverified_after_any_pmi_write": true,
+    "canonical_part_sha256": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85",
+    "persistent_ref_rebind_required": false
   },
   "next": {
     "safe_pmi_scope": "DEFINED_AND_BOUND_CHARACTERISTICS_ONLY",
@@ -419,5 +834,25 @@
       "C12",
       "K01-D006-BLIND-END-TOLERANCE"
     ]
-  }
+  },
+  "persistent_reference_state": "PASS_CANONICAL_REBOUND_READY_FOR_CANDIDATE_PMI_WRITE",
+  "historical_pre_cp_p_datum_A": {
+    "binding_mode": "COMPOSITE_COPLANAR_FACE_SET",
+    "entities": [
+      {
+        "face_index": 0,
+        "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEARAAAABbtl2oDAAAA//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgASwAAAHzlmmoDAAAA/////wAAAAAAAAyAAAAFgAgAagAAAESBnGoHAAAA/////wAAAAAAAP//AQAYAG1vQ2lyUGF0dGVyblN1cmZJZFJlcDJfYwAABYAIAF8AAACD5ZpqDIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAEAAAAAAAAAAAARgAAABYAIAF8AAACD5ZpqDIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAIAAAAAAAAAAAAMgAAABYAIAFIAAACA5ZpqAwAAAP////8AAAAAAAAAAAAAAAAAAAAAAAA=",
+        "feature": "K01_F_TRIM_FRONT_SLEEVE_5MM",
+        "surface_type": "plane"
+      },
+      {
+        "face_index": 15,
+        "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/aUQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABjAGEAbgBkAGkAZABhAHQAZQBzAFwAZwBhAHQAZQAwADQAZABfAGMAMgByADEAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAF8ARwBBAFQARQAwADQARABfAEMAMgBSADEAXwBDAEEATgBEAEkARABBAFQARQAuAFMATABEAFAAUgBUAAmA//7/NksAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AXwBHAEEAVABFADAANABEAF8AQwAyAFIAMQBfAEMAQQBOAEQASQBEAEEAVABFAAIAAClUkGr//v8A//7/AABpAHMAAAAAAAAAAAAAAAAA//7/B0QAZQBmAGEAdQBsAHQAAAAAAAAAAAB0AGEARAAAABbtl2oDAAAA//8BABsAbW9Gcm9tU2t0RW50M0ludFN1cmZJZFJlcF9jAAAFgAgAagAAAESBnGoGAAAA/////wAAAAAAAAOAAAAFgAgAJwAAAFtUkGoOAAAAAAAAAAAAAAAAAAAAAAA=",
+        "feature": "K01_F_TRIM_FRONT_SLEEVE_5MM",
+        "surface_type": "plane"
+      }
+    ],
+    "plane_group_tolerance_mm": 0.0002
+  },
+  "canonical_persistent_rebind_report": "reports/cad/p007_pmi_authoring/K01_P007_CANONICAL_PERSISTENT_REBIND_RAW.json"
 }

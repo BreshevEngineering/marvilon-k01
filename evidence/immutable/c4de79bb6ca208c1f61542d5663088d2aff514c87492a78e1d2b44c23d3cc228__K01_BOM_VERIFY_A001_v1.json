@@ -1,0 +1,33 @@
+{
+  "issues": [
+    "BOM-NONMODELED-OPEN:NM-J2-CLAMP-SCREW",
+    "BOM-NONMODELED-OPEN:NM-J2-SEAL"
+  ],
+  "metrics": {
+    "items": 16,
+    "modeled_occurrences": 14,
+    "non_modeled_items": 2,
+    "suppressed_occurrences": 0
+  },
+  "schema": "k01.bom_verify.a001.compat.v1_9",
+  "verdict": "HOLD",
+  "warnings": [
+    "BOM-MATERIAL-OPEN:K01-B-001",
+    "BOM-MATERIAL-OPEN:K01-P-014",
+    "BOM-MATERIAL-OPEN:K01-P-015",
+    "BOM-REVISION-OPEN:K01-B-001",
+    "BOM-REVISION-OPEN:K01-P-001",
+    "BOM-REVISION-OPEN:K01-P-002",
+    "BOM-REVISION-OPEN:K01-P-003",
+    "BOM-REVISION-OPEN:K01-P-004",
+    "BOM-REVISION-OPEN:K01-P-006",
+    "BOM-REVISION-OPEN:K01-P-007",
+    "BOM-REVISION-OPEN:K01-P-008",
+    "BOM-REVISION-OPEN:K01-P-009",
+    "BOM-REVISION-OPEN:K01-P-013",
+    "BOM-REVISION-OPEN:K01-P-014",
+    "BOM-REVISION-OPEN:K01-P-015",
+    "BOM-REVISION-OPEN:K01-P-016",
+    "BOM-REVISION-OPEN:K01-P-017"
+  ]
+}

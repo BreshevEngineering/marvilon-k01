@@ -1,0 +1,33 @@
+{
+  "schema": "k01.decision_authority_disposition.v1",
+  "date": "2026-09-19",
+  "decision_identity": "EDR-047",
+  "status": "RESOLVED_CONFIGURATION_IDENTITY__CANONICAL_NATIVE_PROMOTION_CONFIRMED",
+  "canonical_active_path": "control/decisions/EDR-047_P004_AXIAL_RECENTER.json",
+  "canonical_sha256": "207efe1adec064c1fe95fabae01f3c6bf0dcab22a2adef47dd842958d7505ce6",
+  "superseded_active_variant_original_path": "control/decisions/EDR-047_P004_CAPABILITY_BOUNDARY_AND_AXIAL_NOMINAL_RECENTER.json",
+  "superseded_history_path": "control/decisions/history/edr047_duplicate_20260919/EDR-047_P004_CAPABILITY_BOUNDARY_AND_AXIAL_NOMINAL_RECENTER.json",
+  "superseded_sha256": "a34e501a01a276465cbcaf2c5eac7a57a032e206aefa0a48f3e3197d061a5881",
+  "native_cad_evidence": {
+    "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-004_Front_Guide_Bushing.SLDPRT",
+    "sha256": "6c5644913ce7694a46ceb557a5616a70598c50355d06e6f537b8a92a7c1ca779",
+    "size_bytes": 77740,
+    "last_write_local": "2026-09-18 22:20:32",
+    "solidworks_revision": "26.0.1",
+    "reader": "STRONGLY_TYPED_SW2018_INTEROP__READ_ONLY",
+    "dimension": "D3@Sketch1",
+    "value_mm": 7.99,
+    "open_errors": 0,
+    "open_warnings": 0,
+    "save_flag_after_read": false
+  },
+  "basis": [
+    "Native K01-P-004 SLDPRT currently stores D3@Sketch1 = 7.990 mm and was read read-only with SolidWorks 2018 strongly typed interop.",
+    "EDR-047_P004_AXIAL_RECENTER.json records accepted canonical promotion 8.000 -> 7.990 mm, P003/P014 unchanged, A001 component count 14 -> 14, mate errors 0 -> 0 and assembly invariance PASS.",
+    "K01-P-004_EDR047_AUTHORITY_TRACE_CURRENT.json independently records the same canonical change and the equation 11.05 - (3.00 + 7.99) = 0.06.",
+    "The competing retain-L=8.000 / downstream-H=8.060 EDR-047 branch conflicts with the actual native CAD and is therefore preserved as superseded history rather than active authority."
+  ],
+  "engineering_numeric_mutation_by_stage04": "NONE__RECONCILIATION_TO_ALREADY_PROMOTED_NATIVE_7P990",
+  "cad_mutation_by_stage04": "NONE",
+  "production_tolerance_release": "NONE"
+}

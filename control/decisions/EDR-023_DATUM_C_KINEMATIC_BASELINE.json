@@ -1,0 +1,71 @@
+{
+  "schema": "k01.edr.v1",
+  "id": "EDR-023",
+  "title": "J1 Datum C kinematic implementation baseline",
+  "date": "2026-09-09",
+  "status": "ACCEPTED_ASSEMBLY_QA_PASS_PENDING_CANONICAL_PROMOTION",
+  "context": "Datum A mating face and Datum B central pilot already establish the axial position and transverse axis of the P003-P016 joint. Datum C shall constrain the remaining rotation about B without creating a redundant radial locating constraint.",
+  "chronology": [
+    "2026-09-02: radial-slot implementation documented in K01_DATUM_C_KINEMATIC_DECISION.md / K01_DATUM_C_FREEZE_SPEC.json.",
+    "2026-09-03: serviceable-joint architecture, manufacturing router and Gate04B v3-v7 evolved the same kinematic intent into a relieved/diamond P017 locator with a simple round P003 mating hole.",
+    "2026-09-09: Gate04B v7 executed on current stable A001 and passed pattern derivation plus native P003/P016 candidate generation.",
+    "2026-09-10: Gate04B producer corrected the P003 mating feature to controlled Ø3.02 +0.01/0 THRU geometry and made model-to-sketch coordinate mapping explicit.",
+    "2026-09-10: candidate A001 Assembly QA PASS: 14 modeled occurrences, P003/P016/P017 fully constrained, 0 active mate errors, P017 signed press depth/protrusion 4/2 mm, moving-group propagation PASS and 0 unexpected IN/MID/OUT interference."
+  ],
+  "selected": {
+    "A": "P003/P016 mating face",
+    "B": "central pilot, Ø10 H7/g6 locating architecture",
+    "C": "K01-P-017 relieved/diamond locator pressed into P016 and engaging P003 Ø3.02 +0.01/0 round hole",
+    "P016_pin_hole": "Ø3 H7 x 4.0 blind at R12 and pattern-derived free-gap midpoint",
+    "P017": "Ø3 p6 press shank x4; protrusion 2.0; tangential major 3.00 -0.01/0; radial minor 2.80 ±0.02; 316L baseline",
+    "P003_mating_hole": "Ø3.02 +0.01/0 THRU"
+  },
+  "kinematic_reason": "The relieved/diamond locator preserves the radial-relief intent of the earlier radial-slot concept: its major width controls tangential clocking while the relieved minor dimension provides radial freedom. The current implementation is later, has a simpler drilled P003 feature, is already represented in the manufacturing router, and has native Gate04B v7 PASS evidence.",
+  "evidence": [
+    "evidence/immutable/7c2b55da77a5436be229bdfb877347ca5f6a3845dd72a1cf1df22200508cc60c__K01_GATE04B_DATUM_C_BUILD.json",
+    "evidence/immutable/fa19b52d6d1279ffcb7c89a6251120000465f1f8591a858c38bdd1c1491bb073__K01_GATE04B_DATUM_C_ASSEMBLY_QA.json",
+    "control/checkpoints/K01-CP-20260910-BASELINE-02C-DATUM-C-VERIFIED.json",
+    "spec/K01_SERVICEABLE_JOINT_ARCHITECTURE_v3.json"
+  ],
+  "gate04b_v7_facts": {
+    "M4_radius_mm": 12.0,
+    "M4_angles_deg": [
+      90.0,
+      210.0,
+      330.0
+    ],
+    "C_angle_deg": 30.0,
+    "C_radius_mm": 12.0,
+    "ligament_to_oring_mm": 2.6,
+    "ligament_to_outer_edge_mm": 2.5,
+    "ligament_to_nearest_M4_mm": 8.85,
+    "P003_hole_mm": 3.02,
+    "release_status": "CANDIDATES_PENDING_ASSEMBLY_QA",
+    "P003_end_condition": "THROUGH_ALL_BOTH",
+    "P003_center_error_mm": 0.0,
+    "P003_datumA_mapping_error_mm": 8.673617379884035e-16,
+    "assembly_qa_status": "PASS_CANDIDATE_ASSEMBLY_QA",
+    "assembly_component_count": 14,
+    "assembly_active_mate_errors": 0,
+    "unexpected_interference_total": 0,
+    "moving_group_pass": true,
+    "P017_press_depth_mm": 4,
+    "P017_protrusion_mm": 2,
+    "verification_sha256": "48763f29e18a7a699aab203ee695b9adc29760203c1e39aa33a313a5e23c7a12",
+    "producer_release_status_at_build": "CANDIDATES_PENDING_ASSEMBLY_QA",
+    "assembly_qa_release_status": "HOLD_CANONICAL_PROMOTION_AND_PRODUCT_DATA",
+    "status_note": "Producer release_status records the pre-assembly-QA build state; assembly_qa_status is the later controlling candidate-integration evidence."
+  },
+  "supersedes": [
+    "Radial-slot implementation detail in docs/K01_DATUM_C_KINEMATIC_DECISION.md",
+    "Radial-slot implementation detail in docs/K01_P016_LONGRUN_INSTALLATION.md",
+    "spec/K01_DATUM_C_FREEZE_SPEC.json v2 implementation detail"
+  ],
+  "does_not_supersede": [
+    "A/B/C kinematic hierarchy",
+    "Rule that fasteners clamp only and do not locate",
+    "Requirement that Datum C remove only the remaining rotational DOF"
+  ],
+  "release_condition": "Candidate assembly QA condition is satisfied. Canonical/product release remains blocked until controlled promotion, post-promotion semantic verification, snapshot/stale reduction, BOM refresh and all applicable P0-P6/technical-filter release gates pass.",
+  "next_authority_transition": "CONTROLLED_CANONICAL_PROMOTION"
+}

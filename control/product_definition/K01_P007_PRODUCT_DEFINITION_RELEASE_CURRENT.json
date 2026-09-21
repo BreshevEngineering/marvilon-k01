@@ -1,0 +1,57 @@
+{
+  "schema": "k01.product_definition.release.current.v1",
+  "generated_utc": "2026-09-17T06:43:55.140229+00:00",
+  "part": "K01-P-007",
+  "status": "READY_FOR_D006_RELEASE_PIPELINE",
+  "product_definition_ready": true,
+  "qualification_complete": false,
+  "lifecycle_state": "L5_COMPLETE_FOR_DESIGN__L6_TPD_PIPELINE_ALLOWED",
+  "authorities": [
+    "EDR-025",
+    "EDR-027",
+    "EDR-028",
+    "EDR-029",
+    "EDR-030",
+    "EDR-032",
+    "EDR-033",
+    "EDR-035",
+    "EDR-036",
+    "EDR-037"
+  ],
+  "C02_closeout": {
+    "authority": "control/decisions/EDR-032_P007_C02_LOCATOR_DEPTH_RELEASE.json",
+    "status": "ACCEPTED_RELEASE_DEFINITION",
+    "P007_locator_depth_mm": "2.00 ±0.05",
+    "P003_pilot_length_mm": "1.50 ±0.05",
+    "worst_case_bottom_clearance_mm": "0.40...0.60",
+    "action": "NO_NEW_DESIGN_DECISION__PROPAGATE_EXISTING_RELEASE"
+  },
+  "requirements": {
+    "REQ-K01-MEDIA-001": "RELEASED",
+    "REQ-K01-SEAL-001": "RELEASED",
+    "REQ-K01-LEAK-001": "RELEASED",
+    "REQ-K01-SERVICE-CYCLES-001": "RELEASED"
+  },
+  "surface_texture": "J2 seal-contact face Ra <= 0.8 µm",
+  "manufacturing": "DESIGN_ROUTE_ACCEPTED__PHYSICAL_CAPABILITY_OPEN",
+  "inspection": "control/inspection/K01_P007_INSPECTION_PLAN_CURRENT.json",
+  "measurement_reference": "20 C; lab acceptance 20 ±2 C",
+  "configuration": {
+    "baseline": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+    "drawing_control_sha256": "33ae864607a713e18bbf3e55ab9e8f5182b84f787c94bff91653cf4f84306562",
+    "binding_mode": "PINNED_CONTROLLED_CONFIGURATION"
+  },
+  "downstream_allowed": [
+    "compile final K01-D-006 Drawing Spec",
+    "semantic QA",
+    "D8 visual QA",
+    "release-candidate publication"
+  ],
+  "physical_qualification_open": [
+    "C12 physical leak test",
+    "50-cycle service qualification",
+    "manufacturing FAI/capability",
+    "actual purchased seal/screw incoming qualification"
+  ],
+  "release_boundary": "READY means Product Definition is complete enough to author/release candidate TPD. It does not mean L8 physical qualification or L9 product release is complete."
+}

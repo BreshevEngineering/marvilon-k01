@@ -1,0 +1,84 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-048",
+  "date": "2026-09-18",
+  "subject": "P004 inspection conditioning and measurement procedure architecture",
+  "status": "ACCEPTED_INSPECTION_CONDITIONING_PROCEDURE__NUMERIC_ACCEPTANCE_WAITING",
+  "goal": "Control how P004 first-article/production dimensions are conditioned, measured and recorded without inventing unreleased tolerances or metrology capability.",
+  "authority": [
+    "EDR-038",
+    "EDR-043",
+    "EDR-045",
+    "EDR-047",
+    "evidence/immutable/2b2fc6149831289892aceae6f9cad3671928f2849dff6b87a3a5a989c9e0d9ec__K01-P-004_INSPECTION_PLAN_CURRENT.json"
+  ],
+  "external_manufacturer_basis": [
+    "Ensinger PEEK machining guidance: narrow-tolerance/filled-plastic machining may require stress-relief/intermediate annealing and final machining after stabilization.",
+    "Ensinger TECAPEEK PVX data: low moisture absorption and suitability for machined sliding/bearing applications."
+  ],
+  "decision": [
+    "Release the 20 C inspection/conditioning procedure architecture defined in this EDR.",
+    "Do not release a generic humidity soak time, annealing cycle, measurement force or gage type without the selected supplier/process/metrology method.",
+    "Require traceable temperature, material lot/process effectivity, instrument identity/calibration and measurement uncertainty fields in FAI records.",
+    "Keep final numeric acceptance limits OPEN until guide-functional allocation and capability-based production tolerance allocation are controlled.",
+    "Functional sliding/axial checks are supplementary engineering/FAI evidence and do not silently replace dimensional acceptance."
+  ],
+  "procedure": {
+    "reference_temperature_C": 20,
+    "temperature_control": [
+      "Dimensional acceptance is referenced to 20 C per the controlled K01 requirement architecture.",
+      "Part, contact standards/masters and measurement setup shall be thermally equilibrated in the measurement environment before critical acceptance.",
+      "Record actual part temperature and ambient temperature for every critical FAI/acceptance record.",
+      "Do not apply an unvalidated thermal correction to rescue an out-of-condition measurement."
+    ],
+    "material_conditioning": [
+      "No generic humidity-conditioning-to-weight acceptance step is released for TECAPEEK PVX from current evidence.",
+      "Keep parts clean and protected from uncontrolled environmental exposure before inspection.",
+      "Supplier/manufacturing record shall declare stock lot/form and whether stress-relief/intermediate anneal was used.",
+      "If an intermediate anneal/stabilization step is used, final critical machining/finishing shall occur after that stabilization step; the actual cycle is supplier/process-specific and remains controlled process evidence rather than a generic project value."
+    ],
+    "measurement_methods": {
+      "P004_OD_6p54": "Calibrated low-force micrometer/comparator or equivalent method that does not measurably deform the polymer; record instrument identity and measurement setup.",
+      "P004_OAL_8p00": "Calibrated low-force comparator/height measurement with stable flat contacts/support; record setup and instrument identity.",
+      "P004_bore_5p055": "Small-bore method suitable for PEEK (e.g. controlled-contact internal metrology, air/optical/CMM where validated); final method is selected only when the guide tolerance is released.",
+      "OD_to_bore": "Functional runout fixture/CMM/optical method reproducing datum A locating-OD axis; numeric acceptance remains open.",
+      "faces": "Comparator/CMM orientation check to datum A only if the final axial-chain definition requires it.",
+      "functional_checks": "Free sliding/no shaving/no binding and assembled axial-float measurement may be recorded as engineering/FAI evidence; they do not replace dimensional acceptance where dimensions are specified."
+    },
+    "metrology_record_fields": [
+      "part serial or FAI identifier",
+      "material stock lot and CoC reference",
+      "supplier/process revision/effectivity",
+      "machining route and stabilization/anneal declaration",
+      "measurement date/time",
+      "ambient temperature",
+      "part temperature",
+      "instrument ID/calibration status",
+      "measurement method/setup",
+      "contact-force setting where applicable",
+      "measured result(s)",
+      "measurement uncertainty or validated method uncertainty",
+      "decision rule/guard band once numeric tolerance exists",
+      "operator/reviewer",
+      "nonconformance disposition if applicable"
+    ],
+    "uncertainty_rule": "A numeric PASS/FAIL decision is not released until the characteristic tolerance and a documented measurement uncertainty/decision rule exist. Gage uncertainty must be demonstrated adequate for the released tolerance; no arbitrary 10:1 ratio is imposed by this EDR.",
+    "statistical_boundary": "Repeated FAI measurements may screen feasibility and short-term repeatability. Do not claim Cp/Cpk/Ppk from an inadequately sized or uncontrolled data set.",
+    "numeric_acceptance": "OPEN__WAITS_FOR_GUIDE_REQUIREMENT_AND_CAPABILITY_BASED_TOLERANCE_ALLOCATION"
+  },
+  "technical_filter": {
+    "function": "PASS",
+    "inspection": "PASS_PROCEDURE_ARCHITECTURE",
+    "manufacturing": "PASS_PROCESS_DECLARATION_REQUIRED",
+    "metrology": "PASS_FIELDS_DEFINED__NUMERIC_CAPABILITY_OPEN",
+    "thermal": "PASS_20C_REFERENCE",
+    "CAD": "NONE"
+  },
+  "expected_closure": "PASS_P004_INSPECTION_CONDITIONING_PROCEDURE_CONTROLLED__NUMERIC_ACCEPTANCE_WAITING",
+  "impact": {
+    "CAD": "NONE",
+    "DimXpert": "NONE",
+    "drawing": "NONE",
+    "native_mutation": "NONE"
+  }
+}

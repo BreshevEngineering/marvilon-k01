@@ -1,0 +1,171 @@
+{
+  "schema": "k01.product_definition.current.v1",
+  "generated_utc": "2026-09-17T10:25:41.789717+00:00",
+  "part_id": "K01-P-004",
+  "title": "Front Guide Bushing",
+  "status": "PARTIAL_PRODUCT_DEFINITION__MATING_TOLERANCE_AUTHORITIES_NEXT",
+  "product_definition_ready": false,
+  "functions": [
+    "radial guidance P001",
+    "sliding clearance",
+    "slip fit in P003",
+    "axial retention by P014",
+    "no thermal binding",
+    "serviceable/replaceable"
+  ],
+  "material": {
+    "designation": "TECAPEEK PVX black",
+    "manufacturer": "Ensinger",
+    "state": "RELEASED_DESIGN_MATERIAL__PRODUCTION_LOT_STOCK_CONDITIONING_OPEN",
+    "source": "EDR-043"
+  },
+  "temperature_screen_C": [
+    -40.0,
+    55.0
+  ],
+  "characteristics": [
+    {
+      "id": "P004-C01",
+      "name": "Guide bore",
+      "nominal": "Ø5.055",
+      "status": "OPEN",
+      "blocker": "functional guide clearance min/max + tolerance allocation",
+      "authority_state": "NUMERIC_GUIDE_LIMITS_NOT_RELEASED",
+      "derived_nominal_clearance_mm": 0.055,
+      "thermal_screen_nominal_mm": {
+        "Tmin": 0.05070099999999922,
+        "Tref": 0.054999999999999716,
+        "Tmax": 0.05750775000000008
+      },
+      "dependency": "SYSTEM-LEVEL-GUIDE-PLAY-ACCEPTANCE",
+      "source": "EDR-040"
+    },
+    {
+      "id": "P004-C02",
+      "name": "P003 seat OD",
+      "nominal": "Ø6.54",
+      "status": "DERIVED",
+      "blocker": "temperature-aware tolerance allocation + process capability",
+      "derived": {
+        "nominal_clearance_20C_mm": 0.06,
+        "temperature_screen_room_window_if_full_service_band_mm": [
+          0.043171000000000036,
+          0.07456399999999956
+        ],
+        "source": "EDR-038 + EDR-041"
+      },
+      "production_tolerance": "OPEN",
+      "dependency": "temperature applicability + process capability + P003/P004 joint allocation"
+    },
+    {
+      "id": "P004-C03",
+      "name": "OAL / axial float chain",
+      "nominal": "8.00",
+      "status": "DERIVED",
+      "blocker": "temperature-aware axial stack tolerance allocation",
+      "derived": {
+        "nominal_axial_float_20C_mm": 0.05000000000000071,
+        "temperature_screen_room_window_if_full_service_band_mm": [
+          0.04389200000000045,
+          0.07332799999999999
+        ],
+        "source": "EDR-038 + EDR-041"
+      },
+      "production_tolerance": "OPEN",
+      "architecture_state": "CURRENT_0p050_NOMINAL_NOT_CENTERED_FOR_FULL_TEMP_BAND",
+      "dependency": "temperature applicability and/or controlled axial nominal architecture decision"
+    },
+    {
+      "id": "P004-C04",
+      "name": "Guide-bore to locating-OD relationship",
+      "status": "OPEN",
+      "blocker": "GPS value after guide clearance allocation",
+      "architecture": "TOTAL RUNOUT or equivalent ISO GPS relative to datum A axis",
+      "numeric_tolerance": "OPEN",
+      "source": "EDR-044"
+    },
+    {
+      "id": "P004-C05",
+      "name": "End-face orientation",
+      "status": "OPEN",
+      "blocker": "functional datum/GPS decision",
+      "architecture": "PERPENDICULARITY/equivalent to datum A if axial-stack function requires",
+      "numeric_tolerance": "OPEN",
+      "source": "EDR-044"
+    },
+    {
+      "id": "P004-C06",
+      "name": "guide bore texture",
+      "status": "OPEN",
+      "blocker": "process/wear/inspection decision",
+      "surface_class": "GUIDE/SLIDING",
+      "numeric_texture": "OPEN",
+      "source": "EDR-042"
+    },
+    {
+      "id": "P004-C07",
+      "name": "seat OD texture",
+      "status": "OPEN",
+      "blocker": "process/assembly decision",
+      "surface_class": "LOCATING/SLIP",
+      "numeric_texture": "OPEN",
+      "source": "EDR-042"
+    },
+    {
+      "id": "P004-C08",
+      "name": "Material",
+      "value": "Ensinger TECAPEEK PVX black",
+      "status": "RELEASED",
+      "source": "EDR-043",
+      "release_scope": "DESIGN_MATERIAL_IDENTITY_ONLY",
+      "open_evidence": "lot/stock CoC; conditioning; cold-range dimensional property if -40 C release required"
+    },
+    {
+      "id": "P004-C09",
+      "name": "Manufacturing route",
+      "value": "qualified stock -> CNC turning -> precision bore finishing -> deburr/clean -> stabilization -> inspection",
+      "status": "RELEASED_ENGINEERING_BASIS",
+      "source": "EDR-038"
+    },
+    {
+      "id": "P004-C10",
+      "name": "Measurement reference temperature",
+      "value": "20 C; record actual part temperature for critical acceptance",
+      "status": "RELEASED_ENGINEERING_BASIS",
+      "source": "EDR-038 / ISO 1:2022"
+    },
+    {
+      "id": "P004-C11",
+      "name": "Edge/deburr",
+      "status": "OPEN",
+      "blocker": "functional edge decision before drawing"
+    }
+  ],
+  "open_release_blockers": [
+    "P001/P004 guide-clearance numeric min/max and size/form tolerance allocation — WAITING_DEPENDENCY on system radial/angular/optical repeatability allocation",
+    "temperature-aware P003/P004 tolerance allocation",
+    "P004 axial worst-case tolerance allocation",
+    "functional datum/GPS limits",
+    "surface texture decisions",
+    "edge treatment",
+    "production process capability/FAI",
+    "final inspection acceptance limits"
+  ],
+  "drawing_gate": "HOLD_UPSTREAM_PRODUCT_DEFINITION",
+  "dimxpert_gate": "HOLD_UPSTREAM_PRODUCT_DEFINITION",
+  "datum_system": {
+    "A": "Ø6.54 external locating cylinder / derived axis — RELEASED ARCHITECTURE",
+    "B": "N/A — axial direction intentionally floats",
+    "C": "N/A — rotational symmetry"
+  },
+  "reference_temperature": {
+    "value_C": 20,
+    "standard": "ISO 1:2022",
+    "source": "EDR-045"
+  },
+  "service_temperature_function": {
+    "criterion": "no interference/binding over qualified service envelope",
+    "hot_side_55C": "ENGINEERING_SCREEN_PASS_WITH_LIMITATIONS",
+    "cold_side_minus40C": "QUALIFICATION_OPEN"
+  }
+}

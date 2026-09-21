@@ -1,0 +1,35 @@
+{
+  "schema": "k01.engineering_decision.v1",
+  "decision_id": "EDR-047",
+  "date": "2026-09-18",
+  "subject": "P004 axial nominal recenter 8.000 -> 7.990 mm",
+  "status": "ACCEPTED_ARCHITECTURE__CANONICAL_CAD_PROMOTED__PRODUCTION_RELEASE_HOLD",
+  "accepted": [
+    "K01-P-004 canonical OAL nominal is 7.990 mm.",
+    "Nominal axial float is 0.060 mm.",
+    "K01-P-003 geometry remains unchanged.",
+    "K01-P-014 geometry remains unchanged.",
+    "K01-A-001 remains source-invariant and has zero active mate errors after promotion."
+  ],
+  "promotion_evidence": {
+    "status": "PASS_P004_CANONICAL_OAL_PROMOTION__PD_AND_D004_UPDATE_REQUIRED",
+    "oal_before_mm": 8.0,
+    "oal_after_mm": 7.99,
+    "mate_errors_pre": 0,
+    "mate_errors_post": 0,
+    "component_count_pre": 14,
+    "component_count_post": 14,
+    "a001_invariance": "PASS",
+    "backup_dir": "D:\\Marvilon\\K01\\cad\\history\\edr047_p004_oal_promotion\\20260918_222012"
+  },
+  "not_released": [
+    "P004 OAL production tolerance",
+    "P004 OD production tolerance",
+    "P003/P004 individual tolerance split",
+    "numeric surface texture",
+    "physical first-article capability",
+    "final inspection acceptance"
+  ],
+  "next_blocker": "P001_P004_GUIDE_CLEARANCE_REQUIREMENT",
+  "next_action": "Close the functional min/max requirement for P001 Ø5.000 versus P004 Ø5.055 guide clearance before releasing guide-bore/rod tolerances."
+}

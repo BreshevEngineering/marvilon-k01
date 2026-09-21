@@ -1,7 +1,7 @@
 {
-  "schema": "k01.fixed_coil_actuator_requirements.v2",
-  "generated_utc": "2026-09-08T13:14:41.053258+00:00",
-  "status": "HOLD_REQ_ACT_001_NUMERIC_ACCEPTANCE",
+  "schema": "k01.fixed_coil_actuator_requirements.v3",
+  "generated_utc": "2026-09-08T14:09:48.393192+00:00",
+  "status": "HOLD_REQ_K01_ACT_FORCE_001_NUMERIC_ACCEPTANCE",
   "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
   "architecture": "1x B001 moving + 1x P015 Dual Coil Bobbin / 2 fixed coils",
   "requirements": [
@@ -18,5 +18,10 @@
       "value_mm": 10.0,
       "verification": "Gate04E LimitDistance1 0...10 mm"
     }
-  ]
+  ],
+  "current_requirement_id": "REQ-K01-ACT-FORCE-001",
+  "current_requirement_source": "control/requirements/K01_RELEASE_REQUIREMENTS_CURRENT.json",
+  "numeric_acceptance": null,
+  "verification_method": "FEMM sensitivity sweep + bench acceptance",
+  "legacy_placeholder_REQ_ACT_001": "SUPERSEDED_BY_REQ-K01-ACT-FORCE-001"
 }

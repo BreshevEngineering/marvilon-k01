@@ -1,0 +1,456 @@
+{
+  "schema": "k01.engineering_system_coverage.current.v1",
+  "generated_utc": "2026-09-20T09:27:01.876341+00:00",
+  "status": "PASS_ENGINEERING_SYSTEM_COVERAGE__DECLARED_GAPS",
+  "registry": "control/system/K01_ENGINEERING_DOMAIN_REGISTRY_CURRENT.json",
+  "graph": "control/medtas/v1/graph/K01_engineering_build_graph_v2_6.json",
+  "summary": {
+    "domains": 17,
+    "coverage_blockers": 0,
+    "declared_gap_items": 7,
+    "runtime_hold_or_limitation_domains": 4,
+    "release_relevant_open_domains": [
+      "DRAWING_D1_D9",
+      "EBOM",
+      "FLOW_CFD",
+      "MAGNETIC_FEMM",
+      "MBOM",
+      "PRESSURE_VACUUM_CONTAINMENT",
+      "STRUCTURAL_FEA",
+      "THERMAL"
+    ]
+  },
+  "blocking": [],
+  "declared_gaps": [
+    "DRAWING_D1_D9:D8 controlled visual QA for exemplar",
+    "DRAWING_D1_D9:D9 release export/baseline for D006",
+    "DRAWING_D1_D9:D3 L3 controlled perturb/restore recipe and execution for release-native binding invariance",
+    "DRAWING_D1_D9:D7 full release scope after all Product Definition claims/configuration/effectivity are closed",
+    "FLOW_CFD:Current Flow Simulation evidence/goals are not yet normalized into authoritative MEDTAS graph nodes and fingerprints.",
+    "THERMAL:Thermal workpack exists but no dedicated thermal solver/evidence node is yet in authoritative graph.",
+    "PRESSURE_VACUUM_CONTAINMENT:Pressure/vacuum envelope is controlled by EDR, but containment/leak calculation/test acceptance is not yet a dedicated graph evidence family."
+  ],
+  "runtime_holds": [
+    {
+      "domain": "STRUCTURAL_FEA",
+      "probe": {
+        "state": "BLOCKED_RUNTIME",
+        "ready_to_run": false,
+        "calculix_executable": null,
+        "gmsh_executable": null,
+        "blocking": [
+          "CCX-GEO-001: topology-stable face map and solver-neutral mesh are not yet generated",
+          "CCX-EXE-001: CalculiX executable not found on PATH",
+          "CCX-MESH-001: Gmsh not found on PATH; another controlled mesher may be bound instead"
+        ]
+      }
+    },
+    {
+      "domain": "MAGNETIC_FEMM",
+      "probe": {
+        "state": "PASS_WITH_LIMITATIONS",
+        "absolute_force_verified": false,
+        "note": "FEMM field/automation evidence exists; force extraction is not release evidence."
+      }
+    },
+    {
+      "domain": "EBOM",
+      "probe": {
+        "state": "HOLD_RUNTIME",
+        "verdict": "HOLD",
+        "issues": [
+          "BOM-NONMODELED-OPEN:NM-J2-CLAMP-SCREW",
+          "BOM-NONMODELED-OPEN:NM-J2-SEAL"
+        ],
+        "warnings": [
+          "BOM-MATERIAL-OPEN:K01-B-001",
+          "BOM-MATERIAL-OPEN:K01-P-014",
+          "BOM-MATERIAL-OPEN:K01-P-015",
+          "BOM-REVISION-OPEN:K01-B-001",
+          "BOM-REVISION-OPEN:K01-P-001",
+          "BOM-REVISION-OPEN:K01-P-002",
+          "BOM-REVISION-OPEN:K01-P-003",
+          "BOM-REVISION-OPEN:K01-P-004",
+          "BOM-REVISION-OPEN:K01-P-006",
+          "BOM-REVISION-OPEN:K01-P-007",
+          "BOM-REVISION-OPEN:K01-P-008",
+          "BOM-REVISION-OPEN:K01-P-009",
+          "BOM-REVISION-OPEN:K01-P-013",
+          "BOM-REVISION-OPEN:K01-P-014",
+          "BOM-REVISION-OPEN:K01-P-015",
+          "BOM-REVISION-OPEN:K01-P-016",
+          "BOM-REVISION-OPEN:K01-P-017"
+        ]
+      }
+    },
+    {
+      "domain": "MBOM",
+      "probe": {
+        "state": "HOLD_RUNTIME",
+        "verdict": "HOLD",
+        "issues": [
+          "BOM-NONMODELED-OPEN:NM-J2-CLAMP-SCREW",
+          "BOM-NONMODELED-OPEN:NM-J2-FASTENER-PROCESS",
+          "BOM-NONMODELED-OPEN:NM-J2-SEAL"
+        ],
+        "warnings": [
+          "BOM-MATERIAL-OPEN:K01-B-001",
+          "BOM-MATERIAL-OPEN:K01-P-014",
+          "BOM-MATERIAL-OPEN:K01-P-015",
+          "BOM-REVISION-OPEN:K01-B-001",
+          "BOM-REVISION-OPEN:K01-P-001",
+          "BOM-REVISION-OPEN:K01-P-002",
+          "BOM-REVISION-OPEN:K01-P-003",
+          "BOM-REVISION-OPEN:K01-P-004",
+          "BOM-REVISION-OPEN:K01-P-006",
+          "BOM-REVISION-OPEN:K01-P-007",
+          "BOM-REVISION-OPEN:K01-P-008",
+          "BOM-REVISION-OPEN:K01-P-009",
+          "BOM-REVISION-OPEN:K01-P-013",
+          "BOM-REVISION-OPEN:K01-P-014",
+          "BOM-REVISION-OPEN:K01-P-015",
+          "BOM-REVISION-OPEN:K01-P-016",
+          "BOM-REVISION-OPEN:K01-P-017"
+        ]
+      }
+    }
+  ],
+  "domains": [
+    {
+      "id": "REQ_ALLOC_DECISION",
+      "title": "Requirements / allocation / engineering decision / technical filter",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": "Technical-filter evidence remains a cross-cutting decision gate and must be linked by changes/nodes; equal numeric values never imply shared identity."
+    },
+    {
+      "id": "DERIVED_INPUTS",
+      "title": "Derived loads / limits / screening inputs",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_IF_APPLICABLE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": "Derived quantities have stable IDs, quantity kind, derivation and consumers; they are not requirements."
+    },
+    {
+      "id": "PRODUCT_DEFINITION",
+      "title": "Product Characteristics / datums / measurement / effectivity",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": "Nominal, fit/tolerance/GD&T, datum/DRF, measurement condition, material/surface/process, inspection strategy and OPEN/PARTIAL/CONTROLLED state live here."
+    },
+    {
+      "id": "CAD_MBD_BINDING",
+      "title": "Native CAD / semantic binding / MBD-PMI",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": "Runtime face IDs are not authority. Critical binding requires semantic/geometric signature plus reopen/rebuild/perturb invariance as applicable."
+    },
+    {
+      "id": "DRAWING_D1_D9",
+      "title": "Drawing authoring / projection / D1-D9 QA",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "coverage_state": "COVERED_WITH_DECLARED_GAPS",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [
+        "D8 controlled visual QA for exemplar",
+        "D9 release export/baseline for D006",
+        "D3 L3 controlled perturb/restore recipe and execution for release-native binding invariance",
+        "D7 full release scope after all Product Definition claims/configuration/effectivity are closed"
+      ],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": "V17 makes exemplar provenance and D3 authority/execution mapping explicit. Current exemplar still must pass D3 semantic corrections, then D7/D8/D9; release remains incomplete until D3 L3/full D7/D8/D9 and upstream blockers close."
+    },
+    {
+      "id": "TOLERANCE_VARIATION",
+      "title": "Tolerance stack / variation / process capability / inspectability",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": "Variation evidence is separate from physics and stales on tolerance/datum/measurement/manufacturing changes."
+    },
+    {
+      "id": "STRUCTURAL_FEA",
+      "title": "Structural FEA — SolidWorks Simulation primary screen + CalculiX independent branch",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_IF_APPLICABLE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "BLOCKED_RUNTIME",
+        "ready_to_run": false,
+        "calculix_executable": null,
+        "gmsh_executable": null,
+        "blocking": [
+          "CCX-GEO-001: topology-stable face map and solver-neutral mesh are not yet generated",
+          "CCX-EXE-001: CalculiX executable not found on PATH",
+          "CCX-MESH-001: Gmsh not found on PATH; another controlled mesher may be bound instead"
+        ]
+      },
+      "status_note": "SolidWorks linear-static screen has evidence. CalculiX/CCX is independent reconciliation and may remain blocked until neutral mesh/toolchain is available; a controlled waiver would be required for release if cross-check remains mandatory."
+    },
+    {
+      "id": "MAGNETIC_FEMM",
+      "title": "Magnetic FEM — FEMM",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_IF_APPLICABLE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "PASS_WITH_LIMITATIONS",
+        "absolute_force_verified": false,
+        "note": "FEMM field/automation evidence exists; force extraction is not release evidence."
+      },
+      "status_note": "Solver/field screening evidence exists with limitations. Absolute force extraction remains unverified and cannot be used as release evidence until fixed/validated."
+    },
+    {
+      "id": "FLOW_CFD",
+      "title": "Flow / purge / pressure-drop CFD",
+      "mode": "DECLARED_GAP_ALLOWED",
+      "release_relevance": "BLOCKS_IF_APPLICABLE",
+      "coverage_state": "DECLARED_OPEN_GAP",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [
+        "Current Flow Simulation evidence/goals are not yet normalized into authoritative MEDTAS graph nodes and fingerprints."
+      ],
+      "gap_action": "Create controlled FLOW input-case/evidence nodes when flow requirements enter a release decision; bind inlet/outlet/purge/temperature assumptions and solver version.",
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": null
+    },
+    {
+      "id": "THERMAL",
+      "title": "Thermal / thermal-preload / galling-service evidence",
+      "mode": "DECLARED_GAP_ALLOWED",
+      "release_relevance": "BLOCKS_IF_APPLICABLE",
+      "coverage_state": "DECLARED_OPEN_GAP",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [
+        "Thermal workpack exists but no dedicated thermal solver/evidence node is yet in authoritative graph."
+      ],
+      "gap_action": "Split thermal loads/material properties/contact/preload effects into fingerprinted thermal evidence node(s) before thermal release claims.",
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": null
+    },
+    {
+      "id": "PRESSURE_VACUUM_CONTAINMENT",
+      "title": "Pressure / vacuum / containment / leak",
+      "mode": "DECLARED_GAP_ALLOWED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "coverage_state": "DECLARED_OPEN_GAP",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [
+        "Pressure/vacuum envelope is controlled by EDR, but containment/leak calculation/test acceptance is not yet a dedicated graph evidence family."
+      ],
+      "gap_action": "Create pressure/containment and leak-test evidence nodes consuming C07/C08/C10/C12, material/process and pressure envelope.",
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": null
+    },
+    {
+      "id": "MATERIALS_JOINING_MANUFACTURING",
+      "title": "Materials / joining / manufacturing route / supplier capability",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": "P007 monolithic vs joined/welded route remains release-significant. Process-dependent characteristics may not be closed before route/capability evidence."
+    },
+    {
+      "id": "EBOM",
+      "title": "Engineering BOM (EBOM)",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "HOLD_RUNTIME",
+        "verdict": "HOLD",
+        "issues": [
+          "BOM-NONMODELED-OPEN:NM-J2-CLAMP-SCREW",
+          "BOM-NONMODELED-OPEN:NM-J2-SEAL"
+        ],
+        "warnings": [
+          "BOM-MATERIAL-OPEN:K01-B-001",
+          "BOM-MATERIAL-OPEN:K01-P-014",
+          "BOM-MATERIAL-OPEN:K01-P-015",
+          "BOM-REVISION-OPEN:K01-B-001",
+          "BOM-REVISION-OPEN:K01-P-001",
+          "BOM-REVISION-OPEN:K01-P-002",
+          "BOM-REVISION-OPEN:K01-P-003",
+          "BOM-REVISION-OPEN:K01-P-004",
+          "BOM-REVISION-OPEN:K01-P-006",
+          "BOM-REVISION-OPEN:K01-P-007",
+          "BOM-REVISION-OPEN:K01-P-008",
+          "BOM-REVISION-OPEN:K01-P-009",
+          "BOM-REVISION-OPEN:K01-P-013",
+          "BOM-REVISION-OPEN:K01-P-014",
+          "BOM-REVISION-OPEN:K01-P-015",
+          "BOM-REVISION-OPEN:K01-P-016",
+          "BOM-REVISION-OPEN:K01-P-017"
+        ]
+      },
+      "status_note": "EBOM is computed from controlled CAD occurrence tree + product registry. Manual BOM tables are not authority."
+    },
+    {
+      "id": "MBOM",
+      "title": "Manufacturing BOM (MBOM) / manufacturing transformation",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "HOLD_RUNTIME",
+        "verdict": "HOLD",
+        "issues": [
+          "BOM-NONMODELED-OPEN:NM-J2-CLAMP-SCREW",
+          "BOM-NONMODELED-OPEN:NM-J2-FASTENER-PROCESS",
+          "BOM-NONMODELED-OPEN:NM-J2-SEAL"
+        ],
+        "warnings": [
+          "BOM-MATERIAL-OPEN:K01-B-001",
+          "BOM-MATERIAL-OPEN:K01-P-014",
+          "BOM-MATERIAL-OPEN:K01-P-015",
+          "BOM-REVISION-OPEN:K01-B-001",
+          "BOM-REVISION-OPEN:K01-P-001",
+          "BOM-REVISION-OPEN:K01-P-002",
+          "BOM-REVISION-OPEN:K01-P-003",
+          "BOM-REVISION-OPEN:K01-P-004",
+          "BOM-REVISION-OPEN:K01-P-006",
+          "BOM-REVISION-OPEN:K01-P-007",
+          "BOM-REVISION-OPEN:K01-P-008",
+          "BOM-REVISION-OPEN:K01-P-009",
+          "BOM-REVISION-OPEN:K01-P-013",
+          "BOM-REVISION-OPEN:K01-P-014",
+          "BOM-REVISION-OPEN:K01-P-015",
+          "BOM-REVISION-OPEN:K01-P-016",
+          "BOM-REVISION-OPEN:K01-P-017"
+        ]
+      },
+      "status_note": "MBOM consumes EBOM plus manufacturing route/process decomposition; open P007 route must propagate here."
+    },
+    {
+      "id": "INSPECTION_METROLOGY",
+      "title": "Inspection / metrology / acceptance",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": "Inspection strategy is defined with characteristics; S6 owns procedure/results. Measurement condition and capability are release semantics, especially for thin-wall P007."
+    },
+    {
+      "id": "CONFIGURATION_RELEASE_BASELINE",
+      "title": "Configuration / effectivity / release baseline",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "BLOCKS_RELEASE",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": "Historical released revisions are immutable. As-built/as-inspected evidence pins exact released fingerprints."
+    },
+    {
+      "id": "REPO_HANDOFF_TOOLCHAIN",
+      "title": "Repository / Git / handoff / toolchain reproducibility",
+      "mode": "GRAPH_REQUIRED",
+      "release_relevance": "EVIDENCE_ONLY",
+      "coverage_state": "COVERED",
+      "missing_authority_paths": [],
+      "missing_graph_nodes": [],
+      "declared_gaps": [],
+      "gap_action": null,
+      "runtime_probe": {
+        "state": "NOT_APPLICABLE"
+      },
+      "status_note": "Patch-first controlled changes, source/toolchain hashes and complete AI handoff prevent branch/session drift."
+    }
+  ],
+  "rules": [
+    "The lifecycle is a DAG with one main definition spine and parallel evidence/product-structure lanes, not a single sequential checklist.",
+    "Product Definition owns engineering semantics; solver/drawing/BOM/inspection artifacts are downstream evidence/projections.",
+    "Every derived output is bound to input fingerprints, toolchain identity and configuration/effectivity.",
+    "A domain may be OPEN or not yet graph-backed, but that state must be declared here with an owner/action; silent absence is prohibited.",
+    "Physics evidence families are independent: structural, magnetic, flow, thermal, pressure/vacuum and other applicable domains stale independently.",
+    "EBOM and MBOM are different controlled products: EBOM from product/CAD structure; MBOM additionally consumes manufacturing transformation/route.",
+    "CalculiX / CCX is the controlled name for the independent structural cross-check branch.",
+    "FEMM is magnetic-field evidence; unverified force extraction must not become release evidence.",
+    "Center is a projection/orchestration surface and never a second authority database."
+  ]
+}

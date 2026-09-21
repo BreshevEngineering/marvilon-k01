@@ -1,0 +1,775 @@
+{
+  "schema": "k01.node_technical_filter_map.v2_2",
+  "graph": "D:\\BreshevEngineering\\marvilon-k01\\control\\medtas\\v1\\graph\\K01_engineering_build_graph_v2_0.json",
+  "rules_authority": "D:\\BreshevEngineering\\marvilon-k01\\control\\decision_system\\K01_TECHNICAL_FILTER_RULES_v2_2.json",
+  "categories_authority": "D:\\BreshevEngineering\\marvilon-k01\\control\\decision_system\\K01_TECHNICAL_FILTER_24_v2_2.json",
+  "nodes": [
+    {
+      "node_id": "K01.PROJECT.STRUCTURE",
+      "categories": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "16",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.REQ.GATE04E",
+      "categories": [
+        "01",
+        "21",
+        "24"
+      ],
+      "rationale": "Requirement identity, acceptance and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.PARAM.GATE04E",
+      "categories": [
+        "04",
+        "05",
+        "13",
+        "14",
+        "24"
+      ],
+      "rationale": "Controlled Gate04E load/structural and magnetic screening parameters; map to load, structural, magnetic/material context and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.PARAM.INTERFACE.J2",
+      "categories": [
+        "02",
+        "03",
+        "15",
+        "16",
+        "17",
+        "18",
+        "24"
+      ],
+      "rationale": "Controlled J2 interface geometry/fit parameters affect architecture, datums, tolerances, manufacturability, assembly/service and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.MAT.GATE04E",
+      "categories": [
+        "14",
+        "16",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Material/environment, process, sourcing, value and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.PARTS.REGISTRY",
+      "categories": [
+        "14",
+        "16",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Material/environment, process, sourcing, value and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.CAD.SEM.A001",
+      "categories": [
+        "02",
+        "03",
+        "15",
+        "16",
+        "17",
+        "24"
+      ],
+      "rationale": "Geometry, interfaces, assembly and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.CAD.PROPS.PROJECTION.A001",
+      "categories": [
+        "02",
+        "03",
+        "15",
+        "16",
+        "17",
+        "24"
+      ],
+      "rationale": "Geometry, interfaces, assembly and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.CAD.HASH.QUAL.A001",
+      "categories": [
+        "02",
+        "03",
+        "15",
+        "16",
+        "17",
+        "24"
+      ],
+      "rationale": "Geometry, interfaces, assembly and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.MBD.A001",
+      "categories": [
+        "03",
+        "15",
+        "16",
+        "19",
+        "24"
+      ],
+      "rationale": "Datum/tolerance definition, manufacturability, inspection and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.SNAPSHOT.A001",
+      "categories": [
+        "02",
+        "03",
+        "15",
+        "16",
+        "17",
+        "24"
+      ],
+      "rationale": "Geometry, interfaces, assembly and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.TOL.A001",
+      "categories": [
+        "03",
+        "15",
+        "16",
+        "19",
+        "24"
+      ],
+      "rationale": "Datum/tolerance definition, manufacturability, inspection and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.MBD.AUTHORING.PLAN",
+      "categories": [
+        "03",
+        "15",
+        "16",
+        "19",
+        "24"
+      ],
+      "rationale": "Datum/tolerance definition, manufacturability, inspection and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.STRUCT.MODEL.P006",
+      "categories": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "16",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.STRUCT.FACE_MAP.P006",
+      "categories": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "16",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.STRUCT.FACE_MAP.QUAL.P006",
+      "categories": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "16",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.STRUCT.BOLT_EQUIV.P006",
+      "categories": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "16",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.STRUCT.NEUTRAL.GEOMETRY.P006",
+      "categories": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "15",
+        "16",
+        "17",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Geometry, interfaces, assembly and traceability. Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.STRUCT.MESH.P006",
+      "categories": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "16",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.STRUCT.CCX.INPUT.P006",
+      "categories": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "16",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.STRUCT.SWSIM.P006",
+      "categories": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "16",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.STRUCT.CCX.P006",
+      "categories": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "16",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.STRUCT.RECON.P006",
+      "categories": [
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09",
+        "10",
+        "16",
+        "20",
+        "21",
+        "24"
+      ],
+      "rationale": "Mechanical load and structural assurance; non-applicable categories must be explicitly waived per case.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.FEMM.MODEL.CURRENT",
+      "categories": [
+        "04",
+        "13",
+        "14",
+        "20",
+        "24"
+      ],
+      "rationale": "Magnetic load/actuation, material and reliability evidence.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.FEMM.RUN.A",
+      "categories": [
+        "04",
+        "13",
+        "14",
+        "20",
+        "24"
+      ],
+      "rationale": "Magnetic load/actuation, material and reliability evidence.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.FEMM.RUN.B",
+      "categories": [
+        "04",
+        "13",
+        "14",
+        "20",
+        "24"
+      ],
+      "rationale": "Magnetic load/actuation, material and reliability evidence.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.FEMM.VERIFY.CURRENT",
+      "categories": [
+        "01",
+        "04",
+        "13",
+        "14",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Magnetic load/actuation, material and reliability evidence. Release evidence, inspection, reliability/safety and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.PRODUCT.DEFINITION.GATE04E",
+      "categories": [
+        "01",
+        "02",
+        "03",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "22",
+        "24"
+      ],
+      "rationale": "Canonical product-definition node integrates functional/interface/material/tolerance/process/assembly/inspection/supply and traceability semantics.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.DRAWING.MODEL.GATE04E",
+      "categories": [
+        "03",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "24"
+      ],
+      "rationale": "Manufacturing definition and verification presentation.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.DRAWING.P007.EXEMPLAR.PLAN",
+      "categories": [
+        "03",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "24"
+      ],
+      "rationale": "Manufacturing definition and verification presentation.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.DRAWING.RELEASE.PLAN.GATE04E",
+      "categories": [
+        "01",
+        "03",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Manufacturing definition and verification presentation. Release evidence, inspection, reliability/safety and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.DRAWING.ARTIFACT.GATE04E",
+      "categories": [
+        "03",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "24"
+      ],
+      "rationale": "Manufacturing definition and verification presentation.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.DRAWING.VERIFY.GATE04E",
+      "categories": [
+        "01",
+        "03",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Manufacturing definition and verification presentation. Release evidence, inspection, reliability/safety and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.BOM.MODEL.A001",
+      "categories": [
+        "14",
+        "16",
+        "17",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Product/manufacturing structure, supply and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.BOM.ARTIFACT.A001",
+      "categories": [
+        "14",
+        "16",
+        "17",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Product/manufacturing structure, supply and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.BOM.VERIFY.A001",
+      "categories": [
+        "01",
+        "14",
+        "16",
+        "17",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Product/manufacturing structure, supply and traceability. Release evidence, inspection, reliability/safety and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.MBOM.MODEL.A001",
+      "categories": [
+        "14",
+        "16",
+        "17",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Product/manufacturing structure, supply and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.MBOM.ARTIFACT.A001",
+      "categories": [
+        "14",
+        "16",
+        "17",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Product/manufacturing structure, supply and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.MBOM.VERIFY.A001",
+      "categories": [
+        "01",
+        "14",
+        "16",
+        "17",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Product/manufacturing structure, supply and traceability. Release evidence, inspection, reliability/safety and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.EVIDENCE.GATE04E.REPORT",
+      "categories": [
+        "04",
+        "13",
+        "14",
+        "20",
+        "24"
+      ],
+      "rationale": "Magnetic load/actuation, material and reliability evidence.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.VERIFY.GATE04E",
+      "categories": [
+        "01",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Release evidence, inspection, reliability/safety and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.BASELINE.GATE04E",
+      "categories": [
+        "01",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Release evidence, inspection, reliability/safety and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.IDENTITY.POLICY",
+      "categories": [
+        "02",
+        "03",
+        "15",
+        "16",
+        "17",
+        "24"
+      ],
+      "rationale": "Geometry, interfaces, assembly and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.IDENTITY.REGISTRY",
+      "categories": [
+        "02",
+        "03",
+        "15",
+        "16",
+        "17",
+        "24"
+      ],
+      "rationale": "Geometry, interfaces, assembly and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.EVIDENCE.REGISTRY",
+      "categories": [
+        "19",
+        "24"
+      ],
+      "rationale": "Evidence registry governs verification/test evidence identity and documentation traceability; it does not itself prove reliability or release.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.IDENTITY.AUDIT",
+      "categories": [
+        "02",
+        "03",
+        "15",
+        "16",
+        "17",
+        "24"
+      ],
+      "rationale": "Geometry, interfaces, assembly and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.REQ.COVERAGE",
+      "categories": [
+        "01",
+        "21",
+        "24"
+      ],
+      "rationale": "Requirement identity, acceptance and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.CHARACTERISTICS.REGISTRY",
+      "categories": [
+        "01",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24"
+      ],
+      "rationale": "Release evidence, inspection, reliability/safety and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.INSPECTION.RESULTS",
+      "categories": [
+        "19",
+        "24"
+      ],
+      "rationale": "Inspection/acceptance results are inspection/test evidence and traceability records.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.DRAWING.P007.EXEMPLAR.SPEC",
+      "categories": [
+        "03",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "24"
+      ],
+      "rationale": "Manufacturing definition and verification presentation.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.IDENTITY.MIGRATION.PLAN",
+      "categories": [
+        "02",
+        "03",
+        "15",
+        "16",
+        "17",
+        "24"
+      ],
+      "rationale": "Geometry, interfaces, assembly and traceability.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.DRAWING.P007.LIVE.GEOMETRY",
+      "categories": [
+        "02",
+        "03",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "24"
+      ],
+      "rationale": "Geometry, interfaces, assembly and traceability. Manufacturing definition and verification presentation.",
+      "status": "MAPPED"
+    },
+    {
+      "node_id": "K01.AI.HANDOFF.CURRENT",
+      "categories": [
+        "24"
+      ],
+      "rationale": "AI handoff is a transport/resume evidence bundle only; documentation/traceability applies, not product authority.",
+      "status": "MAPPED"
+    }
+  ],
+  "status": "PASS",
+  "unmapped": []
+}

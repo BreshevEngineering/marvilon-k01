@@ -1,0 +1,45 @@
+{
+  "schema": "k01_j2_c2_mechanical_screen_v1",
+  "status": "SCREEN_PASS_WITH_RELEASE_HOLDS",
+  "date": "2026-09-04",
+  "candidate": {
+    "fastener": "ISO 4762 M2.5×0.45; A4-70 candidate",
+    "candidate_length_mm": 6.0,
+    "P007_clamped_thickness_mm": 3.0,
+    "nominal_thread_engagement_mm": 3.0,
+    "female_material": "316L / 1.4404",
+    "screw_exact_supplier_finish": "OPEN",
+    "torque": "OPEN pending seal force + friction/galling strategy"
+  },
+  "calculation": {
+    "tensile_stress_area_mm2": 3.390795089543035,
+    "screw_proof_screen_MPa": 450.0,
+    "screw_proof_load_N": 1525.8577902943657,
+    "female_basic_minor_diameter_screen_mm": 2.0128615,
+    "female_thread_shear_area_conservative_mm2": 9.485386351640598,
+    "female_shear_yield_screen_MPa": 98.08999999999999,
+    "female_thread_strip_yield_screen_N": 930.4215472324261,
+    "allowable_preload_per_screw_at_thread_SF2_N": 465.21077361621303,
+    "head_bearing_projected_area_mm2": 9.299114254625788,
+    "head_bearing_stress_at_300N_MPa": 32.26113711322203,
+    "pressure_reaction_total_N": 3.1225,
+    "pressure_per_screw_N": 1.0408333333333333,
+    "pressure_fraction_of_thread_SF2_allowable_percent": 0.2237337121930014
+  },
+  "interpretation": [
+    "External pressure is negligible for M2.5 sizing.",
+    "With nominal 3 mm engagement, the conservative female-thread shear screen does not reject C2.",
+    "The calculation is not a VDI 2230 release calculation and does not define tightening torque.",
+    "Minimum required preload remains OPEN because O-ring compound/hardness and compression force are not frozen.",
+    "Local flange bending/contact and service/galling remain mandatory gates."
+  ],
+  "next_required": [
+    "freeze exact M2.5 screw product/grade/finish/length",
+    "select and qualify O-ring compound",
+    "derive required clamp preload range",
+    "VDI 2230-style preload/friction check",
+    "local flange/contact FEA or validated analytical model",
+    "thermal/preload sensitivity",
+    "service/galling strategy"
+  ]
+}

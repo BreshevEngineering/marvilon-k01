@@ -1,0 +1,159 @@
+{
+  "schema": "k01.project_closure_matrix.v1",
+  "generated_utc": "2026-09-08T09:17:07.781024+00:00",
+  "engineering_baseline": {
+    "assembly": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+    "sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4"
+  },
+  "overall_status": "HOLD_ENGINEERING_CLOSURE",
+  "domains": [
+    {
+      "id": "CAD_BASELINE",
+      "status": "PASS",
+      "authority": "K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+      "evidence": "Gate04E baseline hash locked"
+    },
+    {
+      "id": "STRUCTURAL_SIMULATION",
+      "status": "PASS_EVIDENCE_CAPTURED",
+      "authority": "SolidWorks Simulation on Gate04E baseline",
+      "evidence_files": 11
+    },
+    {
+      "id": "BOM",
+      "status": "HOLD_RELEASE_OPEN_ITEMS",
+      "authority": "tools/medtas/build_bom_v1_9.py",
+      "modeled_occurrences": 13,
+      "ebom_rows": 15,
+      "ebom_open": 9,
+      "mbom_open": 11,
+      "authority_status": "PASS_AUTHORITY_IDENTIFIED",
+      "worklist_status": "HOLD_OPEN_ITEMS"
+    },
+    {
+      "id": "P007_ENTITY_BINDING",
+      "status": "PASS",
+      "binding_mode": "COMPOSITE_COPLANAR_FACE_SET",
+      "bound_part_sha256": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653"
+    },
+    {
+      "id": "P007_PRODUCT_DEFINITION",
+      "status": "HOLD_OPEN_SPEC",
+      "open_items": [
+        "C07",
+        "C08",
+        "C10",
+        "C11",
+        "C12",
+        "K01-D006-BLIND-END-TOLERANCE"
+      ]
+    },
+    {
+      "id": "DRAWINGS_DIMXPERT",
+      "status": "HOLD_PMI_SEMANTIC_READBACK",
+      "next": "Author only defined+bound characteristics, then close remaining specs and finish drawing QA",
+      "safe_scope_count": 6,
+      "blocked_scope_count": 7,
+      "candidate_part": "D:\\Marvilon\\K01\\cad\\candidates\\p007_pmi_authoring\\step9b_v3_20260908_121613\\K01-P-007_Hermetic_Magnetic_Can_PMI_STEP9B_V3_CANDIDATE.SLDPRT",
+      "geometry_invariant": true,
+      "pilot_scope": "C02 locator nominal diameter + C05 flange OD nominal only; NOT RELEASED",
+      "pilot_report": "reports/cad/p007_pmi_step9b_v2/K01_P007_PMI_STEP9B_V2_CURRENT.json"
+    },
+    {
+      "id": "FEMM_MAGNETIC_FORCE",
+      "status": "HOLD_MAGNET_SELECTION_INPUTS",
+      "release_blocker": true,
+      "title": "Absolute magnetic actuation force qualification F(x)",
+      "missing": {
+        "requirements": [
+          "REQ-MAG-001",
+          "REQ-MAG-002",
+          "REQ-MAG-003"
+        ],
+        "parts": [
+          "K01-B-002"
+        ],
+        "magnetic_properties": [
+          "K01-B-001:grade",
+          "K01-B-001:temperature_data",
+          "K01-B-002:grade",
+          "K01-B-002:Br_or_remanence",
+          "K01-B-002:temperature_data"
+        ]
+      },
+      "recovery_status": "PASS_RECOVERY_EVIDENCE_FOUND",
+      "input_adjudication_status": "HOLD_AUTHORITY_OR_PROPERTY_GAPS",
+      "input_summary": {
+        "requirements_promotable_current_structured": [],
+        "requirements_requiring_authority_review": [
+          "REQ-MAG-001",
+          "REQ-MAG-002",
+          "REQ-MAG-003"
+        ],
+        "magnets_complete_current_structured": [
+          "K01-B-001",
+          "K01-B-002"
+        ],
+        "magnet_property_gaps": {
+          "K01-B-001": [],
+          "K01-B-002": []
+        }
+      },
+      "missing_controlled_inputs": [
+        "K01-B-001:grade",
+        "K01-B-001:Br_or_remanence",
+        "K01-B-001:temperature_data",
+        "K01-B-002:record"
+      ],
+      "requirements_status": "CONTROLLED_TRANSCRIPTION",
+      "magnet_selection_status": "HOLD_MAGNET_SELECTION"
+    },
+    {
+      "id": "CENTER",
+      "status": "PASS",
+      "selftest_rc": 0,
+      "note": "Center operational; closure matrix integration into UI is next control-plane increment"
+    },
+    {
+      "id": "GIT_GITHUB",
+      "status": "HOLD_LOCAL_CHANGES_OR_UNSYNCED",
+      "dirty_lines": 35,
+      "ahead": 0,
+      "behind": 0,
+      "note": "Remote synchronization is controlled by local git push; repository guard/pre-commit remain active"
+    },
+    {
+      "id": "R01_RELEASE",
+      "status": "DEFERRED",
+      "reason": "Engineering baseline remains Gate04E; R01 is not authority"
+    }
+  ],
+  "release_readiness": {
+    "status": "HOLD",
+    "reasons": [
+      "EBOM_RELEASE_HOLD",
+      "MBOM_RELEASE_HOLD",
+      "MBD_BIND_OPEN:14",
+      "PRODUCT_SPEC_OPEN:3",
+      "SOURCE_CONTROL_NOT_CLEAN"
+    ]
+  },
+  "priority_order": [
+    "P007_PRODUCT_DEFINITION",
+    "DRAWINGS_DIMXPERT",
+    "FEMM_MAGNETIC_FORCE",
+    "BOM",
+    "CENTER",
+    "GIT_GITHUB",
+    "R01_RELEASE"
+  ],
+  "control_rule": "Every engineering iteration must close or materially reduce at least one listed domain blocker without invalidating a PASS domain.",
+  "next_engineering_actions": [
+    "Freeze actual B001 geometry and select B001/B002 supplier grades with Br(T)/temperature data; then run absolute magnetic F(x).",
+    "If PMI semantic readback PASS: extend controlled P007 PMI to Datum A/B, C03/C04 and released tolerance semantics.",
+    "Close P007 C07/C08/C10/C11/C12 and blind-end tolerance; then generate K01-D-006 production drawing.",
+    "Close BOM open items at source registries; do not hand-edit derived BOM.",
+    "Integrate this stable closure matrix into the existing Center UI; no parallel Center implementation.",
+    "R01 remains deferred."
+  ]
+}

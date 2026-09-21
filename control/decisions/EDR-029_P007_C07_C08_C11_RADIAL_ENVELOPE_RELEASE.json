@@ -1,0 +1,74 @@
+{
+  "schema": "k01.engineering_decision.v1",
+  "id": "EDR-029",
+  "date": "2026-09-14",
+  "title": "Release P007 thin-can size and radial-envelope controls C07/C08/C11",
+  "scope": "K01-P-007 thin-can OD/ID and P007-side alignment to J2 locator datum B",
+  "status": "ACCEPTED_RELEASE_DEFINITION",
+  "decision": {
+    "C07": {
+      "release_spec": "Ø10 h9",
+      "limits_mm": [9.964, 10.0],
+      "basis": "Unilateral h9 keeps the P007 OD at or below the controlled Ø10.00 nominal, so P007 size variation cannot reduce the nominal external radial gap to P015. H9/h9 is already a controlled project tolerance architecture and is appropriate as a moderate production band pending first-article thin-wall capability proof."
+    },
+    "C08": {
+      "release_spec": "Ø9.40 H9",
+      "limits_mm": [9.4, 9.436],
+      "wall_definition": "0.30 mm nominal/reference only, derived from C07/C08 sizes; not an independently toleranced acceptance dimension",
+      "size_only_wall_range_mm": [0.264, 0.3],
+      "basis": "Unilateral H9 keeps the P007 ID at or above Ø9.40, so P007 size variation cannot reduce the nominal inner clearance to P008. The resulting size-only wall remains far inside the T07A global static/buckling margin."
+    },
+    "C11": {
+      "release_spec": "TOTAL RUNOUT 0.02 | B on both thin-can OD and ID surfaces",
+      "datum": "B = Ø14.10 H7 locator-bore axis",
+      "basis": "Total runout controls the complete cylindrical radial envelope along the thin-can length, including eccentricity/tilt/form contribution, and is more directly functional and inspectable than an unspecified legacy concentricity callout. 0.02 mm is the P007-side engineering allocation; counterpart P008 moving-group and P015 production/alignment allocations remain separate interface-release items and are not silently declared closed.",
+      "inspection": "CMM or qualified low-force supported total-runout setup referenced to datum B; first-article capability confirmation required."
+    }
+  },
+  "radial_checks": {
+    "inner_nominal": {
+      "P007_ID_mm": 9.4,
+      "P008_OD_mm": 8.8,
+      "nominal_radial_clearance_mm": 0.3,
+      "P007_size_worst_case_radial_clearance_mm": 0.3,
+      "conservative_after_full_C11_runout_allocation_mm": 0.28,
+      "note": "This is a P007-side envelope check only. P008/guide dynamic alignment remains an open counterpart/interface qualification."
+    },
+    "outer_nominal": {
+      "P015_ID_nominal_mm": 10.4,
+      "P007_OD_mm": 10.0,
+      "nominal_radial_gap_mm": 0.2,
+      "conservative_after_full_C11_runout_allocation_mm": 0.18,
+      "note": "P015 production material, ID lower limit and alignment remain open; this value is not the final system minimum-gap guarantee."
+    },
+    "wall_sensitivity": {
+      "size_only_min_wall_mm": 0.264,
+      "very_conservative_size_plus_two_surface_full_runout_bound_mm": 0.224,
+      "T07A_note": "Even a deliberately conservative 0.224 mm sensitivity thickness remains far from governing the accepted T07A screen; no new FEA is required for EDR-029. This is a sensitivity check, not a substitute for first-article wall/runout inspection."
+    }
+  },
+  "technical_filter": {
+    "function": "Preserve magnetic/containment radial envelope and prevent P007 from being the source of reduced nominal clearances.",
+    "manufacturing": "Selected monolithic deep-bore + supported OD finish route; H9/h9 and 0.02 total runout require first-article capability proof but are not replaced by a looser guessed value.",
+    "assembly": "Unilateral size tolerances preserve nominal clearances; C11 allocates P007 radial alignment error to datum B while counterpart allocations remain explicit.",
+    "inspectability": "OD/ID size plus total runout are directly measurable in a supported low-force setup/CMM.",
+    "calculation": "Nominal and worst-case P007-side radial checks plus accepted T07A structural margin.",
+    "decision": "ACCEPT"
+  },
+  "standards_basis": [
+    "ISO 286-2 tolerance classes for H9/h9 limits",
+    "ISO 1101 geometrical tolerancing / total runout semantics"
+  ],
+  "stale_triggers": [
+    "P007 OD10 / ID9.4 nominal geometry changes",
+    "datum B locator-axis definition changes",
+    "P008 OD8.8 or P015 ID10.4 interface architecture changes materially",
+    "first-article process evidence shows H9/h9 or 0.02 total runout is not achievable by the selected route",
+    "magnetic or no-rub system allocation later proves the P007-side 0.02 runout allocation insufficient"
+  ],
+  "explicit_nonclaims": [
+    "EDR-029 does not release P008/guide dynamic alignment or P015 production tolerance/material.",
+    "EDR-029 does not by itself close thin-wall supplier/process capability qualification.",
+    "The historical >=0.25 mm radial-clearance screen is not promoted here to a formal release requirement because no controlled requirement authority for that numeric floor was found."
+  ]
+}

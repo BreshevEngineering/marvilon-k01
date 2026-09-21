@@ -1,0 +1,43 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-045",
+  "date": "2026-09-17",
+  "subject": "P004 reference-temperature dimensional acceptance versus service-temperature anti-binding function",
+  "status": "ACCEPTED_REQUIREMENT_APPLICABILITY__SERVICE_QUALIFICATION_PARTIAL",
+  "decision": [
+    "Treat controlled 0.04...0.08 mm dimensional clearance/float bands as dimensional acceptance at the ISO 1:2022 standard reference temperature 20 C unless an explicit higher-level K01 requirement states the identical numerical band must hold at every service temperature.",
+    "Keep service-temperature acceptance separate: no interference/binding and preserved required motion over the qualified K01 temperature envelope.",
+    "EDR-041 narrowed 20 C windows from an all-temperature-band assumption remain a conservative sensitivity case, not the governing production acceptance basis.",
+    "No axial nominal shift toward 0.0586...0.060 mm is justified solely by that former all-temperature-band assumption.",
+    "At +55 C, manufacturer-supported 23...100 C TECAPEEK PVX CLTE gives positive screened gaps even from the 20 C minimum 0.040 mm; this is engineering screening, not qualification.",
+    "The -40...23 C portion remains qualification OPEN because captured TECAPEEK PVX CLTE evidence does not directly cover that range."
+  ],
+  "standard_basis": {
+    "reference": "ISO 1:2022",
+    "reference_temperature_C": 20,
+    "source": "https://www.iso.org/standard/80702.html"
+  },
+  "screening": {
+    "20C_band_mm": [
+      0.04,
+      0.08
+    ],
+    "seat_20_to_55_shift_mm": -0.003171000000000035,
+    "seat_55C_gap_from_20C_min_mm": 0.036828999999999966,
+    "axial_20_to_55_shift_mm": -0.0038920000000004507,
+    "axial_55C_gap_from_20C_min_mm": 0.03610799999999955
+  },
+  "release_boundary": {
+    "20C_dimensional_acceptance": "CONTROLLED",
+    "55C_no_binding": "ENGINEERING_SCREEN_PASS_WITH_LIMITATIONS",
+    "minus40C_no_binding": "QUALIFICATION_OPEN",
+    "production_tolerance_allocation": "OPEN"
+  },
+  "impact": {
+    "CAD": "NONE",
+    "DimXpert": "NONE",
+    "drawing": "NONE",
+    "EDR-041": "all-temperature-band case retained as sensitivity only",
+    "physical_qualification": "OPEN_L8"
+  }
+}

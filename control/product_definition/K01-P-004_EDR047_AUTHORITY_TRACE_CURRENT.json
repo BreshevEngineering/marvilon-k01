@@ -1,0 +1,32 @@
+{
+  "schema": "k01.p004.edr047.authority_sync_trace.v1",
+  "part_id": "K01-P-004",
+  "drawing_id": "K01-D-004",
+  "status": "NOMINAL_ARCHITECTURE_PROMOTED__RELEASE_HOLD",
+  "canonical_change": {
+    "characteristic_id": "P004-C03",
+    "name": "OAL / axial float chain",
+    "old_nominal": "8.00",
+    "new_nominal": "7.99",
+    "derived_axial_float_old_mm": 0.05,
+    "derived_axial_float_new_mm": 0.06,
+    "equation_new": "11.05 - (3.00 + 7.99) = 0.06"
+  },
+  "drawing_effect": {
+    "K01-D-004": "Review drawing nominal OAL must change 8.00 -> 7.99. Do not add production tolerance yet.",
+    "K01-D-003": "No nominal geometry change from EDR-047."
+  },
+  "derived_artifacts_to_regenerate": [
+    "reports/engineering/K01_P004_CALCULATION_REGISTER_CURRENT.json",
+    "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.json",
+    "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.md",
+    "reports/product_definition/K01-P-004_READINESS_CURRENT.json",
+    "Center / MEDTAS derived state that consumes the above authorities"
+  ],
+  "next_blocker": {
+    "id": "P001_P004_GUIDE_CLEARANCE_REQUIREMENT",
+    "known_nominal": "5.055 - 5.000 = 0.055 mm diametral clearance",
+    "state": "FUNCTIONAL_MIN_MAX_REQUIREMENT_OPEN",
+    "rule": "Do not release P004 guide-bore tolerance before functional min/max requirement is controlled."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-042",
+  "date": "2026-09-17",
+  "subject": "P004 datum/GPS/surface/edge/inspection architecture",
+  "status": "ACCEPTED_ARCHITECTURE__NUMERIC_VALUES_OPEN",
+  "decision": [
+    "A = functional axial locating/retention face; exact CAD binding OPEN",
+    "B = guide-bore derived axis",
+    "C = N/A",
+    "OD↔bore uses runout/equivalent GPS family; numeric OPEN",
+    "functional face uses perpendicularity/equivalent orientation to B; numeric OPEN",
+    "guide bore/seat OD/axial face surface classes defined; numeric texture OPEN",
+    "inspection methods defined; numeric acceptance OPEN",
+    "D:\\Marvilon\\K01\\cad\\drawings\\exemplars is visual-quality reference only, NONFINAL/NONAUTHORITATIVE"
+  ],
+  "not_accepted": [
+    "no numeric GTOL",
+    "no Ra/Rz",
+    "no size tolerance",
+    "no CAD/DimXpert/drawing mutation"
+  ]
+}

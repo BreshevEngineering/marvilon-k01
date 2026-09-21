@@ -1,0 +1,41 @@
+{
+  "schema": "k01.engineering_decision.v1",
+  "id": "EDR-028",
+  "date": "2026-09-14",
+  "title": "Release P007 C03 locator-axis orientation and C04 clamp-hole pattern",
+  "scope": "K01-P-007 C03/C04 and the coupled P003 J2 pilot/thread-pattern semantics",
+  "status": "ACCEPTED_RELEASE_DEFINITION",
+  "decision": {
+    "C03": {
+      "P007_release_spec": "PERP Ø0.003(M) | A on Ø14.10 H7 locator bore axis",
+      "P003_counterpart_release_spec": "PERP Ø0.003(M) | A on Ø14.10 g6 pilot axis",
+      "legacy_PERP_0p03": "REJECTED_SUPERSEDED",
+      "basis": "ISO 286 fit limits at 14.10 mm give H7 = 14.100..14.118 mm and g6 = 14.083..14.094 mm, so minimum diametral clearance is 0.006 mm. Equal MMR allocation of 0.003 mm to each feature gives the common virtual condition 14.097 mm: P007 internal VC = 14.100-0.003 and P003 external VC = 14.094+0.003. This directly controls the assembly function while allowing bonus orientation tolerance as actual feature size departs MMC.",
+      "inspection": "CMM with MMR evaluation or qualified functional-gage equivalent; first-article capability confirmation required before P6."
+    },
+    "C04": {
+      "P007_release_spec": "3× Ø2.90 H10 THRU; PCD Ø26.50 BASIC; 120° BASIC; POSITION Ø0.15 | A | B",
+      "P003_counterpart": "3× M2.5×0.45-6H; PCD Ø26.50 BASIC; 120° BASIC; POSITION Ø0.10 | A | B",
+      "basis": "T03 PASS worst-case uses the minimum P007 hole diameter 2.90 mm, P003 position Ø0.10, P007 position Ø0.15 and 0.035 mm maximum pilot diametral clearance. Available radial screw clearance = 0.2000 mm, worst relative offset = 0.1425 mm, remaining radial assembly margin = 0.0575 mm. Use a project-tightened ISO 286 H10 hole tolerance at Ø2.90 (2.900..2.940 mm for the <=3 mm size band): the minimum remains 2.900 mm, preserving the proven T03 assembly stack, while the 0.040 mm unilateral band is materially tighter than the generic ISO 273 medium-series tolerance context. The compact-flange T05 local screen remains the final stale trigger for this tolerance; no claim is made that ISO 273 by itself releases the tolerance.",
+      "inspection": "2.900 GO / 2.940 NO-GO limit-gage (or equivalent bore measurement) plus CMM pattern position to datum system A|B.",
+      "ligament_check_at_Dmax_2p94": {
+        "inner_ligament_mm": 1.48,
+        "outer_ligament_mm": 1.78,
+        "note": "Both are 0.02 mm below the nominal T05 geometry-screen values (1.50/1.80). Those values were nominal screening geometry, not released limit dimensions. T05 local contact/FEA remains the mechanical release authority/stale trigger; EDR-028 does not close T05."
+      }
+    }
+  },
+  "standards_basis": [
+    "ISO 286-2 limits/fits for H7/g6",
+    "ISO 2692:2021 maximum material requirement for size/geometry interdependence and assembly function",
+    "ISO 1101 geometrical tolerancing language",
+    "ISO 273 clearance-hole series context; project C2R1 controls Ø2.90 for M2.5"
+  ],
+  "stale_triggers": [
+    "J2 fit changes from Ø14.10 H7/g6",
+    "P003 or P007 pilot engagement/face architecture changes",
+    "M2.5 major diameter or PCD changes",
+    "seal-gland worst OD or flange OD changes",
+    "T05 local flange/contact evidence contradicts the current ligament screen"
+  ]
+}

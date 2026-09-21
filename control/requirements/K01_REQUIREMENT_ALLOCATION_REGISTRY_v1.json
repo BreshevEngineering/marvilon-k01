@@ -1,0 +1,207 @@
+{
+  "schema": "k01.requirement_allocation_registry.v1",
+  "project": "K01",
+  "purpose": "Make allocation from system/interface requirements to assemblies, interfaces, parts and product characteristics explicit. Allocation never changes the upstream requirement text and never merges different physical quantities because their numeric values happen to match.",
+  "rules": [
+    "Every requirement that drives a part characteristic, derived engineering input or release test must have at least one allocation record before release.",
+    "Allocation may be FULL, SHARED_COMPLEMENTARY, BUDGETED or FUNCTIONAL. Percentage shares are used only when physically meaningful; otherwise responsibility is stated qualitatively.",
+    "Shared interface requirements allocate complementary responsibilities to each participant; they are not copied into one part as if that part alone owned the requirement.",
+    "A requirement allocation is not a derived load and not a product characteristic. These are separate object classes with separate IDs and revisions.",
+    "Changing an allocation invalidates downstream decisions/characteristics for every affected target and triggers counterpart review for shared interfaces."
+  ],
+  "allocations": [
+    {
+      "id": "ALLOC-K01-P007-L-001",
+      "requirement_id": "REQ-K01-P007-L-001",
+      "allocation_type": "FULL",
+      "targets": [
+        {
+          "entity_id": "K01-P-007",
+          "characteristic_id": "C06",
+          "responsibility": "Maintain P007 overall length at the controlled nominal envelope"
+        }
+      ],
+      "share": {
+        "mode": "FULL_RESPONSIBILITY",
+        "value": 1.0
+      },
+      "status": "CONTROLLED",
+      "revision": "1",
+      "effective_from": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "effective_to_or_superseded_by": null
+    },
+    {
+      "id": "ALLOC-K01-P007-MAT-001",
+      "requirement_id": "REQ-K01-MAT-P007-001",
+      "allocation_type": "FULL",
+      "targets": [
+        {
+          "entity_id": "K01-P-007",
+          "characteristic_id": "C09",
+          "responsibility": "Production material definition"
+        }
+      ],
+      "share": {
+        "mode": "FULL_RESPONSIBILITY",
+        "value": 1.0
+      },
+      "status": "CONTROLLED",
+      "revision": "1",
+      "effective_from": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "effective_to_or_superseded_by": null
+    },
+    {
+      "id": "ALLOC-K01-J2-LOC-001",
+      "requirement_id": "REQ-K01-J2-LOC-001",
+      "allocation_type": "SHARED_COMPLEMENTARY",
+      "interface_id": "K01-IF-J2",
+      "targets": [
+        {
+          "entity_id": "K01-P-007",
+          "characteristic_id": "C02",
+          "responsibility": "Female locator bore Ø14.10 H7 and Datum B carrier"
+        },
+        {
+          "entity_id": "K01-P-003",
+          "characteristic_id": null,
+          "responsibility": "Complementary male locator g6; counterpart characteristic registry not yet normalized"
+        }
+      ],
+      "share": {
+        "mode": "COMPLEMENTARY_NOT_PERCENT",
+        "value": null
+      },
+      "status": "PARTIAL_COUNTERPART_CHARACTERISTIC_ID_OPEN",
+      "revision": "1",
+      "effective_from": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "effective_to_or_superseded_by": null
+    },
+    {
+      "id": "ALLOC-K01-J2-SEAL-001",
+      "requirement_id": "REQ-K01-SEAL-001",
+      "allocation_type": "SHARED_COMPLEMENTARY",
+      "interface_id": "K01-IF-J2",
+      "targets": [
+        {
+          "entity_id": "K01-P-003",
+          "characteristic_id": null,
+          "responsibility": "Seal gland / mating-side geometry and retention context"
+        },
+        {
+          "entity_id": "K01-P-007",
+          "characteristic_id": "C01",
+          "responsibility": "Mating face / Datum A functional surface"
+        },
+        {
+          "entity_id": "K01-P-007",
+          "characteristic_id": "C10",
+          "responsibility": "Containment joining/process compatibility with sealing architecture"
+        }
+      ],
+      "share": {
+        "mode": "COMPLEMENTARY_NOT_PERCENT",
+        "value": null
+      },
+      "status": "PARTIAL_REQUIREMENT_AND_PROCESS_OPEN",
+      "revision": "1",
+      "effective_from": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "effective_to_or_superseded_by": null
+    },
+    {
+      "id": "ALLOC-K01-J2-DP-001",
+      "requirement_id": "REQ-K01-ENV-DP-001",
+      "allocation_type": "SHARED_COMPLEMENTARY",
+      "interface_id": "K01-IF-J2",
+      "targets": [
+        {
+          "entity_id": "K01-P-007",
+          "characteristic_id": "C07",
+          "responsibility": "Containment OD geometry participates in pressure/vacuum qualification"
+        },
+        {
+          "entity_id": "K01-P-007",
+          "characteristic_id": "C08",
+          "responsibility": "Containment ID/wall geometry participates in pressure/vacuum qualification"
+        },
+        {
+          "entity_id": "K01-P-007",
+          "characteristic_id": "K01-D006-BLIND-END",
+          "responsibility": "Blind-end geometry participates in pressure/vacuum qualification"
+        },
+        {
+          "entity_id": "K01-IF-J2",
+          "characteristic_id": "C12",
+          "responsibility": "Joint-level leak/containment verification over released differential-pressure envelope"
+        }
+      ],
+      "share": {
+        "mode": "COMPLEMENTARY_NOT_PERCENT",
+        "value": null
+      },
+      "status": "CONTROLLED",
+      "revision": "1",
+      "effective_from": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "effective_to_or_superseded_by": null,
+      "note": "Allocation of the released ±0.20 bar envelope does not by itself release wall thickness, buckling margin or leak acceptance; those remain downstream Product Definition/verification decisions."
+    },
+    {
+      "id": "ALLOC-K01-J2-LEAK-001",
+      "requirement_id": "REQ-K01-LEAK-001",
+      "allocation_type": "SHARED_COMPLEMENTARY",
+      "interface_id": "K01-IF-J2",
+      "targets": [
+        {
+          "entity_id": "K01-P-007",
+          "characteristic_id": "C12",
+          "responsibility": "Containment/leak acceptance characteristic carrier"
+        },
+        {
+          "entity_id": "K01-IF-J2",
+          "characteristic_id": null,
+          "responsibility": "Joint-level qualified leak-test acceptance"
+        }
+      ],
+      "share": {
+        "mode": "JOINT_ACCEPTANCE",
+        "value": null
+      },
+      "status": "OPEN_NUMERIC_ACCEPTANCE",
+      "revision": "1",
+      "effective_from": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "effective_to_or_superseded_by": null
+    },
+    {
+      "id": "ALLOC-K01-ACT-FORCE-001",
+      "requirement_id": "REQ-K01-ACT-FORCE-001",
+      "allocation_type": "FUNCTIONAL",
+      "targets": [
+        {
+          "entity_id": "K01-ACTUATOR-SUBSYSTEM",
+          "characteristic_id": null,
+          "responsibility": "Meet released force/force-coefficient envelope"
+        },
+        {
+          "entity_id": "K01-P-015",
+          "characteristic_id": null,
+          "responsibility": "Fixed dual-coil electromagnetic contributor"
+        },
+        {
+          "entity_id": "K01-B-001",
+          "characteristic_id": null,
+          "responsibility": "Moving permanent-magnet electromagnetic contributor"
+        }
+      ],
+      "share": {
+        "mode": "BUDGET_OPEN",
+        "value": null
+      },
+      "status": "OPEN_NUMERIC_REQUIREMENT_AND_ALLOCATION_BUDGET",
+      "note": "This allocation is intentionally separate from structural normal_force_N=300 and bolt preload_N_each=300. Equal numbers do not establish common requirement identity.",
+      "revision": "1",
+      "effective_from": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "effective_to_or_superseded_by": null
+    }
+  ],
+  "registry_revision": "1",
+  "effectivity": "K01-CP-20260910-BASELINE-02C-PROMOTED design-review baseline; release effectivity OPEN"
+}

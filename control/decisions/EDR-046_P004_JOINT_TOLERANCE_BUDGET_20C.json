@@ -1,0 +1,76 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-046",
+  "date": "2026-09-18",
+  "subject": "P004 joint worst-case seat and axial tolerance budgets at 20 C",
+  "status": "ACCEPTED_TOP_DOWN_TOLERANCE_BUDGET__PART_LEVEL_PRODUCTION_TOLERANCES_CAPABILITY_DEPENDENT",
+  "goal": "Close the P003↔P004 seat and P003/P014↔P004 axial functional worst-case budgets at 20 C without inventing production tolerances for P003, P004 or P014.",
+  "authority": [
+    "EDR-045",
+    "evidence/immutable/9541e435a9ebb87185f32e1997ed5edad76cbcc3c4aae3723c84dad18e5db091__K01_P004_MATING_AUTHORITY_RECOVERY_CURRENT.json",
+    "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json"
+  ],
+  "engineering_question": "What joint tolerance budget is available from the controlled 20 C functional windows, and what may be allocated before mating-part production capability is proven?",
+  "decision": [
+    "Seat nominal 6.600/6.540 is retained; nominal diametral clearance is 0.060 mm and is centered in the 0.040...0.080 mm functional window.",
+    "Seat worst-case adverse contribution budget is 0.020 mm toward either functional boundary. No P003/P004 production tolerance split is released until manufacturing and metrology capability evidence supports it.",
+    "Axial nominal chain H=8.050 mm and P004 L=8.000 mm is retained provisionally; nominal float is 0.050 mm in the 0.040...0.080 mm functional window.",
+    "Axial worst-case budget is asymmetric: 0.010 mm toward loss of float and 0.030 mm toward excessive float.",
+    "No P003/P014/P004 production tolerance split is released until manufacturing and metrology capability evidence supports it.",
+    "If the <=0.010 mm adverse-side axial capability cannot be demonstrated reliably, reopen the nominal architecture and evaluate centering toward 0.060 mm or require a better process/change the functional requirement. Do not conceal insufficient capability by arbitrary tolerance splitting.",
+    "20 C production dimensional acceptance remains separate from service-temperature no-binding qualification per EDR-045."
+  ],
+  "seat": {
+    "P003_seat_nominal_ID_mm": 6.6,
+    "P004_nominal_OD_mm": 6.54,
+    "nominal_diametral_clearance_mm": 0.06,
+    "functional_window_20C_mm": [
+      0.04,
+      0.08
+    ],
+    "worst_case_constraints": [
+      "P003_ID_min - P004_OD_max >= 0.040 mm",
+      "P003_ID_max - P004_OD_min <= 0.080 mm"
+    ],
+    "budget_to_low_boundary_mm": 0.02,
+    "budget_to_high_boundary_mm": 0.02,
+    "part_level_split": "OPEN__CAPABILITY_EVIDENCE_REQUIRED"
+  },
+  "axial": {
+    "effective_retention_space_nominal_mm": 8.05,
+    "P004_nominal_length_mm": 8.0,
+    "nominal_float_mm": 0.05,
+    "functional_window_20C_mm": [
+      0.04,
+      0.08
+    ],
+    "worst_case_constraints": [
+      "H_P003_P014_min - L_P004_max >= 0.040 mm",
+      "H_P003_P014_max - L_P004_min <= 0.080 mm"
+    ],
+    "budget_toward_loss_of_float_mm": 0.01,
+    "budget_toward_excessive_float_mm": 0.03,
+    "part_level_split": "OPEN__CAPABILITY_EVIDENCE_REQUIRED",
+    "nominal_recentering_trigger": "If demonstrated manufacturing + inspection capability cannot reliably satisfy <=0.010 mm combined adverse-side variation, reopen nominal architecture and evaluate centering toward 0.060 mm; do not change geometry solely by arithmetic."
+  },
+  "technical_filter": {
+    "function": "PASS_BUDGET_DEFINED",
+    "tolerance": "PASS_JOINT_BUDGET__PART_SPLIT_OPEN",
+    "manufacturing": "OPEN_CAPABILITY_EVIDENCE",
+    "inspection": "OPEN_CAPABILITY_AND_UNCERTAINTY",
+    "assembly": "PASS_ARCHITECTURE_RETAINED__NO_PRELOAD",
+    "thermal": "20C_ACCEPTANCE_CONTROLLED__SERVICE_QUALIFICATION_SEPARATE"
+  },
+  "downstream_requirements": [
+    "P003 seat Product Definition shall satisfy P003_ID_min - P004_OD_max >= 0.040 mm and P003_ID_max - P004_OD_min <= 0.080 mm at 20 C after capability-based allocation.",
+    "P003/P014 effective installed retention-space Product Definition shall satisfy H_min - L_P004_max >= 0.040 mm and H_max - L_P004_min <= 0.080 mm at 20 C after capability-based allocation.",
+    "P004 production OD/OAL tolerances remain OPEN until the shared budgets are allocated using manufacturing and metrology capability evidence."
+  ],
+  "expected_closure": "PASS_P004_SEAT_AXIAL_TOLERANCE_BUDGET_DECIDED__DOWNSTREAM_PART_ALLOCATIONS_EXPLICIT",
+  "impact": {
+    "CAD": "NONE",
+    "DimXpert": "NONE",
+    "drawing": "NONE",
+    "native_mutation": "NONE"
+  }
+}

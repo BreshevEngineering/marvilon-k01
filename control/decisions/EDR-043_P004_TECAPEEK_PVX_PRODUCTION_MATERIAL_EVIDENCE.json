@@ -1,0 +1,26 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-043",
+  "date": "2026-09-17",
+  "subject": "P004 TECAPEEK PVX production material evidence boundary",
+  "status": "ACCEPTED_MATERIAL_EVIDENCE__PRODUCTION_QUALIFICATION_PARTIAL",
+  "decision": [
+    "Retain Ensinger TECAPEEK PVX black as P004 design material",
+    "Use manufacturer CLTE 30e-6/K as direct evidence from 23 C upward; below 23 C remains extrapolated screen unless qualified cold data is obtained",
+    "Manufacturer evidence supports bearing/sliding use, machining, low moisture absorption and 55 C service",
+    "Supplier lot/stock/CoC and dimensional conditioning remain production-release evidence",
+    "Do not claim -40 C production tolerance verification from current manufacturer CLTE data alone"
+  ],
+  "sources": [
+    "https://www.ensingerplastics.com/en/shapes/peek-tecapeek-pvx-black",
+    "https://www.ensingerplastics.com/en/thermoplastic-materials/peek-plastic/peek-machining"
+  ],
+  "downstream_impact": {
+    "P004": "design material evidence strengthened",
+    "thermal_screen": "PASS_SCREEN_WITH_LOW_T_EXTRAPOLATION_LIMITATION",
+    "BOM": "material identity controlled; lot/stock/effectivity OPEN",
+    "CAD": "NONE",
+    "DimXpert": "NONE",
+    "drawing": "NONE"
+  }
+}

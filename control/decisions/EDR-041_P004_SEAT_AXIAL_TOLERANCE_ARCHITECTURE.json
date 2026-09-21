@@ -1,0 +1,37 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-041",
+  "date": "2026-09-17",
+  "subject": "P004 seat and axial tolerance architecture under thermal variation",
+  "status": "ACCEPTED_ARCHITECTURE_FINDING__NO_PRODUCTION_TOLERANCE_RELEASE",
+  "decision": [
+    "Retain P003/P004 seat nominal clearance 0.060 mm as the current architecture nominal; it is near the thermally centered safe-window value and no CAD change is justified by screening alone.",
+    "Do not release seat production tolerances until the 0.04...0.08 band temperature applicability and manufacturing/metrology capability are explicitly controlled.",
+    "Do not release P004 axial production tolerance around the current 0.050 mm nominal under a full-temperature 0.04...0.08 interpretation; the low-side combined budget is too narrow to accept without capability evidence.",
+    "Evaluate an axial nominal shift toward approximately 0.0586...0.060 mm only as a controlled architecture-change candidate if full-temperature applicability is confirmed.",
+    "Continue independent P004 datum/GPS/surface/inspection definition; guide numeric limits and seat/axial production tolerances remain OPEN dependencies."
+  ],
+  "derived_results": {
+    "seat_room_window_if_full_temp_band_mm": [
+      0.043171000000000036,
+      0.07456399999999956
+    ],
+    "seat_current_nominal_symmetric_combined_half_budget_mm": 0.014563999999999952,
+    "seat_thermal_center_mm": 0.058867499999999795,
+    "axial_room_window_if_full_temp_band_mm": [
+      0.04389200000000045,
+      0.07332799999999999
+    ],
+    "axial_current_nominal_symmetric_combined_half_budget_mm": 0.006108000000000259,
+    "axial_thermal_center_mm": 0.05861000000000022
+  },
+  "authority_boundary": "These are worst-case architecture calculations from the current thermal screen and design-chain bands; they are not production tolerances.",
+  "impact": {
+    "CAD": "NONE",
+    "assembly": "NONE",
+    "DimXpert": "HOLD",
+    "D004": "HOLD",
+    "BOM": "NONE",
+    "inspection": "architecture may proceed; numeric limits remain open"
+  }
+}

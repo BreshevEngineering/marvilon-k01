@@ -1,0 +1,32 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-044",
+  "date": "2026-09-17",
+  "subject": "P004 datum architecture correction from assembly constraint hierarchy",
+  "status": "ACCEPTED_CORRECTION__DATUM_ARCHITECTURE",
+  "stale_trigger": "EDR-042 used an axial face as primary datum, while accepted assembly architecture radially locates P004 by Ø6.54 OD and intentionally retains axial float with P014 and no preload.",
+  "supersedes": {
+    "decision": "EDR-042",
+    "scope": "datum hierarchy and datum-dependent GPS references only"
+  },
+  "decision": [
+    "Datum A = P004 external locating cylinder Ø6.54; its derived axis is the primary functional datum axis because P003 seat provides radial location.",
+    "No secondary axial datum is released: P004 axial position intentionally floats and neither end face is a deterministic assembly locator.",
+    "Datum C = N/A because P004 is rotationally symmetric.",
+    "Guide-bore relation uses total runout or equivalent ISO GPS relation to datum A; numeric value remains OPEN.",
+    "End-face orientation uses perpendicularity/equivalent orientation to datum A only if required by axial-stack function; numeric value remains OPEN.",
+    "Inspection datum simulation shall reproduce the locating OD with controlled low-force support suitable for a polymer part; fixture uncertainty remains OPEN."
+  ],
+  "basis": [
+    "P004 OD Ø6.54 is the P003 locating/slip-fit interface.",
+    "P004 is retained by P014 without adhesive or axial preload.",
+    "P004 axial float is intentional."
+  ],
+  "impact": {
+    "CAD": "NONE",
+    "DimXpert": "NONE",
+    "drawing": "NONE",
+    "BOM": "NONE",
+    "EDR-042": "datum scope superseded; surface/edge/inspection method architecture retained"
+  }
+}

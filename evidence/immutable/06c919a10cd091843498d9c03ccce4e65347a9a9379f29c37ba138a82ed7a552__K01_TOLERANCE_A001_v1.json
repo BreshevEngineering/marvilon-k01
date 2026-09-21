@@ -1,0 +1,164 @@
+{
+  "schema": "k01.tolerance_analysis.a001.v1_4",
+  "method": "native MBD/DimXpert first; controlled legacy seed fallback; worst-case + deterministic Monte Carlo only when contributor tolerances/distributions are explicitly bound",
+  "chains": [
+    {
+      "chain_id": "K01-TOL-P004-SEAT",
+      "function": "P004 front guide must remain a slip fit in P003; full-length interference is prohibited.",
+      "nominal": {
+        "P003_seat_ID_mm": 6.6,
+        "P004_OD_mm": 6.54,
+        "diametral_clearance_mm": 0.06
+      },
+      "acceptance": {
+        "type": "positive_clearance"
+      },
+      "release_tolerance_state": "OPEN",
+      "source_basis": "K01 project control v22",
+      "mbd_binding": {
+        "missing": [
+          "K01-CHAR-P003-SEAT-ID",
+          "K01-CHAR-P004-OD"
+        ],
+        "bound_contributor_count": 0,
+        "direct": null,
+        "mapping_status": null
+      },
+      "calculated": {
+        "nominal_diametral_clearance_mm": 0.06
+      },
+      "screen_verdict": "PASS_NOMINAL",
+      "source_authority": "CONTROLLED_SEED_SCREENING",
+      "worst_case": {
+        "status": "NOT_RUN",
+        "reason": "contributors not yet machine-bound"
+      },
+      "monte_carlo": {
+        "status": "NOT_RUN",
+        "reason": "contributors/distributions not yet machine-bound; no distribution is guessed"
+      }
+    },
+    {
+      "chain_id": "K01-TOL-P002-AXIAL-FLOAT",
+      "function": "P002 rear guide axial float after P006 is fully seated.",
+      "nominal": {
+        "target_mm": 0.06
+      },
+      "acceptance": {
+        "min_mm": 0.04,
+        "max_mm": 0.08
+      },
+      "release_tolerance_state": "PARTIALLY_DEFINED",
+      "source_basis": "K01 project control v22",
+      "mbd_binding": {
+        "missing": [],
+        "bound_contributor_count": 0,
+        "direct": null,
+        "mapping_status": "OPEN_CONTRIBUTOR_DECOMPOSITION"
+      },
+      "calculated": {
+        "margin_to_min_mm": 0.02,
+        "margin_to_max_mm": 0.02
+      },
+      "screen_verdict": "PASS_NOMINAL",
+      "source_authority": "CONTROLLED_SEED_SCREENING",
+      "worst_case": {
+        "status": "NOT_RUN",
+        "reason": "contributors not yet machine-bound"
+      },
+      "monte_carlo": {
+        "status": "NOT_RUN",
+        "reason": "contributors/distributions not yet machine-bound; no distribution is guessed"
+      }
+    },
+    {
+      "chain_id": "K01-TOL-P001-P008-M4-BOTTOM",
+      "function": "P001 M4 male thread must shoulder and must not bottom in P008 blind female thread.",
+      "nominal": {
+        "male_length_mm": 3.5,
+        "female_usable_depth_mm": 4.0,
+        "bottom_clearance_mm": 0.5
+      },
+      "acceptance": {
+        "type": "positive_bottom_clearance"
+      },
+      "release_tolerance_state": "OPEN",
+      "source_basis": "K01 project control v22",
+      "mbd_binding": {
+        "missing": [
+          "K01-CHAR-P001-M4-MALE-LENGTH",
+          "K01-CHAR-P008-M4-USABLE-DEPTH"
+        ],
+        "bound_contributor_count": 0,
+        "direct": null,
+        "mapping_status": null
+      },
+      "calculated": {
+        "nominal_bottom_clearance_mm": 0.5
+      },
+      "screen_verdict": "PASS_NOMINAL",
+      "source_authority": "CONTROLLED_SEED_SCREENING",
+      "worst_case": {
+        "status": "NOT_RUN",
+        "reason": "contributors not yet machine-bound"
+      },
+      "monte_carlo": {
+        "status": "NOT_RUN",
+        "reason": "contributors/distributions not yet machine-bound; no distribution is guessed"
+      }
+    },
+    {
+      "chain_id": "K01-TOL-ROD-TRAVEL",
+      "function": "Functional rod travel between metallic hard-stop states.",
+      "nominal": {
+        "functional_travel_mm": 10.0
+      },
+      "acceptance": {
+        "baseline_mm": 10.0
+      },
+      "release_tolerance_state": "OPEN",
+      "source_basis": "K01 project control v22",
+      "mbd_binding": {
+        "missing": [
+          "K01-CHAR-A001-ROD-TRAVEL"
+        ],
+        "bound_contributor_count": 0,
+        "direct": null,
+        "mapping_status": null
+      },
+      "screen_verdict": "BASELINE",
+      "source_authority": "CONTROLLED_SEED_SCREENING",
+      "worst_case": {
+        "status": "NOT_RUN",
+        "reason": "contributors not yet machine-bound"
+      },
+      "monte_carlo": {
+        "status": "NOT_RUN",
+        "reason": "contributors/distributions not yet machine-bound; no distribution is guessed"
+      }
+    }
+  ],
+  "cad_dimension_inventory": {
+    "documents": 13,
+    "dimension_count": 118
+  },
+  "mbd_inventory": {
+    "annotations": 0,
+    "datums": 0,
+    "dimension_tolerances": 0,
+    "documents_extracted": 13
+  },
+  "mbd_coverage_status": "MBD_NOT_YET_AUTHORED",
+  "release_status": "PASS_WITH_LIMITATIONS",
+  "limitations": [
+    "K01-TOL-P001-P008-M4-BOTTOM: MBD characteristic(s) not yet bound: K01-CHAR-P001-M4-MALE-LENGTH, K01-CHAR-P008-M4-USABLE-DEPTH",
+    "K01-TOL-P001-P008-M4-BOTTOM: thread length/depth manufacturing tolerances are not yet bound",
+    "K01-TOL-P002-AXIAL-FLOAT: contributor stack and worst-case limits are not yet fully bound",
+    "K01-TOL-P004-SEAT: MBD characteristic(s) not yet bound: K01-CHAR-P003-SEAT-ID, K01-CHAR-P004-OD",
+    "K01-TOL-P004-SEAT: manufacturing tolerance bounds not yet bound, so minimum clearance is not verified",
+    "K01-TOL-ROD-TRAVEL: MBD characteristic(s) not yet bound: K01-CHAR-A001-ROD-TRAVEL",
+    "K01-TOL-ROD-TRAVEL: release tolerance distribution is open",
+    "MBD-COVERAGE-001: no DimXpert annotations extracted; current tolerance chain remains controlled-seed-backed until model PMI is authored",
+    "TOL-MBD-001: native MBD/DimXpert is not yet the complete tolerance authority; legacy controlled seed is screening-only"
+  ]
+}

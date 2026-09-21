@@ -1,0 +1,261 @@
+{
+  "schema": "k01.release_requirements.current.v1",
+  "generated_utc": "2026-09-08T14:09:48.393192+00:00",
+  "status": "PASS_RECONCILED_FROM_CURRENT_STATE",
+  "source": "handoff/current/K01_AI_HANDOFF/reports/control/K01_CURRENT_STATE.json",
+  "requirements": {
+    "REQ-K01-ACT-FORCE-001": {
+      "id": "REQ-K01-ACT-FORCE-001",
+      "title": "Actuator force coefficient",
+      "statement": "Final electromagnetic design shall meet or exceed the released minimum force/force-coefficient envelope over stroke, current, temperature and production tolerances.",
+      "requirement_status": "CANDIDATE",
+      "verification_method": "FEMM sensitivity sweep + bench acceptance",
+      "gates": [
+        "magnetic_electromagnetic",
+        "load_cases",
+        "inspection_testability"
+      ],
+      "gate_states": [
+        "HOLD",
+        "PASS_WITH_LIMIT",
+        "HOLD"
+      ],
+      "evidence": [],
+      "covered_by_gate": true,
+      "covered_by_evidence": false,
+      "release_blocker": true
+    },
+    "REQ-K01-TPD-001": {
+      "id": "REQ-K01-TPD-001",
+      "title": "Production technical definition",
+      "statement": "Released manufacturing definition shall unambiguously communicate functionally necessary size, fit, GD&T, material, finish, process and inspection characteristics without contradictory dimensions.",
+      "requirement_status": "RELEASED",
+      "verification_method": "drawing semantic QA + visual QA + inspection-plan cross-check",
+      "gates": [
+        "documentation_traceability",
+        "inspection_testability",
+        "manufacturability_process_capability"
+      ],
+      "gate_states": [
+        "HOLD",
+        "HOLD",
+        "PASS_WITH_LIMIT"
+      ],
+      "evidence": [],
+      "covered_by_gate": true,
+      "covered_by_evidence": false,
+      "release_blocker": false
+    },
+    "REQ-K01-MEDIA-001": {
+      "id": "REQ-K01-MEDIA-001",
+      "title": "J2 media/cleaning envelope",
+      "statement": "For the current MARV application, J2 contact media are bounded to documented BOF/BF-type CO-bearing process gas, water vapour/high humidity/possible condensate, dust/particulates and dry N2 purge. No intentional liquid cleaner contact at J2 is included. Any new aggressive/solvent species or envelope change requires requalification.",
+      "requirement_status": "RELEASED",
+      "verification_method": "EDR-035 applicability + released seal material basis + J2 leak qualification",
+      "gates": [
+        "materials_environment",
+        "pressure_vacuum_sealing",
+        "safety_regulatory_containment"
+      ],
+      "gate_states": [
+        "HOLD",
+        "HOLD",
+        "HOLD"
+      ],
+      "evidence": [
+        "control/decisions/EDR-035_J2_MEDIA_SEAL_LEAK_RELEASE.json"
+      ],
+      "covered_by_gate": true,
+      "covered_by_evidence": false,
+      "release_blocker": false,
+      "verification_state": "DESIGN_DEFINITION_RELEASED__PHYSICAL_QUALIFICATION_OPEN"
+    },
+    "REQ-K01-SEAL-001": {
+      "id": "REQ-K01-SEAL-001",
+      "title": "J2 static seal",
+      "statement": "J2 shall use the released 16 x 1.5 mm static face O-ring architecture with FKM 75 ±5 Shore A post-cured production grade over the released media, 55 C and ±0.20 bar envelope.",
+      "requirement_status": "RELEASED",
+      "verification_method": "EDR-035 + gland/tolerance definition + C12 physical leak qualification",
+      "gates": [
+        "pressure_vacuum_sealing",
+        "thermal",
+        "serviceability"
+      ],
+      "gate_states": [
+        "HOLD",
+        "PASS_WITH_LIMIT",
+        "PASS_WITH_LIMIT"
+      ],
+      "evidence": [
+        "control/decisions/EDR-035_J2_MEDIA_SEAL_LEAK_RELEASE.json"
+      ],
+      "covered_by_gate": true,
+      "covered_by_evidence": false,
+      "release_blocker": false,
+      "verification_state": "DESIGN_DEFINITION_RELEASED__SUPPLIER_LOT_AND_PHYSICAL_QUALIFICATION_OPEN"
+    },
+    "REQ-K01-LEAK-001": {
+      "id": "REQ-K01-LEAK-001",
+      "title": "Leak acceptance",
+      "statement": "Assembled J2 shall demonstrate helium-equivalent integral leakage q_He <= 1.0e-5 mbar·L/s at |Δp| = 0.20 bar under the released test conditions.",
+      "requirement_status": "RELEASED",
+      "verification_method": "Calibrated helium tracer-gas leak test per EDR-035; both pressure directions unless equivalence is justified",
+      "gates": [
+        "pressure_vacuum_sealing",
+        "inspection_testability",
+        "safety_regulatory_containment"
+      ],
+      "gate_states": [
+        "HOLD",
+        "HOLD",
+        "HOLD"
+      ],
+      "evidence": [
+        "control/decisions/EDR-035_J2_MEDIA_SEAL_LEAK_RELEASE.json"
+      ],
+      "covered_by_gate": true,
+      "covered_by_evidence": false,
+      "release_blocker": false,
+      "verification_state": "REQUIREMENT_RELEASED__PHYSICAL_TEST_OPEN"
+    },
+    "REQ-K01-SERVICE-CYCLES-001": {
+      "id": "REQ-K01-SERVICE-CYCLES-001",
+      "title": "Repeated service life",
+      "statement": "The J2/P006 service architecture shall withstand at least 50 complete service cycles under EDR-036. J2 O-ring and clamp screws are replaced after each J2 opening in the released service baseline.",
+      "requirement_status": "RELEASED",
+      "verification_method": "50-cycle physical service qualification with thread/galling/locator/seal-face inspection and post-qualification C12 leak test",
+      "gates": [
+        "fatigue_cyclic",
+        "serviceability",
+        "reliability_fmea"
+      ],
+      "gate_states": [
+        "HOLD",
+        "PASS_WITH_LIMIT",
+        "HOLD"
+      ],
+      "evidence": [
+        "control/decisions/EDR-036_J2_FASTENER_SERVICE_RELEASE.json"
+      ],
+      "covered_by_gate": true,
+      "covered_by_evidence": false,
+      "release_blocker": false,
+      "verification_state": "REQUIREMENT_RELEASED__PHYSICAL_50_CYCLE_QUALIFICATION_OPEN"
+    },
+    "REQ-K01-J2-LOC-001": {
+      "id": "REQ-K01-J2-LOC-001",
+      "title": "J2 locating architecture",
+      "statement": "J2 transverse location shall be controlled by the Ø14.10 H7/g6 pilot/locator pair and axial location by the metal mating faces; clamp screws shall not be redundant datum controls.",
+      "requirement_status": "RELEASED",
+      "verification_method": "CAD mate/readback + tolerance analysis",
+      "gates": [
+        "interfaces_datums",
+        "tolerance_dimensional_chains",
+        "assembly"
+      ],
+      "gate_states": [
+        "PASS",
+        "PASS_WITH_LIMIT",
+        "PASS"
+      ],
+      "evidence": [
+        "K01_GATE04D_C2R1_VERIFY.json"
+      ],
+      "covered_by_gate": true,
+      "covered_by_evidence": true,
+      "release_blocker": false
+    },
+    "REQ-K01-P007-L-001": {
+      "id": "REQ-K01-P007-L-001",
+      "title": "P007 overall length",
+      "statement": "P007 overall length shall remain 35.0 mm for the C2R1 mechanical baseline.",
+      "requirement_status": "RELEASED",
+      "verification_method": "native CAD readback",
+      "gates": [
+        "interfaces_datums",
+        "assembly"
+      ],
+      "gate_states": [
+        "PASS",
+        "PASS"
+      ],
+      "evidence": [
+        "K01_GATE04D_C2R1_TYPED_BUILD.json"
+      ],
+      "covered_by_gate": true,
+      "covered_by_evidence": true,
+      "release_blocker": false
+    },
+    "REQ-K01-MAT-P007-001": {
+      "id": "REQ-K01-MAT-P007-001",
+      "title": "P007 material",
+      "statement": "P007 production material shall be AISI 316L / EN 1.4404.",
+      "requirement_status": "RELEASED",
+      "verification_method": "material certificate + CAD/BOM reconciliation",
+      "gates": [
+        "materials_environment",
+        "supply_chain"
+      ],
+      "gate_states": [
+        "HOLD",
+        "HOLD"
+      ],
+      "evidence": [],
+      "covered_by_gate": true,
+      "covered_by_evidence": false,
+      "release_blocker": false
+    },
+    "REQ-K01-ENV-DP-001": {
+      "id": "REQ-K01-ENV-DP-001",
+      "title": "J2 differential-pressure envelope",
+      "statement": "J2/P007 qualification differential-pressure envelope shall be -0.20 ... +0.20 bar.",
+      "requirement_status": "RELEASED",
+      "verification_method": "Final P007 Static +0.20 bar; Buckling -0.20 bar; leak acceptance test",
+      "gates": [
+        "load_cases",
+        "static_strength_contact",
+        "buckling_stability",
+        "pressure_vacuum_sealing",
+        "safety_regulatory_containment"
+      ],
+      "gate_states": [
+        "PASS_WITH_LIMIT",
+        "PASS_WITH_LIMIT",
+        "STALE",
+        "HOLD",
+        "HOLD"
+      ],
+      "evidence": [],
+      "covered_by_gate": true,
+      "covered_by_evidence": false,
+      "release_blocker": false
+    },
+    "REQ-K01-ENV-TEMP-001": {
+      "id": "REQ-K01-ENV-TEMP-001",
+      "title": "J2 local temperature envelope",
+      "statement": "For the current release, accepted CFD establishes J2 local temperature at 50-55 degC; use 55 degC as design maximum.",
+      "requirement_status": "RELEASED",
+      "verification_method": "Existing CFD is the controlled thermal basis; reopen only after a controlled geometry/flow/thermal-boundary change",
+      "gates": [
+        "thermal",
+        "materials_environment",
+        "pressure_vacuum_sealing"
+      ],
+      "gate_states": [
+        "PASS_WITH_LIMIT",
+        "HOLD",
+        "HOLD"
+      ],
+      "evidence": [],
+      "covered_by_gate": true,
+      "covered_by_evidence": false,
+      "release_blocker": false
+    }
+  },
+  "actuator_requirement_policy": {
+    "current_id": "REQ-K01-ACT-FORCE-001",
+    "legacy_placeholder_to_retire": "REQ-ACT-001",
+    "numeric_acceptance_status": "OPEN",
+    "rule": "Do not inherit legacy passive-coupling 5 N / 15 N numbers as the fixed-coil release criterion."
+  }
+}

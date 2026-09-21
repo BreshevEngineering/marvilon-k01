@@ -1,0 +1,27 @@
+{
+  "schema": "k01.engineering_decision.v1",
+  "id": "EDR-034",
+  "date": "2026-09-15",
+  "title": "K01-P-003 whole-part drawing datum namespace for J1 and J2",
+  "scope": "K01-D-003 drawing semantics only; no CAD geometry or numerical tolerance changes",
+  "status": "ACCEPTED_DRAWING_DEFINITION",
+  "problem": "P003 carries two distinct functional interfaces. Existing local interface documents use A/B/C for J1 P003-P016 and A/B for J2 P003-P007. A single part drawing cannot assign the same datum letter to two different physical datum features.",
+  "decision": {
+    "J1": {
+      "A": "P003-P016 mating face",
+      "B": "P003 Ø10 g6 pilot axis",
+      "C": "P003 Ø3.02 +0.01/0 THRU clocking hole engaged by relieved P017"
+    },
+    "J2": {
+      "D": "P003-P007 metal mating face",
+      "E": "P003 Ø14.10 g6 pilot axis"
+    },
+    "mapping_rule": "Where J2 source evidence uses local A/B notation for the P003 counterpart, K01-D-003 projects those same physical references as D/E. This is a datum-letter namespace mapping only; it does not alter the referenced surfaces/axes, nominal geometry, tolerance values or assembly function. P007 keeps its own A/B notation on K01-D-006."
+  },
+  "basis": [
+    "EDR-023 controls J1 A/B/C kinematic hierarchy.",
+    "EDR-028 controls the P003 J2 physical mating-face/pilot-axis counterpart semantics.",
+    "A datum feature identifier must identify one physical datum feature unambiguously within one product drawing."
+  ],
+  "release_effect": "Authorizes K01-D-003 engineering-review authoring with globally unique A/B/C/D/E datum identifiers. Product release remains governed by the underlying interface decisions and open qualification gates."
+}
