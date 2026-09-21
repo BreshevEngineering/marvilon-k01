@@ -1,6 +1,7 @@
 from __future__ import annotations
 import argparse,json,re
 from pathlib import Path
+from control_authority import require_domain_authority
 from medtas_v16_common import register_build,register_verify
 
 ROOT_ENTRYPOINT_PATTERNS=[
@@ -21,21 +22,17 @@ def dump(p,o):
     p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(o,ensure_ascii=False,indent=2,sort_keys=True),encoding='utf-8')
 
 def cad_external_root(root:Path):
-    for n in ('K01_CAD_SEM_A001_BINDING_v1_6.json','K01_CAD_SEM_A001_BINDING_v1_5.json'):
-        b=load(root/'control/medtas/v1/bindings'/n,{}) or {};s=b.get('source_selection',{});rel=s.get('preferred_gate_verify');fld=s.get('preferred_gate_verify_field')
-        if rel and fld:
-            j=load(root/rel,{}) or {};cand=j.get(fld)
-            if cand:
-                p=Path(cand)
-                # Current K01 CAD may live outside the repo. Stop at the directory named cad.
-                for parent in [p.parent,*p.parents]:
-                    if parent.name.lower()=='cad':return str(parent.resolve())
-    # Fallback to canonical CAD semantic source assembly.
-    c=load(root/'reports/medtas/cad/current/K01_CAD_SEM_A001.json',{}) or {};src=c.get('source_assembly') or c.get('assembly_path')
-    if src:
-        p=Path(src)
-        for parent in [p.parent,*p.parents]:
-            if parent.name.lower()=='cad':return str(parent.resolve())
+    # Project structure follows the declared engineering baseline; candidate verify files are not implicit authorities.
+    try:
+        bp=require_domain_authority(root,'engineering_baseline')
+        b=load(bp,{}) or {}
+        src=((b.get('cad') or {}).get('assembly'))
+        if src:
+            p=Path(str(src))
+            for parent in [p.parent,*p.parents]:
+                if parent.name.lower()=='cad': return str(parent.resolve())
+    except Exception:
+        pass
     return None
 
 def is_entrypoint(name):return any(rx.match(name) for rx in ROOT_ENTRYPOINT_PATTERNS)

@@ -1,0 +1,134 @@
+{
+  "schema": "marvilon.drawing_family.v1",
+  "family_id": "CYLINDRICAL_TWO_VIEW_V1",
+  "description": "Rotational/cylindrical part with one longitudinal manufacturing section and one end view.",
+  "published_view_contract": [
+    {
+      "slot": "LONGITUDINAL_SECTION",
+      "kind": "LONGITUDINAL_SECTION",
+      "required": true
+    },
+    {
+      "slot": "END_VIEW",
+      "kind": "END_VIEW",
+      "required": true
+    }
+  ],
+  "dependency_view_contract": [
+    {
+      "slot": "LONGITUDINAL_PARENT",
+      "kind": "DEPENDENCY_PARENT",
+      "required": true,
+      "published": false,
+      "policy": "Hidden in final output; exists only to maintain native section associativity."
+    }
+  ],
+  "optional_view_contract": [],
+  "prohibited_published_kinds": [
+    "ISOMETRIC"
+  ],
+  "manual_after_build_allowed": [
+    "leader routing",
+    "minor text movement",
+    "minor view spacing",
+    "cosmetic cleanup"
+  ],
+  "manual_after_build_prohibited": [
+    "add missing engineering dimension",
+    "correct nominal value",
+    "correct fit or tolerance",
+    "repair datum or GTOL",
+    "add missing roughness",
+    "change engineering note"
+  ],
+  "legacy_bridge_layout": {
+    "sheet_scale": 8.0,
+    "views": {
+      "LONGITUDINAL_SECTION": {
+        "legacy_id": "SECTION_MAIN",
+        "kind": "LONGITUDINAL_SECTION",
+        "parent_orientation": "*Front",
+        "section_label": "A",
+        "x_m": 0.115,
+        "y_m": 0.145,
+        "scale": 8.0,
+        "show_parent": false,
+        "parent_x_m": 0.05,
+        "parent_y_m": 0.225,
+        "section_depth_m": 0.0
+      },
+      "END_VIEW": {
+        "legacy_id": "END_MAIN",
+        "kind": "MODEL_VIEW",
+        "orientation": "*Right",
+        "x_m": 0.285,
+        "y_m": 0.16,
+        "scale": 8.0
+      }
+    },
+    "annotation_slots": {
+      "THREAD_CALLOUT": [
+        0.09,
+        0.215
+      ],
+      "THREAD_LENGTH": [
+        0.11,
+        0.205
+      ],
+      "DIAMETER_FIT": [
+        0.34,
+        0.182
+      ],
+      "THROUGH_BORE": [
+        0.335,
+        0.145
+      ],
+      "HOLE_PATTERN_SIZE": [
+        0.245,
+        0.218
+      ],
+      "HOLE_PATTERN_DEPTH": [
+        0.245,
+        0.207
+      ],
+      "HOLE_PATTERN_PCD": [
+        0.255,
+        0.23
+      ],
+      "HOLE_PATTERN_ANGLE": [
+        0.315,
+        0.23
+      ],
+      "OPEN_GDT_NOTE": [
+        0.22,
+        0.102
+      ],
+      "RELIEF_OD": [
+        0.11,
+        0.096
+      ],
+      "RELIEF_WIDTH": [
+        0.162,
+        0.1
+      ],
+      "FUNCTIONAL_NOTE": [
+        0.06,
+        0.082
+      ]
+    },
+    "review_note_origin": [
+      0.025,
+      0.062
+    ],
+    "review_note_step_m": 0.007
+  },
+  "carrier_policy": {
+    "THREAD_EXTERNAL": "BOUND_SEMANTIC_NOTE",
+    "BLIND_HOLE_PATTERN_WITH_UNILATERAL_TOLERANCE": "BOUND_SEMANTIC_NOTE",
+    "SMALL_AXIAL_RELIEF": "BOUND_SEMANTIC_NOTE",
+    "SIMPLE_DIAMETER": "NATIVE_ASSOCIATIVE_DIMENSION",
+    "DIAMETER_FIT": "NATIVE_ASSOCIATIVE_DIMENSION",
+    "LINEAR_LENGTH": "NATIVE_ASSOCIATIVE_DIMENSION",
+    "GTOL": "NATIVE_GDT_ONLY_WHEN_DATUM_SEMANTICS_RELEASED"
+  }
+}

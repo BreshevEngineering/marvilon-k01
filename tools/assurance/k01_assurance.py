@@ -13,11 +13,17 @@ def main():
     repo = Path(a.repo_root.strip().strip('"')).resolve()
 
     checks = [
+        ("ASSURANCE_COHERENCE",
+         [sys.executable, str(repo/"tools"/"assurance"/"center_assurance_coherence.py"),
+          "--repo-root", str(repo)]),
         ("CENTER_SELFTEST",
          [sys.executable, str(repo/"center"/"selftest.py"), str(repo)]),
         ("REPO_GUARD_LIVE",
          [sys.executable, str(repo/"tools"/"repo"/"repo_guard.py"),
           "--repo-root", str(repo), "--live"]),
+        ("TECHNICAL_FILTER_MAP",
+         [sys.executable, str(repo/"tools"/"medtas"/"technical_filter_map_v2_2.py"),
+          "--repo-root", str(repo)]),
         ("CANONICAL_HASH_SELFTEST",
          [sys.executable, str(repo/"tools"/"medtas"/"canonical_hash_selftest_v1_5.py")]),
         ("STATE_REDUCER_FIXTURES",

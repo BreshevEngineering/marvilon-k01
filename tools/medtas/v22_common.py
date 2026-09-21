@@ -1,6 +1,7 @@
 from __future__ import annotations
 from pathlib import Path
 import json, hashlib, subprocess, os, csv
+from control_authority import require_control_family
 
 def load(path, default=None):
     p=Path(path)
@@ -17,10 +18,18 @@ def sha256_file(path):
         for b in iter(lambda:f.read(1024*1024),b''): h.update(b)
     return h.hexdigest()
 
+def authority_path(root,key,default=None):
+    try:
+        return require_control_family(root,key)
+    except Exception:
+        if default:
+            p=Path(root)/default
+            return p if p.exists() else None
+        return None
+
 def latest_graph(root):
-    gdir=Path(root)/'control/medtas/v1/graph'
-    files=sorted(gdir.glob('K01_engineering_build_graph*.json')) if gdir.exists() else []
-    return files[-1] if files else None
+    # Fail closed on the single declared graph authority; never choose by filename sorting.
+    return require_control_family(root,'engineering_build_graph')
 
 def run(cmd,cwd=None):
     return subprocess.run(cmd,cwd=cwd,text=True,capture_output=True)

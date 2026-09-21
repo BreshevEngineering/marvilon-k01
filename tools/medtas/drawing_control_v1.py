@@ -123,11 +123,16 @@ def refresh(root: Path, publish: bool=True):
         if not q:
             row['status']='READY_NO_RUNTIME_CANDIDATE';out['drawings'][drawing_id]=row;continue
         candidate,manifest,mp=q[0];row['latest_candidate']=candidate.name;row['candidate_root']=str(candidate);row['candidate_state']=manifest.get('state');row['source_model_hash']=(manifest.get('source_model') or {}).get('sha256');row['spec_hash']=(manifest.get('spec') or {}).get('sha256')
-        sem=semantic_status(candidate);row['semantic_status']=sem
+        sem=manifest.get('semantic_status') or semantic_status(candidate);row['semantic_status']=sem
         semantic_pass=bool(sem and sem.startswith('PASS_'))
+        presentation=manifest.get('presentation_status')
+        if presentation is not None: row['presentation_status']=presentation
         if not semantic_pass:
             row['status']='HOLD_INCOMPLETE_CANDIDATE';holds.append(drawing_id)
             if publish: row['current_invalid_marker']=invalidate_current_marker(spec,drawing_id,candidate,sem)
+            out['drawings'][drawing_id]=row;continue
+        if presentation is not None and not str(presentation).startswith('PASS_'):
+            row['status']='HOLD_PRESENTATION';holds.append(drawing_id)
             out['drawings'][drawing_id]=row;continue
         if publish:
             pub=publish_current(drawing_id,spec,candidate,manifest);row['current']=pub

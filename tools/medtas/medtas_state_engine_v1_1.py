@@ -72,6 +72,38 @@ def toolchain_identity(node:dict)->List[dict]:
         keep.append({k:t[k] for k in sorted(t) if k!="identity_affects_state"})
     return keep
 
+
+
+def _project_json_path(obj: Any, segments: List[str], trail: str = ""):
+    if not segments:
+        return obj, []
+    seg = segments[0]
+    rest = segments[1:]
+    if seg == "*":
+        if not isinstance(obj, dict):
+            return None, [f"state_payload:PROJECTION_EXPECTED_OBJECT:{trail or '<root>'}"]
+        out = {}
+        errors = []
+        for key in sorted(obj):
+            val, err = _project_json_path(obj[key], rest, (trail + "." + key).strip("."))
+            out[key] = val
+            errors.extend(err)
+        return out, errors
+    if not isinstance(obj, dict) or seg not in obj:
+        path = (trail + "." + seg).strip(".")
+        return None, [f"state_payload:PROJECTION_PATH_MISSING:{path}"]
+    return _project_json_path(obj[seg], rest, (trail + "." + seg).strip("."))
+
+def json_projection(obj: Any, selectors: List[str]):
+    payload = {}
+    errors = []
+    for selector in selectors:
+        segs = [x for x in str(selector).split(".") if x]
+        val, err = _project_json_path(obj, segs)
+        payload[str(selector)] = val
+        errors.extend(err)
+    return payload, errors
+
 def own_state_payload(node:dict,repo_root:Path)->Tuple[Any,List[str]]:
     src=node["contract"].get("state_payload_source",{"mode":"inline"})
     mode=src.get("mode","inline")
@@ -82,6 +114,16 @@ def own_state_payload(node:dict,repo_root:Path)->Tuple[Any,List[str]]:
         p=(repo_root/ptxt).resolve()
         if not p.exists(): return None,["state_payload:MISSING"]
         try: return load_json(p),[]
+        except Exception as e: return None,["state_payload:INVALID_JSON:"+str(e)]
+    if mode=="json_projection":
+        ptxt=src.get("path"); selectors=src.get("selectors") or []
+        if not ptxt: return None,["state_payload:UNBOUND"]
+        if not selectors: return None,["state_payload:PROJECTION_SELECTORS_EMPTY"]
+        p=(repo_root/ptxt).resolve()
+        if not p.exists(): return None,["state_payload:MISSING"]
+        try:
+            data=load_json(p)
+            return json_projection(data,[str(x) for x in selectors])
         except Exception as e: return None,["state_payload:INVALID_JSON:"+str(e)]
     return None,["state_payload:UNKNOWN_MODE:"+str(mode)]
 

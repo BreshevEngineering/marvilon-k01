@@ -1,5 +1,6 @@
 """Fail closed: inventory parity alone is not semantic equivalence."""
 from pathlib import Path
+from control_authority import require_control_family
 import argparse
 from v22_common import load,save
 from build_bom_v2_2 import components
@@ -26,7 +27,7 @@ def evaluate(r,base,raw):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--repo-root',required=True);a=ap.parse_args();r=Path(a.repo_root).resolve()
-    binding=load(r/'control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_6.json',{}) or {}
+    binding=load(require_control_family(r,'cad_sem_a001_binding'),{}) or {}
     raw=load(r/binding.get('raw_api_output','reports/cad/current/K01_A001_SEMANTIC_RAW_API_v1_4.json'),{}) or {}
     result=evaluate(r,load(r/BASE,{}) or {},raw)
     save(r/'reports/control/K01_FINAL_ASSEMBLY_SEMANTIC_VERIFY_CURRENT.json',result)

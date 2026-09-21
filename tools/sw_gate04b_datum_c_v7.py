@@ -12,6 +12,11 @@ P003=CAD/"parts"/"K01-P-003_Cartridge_Body.SLDPRT"
 P016=CAD/"parts"/"K01-P-016_Long_Run_Interface_Boss.SLDPRT"
 OUT=CAD/"candidates"
 REPORT=REPO/"reports"/"cad"/"current"/"K01_GATE04B_DATUM_C_BUILD.json"
+P017_STEP=REPO/"reference"/"K01-P-017_Datum_C_Relieved_Locator_CANDIDATE.step"
+
+# SOLIDWORKS swEndConditions_e values used by FeatureCut4.
+SW_END_BLIND=0
+SW_END_THROUGH_ALL=1
 
 def np(p): return os.path.normcase(os.path.normpath(str(p)))
 def mem(o,n,d=None):
@@ -34,6 +39,20 @@ def a2l(t,q):
     return [sum(ex[i]*d[i] for i in range(3)),
             sum(ey[i]*d[i] for i in range(3)),
             sum(ez[i]*d[i] for i in range(3))]
+def model_to_sketch_point(sk,p):
+    """Transform one model-space point into the active 2D sketch coordinate system."""
+    mt=mem(sk,"ModelToSketchTransform",None)
+    if mt is None:raise RuntimeError("Sketch.ModelToSketchTransform unavailable")
+    a=mem(mt,"ArrayData",None)
+    if a is None:raise RuntimeError("ModelToSketchTransform.ArrayData unavailable")
+    t=[float(v) for v in list(a)]
+    if len(t)<12:raise RuntimeError(f"ModelToSketchTransform length={len(t)}")
+    q=l2a(t,[float(p[0]),float(p[1]),float(p[2])])
+    # For a point lying on the selected sketch plane, sketch Z must be ~0.
+    zerr=abs(q[2])*1000.0
+    if zerr>0.02:
+        raise RuntimeError(f"Model point is {zerr:.6f} mm off active sketch plane")
+    return [q[0],q[1],0.0]
 def openp(sw,p):
     er=win32com.client.VARIANT(pythoncom.VT_BYREF|pythoncom.VT_I4,0)
     wr=win32com.client.VARIANT(pythoncom.VT_BYREF|pythoncom.VT_I4,0)
@@ -116,7 +135,11 @@ def make_axis(m,face,name):
     ax=after[-1][0]
     try:ax.Name=name
     except Exception:pass
-def make_cut(m,face,center,radius,depth,skname,featname):
+def make_cut(m,face,center,radius,depth,skname,featname,
+             end1=SW_END_BLIND,end2=SW_END_BLIND):
+    # Contract: center is always expressed in part/model coordinates.
+    # CreateCircleByRadius operates in the active sketch coordinate system,
+    # so center is transformed after the sketch is created.
     call(m,"ClearSelection2",True,default=None);select(face,"datum face")
     sm=mem(m,"SketchManager",None);fm=mem(m,"FeatureManager",None)
     _,e=call(sm,"InsertSketch",True,default=None)
@@ -126,7 +149,13 @@ def make_cut(m,face,center,radius,depth,skname,featname):
     old=None
     try:old=sm.AddToDB;sm.AddToDB=True
     except Exception:pass
-    seg,e=call(sm,"CreateCircleByRadius",center[0],center[1],center[2],radius,default=None)
+    skcenter=model_to_sketch_point(sk,center)
+    print(
+        f"[CUT] {featname} model center [mm]="
+        f"{[round(1000.0*x,6) for x in center]} -> sketch center [mm]="
+        f"{[round(1000.0*x,6) for x in skcenter]}")
+    seg,e=call(sm,"CreateCircleByRadius",
+               skcenter[0],skcenter[1],skcenter[2],radius,default=None)
     if e or seg is None:raise RuntimeError(e or "CreateCircleByRadius failed")
     if old is not None:
         try:sm.AddToDB=old
@@ -141,15 +170,31 @@ def make_cut(m,face,center,radius,depth,skname,featname):
     except Exception:pass
     call(m,"ClearSelection2",True,default=None);select(sf,"C sketch")
     cut,e=call(fm,"FeatureCut4",
-        False,False,False,0,0,depth,depth,
+        False,False,False,end1,end2,depth,depth,
         False,False,False,False,0.0,0.0,
         False,False,False,False,
         False,False,True,False,False,False,
+        0,0.0,False,False,
         default=None)
     if e or cut is None:raise RuntimeError(e or "FeatureCut4 failed")
     try:cut.Name=featname
     except Exception:pass
     return cut
+
+def cut_end_conditions(cut):
+    data=mem(cut,"GetDefinition",None)
+    if data is None:raise RuntimeError("Cut GetDefinition unavailable")
+    fwd,e1=call(data,"GetEndCondition",True,default=None)
+    rev,e2=call(data,"GetEndCondition",False,default=None)
+    if e1 or e2 or fwd is None or rev is None:
+        raise RuntimeError(f"Cut end-condition readback failed: fwd={e1 or fwd}, rev={e2 or rev}")
+    return int(fwd),int(rev)
+
+def cyl_material_length_mm(row):
+    d=float(row.get("D") or 0.0)
+    a=row.get("area")
+    if d<=0 or a is None:return 0.0
+    return float(a)/(math.pi*d)
 
 def polar(row):
     x,y=row["origin"][0],row["origin"][1]
@@ -256,26 +301,186 @@ def build3(sw,src,dst,step,target):
     bb=mem(body(m),"GetBodyBox",None)
     if bb is None:raise RuntimeError("P003 bbox")
     bb=[float(v) for v in list(bb)]
+
+    # EDR-023 requires the P003 mating hole to be Ø3.02 +0.01/0 THRU.
+    # Keep the established Datum-A station, but prove that the assembly-mapped
+    # C point lands on that same face instead of silently forcing a different X.
+    mapped_target=[float(v) for v in target]
     datumA=bb[0]+0.003
-    target=[datumA,target[1],target[2]]
+    datumA_map_error_mm=abs(mapped_target[0]-datumA)*1000.0
+    if datumA_map_error_mm>0.02:
+        raise RuntimeError(
+            f"P003 mapped Datum-C X misses Datum-A by {datumA_map_error_mm:.6f} mm; "
+            "refuse to move the hole axially")
+    target=[datumA,mapped_target[1],mapped_target[2]]
+
+    pre=cyls(m)
+    flange=[r for r in pre
+            if 33.9 <= r["D"] <= 34.1
+            and abs(abs(r["axis"][0])-1.0)<1e-6
+            and (r["area"] or 0)>0]
+    if not flange:raise RuntimeError("P003 OD34 flange cylinder not found")
+    flange_thickness_mm=max(cyl_material_length_mm(r) for r in flange)
+    if not (2.8 <= flange_thickness_mm <= 3.2):
+        raise RuntimeError(f"P003 flange thickness proof unexpected: {flange_thickness_mm:.6f} mm")
+
     ps=planes(m)
-    cand=[r for r in ps if abs(r["point"][0]-datumA)<3e-5 and abs(abs(r["normal"][0])-1)<1e-6 and (r["area"] or 0)>500]
+    cand=[r for r in ps if abs(r["point"][0]-datumA)<3e-5
+          and abs(abs(r["normal"][0])-1)<1e-6 and (r["area"] or 0)>500]
     if not cand:raise RuntimeError("P003 Datum-A face not found")
     f=max(cand,key=lambda r:r["area"])["face"]
-    make_cut(m,f,target,0.00151,0.004,"K01_SKETCH_DATUM_C_MATING_HOLE","K01_F_DATUM_C_MATING_HOLE")
+
+    cut=make_cut(
+        m,f,target,0.00151,0.004,
+        "K01_SKETCH_DATUM_C_MATING_HOLE","K01_F_DATUM_C_MATING_HOLE",
+        end1=SW_END_THROUGH_ALL,end2=SW_END_THROUGH_ALL)
+    ec_fwd,ec_rev=cut_end_conditions(cut)
+    if ec_fwd!=SW_END_THROUGH_ALL or ec_rev!=SW_END_THROUGH_ALL:
+        raise RuntimeError(
+            f"P003 Datum-C hole is not Through All both directions: "
+            f"forward={ec_fwd}, reverse={ec_rev}")
+
     call(m,"ForceRebuild3",False,default=None)
     aft=cyls(m)
-    c=[r for r in aft if abs(r["D"]-3.02)<0.02]
-    if not c:raise RuntimeError("P003 Ø3.02 Datum-C cylinder not found")
-    chosen=min(c,key=lambda r:sum((r["origin"][i]-target[i])**2 for i in range(3)))
+
+    # Never accept an unrelated legacy Ø3.02 cylinder. The accepted cylindrical
+    # face(s) must belong to the controlled cut feature and lie on the requested axis.
+    owned=[r for r in aft
+           if abs(r["D"]-3.02)<0.02
+           and r["owner_name"]=="K01_F_DATUM_C_MATING_HOLE"
+           and abs(abs(r["axis"][0])-1.0)<1e-6]
+    if not owned:
+        raise RuntimeError("P003 controlled Ø3.02 THRU cylinder not found on K01_F_DATUM_C_MATING_HOLE")
+
+    def yz_error_mm(r):
+        return 1000.0*math.hypot(r["origin"][1]-target[1],r["origin"][2]-target[2])
+
+    chosen=min(owned,key=yz_error_mm)
+    center_error_mm=yz_error_mm(chosen)
+    if center_error_mm>0.02:
+        raise RuntimeError(
+            f"P003 controlled Datum-C hole center error={center_error_mm:.6f} mm > 0.02 mm")
+
+    near=[r for r in owned if yz_error_mm(r)<=0.02]
+    thru_material_length_mm=sum(cyl_material_length_mm(r) for r in near)
+    if thru_material_length_mm < flange_thickness_mm-0.05:
+        raise RuntimeError(
+            f"P003 Datum-C THRU proof failed: cylindrical material span="
+            f"{thru_material_length_mm:.6f} mm, flange={flange_thickness_mm:.6f} mm")
+
+    print(
+        f"[P003] Datum C THRU proof: mapped-A err={datumA_map_error_mm:.6f} mm, "
+        f"center err={center_error_mm:.6f} mm, flange={flange_thickness_mm:.6f} mm, "
+        f"cut span={thru_material_length_mm:.6f} mm, end conditions={ec_fwd}/{ec_rev}")
+
     make_axis(m,chosen["face"],"K01_DATUM_C_AXIS")
+
     # P003 flange OD34 edge ligament at R12:
     R=math.hypot(target[1],target[2])*1000
     outer=17.0-R-1.51
     if outer<2.0:raise RuntimeError(f"P003 C outer edge ligament {outer:.3f}<2.0 mm")
+
     save(m,dst);save(m,step)
-    return {"C_center_local_m":target,"D_mm":chosen["D"],"drawing_tolerance":"+0.01/0",
-            "outer_edge_ligament_mm":outer}
+    return {
+        "C_center_local_m":target,
+        "D_mm":chosen["D"],
+        "drawing_tolerance":"+0.01/0",
+        "end_condition":"THROUGH_ALL_BOTH",
+        "end_condition_forward":ec_fwd,
+        "end_condition_reverse":ec_rev,
+        "datumA_mapping_error_mm":datumA_map_error_mm,
+        "center_error_mm":center_error_mm,
+        "flange_thickness_mm":flange_thickness_mm,
+        "thru_material_length_mm":thru_material_length_mm,
+        "owner_feature":chosen["owner_name"],
+        "sketch_center_mapping":"MODEL_TO_SKETCH_TRANSFORM",
+        "outer_edge_ligament_mm":outer
+    }
+
+
+def build17(sw,src_step,dst_native):
+    """
+    Materialize the EDR-023 relieved/diamond P017 candidate from the controlled
+    STEP into one native SOLIDWORKS candidate. No canonical file is touched.
+
+    Required nominal geometry:
+      L = 6.00 mm
+      press shank = Ø3 × 4.00 mm
+      protruding section = 2.00 mm
+      tangential major = 3.00 mm nominal
+      radial minor = 2.80 mm nominal
+    """
+    if not src_step.exists():
+        raise FileNotFoundError(src_step)
+
+    imp=sw.GetImportFileData(str(src_step))
+    if imp is None:
+        raise RuntimeError("GetImportFileData returned None for P017 STEP")
+    try: imp.MapConfigurationData=True
+    except Exception: pass
+
+    er=win32com.client.VARIANT(pythoncom.VT_BYREF|pythoncom.VT_I4,0)
+    m=sw.LoadFile4(str(src_step),"r",imp,er)
+    if isinstance(m,tuple):
+        m=next((x for x in m if x is not None and hasattr(x,"_oleobj_")),None)
+    if m is None:
+        raise RuntimeError(f"P017 LoadFile4 failed errors={er.value}")
+
+    title=mem(m,"GetTitle","")
+    try:
+        pd=m
+        try:
+            rc=pd.ImportDiagnosis(True,False,True,0)
+            print("[P017] ImportDiagnosis rc:",rc)
+        except Exception as ex:
+            print("[P017] ImportDiagnosis note:",ex)
+
+        b=body(m)
+        bb=mem(b,"GetBodyBox",None)
+        if bb is None: raise RuntimeError("P017 body box unavailable")
+        bb=[1000.0*float(x) for x in list(bb)]
+        size=[bb[3]-bb[0],bb[4]-bb[1],bb[5]-bb[2]]
+        if abs(size[0]-3.0)>0.02 or abs(size[1]-3.0)>0.02 or abs(size[2]-6.0)>0.02:
+            raise RuntimeError(f"P017 bbox mismatch size_mm={size}")
+
+        # Selected EDR-023 implementation requires two longitudinal radial-relief
+        # planes on the protruding section. A plain round STEP must fail here.
+        pls=planes(m)
+        relief=[r for r in pls
+                if abs(abs(r["normal"][0])-1.0)<1e-4
+                and 1.5 <= (r["area"] or 0) <= 3.0]
+        if len(relief)!=2:
+            raise RuntimeError(f"P017 relief-plane count={len(relief)}; expected 2")
+
+        # Their separation is the radial minor width.
+        xs=sorted(r["point"][0]*1000.0 for r in relief)
+        minor=abs(xs[-1]-xs[0])
+        if abs(minor-2.80)>0.02:
+            raise RuntimeError(f"P017 radial minor width={minor:.4f} mm; expected 2.80 nominal")
+
+        cs=cyls(m)
+        d3=[r for r in cs if abs(r["D"]-3.0)<0.02]
+        if not d3:
+            raise RuntimeError("P017 Ø3 press-shank cylindrical face not found")
+
+        save(m,dst_native)
+        return {
+            "source_step":str(src_step),
+            "native":str(dst_native),
+            "size_mm":size,
+            "radial_minor_nominal_mm":minor,
+            "tangential_major_nominal_mm":3.0,
+            "overall_length_nominal_mm":6.0,
+            "press_shank_nominal":"Ø3 × 4.0",
+            "protrusion_nominal_mm":2.0,
+            "relief_plane_count":len(relief),
+            "material_baseline":"AISI 316L / EN 1.4404",
+            "material_card_status":"OPEN_NATIVE_ASSIGNMENT_BEFORE_MASS_RELEASE",
+            "candidate_only":True
+        }
+    finally:
+        try: sw.CloseDoc(title)
+        except Exception: pass
 
 
 def ensure_stable_assembly(sw):
@@ -318,11 +523,14 @@ def main():
     stamp=datetime.now().strftime("%Y%m%d_%H%M%S");OUT.mkdir(parents=True,exist_ok=True)
     f16=OUT/f"K01-P-016_Long_Run_Interface_Boss_GATE04B_DATUMC_V6_{stamp}.SLDPRT";s16=f16.with_suffix(".STEP")
     f3=OUT/f"K01-P-003_Cartridge_Body_GATE04B_DATUMC_V6_{stamp}.SLDPRT";s3=f3.with_suffix(".STEP")
+    f17=OUT/f"K01-P-017_Datum_C_Relieved_Locator_GATE04B_V7_{stamp}.SLDPRT"
     print("[INFO] P016: audit actual circular M4 pattern and derive Datum C from the free angular gap.")
     r16=build16(sw,P016,f16,s16)
     q=l2a(t16,r16["C_center_local_m"]);p=a2l(t3,q)
     print("[INFO] C assembly:",q);print("[INFO] C mapped to P003:",p)
     r3=build3(sw,P003,f3,s3,p)
+    print("[INFO] P017: materialize selected relieved/diamond locator from controlled STEP.")
+    r17=build17(sw,P017_STEP,f17)
 
     minc=3.020-3.000;maxc=3.030-2.990
     amin=math.degrees(math.atan((minc/2)/r16["C_radius_mm"]))
@@ -331,9 +539,10 @@ def main():
       "created_utc":datetime.now(timezone.utc).isoformat(),"solidworks_revision":rev,
       "P016":{"native":str(f16),"step":str(s16),"result":r16},
       "P003":{"native":str(f3),"step":str(s3),"result":r3},
-      "P017":{"press_shank":"Ø3 p6×4 into P016 Ø3 H7","protrusion_mm":2.0,
+      "P017":{"native":str(f17),"source_step":str(P017_STEP),"result":r17,
+              "press_shank":"Ø3 p6×4 into P016 Ø3 H7","protrusion_mm":2.0,
               "tangential_major_mm":"3.00 -0.01/0","radial_minor_mm":"2.80 ±0.02",
-              "P003_hole":"Ø3.02 +0.01/0",
+              "P003_hole":"Ø3.02 +0.01/0 THRU",
               "clocking_half_angle_clearance_deg":[amin,amax]},
       "datum_scheme":{"A":"mating face","B":"Ø10 H7/g6 pilot","C":"pattern-derived relieved/diamond locator"},
       "design_logic":"C is separate from the M4 circular pattern and placed at the midpoint of a 120° free gap, maximizing distance to clamp holes while R≈12 mm balances O-ring and boss-edge ligament.",
@@ -341,9 +550,9 @@ def main():
     REPORT.parent.mkdir(parents=True,exist_ok=True)
     REPORT.write_text(json.dumps(rep,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     print("="*84);print("K01 Gate04B v7 RESULT: PASS")
-    print("P016:",f16);print("P003:",f3);print("Report:",REPORT);return 0
+    print("P016:",f16);print("P003:",f3);print("P017:",f17);print("Report:",REPORT);return 0
 
 if __name__=="__main__":
     try:raise SystemExit(main())
     except Exception:
-        print("FAIL: Gate04B v6");traceback.print_exc();raise SystemExit(1)
+        print("FAIL: Gate04B v7");traceback.print_exc();raise SystemExit(1)

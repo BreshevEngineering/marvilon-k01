@@ -72,6 +72,9 @@ def finalize_candidate(root: Path, spec_path: Path, spec: dict, report: Path):
         "created_utc": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(),
         "state": "GENERATED",
         "release": "HOLD",
+        "semantic_status": data.get("STATUS"),
+        "presentation_status": "HOLD_NOT_VERIFIED",
+        "overall_status": "HOLD_PRESENTATION",
         "spec": {"path": str(spec_path), "sha256": sha256(spec_path)},
         "source_model": {"path": spec.get("model_path"), "sha256": data.get("SOURCE_SHA256_AFTER")},
         "placement_profile": data.get("PLACEMENT_PROFILE") or None,
@@ -92,6 +95,7 @@ def finalize_candidate(root: Path, spec_path: Path, spec: dict, report: Path):
     }
     (candidate_root / "candidate_manifest.json").write_text(json.dumps(manifest, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print("CANDIDATE MANIFEST: " + str(candidate_root / "candidate_manifest.json"))
+    print("OVERALL STATUS: HOLD_PRESENTATION (semantic authoring PASS is not D8/presentation PASS)")
     return candidate_root
 
 

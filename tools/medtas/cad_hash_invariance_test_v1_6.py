@@ -1,6 +1,7 @@
 from __future__ import annotations
 import argparse,hashlib,subprocess,sys,traceback
 from pathlib import Path
+from control_authority import require_control_family
 from canonical_hash_v1_5 import canonical_json_hash
 from medtas_v16_common import load,dump,register_build,register_verify
 
@@ -11,10 +12,7 @@ def sha_file(p):
     return h.hexdigest()
 
 def binding(root):
-    for n in ('K01_CAD_SEM_A001_BINDING_v1_6.json','K01_CAD_SEM_A001_BINDING_v1_5.json'):
-        p=root/'control/medtas/v1/bindings'/n
-        if p.exists():return load(p)
-    raise FileNotFoundError('CAD semantic binding missing')
+    return load(require_control_family(root,'cad_sem_a001_binding'),{}) or {}
 
 def assembly_from_raw(root,b):
     p=root/b['raw_api_output']

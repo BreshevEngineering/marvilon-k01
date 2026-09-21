@@ -1,0 +1,37 @@
+{
+  "schema": "marvilon.drawing_result_policy.v1",
+  "principle": "HOLD is an engineering/release state, not an instruction to stop artifact generation.",
+  "states": {
+    "execution_state": [
+      "GENERATED",
+      "PARTIAL_GENERATED",
+      "FAILED_UNSAFE"
+    ],
+    "engineering_state": [
+      "PASS_ENGINEERING_DEFINITION",
+      "HOLD_ENGINEERING_DEFINITION"
+    ],
+    "release_state": [
+      "RELEASE_ELIGIBLE",
+      "HOLD_RELEASE"
+    ]
+  },
+  "continue_on_hold": [
+    "open general tolerance",
+    "open surface texture",
+    "open revision",
+    "open/nonreleased GD&T datum semantics",
+    "release blockers",
+    "visual/presentation QA hold"
+  ],
+  "stop_only_on_unsafe": [
+    "contract schema invalid",
+    "drawing family invalid",
+    "required model binding missing or ambiguous",
+    "source CAD missing",
+    "source CAD mutation/hash guard failure",
+    "SolidWorks/adapter compile or runtime failure before any usable artifact exists"
+  ],
+  "fallback_rule": "If manufacturing output is requested but release blockers exist, generate an ENGINEERING REVIEW candidate and mark HOLD_RELEASE.",
+  "success_rule": "If a usable artifact is generated, command returns execution success even when engineering/release state is HOLD."
+}

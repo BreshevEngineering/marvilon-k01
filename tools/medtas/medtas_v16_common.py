@@ -4,6 +4,7 @@ from pathlib import Path
 HERE=Path(__file__).resolve().parent
 if str(HERE) not in sys.path: sys.path.insert(0,str(HERE))
 import medtas_state_engine_v1_1 as eng
+from control_authority import require_control_family
 ID_RE=re.compile(r'(K01-[PBA]-\d{3})',re.I)
 
 _LOAD_SENTINEL=object()
@@ -19,11 +20,7 @@ def dump(p,o):
 def base_id(x):
     m=ID_RE.search(str(x or ''));return m.group(1).upper() if m else str(x or '')
 def graph_path(root):
-    root=Path(root)
-    for n in ('K01_engineering_build_graph_v2_0.json','K01_engineering_build_graph_v1_9.json','K01_engineering_build_graph_v1_8.json','K01_engineering_build_graph_v1_7.json','K01_engineering_build_graph_v1_6.json','K01_engineering_build_graph_v1_5.json','K01_engineering_build_graph_v1_4.json','K01_engineering_build_graph_v1_3.json'):
-        p=root/'control/medtas/v1/graph'/n
-        if p.exists(): return p
-    raise FileNotFoundError('MEDTAS graph missing')
+    return require_control_family(root,'engineering_build_graph')
 def graph(root): return load(graph_path(root))
 def stores(root):
     root=Path(root);return eng.load_record_store(root/'reports/medtas/records/current'),eng.load_record_store(root/'reports/medtas/verifications/current')

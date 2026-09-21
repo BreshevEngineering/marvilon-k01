@@ -1,6 +1,10 @@
 from __future__ import annotations
 import argparse,json
 from pathlib import Path
+import sys
+HERE=Path(__file__).resolve().parent
+if str(HERE) not in sys.path:sys.path.insert(0,str(HERE))
+from v22_common import authority_path
 
 def load(p,d=None):
     try:return json.loads(Path(p).read_text(encoding='utf-8-sig'))
@@ -10,7 +14,7 @@ def dump(p,o):
     p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(o,ensure_ascii=False,indent=2,sort_keys=True),encoding='utf-8')
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--repo-root',required=True);a=ap.parse_args();r=Path(a.repo_root).resolve();derived=load(r/'reports/control/K01_MEDTAS_DERIVED_STATE_CURRENT.json',{}) or {};nodes=derived.get('nodes',{});graph=load(r/'control/medtas/v1/graph/K01_engineering_build_graph_v2_0.json',{}) or load(r/'control/medtas/v1/graph/K01_engineering_build_graph_v1_9.json',{}) or {};criticality={n.get('node_id'):(n.get('lifecycle') or {}).get('criticality') for n in graph.get('nodes',[]) or []};state=load(r/'reports/control/K01_CURRENT_STATE.json',{}) or load(r/'control/state/K01_CURRENT_STATE.json',{}) or {};priority=load(r/'reports/control/K01_RELEASE_PRIORITY_CURRENT.json',{}) or {};counts={};frontier=[]
+    ap=argparse.ArgumentParser();ap.add_argument('--repo-root',required=True);a=ap.parse_args();r=Path(a.repo_root).resolve();derived=load(r/'reports/control/K01_MEDTAS_DERIVED_STATE_CURRENT.json',{}) or {};nodes=derived.get('nodes',{});gp=authority_path(r,'engineering_build_graph'); graph=load(gp,{}) if gp else {};criticality={n.get('node_id'):(n.get('lifecycle') or {}).get('criticality') for n in graph.get('nodes',[]) or []};state=load(r/'reports/control/K01_CURRENT_STATE.json',{}) or load(r/'control/state/K01_CURRENT_STATE.json',{}) or {};priority=load(r/'reports/control/K01_RELEASE_PRIORITY_CURRENT.json',{}) or {};counts={};frontier=[]
     deferred_prefixes=('K01.STRUCT.FACE_MAP','K01.STRUCT.BOLT_EQUIV','K01.STRUCT.NEUTRAL','K01.STRUCT.MESH','K01.STRUCT.CCX','K01.STRUCT.RECON')
     for nid,x in nodes.items():
         st=x.get('state','MISSING');counts[st]=counts.get(st,0)+1
