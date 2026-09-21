@@ -1,0 +1,305 @@
+K01 SOLIDWORKS 2018 API OPERATING STANDARD
+VERSION: 3.1
+DATE: 2026-09-18
+STATUS: CONTROLLED CANDIDATE FOR REPO INSTALL
+SCOPE: MARVILON K01 / SOLIDWORKS 2018 / DRAWING + CAD AUTOMATION
+
+PURPOSE
+=======
+This is the single operating standard for all K01 SolidWorks API work.
+It consolidates the proven runtime pattern, project-specific failure lessons,
+Drawing System rules, mutation safeguards, and anti-loop rules.
+
+The standard does NOT authorize engineering values by itself.
+Engineering authority remains:
+Requirements -> Decisions -> Interfaces -> 3D -> Product Definition ->
+Drawing Spec -> Drawing -> Verification / Manufacturing / Inspection evidence.
+
+----------------------------------------------------------------------
+1. PLATFORM BASELINE
+----------------------------------------------------------------------
+API-001  SOLIDWORKS = 2018 / Revision 26.
+API-002  Interops = SolidWorks.Interop.sldworks 26.0.1.1 and
+         SolidWorks.Interop.swconst 26.0.1.1 on the user's machine.
+API-003  Compiler target = .NET Framework 4 / C# 5 / x64.
+API-004  Core code = strongly typed SolidWorks.Interop.*.
+API-005  `dynamic` is prohibited in core CAD/drawing logic.
+API-006  SW2018 COM calls returning object must be explicitly cast:
+         `as Feature`, `as DisplayDimension`, `as Dimension`,
+         `as Surface`, `as Annotation`, `as Note`, etc.
+API-007  New helpers must reuse patterns from:
+         D:\BreshevEngineering\marvilon-k01\
+         cad_api\solidworks_2018_proven\
+         before creating a new API path.
+
+----------------------------------------------------------------------
+2. BUILD + RUNTIME DEPLOYMENT
+----------------------------------------------------------------------
+API-010  Reference interops from the installed SW2018 `api\redist` directory.
+API-011  Compile with `/langversion:5 /platform:x64`.
+API-012  Build into a dedicated report/build directory, never project root.
+API-013  Copy both interop DLLs beside the compiled EXE.
+API-014  Run a runtime-bind probe before any SolidWorks launch.
+API-015  Verify loaded assembly identities are revision 26.
+API-016  CMD launcher must be BOM-free and begin with `@echo off`.
+API-017  Compile failure, missing interop, version mismatch or failed probe = HOLD.
+API-018  Never ask the user to manually troubleshoot a compile error that the
+         package can diagnose and fix.
+
+PROVEN BY PROJECT:
+- P003 Product Definition Audit V1.2
+- P004 axial recenter V1.1/V1.2/V1.3
+- P004 canonical promotion
+
+----------------------------------------------------------------------
+3. PROCESS STATE / FILE OWNERSHIP
+----------------------------------------------------------------------
+API-020  Controlled disk-state operations start with SolidWorks closed.
+API-021  For a candidate or canonical file opened by SolidWorks:
+         API read/mutate -> rebuild -> API verify -> Save3 -> CloseDoc ->
+         filesystem hash/copy/move.
+API-022  Do not hash/copy/move/delete/rename a CAD file while SolidWorks owns it.
+API-023  After CloseDoc, filesystem verification uses bounded retry.
+API-024  Source files are hash-guarded before and after candidate operations.
+API-025  Candidate work must never silently mutate canonical CAD/drawing sources.
+
+FAILURE LESSON:
+P004 WHAT-IF V1.1 successfully changed 8.000 -> 7.990, then failed only because
+the helper tried to hash the SLDPRT while SolidWorks still owned the file.
+This sequence is permanently prohibited.
+
+----------------------------------------------------------------------
+4. DISCOVERY IS NOT IDENTITY
+----------------------------------------------------------------------
+API-030  Raw feature-tree enumeration count is NOT object identity.
+API-031  SolidWorks may expose one logical Dimension through multiple parents.
+API-032  Known one-off parameter: bind directly by semantic parameter name,
+         e.g. `ModelDoc2.Parameter("D3@Sketch1")`.
+API-033  Discovery enumeration must deduplicate dimensions by `Dimension.FullName`.
+API-034  Before mutation verify expected value, reference/driven state,
+         read-only state where available, and semantic ownership.
+API-035  After rebuild re-resolve the object and verify its actual stored state.
+API-036  Never choose "nearest" geometry when a semantic match is ambiguous.
+         Ambiguity = HOLD.
+
+FAILURE LESSON:
+P004 WHAT-IF V1 counted D3@Sketch1 three times through Sketch1/Revolve1/Sketch1.
+The correct identity was one dimension.
+
+----------------------------------------------------------------------
+5. DRAWING ANNOTATION ACCESS
+----------------------------------------------------------------------
+API-040  Inventory path:
+         `IView.GetFirstAnnotation3()` -> `IAnnotation.GetNext3()`.
+         This path is proven on K01-D-003; 104 annotations were enumerated.
+API-041  Mutation path:
+         use `IView.GetAnnotations()` (or an equivalent array retrieval)
+         and then mutate those annotation objects.
+         Do NOT assume first/next enumeration objects are a safe write handle.
+API-042  Use `IAnnotation.GetSpecificAnnotation()` to reach the concrete object:
+         Note, DisplayDimension, GTol, DatumTag, etc.
+API-043  Notes: read `INote.GetText`, write `INote.SetText`.
+API-044  Visibility: use IAnnotation.Visible.
+API-045  Position/layout: mutate annotation position only when semantic identity
+         is already known and the target is unique.
+API-046  Never recreate Section B-B unless explicitly authorized.
+         Current native section is a protected validated subsystem.
+API-047  Existing view/annotation objects are preferred over recreation.
+
+PROVEN D003 FACTS:
+- GetFirstAnnotation3/GetNext3 count = 104.
+- Section View B-B exists and has 3 face hatches.
+- Parent view can remain hidden.
+- J1/J2 named annotations were moved and notes were edited successfully.
+- D8 V2 restored the J1 clamp-pattern callout through the existing drawing.
+
+----------------------------------------------------------------------
+6. DRAWING DIMENSIONS / TOLERANCES
+----------------------------------------------------------------------
+API-050  DisplayDimension != model Dimension. Always distinguish them.
+API-051  Use `DisplayDimension.GetDimension2(0)` for the underlying Dimension.
+API-052  Before changing tolerance, determine whether it is a reference/drawing
+         dimension (`IDimension.IsReference` / `IDisplayDimension.IsReferenceDim`).
+API-053  Do not mutate a model-driving tolerance through a drawing unless a
+         Product Definition decision explicitly authorizes model metadata change.
+API-054  Read tolerance through `Dimension.Tolerance`,
+         `GetMinValue2`, `GetMaxValue2`, fit getters.
+API-055  Write released tolerance through `DimensionTolerance.Type` +
+         `SetValues2` only from controlled Product Definition.
+API-056  Display precision may be normalized with `DisplayDimension.SetPrecision2`
+         because precision is presentation, not nominal geometry.
+API-057  Removing an unsupported drawing tolerance is allowed only when:
+         a) the exact annotation is unique,
+         b) the nominal is preserved,
+         c) it is a reference/drawing dimension,
+         d) Product Definition does NOT authorize the displayed tolerance,
+         e) source model hash remains invariant.
+API-058  Never "round" a nominal only because the number looks unusual.
+         Nominal change = Product Definition / 3D engineering decision.
+
+----------------------------------------------------------------------
+7. ENGINEERING AUTHORITY BOUNDARY
+----------------------------------------------------------------------
+API-060  API may implement an already authorized:
+         view, section, dimension display, fit, tolerance, datum tag, GTol/FCF,
+         TED, surface symbol, controlled note, title-block value, placement.
+API-061  API may NOT choose:
+         engineering tolerance, datum scheme, Ra, fit, thread class,
+         manufacturing process, inspection acceptance, leak criterion.
+API-062  Raw B-rep geometry is evidence, not Product Definition.
+API-063  A modeled cylinder close to a thread minor diameter does not by itself
+         authorize a thread callout.
+API-064  A drawing must use engineering semantics:
+         thread -> thread designation;
+         groove -> groove characteristic;
+         tap-prep diameter -> thread callout, not raw drill diameter.
+
+K01-P003 examples:
+- Ø10.917 model cylinder = M12×1-6H semantic thread region, not Ø10.92 bore.
+- Ø7.90 = P014 retaining-ring groove, not M9×1.
+- Ø2.05 J2 holes = tap-preparation geometry for M2.5×0.45-6H, not final Ø2.05 callout.
+- Ø3.02 = plain datum-C mating hole, not M3.
+
+----------------------------------------------------------------------
+8. CANDIDATE-FIRST MUTATION
+----------------------------------------------------------------------
+API-070  New drawing/CAD mutation operation starts on a copy, not canonical.
+API-071  Candidate directory is timestamped and isolated.
+API-072  Candidate records source SHA, candidate SHA and dependency SHA.
+API-073  Preflight resolves every intended target BEFORE first mutation.
+API-074  If any target is missing, duplicated, wrong type, or semantically
+         ambiguous, perform zero mutation and HOLD.
+API-075  After mutation rebuild/redraw, re-enumerate, and verify exact results.
+API-076  Candidate PASS != canonical promotion.
+API-077  Canonical promotion is a separate guarded transaction.
+
+----------------------------------------------------------------------
+9. CANONICAL MUTATION TRANSACTION
+----------------------------------------------------------------------
+API-080  Canonical mutation requires:
+         accepted engineering decision + passed candidate evidence.
+API-081  Current canonical SHA must equal the source SHA used by evidence.
+API-082  Create and verify a backup before mutation.
+API-083  Mutate only exact semantic target(s).
+API-084  Post-check relevant assembly/drawing/product properties.
+API-085  If post-check fails: close SolidWorks, rollback from backup,
+         verify restored SHA, report HOLD_ROLLED_BACK.
+API-086  Never leave partially promoted canonical state.
+
+PROVEN:
+EDR-047 P004 canonical promotion:
+8.000 -> 7.990; A001 14 components; mate errors 0 -> 0; A001 invariant PASS.
+
+----------------------------------------------------------------------
+10. ASSEMBLY CHECKING
+----------------------------------------------------------------------
+API-090  Do not use full 4x4 transform equality as a universal invariant.
+API-091  Decompose changes into:
+         rotation/orientation;
+         axial translation;
+         lateral/radial translation;
+         reference-component movement.
+API-092  A bounded solver translation caused directly by an intentional geometry
+         change can be valid.
+API-093  Active mate errors, occurrence count, dependency presence and source
+         invariance are separate gates.
+
+FAILURE LESSON:
+P004 V1.2 reported transform delta = 0.00001 m = 0.010 mm.
+That was the intended OAL delta, not an assembly failure.
+V1.3 decomposed it correctly and passed:
+axial 0.010 mm; lateral 0; rotation 0; P003 0; P014 0; mates 0.
+
+----------------------------------------------------------------------
+11. DRAWING SYSTEM LAYERS
+----------------------------------------------------------------------
+API-100  Semantic QA != visual QA != release.
+API-101  Semantic QA proves required characteristics and values.
+API-102  D8/presentation QA proves readability/layout/overlap/view quality.
+API-103  Release requires Product Definition readiness + semantic QA +
+         presentation QA + manufacturing/inspection/configuration readiness.
+API-104  OPEN/PARTIAL/UNKNOWN never becomes PASS automatically.
+API-105  Local verification PASS != node/product/release PASS.
+API-106  Drawing System is projection from Product Definition; not authority.
+
+----------------------------------------------------------------------
+12. D003-SPECIFIC CONTROL
+----------------------------------------------------------------------
+API-110  Working source for controlled normalization:
+D:\Marvilon\K01\cad\drawings\candidates\K01-D-003\
+drawing_system_v1_20260917_110205\
+d8_api_pass1_v2_20260917_113022\
+d8_layout_refine_v1_20260917_122102\
+K01-D-003.SLDDRW
+
+API-111  Preserve existing native Section B-B and three-view architecture.
+API-112  Preserve M12×1-6H already visible in the current user screenshot.
+         Do not add a duplicate and do not infer DEPTH 6.
+API-113  Preserve valid non-round nominals:
+         Ø5.60, Ø7.90, Ø8.60, Ø9.03, 0.95, etc.
+         They are not to be rounded by drawing cleanup.
+API-114  Unsupported manually assigned tolerances identified for cleanup:
+         39.5 ±0.2
+         3 ±0.5
+         5 ±0.5
+         27 ±0.1
+         2 ±0.05
+         Ø6.6 ±0.3
+         These tolerances are not current Product Definition authority.
+API-115  Duplicate section Ø12 ±0.2 must not compete with the controlled
+         J2 end-view Ø12 H9; hide/remove duplicate on candidate.
+API-116  Datum-C size must be displayed as Ø3.02 +0.01/0.
+         Datum-C location tolerance relative A|B remains OPEN.
+API-117  Restore/preserve:
+         J1 CLAMP: 3× Ø4.50 THRU; PCD Ø24; 120° EQ SP.
+API-118  Preserve:
+         Ø10.00 g6;
+         Ø33.00 ±0.05;
+         Ø14.10 g6;
+         Ø12.00 H9;
+         1.50 ±0.05;
+         3×M2.5×0.45-6H DEPTH 5.00, PCD Ø26.50, 120°;
+         EN 1.4404 / AISI 316L;
+         gland CANDIDATE / NOT RELEASED.
+API-119  Do not invent a general tolerance class merely to fill the title block.
+         Review drawing may remain NOT FOR MANUFACTURE while production
+         tolerances are still open.
+
+----------------------------------------------------------------------
+13. ANTI-LOOP / WIP
+----------------------------------------------------------------------
+API-120  Goal and deliverable are fixed before API work.
+API-121  WIP = one active engineering deliverable.
+API-122  Two consecutive API actions that do not reduce the active deliverable's
+         Definition-of-Done gaps -> STOP and reassess.
+API-123  Prefer one consolidated pass over one script per characteristic.
+API-124  If a correction can be done safely on existing named annotations,
+         refine existing drawing; do not rebuild the drawing from zero.
+API-125  Do not expand infrastructure faster than product closure.
+API-126  Product > Evidence > Automation.
+
+----------------------------------------------------------------------
+14. REQUIRED OUTPUT OF EVERY API RUN
+----------------------------------------------------------------------
+API-130  Console: explicit STATUS and RC.
+API-131  Machine report JSON.
+API-132  Human report TXT.
+API-133  Source SHA before/after.
+API-134  Candidate path and candidate SHA for mutation runs.
+API-135  Exact list of changed objects and before/after state.
+API-136  Exact unresolved/ambiguous objects.
+API-137  No stale CURRENT output may masquerade as current PASS.
+
+----------------------------------------------------------------------
+15. PROVEN / NOT PROVEN LANGUAGE
+----------------------------------------------------------------------
+API-140  "PROVEN" may be used only for an operation actually executed successfully
+         on the user's local SW2018 environment.
+API-141  Reusing a proven runtime scaffold does not make a new CAD operation proven.
+API-142  A new refiner package is "candidate / ready to run" until its first clean run.
+API-143  Runtime/deployment, annotation enumeration, D003 annotation movement,
+         controlled notes, native Section B-B, source hash guards,
+         P004 parameter mutation and assembly replacement have project precedent.
+API-144  Any new target-matching or tolerance-removal logic remains unproven until run.
+
+END OF STANDARD

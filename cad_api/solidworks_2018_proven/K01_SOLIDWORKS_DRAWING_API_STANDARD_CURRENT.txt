@@ -1,0 +1,185 @@
+K01 SOLIDWORKS 2018 DRAWING API OPERATING STANDARD
+VERSION 4.0
+DATE 2026-09-19
+STATUS CONTROLLED CANDIDATE FOR REPO INSTALL
+
+ONE ARCHITECTURE
+================
+There are only three permanent layers:
+
+1) K01_SW2018_RUNTIME_CORE_V1
+   Technical infrastructure shared by every drawing API.
+
+2) K01_DRAWING_BUILD_API_V1
+   Base construction of drawing candidates.
+
+3) K01_DRAWING_REFINE_API_V1
+   Refinement of existing drawing candidates.
+
+Do NOT create a new standalone API runner for each individual dimension, tolerance,
+note, datum, thread or drawing defect.
+
+AUTHORITY
+=========
+Requirements -> Decisions -> Interfaces -> 3D -> Product Definition ->
+Drawing Spec -> Drawing Build -> Drawing Refine -> Semantic QA -> Visual QA ->
+Manufacturing/Inspection evidence -> Promotion/Release.
+
+The API implements authority. It does not invent authority.
+
+RUNTIME CORE
+============
+- SOLIDWORKS 2018 / revision 26.
+- .NET Framework 4 / C#5 / x64.
+- Strongly typed SolidWorks.Interop.*.
+- Explicit casts for COM calls returning object.
+- Exact installed SW2018 api\redist interops.
+- Copy interop DLLs beside EXE.
+- Runtime-bind probe before CAD work.
+- Candidate-first mutations.
+- Source SHA before/after.
+- Save3 -> CloseDoc -> filesystem hash/copy.
+- Bounded retry after CloseDoc.
+- Canonical mutation only through a separate guarded promotion transaction.
+
+SOLIDWORKS PROCESS POLICY
+=========================
+Do NOT require the whole SolidWorks application to be closed.
+
+If SolidWorks is not running:
+- start a controlled instance;
+- remember ownership;
+- close only the instance created by the API.
+
+If SolidWorks is already running:
+- attach to the existing instance;
+- do not close the user's application;
+- do not close unrelated documents.
+
+For REFINE:
+- if the exact source SLDDRW is already open, HOLD TARGET_DRAWING_OPEN;
+- unrelated open documents are allowed;
+- the API works only on a timestamped candidate copy.
+
+This replaces the obsolete global SOLIDWORKS_MUST_BE_CLOSED rule.
+
+ANNOTATIONS
+===========
+Inventory:
+IView.GetFirstAnnotation3 -> IAnnotation.GetNext3
+
+Mutation handles:
+IView.GetAnnotations -> IAnnotation.GetSpecificAnnotation
+
+Known D003 precedent:
+- 104 annotations enumerated;
+- existing notes were edited;
+- annotation positions were moved;
+- J1 clamp note was recovered;
+- native Section B-B was preserved.
+
+DIMENSIONS
+==========
+- DisplayDimension and model Dimension are different objects.
+- Use DisplayDimension.GetDimension2(0) for underlying Dimension.
+- Known semantic annotation ID is preferred.
+- Signature fallback is allowed only when exactly one visible target matches.
+- Discovery count is not object identity.
+- Known model dimensions should use semantic parameter identity where possible.
+- Never mutate a model-driving tolerance from DRAWING REFINE unless an engineering
+  decision explicitly authorizes model metadata mutation.
+- Display precision is presentation; nominal value is engineering authority.
+
+THREADS / SEMANTICS
+===================
+Raw B-rep is not a manufacturing callout.
+
+K01-P003:
+- Ø10.917 model geometry -> M12×1-6H semantic thread region.
+- Ø7.90 -> P014 retaining-ring groove, not M9×1.
+- Ø2.05 -> tap preparation for M2.5×0.45-6H, not final Ø2.05.
+- Ø3.02 -> plain datum-C locating hole, not M3.
+
+BUILD API
+=========
+BUILD creates the base candidate:
+- sheet/template;
+- approved views;
+- approved native section;
+- controlled dimensions;
+- datums;
+- GTol/FCF;
+- notes;
+- semantic annotation IDs.
+
+BUILD must be adapter-based. Existing Drawing System engines remain adapters.
+Do not rewrite proven builder logic merely to fit the facade.
+
+REFINE API
+==========
+REFINE works on an existing SLDDRW candidate:
+- inventory annotations;
+- resolve all requested targets before first mutation;
+- set/clear authorized tolerance;
+- edit note text;
+- precision;
+- visibility;
+- position;
+- hide duplicates;
+- preserve views and native section.
+
+If one requested target is absent, duplicated, wrong type or semantically ambiguous:
+ZERO accepted mutation -> HOLD.
+
+D003 CURRENT RULE
+=================
+Work from the selected existing drawing:
+D:\Marvilon\K01\cad\drawings\candidates\K01-D-003\
+drawing_system_v1_20260917_110205\
+d8_api_pass1_v2_20260917_113022\
+d8_layout_refine_v1_20260917_122102\
+K01-D-003.SLDDRW
+
+Preserve:
+- native Section B-B;
+- existing view architecture;
+- M12×1-6H already present;
+- Ø10.00 g6;
+- Ø33.00 ±0.05;
+- Ø14.10 g6;
+- Ø12.00 H9;
+- 1.50 ±0.05;
+- J2 M2.5 pattern;
+- material EN 1.4404 / AISI 316L;
+- functional non-round nominals such as Ø5.60, Ø7.90, Ø8.60, Ø9.03, 0.95.
+
+Current authorized cleanup:
+- datum-C size: Ø3.02 +0.01/0;
+- remove unsupported explicit tolerance from 39.5 ±0.2;
+- remove unsupported explicit tolerance from 3 ±0.5;
+- remove unsupported explicit tolerance from 5 ±0.5;
+- remove unsupported explicit tolerance from 27 ±0.1;
+- remove unsupported explicit tolerance from 2 ±0.05;
+- remove unsupported explicit tolerance from Ø6.6 ±0.3;
+- hide duplicate section Ø12 ±0.2, preserving J2 Ø12 H9;
+- restore/preserve J1 clamp callout;
+- normalize selected display precision only.
+
+Do not:
+- round nominals for appearance;
+- add a general tolerance class without authority;
+- infer M12 DEPTH 6;
+- release Ra, CZ or position tolerances that remain OPEN.
+
+PROVEN LANGUAGE
+===============
+"PROVEN" means the exact operation has executed successfully on the user's local
+SOLIDWORKS 2018 environment.
+
+A proven runtime scaffold does not make a new drawing mutation operation proven.
+
+GIT DISCIPLINE
+==============
+API architecture is a separate, narrow commit.
+Never stage the entire current dirty K01 working tree.
+Stage only the architecture allowlist and verify the staged path list before commit/push.

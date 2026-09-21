@@ -1,0 +1,124 @@
+{
+  "schema": "k01.drawing_annotate_existing.job.v1",
+  "drawing_id": "K01-D-005",
+  "source_drawing": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-005\\drawing_system_v1_20260920_225023\\generated\\K01-D-005.SLDDRW",
+  "candidate_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-005\\annotate_existing_v1",
+  "operations": [
+    {
+      "id": "D005_HEAD_OD_FIT",
+      "op": "SET_FIT",
+      "target": {
+        "annotation_name": "K01DS_P006-C02-HEAD-OD"
+      },
+      "shaft_fit": "h9",
+      "precision": 2
+    },
+    {
+      "id": "D005_BORE_THRU",
+      "op": "SET_DIM_TEXT",
+      "target": {
+        "annotation_name": "K01DS_P006-C03-BORE"
+      },
+      "suffix": " THRU",
+      "precision": 2
+    },
+    {
+      "id": "D005_SERVICE_HOLE_ASYM",
+      "op": "SET_ASYM_TEXT",
+      "target": {
+        "annotation_name": "K01DS_P006-C04-HOLE-SIZE"
+      },
+      "lower_tol_mm": 0.0,
+      "upper_tol_mm": 0.05,
+      "suffix": " BLIND",
+      "precision": 2
+    },
+    {
+      "id": "D005_HOLE_DEPTH",
+      "op": "SET_NOTE",
+      "target": {
+        "annotation_name": "K01DS_P006-C04-DEPTH"
+      },
+      "text": "2× BLIND DEPTH 1.20 ±0.05"
+    },
+    {
+      "id": "D005_PCD_BASIC",
+      "op": "SET_NOTE",
+      "target": {
+        "annotation_name": "K01DS_P006-C04-PCD"
+      },
+      "text": "Ø8.50 BASIC"
+    },
+    {
+      "id": "D005_ANGLE_BASIC",
+      "op": "SET_NOTE",
+      "target": {
+        "annotation_name": "K01DS_P006-C04-ANGLE"
+      },
+      "text": "180° BASIC"
+    },
+    {
+      "id": "D005_THREAD_NOTE",
+      "op": "SET_NOTE",
+      "target": {
+        "annotation_name": "K01DS_P006-C01-THREAD"
+      },
+      "text": "M12×1-6g"
+    },
+    {
+      "id": "D005_RELIEF",
+      "op": "SET_DIM_TEXT",
+      "target": {
+        "annotation_name": "RD1"
+      },
+      "prefix": "RELIEF ",
+      "suffix": " ×0.06",
+      "precision": 2
+    },
+    {
+      "id": "D005_PROP_MATERIAL_A",
+      "op": "SET_PROPERTY",
+      "property_name": "MATERIAL",
+      "property_value": "AISI 316L / EN 1.4404"
+    },
+    {
+      "id": "D005_PROP_MATERIAL_B",
+      "op": "SET_PROPERTY",
+      "property_name": "Material",
+      "property_value": "AISI 316L / EN 1.4404"
+    },
+    {
+      "id": "D005_PROP_SCALE_A",
+      "op": "SET_PROPERTY",
+      "property_name": "SCALE",
+      "property_value": "5:1"
+    },
+    {
+      "id": "D005_PROP_SCALE_B",
+      "op": "SET_PROPERTY",
+      "property_name": "Scale",
+      "property_value": "5:1"
+    },
+    {
+      "id": "D005_NOTE_GENERAL_TOL",
+      "op": "ADD_NOTE",
+      "text": "GENERAL TOLERANCE: OPEN — DEFINE BEFORE RELEASE",
+      "x_m": 0.025,
+      "y_m": 0.08
+    },
+    {
+      "id": "D005_NOTE_SURFACE",
+      "op": "ADD_NOTE",
+      "text": "SURFACE TEXTURE: OPEN — DEFINE BEFORE RELEASE",
+      "x_m": 0.025,
+      "y_m": 0.073
+    },
+    {
+      "id": "D005_NOTE_POSITION",
+      "op": "ADD_NOTE",
+      "text": "POSITION Ø0.10 RELATIVE TO THREAD AXIS — DATUM DESIGNATOR OPEN",
+      "x_m": 0.025,
+      "y_m": 0.066
+    }
+  ]
+}

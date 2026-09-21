@@ -1,0 +1,138 @@
+{
+  "schema": "k01.solidworks_api.proven_registry.v1",
+  "runtime": {
+    "product_year": 2018,
+    "api_revision": 26,
+    "csharp": "C# 5 / .NET Framework v4",
+    "signature_authority": "INSTALLED_INTEROP_DLL_AND_LOCAL_COMPILER"
+  },
+  "policy": {
+    "default": "PROVEN_FIRST",
+    "parallel_reimplementation": "PROHIBITED_WHEN_PROVEN_CAPABILITY_EXISTS_UNLESS_GAP_DOCUMENTED",
+    "freeze_after_pass": true,
+    "canonical_first_write": false
+  },
+  "known_signatures_and_nuances": [
+    {
+      "item": "Face selection",
+      "rule": "Face2 -> Entity -> IEntity.Select4"
+    },
+    {
+      "item": "OpenDoc6",
+      "rule": "local interop uses ref errors/ref warnings"
+    },
+    {
+      "item": "Save3",
+      "rule": "local interop uses ref errors/ref warnings"
+    },
+    {
+      "item": "IActivateDoc3",
+      "rule": "local interop uses ref error"
+    },
+    {
+      "item": "GetUpperAndLowerLimit",
+      "rule": "local interop uses ref/ref; avoid unless acceptance requires it"
+    },
+    {
+      "item": "GetObjectByPersistReference3",
+      "rule": "out ErrorCode; state=0 required after reopen"
+    },
+    {
+      "item": "Environment",
+      "rule": "use System.Environment because SW interop also defines Environment"
+    },
+    {
+      "item": "Feature traversal",
+      "rule": "explicit object -> Feature casts"
+    },
+    {
+      "item": "AddMate5",
+      "rule": "swAddMateError_NoError=1 on SW2018"
+    },
+    {
+      "item": "GetBox",
+      "rule": "approximate; not an engineering tolerance acceptance primitive"
+    },
+    {
+      "item": "DimXpert boolean return",
+      "rule": "diagnostic only; semantic save-close-reopen proof is authoritative"
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "P007_DIMXPERT_WRITE_C02_C05",
+      "status": "PROVEN",
+      "primary_source": "D:\\BreshevEngineering\\Additional\\k01_step13_integrated\\payload\\tools\\engineering\\run_p007_pmi_step13.py",
+      "evidence": "reports/cad/p007_pmi_step13/K01_P007_PMI_STEP13_CURRENT.json",
+      "product_evidence": "control/product_definition/K01_P007_PMI_WRITE_EVIDENCE.json",
+      "proven_status": "PASS_PMI_SAVE_REOPEN_WITH_API_RETURN_ANOMALY",
+      "proven_results": {
+        "C02_nominal_mm": 14.1,
+        "C05_nominal_mm": 33.0,
+        "feature_count_after_reopen": 2,
+        "annotation_count_after_reopen": 2,
+        "C02_persist_state": 0,
+        "C05_persist_state": 0,
+        "geometry_invariant": true
+      },
+      "rule": "REUSE_OR_ADAPT_THIS_IMPLEMENTATION; DO_NOT REWRITE THE SAME CAPABILITY FIRST"
+    },
+    {
+      "id": "P007_PERSISTENT_REFERENCE_REBIND",
+      "status": "PROVEN",
+      "primary_source": "cad_api/medtas/K01P007PersistentRefRebind.cs",
+      "current_report": "reports/control/K01_P007_CANONICAL_PERSISTENT_REBIND_CURRENT.json",
+      "proven_results": {
+        "resolved_after_reopen": 9,
+        "native_CAD_mutated": false
+      }
+    },
+    {
+      "id": "A001_SEMANTIC_EXTRACTION",
+      "status": "PROVEN",
+      "primary_source": "cad_api/medtas/K01CadSemanticA001.cs",
+      "current_report": "reports/medtas/cad/current/K01_CAD_SEM_A001.json"
+    },
+    {
+      "id": "DATUM_C_ASSEMBLY_QA",
+      "status": "PROVEN",
+      "primary_source": "cad_api/gates/gate04b/K01Gate04B_DatumC_AssemblyQA.cs",
+      "current_report": "reports/cad/current/K01_GATE04B_DATUM_C_ASSEMBLY_QA.json"
+    },
+    {
+      "id": "BASELINE02C_REFERENCE_REWRITE",
+      "status": "PROVEN",
+      "primary_source": "cad_api/gates/gate04b/K01Baseline02C_ReferenceRewrite.cs",
+      "current_report": "reports/control/K01_BASELINE_02C_PROMOTION_APPLY_CURRENT.json"
+    },
+    {
+      "id": "BASELINE02C_STABLE_ASSEMBLY_QA",
+      "status": "PROVEN",
+      "primary_source": "cad_api/gates/gate04b/K01Baseline02C_StableAssemblyQA.cs",
+      "current_report": "reports/cad/current/K01_BASELINE_02C_POST_PROMOTION_ASSEMBLY_QA.json"
+    },
+    {
+      "id": "DIMXPERT_READBACK",
+      "status": "PROVEN_READER",
+      "primary_source": "cad_api/medtas/K01MbdDimXpertPart.cs",
+      "note": "Reader only; exact optional metadata methods must still respect installed SW2018 signatures."
+    },
+    {
+      "id": "DRAWING_SKELETON_GENERATION",
+      "status": "PROVEN_WITH_LIMITATION",
+      "primary_source": "cad_api/medtas/K01DrawingPackGenerator.cs",
+      "limitation": "template + views skeleton only; no blanket AutoDimension/InsertModelAnnotations"
+    },
+    {
+      "id": "SOLIDWORKS_LIVE_BRIDGE",
+      "status": "PROVEN_READ_ONLY",
+      "primary_source": "cad_api/bridge/K01SolidWorksLiveBridge.cs"
+    },
+    {
+      "id": "P007_DIMXPERT_PHASE_A_CSHARP_REIMPLEMENTATION",
+      "status": "EXPERIMENTAL_DO_NOT_USE_AS_PRIMARY",
+      "primary_source": "cad_api/medtas/K01P007DimXpertPhaseA.cs",
+      "reason": "parallel implementation duplicated already-proven Step13 capability and consumed repeated SW2018 compatibility iterations"
+    }
+  ]
+}

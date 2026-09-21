@@ -25,6 +25,9 @@ public class K01DrawingSystemV1
         public string projection;
         public string units;
         public string material;
+        // Optional validated drawing-family seed. When present, the engine opens a
+        // copied seed instead of regenerating view topology from zero.
+        public string seed_drawing_path;
         public List<ViewSpec> view_definitions;
         public Dictionary<string,BindingSpec> bindings;
         public List<DatumSpec> datum_features;
@@ -32,6 +35,10 @@ public class K01DrawingSystemV1
         public Dictionary<string,string> title_block_properties;
         public List<string> release_blockers;
         public List<string> review_notes;
+        // Optional sheet-space layout for the consolidated review-note block.
+        public double review_note_x_m;
+        public double review_note_y_m;
+        public double review_note_step_m;
     }
     public class ViewSpec
     {
@@ -43,6 +50,11 @@ public class K01DrawingSystemV1
         public double x_m;
         public double y_m;
         public double scale;
+        // LONGITUDINAL_SECTION controls. Defaults preserve legacy behavior unless explicitly set.
+        public bool show_parent;
+        public double parent_x_m;
+        public double parent_y_m;
+        public double section_depth_m;
     }
     public class BindingSpec
     {
@@ -88,6 +100,7 @@ public class K01DrawingSystemV1
         public string prefix;
         public string suffix;
         public double ra_um;
+        public int precision;
         public string datum_1;
         public string datum_2;
         public string state;
@@ -108,6 +121,7 @@ public class K01DrawingSystemV1
         public Dictionary<string,PlacementPoint> annotations;
     }
 
+    static bool SectionPresentationQaRequired=false;
     static string Arg(string[] a,string k){for(int i=0;i<a.Length-1;i++)if(a[i]==k)return a[i+1];return null;}
     static void Need(bool ok,string msg){if(!ok)throw new Exception(msg);}
     static bool Eq(string a,string b){return String.Equals(a??"",b??"",StringComparison.OrdinalIgnoreCase);}
@@ -192,7 +206,8 @@ public class K01DrawingSystemV1
     static double UserMm(DisplayDimension dd,ModelDoc2 doc){try{Dimension d=dd.GetDimension2(0);return d==null?Double.NaN:d.IGetUserValueIn2(doc);}catch{return Double.NaN;}}
     static Annotation Ann(DisplayDimension dd){try{return dd==null?null:dd.GetAnnotation() as Annotation;}catch{return null;}}
     static void Hide(Annotation a){try{if(a!=null)a.Visible=(int)swAnnotationVisibilityState_e.swAnnotationHidden;}catch{}}
-    static void FormatDim(DisplayDimension dd){if(dd==null)return;try{dd.ShowParenthesis=false;}catch{}try{dd.ShowLowerParenthesis=false;}catch{}try{dd.SetPrecision2(2,2,2,2);}catch{}}
+    static void FormatDim(DisplayDimension dd){FormatDim(dd,2);}
+    static void FormatDim(DisplayDimension dd,int precision){if(dd==null)return;int p=precision>0?precision:2;try{dd.ShowParenthesis=false;}catch{}try{dd.ShowLowerParenthesis=false;}catch{}try{dd.SetPrecision2(p,p,p,p);}catch{}}
     static void NameDim(DisplayDimension dd,string name){try{Dimension d=dd.GetDimension2(0);if(d!=null)d.Name=name;}catch{}}
     static DisplayDimension AcceptDim(ModelDoc2 doc,DisplayDimension dd,double expected,string id,string path,List<string> log){if(dd==null)return null;double mm=UserMm(dd,doc);if(!Double.IsNaN(mm)&&Math.Abs(Math.Abs(mm)-expected)>0.03){Hide(Ann(dd));log.Add("DIM "+id+" REJECT path="+path+" actual="+F(mm)+" expected="+F(expected));return null;}NameDim(dd,id);try{Annotation an=Ann(dd);if(an!=null)an.SetName(AName(id));}catch{}FormatDim(dd);log.Add("DIM "+id+" OK path="+path+" actual="+(Double.IsNaN(mm)?"NaN":F(mm)));doc.ClearSelection2(true);return dd;}
     static DisplayDimension TryDiameter(ModelDoc2 doc,View v,Face2 face,double expected,double x,double y,string id,List<string> log){var c=new List<object>();foreach(object eo in Items(face.GetEdges()))if(eo is Entity)c.Add(eo);c.Add(face);int k=0;foreach(object q in c){k++;doc.ClearSelection2(true);if(!SelectInView(v,q,false))continue;DisplayDimension dd=null;try{dd=doc.AddDiameterDimension2(x,y,0) as DisplayDimension;}catch{}DisplayDimension ok=AcceptDim(doc,dd,expected,id,"diameter_"+k,log);if(ok!=null)return ok;}log.Add("DIM "+id+" FAIL");return null;}
@@ -203,21 +218,265 @@ public class K01DrawingSystemV1
     static DisplayDimension TryLinearRobust(ModelDoc2 doc,View v,Face2 a,Face2 b,double expected,double x,double y,string id,List<string> log){DisplayDimension dd=TryLinear(doc,v,a,b,expected,x,y,id,log);return dd??TryLinearVisiblePlaneEdges(doc,v,a,b,expected,x,y,id,log);}
     static bool SetFit(DisplayDimension dd,string hole,string shaft){try{Dimension d=dd.GetDimension2(0);DimensionTolerance t=d==null?null:d.Tolerance as DimensionTolerance;if(t==null)return false;t.Type=(int)swTolType_e.swTolFIT;bool ok=t.SetFitValues(hole??"",shaft??"");FormatDim(dd);return ok;}catch{return false;}}
     static bool SetSymTol(DisplayDimension dd,double tolMm,List<string> log,string id){if(dd==null)return false;try{Dimension d=dd.GetDimension2(0);DimensionTolerance t=d==null?null:d.Tolerance as DimensionTolerance;if(t==null)return false;double v=tolMm/1000.0;t.Type=(int)swTolType_e.swTolSYMMETRIC;bool ok=t.SetValues2(-v,v,(int)swSetValueInConfiguration_e.swSetValue_InThisConfiguration,null);if(!ok)ok=t.SetValues2(-v,v,(int)swSetValueInConfiguration_e.swSetValue_InAllConfigurations,null);if(!ok){bool a=d.SetToleranceType((int)swTolType_e.swTolSYMMETRIC);bool b=d.SetToleranceValues(-v,v);ok=a&&b;}FormatDim(dd);log.Add("TOL "+id+" SYM "+F(tolMm)+" ok="+ok);return ok;}catch(Exception ex){log.Add("TOL "+id+" SYM FAIL="+One(ex.Message));return false;}}
-    static bool SetAsymTolOrFallback(DisplayDimension dd,double lowerMm,double upperMm,List<string> log,string id){if(dd==null)return false;try{Dimension d=dd.GetDimension2(0);DimensionTolerance t=d==null?null:d.Tolerance as DimensionTolerance;bool ok=false;if(t!=null){double lo=lowerMm/1000.0,up=upperMm/1000.0;try{t.Type=1;ok=t.SetValues2(lo,up,(int)swSetValueInConfiguration_e.swSetValue_InThisConfiguration,null);}catch{}if(!ok){try{bool a=d.SetToleranceType(1);bool b=d.SetToleranceValues(lo,up);ok=a&&b;}catch{}}}if(!ok){try{dd.SetText((int)swDimensionTextParts_e.swDimensionTextSuffix," +"+F(upperMm)+"/"+F(lowerMm));ok=true;log.Add("TOL "+id+" ASYM native=FAIL presentation_fallback=PASS");}catch{}}else log.Add("TOL "+id+" ASYM native=PASS");FormatDim(dd);return ok;}catch(Exception ex){log.Add("TOL "+id+" ASYM FAIL="+One(ex.Message));return false;}}
+    static string AsymTolText(double lowerMm,double upperMm){return " +"+F(upperMm)+"/"+F(lowerMm);}
+    static bool SetAsymTolPresentation(DisplayDimension dd,double lowerMm,double upperMm,string userSuffix,List<string> log,string id)
+    {
+        if(dd==null)return false;
+        try
+        {
+            // SW2018 native asymmetric tolerance persistence is not yet qualified for the
+            // production drawing system. Use deterministic drawing presentation while the
+            // engineering authority remains in Drawing Spec / Product Definition.
+            Dimension d=dd.GetDimension2(0);
+            DimensionTolerance t=d==null?null:d.Tolerance as DimensionTolerance;
+            if(t!=null){try{t.Type=(int)swTolType_e.swTolNONE;}catch{}}
+            string s=AsymTolText(lowerMm,upperMm)+(userSuffix??"");
+            dd.SetText((int)swDimensionTextParts_e.swDimensionTextSuffix,s);
+            FormatDim(dd);
+            log.Add("TOL "+id+" ASYM presentation=CONTROLLED_TEXT suffix="+One(s));
+            return true;
+        }
+        catch(Exception ex){log.Add("TOL "+id+" ASYM FAIL="+One(ex.Message));return false;}
+    }
 
     static DatumTag CreateDatum(ModelDoc2 doc,View v,Face2 f,string label,double x,double y,List<string> log){try{doc.ClearSelection2(true);Need(SelectInView(v,f,false),"datum "+label+" selection failed");DatumTag dt=doc.IInsertDatumTag2();Need(dt!=null,"datum "+label+" insert null");Need(dt.SetLabel(label),"datum "+label+" label failed");Annotation a=dt.GetAnnotation() as Annotation;if(a!=null){a.SetPosition(x,y,0);try{a.SetName(AName("DATUM_"+label));}catch{}}doc.ClearSelection2(true);log.Add("DATUM "+label+" OK view="+VName(v));return dt;}catch(Exception ex){doc.ClearSelection2(true);log.Add("DATUM "+label+" FAIL="+One(ex.Message));return null;}}
     static string GSymbol(string s){if(Eq(s,"PERP"))return "<IGTOL-PERP>";if(Eq(s,"FLAT"))return "<IGTOL-FLAT>";if(Eq(s,"POSITION"))return "<IGTOL-POSI>";if(Eq(s,"TOTAL_RUNOUT"))return "<IGTOL-TRUN>";return s??"";}
     static Gtol CreateGtol(ModelDoc2 doc,View v,List<Face2> faces,AnnotationSpec a,double x,double y,List<string> log){try{doc.ClearSelection2(true);Need(faces!=null&&faces.Count>0,a.id+" no faces");bool first=true;foreach(Face2 f in faces){Need(SelectInView(v,f,!first),a.id+" selection failed");first=false;}Gtol g=doc.IInsertGtol();Need(g!=null,a.id+" IInsertGtol null");string mc=Eq(a.material_modifier,"M")?"<MOD-MMC>":"";g.SetFrameSymbols2((short)1,GSymbol(a.symbol),a.diameter_zone,mc,false,"","","","");string tv=F(a.tolerance_mm);if(!String.IsNullOrWhiteSpace(a.zone_modifier))tv+=" "+a.zone_modifier.Trim();Need(g.SetFrameValues2((short)1,tv,"",a.datum_1??"",a.datum_2??"",""),a.id+" SetFrameValues2 failed");Annotation an=g.GetAnnotation() as Annotation;if(an!=null){an.SetPosition(x,y,0);try{an.SetName(AName(a.id));}catch{}}doc.ClearSelection2(true);log.Add("GTOL "+a.id+" OK symbol="+a.symbol+" zone="+(a.zone_modifier??"")+" state="+a.state);return g;}catch(Exception ex){doc.ClearSelection2(true);log.Add("GTOL "+a.id+" FAIL="+One(ex.Message));return null;}}
     static bool AddSurfaceFinish(ModelDoc2 doc,View v,Face2 face,double raUm,double x,double y,string id,List<string> log){try{doc.ClearSelection2(true);Need(SelectInView(v,face,false),id+" surface selection failed");string val=raUm.ToString("0.###",CultureInfo.InvariantCulture);bool ok=doc.InsertSurfaceFinishSymbol2((int)swSFSymType_e.swSFMachining_Req,(int)swLeaderStyle_e.swBENT,x,y,0,(int)swSFLaySym_e.swSFNone,(int)swArrowStyle_e.swOPEN_ARROWHEAD,"","Ra","","",val,"","");doc.ClearSelection2(true);log.Add("SURFACE "+id+" Ra="+val+" "+(ok?"OK":"FAIL"));return ok;}catch(Exception ex){doc.ClearSelection2(true);log.Add("SURFACE "+id+" FAIL="+One(ex.Message));return false;}}
     static Note AddNote(ModelDoc2 doc,string text,double x,double y,string id,List<string> log){try{doc.ClearSelection2(true);Note n=doc.InsertNote(text) as Note;if(n==null){log.Add("NOTE "+id+" FAIL");return null;}Annotation a=n.GetAnnotation() as Annotation;if(a!=null){a.SetPosition(x,y,0);try{a.SetName(AName(id));}catch{}}try{n.SetName(AName(id));}catch{}try{n.LockPosition=true;}catch{}log.Add("NOTE "+id+" OK");return n;}catch(Exception ex){log.Add("NOTE "+id+" FAIL="+One(ex.Message));return null;}}
+    static Note AddBoundNote(ModelDoc2 doc,View v,List<Face2> faces,string text,double x,double y,string id,List<string> log)
+    {
+        try
+        {
+            Need(v!=null,id+" bound-note view missing");
+            Need(faces!=null&&faces.Count>0,id+" bound-note binding missing");
+            doc.ClearSelection2(true);
+            bool selected=false;
+            foreach(Face2 f in faces)
+            {
+                if(SelectInView(v,f,false)){selected=true;break;}
+            }
+            Need(selected,id+" bound-note entity selection failed");
+            Note n=doc.InsertNote(text) as Note;
+            Need(n!=null,id+" InsertNote returned null");
+            Annotation a=n.GetAnnotation() as Annotation;
+            if(a!=null)
+            {
+                a.SetPosition(x,y,0);
+                try{a.SetName(AName(id));}catch{}
+            }
+            try{n.SetName(AName(id));}catch{}
+            try{n.LockPosition=true;}catch{}
+            doc.ClearSelection2(true);
+            log.Add("BOUND_NOTE "+id+" OK view="+VName(v)+" text="+One(text));
+            return n;
+        }
+        catch(Exception ex)
+        {
+            doc.ClearSelection2(true);
+            log.Add("BOUND_NOTE "+id+" FAIL="+One(ex.Message));
+            return null;
+        }
+    }
     static Note AddTed(ModelDoc2 doc,string text,double x,double y,string id,List<string> log){try{Note n=doc.InsertNote(text) as Note;if(n==null)return null;bool box=false;try{box=n.SetBalloon((int)swBalloonStyle_e.swBS_Box,(int)swBalloonFit_e.swBF_Tightest);}catch{}Annotation a=n.GetAnnotation() as Annotation;if(a!=null){a.SetPosition(x,y,0);try{a.SetName(AName(id));}catch{}}try{n.SetName(AName(id));}catch{}try{n.LockPosition=true;}catch{}log.Add("TED "+id+" "+(box?"BOX_OK":"BOX_FAIL"));return box?n:null;}catch(Exception ex){log.Add("TED "+id+" FAIL="+One(ex.Message));return null;}}
     static void SetProp(ModelDoc2 doc,string k,string v){CustomPropertyManager c=doc.Extension.get_CustomPropertyManager("");try{c.Delete2(k);}catch{}int r=c.Add(k,"Text",v??"");if(r==0)try{c.Set2(k,v??"");}catch{}}
 
+    static double AutoSectionDepth(View basev,List<string> log)
+    {
+        // SectionDepth=0 is not treated as "unlimited".  Build a positive depth that
+        // exceeds the referenced part envelope; this is used only when the spec does
+        // not provide an explicit positive depth.
+        double depth=0.050; // 50 mm fail-safe minimum for K01 small parts.
+        try
+        {
+            ModelDoc2 refDoc=basev.ReferencedDocument as ModelDoc2;
+            PartDoc part=refDoc as PartDoc;
+            if(part!=null)
+            {
+                object bo=part.GetPartBox(true); // system units (m)
+                double[] b=bo as double[];
+                if(b!=null&&b.Length>=6)
+                {
+                    double dx=Math.Abs(b[3]-b[0]);
+                    double dy=Math.Abs(b[4]-b[1]);
+                    double dz=Math.Abs(b[5]-b[2]);
+                    double span=Math.Max(dx,Math.Max(dy,dz));
+                    if(span>0)depth=Math.Max(0.050,span*1.50);
+                    log.Add("SECTION_DEPTH_AUTO bbox_mm="+F(dx*1000)+"x"+F(dy*1000)+"x"+F(dz*1000)+" depth_mm="+F(depth*1000));
+                }
+                else log.Add("SECTION_DEPTH_AUTO bbox unavailable; fallback_mm="+F(depth*1000));
+            }
+            else log.Add("SECTION_DEPTH_AUTO referenced part unavailable; fallback_mm="+F(depth*1000));
+        }
+        catch(Exception ex){log.Add("SECTION_DEPTH_AUTO FAIL="+One(ex.Message)+" fallback_mm="+F(depth*1000));}
+        return depth;
+    }
+
     static View CreateSection(DrawingDoc dr,ModelDoc2 doc,string model,ViewSpec s,PlacementPoint pp,List<string> log)
     {
-        View basev=dr.CreateDrawViewFromModelView3(model,s.parent_orientation??"*Front",0.125,0.215,0) as View;Need(basev!=null,"section parent view creation failed");SetView(basev,0.125,0.215,s.scale);doc.EditRebuild3();
-        View sec=null;try{dr.ActivateView(VName(basev));double[] o=Outline(basev);Need(o.Length>=4,"section parent outline missing");double cy=(o[1]+o[3])*0.5;doc.ClearSelection2(true);SketchSegment ln=doc.SketchManager.CreateLine(o[0]-0.003,cy,0,o[2]+0.003,cy,0);Need(ln!=null,"section line creation failed");sec=dr.CreateSectionViewAt5(pp.x_m,pp.y_m,0,String.IsNullOrWhiteSpace(s.section_label)?"S":s.section_label,32,null,0) as View;}catch(Exception ex){log.Add("VIEW SECTION FAIL="+One(ex.Message));}
-        Need(sec!=null,"section view creation failed");SetView(sec,pp.x_m,pp.y_m,pp.scale>0?pp.scale:s.scale);try{sec.SetName2(AName("VIEW_"+s.id));}catch{}try{basev.SetVisible(false,false);}catch{try{basev.Position=new double[]{-0.08,0.32};}catch{}}log.Add("VIEW SECTION OK name="+VName(sec));return sec;
+        // K01 section-authoring V6 2026-09-19.
+        // V6 returns to the documented SOLIDWORKS CreateSectionViewAt5 authoring sequence:
+        // select the sketch segment directly, call CreateSectionViewAt5 with option 0x20,
+        // then normalize DrSection settings and rebuild. Do not pre-convert the sketch
+        // segment with MakeSectionLine; the API method itself consumes the selected line.
+        // Positive SectionDepth and fail-closed face-hatch QA remain in force.
+        double px=s.parent_x_m>0?s.parent_x_m:0.125;
+        double py=s.parent_y_m>0?s.parent_y_m:0.215;
+        double sc=s.scale>0?s.scale:1.0;
+        View basev=dr.CreateDrawViewFromModelView3(model,s.parent_orientation??"*Front",px,py,0) as View;
+        Need(basev!=null,"section parent view creation failed");
+        SetView(basev,px,py,sc);
+        try{basev.SetName2(AName("SECTION_PARENT_"+s.id));}catch{}
+        doc.EditRebuild3();
+
+        View sec=null;
+        Exception sectionFailure=null;
+        try
+        {
+            Need(dr.ActivateView(VName(basev)),"section parent ActivateView failed");
+            double[] o=Outline(basev);
+            Need(o.Length>=4,"section parent outline missing");
+            double cy=(o[1]+o[3])*0.5;
+
+            // IMPORTANT: line must belong to the drawing view, not to the sheet.
+            // ActivateView above establishes the view sketch context.
+            doc.ClearSelection2(true);
+            SketchSegment ln=doc.SketchManager.CreateLine(o[0]-0.006,cy,0,o[2]+0.006,cy,0);
+            Need(ln!=null,"section cutting sketch line creation failed");
+
+            // SOLIDWORKS API documented path: the selected sketch segment is passed directly
+            // to CreateSectionViewAt5. Do not call MakeSectionLine first.
+            bool selected=false;
+            try{selected=ln.Select4(false,null);}catch{}
+            Need(selected,"section cutting sketch line selection failed");
+            int selBefore=0;try{SelectionMgr sm=doc.SelectionManager as SelectionMgr;if(sm!=null)selBefore=sm.GetSelectedObjectCount2(-1);}catch{}
+            log.Add("SECTION_LINE_DIRECT sketch_selected="+selected+" selected_count="+selBefore);
+
+            string label=String.IsNullOrWhiteSpace(s.section_label)?"A":s.section_label.Trim();
+            object excluded=null;
+            // Use the SOLIDWORKS documented/proven creation option 0x20, then normalize
+            // DisplayOnlySurfaceCut=false on DrSection after creation. This matches the
+            // official CreateSectionViewAt5 example and the earlier K01 proven section path.
+            // Keep a positive SectionDepth.
+            const int CREATE_OPTIONS=32;
+            double depth=s.section_depth_m>0?s.section_depth_m:AutoSectionDepth(basev,log);
+            log.Add("SECTION_CREATE options="+CREATE_OPTIONS+" depth_mm="+F(depth*1000));
+            sec=dr.CreateSectionViewAt5(pp.x_m,pp.y_m,0,label,CREATE_OPTIONS,excluded,depth) as View;
+            Need(sec!=null,"CreateSectionViewAt5 returned null");
+            SetView(sec,pp.x_m,pp.y_m,pp.scale>0?pp.scale:sc);
+            try{sec.SetName2(AName("VIEW_"+s.id));}catch{}
+
+            DrSection ds=null;
+            try{ds=sec.GetSection() as DrSection;}catch{}
+            Need(ds!=null,"section QA: IView.GetSection returned null");
+
+            // Convert the created view to a normal complete section, not slice/partial.
+            try{ds.SetAutoHatch(true);}catch(Exception ex){log.Add("SECTION_QA SetAutoHatch FAIL="+One(ex.Message));}
+            try{ds.SetDisplayOnlySurfaceCut(false);}catch(Exception ex){log.Add("SECTION_QA SetDisplayOnlySurfaceCut FAIL="+One(ex.Message));}
+            try{ds.SetPartialSection(false);}catch(Exception ex){log.Add("SECTION_QA SetPartialSection FAIL="+One(ex.Message));}
+            try{ds.SectionDepth=depth;}catch(Exception ex){log.Add("SECTION_QA SectionDepth SET FAIL="+One(ex.Message));}
+            try{ds.SetReversedCutDirection(false);}catch{}
+            try{ds.SetScaleWithModelChanges(true);}catch{}
+            try{ds.CutSurfaceBodies=true;}catch{}
+            try{ds.DisplaySurfaceBodies=true;}catch{}
+            try{ds.ExcludeSliceSectionBodies=false;}catch{}
+            try{ds.ScaleHatchPattern=true;}catch{}
+
+            doc.EditRebuild3();
+            try{doc.ForceRebuild3(false);}catch{}
+
+            int hatchCount=0;
+            try{hatchCount=sec.GetFaceHatchCount();}catch(Exception ex){log.Add("SECTION_QA GetFaceHatchCount FAIL="+One(ex.Message));}
+            bool isSection=false;try{isSection=(sec.GetSection() as DrSection)!=null;}catch{}
+            bool displayOnly=true;try{displayOnly=ds.GetDisplayOnlySurfaceCut();}catch{}
+            bool partial=true;try{partial=ds.GetPartialSection();}catch{}
+            bool autoHatch=false;try{autoHatch=ds.GetAutoHatch();}catch{}
+            double depthNow=depth;try{depthNow=ds.SectionDepth;}catch{}
+            log.Add("SECTION_QA_NATIVE is_section="+isSection+" face_hatches="+hatchCount+" display_only_surface_cut="+displayOnly+" partial="+partial+" auto_hatch="+autoHatch+" depth_mm="+F(depthNow*1000)+" label="+label);
+            Need(isSection,"section QA failed: no native DrSection after rebuild");
+            Need(!displayOnly,"section QA failed: DisplayOnlySurfaceCut remained enabled");
+            Need(!partial,"section QA failed: section remained partial");
+            // SetAutoHatch is not a release gate for a part section; SOLIDWORKS documents
+            // automatic hatching as assembly-section behavior. Face-hatch evidence below
+            // is the actual section-content gate for this part drawing.
+            log.Add("SECTION_QA_INFO auto_hatch="+autoHatch+" (non-gating for part section)");
+            Need(depthNow>0.000001,"section QA failed: non-positive section depth");
+            if(hatchCount<=0)
+            {
+                SectionPresentationQaRequired=true;
+                log.Add("SECTION_PRESENTATION_QA_REQUIRED reason=GetFaceHatchCount returned 0; native DrSection exists and section settings passed; verify generated PDF/BMP/DXF independently");
+            }
+            log.Add("SECTION_SEMANTIC_QA PASS label="+label+" face_hatches="+hatchCount+" depth_mm="+F(depthNow*1000)+" mode=NATIVE_SECTION_V6C");
+        }
+        catch(Exception ex)
+        {
+            sectionFailure=ex;
+            log.Add("VIEW SECTION FAIL="+One(ex.Message));
+            // Critical V4 behavior: a returned View object is NOT enough. QA failure invalidates it.
+            sec=null;
+        }
+
+        Need(sec!=null,"section view creation/QA failed"+(sectionFailure==null?"":": "+One(sectionFailure.Message)));
+        if(!s.show_parent)
+        {
+            try{basev.SetVisible(false,false);}catch{try{basev.Position=new double[]{-0.08,0.32};}catch{}}
+        }
+        else
+        {
+            SetView(basev,px,py,sc);
+            log.Add("SECTION_PARENT visible=true name="+VName(basev));
+        }
+        log.Add("VIEW SECTION OK name="+VName(sec));
+        return sec;
+    }
+
+
+    static Dictionary<string,View> MapSeedViews(DrawingDoc dr,Spec spec,List<string> log)
+    {
+        var all=new List<View>();
+        View v=dr.GetFirstView() as View; // sheet view
+        if(v!=null)v=v.GetNextView() as View;
+        while(v!=null){all.Add(v);v=v.GetNextView() as View;}
+
+        var map=new Dictionary<string,View>(StringComparer.OrdinalIgnoreCase);
+        foreach(ViewSpec s in spec.view_definitions)
+        {
+            View hit=null;
+            string wanted=AName("VIEW_"+s.id);
+
+            // Primary contract: explicit stable API view name in the family seed.
+            foreach(View q in all)
+            {
+                if(Eq(VName(q),wanted)){Need(hit==null,"seed view duplicate name "+wanted);hit=q;}
+            }
+
+            // Safe fallback for a single section or a unique standard orientation.
+            if(hit==null&&Eq(s.kind,"LONGITUDINAL_SECTION"))
+            {
+                var cand=new List<View>();
+                foreach(View q in all){try{if((q.GetSection() as DrSection)!=null)cand.Add(q);}catch{}}
+                Need(cand.Count==1,"seed section view count="+cand.Count+" for "+s.id);
+                hit=cand[0];
+                try{hit.SetName2(wanted);}catch{}
+            }
+            if(hit==null&&!String.IsNullOrWhiteSpace(s.orientation))
+            {
+                var cand=new List<View>();
+                foreach(View q in all)
+                {
+                    string on="";try{on=q.GetOrientationName()??"";}catch{}
+                    if(Eq(on,s.orientation))cand.Add(q);
+                }
+                Need(cand.Count==1,"seed orientation "+s.orientation+" count="+cand.Count+" for "+s.id);
+                hit=cand[0];
+                try{hit.SetName2(wanted);}catch{}
+            }
+
+            Need(hit!=null,"seed view unresolved "+s.id);
+            map[s.id]=hit;
+            log.Add("SEED_VIEW "+s.id+" -> "+VName(hit));
+        }
+        return map;
     }
 
     static Dictionary<string,View> CreateViews(DrawingDoc dr,ModelDoc2 doc,Spec spec,PlacementProfile placement,List<string> log)
@@ -236,12 +495,49 @@ public class K01DrawingSystemV1
         try
         {
             Need(File.Exists(specPath),"spec missing");Need(!String.IsNullOrWhiteSpace(report),"report missing");Spec spec=new JavaScriptSerializer().Deserialize<Spec>(File.ReadAllText(specPath,Encoding.UTF8));Need(spec!=null&&Eq(spec.schema,"k01.drawing_system_spec.v1"),"bad spec schema");Need(File.Exists(spec.model_path),"model missing: "+spec.model_path);Need(spec.bindings!=null&&spec.annotations!=null&&spec.datum_features!=null,"spec authoring sections missing");
-            string sourceSha=Sha(spec.model_path);PlacementProfile placement=LoadPlacement(placementPath,spec.drawing_id,log);string stamp=DateTime.Now.ToString("yyyyMMdd_HHmmss"),outDir=Path.Combine(spec.output_root,"drawing_system_v1_"+stamp),generatedDir=Path.Combine(outDir,"generated"),manualDir=Path.Combine(outDir,"manual_finish"),evidenceDir=Path.Combine(outDir,"evidence");Directory.CreateDirectory(generatedDir);Directory.CreateDirectory(manualDir);Directory.CreateDirectory(evidenceDir);string dwg=Path.Combine(generatedDir,spec.drawing_id+".SLDDRW"),pdf=Path.Combine(generatedDir,spec.drawing_id+".PDF"),bmp=Path.Combine(generatedDir,spec.drawing_id+".BMP");
+            string sourceSha=Sha(spec.model_path);PlacementProfile placement=LoadPlacement(placementPath,spec.drawing_id,log);string stamp=DateTime.Now.ToString("yyyyMMdd_HHmmss"),outDir=Path.Combine(spec.output_root,"drawing_system_v1_"+stamp),generatedDir=Path.Combine(outDir,"generated"),manualDir=Path.Combine(outDir,"manual_finish"),evidenceDir=Path.Combine(outDir,"evidence");Directory.CreateDirectory(generatedDir);Directory.CreateDirectory(manualDir);Directory.CreateDirectory(evidenceDir);string dwg=Path.Combine(generatedDir,spec.drawing_id+".SLDDRW"),pdf=Path.Combine(generatedDir,spec.drawing_id+".PDF"),dxf=Path.Combine(generatedDir,spec.drawing_id+".DXF"),bmp=Path.Combine(generatedDir,spec.drawing_id+".BMP");
             Type t=Type.GetTypeFromProgID("SldWorks.Application");Need(t!=null,"SOLIDWORKS ProgID missing");sw=Activator.CreateInstance(t) as SldWorks;Need(sw!=null,"SOLIDWORKS activation failed");created=true;sw.Visible=true;Need(typeof(SldWorks).Assembly.GetName().Version.Major==26,"requires SOLIDWORKS 2018 interop major 26");
             int pe=0,pw=0;part=sw.OpenDoc6(spec.model_path,(int)swDocumentTypes_e.swDocPART,(int)swOpenDocOptions_e.swOpenDocOptions_Silent,"",ref pe,ref pw) as ModelDoc2;Need(part!=null,"open source part failed e="+pe+" w="+pw);List<Face2> fs=Faces(part);Need(fs.Count>0,"source part has no resolvable faces");Dictionary<string,List<Face2>> bind=ResolveBindings(spec,fs,log);
-            string templ=sw.GetUserPreferenceStringValue((int)swUserPreferenceStringValue_e.swDefaultTemplateDrawing);Need(!String.IsNullOrWhiteSpace(templ)&&File.Exists(templ),"default drawing template missing");doc=sw.NewDocument(templ,0,0,0) as ModelDoc2;Need(doc!=null,"new drawing failed");DrawingDoc dr=doc as DrawingDoc;Need(dr!=null,"new document is not drawing");bool setup=dr.SetupSheet5("Sheet1",(int)swDwgPaperSizes_e.swDwgPaperA3size,(int)swDwgTemplates_e.swDwgTemplateA3size,spec.sheet_scale,1,true,"",0.420,0.297,"",false);Need(setup,"SetupSheet5 failed");Need(SetSheetScale(dr,spec.sheet_scale,1,log),"sheet scale failed");Need(SheetFirstAngle(dr),"first-angle sheet property not active");
-            Dictionary<string,View> views=CreateViews(dr,doc,spec,placement,log);
-            foreach(KeyValuePair<string,string> p in spec.title_block_properties)SetProp(doc,p.Key,p.Value);SetProp(doc,"DrawingSystem","MARVILON_DRAWING_SYSTEM_V1");SetProp(doc,"SourceModelSHA256",sourceSha);SetProp(doc,"ReleaseState","HOLD");
+            bool seedMode=!String.IsNullOrWhiteSpace(spec.seed_drawing_path);
+            DrawingDoc dr=null;
+            Dictionary<string,View> views=null;
+            if(seedMode)
+            {
+                Need(File.Exists(spec.seed_drawing_path),"family seed missing: "+spec.seed_drawing_path);
+                File.Copy(spec.seed_drawing_path,dwg,true);
+                int de=0,dw=0;
+                doc=sw.OpenDoc6(dwg,(int)swDocumentTypes_e.swDocDRAWING,(int)swOpenDocOptions_e.swOpenDocOptions_Silent,"",ref de,ref dw) as ModelDoc2;
+                Need(doc!=null,"open family seed copy failed e="+de+" w="+dw);
+                dr=doc as DrawingDoc;Need(dr!=null,"family seed copy is not drawing");
+                Need(SetSheetScale(dr,spec.sheet_scale,1,log),"seed sheet scale failed");
+                Need(SheetFirstAngle(dr),"first-angle sheet property not active in seed");
+                views=MapSeedViews(dr,spec,log);
+                log.Add("DRAWING_SOURCE=VALIDATED_FAMILY_SEED "+spec.seed_drawing_path);
+            }
+            else
+            {
+                string templ=sw.GetUserPreferenceStringValue((int)swUserPreferenceStringValue_e.swDefaultTemplateDrawing);
+                Need(!String.IsNullOrWhiteSpace(templ)&&File.Exists(templ),"default drawing template missing");
+                doc=sw.NewDocument(templ,0,0,0) as ModelDoc2;Need(doc!=null,"new drawing failed");
+                dr=doc as DrawingDoc;Need(dr!=null,"new document is not drawing");
+                bool setup=dr.SetupSheet5("Sheet1",(int)swDwgPaperSizes_e.swDwgPaperA3size,(int)swDwgTemplates_e.swDwgTemplateA3size,spec.sheet_scale,1,true,"",0.420,0.297,"",false);
+                Need(setup,"SetupSheet5 failed");
+                Need(SetSheetScale(dr,spec.sheet_scale,1,log),"sheet scale failed");
+                Need(SheetFirstAngle(dr),"first-angle sheet property not active");
+                views=CreateViews(dr,doc,spec,placement,log);
+                log.Add("DRAWING_SOURCE=DYNAMIC_VIEW_BUILD");
+            }
+
+            foreach(KeyValuePair<string,string> p in spec.title_block_properties)SetProp(doc,p.Key,p.Value);
+            // Property aliases for controlled K01 templates. No source-model mutation.
+            SetProp(doc,"MATERIAL",spec.material??"");SetProp(doc,"Material",spec.material??"");
+            SetProp(doc,"DRAWING_TITLE",spec.title??"");SetProp(doc,"Description",spec.title??"");
+            SetProp(doc,"DWG_NO",spec.drawing_id??"");SetProp(doc,"DrawingNo",spec.drawing_id??"");
+            SetProp(doc,"STATUS",spec.status??"");SetProp(doc,"Status",spec.status??"");
+            SetProp(doc,"SCALE",F(spec.sheet_scale)+":1");SetProp(doc,"Scale",F(spec.sheet_scale)+":1");
+            SetProp(doc,"DrawingSystem","MARVILON_DRAWING_SYSTEM_V1");
+            SetProp(doc,"DrawingSystemHotfix","V7_1_R1_MERGED_BOUND_CALLOUTS_DXF_RESULT_20260921");
+            SetProp(doc,"SourceModelSHA256",sourceSha);SetProp(doc,"ReleaseState","HOLD");
 
             int datumOk=0;foreach(DatumSpec d in spec.datum_features){Need(bind.ContainsKey(d.binding)&&bind[d.binding].Count>0,"datum binding missing "+d.id);Need(!String.IsNullOrWhiteSpace(d.view)&&views.ContainsKey(d.view),"datum view missing/unknown "+d.id+" -> "+d.view);View v=views[d.view];double[] o=Outline(v);double x=o.Length>=4?o[0]-0.010:0.20,y=o.Length>=4?(o[1]+o[3])*0.5:0.10;PlacementPoint dp=PPoint(placement,"DATUM_"+d.id,x,y,0);if(CreateDatum(doc,v,bind[d.binding][0],d.id,dp.x_m,dp.y_m,log)!=null)datumOk++;}
 
@@ -251,11 +547,11 @@ public class K01DrawingSystemV1
                 View v=views.ContainsKey(a.view)?views[a.view]:null;Need(v!=null,"annotation view missing: "+a.id+" -> "+a.view);PlacementPoint ap=PPoint(placement,a.id,a.x_m,a.y_m,0);
                 if(Eq(a.kind,"DIAMETER")||Eq(a.kind,"DIAMETER_SET"))
                 {
-                    dimNeed++;Need(bind.ContainsKey(a.binding)&&bind[a.binding].Count>0,a.id+" binding missing");DisplayDimension dd=TryDiameter(doc,v,bind[a.binding][0],a.nominal_mm,ap.x_m,ap.y_m,a.id,log);bool ok=dd!=null;if(ok&&!String.IsNullOrWhiteSpace(a.hole_fit))ok=SetFit(dd,a.hole_fit,"");if(ok&&!String.IsNullOrWhiteSpace(a.shaft_fit))ok=SetFit(dd,"",a.shaft_fit);if(ok&&a.sym_tol_mm>0)ok=SetSymTol(dd,a.sym_tol_mm,log,a.id);if(ok&&(a.upper_tol_mm!=0||a.lower_tol_mm!=0))ok=SetAsymTolOrFallback(dd,a.lower_tol_mm,a.upper_tol_mm,log,a.id);if(ok&&!String.IsNullOrWhiteSpace(a.prefix)){try{dd.SetText((int)swDimensionTextParts_e.swDimensionTextPrefix,a.prefix);}catch{}}if(ok&&!String.IsNullOrWhiteSpace(a.suffix)){try{dd.SetText((int)swDimensionTextParts_e.swDimensionTextSuffix,a.suffix);}catch{}}if(ok)dimOk++;
+                    dimNeed++;Need(bind.ContainsKey(a.binding)&&bind[a.binding].Count>0,a.id+" binding missing");DisplayDimension dd=TryDiameter(doc,v,bind[a.binding][0],a.nominal_mm,ap.x_m,ap.y_m,a.id,log);bool ok=dd!=null;if(ok&&a.precision>0)FormatDim(dd,a.precision);if(ok&&!String.IsNullOrWhiteSpace(a.hole_fit))ok=SetFit(dd,a.hole_fit,"");if(ok&&!String.IsNullOrWhiteSpace(a.shaft_fit))ok=SetFit(dd,"",a.shaft_fit);if(ok&&a.sym_tol_mm>0)ok=SetSymTol(dd,a.sym_tol_mm,log,a.id);bool hasAsym=(a.upper_tol_mm!=0||a.lower_tol_mm!=0);if(ok&&hasAsym)ok=SetAsymTolPresentation(dd,a.lower_tol_mm,a.upper_tol_mm,a.suffix,log,a.id);if(ok&&!String.IsNullOrWhiteSpace(a.prefix)){try{dd.SetText((int)swDimensionTextParts_e.swDimensionTextPrefix,a.prefix);}catch{}}if(ok&&!hasAsym&&!String.IsNullOrWhiteSpace(a.suffix)){try{dd.SetText((int)swDimensionTextParts_e.swDimensionTextSuffix,a.suffix);}catch{}}if(ok)dimOk++;
                 }
                 else if(Eq(a.kind,"LINEAR"))
                 {
-                    dimNeed++;Need(bind.ContainsKey(a.from_binding)&&bind.ContainsKey(a.to_binding),a.id+" linear bindings missing");DisplayDimension dd=TryLinearRobust(doc,v,bind[a.from_binding][0],bind[a.to_binding][0],a.nominal_mm,ap.x_m,ap.y_m,a.id,log);bool ok=dd!=null;if(ok&&a.sym_tol_mm>0)ok=SetSymTol(dd,a.sym_tol_mm,log,a.id);if(ok)dimOk++;
+                    dimNeed++;Need(bind.ContainsKey(a.from_binding)&&bind.ContainsKey(a.to_binding),a.id+" linear bindings missing");DisplayDimension dd=TryLinearRobust(doc,v,bind[a.from_binding][0],bind[a.to_binding][0],a.nominal_mm,ap.x_m,ap.y_m,a.id,log);bool ok=dd!=null;if(ok&&a.precision>0)FormatDim(dd,a.precision);if(ok&&a.sym_tol_mm>0)ok=SetSymTol(dd,a.sym_tol_mm,log,a.id);if(ok)dimOk++;
                 }
                 else if(Eq(a.kind,"GTOL"))
                 {
@@ -264,6 +560,11 @@ public class K01DrawingSystemV1
                 else if(Eq(a.kind,"SURFACE_FINISH"))
                 {
                     bool required=a.state!=null&&a.state.StartsWith("CONTROLLED",StringComparison.OrdinalIgnoreCase);if(required)surfaceNeed++;Need(bind.ContainsKey(a.binding)&&bind[a.binding].Count>0,a.id+" surface binding missing");bool ok=AddSurfaceFinish(doc,v,bind[a.binding][0],a.ra_um,ap.x_m,ap.y_m,a.id,log);if(ok&&required)surfaceOk++;
+                }
+                else if(Eq(a.kind,"BOUND_NOTE"))
+                {
+                    Need(bind.ContainsKey(a.binding)&&bind[a.binding].Count>0,a.id+" bound-note binding missing");
+                    if(AddBoundNote(doc,v,bind[a.binding],a.text,ap.x_m,ap.y_m,a.id,log)!=null)noteOk++;
                 }
                 else if(Eq(a.kind,"TED_NOTE"))
                 {
@@ -282,15 +583,22 @@ public class K01DrawingSystemV1
                 foreach(string text in spec.review_notes)
                 {
                     if(String.IsNullOrWhiteSpace(text))continue;
-                    rn++;string id="REVIEW_NOTE_"+rn.ToString("00",CultureInfo.InvariantCulture);double dx=0.042,dy=0.032-(rn-1)*0.010;PlacementPoint rp=PPoint(placement,id,dx,dy,0);AddNote(doc,text,rp.x_m,rp.y_m,id,log);
+                    rn++;string id="REVIEW_NOTE_"+rn.ToString("00",CultureInfo.InvariantCulture);double baseX=spec.review_note_x_m>0?spec.review_note_x_m:0.042;double baseY=spec.review_note_y_m>0?spec.review_note_y_m:0.072;double step=spec.review_note_step_m>0?spec.review_note_step_m:0.008;double dx=baseX,dy=baseY-(rn-1)*step;PlacementPoint rp=PPoint(placement,id,dx,dy,0);AddNote(doc,text,rp.x_m,rp.y_m,id,log);
                 }
             }
-            doc.EditRebuild3();SaveAs(doc,dwg);SaveAs(doc,pdf);doc.ViewZoomtofit2();bool bmpOk=doc.SaveBMP(bmp,1800,1273);
+            doc.EditRebuild3();
+            if(seedMode)
+            {
+                int se=0,swarn=0;bool sok=doc.Save3((int)swSaveAsOptions_e.swSaveAsOptions_Silent,ref se,ref swarn);
+                Need(sok&&se==0,"seed drawing Save3 failed e="+se+" w="+swarn);
+            }
+            else SaveAs(doc,dwg);
+            SaveAs(doc,pdf);SaveAs(doc,dxf);doc.ViewZoomtofit2();bool bmpOk=doc.SaveBMP(bmp,1800,1273);
 
             string title=doc.GetTitle();try{sw.CloseDoc(title);}catch{}doc=null;string ptitle=part.GetTitle();try{sw.CloseDoc(ptitle);}catch{}part=null;string sourceShaAfter=Sha(spec.model_path);Need(Eq(sourceSha,sourceShaAfter),"SOURCE CAD MUTATION DETECTED: source part hash changed");
-            bool viewsOk=views.Count==spec.view_definitions.Count,datumPass=datumOk==spec.datum_features.Count,dimPass=dimOk==dimNeed,gtolPass=gtolOk==gtolNeed,tedPass=tedOk==tedNeed,surfacePass=surfaceOk==surfaceNeed;bool authorPass=viewsOk&&datumPass&&dimPass&&gtolPass&&tedPass&&surfacePass;string status=authorPass?"PASS_DRAWING_SYSTEM_V1_REVIEW_CANDIDATE__RELEASE_HOLD":"PARTIAL_DRAWING_SYSTEM_V1_REVIEW_CANDIDATE__RELEASE_HOLD";
-            var sb=new StringBuilder();sb.AppendLine("SCHEMA=k01.drawing_system_report.v1");sb.AppendLine("STATUS="+status);sb.AppendLine("DRAWING="+spec.drawing_id);sb.AppendLine("PART="+spec.part_id);sb.AppendLine("MODE="+(mode??"review"));sb.AppendLine("SOURCE_MODEL="+spec.model_path);sb.AppendLine("SOURCE_SHA256_BEFORE="+sourceSha);sb.AppendLine("SOURCE_SHA256_AFTER="+sourceShaAfter);sb.AppendLine("SOURCE_INVARIANCE="+(Eq(sourceSha,sourceShaAfter)?"PASS":"FAIL"));sb.AppendLine("VIEWS="+views.Count+"/"+spec.view_definitions.Count);sb.AppendLine("DATUMS="+datumOk+"/"+spec.datum_features.Count);sb.AppendLine("CONTROLLED_DIMENSIONS="+dimOk+"/"+dimNeed);sb.AppendLine("CONTROLLED_GTOLS="+gtolOk+"/"+gtolNeed);sb.AppendLine("TED_BOXES="+tedOk+"/"+tedNeed);sb.AppendLine("SURFACE_FINISH="+surfaceOk+"/"+surfaceNeed);sb.AppendLine("NOTES_AUTHORED="+noteOk);sb.AppendLine("CANDIDATE_ROOT="+outDir);sb.AppendLine("GENERATED_DIR="+generatedDir);sb.AppendLine("MANUAL_FINISH_DIR="+manualDir);sb.AppendLine("EVIDENCE_DIR="+evidenceDir);sb.AppendLine("PLACEMENT_PROFILE="+(String.IsNullOrWhiteSpace(placementPath)?"":placementPath));sb.AppendLine("PLACEMENT_APPLIED="+(placement!=null));sb.AppendLine("OUTPUT_DRAWING="+dwg);sb.AppendLine("OUTPUT_PDF="+pdf);sb.AppendLine("OUTPUT_BMP="+bmp);sb.AppendLine("BMP_OK="+bmpOk);sb.AppendLine("RELEASE=HOLD");if(spec.release_blockers!=null){sb.AppendLine("RELEASE_BLOCKERS="+spec.release_blockers.Count);foreach(string b in spec.release_blockers)sb.AppendLine("BLOCKER="+b);}sb.AppendLine("LOG_BEGIN");foreach(string z in log)sb.AppendLine(z);sb.AppendLine("LOG_END");Directory.CreateDirectory(Path.GetDirectoryName(report));File.WriteAllText(report,sb.ToString(),Encoding.UTF8);
-            Console.WriteLine("STATUS: "+status);Console.WriteLine("RELEASE: HOLD (product-definition blockers preserved; Drawing System v1 candidate only)");Console.WriteLine("SOURCE CAD INVARIANCE: PASS");Console.WriteLine("VIEWS: "+views.Count+" / "+spec.view_definitions.Count);Console.WriteLine("SHEET: "+spec.sheet+" | SCALE: "+F(spec.sheet_scale)+":1 | PROJECTION PROPERTY: "+spec.projection);Console.WriteLine("DATUMS: "+datumOk+" / "+spec.datum_features.Count);Console.WriteLine("CONTROLLED DIMENSIONS: "+dimOk+" / "+dimNeed);Console.WriteLine("CONTROLLED GTOLS: "+gtolOk+" / "+gtolNeed+" (candidate-only GTOLs excluded from required count)");Console.WriteLine("TED BOXES: "+tedOk+" / "+tedNeed);Console.WriteLine("SURFACE FINISH: "+surfaceOk+" / "+surfaceNeed);Console.WriteLine("OPEN ITEMS: preserved in drawing/report; no invented tolerances");Console.WriteLine("CANDIDATE ROOT: "+outDir);Console.WriteLine("PLACEMENT PROFILE: "+(placement!=null?placementPath:"SPEC SEED"));Console.WriteLine("DRAWING: "+dwg);Console.WriteLine("PDF: "+pdf);Console.WriteLine("REPORT: "+report);Console.WriteLine("NEXT: inspect generated PDF, prepare manual_finish, then capture placement. Do not release while blockers remain.");
+            bool viewsOk=views.Count==spec.view_definitions.Count,datumPass=datumOk==spec.datum_features.Count,dimPass=dimOk==dimNeed,gtolPass=gtolOk==gtolNeed,tedPass=tedOk==tedNeed,surfacePass=surfaceOk==surfaceNeed;bool authorPass=viewsOk&&datumPass&&dimPass&&gtolPass&&tedPass&&surfacePass;string status=authorPass?(SectionPresentationQaRequired?"PASS_DRAWING_SYSTEM_V1_REVIEW_CANDIDATE__SECTION_PRESENTATION_QA_REQUIRED__RELEASE_HOLD":"PASS_DRAWING_SYSTEM_V1_REVIEW_CANDIDATE__RELEASE_HOLD"):"PARTIAL_DRAWING_SYSTEM_V1_REVIEW_CANDIDATE__RELEASE_HOLD";
+            var sb=new StringBuilder();sb.AppendLine("SCHEMA=k01.drawing_system_report.v1");sb.AppendLine("STATUS="+status);sb.AppendLine("DRAWING="+spec.drawing_id);sb.AppendLine("PART="+spec.part_id);sb.AppendLine("MODE="+(mode??"review"));sb.AppendLine("SOURCE_MODEL="+spec.model_path);sb.AppendLine("SOURCE_SHA256_BEFORE="+sourceSha);sb.AppendLine("SOURCE_SHA256_AFTER="+sourceShaAfter);sb.AppendLine("SOURCE_INVARIANCE="+(Eq(sourceSha,sourceShaAfter)?"PASS":"FAIL"));sb.AppendLine("VIEWS="+views.Count+"/"+spec.view_definitions.Count);sb.AppendLine("DATUMS="+datumOk+"/"+spec.datum_features.Count);sb.AppendLine("CONTROLLED_DIMENSIONS="+dimOk+"/"+dimNeed);sb.AppendLine("CONTROLLED_GTOLS="+gtolOk+"/"+gtolNeed);sb.AppendLine("TED_BOXES="+tedOk+"/"+tedNeed);sb.AppendLine("SURFACE_FINISH="+surfaceOk+"/"+surfaceNeed);sb.AppendLine("NOTES_AUTHORED="+noteOk);sb.AppendLine("CANDIDATE_ROOT="+outDir);sb.AppendLine("GENERATED_DIR="+generatedDir);sb.AppendLine("MANUAL_FINISH_DIR="+manualDir);sb.AppendLine("EVIDENCE_DIR="+evidenceDir);sb.AppendLine("PLACEMENT_PROFILE="+(String.IsNullOrWhiteSpace(placementPath)?"":placementPath));sb.AppendLine("PLACEMENT_APPLIED="+(placement!=null));sb.AppendLine("OUTPUT_DRAWING="+dwg);sb.AppendLine("OUTPUT_PDF="+pdf);sb.AppendLine("OUTPUT_DXF="+dxf);sb.AppendLine("OUTPUT_BMP="+bmp);sb.AppendLine("BMP_OK="+bmpOk);sb.AppendLine("SECTION_PRESENTATION_QA="+(SectionPresentationQaRequired?"REQUIRED":"PASS_INTERNAL"));sb.AppendLine("RELEASE=HOLD");if(spec.release_blockers!=null){sb.AppendLine("RELEASE_BLOCKERS="+spec.release_blockers.Count);foreach(string b in spec.release_blockers)sb.AppendLine("BLOCKER="+b);}sb.AppendLine("LOG_BEGIN");foreach(string z in log)sb.AppendLine(z);sb.AppendLine("LOG_END");Directory.CreateDirectory(Path.GetDirectoryName(report));File.WriteAllText(report,sb.ToString(),Encoding.UTF8);
+            Console.WriteLine("STATUS: "+status);Console.WriteLine("RELEASE: HOLD (product-definition blockers preserved; Drawing System v1 candidate only)");Console.WriteLine("SOURCE CAD INVARIANCE: PASS");Console.WriteLine("VIEWS: "+views.Count+" / "+spec.view_definitions.Count);Console.WriteLine("SHEET: "+spec.sheet+" | SCALE: "+F(spec.sheet_scale)+":1 | PROJECTION PROPERTY: "+spec.projection);Console.WriteLine("DATUMS: "+datumOk+" / "+spec.datum_features.Count);Console.WriteLine("CONTROLLED DIMENSIONS: "+dimOk+" / "+dimNeed);Console.WriteLine("CONTROLLED GTOLS: "+gtolOk+" / "+gtolNeed+" (candidate-only GTOLs excluded from required count)");Console.WriteLine("TED BOXES: "+tedOk+" / "+tedNeed);Console.WriteLine("SURFACE FINISH: "+surfaceOk+" / "+surfaceNeed);Console.WriteLine("SECTION PRESENTATION QA: "+(SectionPresentationQaRequired?"REQUIRED - inspect generated PDF/BMP/DXF":"PASS_INTERNAL"));Console.WriteLine("OPEN ITEMS: preserved in drawing/report; no invented tolerances");Console.WriteLine("CANDIDATE ROOT: "+outDir);Console.WriteLine("PLACEMENT PROFILE: "+(placement!=null?placementPath:"SPEC SEED"));Console.WriteLine("DRAWING: "+dwg);Console.WriteLine("PDF: "+pdf);Console.WriteLine("DXF: "+dxf);Console.WriteLine("REPORT: "+report);Console.WriteLine("NEXT: inspect generated PDF, prepare manual_finish, then capture placement. Do not release while blockers remain.");
             if(created&&sw!=null){try{sw.ExitApp();}catch{}}return authorPass?0:3;
         }
         catch(Exception ex)

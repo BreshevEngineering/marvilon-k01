@@ -1,0 +1,24 @@
+{
+  "schema": "k01.rotational_drawing_family.rules.v1",
+  "family_id": "K01_ROTATIONAL_BODY_OF_REVOLUTION_R1",
+  "goal": "Generate a usable rough engineering drawing by API; manual cosmetic/layout finish is expected.",
+  "view_policy": [
+    "longitudinal section as primary manufacturing view",
+    "end view for radial/hole pattern information",
+    "hidden dependency parent is allowed internally"
+  ],
+  "carrier_policy": {
+    "simple_diameter_and_length": "native associative DisplayDimension",
+    "fit": "native dimension tolerance/fit presentation",
+    "thread": "BOUND_NOTE transitional until native thread callout is implemented",
+    "blind_hole_callout": "BOUND_NOTE transitional until native Hole Callout is implemented",
+    "pcd_and_basic_angle": "TED/basic annotation",
+    "open_or_unreleased_requirement": "visible review NOTE, never invented",
+    "manual_work_after_generation": "layout, leaders, overlaps, typography, section hatch/presentation"
+  },
+  "execution_policy": {
+    "artifact_first": true,
+    "partial_authoring_with_slddrw_pdf_dxf": "SUCCESS_FOR_MANUAL_FINISH",
+    "release_hold_does_not_block_generation": true
+  }
+}

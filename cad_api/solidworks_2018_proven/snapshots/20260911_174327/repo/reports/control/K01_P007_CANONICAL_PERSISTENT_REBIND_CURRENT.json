@@ -1,0 +1,35 @@
+{
+  "schema": "k01.p007.canonical_persistent_rebind.v1",
+  "generated_utc": "2026-09-11T09:30:50.420119+00:00",
+  "status": "PASS_P007_CANONICAL_PERSISTENT_REFS_REBOUND_READY_FOR_NATIVE_PMI",
+  "native_CAD_mutated": false,
+  "control_files_mutated": true,
+  "canonical_p007": {
+    "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+    "sha256": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85"
+  },
+  "bindings": {
+    "C01": {
+      "binding_type": "COMPOSITE_COPLANAR_FACE_SET",
+      "entity_count": 2
+    },
+    "C02": {
+      "binding_type": "CYLINDRICAL_FACE",
+      "entity_count": 1
+    },
+    "C04": {
+      "binding_type": "CYLINDRICAL_PATTERN_FACES",
+      "entity_count": 3
+    },
+    "C05": {
+      "binding_type": "FLANGE_OD_PLUS_AXIAL_FACE_SET",
+      "entity_count": 4
+    },
+    "C06": {
+      "binding_type": "OVERALL_LENGTH_AXIAL_FACE_SET",
+      "entity_count": 3
+    }
+  },
+  "persistent_resolution_count": 9,
+  "next": "TIMESTAMPED_NATIVE_DIMXPERT_PMI_CANDIDATE"
+}
