@@ -1,0 +1,28 @@
+name: K01 tests
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: K01 tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+          submodules: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: K01 configuration/governance regression
+        run: python -m unittest discover -s tests/governance -p "test_k01_*.py"
+
+      - name: K01 assurance regression
+        run: python -m unittest discover -s tests/assurance -p "test_*.py"

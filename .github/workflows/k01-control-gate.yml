@@ -1,0 +1,47 @@
+name: K01 control gate
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  control_gate:
+    name: K01 control gate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout trusted base gate
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.base.repo.full_name }}
+          ref: ${{ github.event.pull_request.base.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+          submodules: false
+          path: gate
+
+      - name: Checkout untrusted PR data
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+          submodules: false
+          path: work
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run trusted K01 control gate
+        shell: bash
+        run: >-
+          python gate/tools/governance/k01_pr_control_gate.py
+          --repo work
+          --base "${{ github.event.pull_request.base.sha }}"
+          --head "${{ github.event.pull_request.head.sha }}"
+          --branch "${{ github.head_ref }}"

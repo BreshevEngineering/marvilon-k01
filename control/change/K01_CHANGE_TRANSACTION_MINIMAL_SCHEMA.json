@@ -1,0 +1,13 @@
+{
+  "schema": "k01.change_transaction.minimal.schema.v2",
+  "required": ["schema", "change_id", "intent", "allowed_paths", "new_files"],
+  "transaction_schema_value": "k01.change_transaction.minimal.v1",
+  "rules": [
+    "change_id MUST equal Git branch name",
+    "allowed_paths MUST NOT use blanket repository scope",
+    "every added file MUST be listed by exact path in new_files",
+    "reports/** and other runtime prefixes may be deleted during migration but may not be added or modified",
+    "external_cad_scope is required before any native CAD semantic mutation",
+    "merge of the PR is the human authorization"
+  ]
+}
