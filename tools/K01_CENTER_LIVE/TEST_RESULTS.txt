@@ -1,0 +1,34 @@
+Existing handoff failed; no combined package was published.
+UPLOAD THIS FILE: /tmp/tmplzcl_oyv/center/runtime/handoff/K01_AI_HANDOFF_WITH_REQUIREMENTS.zip
+Inventory: 0 source files, 0 requirement records, 0 read/size errors.
+test_v3_connections (test_diagnostics.Diagnostics.test_v3_connections) ... ok
+test_failure_no_success_package (test_handoff.Handoff.test_failure_no_success_package) ... ok
+test_success_contains_inventory (test_handoff.Handoff.test_success_contains_inventory) ... ok
+test_duplicate_and_history (test_inventory.Inventory.test_duplicate_and_history) ... ok
+test_exact_action (test_inventory.Inventory.test_exact_action) ... ok
+test_no_arbitrary_status (test_inventory.Inventory.test_no_arbitrary_status) ... ok
+test_create_modify_delete_and_baseline (test_live.LiveTests.test_create_modify_delete_and_baseline) ... ok
+test_http_activity_and_handoff_guard (test_live.LiveTests.test_http_activity_and_handoff_guard) ... ok
+test_unavailable_root_is_not_deletion (test_live.LiveTests.test_unavailable_root_is_not_deletion) ... ok
+test_export_read_only (test_p007.P007.test_export_read_only) ... ok
+test_scope_and_guidance (test_p007.P007.test_scope_and_guidance) ... ok
+test_exit_code_and_capabilities (test_routes.Routes.test_exit_code_and_capabilities) ... ok
+test_guard_and_backup (test_routes.Routes.test_guard_and_backup) ... ok
+test_alternative_is_not_used (test_sources.Sources.test_alternative_is_not_used) ... ok
+test_bom_issues_visible_without_verdict (test_sources.Sources.test_bom_issues_visible_without_verdict) ... ok
+test_capability_contract (test_sources.Sources.test_capability_contract) ... ok
+test_capability_error_is_visible (test_sources.Sources.test_capability_error_is_visible) ... ok
+test_corrupt_current_does_not_fall_back_to_pass (test_sources.Sources.test_corrupt_current_does_not_fall_back_to_pass) ... ok
+test_existing_requirement_documents_are_connected (test_sources.Sources.test_existing_requirement_documents_are_connected) ... ok
+test_explicit_source (test_sources.Sources.test_explicit_source) ... ok
+test_http_and_diagnostics (test_sources.Sources.test_http_and_diagnostics) ... ok
+test_missing_does_not_fabricate_data (test_sources.Sources.test_missing_does_not_fabricate_data) ... ok
+test_nested_tool_status_is_not_engineering (test_sources.Sources.test_nested_tool_status_is_not_engineering) ... ok
+test_paths_remain_contained (test_sources.Sources.test_paths_remain_contained) ... ok
+test_ui_english (test_sources.Sources.test_ui_english) ... ok
+test_unknown_schema (test_sources.Sources.test_unknown_schema) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.098s
+
+OK

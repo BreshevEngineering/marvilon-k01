@@ -1,0 +1,1475 @@
+{
+  "schema": "k01.requirements.inventory.v1",
+  "generated_utc": "2026-09-09T19:09:21.071249+00:00",
+  "scope": "JSON files under control; top-level requirements collections only. Other forms remain unparsed.",
+  "repo_root": "/workspace/scratch/ce078b01ec14/work/marvilon-k01",
+  "files": [
+    {
+      "path": "control/configuration_items/CI-J2_DOSSIER_v1.json",
+      "sha256": "4d45ac51599862885480f21978b5bb2a84f605738cdaba37814b4d7ec689bdad",
+      "schema": "k01_configuration_item_dossier_v1",
+      "historical": false
+    },
+    {
+      "path": "control/configuration_items/CI-P003-P006_RETAINING_THREAD_DOSSIER_v1.json",
+      "sha256": "0e538a863c38fe3969f6a5ddde3725fe696af059f99942147ddf9b2d52339ab5",
+      "schema": "k01_configuration_item_dossier_v1",
+      "historical": false
+    },
+    {
+      "path": "control/configuration_items/K01_CID_TEMPLATE_v1.json",
+      "sha256": "9d973d36f5f4d3fbccae04fafcd4899a2edcdb9d101332f4baba309d959bb277",
+      "schema": "k01_configuration_item_dossier_v1",
+      "historical": false
+    },
+    {
+      "path": "control/requirements/history/20260905_182328/requirements.json",
+      "sha256": "ceb50730fe3ba26c952d65be4fdf3eddc4924946a3d86f68b3c266ec41b4f22a",
+      "schema": "k01.requirements.v1",
+      "historical": true
+    },
+    {
+      "path": "control/requirements/history/20260905_182659/requirements.json",
+      "sha256": "ceb50730fe3ba26c952d65be4fdf3eddc4924946a3d86f68b3c266ec41b4f22a",
+      "schema": "k01.requirements.v1",
+      "historical": true
+    },
+    {
+      "path": "control/requirements/requirements.json",
+      "sha256": "c210362212d39c82bc57ddc1d181173ea749f2e41eea2570ccb75db9567a486c",
+      "schema": "k01.requirements.registry.v1_9",
+      "historical": false
+    },
+    {
+      "path": "control/schemas/requirements.schema.json",
+      "sha256": "dbbd14705409af51a72f7bbbff09d6645a92d526e80ae303c93e8240e1953bd1",
+      "schema": null,
+      "historical": false
+    },
+    {
+      "path": "control/technical_filter/K01_J2_C2R1_TECHNICAL_FILTER_v1.json",
+      "sha256": "81ea21d6c85371dfc7c390663fa989fb27170e7f8b27bb2c651e9372a7e73bf6",
+      "schema": "k01_technical_decision_filter_instance_v1",
+      "historical": false
+    },
+    {
+      "path": "control/decision_system/K01_J2_C2_REQUIREMENTS_VERIFICATION_MATRIX_v1.csv",
+      "sha256": "b92625e84d49b1f3909b3ba883f6ff58cae2c3b5e354511348a6a5230a3054c9",
+      "schema": null,
+      "parse_state": "DOCUMENT_ONLY",
+      "historical": false
+    }
+  ],
+  "occurrences": [
+    {
+      "id": "REQ-K01-FUNC-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-FUNC-001",
+        "title": "Hermetic calibration actuation",
+        "statement": "Provide controlled linear calibration motion without a moving shaft penetration through the containment boundary.",
+        "status": "RELEASED",
+        "source": {
+          "type": "engineering_decision",
+          "ref": "EDR-016"
+        },
+        "verification_method": "architecture review + assembly verification",
+        "links": {
+          "gates": [
+            "functional_requirement",
+            "architecture_integrity"
+          ],
+          "design_objects": [
+            "K01-A-001",
+            "J2"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-SERVICE-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-SERVICE-001",
+        "title": "J2 service access",
+        "statement": "P003↔P007 shall remain removable so P006/follower service does not require destruction of the containment can.",
+        "status": "RELEASED",
+        "source": {
+          "type": "engineering_decision",
+          "ref": "EDR-001"
+        },
+        "verification_method": "CAD assembly/service review",
+        "links": {
+          "gates": [
+            "architecture_integrity",
+            "assembly",
+            "serviceability"
+          ],
+          "design_objects": [
+            "P003",
+            "P006",
+            "P007"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-STROKE-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-STROKE-001",
+        "title": "Calibration stroke",
+        "statement": "Functional rod stroke shall be 10.0 mm.",
+        "status": "RELEASED",
+        "source": {
+          "type": "design_authority_directive",
+          "ref": "K01 project input"
+        },
+        "verification_method": "CAD mate/envelope verification + bench stroke measurement",
+        "links": {
+          "gates": [
+            "functional_requirement",
+            "interfaces_datums"
+          ],
+          "design_objects": [
+            "P001",
+            "A001"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-PORT-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-PORT-001",
+        "title": "Feedthrough envelope",
+        "statement": "The chamber-side feedthrough interface shall fit within a nominal Ø10 mm input envelope unless a controlled interface change is approved.",
+        "status": "RELEASED",
+        "source": {
+          "type": "design_authority_directive",
+          "ref": "K01 project input"
+        },
+        "verification_method": "CAD interface check",
+        "links": {
+          "gates": [
+            "interfaces_datums",
+            "documentation_traceability"
+          ],
+          "design_objects": [
+            "P003",
+            "P016"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-P007-L-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-P007-L-001",
+        "title": "P007 overall length",
+        "statement": "P007 overall length shall remain 35.0 mm for the C2R1 mechanical baseline.",
+        "status": "RELEASED",
+        "source": {
+          "type": "cad_baseline",
+          "ref": "Gate04D-C2R1"
+        },
+        "verification_method": "native CAD readback",
+        "links": {
+          "gates": [
+            "interfaces_datums",
+            "assembly"
+          ],
+          "design_objects": [
+            "P007"
+          ],
+          "evidence": [
+            "K01_GATE04D_C2R1_TYPED_BUILD.json"
+          ]
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-J2-LOC-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-J2-LOC-001",
+        "title": "J2 locating architecture",
+        "statement": "J2 transverse location shall be controlled by the Ø14.10 H7/g6 pilot/locator pair and axial location by the metal mating faces; clamp screws shall not be redundant datum controls.",
+        "status": "RELEASED",
+        "source": {
+          "type": "engineering_decision",
+          "ref": "CI-J2 / C2R1"
+        },
+        "verification_method": "CAD mate/readback + tolerance analysis",
+        "links": {
+          "gates": [
+            "interfaces_datums",
+            "tolerance_dimensional_chains",
+            "assembly"
+          ],
+          "design_objects": [
+            "P003",
+            "P007"
+          ],
+          "evidence": [
+            "K01_GATE04D_C2R1_VERIFY.json"
+          ]
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-MAT-P003-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-MAT-P003-001",
+        "title": "P003 material",
+        "statement": "P003 production material shall be AISI 316L / EN 1.4404.",
+        "status": "RELEASED",
+        "source": {
+          "type": "material_control",
+          "ref": "C2R1 controlled BOM/CAD"
+        },
+        "verification_method": "material certificate + CAD/BOM reconciliation",
+        "links": {
+          "gates": [
+            "materials_environment",
+            "supply_chain"
+          ],
+          "design_objects": [
+            "P003"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-MAT-P007-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-MAT-P007-001",
+        "title": "P007 material",
+        "statement": "P007 production material shall be AISI 316L / EN 1.4404.",
+        "status": "RELEASED",
+        "source": {
+          "type": "material_control",
+          "ref": "C2R1 controlled BOM/CAD"
+        },
+        "verification_method": "material certificate + CAD/BOM reconciliation",
+        "links": {
+          "gates": [
+            "materials_environment",
+            "supply_chain"
+          ],
+          "design_objects": [
+            "P007"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-MAT-P006-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-MAT-P006-001",
+        "title": "P006 production material",
+        "statement": "P006 production material shall be defined and released before product release.",
+        "status": "OPEN",
+        "source": {
+          "type": "gap",
+          "ref": "No controlled source currently confirms P006 production material"
+        },
+        "verification_method": "material selection EDR + supplier/material certificate",
+        "links": {
+          "gates": [
+            "materials_environment",
+            "manufacturability_process_capability",
+            "serviceability"
+          ],
+          "design_objects": [
+            "P006"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-ENV-DP-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-ENV-DP-001",
+        "title": "J2 differential-pressure envelope",
+        "statement": "Maximum positive and negative differential pressure acting across the J2/P007 containment boundary shall be explicitly released.",
+        "status": "OPEN",
+        "source": {
+          "type": "gap",
+          "ref": "±0.20 bar exists as an analysis case, not yet as a released product requirement"
+        },
+        "verification_method": "system pneumatic requirement + pressure test/analysis",
+        "links": {
+          "gates": [
+            "load_cases",
+            "static_strength_contact",
+            "buckling_stability",
+            "pressure_vacuum_sealing",
+            "safety_regulatory_containment"
+          ],
+          "design_objects": [
+            "J2",
+            "P007"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-ENV-TEMP-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-ENV-TEMP-001",
+        "title": "J2 local temperature envelope",
+        "statement": "Minimum/nominal/maximum J2 metal and elastomer temperatures shall be bounded for the released application.",
+        "status": "OPEN",
+        "source": {
+          "type": "gap",
+          "ref": "System documentation does not prove the local J2 seal temperature"
+        },
+        "verification_method": "thermal measurement/model + released operating envelope",
+        "links": {
+          "gates": [
+            "thermal",
+            "materials_environment",
+            "pressure_vacuum_sealing"
+          ],
+          "design_objects": [
+            "J2",
+            "B011"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-MEDIA-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-MEDIA-001",
+        "title": "J2 media/cleaning envelope",
+        "statement": "Process gas, condensate and cleaning-media species that may contact J2 shall be bounded for elastomer qualification.",
+        "status": "OPEN",
+        "source": {
+          "type": "system_documentation",
+          "ref": "MARV 2EX process/containment documents; exact J2 exposure still open"
+        },
+        "verification_method": "media specification + supplier compatibility statement + leak qualification",
+        "links": {
+          "gates": [
+            "materials_environment",
+            "pressure_vacuum_sealing",
+            "safety_regulatory_containment"
+          ],
+          "design_objects": [
+            "J2",
+            "B011"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-SEAL-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-SEAL-001",
+        "title": "J2 static seal",
+        "statement": "J2 shall use a static face seal architecture sized for the released media, temperature, pressure and service envelope.",
+        "status": "PARTIAL",
+        "source": {
+          "type": "engineering_decision",
+          "ref": "16×1.5 gland architecture controlled; exact compound open"
+        },
+        "verification_method": "gland tolerance stack + compression-force qualification + leak test",
+        "links": {
+          "gates": [
+            "pressure_vacuum_sealing",
+            "thermal",
+            "serviceability"
+          ],
+          "design_objects": [
+            "P003",
+            "B011"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-LEAK-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-LEAK-001",
+        "title": "Leak acceptance",
+        "statement": "A quantitative J2 leak-test acceptance criterion shall be defined before production release.",
+        "status": "OPEN",
+        "source": {
+          "type": "gap",
+          "ref": "No released numerical leak criterion currently recorded"
+        },
+        "verification_method": "qualified leak test",
+        "links": {
+          "gates": [
+            "pressure_vacuum_sealing",
+            "inspection_testability",
+            "safety_regulatory_containment"
+          ],
+          "design_objects": [
+            "J2"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-SERVICE-CYCLES-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-SERVICE-CYCLES-001",
+        "title": "Repeated service life",
+        "statement": "Required number of J2/P006 service cycles shall be released; provisional 50-cycle screening is not itself a product requirement.",
+        "status": "OPEN",
+        "source": {
+          "type": "gap",
+          "ref": "50-cycle value currently provisional"
+        },
+        "verification_method": "service-cycle qualification",
+        "links": {
+          "gates": [
+            "fatigue_cyclic",
+            "serviceability",
+            "reliability_fmea"
+          ],
+          "design_objects": [
+            "J2",
+            "P006"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-ACT-FORCE-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-ACT-FORCE-001",
+        "title": "Actuator force coefficient",
+        "statement": "Final electromagnetic design shall meet or exceed the released minimum force/force-coefficient envelope over stroke, current, temperature and production tolerances.",
+        "status": "CANDIDATE",
+        "source": {
+          "type": "calculation",
+          "ref": "Current screening target KFmin ≥ 0.930895 N/A at nominal 1 A; final load inputs still subject to release"
+        },
+        "verification_method": "FEMM sensitivity sweep + bench acceptance",
+        "links": {
+          "gates": [
+            "magnetic_electromagnetic",
+            "load_cases",
+            "inspection_testability"
+          ],
+          "design_objects": [
+            "P015",
+            "B001",
+            "P008"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-TPD-001",
+      "source": "control/requirements/history/20260905_182328/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-TPD-001",
+        "title": "Production technical definition",
+        "statement": "Released manufacturing definition shall unambiguously communicate functionally necessary size, fit, GD&T, material, finish, process and inspection characteristics without contradictory dimensions.",
+        "status": "RELEASED",
+        "source": {
+          "type": "engineering_standard",
+          "ref": "K01 TPD / drawing assurance"
+        },
+        "verification_method": "drawing semantic QA + visual QA + inspection-plan cross-check",
+        "links": {
+          "gates": [
+            "documentation_traceability",
+            "inspection_testability",
+            "manufacturability_process_capability"
+          ],
+          "design_objects": [
+            "K01 drawings"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-FUNC-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-FUNC-001",
+        "title": "Hermetic calibration actuation",
+        "statement": "Provide controlled linear calibration motion without a moving shaft penetration through the containment boundary.",
+        "status": "RELEASED",
+        "source": {
+          "type": "engineering_decision",
+          "ref": "EDR-016"
+        },
+        "verification_method": "architecture review + assembly verification",
+        "links": {
+          "gates": [
+            "functional_requirement",
+            "architecture_integrity"
+          ],
+          "design_objects": [
+            "K01-A-001",
+            "J2"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-SERVICE-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-SERVICE-001",
+        "title": "J2 service access",
+        "statement": "P003↔P007 shall remain removable so P006/follower service does not require destruction of the containment can.",
+        "status": "RELEASED",
+        "source": {
+          "type": "engineering_decision",
+          "ref": "EDR-001"
+        },
+        "verification_method": "CAD assembly/service review",
+        "links": {
+          "gates": [
+            "architecture_integrity",
+            "assembly",
+            "serviceability"
+          ],
+          "design_objects": [
+            "P003",
+            "P006",
+            "P007"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-STROKE-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-STROKE-001",
+        "title": "Calibration stroke",
+        "statement": "Functional rod stroke shall be 10.0 mm.",
+        "status": "RELEASED",
+        "source": {
+          "type": "design_authority_directive",
+          "ref": "K01 project input"
+        },
+        "verification_method": "CAD mate/envelope verification + bench stroke measurement",
+        "links": {
+          "gates": [
+            "functional_requirement",
+            "interfaces_datums"
+          ],
+          "design_objects": [
+            "P001",
+            "A001"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-PORT-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-PORT-001",
+        "title": "Feedthrough envelope",
+        "statement": "The chamber-side feedthrough interface shall fit within a nominal Ø10 mm input envelope unless a controlled interface change is approved.",
+        "status": "RELEASED",
+        "source": {
+          "type": "design_authority_directive",
+          "ref": "K01 project input"
+        },
+        "verification_method": "CAD interface check",
+        "links": {
+          "gates": [
+            "interfaces_datums",
+            "documentation_traceability"
+          ],
+          "design_objects": [
+            "P003",
+            "P016"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-P007-L-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-P007-L-001",
+        "title": "P007 overall length",
+        "statement": "P007 overall length shall remain 35.0 mm for the C2R1 mechanical baseline.",
+        "status": "RELEASED",
+        "source": {
+          "type": "cad_baseline",
+          "ref": "Gate04D-C2R1"
+        },
+        "verification_method": "native CAD readback",
+        "links": {
+          "gates": [
+            "interfaces_datums",
+            "assembly"
+          ],
+          "design_objects": [
+            "P007"
+          ],
+          "evidence": [
+            "K01_GATE04D_C2R1_TYPED_BUILD.json"
+          ]
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-J2-LOC-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-J2-LOC-001",
+        "title": "J2 locating architecture",
+        "statement": "J2 transverse location shall be controlled by the Ø14.10 H7/g6 pilot/locator pair and axial location by the metal mating faces; clamp screws shall not be redundant datum controls.",
+        "status": "RELEASED",
+        "source": {
+          "type": "engineering_decision",
+          "ref": "CI-J2 / C2R1"
+        },
+        "verification_method": "CAD mate/readback + tolerance analysis",
+        "links": {
+          "gates": [
+            "interfaces_datums",
+            "tolerance_dimensional_chains",
+            "assembly"
+          ],
+          "design_objects": [
+            "P003",
+            "P007"
+          ],
+          "evidence": [
+            "K01_GATE04D_C2R1_VERIFY.json"
+          ]
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-MAT-P003-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-MAT-P003-001",
+        "title": "P003 material",
+        "statement": "P003 production material shall be AISI 316L / EN 1.4404.",
+        "status": "RELEASED",
+        "source": {
+          "type": "material_control",
+          "ref": "C2R1 controlled BOM/CAD"
+        },
+        "verification_method": "material certificate + CAD/BOM reconciliation",
+        "links": {
+          "gates": [
+            "materials_environment",
+            "supply_chain"
+          ],
+          "design_objects": [
+            "P003"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-MAT-P007-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-MAT-P007-001",
+        "title": "P007 material",
+        "statement": "P007 production material shall be AISI 316L / EN 1.4404.",
+        "status": "RELEASED",
+        "source": {
+          "type": "material_control",
+          "ref": "C2R1 controlled BOM/CAD"
+        },
+        "verification_method": "material certificate + CAD/BOM reconciliation",
+        "links": {
+          "gates": [
+            "materials_environment",
+            "supply_chain"
+          ],
+          "design_objects": [
+            "P007"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-MAT-P006-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-MAT-P006-001",
+        "title": "P006 production material",
+        "statement": "P006 production material shall be defined and released before product release.",
+        "status": "OPEN",
+        "source": {
+          "type": "gap",
+          "ref": "No controlled source currently confirms P006 production material"
+        },
+        "verification_method": "material selection EDR + supplier/material certificate",
+        "links": {
+          "gates": [
+            "materials_environment",
+            "manufacturability_process_capability",
+            "serviceability"
+          ],
+          "design_objects": [
+            "P006"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-ENV-DP-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-ENV-DP-001",
+        "title": "J2 differential-pressure envelope",
+        "statement": "Maximum positive and negative differential pressure acting across the J2/P007 containment boundary shall be explicitly released.",
+        "status": "OPEN",
+        "source": {
+          "type": "gap",
+          "ref": "±0.20 bar exists as an analysis case, not yet as a released product requirement"
+        },
+        "verification_method": "system pneumatic requirement + pressure test/analysis",
+        "links": {
+          "gates": [
+            "load_cases",
+            "static_strength_contact",
+            "buckling_stability",
+            "pressure_vacuum_sealing",
+            "safety_regulatory_containment"
+          ],
+          "design_objects": [
+            "J2",
+            "P007"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-ENV-TEMP-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-ENV-TEMP-001",
+        "title": "J2 local temperature envelope",
+        "statement": "Minimum/nominal/maximum J2 metal and elastomer temperatures shall be bounded for the released application.",
+        "status": "OPEN",
+        "source": {
+          "type": "gap",
+          "ref": "System documentation does not prove the local J2 seal temperature"
+        },
+        "verification_method": "thermal measurement/model + released operating envelope",
+        "links": {
+          "gates": [
+            "thermal",
+            "materials_environment",
+            "pressure_vacuum_sealing"
+          ],
+          "design_objects": [
+            "J2",
+            "B011"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-MEDIA-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-MEDIA-001",
+        "title": "J2 media/cleaning envelope",
+        "statement": "Process gas, condensate and cleaning-media species that may contact J2 shall be bounded for elastomer qualification.",
+        "status": "OPEN",
+        "source": {
+          "type": "system_documentation",
+          "ref": "MARV 2EX process/containment documents; exact J2 exposure still open"
+        },
+        "verification_method": "media specification + supplier compatibility statement + leak qualification",
+        "links": {
+          "gates": [
+            "materials_environment",
+            "pressure_vacuum_sealing",
+            "safety_regulatory_containment"
+          ],
+          "design_objects": [
+            "J2",
+            "B011"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-SEAL-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-SEAL-001",
+        "title": "J2 static seal",
+        "statement": "J2 shall use a static face seal architecture sized for the released media, temperature, pressure and service envelope.",
+        "status": "PARTIAL",
+        "source": {
+          "type": "engineering_decision",
+          "ref": "16×1.5 gland architecture controlled; exact compound open"
+        },
+        "verification_method": "gland tolerance stack + compression-force qualification + leak test",
+        "links": {
+          "gates": [
+            "pressure_vacuum_sealing",
+            "thermal",
+            "serviceability"
+          ],
+          "design_objects": [
+            "P003",
+            "B011"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-LEAK-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-LEAK-001",
+        "title": "Leak acceptance",
+        "statement": "A quantitative J2 leak-test acceptance criterion shall be defined before production release.",
+        "status": "OPEN",
+        "source": {
+          "type": "gap",
+          "ref": "No released numerical leak criterion currently recorded"
+        },
+        "verification_method": "qualified leak test",
+        "links": {
+          "gates": [
+            "pressure_vacuum_sealing",
+            "inspection_testability",
+            "safety_regulatory_containment"
+          ],
+          "design_objects": [
+            "J2"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-SERVICE-CYCLES-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-SERVICE-CYCLES-001",
+        "title": "Repeated service life",
+        "statement": "Required number of J2/P006 service cycles shall be released; provisional 50-cycle screening is not itself a product requirement.",
+        "status": "OPEN",
+        "source": {
+          "type": "gap",
+          "ref": "50-cycle value currently provisional"
+        },
+        "verification_method": "service-cycle qualification",
+        "links": {
+          "gates": [
+            "fatigue_cyclic",
+            "serviceability",
+            "reliability_fmea"
+          ],
+          "design_objects": [
+            "J2",
+            "P006"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-ACT-FORCE-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-ACT-FORCE-001",
+        "title": "Actuator force coefficient",
+        "statement": "Final electromagnetic design shall meet or exceed the released minimum force/force-coefficient envelope over stroke, current, temperature and production tolerances.",
+        "status": "CANDIDATE",
+        "source": {
+          "type": "calculation",
+          "ref": "Current screening target KFmin ≥ 0.930895 N/A at nominal 1 A; final load inputs still subject to release"
+        },
+        "verification_method": "FEMM sensitivity sweep + bench acceptance",
+        "links": {
+          "gates": [
+            "magnetic_electromagnetic",
+            "load_cases",
+            "inspection_testability"
+          ],
+          "design_objects": [
+            "P015",
+            "B001",
+            "P008"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-TPD-001",
+      "source": "control/requirements/history/20260905_182659/requirements.json",
+      "historical": true,
+      "record": {
+        "id": "REQ-K01-TPD-001",
+        "title": "Production technical definition",
+        "statement": "Released manufacturing definition shall unambiguously communicate functionally necessary size, fit, GD&T, material, finish, process and inspection characteristics without contradictory dimensions.",
+        "status": "RELEASED",
+        "source": {
+          "type": "engineering_standard",
+          "ref": "K01 TPD / drawing assurance"
+        },
+        "verification_method": "drawing semantic QA + visual QA + inspection-plan cross-check",
+        "links": {
+          "gates": [
+            "documentation_traceability",
+            "inspection_testability",
+            "manufacturability_process_capability"
+          ],
+          "design_objects": [
+            "K01 drawings"
+          ],
+          "evidence": []
+        }
+      },
+      "missing_traceability_fields": []
+    },
+    {
+      "id": "REQ-K01-FUNC-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": null,
+        "evidence_ids": [],
+        "gate_ids": [
+          "functional_requirement",
+          "architecture_integrity"
+        ],
+        "id": "REQ-K01-FUNC-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "Provide controlled linear calibration motion without a moving shaft penetration through the containment boundary.",
+        "title": "Hermetic calibration actuation",
+        "verification_method": "architecture review + assembly verification"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-SERVICE-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": null,
+        "evidence_ids": [],
+        "gate_ids": [
+          "architecture_integrity",
+          "assembly",
+          "serviceability"
+        ],
+        "id": "REQ-K01-SERVICE-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "P003↔P007 shall remain removable so P006/follower service does not require destruction of the containment can.",
+        "title": "J2 service access",
+        "verification_method": "CAD assembly/service review"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-STROKE-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": {
+          "nominal_mm": 10.0,
+          "note": "Current requirement states nominal stroke only; release tolerance must come from controlled product definition/MBD or an approved requirement update.",
+          "tolerance": null
+        },
+        "evidence_ids": [],
+        "gate_ids": [
+          "functional_requirement",
+          "interfaces_datums"
+        ],
+        "id": "REQ-K01-STROKE-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "Functional rod stroke shall be 10.0 mm.",
+        "title": "Calibration stroke",
+        "verification_method": "CAD mate/envelope verification + bench stroke measurement"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-PORT-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": {
+          "nominal_envelope_diameter_mm": 10.0,
+          "note": "Controlled interface change may supersede this envelope only through change control."
+        },
+        "evidence_ids": [],
+        "gate_ids": [
+          "interfaces_datums",
+          "documentation_traceability"
+        ],
+        "id": "REQ-K01-PORT-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "The chamber-side feedthrough interface shall fit within a nominal Ø10 mm input envelope unless a controlled interface change is approved.",
+        "title": "Feedthrough envelope",
+        "verification_method": "CAD interface check"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-P007-L-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": {
+          "nominal_mm": 35.0,
+          "note": "Current requirement states nominal overall length only.",
+          "tolerance": null
+        },
+        "evidence_ids": [
+          "K01_GATE04D_C2R1_TYPED_BUILD.json"
+        ],
+        "gate_ids": [
+          "interfaces_datums",
+          "assembly"
+        ],
+        "id": "REQ-K01-P007-L-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "P007 overall length shall remain 35.0 mm for the C2R1 mechanical baseline.",
+        "title": "P007 overall length",
+        "verification_method": "native CAD readback"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-J2-LOC-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": {
+          "axial_datum": "metal mating faces",
+          "fit": "H7/g6",
+          "pilot_nominal_mm": 14.1
+        },
+        "evidence_ids": [
+          "K01_GATE04D_C2R1_VERIFY.json"
+        ],
+        "gate_ids": [
+          "interfaces_datums",
+          "tolerance_dimensional_chains",
+          "assembly"
+        ],
+        "id": "REQ-K01-J2-LOC-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "J2 transverse location shall be controlled by the Ø14.10 H7/g6 pilot/locator pair and axial location by the metal mating faces; clamp screws shall not be redundant datum controls.",
+        "title": "J2 locating architecture",
+        "verification_method": "CAD mate/readback + tolerance analysis"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-MAT-P003-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": null,
+        "evidence_ids": [],
+        "gate_ids": [
+          "materials_environment",
+          "supply_chain"
+        ],
+        "id": "REQ-K01-MAT-P003-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "P003 production material shall be AISI 316L / EN 1.4404.",
+        "title": "P003 material",
+        "verification_method": "material certificate + CAD/BOM reconciliation"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-MAT-P007-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": null,
+        "evidence_ids": [],
+        "gate_ids": [
+          "materials_environment",
+          "supply_chain"
+        ],
+        "id": "REQ-K01-MAT-P007-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "P007 production material shall be AISI 316L / EN 1.4404.",
+        "title": "P007 material",
+        "verification_method": "material certificate + CAD/BOM reconciliation"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-MAT-P006-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": null,
+        "evidence_ids": [],
+        "gate_ids": [
+          "materials_environment",
+          "manufacturability_process_capability",
+          "serviceability"
+        ],
+        "id": "REQ-K01-MAT-P006-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "P006 production material shall be AISI 316L / EN 1.4404.",
+        "title": "P006 production material",
+        "verification_method": "Native SOLIDWORKS material readback + reconciled BOM + material certificate at manufacture"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-ENV-DP-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": {
+          "max_bar": 0.2,
+          "min_bar": -0.2
+        },
+        "evidence_ids": [],
+        "gate_ids": [
+          "load_cases",
+          "static_strength_contact",
+          "buckling_stability",
+          "pressure_vacuum_sealing",
+          "safety_regulatory_containment"
+        ],
+        "id": "REQ-K01-ENV-DP-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "J2/P007 qualification differential-pressure envelope shall be -0.20 ... +0.20 bar.",
+        "title": "J2 differential-pressure envelope",
+        "verification_method": "Final P007 Static +0.20 bar; Buckling -0.20 bar; leak acceptance test"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-ENV-TEMP-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": {
+          "design_max_degC": 55.0
+        },
+        "evidence_ids": [],
+        "gate_ids": [
+          "thermal",
+          "materials_environment",
+          "pressure_vacuum_sealing"
+        ],
+        "id": "REQ-K01-ENV-TEMP-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "For the current release, accepted CFD establishes J2 local temperature at 50-55 degC; use 55 degC as design maximum.",
+        "title": "J2 local temperature envelope",
+        "verification_method": "Existing CFD is the controlled thermal basis; reopen only after a controlled geometry/flow/thermal-boundary change"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-MEDIA-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": null,
+        "evidence_ids": [],
+        "gate_ids": [
+          "materials_environment",
+          "pressure_vacuum_sealing",
+          "safety_regulatory_containment"
+        ],
+        "id": "REQ-K01-MEDIA-001",
+        "lifecycle_status": "OPEN",
+        "release_blocker": true,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "Process gas, condensate and cleaning-media species that may contact J2 shall be bounded for elastomer qualification.",
+        "title": "J2 media/cleaning envelope",
+        "verification_method": "media specification + supplier compatibility statement + leak qualification"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-SEAL-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": null,
+        "evidence_ids": [],
+        "gate_ids": [
+          "pressure_vacuum_sealing",
+          "thermal",
+          "serviceability"
+        ],
+        "id": "REQ-K01-SEAL-001",
+        "lifecycle_status": "PARTIAL",
+        "release_blocker": true,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "J2 shall use a static face seal architecture sized for the released media, temperature, pressure and service envelope.",
+        "title": "J2 static seal",
+        "verification_method": "gland tolerance stack + compression-force qualification + leak test"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-LEAK-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": null,
+        "evidence_ids": [],
+        "gate_ids": [
+          "pressure_vacuum_sealing",
+          "inspection_testability",
+          "safety_regulatory_containment"
+        ],
+        "id": "REQ-K01-LEAK-001",
+        "lifecycle_status": "OPEN",
+        "release_blocker": true,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "A quantitative J2 leak-test acceptance criterion shall be defined before production release.",
+        "title": "Leak acceptance",
+        "verification_method": "qualified leak test"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-SERVICE-CYCLES-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": null,
+        "evidence_ids": [],
+        "gate_ids": [
+          "fatigue_cyclic",
+          "serviceability",
+          "reliability_fmea"
+        ],
+        "id": "REQ-K01-SERVICE-CYCLES-001",
+        "lifecycle_status": "OPEN",
+        "release_blocker": true,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "Required number of J2/P006 service cycles shall be released; provisional 50-cycle screening is not itself a product requirement.",
+        "title": "Repeated service life",
+        "verification_method": "service-cycle qualification"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-ACT-FORCE-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": null,
+        "evidence_ids": [],
+        "gate_ids": [
+          "magnetic_electromagnetic",
+          "load_cases",
+          "inspection_testability"
+        ],
+        "id": "REQ-K01-ACT-FORCE-001",
+        "lifecycle_status": "CANDIDATE",
+        "release_blocker": true,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "Final electromagnetic design shall meet or exceed the released minimum force/force-coefficient envelope over stroke, current, temperature and production tolerances.",
+        "title": "Actuator force coefficient",
+        "verification_method": "FEMM sensitivity sweep + bench acceptance"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    },
+    {
+      "id": "REQ-K01-TPD-001",
+      "source": "control/requirements/requirements.json",
+      "historical": false,
+      "record": {
+        "acceptance": null,
+        "evidence_ids": [],
+        "gate_ids": [
+          "documentation_traceability",
+          "inspection_testability",
+          "manufacturability_process_capability"
+        ],
+        "id": "REQ-K01-TPD-001",
+        "lifecycle_status": "RELEASED",
+        "release_blocker": false,
+        "source_note": "Imported from K01_CURRENT_STATE requirement registry snapshot; gate state is derived elsewhere and is intentionally not duplicated here.",
+        "statement": "Released manufacturing definition shall unambiguously communicate functionally necessary size, fit, GD&T, material, finish, process and inspection characteristics without contradictory dimensions.",
+        "title": "Production technical definition",
+        "verification_method": "drawing semantic QA + visual QA + inspection-plan cross-check"
+      },
+      "missing_traceability_fields": [
+        "source"
+      ]
+    }
+  ],
+  "duplicate_ids": [],
+  "errors": [],
+  "authority": "INVENTORY_ONLY: duplicates are observations, not automatic conflicts; missing fields require source review.",
+  "scope_note": "Supplied historical repository archive; not the current Windows working tree."
+}

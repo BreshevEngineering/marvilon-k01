@@ -1,0 +1,28 @@
+{
+  "schema": "k01.center.assurance_integrity_contract.v1",
+  "status": "ACTIVE",
+  "role": "META_ASSURANCE_NOT_ENGINEERING_AUTHORITY",
+  "blocking_rule": "Any HOLD_ASSURANCE_COHERENCE disables downstream mutation and stage-transition actions in Center until the coherence defect is resolved.",
+  "required_checks": [
+    "ACI-001_D1_WORKSPACE_PROVENANCE_PIN",
+    "ACI-002_AUTHORITY_EXECUTOR_BINDING_CONTRACT",
+    "ACI-003_ANNOTATION_VIEW_ROLE_CONTRACT",
+    "ACI-004_GRAPH_DERIVED_STATE_PARITY",
+    "ACI-005_LEGACY_DEPENDENCY_STATE_QUARANTINE",
+    "ACI-006_STAGE_TRANSITION_CONTRACT",
+    "ACI-007_HANDOFF_RUNTIME_EVIDENCE_CLOSURE"
+  ],
+  "center_presentation": {
+    "home_card": "ASSURANCE COHERENCE",
+    "states": ["PASS_ASSURANCE_COHERENCE", "HOLD_ASSURANCE_COHERENCE"],
+    "required_fields": ["check_id", "why", "authority", "executor_or_consumer", "observed_fingerprint", "expected_fingerprint", "affected_actions"],
+    "no_green_release_inference": true
+  },
+  "prohibited": [
+    "Center must not infer PASS from a partial subset of a gate.",
+    "Center must not use stale derived state when a newer graph authority exists.",
+    "Center must not interpret an artifact through a newer plan than the plan pinned at artifact creation without an explicit requalification record.",
+    "Center must not hide referenced runtime evidence from handoff without an omitted-evidence hash record.",
+    "Center must not duplicate engineering acceptance logic; it only checks cross-layer coherence."
+  ]
+}

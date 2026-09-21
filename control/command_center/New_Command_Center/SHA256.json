@@ -1,0 +1,14 @@
+{
+  "TEST_RESULTS.txt": "093f27955b88b7998495eb8662aa8f42315a48f9d97f397df51062737411d6d3",
+  "install.py": "4c626cc74784d8c18658383eea94b07bae97b7040ecf8a4d39d3cc8f5ee230fd",
+  "README_RU.md": "ba2f4702c6de3c3b579c9d1d2bd324a3fb864e1c44c36f2a39a7150af049e100",
+  "integration/run.cmd": "9ce2da41848768bccd151e6e1ff2af67f04071d94dda936227f4e80d37a78b20",
+  "integration/source_sha256.txt": "4ebf4c8d5a830a432a665fe2ba278f2285e6999ca8158da9c01163fad883852f",
+  "integration/run.py": "82e04d7451739f35623aaa6d26476501e8dff8ba4cf2d16f6d45c14e479a3c11",
+  "tests/test_panel.py": "18f5d6f77abad0252dd2401812216809a17ee9724e1819a109632eb80cec271c",
+  "center/panel/app.js": "55a31c75c8c3234adb69c2aba2c14628725117ce27daf161636206d76609abd8",
+  "center/panel/index.html": "b3eb1a94d836ae1ffa6f5bcdc2bd50e824ec05a68cdad99eaa260f6f7d84addc",
+  "center/panel/model.py": "42fc304240f119f464dd5707fccfb5cbf5727c7e4a58ce44ba5c85f02470e15d",
+  "center/panel/style.css": "da89f8dcf5c11d86dcac0c32aed755b417517ed5064112c814699652f4e407d4",
+  "center/panel/server.py": "6a69698c1970435c89ad4c861b4ef9821a4ab0b62f68f16964cde4d248f8bff1"
+}

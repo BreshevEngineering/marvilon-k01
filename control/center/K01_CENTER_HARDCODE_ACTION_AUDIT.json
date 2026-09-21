@@ -1,0 +1,24 @@
+{
+  "schema": "k01.center.audit.v1",
+  "status": "HOLD_REFACTOR_REQUIRED",
+  "center_instances": [
+    "center"
+  ],
+  "hardcoded_engineering_token_hits": [],
+  "state_action_api_token_hits": [
+    {
+      "path": "center/server.py",
+      "token": "/api/"
+    },
+    {
+      "path": "center/web/app.js",
+      "token": "/api/"
+    },
+    {
+      "path": "center/web/app.js",
+      "token": "fetch("
+    }
+  ],
+  "policy": "Audit is conservative string evidence; each hit must be adjudicated before Center refactor closes.",
+  "generated_utc": "2026-09-08T18:31:45.568921+00:00"
+}
