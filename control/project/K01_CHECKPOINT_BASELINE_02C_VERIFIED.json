@@ -1,0 +1,7 @@
+{
+  "schema": "k01.checkpoint.compat_pointer.v1",
+  "checkpoint_id": "K01-CP-20260910-BASELINE-02C-DATUM-C-VERIFIED",
+  "path": "control/checkpoints/K01-CP-20260910-BASELINE-02C-DATUM-C-VERIFIED.json",
+  "status": "VERIFIED_CANDIDATE_PENDING_CANONICAL_PROMOTION",
+  "note": "Compatibility pointer only. Immutable checkpoint evidence is stored at path; current checkpoint pointer is control/project/K01_CHECKPOINT_CURRENT.json."
+}

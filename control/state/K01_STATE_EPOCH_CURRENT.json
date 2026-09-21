@@ -1,0 +1,289 @@
+{
+  "schema": "k01.state_epoch.current.v2_lifecycle",
+  "state_epoch": "K01-SE-fccd982b0c077a50",
+  "generated_utc": "2026-09-20T09:27:04.560281+00:00",
+  "source_state_fingerprint": "fccd982b0c077a50e669e7fb8d1fa80b834326f7b16c7bff14ae1ba519023cfc",
+  "goal_lock": "K01-A-001 CALIBRATION MODULE DESIGN FREEZE",
+  "current_lifecycle_level": "L5",
+  "active_engineering_object": "K01-J2 P003-P007 SERVICE JOINT",
+  "checkpoint": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+  "last_closed_decision": {
+    "id": "EDR-053",
+    "n": 53,
+    "status": "ACCEPTED_PROGRAM_FRONTIER_ADVANCE__P004_WAITING_EXTERNAL__T05_ACTIVE",
+    "summary": "P004 external-evidence dependency classification and module completion frontier advance",
+    "path": "control/decisions/EDR-053_P004_WAITING_EXTERNAL_MODULE_FRONTIER_ADVANCE.json",
+    "sha256": "f6576d16bda24e3972c5aa7f838d9d2f2ff48199777b8bbd364ea6c286d9b0a4"
+  },
+  "latest_engineering_activity": {
+    "id": "EDR-053",
+    "n": 53,
+    "status": "ACCEPTED_PROGRAM_FRONTIER_ADVANCE__P004_WAITING_EXTERNAL__T05_ACTIVE",
+    "summary": "P004 external-evidence dependency classification and module completion frontier advance",
+    "path": "control/decisions/EDR-053_P004_WAITING_EXTERNAL_MODULE_FRONTIER_ADVANCE.json",
+    "sha256": "f6576d16bda24e3972c5aa7f838d9d2f2ff48199777b8bbd364ea6c286d9b0a4"
+  },
+  "source_fingerprints": [
+    {
+      "path": "goal",
+      "sha256": "9379c802a0117636663b90da34a13e9b5767a766e68fa832cac49dbec1b6676c",
+      "hash_mode": "semantic_object"
+    },
+    {
+      "path": "frontier",
+      "sha256": "ecb8c8c788c26efba833c65fef4e6ea6b398d9bd0ba7698039630987ccb7a3f9",
+      "hash_mode": "semantic_object"
+    },
+    {
+      "path": "control/decisions/EDR-020_drawing_automation.json",
+      "sha256": "ecff5d2c7184d7dcf1c8cf30b7a14937f42797711c6f2e110f36cc69bc8d554e",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-021_J2_DIFFERENTIAL_PRESSURE_ENVELOPE.json",
+      "sha256": "c840ef9881544d728fa53f007f6166577d79be5b7bfe39759f7384aeea576cd9",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-022_J2_CFD_TEMPERATURE_BASIS.json",
+      "sha256": "65bb50b6d7cf37d0761312bdcfc44e4d079c0e10714740c1095e663939ae7519",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-023_DATUM_C_KINEMATIC_BASELINE.json",
+      "sha256": "cd531b75bab67f5d748444bba17743d68df6c3e3c7c513e34252b9cd1b98bc1c",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-024_P007_C02_LOCATOR_DEPTH_BASELINE.json",
+      "sha256": "93ce5d38241e60f14d3e1a3fbd92aba28beafa647dcaa69f60d8349b79a8af12",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE.json",
+      "sha256": "c23dd76149e9e450512271c4d7c971e409ba55d2f453df55a59e07340325c38b",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-026_T07_PRESSURE_ONLY_SCOPE.json",
+      "sha256": "ed7e99ef4e27f5e9979bb58d4b937b51048302a3b2e2b315f5f0471a4f522365",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-027_T07A_PRESSURE_SHELL_SCREEN_ACCEPTANCE.json",
+      "sha256": "2b98b3927fdc70a8ebd05c485ee2c8f06b6d704f49e5d633253e2cc8640051d1",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-028_P007_C03_C04_RELEASE.json",
+      "sha256": "1d97b3d03570d90cae1c4fff905d157f1be9a6b1048156162b14e57fa376ef14",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-029_P007_C07_C08_C11_RADIAL_ENVELOPE_RELEASE.json",
+      "sha256": "6d38d44e6efa17447c8cd4368e69a1866aac5045276a125698b48c77bdc85b48",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-030_P007_C01_C05_C06_BLIND_END_RELEASE.json",
+      "sha256": "c1c93e86a3624ebc819b8984dfbb19d3356a5f40ac8c753f2584ec9809dbdbe4",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-031_P007_J2_SEAL_FACE_SURFACE_TEXTURE_ENGINEERING_REVIEW.json",
+      "sha256": "e21ae00963a428a3221731bf4861c3003706590e063ead7a917981d44b3f65bd",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-032_P007_C02_LOCATOR_DEPTH_RELEASE.json",
+      "sha256": "91172b782d82751cf593d0f3f1c7edfb7c5bb9e7e01b327c87a7c1d6c361d670",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-033_P007_C04_ISO5458_PATTERN_RELEASE.json",
+      "sha256": "a1a284d02ef71259e490923378267b28203e02d9908a9ca17f5ca98a08158ab5",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-034_P003_DRAWING_DATUM_NAMESPACE.json",
+      "sha256": "6ad1bef2736ef584b73f521e0cc04fbf2b9f96e4005343720af494a351ec9bca",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-035_J2_MEDIA_SEAL_LEAK_RELEASE.json",
+      "sha256": "30c0aeeeebe482f3ec0bf930c373a6f5d574ec1dc8dbe47faf179f31d0eb7eaf",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-036_J2_FASTENER_SERVICE_RELEASE.json",
+      "sha256": "8d4beac9e4a7252ab3f521bb4cf0484745241eceb3ea02044d528b6298b8afdb",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-037_P007_RELEASE_COMPLETION.json",
+      "sha256": "97007c096437496085b8e0eaaa4e0787f2a26b286005863c9345ee0eeda0c3e6",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-038_P004_MATERIAL_THERMAL_PROCESS_BASIS.json",
+      "sha256": "e8ca3d6dffedace12b05b485cc1cb5d7781032aa8bab734e6f9ee09acf90f7ab",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-039_FEMM_DERIVED_SCREEN_AUTHORITY_BOUNDARY.json",
+      "sha256": "3ebb0b3f46d3650066ba7604c83d363de5eebafecdfb401d6155890818fc2bfc",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-040_P004_GUIDE_CLEARANCE_AUTHORITY_BOUNDARY.json",
+      "sha256": "0c1fe0f68d3bfb0e122915e865340bee2e8e906d290e5e5e84fe7fab296aba0c",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-041_P004_SEAT_AXIAL_TOLERANCE_ARCHITECTURE.json",
+      "sha256": "22f33916b7d45d0a26253d493d844691d8088e26431c98002607f9344eef8423",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-042_P004_DATUM_GPS_SURFACE_INSPECTION_ARCHITECTURE.json",
+      "sha256": "4f701366bdc7f455625105901b695208eb3d7c9a5977e2a51346ff7be562000d",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-043_P004_TECAPEEK_PVX_PRODUCTION_MATERIAL_EVIDENCE.json",
+      "sha256": "0448c3982a50e1054d6c3d671a1029ec8a73430bbfcc06d68d998beea1cccc55",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-044_P004_DATUM_FUNCTION_CORRECTION.json",
+      "sha256": "c4756ec76f32892e628711f6695ea3d455f941aa977bbf94c19d30c3bbdfb6e5",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-045_P004_REFERENCE_TEMPERATURE_AND_SERVICE_CLEARANCE.json",
+      "sha256": "42e23bebb517fa3cdef83518020a88551d827fc70bb75e470b0172ddb15872bf",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-046_P004_JOINT_TOLERANCE_BUDGET_20C.json",
+      "sha256": "cda05c1274e5d8046d545fda57b7e898e85da06682384d5a144ee5fabd6e5edd",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-047_P004_AXIAL_RECENTER.json",
+      "sha256": "207efe1adec064c1fe95fabae01f3c6bf0dcab22a2adef47dd842958d7505ce6",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-048_P004_INSPECTION_CONDITIONING_PROCEDURE.json",
+      "sha256": "c34c19bcee82d02f96dce12f115a287206b8dbc3c2bdc8d5c3dc992bded42dc4",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-049_P004_GUIDE_SYSTEM_ALLOCATION_AUTHORITY_RECOVERY.json",
+      "sha256": "9dfd658d696c182d2671b27aa51dc614f2e1b66d72db041109ddd79c552dd6fa",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-050_P004_FUNCTIONAL_EDGE_TREATMENT.json",
+      "sha256": "24f9a7bccfcde3ff82e430c5f7f8a68981e673aa6c4ff0e262a1929ae91355ed",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-051_P004_RESIDUAL_GPS_SURFACE_AUTHORITY_BOUNDARY.json",
+      "sha256": "1d84c6e9882347b047278a0f4d9b3082613cdb83ae51d0e5fe09ed2d22743796",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-052_P004_PHYSICAL_EVIDENCE_ACQUISITION_PLAN.json",
+      "sha256": "35c507974908bb75071e84305903abce43cb1a2ce24a6613b18005eff2e6b936",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/EDR-053_P004_WAITING_EXTERNAL_MODULE_FRONTIER_ADVANCE.json",
+      "sha256": "f6576d16bda24e3972c5aa7f838d9d2f2ff48199777b8bbd364ea6c286d9b0a4",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/project/K01_CHECKPOINT_CURRENT.json",
+      "sha256": "20678b70a09aa892190de19afa2a638b03efc59cf5e41540c2be7285eaeccba3",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/requirements/K01_RELEASE_REQUIREMENTS_CURRENT.json",
+      "sha256": "97050b85a301d3021671521d9a9b66d7868bee079951bc6aa378593821589db6",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/system/K01_ENGINEERING_DOMAIN_REGISTRY_CURRENT.json",
+      "sha256": "4f9954b1408424b1ee50d4a609bd8b12d2d61cd79c695c1e883c8efdcf2b7061",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/decisions/K01_DECISION_AUTHORITY_DISPOSITION_EDR047.json",
+      "sha256": "9a7cc6536a6672ce4b45b2749502c6300fcdcd33eb7703b8a61d25a0f097a186",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/product_definition/K01_CONTROLLED_CHARACTERISTIC_REGISTRY_CURRENT.json",
+      "sha256": "a2b5098d1517137bbadf846c69ff31189126e050872bfac379c195421df02aff",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "control/engineering/K01_ENGINEERING_REFERENCE_REGISTRY_CURRENT.json",
+      "sha256": "3bf1875711a8b52c284b2f3a1d4af3620b82b268bdc687f67a46496996b39dc9",
+      "hash_mode": "raw_file"
+    },
+    {
+      "path": "cad_api/solidworks_2018_proven/K01_SOLIDWORKS_API_OPERATING_STANDARD_CURRENT.txt",
+      "sha256": "2feee5ba735eb2e0fb5a5c8beb8cb80240fbbf5208bcb5bad74307c72d220fbf",
+      "hash_mode": "raw_file"
+    }
+  ],
+  "projection_observations": [
+    {
+      "path": "reports/control/K01_DRAWING_CONTROL_CURRENT.json",
+      "sha256": "73fa51474db093277b4778294d8658f1335c486f1739fd8e5d40080058892015",
+      "hash_mode": "semantic_file"
+    },
+    {
+      "path": "reports/control/K01_BOM_RELEASE_STATUS_CURRENT.json",
+      "sha256": "930cf550acdaeab8b772122cc3d9c8d0246d77a6ded942a391e2acacc22f8534",
+      "hash_mode": "semantic_file"
+    },
+    {
+      "path": "reports/control/K01_ANALYSIS_REGISTER_CURRENT.json",
+      "sha256": "0db2594fccb28523f263ff2fb02064c88226e8a7974bce10531107400dc1e06d",
+      "hash_mode": "semantic_file"
+    },
+    {
+      "path": "reports/control/K01_ENGINEERING_SYSTEM_COVERAGE_CURRENT.json",
+      "sha256": "77f342141d82b4e4048c5feae62c1bd6ec36bc94cc43fceae53eabff02d47f38",
+      "hash_mode": "semantic_file"
+    },
+    {
+      "path": "reports/control/K01_GIT_GITHUB_STATUS_CURRENT.json",
+      "sha256": "93e0c11f10c241d53c84c1e3978e9a8383651542ff1e6a7d3b58513ec51d14c7",
+      "hash_mode": "semantic_file"
+    },
+    {
+      "path": "reports/control/K01_DECISION_IDENTITY_COHERENCE_CURRENT.json",
+      "sha256": "3faaae43ddbce0108eee4d50005aff41ea1acba2c906921e98d637a724c4c35c",
+      "hash_mode": "semantic_file"
+    },
+    {
+      "path": "reports/control/K01_ENGINEERING_VALUE_COHERENCE_CURRENT.json",
+      "sha256": "e29db2a03898bad2f2c2602fc242c3a21a87f26df59fcbf9868bc6a9351b1fc1",
+      "hash_mode": "semantic_file"
+    },
+    {
+      "path": "reports/control/K01_PROJECT_CONTROL_SPINE_CURRENT.json",
+      "sha256": "36fcca6b110b042041e0d12fcf7ee096902a660860e9e6548969f2c3ae5c048a",
+      "hash_mode": "semantic_file"
+    }
+  ],
+  "fingerprint_policy": {
+    "state_epoch_inputs": "authority/control sources only",
+    "projection_rule": "generated CURRENT projections are observed and guarded but do not define State Epoch"
+  }
+}

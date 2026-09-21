@@ -1,0 +1,78 @@
+{
+  "schema": "k01_assembly_approval.v2",
+  "generated_utc": "2026-09-16T19:07:36.364489+00:00",
+  "status": "PARTIAL_RELEASE_HOLD",
+  "projection_role": "CURRENT_ASSEMBLY_APPROVAL_PROJECTION; NOT CAD AUTHORITY",
+  "supersedes_projection_sha256": "eed510b005e682ef3918ba03976a7de896bf0c36ad5f9368e0d2b8fd904b7b2d",
+  "authority": {
+    "checkpoint": "control/checkpoints/K01-CP-20260910-BASELINE-02C-PROMOTED.json",
+    "post_promotion_qa": "evidence/immutable/dfc90c0c31cec595a32f87af0b8840dcf884b127aca67b1debd899f34d80a23d__K01_BASELINE_02C_POST_PROMOTION_ASSEMBLY_QA.json",
+    "path": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+    "sha256": "c829fac9c94ba94e1c6fc53dcb9f8afb2a91610673a0e727d59bd6fbbbfba82c",
+    "configuration": "Default",
+    "component_count": 14
+  },
+  "facts": {
+    "component_count": 14,
+    "open_errors": 0,
+    "open_warnings": 32,
+    "active_mate_errors": 0,
+    "p003_constrained": "swFullyConstrained",
+    "p016_constrained": "swFullyConstrained",
+    "p017_constrained": "swFullyConstrained",
+    "moving_group_pass": true,
+    "unexpected_interference_total": 0,
+    "p017_material_status": "OPEN_NATIVE_ASSIGNMENT_BEFORE_MASS_RELEASE"
+  },
+  "criteria": [
+    {
+      "criterion": "Canonical A001 identity matches promoted Baseline 02C",
+      "status": "PASS",
+      "evidence": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM sha256=c829fac9c94ba94e1c6fc53dcb9f8afb2a91610673a0e727d59bd6fbbbfba82c",
+      "next": "Freeze canonical identity until an explicit baseline-change decision."
+    },
+    {
+      "criterion": "Expected modeled occurrence count = 14",
+      "status": "PASS",
+      "evidence": "checkpoint=14; post-promotion QA=14",
+      "next": "Recheck only after controlled product-structure change."
+    },
+    {
+      "criterion": "Post-promotion assembly opens without errors",
+      "status": "PASS",
+      "evidence": "open_errors=0",
+      "next": "Any nonzero open error blocks migration."
+    },
+    {
+      "criterion": "Active mates are error-free",
+      "status": "PASS",
+      "evidence": "active_mate_errors=0; P003=swFullyConstrained; P016=swFullyConstrained; P017=swFullyConstrained",
+      "next": "Recheck after SW2026 conversion."
+    },
+    {
+      "criterion": "IN/MID/OUT kinematic propagation preserved",
+      "status": "PASS",
+      "evidence": "moving_group_pass=True",
+      "next": "Recheck after SW2026 conversion."
+    },
+    {
+      "criterion": "No unexpected interferences in qualified states",
+      "status": "PASS",
+      "evidence": "unexpected_interference_total=0",
+      "next": "Recheck after SW2026 conversion."
+    },
+    {
+      "criterion": "Open warnings disposition",
+      "status": "PARTIAL",
+      "evidence": "open_warnings=32; QA remains PASS_STABLE_ASSEMBLY_QA",
+      "next": "Do not reinterpret warnings as zero."
+    },
+    {
+      "criterion": "P017 native material assignment before mass release",
+      "status": "OPEN",
+      "evidence": "OPEN_NATIVE_ASSIGNMENT_BEFORE_MASS_RELEASE",
+      "next": "Close native material-card assignment before mass/release approval."
+    }
+  ],
+  "rule": "Current projection follows promoted canonical assembly; it must not resurrect the pre-promotion 13-occurrence baseline."
+}

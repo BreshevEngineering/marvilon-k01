@@ -1,0 +1,118 @@
+{
+  "schema": "k01.change_impact_policy.v2",
+  "project": "K01",
+  "purpose": "Domain-specific change propagation using allocated requirements, derived inputs and Product Definition slices; fail closed while avoiding unnecessary rebuilds.",
+  "principles": [
+    "The authoritative engineering build graph is the only transitive stale/rebuild topology.",
+    "Relationship registry supplies entity-to-graph seed mapping and cross-part/interface review context; it does not duplicate numerical engineering requirements.",
+    "Every derived artifact stores the state fingerprint of its consumed inputs. Fingerprint mismatch means STALE; status is never manually reset to PASS.",
+    "A change to one part never silently rewrites another part. If a shared interface may be affected, counterpart parts are REVIEW_REQUIRED and their dependent verification chain is invalidated.",
+    "OPEN remains OPEN through propagation and rebuild. Rebuild cannot create a tolerance, fit, GD&T, roughness, process or acceptance value that upstream Product Definition did not control.",
+    "Visual-only drawing changes must not invalidate Product Definition, CAD geometry, BOM or analysis nodes.",
+    "Interface/requirement/material/geometry changes are engineering changes; they must run pre-change impact analysis before write for Class A/B change control.",
+    "Automatic execution is separated from automatic invalidation: stale propagation is automatic; CAD/solver/release mutations require their registered producer/gate and may require human approval.",
+    "Requirement allocation changes are separate from requirement-text changes and invalidate every allocated target plus shared-interface counterpart reviews.",
+    "Derived engineering inputs propagate by quantity identity/derivation ID; equal numeric values do not couple unrelated analyses.",
+    "Product Definition domain slices are used to reduce over-invalidation: drawing, variation, inspection, physics, manufacturing and configuration consumers depend on the narrowest sufficient slice.",
+    "Downstream findings propagate upstream only through Engineering Feedback Records/change control; stale propagation never silently changes design intent.",
+    "Domain slice nodes consume their direct domain authorities, not K01.PD.P007.COMPILED as an input; otherwise an unrelated full-definition change would defeat narrow invalidation."
+  ],
+  "change_domains": {
+    "requirement": {
+      "cross_entity_review": true
+    },
+    "interface_requirement": {
+      "cross_entity_review": true
+    },
+    "geometry": {
+      "cross_entity_review": false
+    },
+    "interface_geometry": {
+      "cross_entity_review": true
+    },
+    "material": {
+      "cross_entity_review": true
+    },
+    "product_definition": {
+      "cross_entity_review": false
+    },
+    "pmi": {
+      "cross_entity_review": false
+    },
+    "analysis_input": {
+      "cross_entity_review": false
+    },
+    "manufacturing_process": {
+      "cross_entity_review": true
+    },
+    "metadata": {
+      "cross_entity_review": false
+    },
+    "drawing_visual": {
+      "cross_entity_review": false
+    },
+    "requirement_allocation": {
+      "cross_entity_review": true
+    },
+    "derived_input": {
+      "cross_entity_review": false
+    },
+    "datum_scheme": {
+      "cross_entity_review": true
+    },
+    "measurement_condition": {
+      "cross_entity_review": false
+    },
+    "binding_invariance": {
+      "cross_entity_review": false
+    },
+    "physics_input": {
+      "cross_entity_review": false
+    },
+    "variation_input": {
+      "cross_entity_review": true
+    },
+    "inspection_strategy": {
+      "cross_entity_review": false
+    },
+    "supplier_capability": {
+      "cross_entity_review": true
+    },
+    "configuration_effectivity": {
+      "cross_entity_review": true
+    },
+    "engineering_feedback": {
+      "cross_entity_review": true
+    }
+  },
+  "node_actions": {
+    "source": "REVIEW_SOURCE_NO_AUTOWRITE",
+    "verification": "REVERIFY",
+    "derived": "REBUILD",
+    "external": "RERUN_REGISTERED_TOOL"
+  },
+  "state_policy": {
+    "STALE": "REBUILD_OR_REVERIFY",
+    "DRIFT": "STOP_AND_RECONCILE_ARTIFACT",
+    "FRESH_UNVERIFIED": "REVERIFY",
+    "MISSING": "BUILD_IF_REQUIRED_BY_ACTIVE_PATH",
+    "BLOCKED": "FIX_UPSTREAM_FIRST",
+    "HOLD": "ENGINEERING_DECISION_REQUIRED"
+  },
+  "rebuild_rule": "Topological order only. A node may rebuild only after required impacted predecessors are no longer STALE/DRIFT/BLOCKED/HOLD.",
+  "release_rule": "Any stale or drifted release-path node keeps release HOLD. Release cannot be restored by editing the drawing/PDF status.",
+  "known_limitations": [
+    "V9 canonical CAD semantics are assembly-level (K01.CAD.SEM.A001). Part geometry changes may conservatively over-invalidate unrelated CAD-semantic consumers until part-level semantic slice nodes are introduced. Under-invalidation is prohibited."
+  ],
+  "domain_slice_rule": {
+    "drawing_visual": "drawing artifact/visual verification only",
+    "product_definition": "full compiled contract is traceability/readiness aggregation; downstream functional consumers use direct-authority domain slices unless they explicitly need the entire contract",
+    "variation_input": "variation slice + tolerance/inspection consumers",
+    "physics_input": "physics slice + affected solver cases",
+    "inspection_strategy": "inspection slice + inspection plan/results",
+    "manufacturing_process": "manufacturing slice + MBOM/process/release consumers",
+    "configuration_effectivity": "configuration slice + release/as-built consumers",
+    "measurement_condition": "drawing + variation + inspection/manufacturing slices as declared; physics only if a solver case explicitly consumes the condition",
+    "supplier_capability": "manufacturing + variation/inspection and release consumers; drawing only where route/process semantics are drawing-relevant"
+  }
+}

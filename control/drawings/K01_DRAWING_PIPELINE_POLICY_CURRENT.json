@@ -1,0 +1,373 @@
+{
+  "schema": "k01.drawing_pipeline.policy.current.v15",
+  "project": "K01",
+  "purpose": "Controlled D1-D9 release-native drawing pipeline. Separates model semantics from drawing presentation, preserves claim identity/provenance, and prevents design-review fallback callouts from becoming release authority.",
+  "lanes": {
+    "DESIGN_REVIEW_BASE": {
+      "status": "ACTIVE_PROVEN_V10",
+      "node": "K01.DRAWING.D006.PROJECTION",
+      "allow_projection_fallback": true,
+      "release_eligible": false,
+      "rule": "V10 semantic base is retained for design review and visual work. Fallback Cxx callouts are traceable but cannot satisfy release-native PMI/D7 requirements."
+    },
+    "RELEASE_NATIVE_D1_D9": {
+      "status": "CONTROLLED_PIPELINE__IMPLEMENT_INCREMENTALLY",
+      "allow_projection_fallback": false,
+      "release_eligible": true,
+      "rule": "Released size/tolerance/GD&T/datum/surface semantics originate from controlled model PMI/native annotations or controlled property/spec references. Drawing is a projection, not a second semantic authority."
+    }
+  },
+  "solidworks_2018_transport": {
+    "proven_project_fact": "SW2018 native Drawing View / Model View import options can transfer DimXpert annotations when annotation-view orientation matches. K01 has NOT proven InsertModelAnnotations3 as a DimXpert transport; prior Model Items path yielded DIMXPERT_COUNT=0.",
+    "release_native_rule": "D5 must use a capability-qualified transport recorded by exemplar evidence. Do not assume InsertModelAnnotations3 transfers DimXpert. Do not retry rejected PropertyManager UI automation as a primary mechanism.",
+    "annotation_view_rule": "PMI authoring is planned by normalized annotation_view_role. D2 evidence binds that role to an actual SOLIDWORKS annotation-view identity/orientation; D3 verifies it.",
+    "seed_rule": "For K01/SW2018, approved linked SLDDRW seed reuse/reference-safe relink is preferred when it preserves proven structure. New-document generation is optional, not mandatory."
+  },
+  "characteristic_authoring_contract": {
+    "granularity": "CLAIM_LEVEL",
+    "reason": "One characteristic may contain claims that belong to different annotation/drawing views (for example C05 flange OD vs flange thickness).",
+    "required_target_fields": [
+      "claim_id",
+      "claim_paths",
+      "carrier",
+      "authoring_class",
+      "action",
+      "drawing_view_role"
+    ],
+    "annotation_view_required_when": "carrier is geometry/PMI/GD&T/datum and action authors/verifies model annotation; not required for TITLE_BLOCK/GENERAL_NOTE/property carriers",
+    "variation_rule": "A controlled claim may use a fit, numeric tolerance, GD&T, basic/reference semantics, or an explicit controlled general-tolerance policy. A null/OPEN variation is never replaced by a template default.",
+    "identifier_rule": "characteristic_tag / claim_id is inspection/trace identity. Assembly BOM balloons remain a separate numbering system.",
+    "authoring_order": [
+      "DATUM_DRF",
+      "SIZE_FIT",
+      "LOCATION_PATTERN",
+      "GDT",
+      "SURFACE",
+      "MATERIAL_PROCESS_PROPERTY"
+    ],
+    "authoring_order_rule": "Datum/DRF first, then size/fit, location/pattern, GD&T, surface, material/process. D1 task order is controlled by authoring class, not Cxx lexical order."
+  },
+  "binding_contract": {
+    "authority": "semantic/geometric signature + controlled feature context; runtime face IDs/indices are non-authoritative",
+    "minimum_evidence": "D3 resolves each release-native claim uniquely to the intended geometry and records signature evidence",
+    "ambiguity_rule": "0 matches or >1 matches => HOLD",
+    "invariance_levels": [
+      "L1_SAVE_REOPEN",
+      "L2_FORCE_REBUILD",
+      "L3_PERTURB_RESTORE"
+    ],
+    "release_rule": "Required L2/L3 level must pass for release-critical bindings; save-close-reopen alone is insufficient."
+  },
+  "nodes": [
+    {
+      "id": "D1",
+      "name": "AUTHORING_PLAN",
+      "mode": "AUTOMATIC",
+      "input": "S4C engineering Product Definition drawing slice + S2 drawing-authoring context + parts registry + pipeline policy",
+      "output": "reports/drawing/current/K01-D-006_D1_AUTHORING_PLAN_CURRENT.json",
+      "acceptance": "all claim targets classified; controlled authoring claims have target view role and a binding anchor/explicit blocker; no duplicate claim_id; route/delivery blockers explicit"
+    },
+    {
+      "id": "D2",
+      "name": "PMI_AUTHORING",
+      "mode": "MANUAL_CAD_MUTATION",
+      "input": "D1 plan",
+      "output": "native model PMI + D2 authoring evidence",
+      "acceptance": "not self-certifying; D3 closes authoring"
+    },
+    {
+      "id": "D3",
+      "name": "AUTHORING_VERIFY_BINDING_INVARIANCE",
+      "mode": "AUTOMATIC_VERIFY__V15_L1_L2_ACTIVE_L3_CONTROLLED_RECIPE_PENDING",
+      "input": "model + D1 + D2 evidence",
+      "output": "reports/drawing/current/K01-P-007_D3_AUTHORING_VERIFY_CURRENT.json",
+      "acceptance": "For first P007 exemplar: C01/C02/C09 identity/readback + annotation-view identity + semantic geometry binding + L1 save/reopen + L2 ForceRebuild + source SHA invariance. Release-native D3 additionally requires qualified L3 perturb/restore recipe."
+    },
+    {
+      "id": "D4",
+      "name": "DRAWING_NATIVE_DEFINITION_COMPILE",
+      "mode": "AUTOMATIC",
+      "input": "S4C compiled Product Definition + D3 evidence + parts registry",
+      "output": "release-native drawing semantic manifest + fingerprint",
+      "acceptance": "reproducible fingerprint; every release-native claim has proven model carrier/provenance"
+    },
+    {
+      "id": "D5",
+      "name": "DRAWING_GENERATION_IMPORT",
+      "mode": "AUTOMATIC_CAPABILITY_QUALIFIED",
+      "input": "D4 + approved template/seed + part registry + transport capability evidence",
+      "output": "linked SLDDRW with views/sections/imported model semantics",
+      "acceptance": "expected imported claim identities/counts match D4; no build errors; transport method recorded"
+    },
+    {
+      "id": "D6",
+      "name": "HUMAN_LAYOUT_ONLY",
+      "mode": "MANUAL",
+      "input": "D5 SLDDRW",
+      "output": "same SLDDRW visually arranged",
+      "acceptance": "pre/post semantic fingerprint identical; leaders/placement/views only; semantic edit => STOP + EFR"
+    },
+    {
+      "id": "D7",
+      "name": "SEMANTIC_QA",
+      "mode": "AUTOMATIC__V15_FIRST_EXEMPLAR_SCOPE_ACTIVE",
+      "input": "SLDDRW + D4 + parts registry + drawing policy",
+      "output": "reports/drawing/current/K01-D-006_D7_SEMANTIC_QA_CURRENT.json",
+      "acceptance": "For first exemplar scope: zero machine BLOCK findings for authorized C01/C02/C09 presentation, no unauthorized visible C05/other semantics, no dangling/manual/override dimensions, MMGS/ISO/FIRST_ANGLE/A3 profile. Release D7 remains HOLD on D3 L3, configuration/effectivity, D6 pre/post fingerprint and open Product Definition claims."
+    },
+    {
+      "id": "D8",
+      "name": "VISUAL_QA",
+      "mode": "SEMI_AUTOMATIC_HUMAN_SIGNOFF",
+      "input": "temporary preview PDF/raster from post-D6 SLDDRW",
+      "output": "D8 visual QA evidence + rasters",
+      "acceptance": "no clipping/critical overlap/unreadable text + engineer approval; no D8->D9 cycle"
+    },
+    {
+      "id": "D9",
+      "name": "EXPORT_BASELINE",
+      "mode": "AUTOMATIC",
+      "input": "D7 PASS + D8 PASS + approved SLDDRW + delivery profile",
+      "output": "required PDF/DXF/STEP AP242/other deliverables + hashes",
+      "acceptance": "only required formats exported; capability/supplier acceptance gates satisfied; hashes recorded in baseline"
+    }
+  ],
+  "d7_checks": [
+    {
+      "code": "DQA-001",
+      "level": "BLOCK",
+      "rule": "Every release-native controlled CLAIM required by D4 is present exactly once in the intended drawing/annotation-view mapping unless the controlled representation explicitly permits a composite single carrier."
+    },
+    {
+      "code": "DQA-002",
+      "level": "BLOCK",
+      "rule": "No release-semantic drawing annotation exists without a registered characteristic/claim/provenance mapping."
+    },
+    {
+      "code": "DQA-003",
+      "level": "BLOCK",
+      "rule": "No dangling release dimensions/annotations."
+    },
+    {
+      "code": "DQA-004",
+      "level": "BLOCK",
+      "rule": "No duplicate/contradictory representation of the same claim/feature."
+    },
+    {
+      "code": "DQA-005",
+      "level": "BLOCK",
+      "rule": "Every released dimension has explicit model variation semantics or a controlled general_tolerance_policy_ref. OPEN/default/template tolerance is prohibited."
+    },
+    {
+      "code": "DQA-006",
+      "level": "BLOCK",
+      "rule": "Drawing datums/DRF match D4/model PMI datum semantics."
+    },
+    {
+      "code": "DQA-007",
+      "level": "BLOCK",
+      "rule": "Drawing/model/Product Definition revision/effectivity are compatible and current."
+    },
+    {
+      "code": "DQA-008",
+      "level": "BLOCK",
+      "rule": "Title block/material/part identity properties match controlled registries."
+    },
+    {
+      "code": "DQA-009",
+      "level": "BLOCK",
+      "rule": "Characteristic tags/inspection IDs are unique and match D4; do not conflate them with BOM balloon item numbers."
+    },
+    {
+      "code": "DQA-010",
+      "level": "BLOCK",
+      "rule": "No manual drawing tolerance/GD&T may satisfy release. Verify annotation provenance by characteristic/claim -> model PMI/native annotation -> drawing annotation identity; comparing only numeric tolerance values is insufficient."
+    },
+    {
+      "code": "DQA-011",
+      "level": "WARN",
+      "rule": "Sheet/view scales are explicit and conform to drawing profile."
+    },
+    {
+      "code": "DQA-012",
+      "level": "WARN",
+      "rule": "View bounding boxes do not critically overlap; annotation overlap remains D8/human-readable check."
+    },
+    {
+      "code": "DQA-013",
+      "level": "CONDITIONAL_BLOCK",
+      "rule": "If a controlled general_tolerance_policy_ref exists it is correctly referenced; otherwise no general tolerance note is required or invented."
+    },
+    {
+      "code": "DQA-014",
+      "level": "CONDITIONAL_BLOCK",
+      "rule": "If a controlled default surface-finish policy exists it is projected; otherwise no default roughness is invented."
+    },
+    {
+      "code": "DQA-015",
+      "level": "BLOCK",
+      "rule": "D6 pre/post semantic fingerprint is unchanged; semantic change during layout requires EFR/change control and re-entry upstream."
+    },
+    {
+      "code": "DQA-016",
+      "level": "BLOCK",
+      "rule": "Imported annotation-view identity/orientation matches D1/D3 target mapping for every release-native claim."
+    },
+    {
+      "code": "DQA-017",
+      "level": "BLOCK",
+      "rule": "Drawing document length unit is MMGS/mm for K01-D-006 unless a controlled exception exists."
+    },
+    {
+      "code": "DQA-018",
+      "level": "BLOCK",
+      "rule": "No release dimension uses a local display-unit override unless the exception is registered in Product Definition/drawing policy."
+    },
+    {
+      "code": "DQA-019",
+      "level": "BLOCK",
+      "rule": "Each native displayed dimension, converted to canonical units, agrees with its D4/model claim value and variation semantics."
+    },
+    {
+      "code": "DQA-020",
+      "level": "BLOCK",
+      "rule": "Drawing standard/projection/sheet profile matches the controlled ISO/first-angle/A3 profile or an approved exception."
+    }
+  ],
+  "freshness_inputs": {
+    "D1": [
+      "K01.PD.P007.DRAWING_SLICE state",
+      "characteristic drawing_authoring context",
+      "parts registry",
+      "pipeline policy/tool identity"
+    ],
+    "D3": [
+      "D1 state",
+      "native model semantic hash",
+      "D2 evidence",
+      "binding policy/tool identity"
+    ],
+    "D4": [
+      "S4C Product Definition state",
+      "D3 state",
+      "parts registry",
+      "compiler identity"
+    ],
+    "D5": [
+      "D4 state",
+      "template_or_seed hash",
+      "parts registry",
+      "transport capability/method identity",
+      "generator identity"
+    ],
+    "D7": [
+      "D4 state",
+      "post-D6 SLDDRW hash",
+      "parts registry",
+      "D7 rules/tool identity"
+    ],
+    "D8": [
+      "post-D6 SLDDRW/preview hash",
+      "visual QA policy/tool identity"
+    ],
+    "D9": [
+      "D7 verification",
+      "D8 approval",
+      "delivery profile",
+      "exporter identity"
+    ]
+  },
+  "release_preconditions": [
+    "P007 manufacturing route selected/qualified for process-dependent characteristics",
+    "required claim-level feature signatures/binding anchors captured and D3 invariance qualified",
+    "supplier/manufacturer delivery-format acceptance recorded; STEP AP242 PMI is conditional, not presumed",
+    "all release-blocking Product Definition OPEN/PARTIAL items closed or formally dispositioned"
+  ],
+  "prohibited": [
+    "AutoDimensionScheme as release authoring",
+    "automatic datum/functional-dimension selection from geometry",
+    "automatic leader routing/overlap resolution as release acceptance",
+    "manual retyping of released tolerance/GD&T in drawing",
+    "template/general tolerance becoming product authority",
+    "InsertModelAnnotations3 treated as proven DimXpert transport without K01 capability evidence",
+    "design-review PROJECTION_FALLBACK counted as release-native D7 coverage"
+  ],
+  "d2_authorization_policy": {
+    "granularity": "CLAIM_LEVEL",
+    "rule": "An OPEN manufacturing route blocks route/process-dependent claims and release, not unrelated controlled claims. D1 emits d2_authorizable_claim_ids; D2 may mutate only that set in a dedicated working copy.",
+    "route_dependency_values": [
+      "NONE",
+      "ROUTE_INDEPENDENT",
+      "CAPABILITY_DEPENDENT",
+      "ROUTE_DEPENDENT",
+      "PROCESS_DEPENDENT",
+      "PROCESS_DEFINING",
+      "UNCLASSIFIED"
+    ],
+    "fail_closed": "UNCLASSIFIED is not authorizable for release-native D2."
+  },
+  "exemplar_lane": {
+    "id": "DESIGN_REVIEW_EXEMPLAR_NOT_RELEASE",
+    "purpose": "Create one real manual P007/D006 exemplar before D5 automation; capture annotation-view/import/layout behavior.",
+    "authority": "control/drawings/K01_D006_EXEMPLAR_POLICY_CURRENT.json",
+    "allowed": "D2 route-independent controlled claims + manual SW import/layout on dedicated copies",
+    "forbidden": "counting V10 fallback notes or route-dependent/open claims as release-native coverage",
+    "exit": "exemplar capture PASS + human visual QA; release remains HOLD until full D3/D4/D7/D8/D9."
+  },
+  "family_planning": {
+    "authority": "control/drawings/K01_DRAWING_FAMILY_RULES_CURRENT.json",
+    "part_binding": "control/drawings/K01_P007_DRAWING_FAMILY_BINDING_CURRENT.json",
+    "rule": "D1 consumes family/view-routing context. Family rules decide representation/routing only; they never create Product Characteristics or tolerance values.",
+    "current_family": "ROTATIONAL_FLANGED_HOLLOW",
+    "current_p007_view_plan": [
+      "AXIAL_FULL_SECTION",
+      "FLANGE_END",
+      "ISOMETRIC_OPTIONAL"
+    ],
+    "redundant_view": "AXIAL_EXTERNAL unless an external-only controlled claim later requires it"
+  },
+  "v15_first_exemplar_assurance": {
+    "status": "ACTIVE",
+    "scope": "K01-P-007 / K01-D-006 manual exemplar only; not a manufacturing-release waiver",
+    "d3": {
+      "command": "tools/commands/workflows_20260916/RUN_K01_D3_VERIFY_P007_V15.cmd",
+      "report": "reports/drawing/current/K01-P-007_D3_AUTHORING_VERIFY_CURRENT.json",
+      "active_levels": [
+        "L1_SAVE_REOPEN",
+        "L2_FORCE_REBUILD"
+      ],
+      "release_pending": [
+        "L3_PERTURB_RESTORE"
+      ],
+      "rule": "L3 is not guessed. A real benign parameter, allowed delta and restore acceptance must be controlled before automatic perturbation."
+    },
+    "d7": {
+      "command": "tools/commands/workflows_20260916/RUN_K01_D7_QA_D006_V15.cmd",
+      "report": "reports/drawing/current/K01-D-006_D7_SEMANTIC_QA_CURRENT.json",
+      "active_checks": [
+        "DQA-001",
+        "DQA-002",
+        "DQA-003",
+        "DQA-004",
+        "DQA-005",
+        "DQA-006",
+        "DQA-008",
+        "DQA-010",
+        "DQA-013",
+        "DQA-014",
+        "DQA-017",
+        "DQA-018",
+        "DQA-019",
+        "DQA-020"
+      ],
+      "explicit_release_open": [
+        "DQA-007 configuration/effectivity",
+        "DQA-015 D6 pre/post semantic fingerprint",
+        "D3 L3 perturb/restore",
+        "remaining Product Definition release blockers",
+        "D8 visual approval"
+      ]
+    },
+    "same_drawing_rule": "D7 defects are corrected on the existing V12 exemplar. Do not generate a new drawing and do not add engineering semantics manually."
+  }
+}

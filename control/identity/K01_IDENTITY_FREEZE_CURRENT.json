@@ -1,0 +1,16 @@
+{
+  "schema": "k01_identity_freeze",
+  "items": [],
+  "assembly_identity": {
+    "part_no": "K01-A-001",
+    "description": "Calibration Module"
+  },
+  "generated_utc": "2026-09-09T08:45:41.513462+00:00",
+  "status": "PASS",
+  "canonical_authority": {
+    "path": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+    "sha256": "a6bc1c6227075c2736a2383a73ecf2f95e109f7cbcfa34ef01ccf8bfa45cdd33",
+    "verification": "evidence/immutable/3c0a6734e80ac50f388b0354df19d80908f6e636881cb256205ae1ea8a910cd5__K01_IDENTITY_FREEZE_VERIFY_CURRENT.json"
+  },
+  "verification": "evidence/immutable/71fa8c92981a2fe408214f8c28b7c7dca81e7921d7943eaf748bc9516a7502df__K01_IDENTITY_FREEZE_ADJUDICATION_CURRENT.json"
+}

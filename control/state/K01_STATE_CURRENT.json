@@ -1,554 +1,552 @@
-﻿{
-    "schema":  "k01_derived_state_v7",
-    "generated":  "2026-09-05T08:42:32.5896898+03:00",
-    "active_design":  "Gate04D-C2R1",
-    "tasks":  [
-                  {
-                      "id":  "T01",
-                      "name":  "C2 failure root cause retained",
-                      "status":  "PASS",
-                      "kind":  "EVIDENCE",
-                      "why":  "Preserve rejected C2 and exact P003/P006 collision proof.",
-                      "action":  "OPEN_ROOTCAUSE",
-                      "depends_on":  [
-
-                                     ]
-                  },
-                  {
-                      "id":  "T02",
-                      "name":  "C2R1 native CAD + assembly + interference",
-                      "status":  "PASS",
-                      "kind":  "AUTOMATED",
-                      "why":  "Build, mate architecture and no-new-hard-interference are the geometry release gate.",
-                      "action":  "RUN_C2R1_ALL",
-                      "depends_on":  [
-                                         "T01"
-                                     ]
-                  },
-                  {
-                      "id":  "T03",
-                      "name":  "Pilot tolerance chain + P006 service-tool envelope",
-                      "status":  "OPEN",
-                      "kind":  "ENGINEERING",
-                      "why":  "Nominal 0.25 mm radial clearance is proven only at nominal geometry. Freeze P006 head tolerance, pilot-ID tolerance, worst-case clearance and tool access.",
-                      "action":  "OPEN_EDR019",
-                      "depends_on":  [
-                                         "T02"
-                                     ]
-                  },
-                  {
-                      "id":  "T04",
-                      "name":  "Seal compound + clamp preload",
-                      "status":  "OPEN",
-                      "kind":  "ENGINEERING_INPUT",
-                      "why":  "O-ring geometry exists, but compound/hardness/process-gas compatibility and compression force are needed before clamp preload is released.",
-                      "action":  "OPEN_DOSSIER",
-                      "depends_on":  [
-                                         "T02"
-                                     ]
-                  },
-                  {
-                      "id":  "T05",
-                      "name":  "M2.5 joint + local flange/contact verification",
-                      "status":  "OPEN",
-                      "kind":  "ANALYSIS",
-                      "why":  "Preliminary thread screen does not reject M2.5; final preload/friction/head-bearing/flange-separation verification remains.",
-                      "action":  "OPEN_MECH",
-                      "depends_on":  [
-                                         "T04"
-                                     ]
-                  },
-                  {
-                      "id":  "T06",
-                      "name":  "Thermal preload + service/galling",
-                      "status":  "OPEN",
-                      "kind":  "ENGINEERING",
-                      "why":  "Quantify preload drift, stainless galling/anti-seize policy, loosening and repeated service cycles.",
-                      "action":  "OPEN_DOSSIER",
-                      "depends_on":  [
-                                         "T05"
-                                     ]
-                  },
-                  {
-                      "id":  "T07",
-                      "name":  "P007 static + buckling refresh",
-                      "status":  "STALE",
-                      "kind":  "SOLVER",
-                      "why":  "Historical pressure/buckling screens must be refreshed once C2R1 mechanical geometry/preload is frozen.",
-                      "action":  "",
-                      "depends_on":  [
-                                         "T05",
-                                         "T06"
-                                     ]
-                  },
-                  {
-                      "id":  "T08",
-                      "name":  "C2R1 BOM normalization / metadata projection",
-                      "status":  "HOLD",
-                      "kind":  "AUTOMATED",
-                      "why":  "Assembly quantities are known; 13 metadata projections and 7 release blockers remain in the current reconciliation.",
-                      "action":  "RUN_R1_BOM",
-                      "depends_on":  [
-                                         "T02"
-                                     ]
-                  },
-                  {
-                      "id":  "T09",
-                      "name":  "Production-capable drawing draft",
-                      "status":  "PASS_DRAFT",
-                      "kind":  "AUTOMATED",
-                      "why":  "A file existing is not enough. The drawing quality gate requires section, visible dimensions, title block and controlled callouts.",
-                      "action":  "RUN_R1_DRAWINGS_V2",
-                      "depends_on":  [
-                                         "T02"
-                                     ]
-                  },
-                  {
-                      "id":  "T10",
-                      "name":  "Final FEMM impact/release model",
-                      "status":  "OPEN",
-                      "kind":  "SOLVER",
-                      "why":  "Run after J2 mechanical freeze plus P015/B001 production data freeze.",
-                      "action":  "",
-                      "depends_on":  [
-                                         "T05",
-                                         "T06",
-                                         "T07"
-                                     ]
-                  },
-                  {
-                      "id":  "T11",
-                      "name":  "Atomic P003/P007 promotion / release audit",
-                      "status":  "HOLD",
-                      "kind":  "RELEASE",
-                      "why":  "Promote P003/P007 together only after all mandatory engineering gates and document/BOM controls pass.",
-                      "action":  "",
-                      "depends_on":  [
-                                         "T03",
-                                         "T04",
-                                         "T05",
-                                         "T06",
-                                         "T07",
-                                         "T08",
-                                         "T09",
-                                         "T10"
-                                     ]
-                  }
-              ],
-    "next_task":  {
-                      "id":  "T03",
-                      "name":  "Pilot tolerance chain + P006 service-tool envelope",
-                      "status":  "OPEN",
-                      "kind":  "ENGINEERING",
-                      "why":  "Nominal 0.25 mm radial clearance is proven only at nominal geometry. Freeze P006 head tolerance, pilot-ID tolerance, worst-case clearance and tool access.",
-                      "action":  "OPEN_EDR019",
-                      "depends_on":  [
-                                         "T02"
-                                     ]
-                  },
-    "eds":  [
-                {
-                    "gate":  "functional_requirement",
-                    "status":  "PASS",
-                    "basis":  "C2R1 preserves removable J2, P007 L35 and compact service architecture.",
-                    "evidence":  [
-                                     "R1-BUILD",
-                                     "R1-VERIFY",
-                                     "R1-INT"
-                                 ]
-                },
-                {
-                    "gate":  "architecture_integrity",
-                    "status":  "PASS",
-                    "basis":  "No permanent weld; pilot/face/clocking/clamp/seal functions remain separated.",
-                    "evidence":  [
-                                     "CI-J2",
-                                     "EDR-005"
-                                 ]
-                },
-                {
-                    "gate":  "interfaces_datums",
-                    "status":  "PASS",
-                    "basis":  "R1 verify proves pilot concentric + axial face + M2.5 clocking and zero active mate errors.",
-                    "evidence":  [
-                                     "R1-VERIFY"
-                                 ]
-                },
-                {
-                    "gate":  "load_cases",
-                    "status":  "HOLD",
-                    "basis":  "Pressure case exists; preload/seal/service/thermal load envelope not fully bounded.",
-                    "evidence":  [
-                                     "P007-static",
-                                     "DOS-J2-C2R1"
-                                 ]
-                },
-                {
-                    "gate":  "static_strength_contact",
-                    "status":  "HOLD",
-                    "basis":  "M2.5 preliminary screen passes, but released preload and local flange/contact verification are open.",
-                    "evidence":  [
-                                     "MECH-SCREEN"
-                                 ]
-                },
-                {
-                    "gate":  "buckling_stability",
-                    "status":  "STALE",
-                    "basis":  "Historical P007 buckling PASS requires refresh after C2R1 freeze.",
-                    "evidence":  [
-                                     "P007-buckling-history"
-                                 ]
-                },
-                {
-                    "gate":  "torsion_rotational",
-                    "status":  "HOLD",
-                    "basis":  "Clocking geometry works; service torque/loosening strategy is not released.",
-                    "evidence":  [
-                                     "R1-VERIFY",
-                                     "DOS-J2-C2R1"
-                                 ]
-                },
-                {
-                    "gate":  "fatigue_cyclic",
-                    "status":  "HOLD",
-                    "basis":  "Repeated service/preload cycle evidence is open.",
-                    "evidence":  [
-                                     "DOS-J2-C2R1"
-                                 ]
-                },
-                {
-                    "gate":  "thermal",
-                    "status":  "HOLD",
-                    "basis":  "316L/316L reduces mismatch, but seal and fastener preload temperature response remain open.",
-                    "evidence":  [
-                                     "DOS-J2-C2R1"
-                                 ]
-                },
-                {
-                    "gate":  "dynamics_vibration",
-                    "status":  "HOLD",
-                    "basis":  "No explicit loosening/vibration disposition yet.",
-                    "evidence":  [
-                                     "DOS-J2-C2R1"
-                                 ]
-                },
-                {
-                    "gate":  "pressure_vacuum_sealing",
-                    "status":  "HOLD",
-                    "basis":  "16×1.5 gland geometry is controlled; compound, compression force and leak acceptance are open.",
-                    "evidence":  [
-                                     "Parker",
-                                     "Trelleborg"
-                                 ]
-                },
-                {
-                    "gate":  "fluid_cfd",
-                    "status":  "PASS",
-                    "basis":  "C2R1 changes external J2 package and does not change the controlled sample-flow/rod-force geometry.",
-                    "evidence":  [
-                                     "CFD-envelope"
-                                 ]
-                },
-                {
-                    "gate":  "magnetic_electromagnetic",
-                    "status":  "HOLD",
-                    "basis":  "Final FEMM remains after mechanical/P015/B001 freeze.",
-                    "evidence":  [
-                                     "FEMM-plan"
-                                 ]
-                },
-                {
-                    "gate":  "materials_environment",
-                    "status":  "HOLD",
-                    "basis":  "P003/P007 316L controlled; exact screw finish and O-ring compound remain open.",
-                    "evidence":  [
-                                     "BOM-REC",
-                                     "DOS-J2-C2R1"
-                                 ]
-                },
-                {
-                    "gate":  "tolerance_dimensional_chains",
-                    "status":  "HOLD",
-                    "basis":  "Nominal geometry passes; pilot/head worst-case clearance and production tolerances are not frozen.",
-                    "evidence":  [
-                                     "EDR-019"
-                                 ]
-                },
-                {
-                    "gate":  "manufacturability_process_capability",
-                    "status":  "HOLD",
-                    "basis":  "Round OD33 route is simple; M2.5 tapping in 316L, thin-wall inspection and capability acceptance remain open.",
-                    "evidence":  [
-                                     "DOS-J2-C2R1"
-                                 ]
-                },
-                {
-                    "gate":  "assembly",
-                    "status":  "PASS",
-                    "basis":  "R1 assembly and interference gates pass. Service-cycle/tool-access is tracked separately under serviceability.",
-                    "evidence":  [
-                                     "R1-VERIFY",
-                                     "R1-INT"
-                                 ]
-                },
-                {
-                    "gate":  "serviceability",
-                    "status":  "HOLD",
-                    "basis":  "Removable architecture is preserved; tool feature/access and galling/service-cycle evidence remain open.",
-                    "evidence":  [
-                                     "EDR-019",
-                                     "DOS-J2-C2R1"
-                                 ]
-                },
-                {
-                    "gate":  "inspection_testability",
-                    "status":  "HOLD",
-                    "basis":  "Inspection plan and leak acceptance are not released.",
-                    "evidence":  [
-                                     "DOS-J2-C2R1"
-                                 ]
-                },
-                {
-                    "gate":  "reliability_fmea",
-                    "status":  "HOLD",
-                    "basis":  "Loosening/thread/seal/service failure modes still need formal disposition.",
-                    "evidence":  [
-                                     "HEC-001"
-                                 ]
-                },
-                {
-                    "gate":  "safety_regulatory_containment",
-                    "status":  "HOLD",
-                    "basis":  "Containment concept retained; sealing/material compatibility evidence still blocks release.",
-                    "evidence":  [
-                                     "MARV-protection-concept"
-                                 ]
-                },
-                {
-                    "gate":  "supply_chain",
-                    "status":  "HOLD",
-                    "basis":  "Exact M2.5 screw product/finish and O-ring compound/supplier are open.",
-                    "evidence":  [
-                                     "BOM-REC"
-                                 ]
-                },
-                {
-                    "gate":  "change_impact",
-                    "status":  "PASS",
-                    "basis":  "C2 rejection and C2R1 are separate controlled states; downstream nodes are reopened explicitly.",
-                    "evidence":  [
-                                     "EDR-005",
-                                     "EDR-019"
-                                 ]
-                },
-                {
-                    "gate":  "documentation_traceability",
-                    "status":  "PASS",
-                    "basis":  "Decision/evidence traceability exists, but manufacturing drawing quality is still a release blocker.",
-                    "evidence":  [
-                                     "DOS-J2-C2R1",
-                                     "DRAWING-QA"
-                                 ]
-                }
-            ],
-    "rvm":  [
-                {
-                    "id":  "J2-R-001",
-                    "requirement":  "Serviceable without destructive joining",
-                    "status":  "PASS",
-                    "evidence":  [
-                                     "EDR-001",
-                                     "CI-J2"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-002",
-                    "requirement":  "P003/P007 material 316L/1.4404",
-                    "status":  "PASS",
-                    "evidence":  [
-                                     "R1-BUILD"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-003",
-                    "requirement":  "P007 OAL 35.0 mm",
-                    "status":  "PASS",
-                    "evidence":  [
-                                     "R1-BUILD"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-004",
-                    "requirement":  "Radial location Ø14.10 H7/g6",
-                    "status":  "PASS",
-                    "evidence":  [
-                                     "R1-BUILD",
-                                     "R1-VERIFY"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-005",
-                    "requirement":  "Axial location metal-face to metal-face",
-                    "status":  "PASS",
-                    "evidence":  [
-                                     "R1-VERIFY"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-006",
-                    "requirement":  "Clocking by one M2.5-hole axis",
-                    "status":  "PASS",
-                    "evidence":  [
-                                     "R1-VERIFY"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-007",
-                    "requirement":  "Compact flange OD33.0",
-                    "status":  "PASS",
-                    "evidence":  [
-                                     "R1-BUILD"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-008",
-                    "requirement":  "3×M2.5 pattern PCD26.5",
-                    "status":  "PASS",
-                    "evidence":  [
-                                     "R1-BUILD"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-009",
-                    "requirement":  "No new hard interference",
-                    "status":  "PASS",
-                    "evidence":  [
-                                     "R1-INT"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-010",
-                    "requirement":  "Thread/flange withstand released preload/service loads",
-                    "status":  "OPEN",
-                    "evidence":  [
-                                     "MECH-SCREEN"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-011",
-                    "requirement":  "Static seal maintains containment",
-                    "status":  "OPEN",
-                    "evidence":  [
-                                     "Seal/preload"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-012",
-                    "requirement":  "Serviceability after repeated cycles",
-                    "status":  "OPEN",
-                    "evidence":  [
-                                     "Service/galling"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-013",
-                    "requirement":  "Production tolerances preserve seal/clearances",
-                    "status":  "OPEN",
-                    "evidence":  [
-                                     "EDR-019"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-014",
-                    "requirement":  "P007 structural margins acceptable after J2 freeze",
-                    "status":  "STALE",
-                    "evidence":  [
-                                     "Static/buckling history"
-                                 ]
-                },
-                {
-                    "id":  "J2-R-015",
-                    "requirement":  "BOM/drawings/technology match release",
-                    "status":  "HOLD",
-                    "evidence":  [
-                                     "BOM-REC",
-                                     "DRAWING-QA"
-                                 ]
-                }
-            ],
-    "evidence":  [
-                     {
-                         "role":  "R1-BUILD",
-                         "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_BUILD.json",
-                         "exists":  true,
-                         "sha256":  "3A19086F0253D3D22689F2830A603ACB968CA947BE6F35C59CFBE59D42F4D2A0",
-                         "modified":  "2026-09-04T15:49:46",
-                         "status":  "PASS"
-                     },
-                     {
-                         "role":  "R1-VERIFY",
-                         "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_VERIFY.json",
-                         "exists":  true,
-                         "sha256":  "BD9BA6BF9F77CEF0E5816F86FD5751317EFB99F86380D528F0686CCF18B74A48",
-                         "modified":  "2026-09-04T15:49:46",
-                         "status":  "PASS"
-                     },
-                     {
-                         "role":  "R1-INT",
-                         "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_INTERFERENCE.json",
-                         "exists":  true,
-                         "sha256":  "7B15AC8A3B13ABF0B1C4498CE0C40F26BA4D559402C02D834EEC5C0F7038E9E1",
-                         "modified":  "2026-09-04T15:49:46",
-                         "status":  "PASS"
-                     },
-                     {
-                         "role":  "BOM-REC",
-                         "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\bom\\K01_BOM_RECONCILIATION_study_c2r1.json",
-                         "exists":  true,
-                         "sha256":  "A8BA068F3EDB7AB9E9B55FC4353447C089DBD48A8B38A04E35C25022F4F0551F",
-                         "modified":  "2026-09-04T15:49:46",
-                         "status":  "HOLD"
-                     },
-                     {
-                         "role":  "DRAWING-V2",
-                         "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_GATE04D_C2R1_TYPED_DRAWINGS_V2.json",
-                         "exists":  true,
-                         "sha256":  "BD483F54F2B11F5D71B73AF05634557871A35D468310726FF4179D61CEE9C6D0",
-                         "modified":  "2026-09-04T22:47:37",
-                         "status":  "PASS"
-                     },
-                     {
-                         "role":  "DRAWING-QA",
-                         "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_DRAWING_QUALITY_P003_C2R1_v1.json",
-                         "exists":  true,
-                         "sha256":  "0E5F7D894AE4C2F24619C53BC6D668CE0394845ABC16AF872AD1012A943F620B",
-                         "modified":  "2026-09-04T15:54:18",
-                         "status":  "HOLD_NOT_MANUFACTURING_DRAWING"
-                     },
-                     {
-                         "role":  "MECH-SCREEN",
-                         "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\analysis\\current\\K01_J2_C2_MECHANICAL_SCREEN_v1.json",
-                         "exists":  true,
-                         "sha256":  "4BB2C2BAD12C7925E194D1AC6C49D9159B47D8688D723ECEA7E4CB75CE888B9D",
-                         "modified":  "2026-09-04T15:54:18",
-                         "status":  "SCREEN_PASS_WITH_RELEASE_HOLDS"
-                     },
-                     {
-                         "role":  "ROOTCAUSE",
-                         "path":  "D:\\BreshevEngineering\\marvilon-k01\\reports\\analysis\\current\\K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1.json",
-                         "exists":  true,
-                         "sha256":  "02F26EBC77DDA96757AC7695DC79A404A7C646142200BD26299C65B97ECC88FC",
-                         "modified":  "2026-09-04T15:54:18",
-                         "status":  "ROOT_CAUSE_CONFIRMED"
-                     }
-                 ],
-    "metrics":  {
-                    "task_pass":  3,
-                    "task_total":  11,
-                    "eds_pass":  7,
-                    "eds_total":  24,
-                    "bom_release_blockers":  7,
-                    "bom_metadata_projection":  13
-                },
-    "state_hash":  "F4BFFC5B8453D7B3947BFDCD168352047052C80DD5810BD9118CEB1AA5903E17"
+{
+  "schema": "k01_derived_state_v7",
+  "generated": "2026-09-05T08:42:32.5896898+03:00",
+  "active_design": "Gate04D-C2R1",
+  "tasks": [
+    {
+      "id": "T01",
+      "name": "C2 failure root cause retained",
+      "status": "PASS",
+      "kind": "EVIDENCE",
+      "why": "Preserve rejected C2 and exact P003/P006 collision proof.",
+      "action": "OPEN_ROOTCAUSE",
+      "depends_on": []
+    },
+    {
+      "id": "T02",
+      "name": "C2R1 native CAD + assembly + interference",
+      "status": "PASS",
+      "kind": "AUTOMATED",
+      "why": "Build, mate architecture and no-new-hard-interference are the geometry release gate.",
+      "action": "RUN_C2R1_ALL",
+      "depends_on": [
+        "T01"
+      ]
+    },
+    {
+      "id": "T03",
+      "name": "Pilot tolerance chain + P006 service-tool envelope",
+      "status": "OPEN",
+      "kind": "ENGINEERING",
+      "why": "Nominal 0.25 mm radial clearance is proven only at nominal geometry. Freeze P006 head tolerance, pilot-ID tolerance, worst-case clearance and tool access.",
+      "action": "OPEN_EDR019",
+      "depends_on": [
+        "T02"
+      ]
+    },
+    {
+      "id": "T04",
+      "name": "Seal compound + clamp preload",
+      "status": "OPEN",
+      "kind": "ENGINEERING_INPUT",
+      "why": "O-ring geometry exists, but compound/hardness/process-gas compatibility and compression force are needed before clamp preload is released.",
+      "action": "OPEN_DOSSIER",
+      "depends_on": [
+        "T02"
+      ]
+    },
+    {
+      "id": "T05",
+      "name": "M2.5 joint + local flange/contact verification",
+      "status": "OPEN",
+      "kind": "ANALYSIS",
+      "why": "Preliminary thread screen does not reject M2.5; final preload/friction/head-bearing/flange-separation verification remains.",
+      "action": "OPEN_MECH",
+      "depends_on": [
+        "T04"
+      ]
+    },
+    {
+      "id": "T06",
+      "name": "Thermal preload + service/galling",
+      "status": "OPEN",
+      "kind": "ENGINEERING",
+      "why": "Quantify preload drift, stainless galling/anti-seize policy, loosening and repeated service cycles.",
+      "action": "OPEN_DOSSIER",
+      "depends_on": [
+        "T05"
+      ]
+    },
+    {
+      "id": "T07",
+      "name": "P007 static + buckling refresh",
+      "status": "STALE",
+      "kind": "SOLVER",
+      "why": "Historical pressure/buckling screens must be refreshed once C2R1 mechanical geometry/preload is frozen.",
+      "action": "",
+      "depends_on": [
+        "T05",
+        "T06"
+      ]
+    },
+    {
+      "id": "T08",
+      "name": "C2R1 BOM normalization / metadata projection",
+      "status": "HOLD",
+      "kind": "AUTOMATED",
+      "why": "Assembly quantities are known; 13 metadata projections and 7 release blockers remain in the current reconciliation.",
+      "action": "RUN_R1_BOM",
+      "depends_on": [
+        "T02"
+      ]
+    },
+    {
+      "id": "T09",
+      "name": "Production-capable drawing draft",
+      "status": "PASS_DRAFT",
+      "kind": "AUTOMATED",
+      "why": "A file existing is not enough. The drawing quality gate requires section, visible dimensions, title block and controlled callouts.",
+      "action": "RUN_R1_DRAWINGS_V2",
+      "depends_on": [
+        "T02"
+      ]
+    },
+    {
+      "id": "T10",
+      "name": "Final FEMM impact/release model",
+      "status": "OPEN",
+      "kind": "SOLVER",
+      "why": "Run after J2 mechanical freeze plus P015/B001 production data freeze.",
+      "action": "",
+      "depends_on": [
+        "T05",
+        "T06",
+        "T07"
+      ]
+    },
+    {
+      "id": "T11",
+      "name": "Atomic P003/P007 promotion / release audit",
+      "status": "HOLD",
+      "kind": "RELEASE",
+      "why": "Promote P003/P007 together only after all mandatory engineering gates and document/BOM controls pass.",
+      "action": "",
+      "depends_on": [
+        "T03",
+        "T04",
+        "T05",
+        "T06",
+        "T07",
+        "T08",
+        "T09",
+        "T10"
+      ]
+    }
+  ],
+  "next_task": {
+    "id": "T03",
+    "name": "Pilot tolerance chain + P006 service-tool envelope",
+    "status": "OPEN",
+    "kind": "ENGINEERING",
+    "why": "Nominal 0.25 mm radial clearance is proven only at nominal geometry. Freeze P006 head tolerance, pilot-ID tolerance, worst-case clearance and tool access.",
+    "action": "OPEN_EDR019",
+    "depends_on": [
+      "T02"
+    ]
+  },
+  "eds": [
+    {
+      "gate": "functional_requirement",
+      "status": "PASS",
+      "basis": "C2R1 preserves removable J2, P007 L35 and compact service architecture.",
+      "evidence": [
+        "R1-BUILD",
+        "R1-VERIFY",
+        "R1-INT"
+      ]
+    },
+    {
+      "gate": "architecture_integrity",
+      "status": "PASS",
+      "basis": "No permanent weld; pilot/face/clocking/clamp/seal functions remain separated.",
+      "evidence": [
+        "CI-J2",
+        "EDR-005"
+      ]
+    },
+    {
+      "gate": "interfaces_datums",
+      "status": "PASS",
+      "basis": "R1 verify proves pilot concentric + axial face + M2.5 clocking and zero active mate errors.",
+      "evidence": [
+        "R1-VERIFY"
+      ]
+    },
+    {
+      "gate": "load_cases",
+      "status": "HOLD",
+      "basis": "Pressure case exists; preload/seal/service/thermal load envelope not fully bounded.",
+      "evidence": [
+        "P007-static",
+        "DOS-J2-C2R1"
+      ]
+    },
+    {
+      "gate": "static_strength_contact",
+      "status": "HOLD",
+      "basis": "M2.5 preliminary screen passes, but released preload and local flange/contact verification are open.",
+      "evidence": [
+        "MECH-SCREEN"
+      ]
+    },
+    {
+      "gate": "buckling_stability",
+      "status": "STALE",
+      "basis": "Historical P007 buckling PASS requires refresh after C2R1 freeze.",
+      "evidence": [
+        "P007-buckling-history"
+      ]
+    },
+    {
+      "gate": "torsion_rotational",
+      "status": "HOLD",
+      "basis": "Clocking geometry works; service torque/loosening strategy is not released.",
+      "evidence": [
+        "R1-VERIFY",
+        "DOS-J2-C2R1"
+      ]
+    },
+    {
+      "gate": "fatigue_cyclic",
+      "status": "HOLD",
+      "basis": "Repeated service/preload cycle evidence is open.",
+      "evidence": [
+        "DOS-J2-C2R1"
+      ]
+    },
+    {
+      "gate": "thermal",
+      "status": "HOLD",
+      "basis": "316L/316L reduces mismatch, but seal and fastener preload temperature response remain open.",
+      "evidence": [
+        "DOS-J2-C2R1"
+      ]
+    },
+    {
+      "gate": "dynamics_vibration",
+      "status": "HOLD",
+      "basis": "No explicit loosening/vibration disposition yet.",
+      "evidence": [
+        "DOS-J2-C2R1"
+      ]
+    },
+    {
+      "gate": "pressure_vacuum_sealing",
+      "status": "HOLD",
+      "basis": "16×1.5 gland geometry is controlled; compound, compression force and leak acceptance are open.",
+      "evidence": [
+        "Parker",
+        "Trelleborg"
+      ]
+    },
+    {
+      "gate": "fluid_cfd",
+      "status": "PASS",
+      "basis": "C2R1 changes external J2 package and does not change the controlled sample-flow/rod-force geometry.",
+      "evidence": [
+        "CFD-envelope"
+      ]
+    },
+    {
+      "gate": "magnetic_electromagnetic",
+      "status": "HOLD",
+      "basis": "Final FEMM remains after mechanical/P015/B001 freeze.",
+      "evidence": [
+        "FEMM-plan"
+      ]
+    },
+    {
+      "gate": "materials_environment",
+      "status": "HOLD",
+      "basis": "P003/P007 316L controlled; exact screw finish and O-ring compound remain open.",
+      "evidence": [
+        "BOM-REC",
+        "DOS-J2-C2R1"
+      ]
+    },
+    {
+      "gate": "tolerance_dimensional_chains",
+      "status": "HOLD",
+      "basis": "Nominal geometry passes; pilot/head worst-case clearance and production tolerances are not frozen.",
+      "evidence": [
+        "EDR-019"
+      ]
+    },
+    {
+      "gate": "manufacturability_process_capability",
+      "status": "HOLD",
+      "basis": "Round OD33 route is simple; M2.5 tapping in 316L, thin-wall inspection and capability acceptance remain open.",
+      "evidence": [
+        "DOS-J2-C2R1"
+      ]
+    },
+    {
+      "gate": "assembly",
+      "status": "PASS",
+      "basis": "R1 assembly and interference gates pass. Service-cycle/tool-access is tracked separately under serviceability.",
+      "evidence": [
+        "R1-VERIFY",
+        "R1-INT"
+      ]
+    },
+    {
+      "gate": "serviceability",
+      "status": "HOLD",
+      "basis": "Removable architecture is preserved; tool feature/access and galling/service-cycle evidence remain open.",
+      "evidence": [
+        "EDR-019",
+        "DOS-J2-C2R1"
+      ]
+    },
+    {
+      "gate": "inspection_testability",
+      "status": "HOLD",
+      "basis": "Inspection plan and leak acceptance are not released.",
+      "evidence": [
+        "DOS-J2-C2R1"
+      ]
+    },
+    {
+      "gate": "reliability_fmea",
+      "status": "HOLD",
+      "basis": "Loosening/thread/seal/service failure modes still need formal disposition.",
+      "evidence": [
+        "HEC-001"
+      ]
+    },
+    {
+      "gate": "safety_regulatory_containment",
+      "status": "HOLD",
+      "basis": "Containment concept retained; sealing/material compatibility evidence still blocks release.",
+      "evidence": [
+        "MARV-protection-concept"
+      ]
+    },
+    {
+      "gate": "supply_chain",
+      "status": "HOLD",
+      "basis": "Exact M2.5 screw product/finish and O-ring compound/supplier are open.",
+      "evidence": [
+        "BOM-REC"
+      ]
+    },
+    {
+      "gate": "change_impact",
+      "status": "PASS",
+      "basis": "C2 rejection and C2R1 are separate controlled states; downstream nodes are reopened explicitly.",
+      "evidence": [
+        "EDR-005",
+        "EDR-019"
+      ]
+    },
+    {
+      "gate": "documentation_traceability",
+      "status": "PASS",
+      "basis": "Decision/evidence traceability exists, but manufacturing drawing quality is still a release blocker.",
+      "evidence": [
+        "DOS-J2-C2R1",
+        "DRAWING-QA"
+      ]
+    }
+  ],
+  "rvm": [
+    {
+      "id": "J2-R-001",
+      "requirement": "Serviceable without destructive joining",
+      "status": "PASS",
+      "evidence": [
+        "EDR-001",
+        "CI-J2"
+      ]
+    },
+    {
+      "id": "J2-R-002",
+      "requirement": "P003/P007 material 316L/1.4404",
+      "status": "PASS",
+      "evidence": [
+        "R1-BUILD"
+      ]
+    },
+    {
+      "id": "J2-R-003",
+      "requirement": "P007 OAL 35.0 mm",
+      "status": "PASS",
+      "evidence": [
+        "R1-BUILD"
+      ]
+    },
+    {
+      "id": "J2-R-004",
+      "requirement": "Radial location Ø14.10 H7/g6",
+      "status": "PASS",
+      "evidence": [
+        "R1-BUILD",
+        "R1-VERIFY"
+      ]
+    },
+    {
+      "id": "J2-R-005",
+      "requirement": "Axial location metal-face to metal-face",
+      "status": "PASS",
+      "evidence": [
+        "R1-VERIFY"
+      ]
+    },
+    {
+      "id": "J2-R-006",
+      "requirement": "Clocking by one M2.5-hole axis",
+      "status": "PASS",
+      "evidence": [
+        "R1-VERIFY"
+      ]
+    },
+    {
+      "id": "J2-R-007",
+      "requirement": "Compact flange OD33.0",
+      "status": "PASS",
+      "evidence": [
+        "R1-BUILD"
+      ]
+    },
+    {
+      "id": "J2-R-008",
+      "requirement": "3×M2.5 pattern PCD26.5",
+      "status": "PASS",
+      "evidence": [
+        "R1-BUILD"
+      ]
+    },
+    {
+      "id": "J2-R-009",
+      "requirement": "No new hard interference",
+      "status": "PASS",
+      "evidence": [
+        "R1-INT"
+      ]
+    },
+    {
+      "id": "J2-R-010",
+      "requirement": "Thread/flange withstand released preload/service loads",
+      "status": "OPEN",
+      "evidence": [
+        "MECH-SCREEN"
+      ]
+    },
+    {
+      "id": "J2-R-011",
+      "requirement": "Static seal maintains containment",
+      "status": "OPEN",
+      "evidence": [
+        "Seal/preload"
+      ]
+    },
+    {
+      "id": "J2-R-012",
+      "requirement": "Serviceability after repeated cycles",
+      "status": "OPEN",
+      "evidence": [
+        "Service/galling"
+      ]
+    },
+    {
+      "id": "J2-R-013",
+      "requirement": "Production tolerances preserve seal/clearances",
+      "status": "OPEN",
+      "evidence": [
+        "EDR-019"
+      ]
+    },
+    {
+      "id": "J2-R-014",
+      "requirement": "P007 structural margins acceptable after J2 freeze",
+      "status": "STALE",
+      "evidence": [
+        "Static/buckling history"
+      ]
+    },
+    {
+      "id": "J2-R-015",
+      "requirement": "BOM/drawings/technology match release",
+      "status": "HOLD",
+      "evidence": [
+        "BOM-REC",
+        "DRAWING-QA"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "role": "R1-BUILD",
+      "path": "evidence/immutable/3a19086f0253d3d22689f2830a603acb968ca947be6f35c59cfbe59d42f4d2a0__K01_GATE04D_C2R1_TYPED_BUILD.json",
+      "exists": true,
+      "sha256": "3A19086F0253D3D22689F2830A603ACB968CA947BE6F35C59CFBE59D42F4D2A0",
+      "modified": "2026-09-04T15:49:46",
+      "status": "PASS"
+    },
+    {
+      "role": "R1-VERIFY",
+      "path": "evidence/immutable/bd9ba6bf9f77cef0e5816f86fd5751317efb99f86380d528f0686ccf18b74a48__K01_GATE04D_C2R1_VERIFY.json",
+      "exists": true,
+      "sha256": "BD9BA6BF9F77CEF0E5816F86FD5751317EFB99F86380D528F0686CCF18B74A48",
+      "modified": "2026-09-04T15:49:46",
+      "status": "PASS"
+    },
+    {
+      "role": "R1-INT",
+      "path": "evidence/immutable/7b15ac8a3b13abf0b1c4498ce0c40f26ba4d559402c02d834eec5c0f7038e9e1__K01_GATE04D_C2R1_INTERFERENCE.json",
+      "exists": true,
+      "sha256": "7B15AC8A3B13ABF0B1C4498CE0C40F26BA4D559402C02D834EEC5C0F7038E9E1",
+      "modified": "2026-09-04T15:49:46",
+      "status": "PASS"
+    },
+    {
+      "role": "BOM-REC",
+      "path": "evidence/immutable/a8ba068f3edb7ab9e9b55fc4353447c089dbd48a8b38a04e35c25022f4f0551f__K01_BOM_RECONCILIATION_study_c2r1.json",
+      "exists": true,
+      "sha256": "A8BA068F3EDB7AB9E9B55FC4353447C089DBD48A8B38A04E35C25022F4F0551F",
+      "modified": "2026-09-04T15:49:46",
+      "status": "HOLD"
+    },
+    {
+      "role": "DRAWING-V2",
+      "path": "evidence/immutable/bd483f54f2b11f5d71b73af05634557871a35d468310726ff4179d61cee9c6d0__K01_GATE04D_C2R1_TYPED_DRAWINGS_V2.json",
+      "exists": true,
+      "sha256": "BD483F54F2B11F5D71B73AF05634557871A35D468310726FF4179D61CEE9C6D0",
+      "modified": "2026-09-04T22:47:37",
+      "status": "PASS"
+    },
+    {
+      "role": "DRAWING-QA",
+      "path": "evidence/immutable/0e5f7d894ae4c2f24619c53bc6d668ce0394845abc16af872ad1012a943f620b__K01_DRAWING_QUALITY_P003_C2R1_v1.json",
+      "exists": true,
+      "sha256": "0E5F7D894AE4C2F24619C53BC6D668CE0394845ABC16AF872AD1012A943F620B",
+      "modified": "2026-09-04T15:54:18",
+      "status": "HOLD_NOT_MANUFACTURING_DRAWING"
+    },
+    {
+      "role": "MECH-SCREEN",
+      "path": "evidence/immutable/4bb2c2bad12c7925e194d1ac6c49d9159b47d8688d723ecea7e4cb75ce888b9d__K01_J2_C2_MECHANICAL_SCREEN_v1.json",
+      "exists": true,
+      "sha256": "4BB2C2BAD12C7925E194D1AC6C49D9159B47D8688D723ECEA7E4CB75CE888B9D",
+      "modified": "2026-09-04T15:54:18",
+      "status": "SCREEN_PASS_WITH_RELEASE_HOLDS"
+    },
+    {
+      "role": "ROOTCAUSE",
+      "path": "evidence/immutable/02f26ebc77dda96757ac7695dc79a404a7c646142200bd26299c65b97ecc88fc__K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1.json",
+      "exists": true,
+      "sha256": "02F26EBC77DDA96757AC7695DC79A404A7C646142200BD26299C65B97ECC88FC",
+      "modified": "2026-09-04T15:54:18",
+      "status": "ROOT_CAUSE_CONFIRMED"
+    }
+  ],
+  "metrics": {
+    "task_pass": 3,
+    "task_total": 11,
+    "eds_pass": 7,
+    "eds_total": 24,
+    "bom_release_blockers": 7,
+    "bom_metadata_projection": 13
+  },
+  "state_hash": "F4BFFC5B8453D7B3947BFDCD168352047052C80DD5810BD9118CEB1AA5903E17"
 }

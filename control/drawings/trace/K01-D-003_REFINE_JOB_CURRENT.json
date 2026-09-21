@@ -1,0 +1,129 @@
+{
+  "schema": "k01.drawing_refine_job.v1",
+  "drawing_id": "K01-D-003",
+  "source_drawing": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-003\\drawing_system_v1_20260917_110205\\d8_api_pass1_v2_20260917_113022\\d8_layout_refine_v1_20260917_122102\\K01-D-003.SLDDRW",
+  "source_model": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT",
+  "candidate_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-003\\refine_api",
+  "operations": [
+    {
+      "id": "D003-R01-DATUM-C-SIZE",
+      "op": "SET_TOLERANCE",
+      "target": {
+        "annotation_name": "K01DS_D003-C03-SIZE"
+      },
+      "tol_min_mm": 0.0,
+      "tol_max_mm": 0.01,
+      "precision": 2
+    },
+    {
+      "id": "D003-R02-OAL-TOL-REMOVE",
+      "op": "CLEAR_TOLERANCE",
+      "target": {
+        "signature": {
+          "nominal_mm": 39.5,
+          "tol_min_mm": -0.2,
+          "tol_max_mm": 0.2
+        }
+      },
+      "precision": 2
+    },
+    {
+      "id": "D003-R03-J1-AXIAL-TOL-REMOVE",
+      "op": "CLEAR_TOLERANCE",
+      "target": {
+        "signature": {
+          "nominal_mm": 3.0,
+          "tol_min_mm": -0.5,
+          "tol_max_mm": 0.5
+        }
+      },
+      "precision": 2
+    },
+    {
+      "id": "D003-R04-J2-AXIAL-TOL-REMOVE",
+      "op": "CLEAR_TOLERANCE",
+      "target": {
+        "signature": {
+          "nominal_mm": 5.0,
+          "tol_min_mm": -0.5,
+          "tol_max_mm": 0.5
+        }
+      },
+      "precision": 2
+    },
+    {
+      "id": "D003-R05-BODY27-TOL-REMOVE",
+      "op": "CLEAR_TOLERANCE",
+      "target": {
+        "signature": {
+          "nominal_mm": 27.0,
+          "tol_min_mm": -0.1,
+          "tol_max_mm": 0.1
+        }
+      },
+      "precision": 2
+    },
+    {
+      "id": "D003-R06-RIGHT2-TOL-REMOVE",
+      "op": "CLEAR_TOLERANCE",
+      "target": {
+        "signature": {
+          "nominal_mm": 2.0,
+          "tol_min_mm": -0.05,
+          "tol_max_mm": 0.05
+        }
+      },
+      "precision": 2
+    },
+    {
+      "id": "D003-R07-P004-SEAT-TOL-REMOVE",
+      "op": "CLEAR_TOLERANCE",
+      "target": {
+        "signature": {
+          "nominal_mm": 6.6,
+          "tol_min_mm": -0.3,
+          "tol_max_mm": 0.3
+        }
+      },
+      "precision": 2
+    },
+    {
+      "id": "D003-R08-DUPLICATE-12-HIDE",
+      "op": "SET_VISIBLE",
+      "target": {
+        "signature": {
+          "nominal_mm": 12.0,
+          "tol_min_mm": -0.2,
+          "tol_max_mm": 0.2
+        }
+      },
+      "visible": false
+    },
+    {
+      "id": "D003-R09-J1-CLAMP",
+      "op": "SET_NOTE",
+      "target": {
+        "annotation_name": "K01DS_D003-J1-OPEN-REF"
+      },
+      "text": "J1 CLAMP: 3× Ø4.50 THRU\r\nPCD Ø24; 120° EQ SP",
+      "visible": true,
+      "position_m": [
+        0.19,
+        0.205,
+        0.0
+      ]
+    }
+  ],
+  "preserve": [
+    "M12×1-6H already on drawing",
+    "native Section B-B",
+    "Ø10.00 g6",
+    "Ø33.00 ±0.05",
+    "Ø14.10 g6",
+    "Ø12.00 H9",
+    "1.50 ±0.05",
+    "J2 thread pattern",
+    "EN 1.4404 / AISI 316L",
+    "non-round functional nominals"
+  ]
+}

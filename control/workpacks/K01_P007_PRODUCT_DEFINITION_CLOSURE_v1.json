@@ -1,0 +1,144 @@
+{
+  "schema": "k01.p007.product_definition_closure.v1",
+  "id": "WP-P007-PD-CLOSURE-001",
+  "date": "2026-09-14",
+  "status": "CLOSED_PRODUCT_DEFINITION_READY",
+  "target_deliverable": "FULL_RELEASE_MANUFACTURING_DRAWING_K01-D-006",
+  "goal_lock": "Do not optimize C01/C02-only exemplar. Resume full drawing only after release characteristics close.",
+  "current_architecture": {
+    "canonical_assembly": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+    "checkpoint": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+    "P007": "monolithic machined 316L, integral blind end",
+    "J2": "removable metal-face + static O-ring + 3×M2.5",
+    "decision": "EDR-025"
+  },
+  "technical_filter": [
+    {
+      "id": "C01",
+      "candidate": "flatness 0.03",
+      "disposition": "ACCEPT_FLATNESS_0P03_CZ_EDR_030",
+      "next": "Definition closed; final PMI binding/invariance after full characteristic freeze."
+    },
+    {
+      "id": "C02",
+      "candidate": "Ø14.10 H7; legacy depth 1.70",
+      "disposition": "ACCEPT_H7__REJECT_1P70__DEPTH_2P00_NOMINAL__TOL_OPEN",
+      "next": "EDR-024 selects 2.00 depth; derive non-bottoming depth tolerance/inspection."
+    },
+    {
+      "id": "C03",
+      "candidate": "legacy perpendicularity Ø0.03 to A",
+      "disposition": "REJECT_0P03__ACCEPT_PERP_0P003_MMR_EDR_028",
+      "next": "Closed. Reopen only if H7/g6, pilot engagement, face architecture or manufacturing capability changes."
+    },
+    {
+      "id": "C04",
+      "candidate": "position Ø0.15 |A|B + Ø2.90 hole",
+      "disposition": "ACCEPT_RELEASE_EDR_028__HOLE_2P90_H10__POS_0P15_AB",
+      "next": "Closed definition. T05 local flange/contact verification remains a stale trigger, not a current C04 definition blocker."
+    },
+    {
+      "id": "C05",
+      "candidate": "Ø33 ±0.05; t3 ±0.05",
+      "disposition": "ACCEPT_OD33_PM0P05__T3_PM0P05_EDR_030",
+      "next": "Definition closed; T05 local contact FEA remains a post-seal/process stale trigger, not current geometry blocker."
+    },
+    {
+      "id": "C06",
+      "candidate": "35 ±0.05",
+      "disposition": "ACCEPT_35_PM0P05_EDR_030",
+      "next": "Definition closed."
+    },
+    {
+      "id": "C07",
+      "candidate": "Ø10 nominal / tolerance OPEN",
+      "disposition": "ACCEPT_Ø10_h9_EDR_029",
+      "next": "Definition closed; route capability first article remains process evidence."
+    },
+    {
+      "id": "C08",
+      "candidate": "Ø9.40 / wall0.30 nominal / tolerance OPEN",
+      "disposition": "ACCEPT_Ø9P40_H9__WALL_0P30_REF_EDR_029",
+      "next": "Definition closed; thin-wall capability remains process evidence."
+    },
+    {
+      "id": "K01-D006-BLIND-END",
+      "candidate": "1.00 nominal",
+      "disposition": "ACCEPT_1P00_PM0P10_EDR_030",
+      "next": "Definition closed; first-article/process capability remains manufacturing evidence."
+    },
+    {
+      "id": "C09",
+      "candidate": "AISI 316L / EN 1.4404",
+      "disposition": "ACCEPT_CONTROLLED",
+      "next": "Retain."
+    },
+    {
+      "id": "C10",
+      "candidate": "legacy weld / joining process",
+      "disposition": "ACCEPT_EDR_025__NO_PERMANENT_WELD",
+      "next": "Retire stale weld BOM/process semantics; keep J2 seal/fastener/leak controls separate."
+    },
+    {
+      "id": "C11",
+      "candidate": "coaxiality/concentricity OPEN",
+      "disposition": "ACCEPT_TOTAL_RUNOUT_0P02_TO_B_EDR_029",
+      "next": "Definition closed; first-article capability and counterpart interface alignment remain separate."
+    },
+    {
+      "id": "C12",
+      "candidate": "quantitative leak acceptance OPEN",
+      "disposition": "OPEN_REQUIREMENT_DECISION",
+      "next": "Freeze numeric leak acceptance/test method; do not invent."
+    },
+    {
+      "id": "SURFACE_TEXTURE",
+      "candidate": "none released",
+      "disposition": "OPEN_FUNCTION_SPECIFIC",
+      "next": "Assign only to surfaces with demonstrated fit/seal/contact/process need."
+    },
+    {
+      "id": "EDGE_CONDITION",
+      "candidate": "legacy deburr/break edge",
+      "disposition": "ACCEPT_CONTROLLED_DEBURR_NONFUNCTIONAL_0P1_0P2",
+      "next": "Definition closed; functional edges excluded."
+    }
+  ],
+  "immediate_execution_queue": [
+    {
+      "priority": 1,
+      "action": "Freeze media/cleaning envelope + exact seal product/compound + C12 quantitative leak acceptance.",
+      "mode": "ENGINEERING_REQUIREMENT_DECISION"
+    },
+    {
+      "priority": 2,
+      "action": "Freeze exact M2.5 screw/finish/lubrication/torque-preload process and remaining service requirement.",
+      "mode": "ENGINEERING_PROCESS_DECISION"
+    },
+    {
+      "priority": 3,
+      "action": "Close surface texture only on functionally required surfaces + inspection/measurement conditions; freeze final characteristic table.",
+      "mode": "ENGINEERING_CLOSURE"
+    },
+    {
+      "priority": 4,
+      "action": "Author/refresh full K01-D-006 engineering-review candidate from controlled Product Definition; keep release holds explicit.",
+      "mode": "MANUAL_CONTROLLED_DRAWING"
+    },
+    {
+      "priority": 5,
+      "action": "After full PMI freeze run one binding-invariance qualification, configuration/effectivity, D7/D8/D9, BOM/P6.",
+      "mode": "RELEASE_VERIFICATION"
+    }
+  ],
+  "transition": {
+    "generated_utc": "2026-09-17T08:20:34.407504+00:00",
+    "status": "CLOSED_PRODUCT_DEFINITION_READY",
+    "closed_by": [
+      "EDR-035",
+      "EDR-036",
+      "EDR-037"
+    ],
+    "next_lifecycle_level": "L6"
+  }
+}

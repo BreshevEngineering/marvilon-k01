@@ -1,0 +1,11 @@
+{
+  "schema": "k01.checkpoint.current.v1",
+  "project": "K01",
+  "checkpoint_id": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+  "path": "control/checkpoints/K01-CP-20260910-BASELINE-02C-PROMOTED.json",
+  "status": "CANONICAL_ENGINEERING_BASELINE_PROMOTED",
+  "active_line": "K01-P007-PROFESSIONAL-PRODUCT-DEFINITION",
+  "previous_checkpoint": "K01-CP-20260910-BASELINE-02C-DATUM-C-VERIFIED",
+  "next_expected_checkpoint": "P007 professional DimXpert/PMI candidate checkpoint after geometry-invariant save/close/reopen readback",
+  "rule": "Pointer only; domain authorities remain in K01_AUTHORITY_MAP_CURRENT.json."
+}

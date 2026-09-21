@@ -1,0 +1,58 @@
+{
+  "schema": "k01.work_queue.v1",
+  "generated_utc": "2026-09-19T06:09:14.723016+00:00",
+  "scope": "P007_J2",
+  "queue": [
+    {
+      "priority": 1,
+      "lane": "REQUIREMENT",
+      "task": "Freeze REQ-K01-MEDIA-001 media/cleaning envelope",
+      "type": "EXTERNAL_INPUT_REQUIRED",
+      "unblocks": [
+        "REQ-K01-SEAL-001",
+        "Stage 6 seal process",
+        "Stage 9 leak qualification"
+      ]
+    },
+    {
+      "priority": 2,
+      "lane": "REQUIREMENT",
+      "task": "Define REQ-K01-LEAK-001 quantitative leak-test acceptance",
+      "type": "ENGINEERING_REQUIREMENT_DECISION",
+      "unblocks": [
+        "Stage 6 inspection",
+        "Stage 9 qualification",
+        "D006 release notes"
+      ]
+    },
+    {
+      "priority": 3,
+      "lane": "VARIATION",
+      "task": "C01/C05/C06/blind-end released by EDR-030; close remaining surface/inspection/process semantics",
+      "type": "ENGINEERING_CLOSURE",
+      "upstream": [
+        "EDR-030 primary dimensions released"
+      ]
+    },
+    {
+      "priority": 4,
+      "lane": "PROCESS_INSPECTION",
+      "task": "Close monolithic P007 capability plus seal/fastener/leak/inspection requirements",
+      "type": "ENGINEERING_CLOSURE",
+      "upstream": [
+        "EDR-025 architecture controlled"
+      ]
+    },
+    {
+      "priority": 5,
+      "lane": "TPD",
+      "task": "Author full K01-D-006 manufacturing drawing once from released Product Definition",
+      "type": "BLOCKED",
+      "blocked_by": [
+        "Stage 5 pressure/vacuum/sealing release hold",
+        "Stage 6 release blockers",
+        "Product Definition DRAWING_RELEASE_READY"
+      ]
+    }
+  ]
+}

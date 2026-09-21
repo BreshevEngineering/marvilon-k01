@@ -62,5 +62,14 @@
     "allowed": "model dimensions deliberately MarkedForDrawing + explicit controlled release characteristics",
     "layout": "SOLIDWORKS initial placement followed by mandatory semantic lint and visual approval",
     "fallback": "If an API cannot create an unambiguous GD&T or feature callout reliably in SW2018, keep it as a controlled characteristic and hold drawing release until it is explicitly placed in native SLDDRW."
+  },
+  "dimxpert_pipeline": {
+    "authority_chain": "controlled Product Characteristic ID -> native CAD semantic feature -> native SolidWorks DimXpert/PMI -> tolerance/stack-up analysis -> derived drawing -> inspection characteristic/result",
+    "release_rule": "A released tolerance/GD&T must not exist only as typed drawing text when an accepted native DimXpert/PMI or controlled semantic binding is required.",
+    "P007_exemplar": "Author/verify P007 native DimXpert/PMI before final K01-D-006 release; drawing is the derived projection."
+  },
+  "bom_interlock": {
+    "rule": "Drawing title/revision/part identity and item quantity/reference data must resolve from the same controlled product registry/BOM baseline; drawings do not maintain a separate BOM truth.",
+    "assembly_drawings": "A001/D012 must refresh when modeled occurrence structure changes."
   }
 }

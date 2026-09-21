@@ -26,7 +26,7 @@ marvilon-k01/
 ├─ reference/              # external/reference geometry/docs
 ├─ tests/                  # automated tests
 ├─ handoff/                # release/reviewer handoffs
-└─ .local_archive/         # local non-Git backups / superseded working artifacts
+└─ archive/                # local non-Git controlled history / superseded artifacts; never active authority
 ```
 
 ## Stable CAD lives outside Git

@@ -1,0 +1,106 @@
+{
+  "schema": "k01.change_policy.v3",
+  "generated_utc": "2026-09-08T18:31:45.568921+00:00",
+  "status": "ACTIVE",
+  "core_rule": "Request -> pre-change impact -> decision -> implementation -> reverify impacted -> promote.",
+  "classes": {
+    "A": {
+      "definition": "Requirement or released element",
+      "requires": [
+        "pre-change impact",
+        "requirements",
+        "rationale",
+        "verification plan",
+        "revision action",
+        "reverification",
+        "promotion decision"
+      ]
+    },
+    "B": {
+      "definition": "Candidate geometry/product definition",
+      "requires": [
+        "pre-change impact",
+        "verification plan",
+        "reverification of impacted nodes",
+        "promotion decision"
+      ],
+      "formal_rationale_required": false
+    },
+    "C": {
+      "definition": "Tools/documentation/UI/formatting",
+      "requires": [
+        "tests where executable logic changes",
+        "commit"
+      ],
+      "engineering_impact_cycle_required": false
+    }
+  },
+  "classification_rules": [
+    {
+      "pattern": "control/requirements/**",
+      "class": "A",
+      "reason": "requirements govern design"
+    },
+    {
+      "pattern": "control/release/**",
+      "class": "A",
+      "reason": "released-element control"
+    },
+    {
+      "pattern": "cad/final_candidate/**",
+      "class": "A",
+      "reason": "release candidate CAD"
+    },
+    {
+      "pattern": "control/product_definition/**",
+      "class": "B",
+      "reason": "candidate product definition / PMI"
+    },
+    {
+      "pattern": "control/drawings/**",
+      "class": "B",
+      "reason": "candidate drawing/product definition"
+    },
+    {
+      "pattern": "cad/candidates/**",
+      "class": "B",
+      "reason": "candidate geometry"
+    },
+    {
+      "pattern": "control/analysis/**",
+      "class": "B",
+      "reason": "engineering analysis/control inputs"
+    },
+    {
+      "pattern": "control/bom/**",
+      "class": "B",
+      "reason": "engineering BOM source/control"
+    },
+    {
+      "pattern": "tools/**",
+      "class": "C",
+      "reason": "tooling"
+    },
+    {
+      "pattern": "center/**",
+      "class": "C",
+      "reason": "instrument/UI"
+    },
+    {
+      "pattern": "docs/**",
+      "class": "C",
+      "reason": "documentation"
+    },
+    {
+      "pattern": ".github/**",
+      "class": "C",
+      "reason": "CI/branch guard tooling"
+    },
+    {
+      "pattern": "tests/**",
+      "class": "C",
+      "reason": "tests"
+    }
+  ],
+  "requirement_input_gate": "Class A requirement links must exist in control/requirements/K01_RELEASE_REQUIREMENTS_CURRENT.json"
+}

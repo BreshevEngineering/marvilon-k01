@@ -12,8 +12,8 @@
   },
   "counts": {
     "KEEP_ENGINEERING_OPEN": 32,
-    "RETIRED_ROUTED": 9,
-    "REVIEW": 4,
+    "RETIRED_ROUTED": 10,
+    "REVIEW": 3,
     "RETIRED_ALIAS": 1,
     "KEEP_PENDING_CLI_ROUTE": 5,
     "KEEP_DEFERRED_RELEASE_PATH": 6,
@@ -1005,13 +1005,23 @@
       "future_route": "handoff",
       "targets": [
         {
+          "raw": "run.cmd handoff",
+          "resolved": "run.cmd",
+          "exists": true
+        },
+        {
+          "raw": "tools\\cli\\k01_cli.py",
+          "resolved": "tools/cli/k01_cli.py",
+          "exists": true
+        },
+        {
           "raw": "tools\\medtas\\ai_handoff_v2_0.py",
           "resolved": "tools/medtas/ai_handoff_v2_0.py",
           "exists": true
         }
       ],
-      "reason": "candidate to become run.cmd subcommand before wrapper removal",
-      "migration_note": "Wrapper removed after canonical CLI route installed; implementation source retained."
+      "reason": "Canonical route is installed: run.cmd handoff. Root wrapper remains retired and must not be reintroduced.",
+      "migration_note": "Use run.cmd handoff; do not recreate 22_BUILD_AI_HANDOFF.cmd."
     },
     {
       "launcher": "23_BUILD_EBOM_MBOM.cmd",
@@ -1223,16 +1233,22 @@
     {
       "launcher": "36_BUILD_TECHNICAL_FILTER_MAP.cmd",
       "domain": "other",
-      "status": "REVIEW",
-      "future_route": "review",
+      "status": "RETIRED_ROUTED",
+      "future_route": "tech-filter",
       "targets": [
+        {
+          "raw": "run.cmd tech-filter",
+          "resolved": "run.cmd",
+          "exists": true
+        },
         {
           "raw": "tools\\medtas\\technical_filter_map_v2_2.py",
           "resolved": "tools/medtas/technical_filter_map_v2_2.py",
           "exists": true
         }
       ],
-      "reason": "no safe automatic removal rule"
+      "reason": "Canonical route installed: run.cmd tech-filter. Root wrapper is retired.",
+      "migration_note": "Use run.cmd tech-filter."
     },
     {
       "launcher": "37_AUDIT_PROJECT_STRUCTURE.cmd",
@@ -1324,6 +1340,48 @@
         }
       ],
       "reason": "candidate to become run.cmd subcommand before wrapper removal"
+    },
+    {
+      "launcher": "run.cmd root-cleanup",
+      "domain": "governance",
+      "status": "CANONICAL_ROUTE",
+      "future_route": "root-cleanup",
+      "targets": [
+        {
+          "raw": "tools\\cli\\k01_cli.py",
+          "resolved": "tools/cli/k01_cli.py",
+          "exists": true
+        }
+      ],
+      "reason": "Canonical CLI dry-run for validated repository-root cleanup."
+    },
+    {
+      "launcher": "run.cmd root-cleanup-apply",
+      "domain": "governance",
+      "status": "CANONICAL_ROUTE",
+      "future_route": "root-cleanup-apply",
+      "targets": [
+        {
+          "raw": "tools\\cli\\k01_cli.py",
+          "resolved": "tools/cli/k01_cli.py",
+          "exists": true
+        }
+      ],
+      "reason": "Canonical CLI apply route; relocates only validated local/transport artefacts and never native CAD."
+    },
+    {
+      "launcher": "run.cmd prewrite-check",
+      "domain": "governance",
+      "status": "CANONICAL_ROUTE",
+      "future_route": "prewrite-check",
+      "targets": [
+        {
+          "raw": "tools\\cli\\k01_cli.py",
+          "resolved": "tools/cli/k01_cli.py",
+          "exists": true
+        }
+      ],
+      "reason": "Canonical pre-write control barrier for the current checkpoint/step contract."
     }
   ],
   "migration_step": "6E"

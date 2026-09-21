@@ -1,0 +1,30 @@
+{
+  "schema": "k01.cad_binding_invariance_policy.v1",
+  "project": "K01",
+  "purpose": "Prove that a characteristic remains attached to the intended semantic geometry, not merely that an annotation exists after reopen.",
+  "levels": [
+    {
+      "id": "L1_SAVE_REOPEN",
+      "test": "save-close-reopen candidate; semantic annotation/persistent reference resolves",
+      "proves": "persistence across document lifecycle only"
+    },
+    {
+      "id": "L2_FORCE_REBUILD",
+      "test": "SOLIDWORKS ForceRebuild3(false) on a disposable/read-only verification candidate; resolve characteristic semantic geometry before/after and compare semantic signature",
+      "proves": "binding survives topology regeneration without parameter change"
+    },
+    {
+      "id": "L3_PERTURB_RESTORE",
+      "test": "on a disposable candidate only, apply an approved benign parameter perturbation, rebuild, restore original value, rebuild again; characteristic must resolve to the same functional semantic role/signature at every state",
+      "proves": "binding selector is not accidentally tied to unstable runtime face numbering/topology order"
+    }
+  ],
+  "fail_closed_rules": [
+    "Runtime face index alone is never binding authority.",
+    "Zero or multiple semantic matches => HOLD; never choose first match.",
+    "A save/reopen PMI PASS cannot substitute for L2/L3 geometry-binding qualification.",
+    "Canonical CAD is never modified for L3; use a timestamped disposable candidate and verify canonical SHA invariance."
+  ],
+  "current_p007_status": "HOLD_BINDING_INVARIANCE_NOT_COMPLETE",
+  "current_evidence_note": "C02/C05 have proven PMI save-close-reopen persistence, but P007 characteristic-to-geometry rebuild/perturbation invariance is not yet a release PASS. C07/C08 remain CANONICAL_REBIND_REQUIRED."
+}

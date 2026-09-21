@@ -1,0 +1,184 @@
+{
+  "schema": "k01.cad_manifest.baseline.v3",
+  "generated_utc": "2026-09-21T10:50:57.122338+00:00",
+  "cad_root": "D:\\Marvilon\\K01",
+  "item_count": 22,
+  "items": [
+    {
+      "relative": "cad/assemblies/K01-A-001_Calibration_Module.SLDASM",
+      "bytes": 243466,
+      "sha256": "c829fac9c94ba94e1c6fc53dcb9f8afb2a91610673a0e727d59bd6fbbbfba82c",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/drawings/current/K01-D-001/K01-D-001.SLDDRW",
+      "bytes": 95982,
+      "sha256": "3c3c67fd845b32479ed445b494bf84ab3ae5e260633363bcc7852a79627db67d",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/drawings/current/K01-D-003.SLDDRW",
+      "bytes": 215136,
+      "sha256": "ec2a343e3b17ca74421d96d2b3ace5902d8497691e7a7161d3bf6db28138a943",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/drawings/current/K01-D-003/K01-D-003.SLDDRW",
+      "bytes": 131348,
+      "sha256": "6c67f9ac69bc37afef2ffa0d08a89aaef6dc907c393f82bd8313729fd74a545c",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/drawings/current/K01-D-006/K01-D-006.SLDDRW",
+      "bytes": 110578,
+      "sha256": "c3c6b4fe4a7382d242d5b9be1600fec54174b3170853b37c1148e9e544a50f77",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/drawings/current/K01-D-006/K01-D-006_ISO_FINISH.SLDDRW",
+      "bytes": 170489,
+      "sha256": "ff64ce3cd6011f53870d435bf3f596368d202178bf31474d184138fccb353f54",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-B-001_Internal_SmCo_Magnet.SLDPRT",
+      "bytes": 67573,
+      "sha256": "6138debe9969b385b5c15f3a669d2d6d7839cccb06397c0929518d16b597db3e",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-B-001_Internal_SmCo_Magnet_D8x8_REFERENCE.SLDPRT",
+      "bytes": 67595,
+      "sha256": "aebcde7e036195a693efde3d2e995fe6cbdf227cf0c58d31a0c3f14d85e05d47",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-001_Calibration_Rod.SLDPRT",
+      "bytes": 82405,
+      "sha256": "34184c4e5910f7128c8134aae01a9a4c06d465a2b690d1a7f302caca93a0580c",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-002_Guide_Bushing.SLDPRT",
+      "bytes": 85318,
+      "sha256": "4bcb9ffbc8975d5b7d07777f2e5ebf9a961704e4cd2c7a346d20b52d40af5c13",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-003_Cartridge_Body.SLDPRT",
+      "bytes": 193534,
+      "sha256": "a8c175bcfc7db4e9f75c01af32aa31d3560e568e8644190563ce6efa3b736e82",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-004_Front_Guide_Bushing.SLDPRT",
+      "bytes": 77740,
+      "sha256": "6c5644913ce7694a46ceb557a5616a70598c50355d06e6f537b8a92a7c1ca779",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-006_Retaining_Plug.SLDPRT",
+      "bytes": 96862,
+      "sha256": "2b66a0978a1bdc4de3a32de2ec5bc845f909d8b8f38e61bbf7d77064b7f29d88",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+      "bytes": 124844,
+      "sha256": "b436d82ee8dd1208d075c2a73d27b78a22b5460dc55505148794a0439221989c",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-008_Internal_Magnetic_Follower.SLDPRT",
+      "bytes": 110451,
+      "sha256": "403be52ed52ee754985b8fe03e5e8febdc94a23460958e66c787d9ffa4e98ad7",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-009_Rear_Stop_Washer.SLDPRT",
+      "bytes": 71898,
+      "sha256": "4d257ccc233754c8713fbaa61e2ee168aa7f67ceac45864f0b4cf4e068bfec8c",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-012_External_Magnet_Retaining_Cap.SLDPRT",
+      "bytes": 72648,
+      "sha256": "31527713495dd2e354c4365c8e7f8ffec9ed74c22640cd2e033f48c7699c92d0",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-013_Follower_End_Cap.SLDPRT",
+      "bytes": 60946,
+      "sha256": "8036e8fe91dfce26e270bad5f033023589de64506acbeeb131428f09fb81c597",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-014_Front_Guide_Retaining_Ring.SLDPRT",
+      "bytes": 72871,
+      "sha256": "2364e7ee9adaeb9f149dc4e0960aeed11d1805328968fc7909ae052b1eb0d24f",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-015_Dual_Coil_Bobbin.SLDPRT",
+      "bytes": 99108,
+      "sha256": "71fa61d071d23c38daea566ca696b0ba64d40d5ed538e42f4e55da3f369abb51",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-016_Long_Run_Interface_Boss.SLDPRT",
+      "bytes": 162936,
+      "sha256": "d22af8cb67cb13019ad8cb59a66807c28ece20a0b045dae2ac57e1adb0d267a4",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    },
+    {
+      "relative": "cad/parts/K01-P-017_Datum_C_Relieved_Locator.SLDPRT",
+      "bytes": 68162,
+      "sha256": "c3a9e0b8e78a227fc3de5806358a5c1c251f9a60df5ac6dca5e8b654968e3996",
+      "semantic_fingerprint": null,
+      "semantic_status": "REQUIRED_BEFORE_ANY_FUTURE_CAD_SEMANTIC_MUTATION",
+      "current_s2_mode": "FROZEN_BINARY_IDENTITY__NO_CAD_MUTATION"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "schema": "k01.t07.p007_structural_refresh.v2",
   "title": "T07 — final P007 structural refresh",
-  "status": "READY_AFTER_T05",
+  "status": "T07A_PASS_ENGINEERING_SCREEN__T07B_LOCAL_J2_DEPENDENT",
   "material": "AISI 316L / EN 1.4404",
   "studies": [
     {
@@ -28,8 +28,34 @@
   ],
   "rule": "Use the final C2R1 geometry. Historical results are comparison only, not release evidence.",
   "acceptance": [
-    "Static: no yielding; report minimum SF to controlled material yield.",
-    "Buckling: first positive eigenvalue >> 1 and no local numerical artefact controlling the mode.",
-    "Save study definitions and result hashes/fingerprints."
-  ]
+    "T07A static: minimum screening SF >= 2 against controlled screening yield; report stress/displacement/reaction and exclude singularity artefacts from engineering conclusion.",
+    "T07A buckling: first positive eigenvalue lambda1 >= 10; inspect mode shape for local numerical artefact.",
+    "Save study definitions/results/evidence fingerprints.",
+    "T07A PASS does not clear local J2 preload/contact/seal/leak/galling/service requirements."
+  ],
+  "decision": "EDR-026_T07_PRESSURE_ONLY_SCOPE + EDR-027_T07A_PRESSURE_SHELL_SCREEN_ACCEPTANCE",
+  "scope_split": {
+    "T07A": "global P007 pressure-shell static/buckling refresh; MANUAL_CONTROLLED executable now",
+    "T07B": "local J2 contact/seal/preload/service qualification; depends on T04/T05/T06"
+  },
+  "T07A_current_result": {
+    "decision": "EDR-027_T07A_PRESSURE_SHELL_SCREEN_ACCEPTANCE",
+    "status": "PASS_ENGINEERING_SCREEN",
+    "static": {
+      "sigma_vm_max_MPa": 0.6147,
+      "displacement_max_mm": 6.257e-05,
+      "reaction_N": 3.1229,
+      "FoS_screen_170MPa": 276.56
+    },
+    "buckling": {
+      "lambda1": 1918.67,
+      "equivalent_critical_pressure_bar": 383.734
+    },
+    "mesh_convergence": "WAIVED_BY_ENGINEERING_JUDGMENT_PER_EDR-027",
+    "stale_triggers": [
+      "P007 geometry/material/wall change",
+      "fixture/load boundary change",
+      "released differential-pressure change"
+    ]
+  }
 }

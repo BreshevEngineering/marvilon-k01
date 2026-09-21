@@ -2,9 +2,18 @@
   "schema": "medtas.cad_sem_binding.v1_6",
   "node_id": "K01.CAD.SEM.A001",
   "source_selection": {
-    "preferred_gate_verify": "reports/cad/current/K01_GATE04E_P006_SERVICE_VERIFY.json",
-    "preferred_gate_verify_field": "verify_assembly",
-    "fallback_assembly": "cad/assemblies/K01-A-001_Calibration_Module.SLDASM"
+    "mode": "ENGINEERING_BASELINE_AUTHORITY",
+    "authority_key": "engineering_baseline",
+    "authority_field": [
+      "cad",
+      "assembly"
+    ],
+    "rule": "K01.CAD.SEM.A001 follows the explicit engineering baseline. Candidate verification assemblies are inputs to promotion QA, not implicit semantic-export fallbacks.",
+    "legacy_selection_preserved_for_history": {
+      "preferred_gate_verify": "reports/cad/current/K01_GATE04E_P006_SERVICE_VERIFY.json",
+      "preferred_gate_verify_field": "verify_assembly",
+      "fallback_assembly": "cad/assemblies/K01-A-001_Calibration_Module.SLDASM"
+    }
   },
   "raw_api_output": "reports/cad/current/K01_A001_SEMANTIC_RAW_API_v1_4.json",
   "canonical_output": "reports/medtas/cad/current/K01_CAD_SEM_A001.json",

@@ -1,0 +1,6 @@
+{
+  "schema": "k01.drawing_build_job.v1",
+  "adapter_id": "K01_D006_PROFESSIONAL_CURRENT",
+  "source_model": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+  "expected_output": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-006\\<candidate>\\K01-D-006.SLDDRW"
+}

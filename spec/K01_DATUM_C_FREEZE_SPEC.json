@@ -1,6 +1,6 @@
 {
   "schema": "k01_datum_c_freeze_spec_v2",
-  "status": "PROPOSED_FOR_GATE04B",
+  "status": "SUPERSEDED_IMPLEMENTATION_DETAIL_BY_EDR_023",
   "design_rationale": "Datum A and cylindrical pilot Datum B already remove five rigid-body DOF. Datum C must remove only rotation about B. Therefore the mating feature on P003 is a radial slot, not a second round locating hole; this avoids redundant radial constraint and assembly binding from PCD tolerances.",
   "datum_scheme": {
     "A": "P003/P016 metal-to-metal mating face; primary axial datum",
@@ -30,5 +30,7 @@
     "Inspect P016 pin-hole R12/0deg relative to B.",
     "Inspect P003 slot center plane relative to B and A.",
     "Assembly check: P003 seats on A and B without forcing; pin enters slot before M4 tightening."
-  ]
+  ],
+  "superseded_by": "control/decisions/EDR-023_DATUM_C_KINEMATIC_BASELINE.json",
+  "supersession_note": "The A/B/C kinematic principle remains valid. The radial-slot implementation was superseded by the later relieved/diamond P017 + round P003 hole baseline with Gate04B v7 PASS evidence."
 }

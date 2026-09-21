@@ -316,6 +316,33 @@
       "location": "https://www.iso.org/standard/87425.html",
       "relevance": "manufacturing digital-thread lifecycle connectivity and management; architecture context only",
       "status": "ARCHITECTURE_REFERENCE / NO COMPLIANCE CLAIM"
+    },
+    {
+      "source_id": "SRC-GPS-ISO2692-001",
+      "type": "standard",
+      "title": "ISO 2692:2021 — GPS — Maximum material requirement (MMR), least material requirement (LMR) and reciprocity requirement (RPR)",
+      "publisher": "ISO",
+      "location": "https://www.iso.org/standard/74592.html",
+      "relevance": "MMR/virtual-condition control where size and geometry are interdependent for assembly",
+      "status": "PUBLISHED_CURRENT_EDITION_UNDER_SYSTEMATIC_REVIEW_2026"
+    },
+    {
+      "source_id": "SRC-FIT-ISO286-2-001",
+      "type": "standard",
+      "title": "ISO 286-2 — ISO system of limits and fits — tolerance classes and limit deviations",
+      "publisher": "ISO",
+      "location": "controlled standard / ISO 286-2",
+      "relevance": "Ø14.10 H7/g6 fit limits and Ø2.90 H10 hole tolerance",
+      "status": "STANDARD_REFERENCE"
+    },
+    {
+      "source_id": "SRC-FASTENER-ISO273-001",
+      "type": "standard",
+      "title": "ISO 273:1979 — Fasteners — Clearance holes for bolts and screws",
+      "publisher": "ISO",
+      "location": "https://www.iso.org/standard/4183.html",
+      "relevance": "M2.5 medium-series clearance-hole nominal Ø2.90; project H10 tolerance is tighter by design",
+      "status": "CURRENT_CONFIRMED_2024"
     }
   ],
   "revision": "v2",

@@ -1,0 +1,21 @@
+{
+  "schema": "k01.native_mutation_lease.current.v1",
+  "lease_id": "K01-D006-REFINE-V2-20260917_113851",
+  "status": "RELEASED_AFTER_PASS",
+  "owner_session": "Алексей",
+  "artifact_id": "K01-D006-NEW-V2-REFINED-CANDIDATE",
+  "native_path": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-006\\refined_v2_20260917_113851\\generated",
+  "baseline_current_drawing": "D:\\Marvilon\\K01\\cad\\drawings\\current\\K01-D-006\\K01-D-006.SLDDRW",
+  "baseline_current_drawing_sha256": "c3c6b4fe4a7382d242d5b9be1600fec54174b3170853b37c1148e9e544a50f77",
+  "baseline_source_model": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+  "baseline_source_model_sha256": "b436d82ee8dd1208d075c2a73d27b78a22b5460dc55505148794a0439221989c",
+  "allowed_operation": "COPY_CURRENT_D006_TO_NEW_CANDIDATE_AND_APPLY_RELEASE_NOTES_ONLY__DO_NOT_OVERWRITE_CURRENT",
+  "start_utc": "2026-09-17T08:38:52.270562+00:00",
+  "rollback_reference": "Quarantine/delete new candidate directory; current D006 and source P007 must remain unchanged.",
+  "released_utc": "2026-09-17T08:39:27.345096+00:00",
+  "post_current_drawing_sha256": "c3c6b4fe4a7382d242d5b9be1600fec54174b3170853b37c1148e9e544a50f77",
+  "post_source_model_sha256": "b436d82ee8dd1208d075c2a73d27b78a22b5460dc55505148794a0439221989c",
+  "current_drawing_invariant": true,
+  "source_model_invariant": true,
+  "candidate_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-006\\refined_v2_20260917_113851"
+}

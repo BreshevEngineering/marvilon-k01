@@ -1,0 +1,47 @@
+{
+  "schema": "k01.technical_filter.policy.v1",
+  "project": "K01",
+  "status": "ACTIVE_POLICY_EXISTING_MAP_REMAINS_DERIVED_AUTHORITY",
+  "purpose": "Make the engineering decision filter mandatory at every node/change without redefining the existing numeric category map in a second truth source.",
+  "category_authority": {
+    "mapper_source": "tools/medtas/technical_filter_map_v2_2.py",
+    "derived_current": "reports/control/K01_NODE_TECHNICAL_FILTER_CURRENT.json",
+    "rule": "Category IDs/names shall be read from the existing mapper/source when available. This policy does not renumber them."
+  },
+  "mandatory_review_domains": [
+    "requirements/acceptance and traceability",
+    "function/performance",
+    "interfaces, datums, kinematics and DOF",
+    "strength/stress",
+    "stiffness/deformation",
+    "stability/buckling",
+    "fatigue/service life",
+    "thermal state/thermal cycling",
+    "pressure/vacuum/leak/containment",
+    "magnetic/electromagnetic loads where applicable",
+    "dynamics/inertia/vibration where applicable",
+    "friction/tribology/wear/galling",
+    "tolerances/GD&T/stack-up/variation",
+    "materials/environment/compatibility",
+    "manufacturability",
+    "process capability/joining/fastening",
+    "assembly/accessibility",
+    "operation/service/maintenance",
+    "inspection/metrology/testability",
+    "reliability/fail-safe/misassembly risk",
+    "verification/independent cross-check",
+    "supply/material/process availability and obsolescence",
+    "cost/value/complexity",
+    "concept preservation/change impact/documentation/release traceability"
+  ],
+  "decision_rule": [
+    "Every applicable domain must be PASS, HOLD, OPEN or N/A with explicit rationale/evidence.",
+    "N/A without rationale is HOLD.",
+    "A screening PASS may authorize only the maturity claim it actually proves.",
+    "Engineering-baseline promotion may preserve release-only HOLDs when the change itself is geometrically/semantically verified and those HOLDs remain explicit.",
+    "Product/R01 release requires zero unresolved applicable release blockers.",
+    "Material state must be explicit for every affected part; unknown material is OPEN, never inferred.",
+    "Rejected alternatives and reasons remain in change/decision history."
+  ],
+  "step_gate": "No mutating engineering step may bypass checkpoint/authority/dependency/technical-filter review."
+}

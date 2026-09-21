@@ -1,0 +1,32 @@
+{
+  "schema": "k01.iteration15.git_manifest.v3",
+  "generated_utc": "2026-09-08T18:31:45.568921+00:00",
+  "status": "READY_FOR_REVIEW",
+  "stage_paths": [
+    "tools/governance/change_control.py",
+    "tools/governance/ci_guard.py",
+    "tools/assurance/evidence_reducer.py",
+    "tools/assurance/build_center_state.py",
+    "tests/governance/test_change_control.py",
+    "tests/assurance/test_evidence_reducer.py",
+    "control/governance/K01_CHANGE_POLICY.json",
+    "control/center/K01_CENTER_ARCHITECTURE.json",
+    "control/center/K01_CENTER_HARDCODE_ACTION_AUDIT.json",
+    "control/git/K01_BRANCH_PROTECTION_POLICY.json",
+    ".github/workflows/k01-governance.yml",
+    "run.cmd",
+    "control/change/K01_CHANGE_CURRENT.json",
+    "control/change/records/CHG-K01-D006-CANDIDATE-001.json",
+    "control/change/impact/CHG-K01-D006-CANDIDATE-001_IMPACT.json",
+    "control/drawings/K01_D006_AUTHORING_INPUT.json",
+    "control/project/K01_EXECUTION_POLICY.json"
+  ],
+  "do_not_stage": [
+    "evidence/current/**",
+    "reports/**",
+    "**/build/**",
+    "*.exe",
+    "*.dll"
+  ],
+  "recommended_commit_message": "control: enforce pre-change impact and evidence-only center architecture"
+}

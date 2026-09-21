@@ -9,12 +9,18 @@
       "type": "GD&T"
     },
     {
-      "candidate_spec": "Ø14.10 H7 × 1.70",
+      "candidate_spec": "Ø14.10 H7; female locator bore depth 2.00 mm nominal; depth tolerance OPEN",
       "id": "C02",
       "mbd_required": true,
       "role": "Locator / datum B",
       "status": "MBD_AUTHORING_REQUIRED",
-      "type": "SIZE_FIT_DATUM"
+      "type": "SIZE_FIT_DATUM",
+      "superseded_candidate_spec": "Ø14.10 H7 × 1.70",
+      "female_locator_bore_depth_nominal_mm": 2.0,
+      "depth_tolerance_status": "OPEN",
+      "nominal_p003_pilot_engagement_mm": 1.5,
+      "nominal_bottom_clearance_mm": 0.5,
+      "decision": "EDR-024_P007_C02_LOCATOR_DEPTH_BASELINE"
     },
     {
       "candidate_spec": "PERP Ø0.03 TO A",
@@ -113,5 +119,7 @@
   "schema": "k01.drawing_p007_exemplar.v1_9",
   "source_note": "Candidate characteristic values transcribed from existing K01-D-006 C2R1 draft/TPD V3. They are NOT released authority until authored/verified in native MBD or controlled non-dimensional product definition.",
   "source_status": "LEGACY_DRAFT_CANDIDATE_ONLY",
-  "title": "Hermetic Magnetic Can"
+  "title": "Hermetic Magnetic Can",
+  "updated_utc": "2026-09-11T08:51:00.270491+00:00",
+  "C02_decision": "EDR-024_P007_C02_LOCATOR_DEPTH_BASELINE"
 }

@@ -1,0 +1,80 @@
+{
+  "schema": "k01.derived_engineering_inputs.v1",
+  "project": "K01",
+  "purpose": "Separate derived loads, screening values and calculated design inputs from requirements, assumptions and product characteristics.",
+  "rules": [
+    "A derived engineering input has its own stable ID, quantity kind, units, derivation/source chain, revision/status and consumers.",
+    "A derived input is never promoted to a requirement merely because an analysis using it passes.",
+    "Two derived inputs with the same numeric value remain distinct unless an explicit engineering decision establishes equivalence.",
+    "SCREENING_ONLY or ORIGIN_OPEN values cannot become release acceptance criteria.",
+    "Changing any derivation source invalidates consumers by graph fingerprint."
+  ],
+  "inputs": [
+    {
+      "id": "DER-K01-P006-SERVICE-NORMAL-FORCE-001",
+      "quantity_kind": "SERVICE_NORMAL_FORCE",
+      "value": 300.0,
+      "unit": "N",
+      "source": "control/parameters/K01_GATE04E_ANALYSIS_PARAMETERS_v1_7.json::structural.normal_force_N",
+      "derivation_sources": [],
+      "requirement_ids": [],
+      "status": "ORIGIN_OPEN_SCREENING_INPUT",
+      "consumers": [
+        "K01.STRUCT.MODEL.P006"
+      ],
+      "release_authority": false,
+      "note": "Observed structural analysis input. Origin/derivation is not established by the current requirement registry.",
+      "revision": "1",
+      "effective_from": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "effective_to_or_superseded_by": null
+    },
+    {
+      "id": "DER-K01-J2-SEAL-REACTION-UPPER-001",
+      "quantity_kind": "SEAL_REACTION_SCREENING_UPPER_BOUND",
+      "value": 600.0,
+      "unit": "N",
+      "source": "control/calculations/K01_T05_CLAMP_SCREEN_INPUT.json::seal_screen.compression_force_upper_bound_N",
+      "derivation_sources": [
+        "REQ-K01-SEAL-001"
+      ],
+      "requirement_ids": [
+        "REQ-K01-SEAL-001"
+      ],
+      "status": "SCREENING_ONLY_SUPPLIER_COMPOUND_VALUE_OPEN",
+      "consumers": [
+        "control/analysis/K01_T05_LOCAL_FEA_DEFINITION.json"
+      ],
+      "release_authority": false,
+      "revision": "1",
+      "effective_from": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "effective_to_or_superseded_by": null
+    },
+    {
+      "id": "DER-K01-J2-BOLT-PRELOAD-SCREEN-001",
+      "quantity_kind": "FASTENER_PRELOAD_PER_SCREW",
+      "value": 300.0,
+      "unit": "N_per_screw",
+      "source": "control/calculations/K01_T05_CLAMP_SCREEN_INPUT.json::fastener.candidate_preload_N_per_screw",
+      "derivation_sources": [
+        "control/calculations/K01_T05_CLAMP_SCREEN_INPUT.json",
+        "control/analysis/K01_T05_LOCAL_FEA_DEFINITION.json"
+      ],
+      "requirement_ids": [
+        "REQ-K01-SEAL-001",
+        "REQ-K01-ENV-DP-001"
+      ],
+      "status": "SCREENING_CANDIDATE_NOT_RELEASED",
+      "consumers": [
+        "control/analysis/K01_T05_LOCAL_FEA_DEFINITION.json",
+        "K01.STRUCT.BOLT_EQUIV.P006"
+      ],
+      "release_authority": false,
+      "note": "Distinct from DER-K01-P006-SERVICE-NORMAL-FORCE-001 and from REQ-K01-ACT-FORCE-001 despite the repeated number 300.",
+      "revision": "1",
+      "effective_from": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "effective_to_or_superseded_by": null
+    }
+  ],
+  "registry_revision": "1",
+  "effectivity": "K01-CP-20260910-BASELINE-02C-PROMOTED design-review baseline; release effectivity OPEN"
+}

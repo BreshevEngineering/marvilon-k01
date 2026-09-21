@@ -17,5 +17,7 @@
     "MISSING"
   ],
   "drawing_rule": "A drawing characteristic may be generated only from an accepted authority state. A drawing is a representation of product definition and cannot promote an OPEN or ambiguous characteristic.",
-  "mbd_migration_rule": "Reviewed semantic bindings remain traceable migration targets for later native DimXpert authoring; they are not silent fallbacks."
+  "mbd_migration_rule": "Reviewed semantic bindings remain traceable migration targets for later native DimXpert authoring; they are not silent fallbacks.",
+  "dimxpert_release_pipeline": "Product Characteristic -> native CAD semantic binding -> native DimXpert/PMI preferred -> tolerance analysis -> drawing/inspection projection.",
+  "bom_alignment_rule": "Product-definition identity/revision/material states and EBOM/MBOM rows must resolve from the same controlled part registry/canonical CAD occurrence baseline; drawings are not BOM authority."
 }

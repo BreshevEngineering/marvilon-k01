@@ -1,0 +1,64 @@
+{
+  "schema": "k01.change_technical_filter_review.v1",
+  "change": "K01-BASELINE-02C-PROMOTION",
+  "checkpoint": "K01-CP-20260910-BASELINE-02C-DATUM-C-VERIFIED",
+  "status": "PASS_TO_PREFLIGHT / HOLD_TO_MUTATION_UNTIL_APPLICABLE_PROMOTION_SOURCE_REVIEW",
+  "review": [
+    {
+      "domain": "requirements/traceability",
+      "status": "PASS",
+      "evidence": "EDR-023 + producer/assembly QA"
+    },
+    {
+      "domain": "function/interfaces/kinematics",
+      "status": "PASS",
+      "evidence": "A/B/C architecture + fully constrained assembly + signed P017 readback"
+    },
+    {
+      "domain": "strength/stiffness/stability/fatigue",
+      "status": "PASS_CHANGE_IMPACT_SCREEN / OPEN_FOR_RELEASE",
+      "rationale": "Current promotion establishes a verified locating geometry baseline so downstream analyses can bind to it. It does not claim structural release; P007 buckling and independent reconciliation/waiver remain explicit P2 blockers."
+    },
+    {
+      "domain": "thermal/pressure/leak/containment",
+      "status": "OPEN_FOR_PRODUCT_RELEASE / NOT_BLOCKING_ENGINEERING_BASELINE_PROMOTION",
+      "rationale": "These domains remain applicable to the product, but this transaction changes engineering-baseline authority and makes no thermal/leak/containment release claim."
+    },
+    {
+      "domain": "materials",
+      "status": "PASS_WITH_RELEASE_HOLD",
+      "evidence": "P017 baseline 316L/EN1.4404 recorded; native material assignment remains OPEN and blocks material/release qualification, not engineering-baseline geometry promotion."
+    },
+    {
+      "domain": "tolerance/GD&T",
+      "status": "PASS_FOR_CURRENT_INTERFACE_CANDIDATE / OPEN_FOR_PRODUCT_RELEASE",
+      "evidence": "P016 Ø3 H7, P017 Ø3 p6, P003 Ø3.02 +0.01/0 THRU; complete stack/DimXpert release definition still P3/P4 OPEN."
+    },
+    {
+      "domain": "manufacturing/process/assembly/service",
+      "status": "PASS_SCREEN_WITH_OPEN_PRODUCTION_QUALIFICATION",
+      "evidence": "rear-side installation screen PASS; physical/process qualification remains OPEN."
+    },
+    {
+      "domain": "inspection/testability",
+      "status": "OPEN_FOR_PRODUCT_RELEASE / TRACEABILITY_IMPACT_RECORDED",
+      "rationale": "Datum-C characteristics must later bind into Product Characteristics -> DimXpert/PMI -> drawing/inspection. No inspection release is claimed by this promotion."
+    },
+    {
+      "domain": "reliability/misassembly/change impact",
+      "status": "PASS_FOR_PROMOTION_PREFLIGHT",
+      "evidence": "candidate isolation, hash guard, signed readback, IN/MID/OUT, rollback required before mutation"
+    },
+    {
+      "domain": "supply/cost/availability",
+      "status": "OPEN_FOR_PRODUCT_RELEASE / NOT_BLOCKING_ENGINEERING_BASELINE_PROMOTION",
+      "rationale": "P017 product/material baseline is explicit and release HOLD remains. Sourcing/cost does not authorize release and is not hidden by this engineering-baseline promotion."
+    },
+    {
+      "domain": "documentation/evidence",
+      "status": "PASS",
+      "evidence": "machine-readable producer/QA evidence + checkpoint + promotion transaction"
+    }
+  ],
+  "rule": "This review does not replace reports/control/K01_NODE_TECHNICAL_FILTER_CURRENT.json or tools/medtas/technical_filter_map_v2_2.py. Product-applicable domains remain OPEN where release evidence is absent; they are not converted to N/A merely to pass an engineering-baseline promotion."
+}

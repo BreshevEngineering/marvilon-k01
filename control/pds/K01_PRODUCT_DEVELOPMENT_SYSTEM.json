@@ -1,0 +1,60 @@
+{
+  "schema": "k01.product_development_system.v1",
+  "generated_utc": "2026-09-09T05:25:12.549126+00:00",
+  "status": "ACTIVE",
+  "stages": [
+    {
+      "n": 1,
+      "name": "REQUIREMENT"
+    },
+    {
+      "n": 2,
+      "name": "FUNCTION / INTERFACE"
+    },
+    {
+      "n": 3,
+      "name": "ARCHITECTURE / ALTERNATIVES"
+    },
+    {
+      "n": 4,
+      "name": "NOMINAL DESIGN"
+    },
+    {
+      "n": 5,
+      "name": "ANALYSIS"
+    },
+    {
+      "n": 6,
+      "name": "VARIATION / PROCESS / INSPECTION"
+    },
+    {
+      "n": 7,
+      "name": "TPD",
+      "contains": [
+        "CAD",
+        "PMI",
+        "DRAWINGS",
+        "BOM"
+      ]
+    },
+    {
+      "n": 8,
+      "name": "VERIFICATION"
+    },
+    {
+      "n": 9,
+      "name": "QUALIFICATION / BENCH"
+    },
+    {
+      "n": 10,
+      "name": "RELEASE"
+    }
+  ],
+  "rules": [
+    "A drawing cannot be used to invent unresolved engineering requirements.",
+    "Release promotion is sequential through the 10 stages.",
+    "Independent work may execute early only when its own upstream requirements/interfaces are released.",
+    "Every implementation records input hashes, outputs, evidence, blockers and affected dependency nodes.",
+    "Center is a projection only and cannot own engineering state."
+  ]
+}

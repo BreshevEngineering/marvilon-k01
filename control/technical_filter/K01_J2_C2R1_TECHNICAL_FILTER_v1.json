@@ -119,19 +119,18 @@
     },
     {
       "gate": "buckling_stability",
-      "status": "STALE",
+      "status": "PASS",
       "question": "Does P007 retain buckling margin after final J2 freeze?",
-      "basis": "Historical λ1=1883.6 is strong but must be refreshed on final geometry.",
+      "basis": "Current C2R1 P007 T07A: lambda1=1918.67 at -0.20 bar reference pressure; project screen floor lambda1>=10. Accepted by EDR-027.",
       "source_ids": [
         "SRC-K01-MOSS-001"
       ],
       "verification_method": "SOLIDWORKS Simulation eigen-buckling",
       "evidence_ids": [
-        "P007-BUCKLING-HISTORY"
+        "EDR-027",
+        "T07A-20260914"
       ],
-      "open_actions": [
-        "run T07"
-      ]
+      "open_actions": []
     },
     {
       "gate": "torsion_rotational",

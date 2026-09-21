@@ -1,0 +1,13 @@
+{
+  "schema": "k01.operator_lock.current.v1",
+  "confirmed_utc": "2026-09-19T19:57:40.183592+00:00",
+  "confirmed_goal_lock": "K01-A-001 CALIBRATION MODULE DESIGN FREEZE",
+  "confirmed_active_engineering_object": "K01-J2 P003-P007 SERVICE JOINT",
+  "confirmed_active_workpack_id": "K01-NA-T05-J2-LOCAL-FEA",
+  "confirmed_active_workpack_text": "Execute T05 local J2 contact/separation FEA on the frozen final C2R1 P003/P007 geometry. Run 200 and 300 N preload per screw, seal-reaction sensitivity 0/300/600 N, +0.20 bar pressure, no-penetration metal contact, local mesh <=0.20 mm at fastener/gland/pilot/flange-root regions, then refine the critical case. Report P003/P007 von Mises stress, maximum face separation, contact pressure, bolt axial force and J2 datum-face displacement. Do not mutate CAD geometry. If LC2 with 600 N seal reaction passes, retain OD33; otherwise trigger local J2 redesign.",
+  "goal_lock_source": "control/project/K01_GOAL_LOCK_CURRENT.json",
+  "goal_lock_sha256": "e8cd93ee0be55fad6b2d58ab9ce8faeaa97994caceeb13112ad724d00f0ad8c6",
+  "frontier_source": "control/state/K01_COMPLETION_FRONTIER_CURRENT.json",
+  "frontier_sha256": "7d6eaa4bf4637c3373064dd2259f7f8fac4292ea5df16ce41c2ff931f6585053",
+  "rule": "Stale automatically when Goal Lock, Completion Frontier, ACTIVE workpack or source hashes change. Reconfirmation is then required."
+}

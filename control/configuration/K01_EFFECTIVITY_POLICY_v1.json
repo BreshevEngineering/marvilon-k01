@@ -1,0 +1,21 @@
+{
+  "schema": "k01.effectivity_policy.v1",
+  "project": "K01",
+  "authority_relationship": "Extends control/configuration/revision_policy.json; does not replace it.",
+  "principles": [
+    "Every released requirement, allocation, derived input, characteristic, CAD binding, process, drawing and inspection plan has a revision/effectivity statement.",
+    "A characteristic revision states which part/configuration revision or engineering baseline it applies to and which predecessor it supersedes, if any.",
+    "Changing a characteristic does not rewrite historical released revisions; a successor revision is created and downstream consumers become stale according to effectivity.",
+    "Design-review candidates may be baseline-scoped before a formal part revision exists, but release is blocked while release effectivity is OPEN.",
+    "As-built/as-inspected results retain the exact released definition fingerprint/revision used for that unit or lot."
+  ],
+  "required_fields": [
+    "revision_id",
+    "effective_from",
+    "effective_to_or_superseded_by",
+    "applicable_part_revision_or_baseline",
+    "configuration",
+    "change_record_id",
+    "status"
+  ]
+}

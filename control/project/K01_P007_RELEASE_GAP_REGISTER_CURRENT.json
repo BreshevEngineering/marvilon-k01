@@ -1,0 +1,39 @@
+{
+  "schema": "k01_p007_release_gap_register_v1",
+  "part": "K01-P-007",
+  "status": "P007_PRODUCT_DEFINITION_READY__L8_QUALIFICATION_CARRIED_FORWARD",
+  "closed_do_not_restart": [
+    "T07A global +0.20 bar static and -0.20 bar buckling via EDR-027",
+    "C03 J2 locator-axis orientation via EDR-028 MMR virtual-condition control",
+    "C04 P007 clamp-hole size/position release via EDR-028 + T03",
+    "C07/C08/C11 P007-side radial envelope via EDR-029: Ø10 h9 / Ø9.40 H9 / TOTAL RUNOUT 0.02 | B",
+    "C01/C05/C06/blind-end + edge condition via EDR-030"
+  ],
+  "active_engineering_gaps": [
+    {
+      "id": "SEAL_LEAK_PROCESS_INSPECTION",
+      "status": "OPEN",
+      "topic": "seal/media/leak/process/inspection closure"
+    },
+    {
+      "id": "IF_RADIAL_INNER_COUNTERPART",
+      "status": "OPEN_INTERFACE_QUALIFICATION",
+      "topic": "P008/moving-group OD, guide alignment/runout and dynamic no-rub allocation relative to P007 datum B; not a P007 size-definition blocker"
+    },
+    {
+      "id": "IF_RADIAL_OUTER_P015",
+      "status": "OPEN_INTERFACE_QUALIFICATION",
+      "topic": "P015 production ID/material/tolerance/alignment relative to P007 OD; not a P007 size-definition blocker"
+    }
+  ],
+  "generated_utc": "2026-09-17T08:20:34.405513+00:00",
+  "product_definition_ready": true,
+  "closed_gap_nodes_by_transition": 0,
+  "carry_forward_qualification": [
+    "C12 physical leak test",
+    "J2 50-cycle service qualification",
+    "P007 FAI/process capability",
+    "seal/screw incoming qualification"
+  ],
+  "next": "Run final D006 release-readiness review."
+}

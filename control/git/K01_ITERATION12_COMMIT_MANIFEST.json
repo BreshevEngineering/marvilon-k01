@@ -1,0 +1,29 @@
+{
+  "schema": "k01.git_commit_manifest.v1",
+  "generated_utc": "2026-09-08T13:14:41.053258+00:00",
+  "status": "READY_FOR_REVIEW_THEN_COMMIT",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "stage_paths": [
+    "control/environment/K01_SOLIDWORKS_2018_RUNTIME.json",
+    "control/snapshot/K01_GATE04E_CURRENT_SNAPSHOT.json",
+    "control/product/parts.json",
+    "control/product/retired_items.json",
+    "control/requirements/K01_MAGNETIC_REQUIREMENTS.json",
+    "control/requirements/K01_FIXED_COIL_ACTUATOR_REQUIREMENTS.json",
+    "control/applicability/K01_FIXED_COIL_APPLICABILITY.json",
+    "control/analysis/K01_FIXED_COIL_FEMM_INPUT_MANIFEST.json",
+    "control/analysis/K01_MAGNETIC_FORCE_QUALIFICATION.json",
+    "control/bom/K01_BOM_RELEASE_WORKLIST.json",
+    "control/project/K01_DEPENDENCY_STATE.json",
+    "control/project/K01_PROJECT_CLOSURE_MATRIX.json",
+    "control/center/K01_CENTER_INPUT_CURRENT.json"
+  ],
+  "do_not_stage_globs": [
+    "reports/**",
+    "**/build/**",
+    "*.exe",
+    "*.dll",
+    "*_CURRENT.md"
+  ],
+  "recommended_message": "engineering: anchor Gate04E factual state and fixed-coil dependencies"
+}

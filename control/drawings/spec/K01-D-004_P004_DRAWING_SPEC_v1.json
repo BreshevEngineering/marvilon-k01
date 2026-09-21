@@ -1,0 +1,158 @@
+{
+  "schema": "k01.drawing_system_spec.v1",
+  "drawing_id": "K01-D-004",
+  "part_id": "K01-P-004",
+  "title": "Front Guide Bushing",
+  "status": "ENGINEERING_REVIEW",
+  "model_path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-004_Front_Guide_Bushing.SLDPRT",
+  "output_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-004",
+  "sheet": "A3",
+  "sheet_scale": 10.0,
+  "projection": "FIRST_ANGLE",
+  "units": "mm",
+  "material": "TECAPEEK PVX black (Ensinger) — BASELINE / PRODUCTION GRADE REVIEW",
+  "view_strategy": {
+    "primary_representation": "MODEL_VIEW",
+    "reason": "Simple axisymmetric through-bore bushing. Two clean views communicate nominal geometry more reliably than the generic automated section; Ø5.055 is explicitly THRU.",
+    "interface_end_views": [
+      {
+        "view": "END",
+        "required": true
+      }
+    ]
+  },
+  "view_definitions": [
+    {
+      "id": "LONG",
+      "kind": "MODEL_VIEW",
+      "orientation": "*Front",
+      "x_m": 0.125,
+      "y_m": 0.177,
+      "scale": 10.0
+    },
+    {
+      "id": "END",
+      "kind": "MODEL_VIEW",
+      "orientation": "*Right",
+      "x_m": 0.285,
+      "y_m": 0.177,
+      "scale": 10.0
+    }
+  ],
+  "bindings": {
+    "GUIDE_ID": {
+      "kind": "CYLINDER",
+      "diameter_mm": 5.055,
+      "count": 1
+    },
+    "SEAT_OD": {
+      "kind": "CYLINDER",
+      "diameter_mm": 6.54,
+      "count": 1
+    },
+    "FACE_MIN": {
+      "kind": "PLANE_EXTREME_X",
+      "side": "MIN_X"
+    },
+    "FACE_MAX": {
+      "kind": "PLANE_EXTREME_X",
+      "side": "MAX_X"
+    }
+  },
+  "datum_features": [],
+  "annotations": [
+    {
+      "id": "D004-C01-ID",
+      "kind": "DIAMETER",
+      "view": "END",
+      "binding": "GUIDE_ID",
+      "nominal_mm": 5.055,
+      "precision": 3,
+      "suffix": " THRU",
+      "state": "GEOMETRY_BASELINE__PRODUCTION_TOLERANCE_OPEN",
+      "x_m": 0.238,
+      "y_m": 0.128
+    },
+    {
+      "id": "D004-C02-OD",
+      "kind": "DIAMETER",
+      "view": "END",
+      "binding": "SEAT_OD",
+      "nominal_mm": 6.54,
+      "precision": 2,
+      "state": "GEOMETRY_BASELINE__PRODUCTION_TOLERANCE_OPEN",
+      "x_m": 0.342,
+      "y_m": 0.222
+    },
+    {
+      "id": "D004-C03-L",
+      "kind": "LINEAR",
+      "view": "LONG",
+      "from_binding": "FACE_MIN",
+      "to_binding": "FACE_MAX",
+      "nominal_mm": 7.99,
+      "precision": 2,
+      "state": "GEOMETRY_BASELINE__PRODUCTION_TOLERANCE_OPEN",
+      "x_m": 0.125,
+      "y_m": 0.238
+    }
+  ],
+  "characteristics": [
+    {
+      "id": "D004-C01",
+      "source": "K01 native CAD / project dimension architecture",
+      "state": "GEOMETRY_BASELINE__PRODUCTION_TOLERANCE_OPEN",
+      "spec": "Ø5.055 THRU nominal"
+    },
+    {
+      "id": "D004-C02",
+      "source": "K01 native CAD + REQ-GUIDE-001",
+      "state": "GEOMETRY_BASELINE__PRODUCTION_TOLERANCE_OPEN",
+      "spec": "Ø6.54 nominal"
+    },
+    {
+      "id": "D004-C03",
+      "source": "K01 native CAD",
+      "state": "GEOMETRY_BASELINE__PRODUCTION_TOLERANCE_OPEN",
+      "spec": "7.99 nominal"
+    },
+    {
+      "id": "D004-C04",
+      "source": "REQ-GUIDE-001 / project dimensional chain",
+      "state": "ASSEMBLY_REQUIREMENT_CONTROLLED",
+      "spec": "P003 seat Ø6.60 / P004 OD Ø6.54 => 0.06 nominal diametral clearance; functional band 0.04...0.08"
+    },
+    {
+      "id": "D004-C05",
+      "source": "REQ-GUIDE-002",
+      "state": "ASSEMBLY_REQUIREMENT_CONTROLLED",
+      "spec": "P014 retains axially; no adhesive; no axial preload"
+    }
+  ],
+  "title_block_properties": {
+    "DrawingNo": "K01-D-004",
+    "PartNo": "K01-P-004",
+    "Title": "Front Guide Bushing",
+    "Material": "TECAPEEK PVX black (Ensinger)",
+    "Status": "ENGINEERING REVIEW",
+    "Units": "mm",
+    "Projection": "FIRST_ANGLE",
+    "Scale": "10:1",
+    "Revision": ""
+  },
+  "release_blockers": [
+    "P004 Ø5.055 guide-bore production tolerance is not released.",
+    "P004 Ø6.54 outside-diameter production tolerance allocation versus P003 Ø6.60 seat is not released.",
+    "P004 7.99 overall-length production tolerance is not released.",
+    "P004 functional guide-bore / seat surface texture is not released.",
+    "TECAPEEK PVX production-grade qualification remains under review.",
+    "Drawing title-block/projection-symbol template layer remains D9 controlled."
+  ],
+  "review_notes": [],
+  "configuration_basis": {
+    "authority": "control/decisions/EDR-047_P004_AXIAL_RECENTER.json",
+    "native_sha256": "6c5644913ce7694a46ceb557a5616a70598c50355d06e6f537b8a92a7c1ca779",
+    "OAL_nominal_mm": 7.99,
+    "production_tolerance": "OPEN"
+  }
+}

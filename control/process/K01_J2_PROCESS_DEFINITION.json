@@ -1,0 +1,33 @@
+{
+  "schema": "k01.j2.process_definition.v1",
+  "generated_utc": "2026-09-08T14:09:48.393192+00:00",
+  "status": "HOLD_OPEN_PROCESS_FIELDS",
+  "fastener_process": {
+    "id": "NM-J2-FASTENER-PROCESS",
+    "preload_candidate_window_N_per_screw": [
+      200,
+      300
+    ],
+    "dry_stainless_on_stainless_torque_controlled_installation": "NOT_RELEASE_BASELINE",
+    "open_fields": [
+      "finish/lubrication/thread treatment",
+      "torque-preload calibration",
+      "first-article verification"
+    ]
+  },
+  "containment_process": {
+    "ids": [
+      "NM-P007-WELD-PROCESS",
+      "MBOM-P007-WELDED-CONSTRUCTION"
+    ],
+    "status": "SUPERSEDED_NOT_APPLICABLE_TO_ACTIVE_C2R1",
+    "decision": "P007 monolithic machined construction with integral blind end is selected. P003↔P007 is a removable metal-face + static O-ring + 3×M2.5 clamped service boundary. Permanent P003↔P007 welding is rejected.",
+    "active_process_controls": [
+      "NM-J2-SEAL",
+      "NM-J2-FASTENER-PROCESS",
+      "REQ-K01-LEAK-001"
+    ],
+    "retirement_rule": "Do not include NM-P007-WELD-PROCESS or MBOM-P007-WELDED-CONSTRUCTION in active C2R1 MBOM. Preserve them only as superseded history/change-control evidence.",
+    "decision_source": "EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE"
+  }
+}

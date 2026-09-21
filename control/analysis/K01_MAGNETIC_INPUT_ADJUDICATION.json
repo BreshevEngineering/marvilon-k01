@@ -1,0 +1,110 @@
+{
+  "schema": "k01.magnetic_force_inputs.v2",
+  "generated_utc": "2026-09-08T08:59:41.637310+00:00",
+  "status": "HOLD_CONTROLLED_INPUTS",
+  "source_hygiene": {
+    "derived_analysis_files_excluded_from_authority": true,
+    "reports_excluded_from_authority": true,
+    "exact_product_record_matching_only": true,
+    "substring_mentions_do_not_count_as_grade_Br_or_temperature_data": true
+  },
+  "legacy_placeholder_requirement_ids": {
+    "ids": [
+      "REQ-MAG-001",
+      "REQ-MAG-002",
+      "REQ-MAG-003"
+    ],
+    "evidence": {
+      "REQ-MAG-001": {
+        "current_authority_candidates": [],
+        "snapshot_authority_candidates": [],
+        "status": "NOT_FOUND_IN_SOURCE_AUTHORITY"
+      },
+      "REQ-MAG-002": {
+        "current_authority_candidates": [],
+        "snapshot_authority_candidates": [],
+        "status": "NOT_FOUND_IN_SOURCE_AUTHORITY"
+      },
+      "REQ-MAG-003": {
+        "current_authority_candidates": [],
+        "snapshot_authority_candidates": [],
+        "status": "NOT_FOUND_IN_SOURCE_AUTHORITY"
+      }
+    },
+    "policy": "Do not use these IDs or previously discussed numeric values for release unless a current source-authority record is found and approved."
+  },
+  "required_requirement_categories": [
+    {
+      "category": "minimum_operational_transmission_force",
+      "status": "OPEN_AUTHORITY_OR_VALUE"
+    },
+    {
+      "category": "pull_out_or_holding_force_criterion",
+      "status": "OPEN_AUTHORITY_OR_VALUE"
+    },
+    {
+      "category": "functional_magnetic_travel_or_critical_positions",
+      "status": "OPEN_AUTHORITY_OR_VALUE"
+    }
+  ],
+  "magnets": {
+    "K01-B-001": {
+      "status": "CURRENT_PRODUCT_RECORD_FOUND",
+      "source": "control/product/parts.json",
+      "json_path": "$.items.K01-B-001",
+      "record": {
+        "cad_identity_key": "K01-B-001",
+        "cad_property_projection": {
+          "Description": "Internal SmCo Magnet",
+          "MakeBuy": "BUY",
+          "MaterialAuthority": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN",
+          "MaterialStatus": "OPEN LOT DATA",
+          "PartNo": "K01-B-001",
+          "Revision": ""
+        },
+        "description": "Internal SmCo Magnet",
+        "item_type": "PURCHASED",
+        "make_buy": "BUY",
+        "manufacturer_part_number": null,
+        "material_authority": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN",
+        "material_status": "OPEN LOT DATA",
+        "part_number": "K01-B-001",
+        "release_state": "HOLD",
+        "revision": null,
+        "revision_status": "OPEN_RELEASE_REVISION",
+        "standard_or_specification": null,
+        "supplier": null,
+        "unit": "ea"
+      },
+      "qualification": {
+        "grade": {
+          "valid_release_input": false,
+          "evidence": [
+            {
+              "field": "$.material_authority",
+              "value": "Sm2Co17 / S280 candidate; lot Br(T)/tolerance OPEN"
+            }
+          ]
+        },
+        "Br_or_remanence": {
+          "valid_release_input": false,
+          "evidence": []
+        },
+        "temperature_data": {
+          "valid_release_input": false,
+          "evidence": []
+        }
+      }
+    },
+    "K01-B-002": {
+      "status": "MISSING_EXACT_PRODUCT_RECORD"
+    }
+  },
+  "missing_controlled_inputs": [
+    "K01-B-001:grade",
+    "K01-B-001:Br_or_remanence",
+    "K01-B-001:temperature_data",
+    "K01-B-002:record"
+  ],
+  "force_model_release_rule": "FEMM absolute F(x) release model remains blocked until requirement authority and magnet grade/Br(T)/temperature inputs are controlled."
+}

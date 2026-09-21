@@ -1,0 +1,81 @@
+{
+  "schema": "k01.control_system_rc1_dod.current.v1",
+  "status": "RC1_DEFINITION_OF_DONE",
+  "acceptance": [
+    {
+      "id": "RC1-01",
+      "criterion": "Existing engineering-domain registry is used; no parallel taxonomy.",
+      "required": true
+    },
+    {
+      "id": "RC1-02",
+      "criterion": "Exactly one active executable engineering workpack is visible.",
+      "required": true
+    },
+    {
+      "id": "RC1-03",
+      "criterion": "All holds are typed and carry blocking scope.",
+      "required": true
+    },
+    {
+      "id": "RC1-04",
+      "criterion": "Duplicate active decision IDs are detected.",
+      "required": true
+    },
+    {
+      "id": "RC1-05",
+      "criterion": "Controlled-value conflicts are detected for registered critical characteristics.",
+      "required": true
+    },
+    {
+      "id": "RC1-06",
+      "criterion": "Waiting/parked work retains explicit resume triggers.",
+      "required": true
+    },
+    {
+      "id": "RC1-07",
+      "criterion": "Source/books/standards registry is visible and source applicability can be traced.",
+      "required": true
+    },
+    {
+      "id": "RC1-08",
+      "criterion": "Center/handoff/reports are explicitly projection-only.",
+      "required": true
+    },
+    {
+      "id": "RC1-09",
+      "criterion": "Git/GitHub status is reported separately from engineering readiness.",
+      "required": true
+    },
+    {
+      "id": "RC1-10",
+      "criterion": "Handoff acceptance verifies artifact existence, hash, archive integrity and required members.",
+      "required": true
+    },
+    {
+      "id": "RC1-11",
+      "criterion": "FAST_CONTROL is read-only and does not mutate engineering state.",
+      "required": true
+    },
+    {
+      "id": "RC1-12",
+      "criterion": "DEEP_ASSURANCE is only invoked at control/promotion/release boundaries or explicit request.",
+      "required": true
+    },
+    {
+      "id": "RC1-13",
+      "criterion": "Known CF-001..CF-015 defects remain permanent regression cases.",
+      "required": true
+    },
+    {
+      "id": "RC1-14",
+      "criterion": "PASS scope is explicit (local/workpack/domain/product/release).",
+      "required": true
+    },
+    {
+      "id": "RC1-15",
+      "criterion": "User/operator control contract is visible and actionable.",
+      "required": true
+    }
+  ]
+}

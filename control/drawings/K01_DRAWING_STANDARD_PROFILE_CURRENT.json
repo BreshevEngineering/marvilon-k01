@@ -1,0 +1,96 @@
+{
+  "schema": "k01.drawing_standard_profile.current.v1",
+  "system": "ISO_TPD_GPS",
+  "status": "CONTROLLED_DESIGN_REVIEW_PROFILE_RELEASE_REQUIRES_FINAL_QA",
+  "projection": {
+    "method": "FIRST_ANGLE",
+    "standard": "ISO 5456-2:1996",
+    "rule": "Use one projection method consistently. Final controlled sheet format must show the first-angle projection symbol."
+  },
+  "sheet": {
+    "standard": "ISO 5457:1999 + Amd 1:2010",
+    "current": "A3 landscape",
+    "final_rule": "A3/A4 only through controlled sheet format; borders/zones/title-block area must be template-controlled."
+  },
+  "scales": {
+    "standard": "ISO 5455:1979",
+    "recommended_enlargement": [
+      2,
+      5,
+      10,
+      20,
+      50
+    ],
+    "current": {
+      "section": 5,
+      "end_view": 5,
+      "side_parent": 2,
+      "isometric": 2
+    },
+    "rule": "Intermediate 3:1 or 4:1 scales are prohibited on the controlled K01 profile unless a documented exceptional functional reason exists."
+  },
+  "representation": {
+    "standards": [
+      "ISO 128-1:2020",
+      "ISO 128-2:2022",
+      "ISO 128-3:2022"
+    ],
+    "rule": "Line types/weights, leaders and reference lines are controlled by the drawing template/document properties; final visual QA required.",
+    "section_rule": "For parts with significant internal geometry, use sections/cuts per ISO 128-3:2022 when they communicate form more clearly than hidden-line external views. K01 P007 family policy selects an axial full section as primary; this is a project presentation rule, not a claim that all cylindrical parts must always be sectioned."
+  },
+  "lettering": {
+    "standard": "ISO 3098-2:2000",
+    "rule": "Use controlled CAD lettering/font sizes consistently; no oversized file names or debug text."
+  },
+  "dimensions": {
+    "standards": [
+      "ISO 129-1:2018",
+      "ISO 14405-1:2025"
+    ],
+    "rule": "Dimensions show actual values independent of view scale; no duplicate/conflicting characteristic specification; fit/tolerance semantics come from controlled PMI/Cxx."
+  },
+  "gps": {
+    "fundamentals": "ISO 8015:2011",
+    "geometrical_tolerancing": "ISO 1101:2017",
+    "datums": "ISO 5459:2024",
+    "rule": "GD&T/datums are added only from controlled engineering decisions; no decorative or default GD&T."
+  },
+  "title_block": {
+    "standard": "ISO 7200:2004",
+    "required_fields": [
+      "drawing_number",
+      "part_number",
+      "title",
+      "revision",
+      "document_status",
+      "material",
+      "scale",
+      "sheet",
+      "drawn_by",
+      "checked_by",
+      "approved_by",
+      "date"
+    ],
+    "rule": "One title block only; no full native file name as drawing title/number."
+  },
+  "digital_product_definition": {
+    "standard": "ISO 16792:2021",
+    "method": "3D model + 2D drawing",
+    "rule": "3D/Cxx/PMI remain semantic authority; 2D drawing is derivative presentation; manual semantic re-entry of released PMI is prohibited."
+  },
+  "current_part": {
+    "id": "K01-P-007",
+    "material": "AISI 316L / EN 1.4404"
+  },
+  "current_drawing": {
+    "id": "K01-D-006",
+    "status": "DESIGN REVIEW - NOT FOR MANUFACTURE"
+  },
+  "release_gates": [
+    "controlled sheet format/template including projection symbol and ISO 7200 title block",
+    "semantic QA against Cxx/PMI",
+    "visual QA against ISO 128/129/3098/5457 profile",
+    "no uncontrolled default tolerances",
+    "all release-critical OPEN characteristics closed or explicitly blocking release"
+  ]
+}

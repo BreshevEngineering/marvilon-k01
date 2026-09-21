@@ -1,22 +1,176 @@
 {
-  "schema": "k01.authority_map.current.v3",
+  "schema": "k01.authority_map.current.v15",
   "project": "K01",
   "principle": "Authority is domain-specific. Command Center is projection/orchestration only.",
   "authorities": {
     "engineering_baseline": "control/baseline/K01_ENGINEERING_BASELINE.json",
     "requirements": "control/requirements/requirements.json",
     "product_metadata": "control/product/parts.json",
-    "native_geometry": "Gate04E assembly recorded by engineering baseline manifest",
+    "native_geometry": "Canonical native SolidWorks stable identities bound by current engineering baseline/snapshot. Candidate CAD is non-authoritative until controlled promotion + post-promotion verification.",
     "tolerances_gdt": "controlled Product Characteristics → native SolidWorks DimXpert/PMI → drawing/inspection projection",
     "ebom_mbom": "computed from CAD occurrence tree + product registry + manufacturing process definitions",
     "analysis": "solver evidence bound to engineering baseline/input fingerprint",
     "release_state": "computed; fail closed",
-    "history": "Git/manual commits + evidence hashes"
+    "history": "Git/manual commits + evidence hashes",
+    "engineering_checkpoint": "control/project/K01_CHECKPOINT_CURRENT.json -> immutable control/checkpoints/<checkpoint-id>.json",
+    "maturity_gates": "control/project/K01_P0_P6_GATE_MATRIX_CURRENT.json (human maturity view; not freshness authority)",
+    "technical_filter": "existing technical-filter definition/mapping tool + evidence/immutable/7b23a737ad2d6170c0c42c050c21f246f631195758d0d5bcd9f67bbeba3d8922__K01_NODE_TECHNICAL_FILTER_CURRENT.json; every active change/node requires applicable-category disposition",
+    "drawing_strategy": "control/drawings/K01_TPD_DRAWING_ASSURANCE_STANDARD_v1.json + docs/architecture/K01_DIMXPERT_DRAWING_PIPELINE_v1.md",
+    "handoff": "reports/control/K01_AI_HANDOFF_CURRENT.zip is transport/resume evidence, never geometry/product authority",
+    "handoff_source_contract": "control/project/K01_HANDOFF_REQUIRED_SOURCES_CURRENT.json",
+    "control_namespace": "control/project/K01_AUTHORITY_MAP_CURRENT.json::control_families + control/repo/K01_CONTROL_NAMESPACE_BASELINE.json guard snapshot",
+    "requirements_evidence_policy": "control/requirements/K01_REQUIREMENTS_EVIDENCE_POLICY.json",
+    "cad_semantic_source": "control/baseline/K01_ENGINEERING_BASELINE.json::cad.assembly via declared cad_sem_a001_binding; no implicit gate/candidate fallback",
+    "product_definition_policy": "control/product_definition/K01_PRODUCT_DEFINITION_POLICY_CURRENT.json",
+    "p007_definition_disposition": "control/product_definition/K01_P007_DEFINITION_DECISIONS_CURRENT.json (disposition/overlay only; requirements/CAD/evidence retain domain authority)",
+    "compiled_product_definition": "reports/product_definition/current/K01_P007_PRODUCT_DEFINITION_COMPILED.json is a derived downstream contract fingerprint, not an upstream source authority",
+    "engineering_execution_contract": "control/project/K01_ENGINEERING_EXECUTION_CONTRACT_CURRENT.json",
+    "execution_method_registry": "control/project/K01_EXECUTION_METHOD_REGISTRY_CURRENT.json",
+    "change_impact_policy": "control/project/K01_CHANGE_IMPACT_POLICY_v1.json",
+    "engineering_relationship_registry": "control/project/K01_ENGINEERING_RELATIONSHIP_REGISTRY_v1.json",
+    "runtime_dependency_freshness": "evidence/immutable/d07b049d193037754ea348f2a29b082a039036a46cf596bebb8e7cdc2194f359__K01_MEDTAS_DERIVED_STATE_CURRENT.json (derived from authoritative engineering_build_graph + build/verification records)",
+    "current_change_impact": "reports/control/K01_CHANGE_IMPACT_CURRENT.json (derived what-if/rebuild plan; not a design authority)",
+    "requirement_allocation": "control/requirements/K01_REQUIREMENT_ALLOCATION_REGISTRY_v1.json",
+    "derived_engineering_inputs": "control/engineering/K01_DERIVED_ENGINEERING_INPUTS_v1.json",
+    "datum_reference_systems": "control/product_definition/K01_DATUM_REFERENCE_SYSTEM_REGISTRY_v1.json",
+    "characteristic_context": "control/product_definition/K01_CHARACTERISTIC_CONTEXT_CURRENT.json",
+    "manufacturing_feasibility": "control/manufacturing/K01_P007_MANUFACTURING_FEASIBILITY_CURRENT.json",
+    "configuration_effectivity": "control/configuration/K01_EFFECTIVITY_POLICY_v1.json",
+    "cad_binding_invariance": "control/verification/K01_CAD_BINDING_INVARIANCE_POLICY_v1.json",
+    "engineering_feedback": "control/change/K01_ENGINEERING_FEEDBACK_POLICY_v1.json + control/change/K01_ENGINEERING_FEEDBACK_REGISTRY_CURRENT.json",
+    "drawing_pipeline_policy": "control/drawings/K01_DRAWING_PIPELINE_POLICY_CURRENT.json",
+    "drawing_delivery_capability": "control/drawings/K01_DRAWING_DELIVERY_CAPABILITY_CURRENT.json",
+    "drawing_family_rules": "control/drawings/K01_DRAWING_FAMILY_RULES_CURRENT.json",
+    "p007_drawing_family_binding": "control/drawings/K01_P007_DRAWING_FAMILY_BINDING_CURRENT.json",
+    "engineering_domain_registry": "control/system/K01_ENGINEERING_DOMAIN_REGISTRY_CURRENT.json",
+    "engineering_system_coverage": "reports/control/K01_ENGINEERING_SYSTEM_COVERAGE_CURRENT.json (derived coverage/readiness projection; not design authority)",
+    "drawing_d3_current": "reports/drawing/current/K01-P-007_D3_AUTHORING_VERIFY_CURRENT.json (derived verification evidence; not Product Definition authority)",
+    "drawing_d7_current": "reports/drawing/current/K01-D-006_D7_SEMANTIC_QA_CURRENT.json (derived semantic-QA evidence; not Product Definition authority)",
+    "current_session_state": "control/project/K01_CURRENT_SESSION_MANIFEST.json (STATE_CURRENT navigation authority; not engineering value authority)",
+    "temporal_state_epoch": "control/state/K01_STATE_EPOCH_CURRENT.json",
+    "temporal_coherence": "evidence/immutable/9a65d76eb070320c3e84bad0e14a0e22ab89b57eeea5808ca2e022bc4d58951c__K01_TEMPORAL_COHERENCE_CURRENT.json (derived fail-closed temporal guard)",
+    "current_registry": "control/state/K01_CURRENT_REGISTRY_v1.json"
   },
   "explicit_non_authorities": [
     "planned R01 package until separately promoted and verified",
     "legacy Command Center versions",
     "hand-edited computed BOM outputs",
-    "chat memory"
-  ]
+    "chat memory",
+    "candidate verification assembly before controlled canonical promotion",
+    "manual edits to computed stale/BOM/drawing status",
+    "AI handoff archive as product-definition authority",
+    "control/K01_ENGINEERING_CONTROL_CENTER_v*.xlsx legacy workbook UI/history",
+    "control/command_center/K01_Command_Center_v*.html legacy Command Center UI/history",
+    "legacy product-characteristic candidate_spec text when current definition decision marks the tolerance/GD&T OPEN",
+    "SOLIDWORKS drawing template/general tolerance defaults",
+    "generated drawing/PDF text as inspection acceptance authority",
+    "control/project/K01_DEPENDENCY_STATE.json legacy compatibility/manual state list; not new stale-propagation authority",
+    "control/system/K01_DEPENDENCY_GRAPH_v2.json legacy compatibility graph; not engineering_build_graph authority",
+    "control/product_definition/K01_PRODUCT_DEFINITION_POLICY_v2_0.json superseded policy snapshot; not current authority",
+    "control/project/K01_ENGINEERING_EXECUTION_CONTRACT_v1.json superseded execution-contract snapshot; not current authority",
+    "design-review V10 PROJECTION_FALLBACK callouts as release-native drawing semantics",
+    "runtime SOLIDWORKS face IDs/indices as characteristic binding authority"
+  ],
+  "control_namespace_rule": "One declared authority per critical logical control family. Versioned siblings are migration history, not co-authorities. New siblings are blocked by repo guard.",
+  "control_families": {
+    "engineering_build_graph": {
+      "authority": "control/medtas/v1/graph/K01_engineering_build_graph_v2_6.json",
+      "canonical_target": "control/medtas/v1/graph/K01_engineering_build_graph.json",
+      "glob": "control/medtas/v1/graph/K01_engineering_build_graph_v*.json",
+      "legacy": [
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_1.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_2.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_3.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_4.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_5.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_6.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_7.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_8.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v1_9.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_0.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_1.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_2.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_3.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_4.json",
+        "control/medtas/v1/graph/K01_engineering_build_graph_v2_5.json"
+      ],
+      "migration": "DECLARED_CURRENT_VERSION_V2_6 / V17 ASSURANCE RECOVERY + CONTRACT-DRIVEN D3 / STABLE_UNVERSIONED_TARGET_PENDING"
+    },
+    "cad_sem_a001_binding": {
+      "authority": "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_6.json",
+      "canonical_target": "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING.json",
+      "glob": "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v*.json",
+      "legacy": [
+        "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1.json",
+        "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_2.json",
+        "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_3.json",
+        "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_4.json",
+        "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_5.json"
+      ],
+      "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+    },
+    "status_model": {
+      "authority": "control/medtas/v1/spec/K01_STATUS_MODEL_v1_9.json",
+      "canonical_target": "control/medtas/v1/spec/K01_STATUS_MODEL.json",
+      "glob": "control/medtas/v1/spec/K01_STATUS_MODEL_v*.json",
+      "legacy": [
+        "control/medtas/v1/spec/K01_STATUS_MODEL_v1_7.json",
+        "control/medtas/v1/spec/K01_STATUS_MODEL_v1_8.json"
+      ],
+      "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+    },
+    "bolt_equiv_p006_binding": {
+      "authority": "control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING_v1_7.json",
+      "canonical_target": "control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING.json",
+      "glob": "control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING_v*.json",
+      "legacy": [
+        "control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING_v1_6.json"
+      ],
+      "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+    },
+    "evidence_registry": {
+      "authority": "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY_v1_2.json",
+      "canonical_target": "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY.json",
+      "glob": "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY_v*.json",
+      "legacy": [
+        "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY_v1.json"
+      ],
+      "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+    },
+    "legacy_state_projection": {
+      "authority": "control/state/K01_STATE_CURRENT_v8.json",
+      "canonical_target": "control/state/K01_STATE_CURRENT.json",
+      "glob": "control/state/K01_STATE_CURRENT*.json",
+      "legacy": [
+        "control/state/K01_STATE_CURRENT.json"
+      ],
+      "migration": "LEGACY_CENTER_PROJECTION / DO_NOT_USE_AS PRODUCT AUTHORITY"
+    },
+    "project_closure_step9c_projection": {
+      "authority": "evidence/immutable/c6d22085c8fb92897602a47b484953f14a10282490656369cb95f14a753a5517__K01_PROJECT_CLOSURE_STEP9C_V3_CURRENT.json",
+      "canonical_target": "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_CURRENT.json",
+      "glob": "reports/engineering/K01_PROJECT_CLOSURE_STEP9C*_CURRENT.json",
+      "legacy": [
+        "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_CURRENT.json",
+        "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_V2_CURRENT.json"
+      ],
+      "migration": "LEGACY_REPORT_PROJECTION / DECLARED V3 CURRENT"
+    },
+    "technical_filter_categories": {
+      "authority": "control/decision_system/K01_TECHNICAL_FILTER_24_v2_2.json",
+      "canonical_target": "control/decision_system/K01_TECHNICAL_FILTER_24.json",
+      "glob": "control/decision_system/K01_TECHNICAL_FILTER_24_v*.json",
+      "legacy": [],
+      "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+    },
+    "technical_filter_rules": {
+      "authority": "control/decision_system/K01_TECHNICAL_FILTER_RULES_v2_2.json",
+      "canonical_target": "control/decision_system/K01_TECHNICAL_FILTER_RULES.json",
+      "glob": "control/decision_system/K01_TECHNICAL_FILTER_RULES_v*.json",
+      "legacy": [],
+      "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+    }
+  },
+  "namespace_bootstrap_rule": "Live workstation inventory outranks handoff completeness for namespace discovery. Any pre-existing family omitted from a transport handoff is HOLD-until-adjudicated, never silently accepted.",
+  "temporal_precedence_rule": "Filename CURRENT alone is never authority. Global STATE_CURRENT files must share the current state_epoch; DOMAIN_CURRENT remains domain-scoped and cannot override the Current Session Manifest."
 }

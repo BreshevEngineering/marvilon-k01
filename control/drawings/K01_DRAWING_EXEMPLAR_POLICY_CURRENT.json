@@ -1,0 +1,33 @@
+{
+  "schema": "k01.drawing_exemplar_policy.current.v1",
+  "generated_utc": "2026-09-17T12:53:00Z",
+  "project": "K01",
+  "exemplar_root": "D:\\Marvilon\\K01\\cad\\drawings\\exemplars",
+  "classification": "QUALITY_EXEMPLARS__NONFINAL__NONAUTHORITATIVE",
+  "purpose": [
+    "Highest-quality known K01 drawing variants.",
+    "Visual and D8 presentation benchmark for layout, readability, view spacing, section clarity, leader routing, note zoning, title-block finish and sheet usage."
+  ],
+  "rules": {
+    "allowed": [
+      "visual comparison",
+      "presentation-quality benchmark",
+      "manual drawing refinement reference",
+      "D8 review reference"
+    ],
+    "forbidden": [
+      "treating exemplar as final drawing",
+      "treating exemplar as CURRENT drawing authority",
+      "copying unsupported tolerances/fits/GTOL/Ra/material/process/inspection values",
+      "automatic promotion to cad/drawings/current"
+    ]
+  },
+  "precedence": [
+    "Product Definition",
+    "Drawing Spec",
+    "semantic source authorities",
+    "Drawing Control",
+    "exemplar visual-quality reference"
+  ],
+  "status": "CONTROLLED_REFERENCE_POLICY"
+}

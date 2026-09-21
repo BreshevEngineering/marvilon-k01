@@ -1,0 +1,217 @@
+{
+  "schema": "k01.product_development_state.v1",
+  "generated_utc": "2026-09-19T06:09:14.723016+00:00",
+  "scope": "P007_J2",
+  "lifecycle_stages": {
+    "1_REQUIREMENT": {
+      "status": "HOLD_OPEN_REQUIREMENTS",
+      "why": "P007/J2 release cannot advance while media/seal/leak/service requirements are not released.",
+      "evidence": [
+        "handoff/current/K01_AI_HANDOFF/reports/control/K01_CURRENT_STATE.json"
+      ],
+      "blockers": [
+        "REQ-K01-MEDIA-001",
+        "REQ-K01-SEAL-001",
+        "REQ-K01-LEAK-001",
+        "REQ-K01-SERVICE-CYCLES-001"
+      ],
+      "next_actions": [
+        "Define media/cleaning envelope",
+        "Define quantitative leak acceptance",
+        "Release required service-cycle target",
+        "Complete static-seal requirement after media envelope is frozen"
+      ]
+    },
+    "2_FUNCTION_INTERFACE": {
+      "status": "PASS",
+      "why": "Current-state gates report functional requirement, architecture integrity and interfaces/datums as PASS for the removable J2 interface.",
+      "evidence": [
+        "handoff/current/K01_AI_HANDOFF/reports/control/K01_CURRENT_STATE.json"
+      ],
+      "blockers": [],
+      "next_actions": []
+    },
+    "3_ARCHITECTURE_ALTERNATIVES": {
+      "status": "PASS",
+      "why": "EDR-025 controls active C2R1 architecture: P007 is monolithic machined 316L with integral blind end; P003↔P007 J2 is removable metal-face + static O-ring + 3×M2.5; permanent P003↔P007 weld is rejected.",
+      "evidence": [
+        "handoff/current/K01_AI_HANDOFF/reports/control/K01_CURRENT_STATE.json",
+        "control/decisions/EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE.json",
+        "docs/K01_P007_J2_MANUFACTURING_BASELINE_CURRENT.md"
+      ],
+      "blockers": [],
+      "next_actions": []
+    },
+    "4_NOMINAL_DESIGN": {
+      "status": "PASS",
+      "why": "Native P007/J2 geometry is controlled: L35, locator Ø14.10, OD33, 3×Ø2.90 on PCD26.5, OD10/ID9.4 and 316L.",
+      "evidence": [
+        "control/snapshot/K01_GATE04E_CURRENT_SNAPSHOT.json",
+        "control/drawings/K01_D006_RELEASE_DEFINITION.json"
+      ],
+      "blockers": [],
+      "next_actions": []
+    },
+    "5_ANALYSIS": {
+      "status": "HOLD_PRESSURE_VACUUM_SEALING__T07A_PASS",
+      "why": "EDR-027 closes current P007 global +0.20 bar static and -0.20 bar linear buckling. Analysis remains HOLD only for pressure/vacuum/sealing closure outside T07A.",
+      "evidence": [
+        "handoff/current/K01_AI_HANDOFF/reports/control/K01_CURRENT_STATE.json",
+        "control/decisions/EDR-027_T07A_PRESSURE_SHELL_SCREEN_ACCEPTANCE.json",
+        "control/project/K01_PROJECT_CLOSURE_MATRIX.json"
+      ],
+      "blockers": [
+        "pressure_vacuum_sealing HOLD"
+      ],
+      "next_actions": [
+        "Close seal/media/leak pressure-vacuum requirements; do not rerun T07A unless an EDR-027 stale trigger fires."
+      ]
+    },
+    "6_VARIATION_PROCESS_INSPECTION": {
+      "status": "HOLD",
+      "why": "Architecture/process route is selected by EDR-025, but functional tolerances, monolithic thin-wall/blind-end capability, seal/fastener qualification, quantitative leak acceptance and inspection plan are not yet released.",
+      "evidence": [
+        "control/drawings/K01_P007_FUNCTIONAL_TOLERANCE_PLAN.json",
+        "control/product_definition/K01_J2_CONTAINMENT_CLOSURE_PLAN.json",
+        "control/manufacturing/K01_P007_MANUFACTURING_FEASIBILITY_CURRENT.json"
+      ],
+      "blockers": [
+        "thin-wall/blind-end manufacturing capability",
+        "seal/media/leak definition",
+        "fastener/process qualification",
+        "inspection plan"
+      ],
+      "next_actions": [
+        "Qualify 0.30 mm nominal wall / integral blind-end manufacturing and inspection capability",
+        "Close surface texture/inspection/measurement conditions",
+        "Close T04/T05/T06 seal/fastener/service inputs",
+        "Define C12 quantitative leak acceptance and inspection methods"
+      ]
+    },
+    "7_TPD": {
+      "status": "HOLD",
+      "why": "Current D006 is a view sheet with controlled notes, not a manufacturing TPD drawing.",
+      "evidence": [
+        "control/drawings/K01_D006_VISUAL_QA_CURRENT.json",
+        "control/drawings/K01_D006_RELEASE_DEFINITION.json",
+        "control/bom/K01_BOM_RELEASE_WORKLIST.json"
+      ],
+      "blockers": [
+        "real K01-D-006 drawing",
+        "EBOM/MBOM release blockers"
+      ],
+      "next_actions": [
+        "Do not author release D006 until Stages 1,5,6 relevant blockers close",
+        "Retain current PDF/SLDDRW only as API/view-layout evidence"
+      ]
+    },
+    "8_VERIFICATION": {
+      "status": "HOLD",
+      "why": "Drawing semantic QA, inspection cross-check, leak verification and affected-node re-verification are incomplete.",
+      "evidence": [
+        "control/change/K01_CHANGE_CURRENT.json"
+      ],
+      "blockers": [
+        "drawing semantic QA",
+        "inspection cross-check",
+        "leak verification"
+      ],
+      "next_actions": []
+    },
+    "9_QUALIFICATION_BENCH": {
+      "status": "HOLD",
+      "why": "P007/J2 leak/service qualification is incomplete. Magnetic bench belongs to the actuator lane and is tracked separately.",
+      "evidence": [
+        "handoff/current/K01_AI_HANDOFF/reports/control/K01_CURRENT_STATE.json"
+      ],
+      "blockers": [
+        "leak test",
+        "service-cycle qualification"
+      ],
+      "next_actions": []
+    },
+    "10_RELEASE": {
+      "status": "DEFERRED",
+      "why": "Release is impossible while earlier mandatory stages are HOLD.",
+      "evidence": [
+        "control/project/K01_PROJECT_CLOSURE_MATRIX.json"
+      ],
+      "blockers": [
+        "upstream lifecycle holds"
+      ],
+      "next_actions": []
+    }
+  },
+  "first_release_gate_hold": "1_REQUIREMENT",
+  "requirements_open": [
+    "REQ-K01-MEDIA-001",
+    "REQ-K01-SEAL-001",
+    "REQ-K01-LEAK-001",
+    "REQ-K01-SERVICE-CYCLES-001"
+  ],
+  "release_blocking_requirements": [
+    "REQ-K01-MEDIA-001",
+    "REQ-K01-SEAL-001",
+    "REQ-K01-LEAK-001",
+    "REQ-K01-SERVICE-CYCLES-001"
+  ],
+  "execution_queue": [
+    {
+      "priority": 1,
+      "lane": "REQUIREMENT",
+      "task": "Freeze REQ-K01-MEDIA-001 media/cleaning envelope",
+      "type": "EXTERNAL_INPUT_REQUIRED",
+      "unblocks": [
+        "REQ-K01-SEAL-001",
+        "Stage 6 seal process",
+        "Stage 9 leak qualification"
+      ]
+    },
+    {
+      "priority": 2,
+      "lane": "REQUIREMENT",
+      "task": "Define REQ-K01-LEAK-001 quantitative leak-test acceptance",
+      "type": "ENGINEERING_REQUIREMENT_DECISION",
+      "unblocks": [
+        "Stage 6 inspection",
+        "Stage 9 qualification",
+        "D006 release notes"
+      ]
+    },
+    {
+      "priority": 3,
+      "lane": "VARIATION",
+      "task": "C01/C05/C06/blind-end released by EDR-030; close remaining surface/inspection/process semantics",
+      "type": "ENGINEERING_CLOSURE",
+      "upstream": [
+        "EDR-030 primary dimensions released"
+      ]
+    },
+    {
+      "priority": 4,
+      "lane": "PROCESS_INSPECTION",
+      "task": "Close monolithic P007 capability plus seal/fastener/leak/inspection requirements",
+      "type": "ENGINEERING_CLOSURE",
+      "upstream": [
+        "EDR-025 architecture controlled"
+      ]
+    },
+    {
+      "priority": 5,
+      "lane": "TPD",
+      "task": "Author full K01-D-006 manufacturing drawing once from released Product Definition",
+      "type": "BLOCKED",
+      "blocked_by": [
+        "Stage 5 pressure/vacuum/sealing release hold",
+        "Stage 6 release blockers",
+        "Product Definition DRAWING_RELEASE_READY"
+      ]
+    }
+  ],
+  "policy": {
+    "release_gates_are_sequential": true,
+    "independent_execution_may_run_in_parallel_only_when_its_own_upstream_inputs_are_released": true,
+    "center_is_not_authority": true,
+    "drawing_is_not_allowed_to_define_missing_engineering_requirements": true
+  }
+}

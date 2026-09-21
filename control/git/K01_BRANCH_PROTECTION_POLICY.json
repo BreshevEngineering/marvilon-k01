@@ -1,0 +1,11 @@
+{
+  "schema": "k01.branch_protection.policy.v3",
+  "generated_utc": "2026-09-08T18:31:45.568921+00:00",
+  "status": "CHECKS_DEFINED_NOT_YET_CONFIRMED_ENABLED_IN_GITHUB",
+  "target_branch": "main",
+  "required_checks": [
+    "K01 governance tests",
+    "K01 repository/change guard"
+  ],
+  "release_rule": "Class A promotion/release requires protected main and passing required checks."
+}

@@ -1,15 +1,15 @@
-﻿{
-    "schema":  "k01.workpackage_closeout.v1",
-    "id":  "T03",
-    "title":  "Pilot tolerance chain + P006 service drive",
-    "status":  "PASS_T03",
-    "engineering_definition":  "PASS",
-    "cad_implementation":  "PASS",
-    "material":  "AISI 316L / EN 1.4404",
-    "evidence":  [
-                     "reports/cad/current/K01_GATE04E_P006_SERVICE_BUILD.json",
-                     "reports/cad/current/K01_GATE04E_P006_SERVICE_VERIFY.json",
-                     "reports/bom/K01_BOM_RECONCILIATION_study_c2r1.json"
-                 ],
-    "residual_to_T06":  "Repeated service-cycle / galling qualification"
+{
+  "schema": "k01.workpackage_closeout.v1",
+  "id": "T03",
+  "title": "Pilot tolerance chain + P006 service drive",
+  "status": "PASS_T03",
+  "engineering_definition": "PASS",
+  "cad_implementation": "PASS",
+  "material": "AISI 316L / EN 1.4404",
+  "evidence": [
+    "evidence/immutable/38e6c5e584cc6eaa2726edc68288f5839c254c3adee6e364e98b465c6b414aca__K01_GATE04E_P006_SERVICE_BUILD.json",
+    "evidence/immutable/4df44ac4ac44a38203bf0036efe7f4ba2dec2793d4817660e97f4dd49bb33538__K01_GATE04E_P006_SERVICE_VERIFY.json",
+    "evidence/immutable/a8ba068f3edb7ab9e9b55fc4353447c089dbd48a8b38a04e35c25022f4f0551f__K01_BOM_RECONCILIATION_study_c2r1.json"
+  ],
+  "residual_to_T06": "Repeated service-cycle / galling qualification"
 }

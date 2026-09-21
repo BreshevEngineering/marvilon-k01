@@ -1,29 +1,26 @@
 # K01 P016 → Long Run — professional installation baseline (Datum C v2)
 
+> **EDR-023 implementation update (2026-09-09):** the manufacturing/installation logic below remains applicable,
+> but the earlier radial-slot implementation detail is superseded by the current Gate04B v7 baseline:
+> relieved/diamond P017 + P003 Ø3.02 round mating hole. See `control/decisions/EDR-023_DATUM_C_KINEMATIC_BASELINE.json`.
+
 ## Kinematic locating hierarchy
 
-A — final machined metal-to-metal mating face.  
-B — final Ø10 H7 pilot-bore axis.  
-C — one peripheral pin acting against a **radial slot** in P003.
+A — final machined metal-to-metal mating face.
+B — final Ø10 H7 pilot-bore axis.
+C — one peripheral **relieved/diamond K01-P-017 locator**. P017 is pressed into P016 and engages the P003 Ø3.02 +0.01/0 round THRU mating hole. Radial relief is carried by P017; the P003 hole is round.
 
-A + B already establish the axial position and transverse axis of K01. After A/B
-engagement the only remaining rigid-body degree of freedom is rotation around B.
-Therefore C shall constrain only the tangential direction.
+A + B establish axial position and the transverse axis. After A/B engagement the only remaining rigid-body degree of freedom is rotation about B. C therefore removes only that clocking DOF.
 
-A round peripheral pin in a second round hole would redundantly constrain radial
-position already defined by B and can bind from pitch-radius tolerances. The
-professional baseline is therefore:
+A second fully round peripheral locator would redundantly constrain pitch radius already located by B and may bind under independent machining errors. The accepted EDR-023 implementation avoids that redundancy by using a relieved/diamond P017 locator:
 
-- P016: Ø3 H7 × 4.0 blind pin hole at R12 / 0°;
-- P017: Ø3 p6 × 6.0 316L clocking pin, pressed 4.0 mm into P016;
-- P003: radial slot, width 3.02 +0.01/0, overall length 4.00 mm, THRU flange,
-  centered at R12 / 0°;
-- P017 protrusion above Datum A: 2.0 mm.
+- P016: Ø3 H7 × 4.0 blind press-pin hole at R12 and the pattern-derived 30° free-gap midpoint;
+- P017: Ø3 p6 × 4.0 press shank, 6.0 mm overall, radial minor 2.80 ±0.02 mm, tangential major 3.00 -0.01/0 mm; material baseline AISI 316L / EN 1.4404, native material-card assignment OPEN;
+- P003: Ø3.02 +0.01/0 round mating hole, THRU, on the same Datum-C axis;
+- P017 protrusion above Datum A: 2.0 mm;
+- 3×M4 fasteners: clamp only; they do not establish A, B or C.
 
-The slot long axis is radial to Datum B. Its width establishes clocking; its
-radial length removes the redundant radial constraint.
-
-The 3×M4 fasteners clamp only. They do not establish A, B, or C.
+The earlier P003 radial-slot implementation is superseded design history only.
 
 ## P016-to-Long-Run manufacturing route
 
@@ -40,7 +37,7 @@ Preferred sequence:
 5. Establish the actual Ø20 channel axis.
 6. Finish-machine Datum A.
 7. Finish-machine/ream Ø10 H7 Datum B relative to the actual channel axis.
-8. Finish the P016 Ø3 H7 pin hole at R12/0° and the 3×M4 pattern in the same
+8. Finish the P016 Ø3 H7 pin hole at R12 / the pattern-derived 30° free-gap midpoint and the 3×M4 pattern in the same
    controlled coordinate system.
 9. Install P017 only after machining/inspection.
 10. Machine/drill Ø6 passage through boss/Long Run wall in the controlled setup

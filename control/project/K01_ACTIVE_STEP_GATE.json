@@ -1,0 +1,29 @@
+{
+  "schema": "k01.active_step_gate.v3",
+  "state_epoch": "K01-SE-fccd982b0c077a50",
+  "generated_utc": "2026-09-20T09:27:04.560281+00:00",
+  "step_id": "K01-STEP-J2-T05-LOCAL-CONTACT-FEA",
+  "active_line": "T05 LOCAL CONTACT / SEPARATION VERIFICATION",
+  "checkpoint_id": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+  "intent": "K01-NA-T05-J2-LOCAL-FEA",
+  "intent_text": "Execute T05 local J2 contact/separation FEA on the frozen final C2R1 P003/P007 geometry. Run 200 and 300 N preload per screw, seal-reaction sensitivity 0/300/600 N, +0.20 bar pressure, no-penetration metal contact, local mesh <=0.20 mm at fastener/gland/pilot/flange-root regions, then refine the critical case. Report P003/P007 von Mises stress, maximum face separation, contact pressure, bolt axial force and J2 datum-face displacement. Do not mutate CAD geometry. If LC2 with 600 N seal reaction passes, retain OD33; otherwise trigger local J2 redesign.",
+  "mutation_authorized": false,
+  "mutation_scope": "READ_ONLY_UNTIL_EXPLICIT_PREFLIGHT",
+  "result_on_pass": "PASS_STEP_IDENTIFIED__MUTATION_NOT_AUTHORIZED",
+  "required_files": [],
+  "impact_declarations": {
+    "requirements": "Reassess before mutation.",
+    "materials": "Reassess before mutation.",
+    "bom": "Reassess before mutation.",
+    "dimxpert_drawings": "Reassess before mutation.",
+    "inspection": "Reassess before mutation.",
+    "dependencies": "Reassess before mutation.",
+    "technical_filter": "Reassess before mutation.",
+    "rollback": "Reassess before mutation.",
+    "evidence": "Reassess before mutation."
+  },
+  "source_state_fingerprint": "fccd982b0c077a50e669e7fb8d1fa80b834326f7b16c7bff14ae1ba519023cfc",
+  "current_lifecycle_level": "L5",
+  "active_blocker": "J2-T05-LOCAL-CONTACT-FEA",
+  "expected_closure": "PASS_T05_LOCAL_CONTACT_FEA__J2_GEOMETRY_RETAINED_OR_REDESIGN_TRIGGERED"
+}

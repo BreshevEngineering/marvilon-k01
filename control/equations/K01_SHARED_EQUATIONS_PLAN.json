@@ -1,0 +1,8 @@
+{
+  "schema": "k01_shared_equations_plan",
+  "generated_utc": "2026-09-09T08:32:11.448133+00:00",
+  "status": "READY_FOR_DIMENSION_BINDING",
+  "external_file": "D:\\Marvilon\\K01\\cad\\equations\\K01_SHARED_EQUATIONS.txt",
+  "binding_status": "NOT_LINKED",
+  "binding_rule": "Do not bind by nominal value alone. Use post-migration semantic feature/dimension identity and verify each link."
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "k01.module_completion_execution_plan.v1",
+  "generated_utc": "2026-09-18T19:50:06.474460+00:00",
+  "goal": "K01-A-001 CALIBRATION MODULE DESIGN FREEZE -> L6 Candidate TPD",
+  "wip_rule": "Exactly one ACTIVE_NOW. Externally blocked work moves to WAITING_EXTERNAL and does not stop independent executable closure fronts.",
+  "current_active": {
+    "id": "J2-T05-LOCAL-CONTACT-FEA",
+    "object": "K01-J2 P003-P007 SERVICE JOINT",
+    "status": "ACTIVE_NOW",
+    "closure": "PASS_T05_LOCAL_CONTACT_FEA__J2_GEOMETRY_RETAINED_OR_REDESIGN_TRIGGERED"
+  },
+  "analysis_status": {
+    "CFD": "PARTIAL_CURRENT_EVIDENCE — OUT=0 mm controlled PASS; final canonical OUT/MID/IN envelope still needs closure/confirmation",
+    "FEA_GLOBAL_P007": "PASS_ENGINEERING_SCREEN — T07A static + buckling; do not rerun without stale trigger",
+    "FEA_LOCAL_J2": "OPEN — T05 READY_TO_RUN; active now",
+    "FEM_INDEPENDENT": "OPEN — CalculiX not run; face-role/mesh/bolt equivalence/toolchain blockers remain",
+    "FEMM": "PASS_NUMERICAL_DESIGN_CANDIDATE — rerun/re-adjudicate after P015/B001 design-spec freeze only if inputs change"
+  },
+  "bom_status": {
+    "state": "HOLD_NOT_RELEASE_READY",
+    "modeled_occurrences": 14,
+    "ebom_items": 16,
+    "mbom_items": 17,
+    "hard_open_nonmodeled": [
+      "NM-J2-SEAL",
+      "NM-J2-CLAMP-SCREW",
+      "NM-J2-FASTENER-PROCESS"
+    ],
+    "design_definition_gaps": [
+      "K01-B-001",
+      "K01-P-014",
+      "K01-P-015",
+      "K01-P-004 external dependency",
+      "K01-P-013 retention qualification",
+      "K01-P-016 production compatibility/process"
+    ]
+  },
+  "ordered_closure_fronts": [
+    {
+      "order": 1,
+      "id": "T05",
+      "title": "J2 local contact/separation FEA",
+      "timing": "ACTIVE_NOW"
+    },
+    {
+      "order": 2,
+      "id": "P014",
+      "title": "Freeze P014 material + retention definition",
+      "timing": "NEXT_AFTER_T05"
+    },
+    {
+      "order": 3,
+      "id": "P015_B001",
+      "title": "Freeze P015 bobbin/winding/lead/driver design spec and B001 design magnetic spec",
+      "timing": "AFTER_P014"
+    },
+    {
+      "order": 4,
+      "id": "CFD_FINAL",
+      "title": "Close final CFD OUT/MID/IN gas-force envelope on frozen geometry",
+      "timing": "AFTER_GEOMETRY_INPUT_FREEZE"
+    },
+    {
+      "order": 5,
+      "id": "FEMM_ADJ",
+      "title": "Re-adjudicate passed FEMM numerical candidate against frozen P015/B001 inputs; rerun only if stale",
+      "timing": "AFTER_P015_B001"
+    },
+    {
+      "order": 6,
+      "id": "FEM_CCX",
+      "title": "Independent structural FEM/CalculiX cross-check or explicit controlled waiver",
+      "timing": "VERIFICATION_FRONT"
+    },
+    {
+      "order": 7,
+      "id": "BOM",
+      "title": "Close engineering EBOM/MBOM, materials, make/buy, purchased seal/screw/process rows and revisions",
+      "timing": "AFTER_COMPONENT_PROCESS_DECISIONS"
+    },
+    {
+      "order": 8,
+      "id": "NODE_REVIEW",
+      "title": "Systematic all-parts/all-joints Technical Filter and interface closure",
+      "timing": "BEFORE_L6"
+    },
+    {
+      "order": 9,
+      "id": "L6",
+      "title": "Build K01-A-001 Candidate TPD package",
+      "timing": "EXIT_L5"
+    }
+  ],
+  "waiting_external": [
+    "P004-EXTERNAL-EVIDENCE-ACQUISITION — physical/FAI/metrology evidence; K01-P-004 remains OPEN",
+    "K01-D-006 USER-CONTROLLED DRAWING FINALIZATION",
+    "P004/P003/P014 numeric production tolerance split — supplier/FAI/metrology capability evidence",
+    "P004 production lot/stock CoC and supplier process effectivity",
+    "P004/P001 guide numeric acceptance — stakeholder/system requirement or controlled characterization tied to acceptance basis",
+    "P004/P001 guide production tolerance split — P001/P004 process + metrology capability",
+    "P004 EDR-052 physical evidence data package",
+    "controlled stakeholder/system guide-repeatability acceptance if available",
+    "P004/P001/P003/P014 manufacturing/metrology capability and material/process traceability"
+  ],
+  "do_not_restart_without_stale": [
+    "T07A P007 global static/buckling",
+    "FEMM passed numerical candidate",
+    "Drawing System",
+    "Center development",
+    "closed EDRs"
+  ]
+}

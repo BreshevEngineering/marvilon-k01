@@ -8,3 +8,4 @@
 {"schema":"k01_event_v1","time":"2026-09-05T09:00:46.4149537+03:00","type":"TASK_STATUS_CHANGED","task_id":"T09","from":"\u003cNEW\u003e","to":"HOLD_DRAWING_RELEASE","active_design":"Gate04D-C2R1"}
 {"schema":"k01_event_v1","time":"2026-09-05T09:00:46.4149537+03:00","type":"TASK_STATUS_CHANGED","task_id":"T10","from":"\u003cNEW\u003e","to":"HOLD_INPUT_OR_TEST","active_design":"Gate04D-C2R1"}
 {"schema":"k01_event_v1","time":"2026-09-05T09:00:46.4149537+03:00","type":"TASK_STATUS_CHANGED","task_id":"T11","from":"\u003cNEW\u003e","to":"HOLD","active_design":"Gate04D-C2R1"}
+{"schema":"k01_event_v1","time":"2026-09-09T10:44:12.5780552+03:00","type":"TASK_STATUS_CHANGED","task_id":"T03","from":"ENGINEERING_PASS / CAD_OPEN","to":"PASS_CAD / MATERIAL_RELEASE_OPEN","active_design":"Gate04D-C2R1"}

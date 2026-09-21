@@ -2,7 +2,7 @@
   "schema": "k01_workpackage_v1",
   "task_id": "T07",
   "title": "Final P007 structural refresh",
-  "status": "RUN_REQUIRED_IN_SOLIDWORKS",
+  "status": "T07A_MANUAL_CONTROLLED_EXECUTABLE_NOW__T07B_DEPENDS_T04_T05_T06",
   "model": "K01-P-007 Gate04D-C2R1 final mechanical candidate",
   "material": "AISI 316L / EN 1.4404",
   "studies": [
@@ -39,5 +39,7 @@
     "buckling_lambda1": 1883.6,
     "status": "HISTORICAL_ONLY_NOT_RELEASE"
   },
-  "automation_policy": "Do not rewrite a new fragile Simulation API path unless existing SW Simulation interface is proven. The Center must import solver evidence and close T07 only after the current candidate reports are present."
+  "automation_policy": "MANUAL_CONTROLLED: use existing SolidWorks Simulation UI/studies for the two T07A cases. Do not create a new fragile Simulation API executor. Export controlled study/result evidence and verify afterward.",
+  "decision": "EDR-026_T07_PRESSURE_ONLY_SCOPE",
+  "scope_boundary": "T07A is global pressure-shell screening only. Local J2 preload/contact/seal compression/thread/galling/service-cycle work remains T07B and depends on T04/T05/T06."
 }

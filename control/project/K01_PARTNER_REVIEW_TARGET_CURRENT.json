@@ -1,0 +1,43 @@
+{
+  "schema": "k01.partner_review_target.current.v1",
+  "generated_utc": "2026-09-18T19:29:46.011498+00:00",
+  "source": "stakeholder/partner update communicated 2026-09-18",
+  "review_window": {
+    "earliest": "2026-10-02",
+    "latest": "2026-10-16",
+    "basis": "repeat meeting requested in 2-4 weeks from 2026-09-18"
+  },
+  "purpose": "Prepare defensible partner review evidence showing what is physically working, what is verified, what remains open, and the commercial cost/price structure without exposing unnecessary production-detail IP.",
+  "tracks": [
+    {
+      "id": "PRT-01",
+      "name": "Physical device",
+      "status": "ACTIVE_THROUGH_ENGINEERING_LIFECYCLE",
+      "required": "bring the physical instrument/device to a reviewable working state and close known technical deficiencies",
+      "authority_rule": "engineering status only; do not overstate screen/candidate as qualification"
+    },
+    {
+      "id": "PRT-02",
+      "name": "Tests and measurements",
+      "status": "ACTIVE_P004_EDR_052_FIRST_PACKAGE",
+      "required": "traceable test and measurement results with method, inputs, result, criterion/status and limitations",
+      "current_link": "reports/test/K01_P004_PHYSICAL_EVIDENCE_PLAN_CURRENT.json"
+    },
+    {
+      "id": "PRT-03",
+      "name": "3D and general schemes",
+      "status": "WAITING_DEPENDENCY__PARTNER_PACKAGE",
+      "required": "3D models and main general system/functional schemes without detailed manufacturing dimensions or unnecessary proprietary detail",
+      "boundary": "presentation/review artifact only; not engineering authority"
+    },
+    {
+      "id": "PRT-04",
+      "name": "Financial model",
+      "status": "LATER_COMMERCIAL_PACKAGE__NOT_CURRENT_ENGINEERING_WIP",
+      "required": "our cost/COGS, partner price, distributor price/margin structure and target end-customer price",
+      "dependency": "controlled BOM/cost basis and commercial margin assumptions"
+    }
+  ],
+  "wip_rule": "Does not create parallel engineering WIP. Current engineering WIP remains the Completion Frontier.",
+  "engineering_authority_rule": "This review-target file does not own engineering values; EDR/requirements/Product Definition/CAD/analysis/evidence remain authoritative."
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "k01.change_record.v3",
+  "id": "CHG-K01-D006-CANDIDATE-001",
+  "created_utc": "2026-09-08T18:31:47.071091+00:00",
+  "updated_utc": "2026-09-08T19:16:12.984774+00:00",
+  "status": "VERIFICATION_HOLD",
+  "class": "B",
+  "title": "Author K01-D-006 candidate drawing from controlled P007 definition",
+  "reason": "Create first manufacturing drawing exemplar without altering Gate04E authority geometry",
+  "planned_paths": [
+    "control/drawings/K01_D006_RELEASE_DEFINITION.json",
+    "control/product_definition/K01_P007_PRODUCT_CHARACTERISTICS.json",
+    "cad/candidates/K01-D-006/**"
+  ],
+  "planned_nodes": [
+    "P007_PMI_pilot",
+    "K01-D-006_candidate"
+  ],
+  "classification_evidence": [
+    {
+      "path": "control/drawings/K01_D006_RELEASE_DEFINITION.json",
+      "class": "B",
+      "reason": "candidate drawing/product definition"
+    },
+    {
+      "path": "control/product_definition/K01_P007_PRODUCT_CHARACTERISTICS.json",
+      "class": "B",
+      "reason": "candidate product definition / PMI"
+    },
+    {
+      "path": "cad/candidates/K01-D-006/**",
+      "class": "B",
+      "reason": "candidate geometry"
+    }
+  ],
+  "requirements": [],
+  "rationale": null,
+  "verification_plan": [
+    "candidate Save/Close/Reopen",
+    "drawing lint",
+    "PDF generation",
+    "visual QA",
+    "geometry hash invariant"
+  ],
+  "revision_action": null,
+  "impact_status": "PASS_PRECHANGE",
+  "impact_report": "control/change/impact/CHG-K01-D006-CANDIDATE-001_IMPACT.json",
+  "implementation_status": "COMPLETE",
+  "verification_status": "HOLD_VISUAL_QA_AND_RELEASE_SPECS",
+  "verification_evidence": [
+    "reports/cad/d006_candidate/K01_D006_CANDIDATE_VERIFY_CURRENT.json"
+  ],
+  "promotion_status": "NOT_REQUESTED",
+  "promotion_decision": null
+}

@@ -14,14 +14,14 @@
     {
         "id":  "T03",
         "name":  "Tolerance chain + P006 service drive",
-        "status":  "ENGINEERING_PASS / CAD_OPEN",
+        "status":  "PASS_CAD / MATERIAL_RELEASE_OPEN",
         "why":  "H9/h9 and fastener-position stacks are defined; T03 passes its CAD scope after the P006 candidate and full C2R1+P006 assembly verification pass. P006 production material remains a separate product-release hold.",
         "action":  "RUN_P006_SERVICE",
         "manual":  false,
         "depends_on":  [
                            "T02"
                        ],
-        "ready":  true
+        "ready":  false
     },
     {
         "id":  "T04",

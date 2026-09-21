@@ -1,0 +1,213 @@
+{
+  "schema": "k01.engineering_execution_contract.current.v15",
+  "project": "K01",
+  "purpose": "Executable stage-entry/feedback contract. Prevents work from jumping ahead, conflating requirements with derived loads, losing datum/measurement/configuration semantics, or silently correcting upstream design from downstream findings.",
+  "supersedes_for_current_use": "control/project/K01_ENGINEERING_EXECUTION_CONTRACT_v1.json",
+  "stages": [
+    {
+      "id": "S0_REQUIREMENT_INTERFACE",
+      "entry": "need/problem exists",
+      "exit": "requirement/interface envelope explicit with acceptance or explicit OPEN state"
+    },
+    {
+      "id": "S0A_REQUIREMENT_ALLOCATION",
+      "entry": "S0 requirement/interface exists",
+      "exit": "responsibility allocated to controlled system/subsystem/interface/part/characteristic targets; share/budget or complementary responsibility explicit"
+    },
+    {
+      "id": "S1_ENGINEERING_DECISION",
+      "entry": "S0/S0A sufficient for decision",
+      "exit": "selected concept/alternative rationale, technical-filter disposition and affected interface architecture recorded"
+    },
+    {
+      "id": "S1A_DERIVED_INPUTS",
+      "entry": "decision/calculation assumptions identified",
+      "exit": "derived loads/limits/screening inputs have stable IDs, quantity kind, derivation/source chain, status and consumers; requirements/assumptions remain distinguishable"
+    },
+    {
+      "id": "S1B_MANUFACTURING_SUPPLY_STRATEGY",
+      "entry": "candidate concept exists",
+      "exit": "route alternatives, supplier/process capability needs, inspectability and route-selection status explicit; process-dependent release semantics blocked while route OPEN"
+    },
+    {
+      "id": "S2_PRODUCT_DEFINITION",
+      "entry": "S1/S1A/S1B adequate for characteristic definition",
+      "exit": "stable characteristic IDs define nominal/requirement, variation semantics, datum/reference system, measurement condition, material/surface/process, inspection strategy, configuration/effectivity and CONTROLLED/PARTIAL/OPEN state"
+    },
+    {
+      "id": "S3_CAD_BINDING_MBD",
+      "entry": "S2 candidate/PMI gate as applicable",
+      "exit": "deterministic CAD binding + native PMI/annotation semantic readback + required binding-invariance level PASS or explicit HOLD"
+    },
+    {
+      "id": "S4A_PHYSICS_ANALYSIS",
+      "entry": "controlled geometry/material/load/derived-input state available",
+      "exit": "strength/thermal/magnetic/flow/contact/etc behavior evidence verified against explicit cases and source fingerprints"
+    },
+    {
+      "id": "S4B_VARIATION_CAPABILITY",
+      "entry": "characteristic/datum/measurement/manufacturing context available",
+      "exit": "tolerance stacks, variation, process capability and inspectability evidence verify assigned variation semantics or return feedback"
+    },
+    {
+      "id": "S4C_COMPILED_PRODUCT_DEFINITION",
+      "entry": "authoritative characteristic context and applicable S3/S4 evidence states available",
+      "exit": "compiled Product Definition plus domain-specific fingerprints/slices generated; release blockers explicit"
+    },
+    {
+      "id": "S5_DRAWING_PROJECTION_QA",
+      "entry": "DRAWING_CANDIDATE_READY PASS",
+      "exit": "SLDDRW projects only compiled controlled semantics/OPEN states; semantic QA PASS; visual QA separately recorded"
+    },
+    {
+      "id": "S6_INSPECTION_REALIZATION",
+      "entry": "inspection strategy defined in S2",
+      "exit": "released inspection plan/procedure plus actual inspection/test results are configuration-bound; failures generate feedback/NCR/EFR"
+    },
+    {
+      "id": "S7_CONFIGURATION_RELEASE_EFFECTIVITY",
+      "entry": "all release blockers closed; required S3/S4/S5/S6 verification PASS",
+      "exit": "released revision/baseline/effectivity + immutable product/drawing/process/inspection evidence"
+    }
+  ],
+  "feedback_loops": [
+    {
+      "from": "S2_PRODUCT_DEFINITION",
+      "to": "S1_ENGINEERING_DECISION",
+      "trigger": "definition conflict or impossible characteristic architecture",
+      "mechanism": "EFR -> EDR/change record -> pre-change impact"
+    },
+    {
+      "from": "S3_CAD_BINDING_MBD",
+      "to": "S1_ENGINEERING_DECISION",
+      "trigger": "binding cannot be made deterministic/invariant without changing design intent",
+      "mechanism": "EFR -> EDR/change record"
+    },
+    {
+      "from": "S4A_PHYSICS_ANALYSIS",
+      "to": "S1_ENGINEERING_DECISION",
+      "trigger": "behavior requirement fails",
+      "mechanism": "EFR -> alternative/decision reopen"
+    },
+    {
+      "from": "S4B_VARIATION_CAPABILITY",
+      "to": "S1_ENGINEERING_DECISION",
+      "trigger": "tolerance stack/process capability/inspectability fails",
+      "mechanism": "EFR -> tolerance/design/process decision reopen"
+    },
+    {
+      "from": "S5_DRAWING_PROJECTION_QA",
+      "to": "S2_PRODUCT_DEFINITION",
+      "trigger": "ambiguity or missing semantic definition detected",
+      "mechanism": "EFR; drawing itself may not invent fix"
+    },
+    {
+      "from": "S6_INSPECTION_REALIZATION",
+      "to": "S1_ENGINEERING_DECISION",
+      "trigger": "inspection impossible/noncapable or test failure reveals design/process issue",
+      "mechanism": "NCR/EFR -> change control"
+    }
+  ],
+  "hard_rules": [
+    "No requirement-to-characteristic trace without an allocation object when responsibility is part/interface-specific.",
+    "No derived load/value may masquerade as a requirement or characteristic; quantity identity and derivation are mandatory.",
+    "No S5 implementation may read raw legacy candidate_spec text as drawing authority.",
+    "No stage may silently convert OPEN into a numeric value.",
+    "No downstream finding may directly mutate an upstream characteristic; use EFR/change control and rerun impact.",
+    "Datum/reference system and measurement condition are Product Definition semantics, not drawing cosmetics.",
+    "PMI existence/save-reopen is not binding-invariance PASS; required L2/L3 qualification is separate.",
+    "Physics and variation/capability evidence are separate and become stale from different change domains.",
+    "Inspection strategy is defined with the characteristic in S2; S6 owns procedures/results, not late discovery of basic inspectability.",
+    "Manufacturing route/supplier capability must be controlled before release of process-dependent tolerances/roughness/joining notes.",
+    "Every released artifact/characteristic has configuration/effectivity; released history is immutable.",
+    "Every Class A/B change runs graph-based pre-change impact and shared-interface counterpart review before write.",
+    "Automatic stale propagation is allowed; automatic counterpart engineering mutation is prohibited.",
+    "Drawing authoring is claim-level; a single Cxx may target multiple annotation/drawing views.",
+    "Annotation-view role is Product Definition context. Concrete SOLIDWORKS annotation-view identity/orientation is D2/D3 evidence.",
+    "Release-native D5 uses only a capability-qualified DimXpert/PMI transport. K01 does not treat InsertModelAnnotations3 as proven DimXpert transport after prior zero-annotation evidence.",
+    "D6 is visual/layout-only and must prove semantic fingerprint invariance before/after human layout.",
+    "D7 verifies tolerance/GD&T provenance by characteristic/claim/model-carrier identity, not by comparing sets of numeric values.",
+    "General tolerance and default surface finish are conditional controlled policies; absence never authorizes template defaults.",
+    "DXF and STEP AP242 PMI are conditional D9 deliverables based on controlled delivery profile/capability, not universal outputs.",
+    "Drawing-family classification and view routing are presentation logic only; they may not create or modify Product Characteristics.",
+    "For reusable part families, D1 must consume the controlled drawing-family plan before claim-level authoring so view selection/routing is not rediscovered manually on every part.",
+    "D2 authoring order is Datum/DRF -> Size/Fit -> Location/Pattern -> GD&T -> Surface -> Material/Process unless a controlled exception is recorded.",
+    "Every active engineering discipline is registered in control/system/K01_ENGINEERING_DOMAIN_REGISTRY_CURRENT.json. A missing discipline/evidence family is an explicit OPEN gap with action, never silent omission. Whole-system coverage PASS is not release PASS.",
+    "D3 exemplar verification is layered: L1 save/reopen and L2 no-op rebuild may close the first exemplar assurance step; L3 perturb/restore requires an explicitly controlled benign parameter/delta and remains a release blocker until qualified.",
+    "D7 first-exemplar QA may pass a bounded authorized claim scope while release D7 remains HOLD. Exemplar PASS may not be promoted to manufacturing release by omission of configuration/effectivity, D6 fingerprint, D8 or open Product Definition claims.",
+    "A D7 finding is corrected on the same controlled exemplar when it is presentation-only. Any correction requiring nominal/tolerance/GD&T/datum/material/process semantics returns upstream through EFR/change control."
+  ],
+  "authorities": {
+    "requirement_allocation": "control/requirements/K01_REQUIREMENT_ALLOCATION_REGISTRY_v1.json",
+    "derived_inputs": "control/engineering/K01_DERIVED_ENGINEERING_INPUTS_v1.json",
+    "datum_systems": "control/product_definition/K01_DATUM_REFERENCE_SYSTEM_REGISTRY_v1.json",
+    "characteristic_context": "control/product_definition/K01_CHARACTERISTIC_CONTEXT_CURRENT.json",
+    "manufacturing_feasibility": "control/manufacturing/K01_P007_MANUFACTURING_FEASIBILITY_CURRENT.json",
+    "effectivity": "control/configuration/K01_EFFECTIVITY_POLICY_v1.json",
+    "binding_invariance": "control/verification/K01_CAD_BINDING_INVARIANCE_POLICY_v1.json",
+    "feedback": "control/change/K01_ENGINEERING_FEEDBACK_POLICY_v1.json",
+    "drawing_pipeline": "control/drawings/K01_DRAWING_PIPELINE_POLICY_CURRENT.json",
+    "drawing_delivery_capability": "control/drawings/K01_DRAWING_DELIVERY_CAPABILITY_CURRENT.json",
+    "drawing_family_rules": "control/drawings/K01_DRAWING_FAMILY_RULES_CURRENT.json",
+    "p007_drawing_family_binding": "control/drawings/K01_P007_DRAWING_FAMILY_BINDING_CURRENT.json",
+    "engineering_domain_registry": "control/system/K01_ENGINEERING_DOMAIN_REGISTRY_CURRENT.json",
+    "engineering_system_coverage": "evidence/immutable/bd8779037e5ce9bf009280207d4594e374146e44d8bfac3f7e8285da165225e9__K01_ENGINEERING_SYSTEM_COVERAGE_CURRENT.json"
+  },
+  "drawing_pipeline": {
+    "policy": "control/drawings/K01_DRAWING_PIPELINE_POLICY_CURRENT.json",
+    "architecture": "docs/architecture/K01_DRAWING_PIPELINE_D1_D9_v2.md",
+    "stages": [
+      "D1_AUTHORING_PLAN",
+      "D2_PMI_AUTHORING_MANUAL",
+      "D3_AUTHORING_VERIFY_BINDING_INVARIANCE",
+      "D4_DRAWING_NATIVE_DEFINITION_COMPILE",
+      "D5_DRAWING_GENERATION_IMPORT",
+      "D6_HUMAN_LAYOUT_ONLY",
+      "D7_SEMANTIC_QA",
+      "D8_VISUAL_QA",
+      "D9_EXPORT_BASELINE"
+    ],
+    "entry_from": "S4C_COMPILED_PRODUCT_DEFINITION",
+    "release_rule": "D9/release lane requires D3/D4/D7/D8 evidence. V10 design-review fallback projection cannot satisfy release-native D7 coverage.",
+    "feedback": "Any D3/D7/D8 semantic/inspectability/manufacturability issue that requires Product Definition change generates EFR and returns upstream; D6 cannot mutate semantics.",
+    "family_plan": "reports/drawing/current/K01-D-006_FAMILY_PLAN_CURRENT.json",
+    "family_rule": "D1 consumes V13 family plan; family logic selects representation/routing only, Product Definition remains semantic authority.",
+    "v15_assurance": {
+      "d3_command": "tools/commands/workflows_20260916/RUN_K01_D3_VERIFY_P007_V15.cmd",
+      "d7_command": "tools/commands/workflows_20260916/RUN_K01_D7_QA_D006_V15.cmd",
+      "sequence": "existing V12 exemplar -> D3 L1/L2 -> D7 first-exemplar semantic QA -> correct listed presentation defects on same SLDDRW -> D8 visual QA -> freeze first exemplar",
+      "prohibition": "No new drawing generator or manual release dimensions while this sequence is active."
+    }
+  },
+  "drawing_exemplar_rule": {
+    "manual_before_automation": true,
+    "claim_scoped_d2": true,
+    "source_mutation": "dedicated candidate copies only",
+    "release_boundary": "Exemplar PASS never overrides Product Definition, D3, D7, D8 or manufacturing-route HOLD.",
+    "learning_loop": "Exemplar actual SW2018 annotation-view/import/layout evidence is the specification for future D5 automation."
+  },
+  "parallel_release_lanes": {
+    "definition_spine": "requirements -> allocation -> decision/derived inputs -> Product Characteristics -> CAD/MBD -> compiled Product Definition",
+    "physics_evidence": [
+      "STRUCTURAL_FEA (SolidWorks Simulation + CalculiX/CCX)",
+      "MAGNETIC_FEMM",
+      "FLOW_CFD",
+      "THERMAL",
+      "PRESSURE_VACUUM_CONTAINMENT"
+    ],
+    "variation_capability": "tolerance stacks + process/measurement capability",
+    "product_structure": [
+      "EBOM",
+      "MBOM"
+    ],
+    "documentation": [
+      "drawing D1-D9",
+      "delivery/export"
+    ],
+    "verification": [
+      "inspection/metrology",
+      "test/bench evidence"
+    ],
+    "configuration": "effectivity + release baseline + immutable evidence"
+  }
+}

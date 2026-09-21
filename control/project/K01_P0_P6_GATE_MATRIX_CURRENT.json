@@ -1,0 +1,103 @@
+{
+  "schema": "k01.p0_p6_gate_matrix.v3",
+  "generated_utc": "DERIVED_AT_RUNTIME__V11_CONTROL_CHAIN",
+  "principle": "Human product-maturity view only. Dependency/freshness is computed by MEDTAS; evidence authority remains in domain records.",
+  "gates": {
+    "P0_CURRENT_BASELINE": {
+      "status": "PASS_BASELINE_02C_CANONICAL",
+      "items": {
+        "canonical_snapshot_mechanism": "PASS",
+        "requirements_registry": "PASS_REGISTRY_MECHANISM; OPEN_REQUIREMENTS_REMAIN_IN_P1",
+        "dependency_graph": "PASS_GRAPH_MECHANISM; RECOMPUTE_AFTER_PROMOTION",
+        "change_control": "PASS_FOUNDATION; ACTIVE_CHANGE_PREPARED",
+        "Baseline_02C_candidate_integration": "PASS",
+        "Baseline_02C_canonical_promotion": "PASS",
+        "post_promotion_snapshot": "PASS",
+        "post_promotion_stale_reduction": "PASS_MEDTAS_RECOMPUTED",
+        "post_promotion_EBOM": "PASS_STRUCTURE_PARITY_14_OCCURRENCES_P017_X1",
+        "technical_filter": "RULE_COVERAGE_PATCHED; DERIVED_MAP_REBUILD_REQUIRED",
+        "control_namespace_authority": "POLICY_INSTALLED; GUARD_REBUILD_REQUIRED",
+        "engineering_step_gate": "CONTRACT_INSTALLED; RUN_REQUIRED",
+        "handoff": "CANONICAL_COMMAND_run.cmd_handoff; OVERSIZED_REPORT_INDEXING_PATCHED; REBUILD_REQUIRED",
+        "repository_root_cleanup": "OPEN_UNTIL_run.cmd_root-cleanup-apply; repo_guard must PASS after controlled relocation/quarantine of transport/local root artefacts",
+        "prewrite_control_barrier": "OPEN_UNTIL_run.cmd_prewrite-check; refresh namespace/filter/requirements/handoff and active step gate before promotion dryrun"
+      }
+    },
+    "P1_FUNCTION_INTERFACES": {
+      "status": "HOLD_OPEN_ITEMS",
+      "items": {
+        "J1_Datum_C": "PASS_CANONICAL_BASELINE",
+        "REQ_K01_ACT_FORCE_001_numeric": "OPEN_RELEASE_BLOCKER",
+        "J2_screw_final_selection": "OPEN",
+        "seal_media_leak_definition": "OPEN_PARTIAL",
+        "containment_process": "OPEN"
+      }
+    },
+    "P2_ANALYSIS": {
+      "status": "HOLD_OPEN_ITEMS",
+      "items": {
+        "SW_linear_static": "PASS_SCREEN_ONLY",
+        "FEMM_normalized_method": "PASS_METHOD_ONLY",
+        "magnetic_physical_qualification": "OPEN",
+        "P007_external_pressure_buckling": "OPEN_NOT_EVIDENCED_CURRENT",
+        "independent_structural_reconciliation_or_waiver": "OPEN_NOT_EVIDENCED",
+        "thermal_service_applicability": "OPEN_PARTIAL"
+      }
+    },
+    "P3_VARIATION_MANUFACTURING": {
+      "status": "OPEN",
+      "items": {
+        "complete_tolerance_stack": "OPEN_PARTIAL_LOCAL_CHAINS",
+        "surface_finish_release_definition": "OPEN",
+        "process_capability": "OPEN",
+        "preload_torque_locking_galling": "OPEN",
+        "inspection_method": "OPEN",
+        "P017_native_material_assignment": "OPEN",
+        "product_definition_compiled_readiness": "V11 GUARD: drawing candidate may PASS from drawing slice while release remains HOLD until variation/capability/measurement/manufacturing/inspection/configuration closure",
+        "requirement_allocation": "V11_REGISTRY_INSTALLED; PARTIAL/OPEN allocations are release blockers",
+        "derived_input_identity": "V11_REGISTRY_INSTALLED; 300 N service normal force and 300 N/screw preload are distinct SCREENING/OPEN derived inputs",
+        "datum_measurement_context": "V11_CONTEXT_INSTALLED; J2 final DRF and thin-wall measurement conditions remain OPEN/PARTIAL",
+        "manufacturing_route_supplier_capability": "HOLD_ROUTE_AND_CAPABILITY_DECISION"
+      }
+    },
+    "P4_CANDIDATE_TPD": {
+      "status": "PARTIAL_HOLD",
+      "items": {
+        "K01_D006_P007": "V10 BASE PASS 9/9 semantic projection; visual QA pending; V11 drawing-slice fingerprint controls staleness",
+        "P007_DimXpert_authoring": "PARTIAL: C02/C05 proven semantic authoring path; expand only from controlled compiled characteristics",
+        "K01_D003_P003": "REFRESH_AFTER_BASELINE_02C_PROMOTION",
+        "K01_D005": "OPEN_MBD_RELEASE_DEFINITION",
+        "K01_D012_A001": "REFRESH_AFTER_14_OCCURRENCE_PROMOTION",
+        "EBOM": "HOLD; 14 occurrences; P017 x1",
+        "MBOM": "HOLD; release/process OPENs preserved"
+      }
+    },
+    "P5_VERIFICATION": {
+      "status": "PARTIAL_HOLD",
+      "items": {
+        "Datum_C_CAD_integration": "PASS",
+        "drawing_semantic_lint_visual_QA": "OPEN_PARTIAL",
+        "DimXpert_characteristic_binding": "OPEN_PARTIAL",
+        "inspection_traceability": "OPEN",
+        "leak_test": "OPEN",
+        "magnetic_bench": "OPEN",
+        "independent_structural_crosscheck": "OPEN",
+        "FEMM_bench_correlation": "OPEN",
+        "CAD_binding_invariance": "OPEN_PARTIAL: save/reopen PMI persistence is not enough; L2 no-op rebuild and L3 perturb/restore required where critical",
+        "engineering_chain_guard": "V11 REQUIRED: allocation/derived/context/feedback/domain-slice structural control"
+      }
+    },
+    "P6_RELEASE": {
+      "status": "HOLD",
+      "items": {
+        "zero_unresolved_release_blockers": "NOT_MET",
+        "branch_protection": "DEFINED_NOT_EVIDENCED_ENABLED",
+        "final_product_evidence": "OPEN",
+        "R01": "DEFERRED",
+        "configuration_effectivity": "OPEN_RELEASE_REVISION_AND_EFFECTIVITY",
+        "manufacturing_supplier_feasibility": "OPEN_ROUTE/CAPABILITY"
+      }
+    }
+  },
+  "drawing_exemplar_rule": "P007/K01-D-006 remains exemplar. V10 semantic base PASS is derivative of V11 drawing slice; visual QA cannot create semantics. Release requires V11 chain closure, binding invariance, variation/capability, inspection realization, manufacturing feasibility and configuration/effectivity."
+}

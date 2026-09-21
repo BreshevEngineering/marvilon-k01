@@ -1,0 +1,23 @@
+{
+  "schema": "k01.drawing_build_adapter_registry.v1",
+  "status": "CONTROLLED_CANDIDATE",
+  "policy": "BUILD API is a stable facade over registered adapters; proven builder logic is not rewritten.",
+  "adapters": [
+    {
+      "id": "K01_DRAWING_SYSTEM_V1",
+      "engine_source": "cad_api\\solidworks_2018_proven\\current\\K01_DRAWING_SYSTEM_V1\\K01DrawingSystemV1.cs",
+      "state": "EXISTING_ENGINE__ADAPTER_CONTRACT_REQUIRED",
+      "scope": "general K01 drawing-system engine"
+    },
+    {
+      "id": "K01_D006_BASE_DRAWING_V7",
+      "launcher": "cad_api\\solidworks_2018_proven\\RUN_K01_D006_BASE_DRAWING_V7.cmd",
+      "state": "EXISTING_ADAPTER"
+    },
+    {
+      "id": "K01_D006_PROFESSIONAL_CURRENT",
+      "launcher": "cad_api\\solidworks_2018_proven\\RUN_K01_D006_PROFESSIONAL_CURRENT.cmd",
+      "state": "EXISTING_ADAPTER"
+    }
+  ]
+}

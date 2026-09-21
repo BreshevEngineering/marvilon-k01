@@ -1,0 +1,288 @@
+{
+  "schema": "k01.s2.step02.quarantine_record.v1",
+  "generated_utc": "2026-09-21T10:50:57.092380+00:00",
+  "count": 40,
+  "baseline_quarantine_count": 0,
+  "items": [
+    {
+      "path": "README_CURRENT.md",
+      "reason": "legacy root compatibility entry excluded from recovery baseline",
+      "source_exists": true,
+      "sha256": "d0b9eb56096c205ad65ef699cbc35ba86fa049e1df9a020fef795b8093203b20",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": ".github/workflows/k01-governance.yml",
+      "reason": "obsolete pre-trusted governance workflow",
+      "source_exists": true,
+      "sha256": "2eb555713869cc245b0856a240371b565da5e73e324effd8111b61657465d14d",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "APPLY_INSTRUCTIONS.md",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "9763dfe32aefef8eb741db3424feb0a97f52347df9c65d92e0de8bc0b2093718",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "APPLY_PATCH.ps1",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "29f608c4e79ae1c743925cf5666b0c3f63d95a4129249a009f619fe78b0798bf",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "AUTHORIZE_K01_ACTIVE_WORKPACK_RC1.cmd",
+      "reason": "legacy root compatibility entry excluded from recovery baseline",
+      "source_exists": true,
+      "sha256": "883f6d93f2ade8342adc4988840795210c345b576828a34abc6920491ae882aa",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "D006",
+      "reason": "adjudicated:QUARANTINE_ROOT_ORPHAN",
+      "source_exists": true,
+      "sha256": "3c56f49cfa3b9c526be032bcd4656e302d31a77797add2ac363db19234129a32",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "Drawing",
+      "reason": "adjudicated:QUARANTINE_ROOT_ORPHAN",
+      "source_exists": true,
+      "sha256": "b79aab677169871a8c6345ea4eafbf6ff947b4feb29950a712a6c9e8e9b907d2",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "K01_CONTROL_DIAGNOSIS_20260919.md",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "70155e04060ae997e4d5ecec1eba56d9149a4be349acc0834257e4a379d60e82",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "K01_OPERATOR_CONTROL_CARD_RC1.md",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "7619d4ba5009881a70347247b25e871ef596b5075c33ece125e13aaef16b6b0f",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "K01_T05_LOCAL_FEA_EXECUTION_CARD.md",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "740100846b8061a06288b340db094bd1594556b5e62c3d1ae7c16ac92e3c3cdf",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "P004",
+      "reason": "adjudicated:QUARANTINE_ROOT_ORPHAN",
+      "source_exists": true,
+      "sha256": "8453e3340dba0145bebe08afc4d7cfb8c20f8b7a4dd10db17494e570760a7805",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "README_ONE_CLICK_FIX.txt",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "8b2fa75e0c9469aee766d1a6f123e8db070ab55d86ab29bdafd66d12335e89b6",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "README_RUN_64.txt",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "ddb41edf94a3777e361b8d2db076225603d3b8b99ef92ee8c67ea03191d43384",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "README_RUN_ORDER.txt",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "c4436c7ba069506d7f85c08c84a3deb1446c70b636735850242b15ed164659ba",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "README_UTF8_FIX_AND_NEXT.txt",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "bc5beaaab03caf69355cbb6c52237010040f91fcda87c51334d1b7554a63ce6d",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "ROLLBACK_PATCH.ps1",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "93df19e78e8929cf72e0c0ff66638a1e9cea4c92755fb895712a50d96773c9db",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_54R_60_P004_L5_SEQUENCE.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "c93dd2cb3e38679526b784f9a8a91d76f2bc408ab18c2a92ace01711cfd7f5c6",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_54R_61_P004_L5_ONE_CLICK.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "4df24da02bd38db45e48ef712f293d24bb619c0ebeb3d9224c96b7c9f271520f",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_54R_62_P004_L5_ONE_CLICK.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "0a0011305b4fb9012f7a8c42417f8e7470fd1ad1742a7b73654033f4d0a7d26b",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_54R_62_P004_L5_PYFIX_ONE_CLICK.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "c93dd2cb3e38679526b784f9a8a91d76f2bc408ab18c2a92ace01711cfd7f5c6",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_54R_63_P004_L5_UTF8_ONE_CLICK.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "15d5daf8d0308dd9a001dce6d443004fed8cd52ff37a654db33c893ce5829899",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_54R_RECONCILE_AND_CLOSE_P004_TOLERANCE.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "67107803cd942dbf8a8a13f6a345671c515b34647adf0093c301193c3f47329f",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_55_CLOSE_P004_CAPABILITY_BOUNDARY.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "d66af350af90ec1f3cca4cd80edb54975e9bdf2ddf7eb6894d05cf36da18ca3e",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_56_CLOSE_P004_INSPECTION_PROCEDURE.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "c4e9f01cb1fae272f0f10286e65d1b6160ae42279d1aad5f12a6b1090fa841db",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_57_CLOSE_P004_GUIDE_AUTHORITY_RECOVERY.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "96ae36b747ad6336a4956f7307d6b5b3cf6c46ae091351a42b1490df38b790bc",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_58_CLOSE_P004_EDGE_TREATMENT.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "5e523b85a5052e3842439c9db27b52280b5b86e9fbdae7e3cf960d04269fffb6",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_59_CLOSE_P004_RESIDUAL_GPS_SURFACE_BOUNDARY.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "9db6d782cd4f18d05dccb4264fdcd3033c7bb4376a9cbbd67f8204b710997e97",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_60_CLOSE_P004_PHYSICAL_EVIDENCE_PLAN.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "9cf3d566081c17e7d8f9729543e5c3017e5da4f7ba5a7b663075df18005048af",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_61_PREPARE_P004_EXTERNAL_EVIDENCE_INTAKE.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "0b54465e140b5d1d52fc394e18fd511b16a75899b48292f3d6426df1f82cdb76",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_64_ADVANCE_MODULE_FRONT_TO_T05.cmd",
+      "reason": "adjudicated:QUARANTINE_CLOSED_P004_ROOT_LAUNCHER",
+      "source_exists": true,
+      "sha256": "ce5f956e70a7982e4e7ab56a086df730e4898e9deb0862c4f52f8b5306c5e102",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_K01_ACTIVE_WORKPACK_GATE_RC1.cmd",
+      "reason": "legacy root compatibility entry excluded from recovery baseline",
+      "source_exists": true,
+      "sha256": "a2e26057472e80424c52a25d2f70905ee53fcb53abdb7f2aeaf55b1e31292607",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_K01_CONTROL_REGRESSION_RC1.cmd",
+      "reason": "legacy root compatibility entry excluded from recovery baseline",
+      "source_exists": true,
+      "sha256": "a10487c1e4907c807990bcf6844a83d2514c081c9d27a760c86190ad3735747f",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_K01_CONTROL_SYSTEM_RC1.cmd",
+      "reason": "legacy root compatibility entry excluded from recovery baseline",
+      "source_exists": true,
+      "sha256": "e2a1d99d1616173044578cae64edc72f3d0cfa17bac429ee623cb3c9bff60f64",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_K01_D003_DRAWING_SYSTEM_SECTION_HOTFIX.cmd",
+      "reason": "legacy root drawing runner",
+      "source_exists": true,
+      "sha256": "282ad6dbb7ff8f4e93bd1547eb9f3b286371a2fff6813712b3fc169feba9c5db",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_K01_D006_DRAWING_SYSTEM_V2.cmd",
+      "reason": "legacy root drawing runner",
+      "source_exists": true,
+      "sha256": "9a8059aeece43e283b6bd8beb5f1a37114df5a9702e3141a8997493518fd6665",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "RUN_K01_GLOBAL_PROJECT_STATE_SYNC_V3.cmd",
+      "reason": "legacy root compatibility entry excluded from recovery baseline",
+      "source_exists": true,
+      "sha256": "34b96775a76c6c88af3415c36b567f36dd3ce819dad1c588796af3592cefafd7",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "SET_K01_OPERATOR_LOCK_RC1.cmd",
+      "reason": "legacy root compatibility entry excluded from recovery baseline",
+      "source_exists": true,
+      "sha256": "a9df06d7223db486ce4390e1756b16fcb39d910c766d3a25ad6c7b12bbc62937",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "cad_api/solidworks_2018_proven/snapshots/20260911_163300/repo/cad_api/README_RUN_FIRST.txt",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "ff0ce21bdf01916fac589373d5cfdace4376f4d5d9ea600ee31d83aa8f6905bc",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "cad_api/solidworks_2018_proven/snapshots/20260911_163541/repo/cad_api/README_RUN_FIRST.txt",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "ff0ce21bdf01916fac589373d5cfdace4376f4d5d9ea600ee31d83aa8f6905bc",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    },
+    {
+      "path": "cad_api/solidworks_2018_proven/snapshots/20260911_174327/repo/cad_api/README_RUN_FIRST.txt",
+      "reason": "adjudicated:QUARANTINE_LOCAL_PATCH",
+      "source_exists": true,
+      "sha256": "ff0ce21bdf01916fac589373d5cfdace4376f4d5d9ea600ee31d83aa8f6905bc",
+      "resolution": "EXCLUDED_FROM_RECOVERY_BASELINE__SOURCE_DIRTY_MAIN_LEFT_READ_ONLY"
+    }
+  ]
+}
