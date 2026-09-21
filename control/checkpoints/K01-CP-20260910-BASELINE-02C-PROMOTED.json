@@ -1,0 +1,52 @@
+{
+  "schema": "k01.engineering_checkpoint.v1",
+  "checkpoint_id": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+  "created_utc": "2026-09-10T19:50:56.885106+00:00",
+  "active_line": "K01-BASELINE-02C",
+  "status": "CANONICAL_ENGINEERING_BASELINE_PROMOTED",
+  "maturity": "CANONICAL_ENGINEERING_BASELINE",
+  "evidence_state": "PASS",
+  "freshness": "RECOMPUTED_AFTER_PROMOTION",
+  "authority": "CANONICAL_DESIGN_AND_ANALYSIS",
+  "previous_checkpoint": "K01-CP-20260910-BASELINE-02C-DATUM-C-VERIFIED",
+  "cad": {
+    "assembly": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+    "sha256": "c829fac9c94ba94e1c6fc53dcb9f8afb2a91610673a0e727d59bd6fbbbfba82c",
+    "component_count": 14,
+    "p017_quantity": 1
+  },
+  "promotion_evidence": {
+    "apply": "reports/control/K01_BASELINE_02C_PROMOTION_APPLY_CURRENT.json",
+    "post_promotion_qa": "reports/cad/current/K01_BASELINE_02C_POST_PROMOTION_ASSEMBLY_QA.json",
+    "moving_group_pass": true,
+    "unexpected_interference_total": 0,
+    "p017_press_depth_mm": 4,
+    "p017_protrusion_mm": 2
+  },
+  "semantic_state": {
+    "state": "PASS",
+    "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939",
+    "artifact_hash": "8c0ed2962c689d29f3101e529cd527a2c670cacb0877950f20d4655d9136c089"
+  },
+  "snapshot_state": {
+    "state": "PASS",
+    "state_hash": "aa4afd7a28c5190e86d8100f87d1d356ba5504b351f77cefd632ac6140c710bc",
+    "artifact_hash": "b9ea671bf801baede918939fd4e5334d887e4284b7fb15f7794a6db55b5b0659"
+  },
+  "bom": {
+    "ebom_status": "HOLD",
+    "mbom_status": "HOLD",
+    "modeled_occurrences": 14,
+    "p017_quantity": 1
+  },
+  "materials": {
+    "P003": "AISI 316L / EN 1.4404 CONTROLLED",
+    "P016": "AISI 316L current CAD; production Long Run compatibility/weld route OPEN",
+    "P017": "AISI 316L / EN 1.4404 baseline; native material-card assignment OPEN"
+  },
+  "release": {
+    "R01": "NOT_RELEASED",
+    "note": "CP-P closes the canonical engineering-baseline transition only."
+  },
+  "next_transition": "P007_CANONICAL_REBIND_AND_PROFESSIONAL_DIMXPERT_PMI_AUTHORING"
+}

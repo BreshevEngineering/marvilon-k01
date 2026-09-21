@@ -1,0 +1,61 @@
+{
+  "schema": "k01.identity_freeze.verify.v1",
+  "generated_utc": "2026-09-09T08:45:41.504457+00:00",
+  "status": "PASS_IDENTITY_FREEZE_SEMANTIC_EQUIVALENCE",
+  "source_authority": {
+    "path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04e_p006_service\\verification\\K01-A-001_GATE04E_P006_SERVICE_VERIFY.SLDASM",
+    "sha256": "8059423b4fe1cb0bc384c5f7164eb92a7ad800bc0c79b2de7339f68e1d7489d4",
+    "expected_components": 13,
+    "expected_mates": 29,
+    "expected_mates_historical": 29,
+    "expected_mate_features": 29,
+    "expected_raw_semantic_mate_entries": 30
+  },
+  "canonical_assembly": {
+    "path": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+    "sha256": "a6bc1c6227075c2736a2383a73ecf2f95e109f7cbcfa34ef01ccf8bfa45cdd33"
+  },
+  "native_worker": {
+    "component_count": 13,
+    "suppressed_count": 0,
+    "stateful_component_name_count": 0,
+    "rebuild_return": "True",
+    "open_warning_code": "0",
+    "save_warning_code": "0",
+    "assembly_mass_kg": "0.20246941215927264",
+    "checkpoint": "D:\\Marvilon\\K01\\migration_checkpoints\\identity_freeze_20260909_112722"
+  },
+  "semantic_export": {
+    "before": "reports/cad/current/K01_A001_SEMANTIC_RAW_API_v1_4.json",
+    "after": "reports/cad/current/K01_A001_SEMANTIC_RAW_API_v2_0_IDENTITY_FREEZE.json",
+    "equivalence_pass": true,
+    "notes": [
+      "Source and canonical semantic signatures match.",
+      "30 raw entries = 1 MateGroup organizational entry + 29 actual mate features.",
+      "27 actual mate features active; 2 suppressed: Concentric5, Coincident5"
+    ],
+    "component_count": 13,
+    "mate_count": 30,
+    "raw_mate_entries_source": 30,
+    "raw_mate_entries_target": 30,
+    "mate_feature_count_source": 29,
+    "mate_feature_count_target": 29,
+    "active_mate_feature_count": 27,
+    "suppressed_mate_features": [
+      "Concentric5",
+      "Coincident5"
+    ]
+  },
+  "equations": {
+    "file": "D:\\Marvilon\\K01\\cad\\equations\\K01_SHARED_EQUATIONS.txt",
+    "status": "READY_FOR_DIMENSION_BINDING",
+    "linked": false
+  },
+  "next_active_checks": [
+    "Bind shared equations only by verified semantic dimension identities.",
+    "Run full mate/fully-defined/reference audit on canonical A001.",
+    "Run native interference detection in IN/MID/OUT.",
+    "Verify rear-side sequential installation path."
+  ],
+  "adjudication": "reports/cad/identity_freeze/K01_IDENTITY_FREEZE_ADJUDICATION_CURRENT.json"
+}

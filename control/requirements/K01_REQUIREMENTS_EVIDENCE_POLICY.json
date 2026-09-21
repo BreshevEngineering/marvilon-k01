@@ -1,0 +1,21 @@
+{
+  "schema": "k01.requirements_evidence_policy.v1",
+  "status": "ACTIVE_MIGRATION_POLICY",
+  "authority_registry": "control/requirements/requirements.json",
+  "evidence_registry_family": "control/project/K01_AUTHORITY_MAP_CURRENT.json::control_families.evidence_registry",
+  "principles": [
+    "A requirement has independent definition maturity and evidence coverage.",
+    "Registered evidence linkage does not by itself mean the requirement is qualified.",
+    "OPEN/PARTIAL/CANDIDATE release blockers remain blockers even if supporting evidence exists.",
+    "A solver/method qualification is supporting evidence unless it directly evaluates the released acceptance criterion on the released input/baseline envelope.",
+    "Physical qualification remains required where the verification method requires bench/inspection/leak testing."
+  ],
+  "target_schema": {
+    "supporting_evidence_ids": "method, model, literature, screening or intermediate evidence",
+    "qualifying_evidence_ids": "evidence that evaluates the released acceptance criterion on the applicable baseline/envelope",
+    "acceptance": "numeric or otherwise objectively decidable release criterion",
+    "verification_method": "required verification/qualification method"
+  },
+  "transitional_rule": "Existing evidence_ids is treated as registered linkage only. Do not infer qualifying status from it until explicit evidence roles are migrated.",
+  "current_priority_after_P0": "REQ-K01-ACT-FORCE-001: define released numeric acceptance first, then classify existing FEMM method evidence as supporting and later attach tolerance/temperature/driver/breakaway + bench evidence as qualifying."
+}

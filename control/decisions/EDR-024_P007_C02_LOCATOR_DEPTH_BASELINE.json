@@ -1,0 +1,32 @@
+{
+  "schema": "k01.engineering_decision.v1",
+  "id": "EDR-024_P007_C02_LOCATOR_DEPTH_BASELINE",
+  "generated_utc": "2026-09-11T08:51:00.264507+00:00",
+  "status": "PASS_DECISION",
+  "scope": "K01-P-007 / K01-D-006 C02 female locator bore depth and Datum-B size semantics",
+  "decision": "Use the canonical native P007 female Ø14.10 H7 locator-bore depth 2.00 mm as the nominal geometry for the current engineering baseline. Supersede the legacy 1.70 mm nominal depth candidate. P003 male pilot length remains 1.50 mm, giving 0.50 mm nominal bottom clearance. The P007 bore-depth tolerance remains OPEN and shall not be invented.",
+  "basis": [
+    "CP-P canonical Baseline-02C",
+    "fresh canonical CAD semantic geometry: P007 Ø14.10 cylindrical bore span 2.00 mm",
+    "controlled J2 design history: EDR-002 legacy candidate 1.70 mm / P003 male pilot 1.50 mm",
+    "REQ-K01-J2-LOC-001 requires Ø14.10 H7/g6 locating architecture and metal-face axial location but does not prescribe locator-bore depth"
+  ],
+  "technical_filter": {
+    "function": "P003 Ø14.10 g6 male pilot remains the radial locator; P007 Ø14.10 H7 female bore remains Datum-B feature",
+    "geometry": "canonical P007 contains a 2.00 mm cylindrical bore depth; P003 pilot nominal length remains 1.50 mm",
+    "fit_clearance": "nominal bottom clearance becomes 0.50 mm; positive clearance is preserved and axial location remains metal mating faces",
+    "requirements": "released J2 locating requirement controls H7/g6 pair and metal-face axial location, not the old 1.70 mm bore-depth candidate",
+    "tolerance": "bore-depth tolerance is still OPEN; worst-case non-bottoming must be proven later in the J2 tolerance stack",
+    "strength_analysis": "no native geometry is changed by this decision; current P007 structural/buckling refresh remains required on the canonical geometry",
+    "manufacturing": "2.00 mm nominal is simpler to retain than changing verified canonical CAD solely to match a legacy draft; capability and released tolerance remain OPEN",
+    "assembly_service": "larger nominal bottom clearance reduces pilot-bottoming sensitivity without changing 1.50 mm locating engagement",
+    "traceability": "EDR-024 supersedes only the 1.70 mm nominal-depth draft; it does not release the depth tolerance or drawing"
+  },
+  "material": "P007 AISI 316L / EN 1.4404 CONTROLLED; no material change",
+  "native_CAD_change": false,
+  "rejected_alternative": {
+    "value_mm": 1.7,
+    "prior_nominal_bottom_clearance_mm": 0.2,
+    "reason": "The 1.70 mm value is a verified-candidate/design-history value but is not a released requirement; current canonical CAD is 2.00 mm. Re-machining/re-authoring native geometry solely to recover 0.20 mm nominal bottom clearance adds change/stale impact without a demonstrated functional benefit. Release tolerance/non-bottoming proof remains a separate P3 task."
+  }
+}

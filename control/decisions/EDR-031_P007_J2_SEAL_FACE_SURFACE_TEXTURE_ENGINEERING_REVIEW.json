@@ -1,0 +1,56 @@
+{
+  "schema": "k01.engineering_decision.v1",
+  "decision_id": "EDR-031",
+  "date": "2026-09-14",
+  "subject": "P007 J2 seal-contact surface texture for K01-D-006 engineering review",
+  "status": "ACCEPT_ENGINEERING_REVIEW_CANDIDATE__RELEASE_CONDITIONAL",
+  "problem": "K01-D-006 requires a controlled surface-texture requirement on the P007 face contacted by the static J2 O-ring. The exact seal compound/media/leak qualification remains open.",
+  "requirements": [
+    "Static face O-ring J2 interface",
+    "Gas/vacuum containment service",
+    "Do not invent a global surface finish for non-functional surfaces"
+  ],
+  "accepted_option": {
+    "surface": "P007 J2 mating/seal-contact face (Datum-A functional plane)",
+    "parameter": "Ra",
+    "value_um_max": 0.8,
+    "drawing_scope": "ENGINEERING_REVIEW",
+    "release_condition": "Confirm against final seal product/compound, media/cleaning envelope and leak-test qualification before RELEASE_PASS."
+  },
+  "technical_filter": {
+    "function": "Static elastomer face seal against P007 mating face",
+    "manufacturing": "0.8 µm Ra is practical on a machined/finished 316L sealing face",
+    "inspection": "Profilometer / surface-texture instrument on accessible P007 sealing face",
+    "reliability": "Gas/vacuum sealing is sensitive to fine surface leakage paths",
+    "cost": "Chosen as a reasonable engineering-review limit without forcing 0.4 µm unless final leak qualification requires it"
+  },
+  "evidence": [
+    "Parker O-Ring Handbook ORD 5700: gas/vacuum O-ring sealing surfaces require smoother-than-normal finish; 16 RMS is common and 32 RMS has been used successfully.",
+    "32 microinch Ra is approximately 0.8 micrometre Ra."
+  ],
+  "rejected_options": [
+    {
+      "option": "Global Ra requirement on all P007 surfaces",
+      "why": "Not functionally justified and increases manufacturing cost."
+    },
+    {
+      "option": "Ra 0.4 µm mandatory now",
+      "why": "Potentially beneficial for vacuum but not yet justified by the still-open seal/media/leak requirement."
+    },
+    {
+      "option": "No surface-texture requirement",
+      "why": "Leaves a real sealing-interface design input undefined."
+    }
+  ],
+  "impact": [
+    "Adds a native surface-finish symbol to the engineering-review K01-D-006 on the J2 seal-contact face.",
+    "PDG-SURFACE-TEXTURE remains release-conditional until seal/media/leak closure.",
+    "No CAD geometry change."
+  ],
+  "tz_preflight": {
+    "directive": "K01-TZ-AI-OPERATING v1.0",
+    "goal_lock": "FULL K01-D-006 MANUFACTURING DRAWING",
+    "wip_limit": 1,
+    "product_evidence_automation": "This decision and the V2 drawing automation directly reduce work on the current deliverable."
+  }
+}

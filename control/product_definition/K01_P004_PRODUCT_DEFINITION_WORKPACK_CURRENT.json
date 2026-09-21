@@ -1,0 +1,122 @@
+{
+  "schema": "k01.p004.product_definition_workpack.current.v1",
+  "generated_utc": "2026-09-19T18:50:39.747189+00:00",
+  "status": "READ_ONLY_PREPARATION__NOT_READY",
+  "part_id": "K01-P-004",
+  "title": "Front Guide Bushing",
+  "native_identity": {
+    "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-004_Front_Guide_Bushing.SLDPRT",
+    "exists": true,
+    "sha256": "6c5644913ce7694a46ceb557a5616a70598c50355d06e6f537b8a92a7c1ca779"
+  },
+  "related_native": {
+    "P003": {
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-003_Cartridge_Body.SLDPRT",
+      "exists": true,
+      "sha256": "a8c175bcfc7db4e9f75c01af32aa31d3560e568e8644190563ce6efa3b736e82"
+    },
+    "P001": {
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-001_Calibration_Rod.SLDPRT",
+      "exists": true,
+      "sha256": "34184c4e5910f7128c8134aae01a9a4c06d465a2b690d1a7f302caca93a0580c"
+    },
+    "P014": {
+      "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-014_Front_Guide_Retaining_Ring.SLDPRT",
+      "exists": true,
+      "sha256": "2364e7ee9adaeb9f149dc4e0960aeed11d1805328968fc7909ae052b1eb0d24f"
+    }
+  },
+  "known_nominals": {
+    "OD_mm": 6.54,
+    "BORE_mm": 5.055,
+    "LENGTH_mm": 7.99
+  },
+  "material": {
+    "baseline": "TECAPEEK PVX black / Ensinger candidate baseline",
+    "release_state": "OPEN_PRODUCTION_GRADE_PROCESS_QUALIFICATION"
+  },
+  "functions": [
+    {
+      "id": "F01",
+      "text": "Radially guide P001 calibration rod."
+    },
+    {
+      "id": "F02",
+      "text": "Maintain controlled sliding clearance without binding."
+    },
+    {
+      "id": "F03",
+      "text": "Locate as a slip-fit bushing in P003 seat."
+    },
+    {
+      "id": "F04",
+      "text": "Be axially retained by P014 / housing stack without adhesive or preload."
+    },
+    {
+      "id": "F05",
+      "text": "Avoid binding across operating temperature/environment."
+    },
+    {
+      "id": "F06",
+      "text": "Remain manufacturable, inspectable and replaceable."
+    }
+  ],
+  "interfaces": [
+    {
+      "id": "IF-01",
+      "P004": "bore Ø5.055 nominal",
+      "mate": "P001 rod Ø5 nominal",
+      "function": "sliding guide",
+      "status": "REQUIREMENT_BAND_OPEN"
+    },
+    {
+      "id": "IF-02",
+      "P004": "OD Ø6.54 nominal",
+      "mate": "P003 seat Ø6.60 nominal",
+      "function": "radial locating/slip fit",
+      "status": "FUNCTIONAL_BAND_DEFINED"
+    },
+    {
+      "id": "IF-03",
+      "P004": "axial faces / L7.99 nominal",
+      "mate": "P003 stack + P014",
+      "function": "axial retention/float",
+      "status": "NOMINAL_CHAIN_EVIDENCE_EXISTS__TOLERANCE_OPEN"
+    },
+    {
+      "id": "IF-04",
+      "P004": "TECAPEEK PVX surfaces",
+      "mate": "temperature/environment",
+      "function": "thermal stability / tribology / clean service",
+      "status": "PRODUCTION_MATERIAL_PROCESS_OPEN"
+    }
+  ],
+  "calculations": [
+    "P004-CALC-001",
+    "P004-CALC-002",
+    "P004-CALC-003"
+  ],
+  "definition_of_done": [
+    "IF-02 tolerance allocation closes 0.04...0.08 mm clearance worst-case.",
+    "IF-01 functional guide clearance min/nom/max is controlled and tolerance budget allocated.",
+    "L7.99 axial chain closes required axial float worst-case.",
+    "Functional datum system is released.",
+    "Bore-to-OD axis relation is released.",
+    "Face orientation to functional axis is released if function requires it.",
+    "Guide-bore surface texture is justified and released.",
+    "OD locating/slip surface texture is justified and released.",
+    "Face texture is released or N/A with rationale.",
+    "Exact production TECAPEEK PVX grade/material authority is controlled.",
+    "Thermal expansion check covers Tmin/Tnom/Tmax and stainless-to-PEEK interfaces.",
+    "Manufacturing route is defined.",
+    "PEEK dimensional conditioning / measurement temperature is defined.",
+    "Inspection methods and measurement resolution are defined.",
+    "Edge/deburr requirements are defined.",
+    "Only after all above: PRODUCT_DEFINITION_READY=true; then drawing/DimXpert authoring may begin in the drawing branch."
+  ],
+  "drawing_gate": {
+    "state": "BLOCKED_UPSTREAM_PRODUCT_DEFINITION",
+    "rule": "No D004/DimXpert tolerance authoring before Product Definition READY."
+  },
+  "mutation": "NONE"
+}

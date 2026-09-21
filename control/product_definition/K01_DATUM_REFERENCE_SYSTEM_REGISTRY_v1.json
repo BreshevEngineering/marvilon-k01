@@ -1,0 +1,31 @@
+{
+  "schema": "k01.datum_reference_system_registry.v1",
+  "project": "K01",
+  "purpose": "Make datum/reference-system architecture explicit and traceable independently of individual numeric GD&T values.",
+  "systems": [
+    {
+      "id": "DRS-K01-J1-ABC",
+      "interface": "K01-IF-J1",
+      "status": "CONTROLLED_CANDIDATE_BASELINE",
+      "authority": "control/decisions/EDR-023_DATUM_C_KINEMATIC_BASELINE.json",
+      "datums": [
+        {"label": "A", "definition": "P003/P016 mating face"},
+        {"label": "B", "definition": "central pilot, Ø10 H7/g6 locating architecture"},
+        {"label": "C", "definition": "K01-P-017 relieved/diamond locator engaging P003 Ø3.02 +0.01/0 round hole"}
+      ],
+      "kinematic_rule": "A/B locate face and transverse axis; C removes only remaining rotation; clamp fasteners do not locate."
+    },
+    {
+      "id": "DRS-K01-J2-AB",
+      "interface": "K01-IF-J2",
+      "status": "PARTIAL",
+      "authority": "REQ-K01-J2-LOC-001 + current P007 Product Definition",
+      "datums": [
+        {"label": "A", "definition": "P003/P007 metal mating face set"},
+        {"label": "B", "definition": "Ø14.10 H7/g6 locator pair axis"}
+      ],
+      "tertiary_datum": "OPEN; clamp screws shall not be treated as redundant locating datums",
+      "release_note": "Final DRF for pattern/coaxiality controls remains OPEN until tolerance-stack/GD&T closure."
+    }
+  ]
+}

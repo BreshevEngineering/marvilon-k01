@@ -1,0 +1,114 @@
+{
+  "schema": "k01.p004.physical_evidence_plan.current.v1",
+  "generated_utc": "2026-09-18T19:29:46.012494+00:00",
+  "status": "PASS_P004_PHYSICAL_EVIDENCE_PLAN_CONTROLLED__EXTERNAL_ACQUISITION_READY",
+  "part_id": "K01-P-004",
+  "reference_temperature_C": 20,
+  "stroke_mm": 10.0,
+  "campaigns": [
+    {
+      "id": "T-P004-01",
+      "name": "20 C dimensional FAI / as-built characterization",
+      "purpose": "Measure the actual P004/P001/P003/P014 geometry needed for capability allocation without assuming released mating-part production tolerances.",
+      "conditions": [
+        "20 C dimensional reference; record actual part and ambient temperature",
+        "use EDR-048 traceable measurement record fields",
+        "record material stock/lot/CoC and supplier/process/stabilization declaration where available"
+      ],
+      "measurements": [
+        "P004 OD Ø6.54 actual size at multiple axial/angular locations sufficient to expose taper/ovality",
+        "P004 bore Ø5.055 actual size at multiple axial/angular locations sufficient to expose taper/ovality",
+        "P004 OAL 8.00 at multiple circumferential locations sufficient to expose face variation",
+        "P001 actual guide diameter/form at the P004 contact region",
+        "P003 actual P004-seat diameter",
+        "P003/P014 actual effective installed retention space H"
+      ],
+      "acceptance": "CHARACTERIZATION/FAI INPUT. Apply released dimensional PASS/FAIL only where a production characteristic and uncertainty/decision rule already exist; otherwise report measured values without promotion.",
+      "output": "raw measurements + uncertainty/method + dimensional summary"
+    },
+    {
+      "id": "T-P004-02",
+      "name": "P001↔P004 guide repeatability characterization",
+      "purpose": "Quantify current mechanical and, where available, optical/reference repeatability so the missing system guide-performance requirement can be allocated explicitly.",
+      "setup": [
+        "assemble P004 with P001 and P014 in the intended service architecture; no artificial P004 preload",
+        "use the controlled full stroke of 10.000 mm",
+        "measure at OUT / MID / IN positions corresponding to 0 / 5.000 / 10.000 mm",
+        "define and record a stable mechanical target/reference plane; if optical target/readout is available, record optical/reference result in the same cycle"
+      ],
+      "screening_sequence": [
+        "working characterization target: 10 complete OUT→MID→IN→MID→OUT cycles; this count is for screening only and is not a statistical capability or qualification sample size",
+        "approach each position from both travel directions to expose hysteresis/backlash",
+        "do not intentionally side-load the rod; record any handling intervention",
+        "record ambient/part temperature and assembly state"
+      ],
+      "measurements": [
+        "lateral/radial target displacement or equivalent guide-position error at each position",
+        "angular deviation if the measurement setup resolves it",
+        "optical/reference output/error at each position if available",
+        "direction of approach and cycle number",
+        "observed binding, stick-slip, shaving/scoring or abnormal contact"
+      ],
+      "analysis": [
+        "report raw values, range/peak-to-peak and descriptive repeatability statistics",
+        "correlate result to measured P001/P004 as-built clearance",
+        "separate mechanical repeatability from optical readout repeatability"
+      ],
+      "acceptance": "NO RELEASE PASS/FAIL THRESHOLD EXISTS YET. Result is CHARACTERIZATION ONLY until tied to a controlled stakeholder/system acceptance requirement.",
+      "output": "completed characterization CSV + setup evidence + summary"
+    },
+    {
+      "id": "T-P004-03",
+      "name": "Seat clearance and assembled axial-float prototype screen at 20 C",
+      "purpose": "Check the currently controlled functional windows on the actual prototype while preserving the distinction between prototype screen and released production acceptance.",
+      "measurements": [
+        "actual P003 seat ID and P004 locating OD → diametral seat clearance",
+        "actual P003/P014 effective retention space H and P004 OAL → axial float",
+        "direct assembled axial float where measurable"
+      ],
+      "screening_criteria": {
+        "seat_diametral_clearance_mm": [
+          0.04,
+          0.08
+        ],
+        "axial_float_mm": [
+          0.04,
+          0.08
+        ]
+      },
+      "acceptance": "ENGINEERING PROTOTYPE SCREEN at 20 C only. Do not promote to production release until mating-part Product Definition, process capability and metrology authority close.",
+      "output": "measured chain + calculated/direct float + screen result and limitations"
+    },
+    {
+      "id": "T-P004-04",
+      "name": "Guide-surface functional condition",
+      "purpose": "Generate evidence for the remaining guide-bore surface/wear decision without inventing Ra/Rz.",
+      "checks": [
+        "visual/optical condition before test",
+        "complete guide cycles without intentional side load",
+        "visual/optical condition after test",
+        "record any polymer debris, shaving, scoring, stick-slip or binding",
+        "retain photos/micrographs if available with scale/reference"
+      ],
+      "acceptance": "QUALITATIVE CHARACTERIZATION. Absence of observed damage supports the current process candidate but does not by itself qualify service life or release a numeric roughness value.",
+      "output": "before/after inspection evidence + observations"
+    },
+    {
+      "id": "T-P004-L8-01",
+      "name": "Service-temperature no-binding qualification",
+      "purpose": "Verify no binding over qualified temperature envelope.",
+      "state": "L8_LATER__NOT_REQUIRED_FOR_20C_P004_DIMENSIONAL_ACCEPTANCE",
+      "note": "Do not use extrapolated low-temperature TECAPEEK data as physical qualification evidence."
+    }
+  ],
+  "required_return_package": [
+    "completed T-P004-01 dimensional data",
+    "completed T-P004-02 characterization CSV",
+    "T-P004-02 setup/equipment description and images if available",
+    "T-P004-03 axial/seat screen data",
+    "T-P004-04 before/after guide-surface observations",
+    "material lot/CoC and manufacturing/stabilization declarations available for tested parts"
+  ],
+  "native_mutation": "NONE",
+  "source": "EDR-052"
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-051",
+  "date": "2026-09-18",
+  "subject": "P004 residual GPS, face-orientation and surface-texture authority boundary",
+  "status": "ACCEPTED_FUNCTIONAL_CONTROL_BOUNDARY__ONLY_REQUIRED_NUMERIC_EXTERNALS_REMAIN",
+  "goal": "Remove unjustified generic GPS/texture requirements while preserving every control needed by P004 function and explicitly exposing the numeric controls that still need external evidence.",
+  "authority": [
+    "control/decisions/EDR-044_P004_DATUM_FUNCTION_CORRECTION.json",
+    "control/decisions/EDR-046_P004_JOINT_TOLERANCE_BUDGET_20C.json",
+    "control/decisions/EDR-047_P004_AXIAL_RECENTER.json",
+    "control/decisions/EDR-048_P004_INSPECTION_CONDITIONING_PROCEDURE.json",
+    "control/decisions/EDR-050_P004_FUNCTIONAL_EDGE_TREATMENT.json",
+    "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json"
+  ],
+  "engineering_question": "Which residual GPS and surface controls are independently required by function, which may be accepted qualitatively, and which numeric values still lack authority?",
+  "options": [
+    {
+      "id": "A",
+      "description": "Assign generic perpendicularity/runout/Ra values to make the drawing look complete.",
+      "disposition": "REJECTED_NO_TOP_DOWN_FUNCTIONAL_ALLOCATION"
+    },
+    {
+      "id": "B",
+      "description": "Retain the bore-to-OD control family and sliding-bore surface class, keep their numeric values external until guide/process evidence exists, and avoid standalone numeric face/seat texture controls not demanded by function.",
+      "disposition": "ACCEPTED"
+    },
+    {
+      "id": "C",
+      "description": "Remove all GPS/surface requirements.",
+      "disposition": "REJECTED_BORE_GUIDE_RELATION_AND_SLIDING_SURFACE_ARE_FUNCTIONAL"
+    }
+  ],
+  "technical_filter": {
+    "function": "PASS",
+    "tolerance": "PASS_NO_DUPLICATE_BUDGET",
+    "manufacturing": "PASS_AVOIDS_UNJUSTIFIED_TIGHT_CONTROLS",
+    "inspection": "PASS_METHODS_ALREADY_DEFINED_EDR048",
+    "assembly": "PASS_AXIAL_FLOAT_AND_SLIP_FUNCTION_PRESERVED",
+    "wear_tribology": "GUIDE_BORE_NUMERIC_TEXTURE_WAITING_EXTERNAL",
+    "CAD": "NONE"
+  },
+  "decision": [
+    "The P004 guide bore shall remain geometrically related to datum A (Ø6.54 locating-OD axis) using total runout or an equivalent ISO-GPS control family; its numeric value is not released until the system guide-performance allocation and manufacturing/metrology capability are controlled.",
+    "No independent numeric end-face perpendicularity is released now because P004 has no deterministic axial datum and axial float is intentional. End-face form/orientation effects must remain inside the effective installed axial-float requirement; a separate numeric orientation value is created only if the final stack allocation proves it necessary.",
+    "Guide-bore surface texture remains a functional sliding/wear characteristic. Its numeric Ra/Rz is not released from generic practice; process/wear/capability evidence is required. Qualitatively the surface shall be clean, continuous and free from burrs/raised material/damage causing shaving, scoring or binding.",
+    "P004 locating-OD and axial-face surfaces do not receive independent numeric roughness requirements from current function. Their acceptance is clean/damage-free plus released dimensional/GPS and assembly requirements. Reopen only on a stale trigger from assembly, wear, supplier process or inspection evidence.",
+    "No CAD, DimXpert or drawing mutation is authorized."
+  ],
+  "controls": {
+    "bore_to_OD": {
+      "functional_need": "REQUIRED__OD_AXIS_LOCATES_BUSHING_WHILE_BORE_GUIDES_P001",
+      "control_family": "TOTAL_RUNOUT_OR_EQUIVALENT_ISO_GPS_TO_DATUM_A_AXIS",
+      "numeric_state": "WAITING_EXTERNAL_GUIDE_SYSTEM_ALLOCATION_AND_CAPABILITY"
+    },
+    "end_faces": {
+      "functional_need": "NO_DETERMINISTIC_AXIAL_DATUM__AXIAL_FLOAT_INTENTIONAL",
+      "control_family": "NO_STANDALONE_NUMERIC_PERPENDICULARITY_RELEASED_NOW",
+      "acceptance_logic": "face form/orientation contribution shall be contained by effective installed axial-float requirement; if future allocation shows a separate orientation limit is needed, allocate it from the axial budget",
+      "numeric_state": "N/A_UNLESS_FUTURE_STACK_ALLOCATION_REQUIRES"
+    },
+    "guide_bore_texture": {
+      "functional_need": "SLIDING_GUIDE__WEAR_SHAVING_FRICTION_SENSITIVE",
+      "control_family": "FUNCTIONAL_SURFACE_CLASS_RETAINED",
+      "qualitative_requirement": "clean continuous machined surface; no burr/raised material or damage that causes shaving/scoring/binding",
+      "numeric_state": "WAITING_EXTERNAL_PROCESS_WEAR_CAPABILITY_EVIDENCE"
+    },
+    "seat_OD_texture": {
+      "functional_need": "STATIC_LOCATING_SLIP_INTERFACE",
+      "control_family": "NO_INDEPENDENT_NUMERIC_TEXTURE_RELEASED",
+      "qualitative_requirement": "clean/damage-free surface compatible with insertion/removal and dimensional inspection",
+      "numeric_state": "N/A_CURRENT_FUNCTION_UNLESS_ASSEMBLY_EVIDENCE_CREATES_STALE_TRIGGER"
+    },
+    "axial_face_texture": {
+      "functional_need": "RETENTION_BOUNDARY_WITH_INTENTIONAL_FLOAT__NO_SEAL_NO_PRELOAD",
+      "control_family": "NO_INDEPENDENT_NUMERIC_TEXTURE_RELEASED",
+      "qualitative_requirement": "clean/burr-free/damage-free; no raised feature causing false seating or loss of axial float",
+      "numeric_state": "N/A_CURRENT_FUNCTION_UNLESS_FUTURE_EVIDENCE_CREATES_STALE_TRIGGER"
+    }
+  },
+  "expected_closure": "PASS_P004_RESIDUAL_GPS_SURFACE_BOUNDARY_CONTROLLED__NUMERIC_EXTERNALS_EXPLICIT",
+  "downstream_impact": {
+    "bore_to_OD_numeric": "WAITING_EXTERNAL",
+    "guide_bore_texture_numeric": "WAITING_EXTERNAL",
+    "end_face_perpendicularity_numeric": "N/A_UNLESS_STACK_ALLOCATION_REQUIRES",
+    "seat_OD_texture_numeric": "N/A_CURRENT_FUNCTION",
+    "axial_face_texture_numeric": "N/A_CURRENT_FUNCTION",
+    "CAD": "NONE",
+    "DimXpert": "NONE",
+    "drawing": "NONE"
+  }
+}

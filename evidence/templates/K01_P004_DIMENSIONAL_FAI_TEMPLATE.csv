@@ -1,0 +1,7 @@
+test_id,part_id,serial_or_fai_id,feature,nominal_mm,location,ambient_C,part_C,measured_mm,instrument_id,calibration_status,method,contact_force,uncertainty_mm,material_lot,coc_ref,process_revision,stabilization_or_anneal,operator,notes
+T-P004-01,K01-P-004,,OD,6.540,,,,,,,,,,,,,,,
+T-P004-01,K01-P-004,,BORE,5.055,,,,,,,,,,,,,,,
+T-P004-01,K01-P-004,,OAL,8.000,,,,,,,,,,,,,,,
+T-P004-01,K01-P-001,,GUIDE_DIAMETER,5.000,,,,,,,,,,,,,,,
+T-P004-01,K01-P-003,,P004_SEAT_ID,6.600,,,,,,,,,,,,,,,
+T-P004-01,K01-P-003/P014,,EFFECTIVE_RETENTION_SPACE_H,8.060,,,,,,,,,,,,,,,

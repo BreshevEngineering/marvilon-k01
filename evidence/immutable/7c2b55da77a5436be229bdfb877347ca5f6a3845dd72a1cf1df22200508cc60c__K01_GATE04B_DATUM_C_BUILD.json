@@ -1,0 +1,97 @@
+{
+  "schema": "k01_gate04b_v7_autoactivate_pattern_derived_datum_c",
+  "status": "PASS",
+  "created_utc": "2026-09-09T20:22:29.024889+00:00",
+  "solidworks_revision": "26.0.1",
+  "P016": {
+    "native": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-016_Long_Run_Interface_Boss_GATE04B_DATUMC_V6_20260909_231939.SLDPRT",
+    "step": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-016_Long_Run_Interface_Boss_GATE04B_DATUMC_V6_20260909_231939.STEP",
+    "result": {
+      "M4_angles_deg": [
+        90.0,
+        210.00000000000028,
+        330.0000000000005
+      ],
+      "M4_radii_mm": [
+        12.0,
+        12.000000000000002,
+        12.0
+      ],
+      "M4_spacing_error_deg": 5.115907697472721e-13,
+      "C_angle_deg": 30.000000000000227,
+      "C_radius_mm": 12.0,
+      "C_center_local_m": [
+        0.010392304845413241,
+        0.006000000000000042,
+        0.02
+      ],
+      "ligament_to_oring_mm": 2.5999999999999996,
+      "ligament_to_outer_edge_mm": 2.5,
+      "ligament_to_nearest_M4_mm": 8.849999999999952,
+      "legacy_suppression": "SetSuppression2",
+      "new_D_mm": 2.999999999999999,
+      "new_area_mm2": 37.69911184307751
+    }
+  },
+  "P003": {
+    "native": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-003_Cartridge_Body_GATE04B_DATUMC_V6_20260909_231939.SLDPRT",
+    "step": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-003_Cartridge_Body_GATE04B_DATUMC_V6_20260909_231939.STEP",
+    "result": {
+      "C_center_local_m": [
+        -0.005367034112149511,
+        0.004773671366504268,
+        -0.011009634947836248
+      ],
+      "D_mm": 3.020000000000002,
+      "drawing_tolerance": "+0.01/0",
+      "end_condition": "THROUGH_ALL_BOTH",
+      "end_condition_forward": 1,
+      "end_condition_reverse": 1,
+      "datumA_mapping_error_mm": 8.673617379884035e-16,
+      "center_error_mm": 0.0,
+      "flange_thickness_mm": 3.0000000000000004,
+      "thru_material_length_mm": 8.00000000000001,
+      "owner_feature": "K01_F_DATUM_C_MATING_HOLE",
+      "sketch_center_mapping": "MODEL_TO_SKETCH_TRANSFORM",
+      "outer_edge_ligament_mm": 3.490000000000002
+    }
+  },
+  "P017": {
+    "native": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-017_Datum_C_Relieved_Locator_GATE04B_V7_20260909_231939.SLDPRT",
+    "source_step": "D:\\BreshevEngineering\\marvilon-k01\\reference\\K01-P-017_Datum_C_Relieved_Locator_CANDIDATE.step",
+    "result": {
+      "source_step": "D:\\BreshevEngineering\\marvilon-k01\\reference\\K01-P-017_Datum_C_Relieved_Locator_CANDIDATE.step",
+      "native": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-017_Datum_C_Relieved_Locator_GATE04B_V7_20260909_231939.SLDPRT",
+      "size_mm": [
+        3.0,
+        3.0,
+        6.0
+      ],
+      "radial_minor_nominal_mm": 2.8,
+      "tangential_major_nominal_mm": 3.0,
+      "overall_length_nominal_mm": 6.0,
+      "press_shank_nominal": "Ø3 × 4.0",
+      "protrusion_nominal_mm": 2.0,
+      "relief_plane_count": 2,
+      "material_baseline": "AISI 316L / EN 1.4404",
+      "material_card_status": "OPEN_NATIVE_ASSIGNMENT_BEFORE_MASS_RELEASE",
+      "candidate_only": true
+    },
+    "press_shank": "Ø3 p6×4 into P016 Ø3 H7",
+    "protrusion_mm": 2.0,
+    "tangential_major_mm": "3.00 -0.01/0",
+    "radial_minor_mm": "2.80 ±0.02",
+    "P003_hole": "Ø3.02 +0.01/0 THRU",
+    "clocking_half_angle_clearance_deg": [
+      0.04774647187514665,
+      0.09549287743587076
+    ]
+  },
+  "datum_scheme": {
+    "A": "mating face",
+    "B": "Ø10 H7/g6 pilot",
+    "C": "pattern-derived relieved/diamond locator"
+  },
+  "design_logic": "C is separate from the M4 circular pattern and placed at the midpoint of a 120° free gap, maximizing distance to clamp holes while R≈12 mm balances O-ring and boss-edge ligament.",
+  "release_status": "CANDIDATES_PENDING_ASSEMBLY_QA"
+}

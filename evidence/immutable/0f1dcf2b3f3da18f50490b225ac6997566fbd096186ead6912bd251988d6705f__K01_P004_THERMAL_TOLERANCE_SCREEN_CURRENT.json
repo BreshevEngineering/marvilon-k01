@@ -1,0 +1,68 @@
+{
+  "schema": "k01.p004.thermal_tolerance_screen.current.v1",
+  "generated_utc": "2026-09-17T10:25:41.787423+00:00",
+  "status": "PASS_SCREEN__TOLERANCE_RELEASE_OPEN",
+  "temperature_basis": {
+    "Tmin_C": -40.0,
+    "Tref_C": 20.0,
+    "Tmax_C": 55.0,
+    "basis": [
+      "MARV 2EX documented system operation down to -40 C and up to 50 C",
+      "K01 local J2/P007 conservative design maximum 55 C"
+    ],
+    "applicability": "Conservative P004 design screen; if qualified local P004 envelope becomes narrower, recalculate."
+  },
+  "material_inputs": {
+    "TECAPEEK_PVX_CLTE_1_per_K": 3e-05,
+    "316L_CLTE_1_per_K": 1.6e-05,
+    "sources": [
+      "Ensinger TECAPEEK PVX black technical data: CLTE 3e-5 1/K in 23-100 C range",
+      "Outokumpu Supra 316L/1.4404: CLTE 16e-6 1/K, 20-100 C"
+    ]
+  },
+  "results": {
+    "seat_clearance_nominal_mm": {
+      "Tmin": 0.06543600000000005,
+      "Tref": 0.05999999999999961,
+      "Tmax": 0.056828999999999574
+    },
+    "guide_clearance_nominal_mm": {
+      "Tmin": 0.05070099999999922,
+      "Tref": 0.054999999999999716,
+      "Tmax": 0.05750775000000008
+    },
+    "axial_float_nominal_mm": {
+      "Tmin": 0.05667200000000072,
+      "Tref": 0.05000000000000071,
+      "Tmax": 0.04610800000000026
+    }
+  },
+  "derived_if_functional_band_applies_over_full_temperature": {
+    "seat_clearance_required_at_service_mm": [
+      0.04,
+      0.08
+    ],
+    "required_20C_manufacturing_clearance_window_mm": [
+      0.043171000000000424,
+      0.07456399999999995
+    ],
+    "available_window_width_mm": 0.031392999999999525,
+    "axial_float_required_at_service_mm": [
+      0.04,
+      0.08
+    ],
+    "required_20C_axial_window_mm": [
+      0.043891999999999744,
+      0.07332799999999928
+    ],
+    "axial_window_width_mm": 0.02943599999999954
+  },
+  "interpretation": [
+    "Nominal P003/P004 seat clearance stays positive from -40 to +55 C.",
+    "Nominal P001/P004 guide clearance stays positive from -40 to +55 C.",
+    "Nominal P004 axial float stays inside 0.04...0.08 mm across the conservative temperature screen.",
+    "The original 20 C seat-clearance manufacturing band 0.04...0.08 cannot by itself guarantee 0.04...0.08 at both temperature extremes because PEEK and 316L expand differently.",
+    "Therefore final production tolerances must be allocated to a narrower 20 C acceptance window, or the service-band requirement must be explicitly scoped to reference temperature.",
+    "Guide clearance still lacks a controlled functional min/max requirement; no bore/rod production tolerance is released."
+  ]
+}

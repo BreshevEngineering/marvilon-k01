@@ -1,0 +1,67 @@
+{
+  "schema": "k01.j2_containment_closure_plan.v1",
+  "generated_utc": "2026-09-14T06:55:00+00:00",
+  "status": "ACTIVE_ENGINEERING_CLOSURE_PLAN__ARCHITECTURE_SELECTED",
+  "interface": "P003↔P007 J2",
+  "current_facts": {
+    "fastener_architecture": "3 x M2.5 / PCD26.5 / P007 Ø2.90 clearance",
+    "locator_architecture": "Ø14.10 H7/g6 pair architecture",
+    "seal_architecture": "static face O-ring / 16 x 1.5 nominal gland architecture",
+    "P007_material": "AISI 316L / EN 1.4404"
+  },
+  "closure_items": [
+    {
+      "id": "J2-FASTENER",
+      "open": [
+        "exact screw standard/head",
+        "length",
+        "material/grade",
+        "finish/lubrication",
+        "torque-preload calibration"
+      ],
+      "evidence_required": [
+        "joint separation/contact check",
+        "thread/galling/service rationale",
+        "assembly instruction"
+      ]
+    },
+    {
+      "id": "J2-SEAL",
+      "open": [
+        "media envelope",
+        "exact compound/supplier",
+        "squeeze/compression force",
+        "surface finish/flatness limits",
+        "quantitative leak acceptance",
+        "test method"
+      ],
+      "evidence_required": [
+        "seal compatibility basis",
+        "gland/squeeze check",
+        "leak verification plan"
+      ]
+    },
+    {
+      "id": "P007-CONTAINMENT-PROCESS",
+      "topic": "P007 monolithic thin-wall / blind-end manufacturing capability",
+      "status": "OPEN_CAPABILITY_QUALIFICATION",
+      "controlled": "MFG-P007-MONOLITHIC selected by EDR-025; permanent P003↔P007 weld rejected",
+      "open": [
+        "0.30 mm wall manufacturability / ovality capability",
+        "OD/ID coaxiality/runout capability",
+        "blind-end thickness capability",
+        "fixture/support strategy",
+        "first-article inspection capability"
+      ],
+      "rule": "Architecture is no longer open. Close manufacturing capability and inspection evidence before release of process-dependent tolerances."
+    }
+  ],
+  "release_rule": "EDR-025 closes architecture selection only. Thin-wall/blind-end capability, seal/fastener process details, quantitative leak acceptance and inspection must close before K01-D-006 / R01 release.",
+  "architecture_decision": {
+    "status": "CONTROLLED",
+    "decision_id": "EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE",
+    "P007_construction": "MONOLITHIC_MACHINED_316L_WITH_INTEGRAL_BLIND_END",
+    "J2": "REMOVABLE_METAL_FACE_STATIC_O_RING_3XM2P5_CLAMP",
+    "permanent_P003_P007_weld": "REJECTED_NOT_APPLICABLE"
+  }
+}

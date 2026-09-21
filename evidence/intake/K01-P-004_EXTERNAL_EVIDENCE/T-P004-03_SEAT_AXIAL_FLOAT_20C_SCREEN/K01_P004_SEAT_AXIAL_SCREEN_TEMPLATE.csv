@@ -1,0 +1,2 @@
+test_id,assembly_id,ambient_C,part_C,P003_seat_ID_mm,P004_OD_mm,derived_seat_clearance_mm,effective_retention_H_mm,P004_OAL_mm,derived_axial_float_mm,direct_axial_float_mm,instrument_ids,uncertainty_notes,screen_only,operator_notes
+T-P004-03,,,,,,,,,,,,,YES,

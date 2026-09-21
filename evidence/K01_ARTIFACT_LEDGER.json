@@ -1,0 +1,34 @@
+{
+  "schema": "k01_artifact_ledger",
+  "artifacts": [
+    {
+      "domain": "IDENTITY",
+      "artifact": "Identity freeze map",
+      "status": "PASS",
+      "result": "Canonical A001/P003/P006/P007/B001 verified semantically equivalent to Gate04E source. 13 components; 29 mate features; 27 active + 2 suppressed historical mates.",
+      "sha": "a6bc1c6227075c2736a2383a73ecf2f95e109f7cbcfa34ef01ccf8bfa45cdd33"
+    },
+    {
+      "domain": "CAD",
+      "artifact": "Canonical A001 assembly",
+      "status": "HOLD",
+      "result": "Canonical assembly exists; semantic equivalence HOLD; assembly approval checks continue.",
+      "sha": "a6bc1c6227075c2736a2383a73ecf2f95e109f7cbcfa34ef01ccf8bfa45cdd33"
+    },
+    {
+      "domain": "EQUATIONS",
+      "artifact": "10-variable shared equation file",
+      "status": "PARTIAL",
+      "result": "External file generated at D:\\Marvilon\\K01\\cad\\equations\\K01_SHARED_EQUATIONS.txt; dimension binding intentionally not yet performed.",
+      "sha": "c276e1d7deb69556f5ace5d8e882cbf04835132bad79479a87a2a92b529234bb"
+    },
+    {
+      "domain": "CAD",
+      "artifact": "K01-BASELINE-02 Assembly Approval",
+      "status": "PARTIAL",
+      "result": "Canonical A001 audited on temp copy: 13 components, 29 mate features, 3-position interference sweep captured; exact equation binding review generated.",
+      "sha": "a6bc1c6227075c2736a2383a73ecf2f95e109f7cbcfa34ef01ccf8bfa45cdd33"
+    }
+  ],
+  "generated_utc": "2026-09-09T09:11:42.115794+00:00"
+}

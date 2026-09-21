@@ -1,0 +1,57 @@
+{
+  "schema": "k01.engineering_decision.v1",
+  "id": "EDR-032_P007_C02_LOCATOR_DEPTH_RELEASE",
+  "date": "2026-09-15",
+  "title": "Release P007 C02 locator-bore depth and coupled P003 pilot-length non-bottoming stack",
+  "scope": "K01-P-007 C02 axial locator depth and coupled K01-P-003 J2 pilot length; no native geometry change",
+  "status": "ACCEPTED_RELEASE_DEFINITION",
+  "decision": {
+    "P007_C02_release_spec": "Ø14.10 H7 locator bore; depth 2.00 ±0.05 mm from Datum-A mating plane",
+    "P003_counterpart_release_spec": "Ø14.10 g6 pilot; axial pilot length 1.50 ±0.05 mm from P003 mating plane",
+    "axial_location": "Metal mating faces remain the axial locating surfaces; the pilot shall not bottom.",
+    "bottom_clearance_nominal_mm": 0.5,
+    "bottom_clearance_worst_case_mm": [
+      0.4,
+      0.6
+    ],
+    "calculation": "Cmin = (2.00-0.05) - (1.50+0.05) = 0.40 mm; Cmax = (2.00+0.05) - (1.50-0.05) = 0.60 mm.",
+    "inspection": "P007 depth by CMM/depth measurement from Datum-A mating plane to locator-bore back face; P003 pilot length by CMM/height/depth measurement from its mating plane. First article confirms capability before P6.",
+    "capability_state": "RELEASE_DEFINITION_ACCEPTED__FIRST_ARTICLE_CAPABILITY_CONFIRMATION_REQUIRED"
+  },
+  "basis": [
+    "EDR-024 fixed current canonical P007 locator depth at 2.00 mm and P003 pilot nominal length at 1.50 mm but intentionally left variation OPEN.",
+    "REQ-K01-J2-LOC-001 requires radial location by the Ø14.10 H7/g6 pilot/locator pair and axial location by the metal mating faces, so positive non-bottoming clearance is a functional requirement.",
+    "P007 monolithic machining route is selected by EDR-025. The 2 mm locator depth is a short flange/locator machining characteristic, not the 0.30 mm thin-wall capability-limited deep-bore surface.",
+    "The project already controls comparable axial machined dimensions C05 flange thickness and C06 OAL at ±0.05 mm under standard precision inspection context; the same bounded axial capability class is used for this coupled J2 stack, with first-article confirmation retained.",
+    "P003 and P007 production materials are both AISI 316L / EN 1.4404, so common-temperature expansion does not erode the positive clearance sign for the coupled same-material stack."
+  ],
+  "technical_filter": {
+    "function": "Prevents P003 pilot bottoming so metal mating faces remain the only axial locator while retaining 1.50 mm nominal radial-locator engagement.",
+    "tolerance_stack": "0.40 mm minimum bottom clearance and 0.60 mm maximum bottom clearance at dimensional limits.",
+    "manufacturing": "±0.05 mm is treated as a standard-precision axial machining requirement for the short locator/pilot features; first-article capability remains mandatory rather than inferred.",
+    "inspection": "Direct axial measurements from each part's functional mating plane; measurement setup shall be non-distorting.",
+    "assembly_service": "No axial preload is transferred through the pilot bottom; mating faces seat first by design.",
+    "change_impact": "K01-D-006 C02 changes from 2.00 NOM to 2.00 ±0.05. K01-D-003/P003 must later project 1.50 ±0.05; D003 becomes semantically stale but is not current WIP.",
+    "concept_preservation": "No native geometry changes; only variation semantics are closed."
+  },
+  "rejected_alternatives": [
+    {
+      "option": "Keep 2.00 NOM/OPEN",
+      "reason": "Not a manufacturing acceptance criterion; leaves the non-bottoming stack formally open."
+    },
+    {
+      "option": "Use a blanket general tolerance",
+      "reason": "Would hide a functional J2 stack inside a non-functional default and violate the project rule against uncontrolled general tolerances."
+    },
+    {
+      "option": "Increase P007 depth unilaterally",
+      "reason": "Unnecessary geometry/process change; current 0.50 mm nominal clearance is already sufficient once bounded tolerances are assigned."
+    }
+  ],
+  "stale_triggers": [
+    "P003 pilot nominal length changes from 1.50 mm",
+    "P007 locator depth nominal changes from 2.00 mm",
+    "axial location changes away from the metal mating faces",
+    "supplier/FAI demonstrates inability to hold ±0.05 mm on either coupled axial feature"
+  ]
+}

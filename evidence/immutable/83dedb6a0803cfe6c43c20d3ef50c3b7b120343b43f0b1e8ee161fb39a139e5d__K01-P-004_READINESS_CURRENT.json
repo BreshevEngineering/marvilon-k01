@@ -1,0 +1,98 @@
+{
+  "schema": "k01.p004.product_definition_readiness.current.v1",
+  "generated_utc": "2026-09-18T19:29:46.015520+00:00",
+  "status": "PARTIAL__DEPENDENCIES_CLASSIFIED__MATING_AUTHORITIES_NEXT",
+  "product_definition_ready": false,
+  "closed_by_EDR_038": [
+    "design material identity",
+    "conservative thermal model",
+    "manufacturing route basis",
+    "measurement reference temperature basis"
+  ],
+  "open_blocker_count": 6,
+  "next_blocker": "P004-EXTERNAL-EVIDENCE-ACQUISITION",
+  "next": "Acquire and return the EDR-052 P004 physical evidence package (T-P004-01...04). Do not assign guide acceptance or production tolerance values before the measurement/stakeholder evidence is available.",
+  "guide_clearance_state": "WAITING_EXTERNAL__REQUIREMENT_OR_CHARACTERIZATION_EVIDENCE",
+  "waiting_dependency": [
+    "P001/P004 guide clearance min/max from radial/angular/optical repeatability allocation"
+  ],
+  "seat_tolerance_state": "OPEN__ARCHITECTURE_SCREEN_COMPLETE",
+  "axial_tolerance_state": "OPEN__ARCHITECTURE_DECISION_REQUIRED",
+  "datum_state": "ARCHITECTURE_RELEASED__OD_AXIS_PRIMARY",
+  "gps_state": "FUNCTIONAL_FAMILY_CONTROLLED__BORE_TO_OD_NUMERIC_WAITING_EXTERNAL",
+  "surface_state": "SEAT_FACE_QUALITATIVE_CLOSED__GUIDE_BORE_NUMERIC_WAITING_EXTERNAL",
+  "inspection_state": "PROCEDURE_CONTROLLED__NUMERIC_ACCEPTANCE_OPEN",
+  "material_state": "DESIGN_MATERIAL_RELEASED__LOT_STOCK_CONDITIONING_OPEN",
+  "thermal_state": "23_TO_55_DIRECTLY_SUPPORTED__BELOW_23_TO_MINUS40_EXTRAPOLATED_SCREEN",
+  "temperature_applicability_state": "20C_DIMENSIONAL_ACCEPTANCE_CONTROLLED__SERVICE_NO_BINDING_SEPARATE",
+  "low_temperature_state": "L8_QUALIFICATION_OPEN",
+  "remaining_dependencies": [
+    {
+      "id": "GUIDE_NUMERIC",
+      "state": "WAITING_EXTERNAL",
+      "dependency": "controlled stakeholder/system guide-repeatability allocation or characterized repeatability tied to an explicit acceptance basis",
+      "blocks": [
+        "P004 guide-bore size tolerance",
+        "guide form/GPS numeric"
+      ]
+    },
+    {
+      "id": "SEAT_TOLERANCE",
+      "state": "WAITING_EXTERNAL_CAPABILITY_EVIDENCE",
+      "dependency": "shared manufacturing/metrology capability allocation after EDR-046/047",
+      "blocks": [
+        "P003/P004 worst-case split"
+      ]
+    },
+    {
+      "id": "AXIAL_TOLERANCE",
+      "state": "WAITING_EXTERNAL_CAPABILITY_EVIDENCE",
+      "dependency": "shared manufacturing/metrology capability allocation after EDR-046/047",
+      "blocks": [
+        "P004 OAL tolerance",
+        "axial stack worst-case"
+      ]
+    },
+    {
+      "id": "LOW_T_PROPERTY",
+      "state": "L8_QUALIFICATION_DEPENDENCY",
+      "dependency": "low-temperature correlation or physical no-binding test",
+      "does_not_block": [
+        "20 C dimensional acceptance"
+      ]
+    },
+    {
+      "id": "DATUM_HIERARCHY",
+      "state": "CLOSED_BY_EDR_044"
+    },
+    {
+      "id": "GPS_NUMERIC",
+      "state": "WAITING_EXTERNAL",
+      "dependency": "guide-system allocation + manufacturing/metrology capability"
+    },
+    {
+      "id": "TEXTURE_NUMERIC",
+      "state": "WAITING_EXTERNAL",
+      "dependency": "guide-bore process/wear/capability evidence; seat/face numeric texture N/A current function"
+    },
+    {
+      "id": "CONDITIONING",
+      "state": "CLOSED_BY_EDR_048",
+      "dependency": "inspection procedure controlled; numeric acceptance remains downstream"
+    }
+  ],
+  "mating_authority_recovery": "PASS",
+  "P003_released_PD_proven": false,
+  "P014_released_PD_proven": false,
+  "joint_tolerance_allocation": "PASS_EDR_046",
+  "seat_joint_budget": "CONTROLLED",
+  "axial_joint_budget": "CONTROLLED",
+  "production_tolerance_split": "WAITING_EXTERNAL__SUPPLIER_FAI_METROLOGY_CAPABILITY",
+  "manufacturing_metrology_capability_decision": "PASS_BOUNDARY_CONTROLLED__NUMERIC_CAPABILITY_EXTERNAL",
+  "axial_nominal_architecture": "RECENTERED_REQUIREMENT_0P060__P004_LENGTH_UNCHANGED",
+  "capability_external_evidence": "REQUIRED",
+  "conditioning_state": "PROCEDURE_CONTROLLED_BY_EDR_048",
+  "edge_state": "CLOSED_BY_EDR_050__FUNCTIONAL_QUALITATIVE",
+  "face_orientation_state": "NO_STANDALONE_NUMERIC_CURRENTLY__CONTAIN_IN_AXIAL_FLOAT_STACK",
+  "physical_evidence_plan_state": "CONTROLLED_BY_EDR_052__WAITING_EXTERNAL_DATA"
+}

@@ -1,0 +1,146 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-052",
+  "date": "2026-09-18",
+  "subject": "P004 physical evidence acquisition plan for remaining L5 external dependencies",
+  "status": "ACCEPTED_PHYSICAL_EVIDENCE_PLAN__EXTERNAL_ACQUISITION_READY",
+  "goal": "Define the minimum controlled measurements/tests needed to convert P004 external dependencies into usable engineering evidence before partner technical review, while separating characterization, prototype screens and release/qualification acceptance.",
+  "authority": [
+    "control/decisions/EDR-049_P004_GUIDE_SYSTEM_ALLOCATION_AUTHORITY_RECOVERY.json",
+    "control/decisions/EDR-051_P004_RESIDUAL_GPS_SURFACE_AUTHORITY_BOUNDARY.json",
+    "evidence/immutable/084bb2e24931dd3d04dc674e3c9845e67177f742b3580a88b242653205a051ae__K01-P-004_INSPECTION_PROCEDURE_CURRENT.json",
+    "evidence/immutable/e6f397064eef88b9db51a268def8440484ede855463bb0de3427e0d68fea31a6__K01_P004_CAPABILITY_BOUNDARY_CURRENT.json",
+    "evidence/immutable/bbdd964097a4de5004d1faedc586d214ae904a03358a29f66b2ee836084527c8__K01_P004_GUIDE_SYSTEM_ALLOCATION_AUTHORITY_RECOVERY_CURRENT.json",
+    "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json",
+    "control/requirements/requirements.json"
+  ],
+  "engineering_question": "What is the minimum physical evidence package needed now to close P004 external guide-performance/capability dependencies and provide defensible test/measurement results for technical review?",
+  "technical_filter": {
+    "function": "PASS",
+    "testability": "PASS_PLAN_DEFINED",
+    "measurement": "PASS_METHOD/TRACEABILITY_FIELDS_DEFINED_EDR048",
+    "manufacturing": "PASS_FAI_DATA_REQUESTED",
+    "statistics": "SCREENING_ONLY_UNTIL_DATA_SUFFICIENT",
+    "qualification": "L8_SEPARATED",
+    "IP": "NO_DETAILED_DRAWING_OUTPUT_REQUIRED",
+    "CAD": "NONE"
+  },
+  "decision": [
+    "Execute T-P004-01 through T-P004-04 as the current evidence-acquisition package; T-P004-L8-01 remains later qualification.",
+    "Do not convert characterization statistics into a release requirement without a controlled system/stakeholder acceptance basis.",
+    "Do not claim Cp/Cpk/Ppk from the screening data unless the data set and process control are independently sufficient.",
+    "Use the released 0.040...0.080 mm seat and axial windows only as 20 C prototype screens where the measured chain is applicable; mating-part production release remains open.",
+    "Preserve raw data, setup/equipment traceability, temperatures, material/process identity and limitations so partner-facing summaries can trace back to evidence.",
+    "No CAD, DimXpert or drawing mutation is authorized."
+  ],
+  "campaigns": [
+    {
+      "id": "T-P004-01",
+      "name": "20 C dimensional FAI / as-built characterization",
+      "purpose": "Measure the actual P004/P001/P003/P014 geometry needed for capability allocation without assuming released mating-part production tolerances.",
+      "conditions": [
+        "20 C dimensional reference; record actual part and ambient temperature",
+        "use EDR-048 traceable measurement record fields",
+        "record material stock/lot/CoC and supplier/process/stabilization declaration where available"
+      ],
+      "measurements": [
+        "P004 OD Ø6.54 actual size at multiple axial/angular locations sufficient to expose taper/ovality",
+        "P004 bore Ø5.055 actual size at multiple axial/angular locations sufficient to expose taper/ovality",
+        "P004 OAL 7.99 at multiple circumferential locations sufficient to expose face variation",
+        "P001 actual guide diameter/form at the P004 contact region",
+        "P003 actual P004-seat diameter",
+        "P003/P014 actual effective installed retention space H"
+      ],
+      "acceptance": "CHARACTERIZATION/FAI INPUT. Apply released dimensional PASS/FAIL only where a production characteristic and uncertainty/decision rule already exist; otherwise report measured values without promotion.",
+      "output": "raw measurements + uncertainty/method + dimensional summary"
+    },
+    {
+      "id": "T-P004-02",
+      "name": "P001↔P004 guide repeatability characterization",
+      "purpose": "Quantify current mechanical and, where available, optical/reference repeatability so the missing system guide-performance requirement can be allocated explicitly.",
+      "setup": [
+        "assemble P004 with P001 and P014 in the intended service architecture; no artificial P004 preload",
+        "use the controlled full stroke of 10.000 mm",
+        "measure at OUT / MID / IN positions corresponding to 0 / 5.000 / 10.000 mm",
+        "define and record a stable mechanical target/reference plane; if optical target/readout is available, record optical/reference result in the same cycle"
+      ],
+      "screening_sequence": [
+        "working characterization target: 10 complete OUT→MID→IN→MID→OUT cycles; this count is for screening only and is not a statistical capability or qualification sample size",
+        "approach each position from both travel directions to expose hysteresis/backlash",
+        "do not intentionally side-load the rod; record any handling intervention",
+        "record ambient/part temperature and assembly state"
+      ],
+      "measurements": [
+        "lateral/radial target displacement or equivalent guide-position error at each position",
+        "angular deviation if the measurement setup resolves it",
+        "optical/reference output/error at each position if available",
+        "direction of approach and cycle number",
+        "observed binding, stick-slip, shaving/scoring or abnormal contact"
+      ],
+      "analysis": [
+        "report raw values, range/peak-to-peak and descriptive repeatability statistics",
+        "correlate result to measured P001/P004 as-built clearance",
+        "separate mechanical repeatability from optical readout repeatability"
+      ],
+      "acceptance": "NO RELEASE PASS/FAIL THRESHOLD EXISTS YET. Result is CHARACTERIZATION ONLY until tied to a controlled stakeholder/system acceptance requirement.",
+      "output": "completed characterization CSV + setup evidence + summary"
+    },
+    {
+      "id": "T-P004-03",
+      "name": "Seat clearance and assembled axial-float prototype screen at 20 C",
+      "purpose": "Check the currently controlled functional windows on the actual prototype while preserving the distinction between prototype screen and released production acceptance.",
+      "measurements": [
+        "actual P003 seat ID and P004 locating OD → diametral seat clearance",
+        "actual P003/P014 effective retention space H and P004 OAL → axial float",
+        "direct assembled axial float where measurable"
+      ],
+      "screening_criteria": {
+        "seat_diametral_clearance_mm": [
+          0.04,
+          0.08
+        ],
+        "axial_float_mm": [
+          0.04,
+          0.08
+        ]
+      },
+      "acceptance": "ENGINEERING PROTOTYPE SCREEN at 20 C only. Do not promote to production release until mating-part Product Definition, process capability and metrology authority close.",
+      "output": "measured chain + calculated/direct float + screen result and limitations"
+    },
+    {
+      "id": "T-P004-04",
+      "name": "Guide-surface functional condition",
+      "purpose": "Generate evidence for the remaining guide-bore surface/wear decision without inventing Ra/Rz.",
+      "checks": [
+        "visual/optical condition before test",
+        "complete guide cycles without intentional side load",
+        "visual/optical condition after test",
+        "record any polymer debris, shaving, scoring, stick-slip or binding",
+        "retain photos/micrographs if available with scale/reference"
+      ],
+      "acceptance": "QUALITATIVE CHARACTERIZATION. Absence of observed damage supports the current process candidate but does not by itself qualify service life or release a numeric roughness value.",
+      "output": "before/after inspection evidence + observations"
+    },
+    {
+      "id": "T-P004-L8-01",
+      "name": "Service-temperature no-binding qualification",
+      "purpose": "Verify no binding over qualified temperature envelope.",
+      "state": "L8_LATER__NOT_REQUIRED_FOR_20C_P004_DIMENSIONAL_ACCEPTANCE",
+      "note": "Do not use extrapolated low-temperature TECAPEEK data as physical qualification evidence."
+    }
+  ],
+  "expected_closure": "PASS_P004_PHYSICAL_EVIDENCE_PLAN_CONTROLLED__EXTERNAL_ACQUISITION_READY",
+  "downstream_impact": {
+    "P004": "WAITING_EXTERNAL_MEASUREMENT_DATA_AFTER_PLAN",
+    "partner_review": "TEST_MEASUREMENT_EVIDENCE_PATH_DEFINED",
+    "L8": "LOW_T_SERVICE_QUALIFICATION_REMAINS_LATER",
+    "CAD": "NONE",
+    "DimXpert": "NONE",
+    "drawing": "NONE"
+  },
+  "configuration_basis": {
+    "P004_OAL_nominal_mm": 7.99,
+    "authority": "control/decisions/EDR-047_P004_AXIAL_RECENTER.json",
+    "native_sha256": "6c5644913ce7694a46ceb557a5616a70598c50355d06e6f537b8a92a7c1ca779"
+  }
+}

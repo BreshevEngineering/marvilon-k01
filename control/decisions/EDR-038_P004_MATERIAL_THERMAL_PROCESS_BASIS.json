@@ -1,0 +1,49 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-038",
+  "subject": "P004 material, thermal and manufacturing/inspection basis",
+  "date": "2026-09-17",
+  "status": "ACCEPTED_ENGINEERING_BASIS__PRODUCT_DEFINITION_PARTIAL",
+  "problem": "P004 Product Definition cannot allocate production tolerances or proceed to PMI/drawing until production material, thermal behavior and process/metrology basis are controlled.",
+  "requirements": [
+    "REQ-GUIDE-001 slip-fit; no full-length interference",
+    "REQ-GUIDE-002 removable metal retention; no adhesive/no axial preload",
+    "P004 seat functional clearance 0.04...0.08 mm",
+    "P004 axial float target 0.04...0.08 mm"
+  ],
+  "accepted": [
+    "Design material: Ensinger TECAPEEK PVX black bearing-grade PEEK modification.",
+    "Production route basis: qualified TECAPEEK PVX stock -> CNC turning -> precision bore finishing -> controlled deburr/clean -> dimensional stabilization -> inspection.",
+    "Reference dimensional specification/verification temperature: 20 C per ISO 1:2022; actual part temperature shall be recorded for FAI/critical acceptance.",
+    "Conservative thermal screen for P004: -40 C to +55 C until a narrower local qualified envelope is controlled.",
+    "Use TECAPEEK PVX CLTE 30e-6 1/K and EN 1.4404/316L CLTE 16e-6 1/K for this screening model.",
+    "Supplier/lot CoC, stock form/effectivity and process capability remain release evidence; design material selection does not equal procurement qualification."
+  ],
+  "rejected_or_not_accepted": [
+    "Do not release ±0.01 mm on P003/P004 merely because it mathematically fits the room-temperature stack.",
+    "Do not assign P004 guide-bore tolerance before guide clearance min/max requirement is controlled.",
+    "Do not assign generic Ra values before function/process/inspection decision.",
+    "Do not author DimXpert/PMI or D004 yet."
+  ],
+  "evidence": [
+    "evidence/immutable/0f1dcf2b3f3da18f50490b225ac6997566fbd096186ead6912bd251988d6705f__K01_P004_THERMAL_TOLERANCE_SCREEN_CURRENT.json",
+    "K01 project V22 dimension architecture",
+    "Ensinger TECAPEEK PVX black manufacturer technical data",
+    "Outokumpu 316L/1.4404 physical-property data",
+    "ISO 1:2022"
+  ],
+  "impact": {
+    "CAD": "NONE",
+    "DimXpert": "NONE",
+    "Drawing": "WAITING_UPSTREAM",
+    "BOM": "P004 material identity narrowed; supplier lot/process/effectivity remains HOLD",
+    "Inspection": "basis created; final limits open"
+  },
+  "stale_triggers": [
+    "P004 local temperature envelope changes",
+    "material changed from TECAPEEK PVX black",
+    "P003 material changes from 316L",
+    "functional clearance band changes",
+    "production process changes"
+  ]
+}

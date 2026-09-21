@@ -1,0 +1,51 @@
+{
+  "schema": "k01.engineering_decision.v1",
+  "id": "EDR-027",
+  "date": "2026-09-14",
+  "title": "Accept current P007 global pressure-shell T07A screen",
+  "scope": "K01-P-007 global +0.20 bar static and -0.20 bar linear buckling only",
+  "status": "ACCEPTED_ENGINEERING_SCREEN",
+  "decision": "Accept T07A global pressure-shell evidence on current frozen C2R1 geometry. Do not require another mesh-refinement iteration for this global screen. Keep local J2 contact/seal/preload/thread/galling/leak/service qualification outside T07A.",
+  "evidence": {
+    "static": {
+      "pressure_MPa": 0.02,
+      "sigma_vm_max_MPa": 0.6147,
+      "displacement_max_mm": 0.00006257,
+      "reaction_N": 3.1229,
+      "screening_yield_MPa": 170.0,
+      "screening_FoS": 276.56,
+      "criterion_FoS_min": 2.0
+    },
+    "buckling": {
+      "reference_pressure_bar": 0.20,
+      "lambda1": 1918.67,
+      "criterion_lambda1_min": 10.0,
+      "equivalent_critical_pressure_bar": 383.734,
+      "historical_lambda1_comparison_only": 1883.6
+    },
+    "sanity_checks": [
+      "3.1229 N reaction at 0.02 MPa corresponds to 156.145 mm2 projected area / 14.100 mm equivalent diameter",
+      "current lambda1 differs from historical comparison by about 1.86%",
+      "reported mesh contains no distorted elements"
+    ]
+  },
+  "mesh_convergence": {
+    "status": "WAIVED_BY_ENGINEERING_JUDGMENT",
+    "reason": "Margins to the project screening criteria are about 138x for static strength and 192x for linear buckling; pressure reaction is geometrically reconciled and the current buckling result closely reproduces independent historical evidence. Additional refinement is not decision-changing for the present global screen."
+  },
+  "not_closed": [
+    "local J2 metal-face contact/separation",
+    "O-ring compression/load",
+    "fastener preload/torque/thread qualification",
+    "galling/service cycles",
+    "quantitative leak acceptance",
+    "thin-wall manufacturing ovality/minimum-wall capability",
+    "imperfection-sensitive nonlinear collapse"
+  ],
+  "stale_triggers": [
+    "P007 geometry or wall thickness change",
+    "material change",
+    "fixture/load-boundary change",
+    "released differential-pressure requirement change"
+  ]
+}

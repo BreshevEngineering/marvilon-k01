@@ -1,10 +1,10 @@
 {
   "schema": "k01.p007.pmi_authoring_scope.v1",
-  "generated_utc": "2026-09-08T08:38:51.096165+00:00",
-  "status": "READY_FOR_FIRST_CONTROLLED_PMI_WRITE",
+  "generated_utc": "2026-09-11T14:34:09.273875+00:00",
+  "status": "PASS_CURRENT_CANONICAL_PMI_C02_C05_READY_FOR_D006",
   "native_part": {
-    "path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
-    "sha256_before_write": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653"
+    "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-007_Hermetic_Magnetic_Can.SLDPRT",
+    "sha256_before_write": "c24c0e2ed17139f5087c3001fb4881076a73458786bfa677fcdef48c610fbc85"
   },
   "safe_authoring_scope": [
     {
@@ -14,6 +14,60 @@
       "dependencies": [],
       "candidate_spec": "FLATNESS 0.03",
       "solidworks_binding": {
+        "binding_type": "COMPOSITE_COPLANAR_FACE_SET",
+        "entities": [
+          {
+            "runtime_face_index": 1,
+            "surface_type": "plane",
+            "area_m2": 0.0005213237389183243,
+            "box_m": [
+              -0.002601496728971953,
+              -0.0165,
+              -0.0165,
+              -0.002601496728971953,
+              0.0165,
+              0.0165
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": -2.601497,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAEsAAAB85ZpqAwAAAP////8AAAAAAAAMgAAABYAIAGoAAABEgZxqBwAAAP////8AAAAAAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAABAAAAAAAAAAAAEYAAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAACAAAAAAAAAAAADIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 16,
+            "surface_type": "plane",
+            "area_m2": 4.491692096470008e-05,
+            "box_m": [
+              -0.002601496728971953,
+              -0.008,
+              -0.008,
+              -0.002601496728971953,
+              0.008,
+              0.008
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": -2.601497,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAGoAAABEgZxqBgAAAP////8AAAAAAAADgAAABYAIACcAAABbVJBqDgAAAAAAAAAAAAAAAAAAAAAA"
+          }
+        ],
+        "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
+      },
+      "historical_pre_cp_p_binding": {
         "binding_type": "COMPOSITE_COPLANAR_FACE_SET",
         "entities": [
           {
@@ -29,15 +83,46 @@
             "surface_type": "plane"
           }
         ]
-      }
+      },
+      "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
     },
     {
       "id": "C02",
       "authoring_kind": "SIZE_AND_DATUM_FEATURE_B",
       "reason": "Locator cylindrical face is uniquely bound; current CAD nominal Ø14.10 × 2.00 is authority. Do not invent locator-length tolerance.",
       "dependencies": [],
-      "candidate_spec": "Ø14.10 H7 × 1.70",
+      "candidate_spec": "Ø14.10 H7; female locator bore depth 2.00 mm nominal; depth tolerance OPEN",
       "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_FACE",
+        "entities": [
+          {
+            "runtime_face_index": 15,
+            "surface_type": "cylinder",
+            "area_m2": 8.859291283123223e-05,
+            "box_m": [
+              -0.002601496728971953,
+              -0.00705,
+              -0.00705,
+              -0.0006014967289719522,
+              0.00705,
+              0.00705
+            ],
+            "normal": [
+              0,
+              0,
+              0
+            ],
+            "radius_mm": 7.05,
+            "span_x_mm_diagnostic_only": 2,
+            "axis_x_abs": 1,
+            "center_radius_yz_mm": 0,
+            "plane_x_mm": null,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhACcAAABbVJBqDgAAAAOAAAAFgAgAJwAAAFtUkGoNAAAAAAADgAAABYAIAEQAAAAW7ZdqAwAAAAAAAAAAAAAAAAAAAAAA"
+          }
+        ],
+        "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
+      },
+      "historical_pre_cp_p_binding": {
         "binding_type": "CYLINDRICAL_FACE",
         "entities": [
           {
@@ -47,7 +132,8 @@
             "surface_type": "cylinder"
           }
         ]
-      }
+      },
+      "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
     },
     {
       "id": "C03",
@@ -58,7 +144,12 @@
         "C02"
       ],
       "candidate_spec": "PERP Ø0.03 TO A",
-      "solidworks_binding": null
+      "solidworks_binding": null,
+      "binding_status": "DERIVED_BINDING_READY_C02_AXIS_TO_DATUM_A",
+      "binding_dependencies": [
+        "C01",
+        "C02"
+      ]
     },
     {
       "id": "C04",
@@ -70,6 +161,84 @@
       ],
       "candidate_spec": "3×Ø2.90 THRU; PCD26.50 BASIC; 120° BASIC; POS Ø0.15 |A|B",
       "solidworks_binding": {
+        "binding_type": "CYLINDRICAL_PATTERN_FACES",
+        "entities": [
+          {
+            "runtime_face_index": 6,
+            "surface_type": "cylinder",
+            "area_m2": 2.7331856086231198e-05,
+            "box_m": [
+              -0.002601496728971953,
+              0.010024836600143812,
+              0.005174999999999999,
+              0.00039850327102804693,
+              0.012924836600143812,
+              0.008074999999999999
+            ],
+            "normal": [
+              0,
+              0,
+              0
+            ],
+            "radius_mm": 1.45,
+            "span_x_mm_diagnostic_only": 3,
+            "axis_x_abs": 1,
+            "center_radius_yz_mm": 13.25,
+            "plane_x_mm": null,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGwBtb0Zyb21Ta3RFbnQzSW50U3VyZklkUmVwX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/0BEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAcABhAHIAdABzAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgAuAFMATABEAFAAUgBUAAmA//7/H0sAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AAgAAKVSQav/+/wD//v8AAGkAcwAAAAAAAAAAAAAAAAD//v8HRABlAGYAYQB1AGwAdAAAAAAAAAAAAHQAYQBSAAAAgOWaagMAAAD/////AAAAAP//AQAXAG1vRnJvbVNrdEVudFN1cmZJZFJlcF9jAAAFgAgAJwAAAFtUkGoFAAAAAAAMgAAABYAIAEQAAAAW7ZdqAwAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 7,
+            "surface_type": "cylinder",
+            "area_m2": 2.7331856086231198e-05,
+            "box_m": [
+              -0.002601496728971953,
+              -0.012924836600143815,
+              0.005174999999999996,
+              0.00039850327102804693,
+              -0.010024836600143815,
+              0.008074999999999995
+            ],
+            "normal": [
+              0,
+              0,
+              0
+            ],
+            "radius_mm": 1.45,
+            "span_x_mm_diagnostic_only": 3,
+            "axis_x_abs": 1,
+            "center_radius_yz_mm": 13.25,
+            "plane_x_mm": null,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/0BEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAcABhAHIAdABzAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgAuAFMATABEAFAAUgBUAAmA//7/H0sAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AAgAAKVSQav/+/wD//v8AAGkAcwAAAAAAAAAAAAAAAAD//v8HRABlAGYAYQB1AGwAdAAAAAAAAAAAAHQAYQBfAAAAg+Waav//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAFIAAACA5ZpqAwAAAP////8AAAAAAgAAAAAAAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAABYAIACcAAABbVJBqBQAAAAAAD4AAAAWACABEAAAAFu2XagMAAAAAAAAAAAAAAAAAAAAAAA=="
+          },
+          {
+            "runtime_face_index": 8,
+            "surface_type": "cylinder",
+            "area_m2": 2.7331856086231198e-05,
+            "box_m": [
+              -0.002601496728971953,
+              -0.0014499999999999986,
+              -0.014700000000000001,
+              0.00039850327102804693,
+              0.0014500000000000019,
+              -0.011800000000000001
+            ],
+            "normal": [
+              0,
+              0,
+              0
+            ],
+            "radius_mm": 1.45,
+            "span_x_mm_diagnostic_only": 3,
+            "axis_x_abs": 1,
+            "center_radius_yz_mm": 13.25,
+            "plane_x_mm": null,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/0BEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAcABhAHIAdABzAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgAuAFMATABEAFAAUgBUAAmA//7/H0sAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AAgAAKVSQav/+/wD//v8AAGkAcwAAAAAAAAAAAAAAAAD//v8HRABlAGYAYQB1AGwAdAAAAAAAAAAAAHQAYQBfAAAAg+Waav//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAFIAAACA5ZpqAwAAAP////8AAAAAAQAAAAAAAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAABYAIACcAAABbVJBqBQAAAAAAD4AAAAWACABEAAAAFu2XagMAAAAAAAAAAAAAAAAAAAAAAA=="
+          }
+        ],
+        "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
+      },
+      "historical_pre_cp_p_binding": {
         "binding_type": "CYLINDRICAL_PATTERN_FACES",
         "entities": [
           {
@@ -91,7 +260,8 @@
             "surface_type": "cylinder"
           }
         ]
-      }
+      },
+      "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
     },
     {
       "id": "C05",
@@ -100,6 +270,108 @@
       "dependencies": [],
       "candidate_spec": "Ø33.00 ±0.05 × 3.00 ±0.05",
       "solidworks_binding": {
+        "binding_type": "FLANGE_OD_PLUS_AXIAL_FACE_SET",
+        "entities": [
+          {
+            "runtime_face_index": 2,
+            "surface_type": "cylinder",
+            "area_m2": 0.00031101767270538957,
+            "box_m": [
+              -0.002601496728971953,
+              -0.0165,
+              -0.0165,
+              0.00039850327102804693,
+              0.0165,
+              0.0165
+            ],
+            "normal": [
+              0,
+              0,
+              0
+            ],
+            "radius_mm": 16.5,
+            "span_x_mm_diagnostic_only": 3,
+            "axis_x_abs": 1,
+            "center_radius_yz_mm": 0,
+            "plane_x_mm": null,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAGwBtb0Zyb21Ta3RFbnQzSW50U3VyZklkUmVwX2MAAP//AQAGAG1vRlJfY///AQANAG1vRXh0T2JqZWN0X2P//wEAEQBtb0NTdHJpbmdIYW5kbGVfY//+/0BEADoAXABNAGEAcgB2AGkAbABvAG4AXABLADAAMQBcAGMAYQBkAFwAcABhAHIAdABzAFwASwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgAuAFMATABEAFAAUgBUAAmA//7/H0sAMAAxAC0AUAAtADAAMAA3AF8ASABlAHIAbQBlAHQAaQBjAF8ATQBhAGcAbgBlAHQAaQBjAF8AQwBhAG4AAgAAKVSQav/+/wD//v8AAGkAcwAAAAAAAAAAAAAAAAD//v8HRABlAGYAYQB1AGwAdAAAAAAAAAAAAHQAYQBLAAAAfOWaagMAAAD/////AAAAAP//AQAXAG1vRnJvbVNrdEVudFN1cmZJZFJlcF9jAAAFgAgAJwAAAFtUkGoFAAAAAAAMgAAABYAIAEQAAAAW7ZdqAwAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 1,
+            "surface_type": "plane",
+            "area_m2": 0.0005213237389183243,
+            "box_m": [
+              -0.002601496728971953,
+              -0.0165,
+              -0.0165,
+              -0.002601496728971953,
+              0.0165,
+              0.0165
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": -2.601497,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAEsAAAB85ZpqAwAAAP////8AAAAAAAAMgAAABYAIAGoAAABEgZxqBwAAAP////8AAAAAAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAABAAAAAAAAAAAAEYAAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAACAAAAAAAAAAAADIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 16,
+            "surface_type": "plane",
+            "area_m2": 4.491692096470008e-05,
+            "box_m": [
+              -0.002601496728971953,
+              -0.008,
+              -0.008,
+              -0.002601496728971953,
+              0.008,
+              0.008
+            ],
+            "normal": [
+              -1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": -2.601497,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAAFAAAAAAMAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhAEQAAAAW7ZdqAwAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAGoAAABEgZxqBgAAAP////8AAAAAAAADgAAABYAIACcAAABbVJBqDgAAAAAAAAAAAAAAAAAAAAAA"
+          },
+          {
+            "runtime_face_index": 5,
+            "surface_type": "plane",
+            "area_m2": 0.0007569431879375589,
+            "box_m": [
+              0.00039850327102804693,
+              -0.0165,
+              -0.0165,
+              0.00039850327102804693,
+              0.0165,
+              0.0165
+            ],
+            "normal": [
+              1,
+              0,
+              0
+            ],
+            "radius_mm": null,
+            "span_x_mm_diagnostic_only": 0,
+            "axis_x_abs": null,
+            "center_radius_yz_mm": null,
+            "plane_x_mm": 0.398503,
+            "persist_ref_b64": "+CoAAAMAAAD//v8AAAAAAP//AQALAG1vRmFjZVJlZl9jAQAAAAAAAAALAAAAAAIAAAAAAAB9w5QlrUmyVH3DlCWtSbJUAAD//wEAFwBtb0Zyb21Ta3RFbnRTdXJmSWRSZXBfYwAA//8BAAYAbW9GUl9j//8BAA0AbW9FeHRPYmplY3RfY///AQARAG1vQ1N0cmluZ0hhbmRsZV9j//7/QEQAOgBcAE0AYQByAHYAaQBsAG8AbgBcAEsAMAAxAFwAYwBhAGQAXABwAGEAcgB0AHMAXABLADAAMQAtAFAALQAwADAANwBfAEgAZQByAG0AZQB0AGkAYwBfAE0AYQBnAG4AZQB0AGkAYwBfAEMAYQBuAC4AUwBMAEQAUABSAFQACYD//v8fSwAwADEALQBQAC0AMAAwADcAXwBIAGUAcgBtAGUAdABpAGMAXwBNAGEAZwBuAGUAdABpAGMAXwBDAGEAbgACAAApVJBq//7/AP/+/wAAaQBzAAAAAAAAAAAAAAAAAP/+/wdEAGUAZgBhAHUAbAB0AAAAAAAAAAAAdABhACcAAABbVJBqBQAAAP//AQAbAG1vRnJvbVNrdEVudDNJbnRTdXJmSWRSZXBfYwAABYAIAEsAAAB85ZpqAwAAAP////8AAAAAAAD//wEAGABtb0NpclBhdHRlcm5TdXJmSWRSZXAyX2MAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAABAAAAAAAAAAAAD4AAAAWACABfAAAAg+WaagyAAAAFgAgAUgAAAIDlmmoDAAAA/////wAAAAACAAAAAAAAAAAADIAAAAWACABSAAAAgOWaagMAAAD/////AAAAAAAAA4AAAAWACAAnAAAAW1SQagYAAAAAAAAAAAAAAAAAAAAAAA=="
+          }
+        ],
+        "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
+      },
+      "historical_pre_cp_p_binding": {
         "binding_type": "CYLINDRICAL_FACE",
         "entities": [
           {
@@ -109,7 +381,8 @@
             "surface_type": "cylinder"
           }
         ]
-      }
+      },
+      "binding_status": "PASS_CANONICAL_PERSISTENT_REF"
     },
     {
       "id": "C09",
@@ -174,7 +447,18 @@
     "author_only_safe_scope": true,
     "open_spec_characteristics_must_not_be_authored_as_released": true,
     "save_to_controlled_candidate_copy_first": true,
-    "do_not_overwrite_gate04e_authority_part": true
+    "do_not_overwrite_gate04e_authority_part": true,
+    "do_not_use_historical_pre_cp_p_persistent_refs": true
   },
-  "next_step": "SOLIDWORKS_PMI_AUTHORING_CANDIDATE_COPY"
+  "next_step": "K01_D006_PROFESSIONAL_CANDIDATE_PLUS_CONTROLLED_ADVANCED_PMI",
+  "historical_pre_cp_p_native_part": {
+    "path": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
+    "sha256_before_write": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653"
+  },
+  "canonical_persistent_rebind_report": "reports/cad/p007_pmi_authoring/K01_P007_CANONICAL_PERSISTENT_REBIND_RAW.json",
+  "current_proven_pmi_report": "reports/control/K01_P007_PMI_PROVEN_CURRENT.json",
+  "current_proven_candidate": {
+    "path": "D:\\Marvilon\\K01\\cad\\candidates\\p007_pmi_authoring\\proven_step13_current_20260911_173347\\K01-P-007_Hermetic_Magnetic_Can_PMI_PROVEN_CURRENT_CANDIDATE.SLDPRT",
+    "sha256": "e89be7e2fdb04d0c2021d305983ccef3d04ee0fbd546a4aaf466a1c6c957b59b"
+  }
 }

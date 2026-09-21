@@ -1,0 +1,46 @@
+{
+  "schema": "k01.p004.capability_boundary.current.v1",
+  "generated_utc": "2026-09-18T19:29:40.753601+00:00",
+  "status": "PASS_P004_CAPABILITY_BOUNDARY__CANONICAL_NATIVE_OAL_RECONCILED__NUMERIC_SPLIT_EXTERNAL",
+  "part_id": "K01-P-004",
+  "reference_temperature_C": 20,
+  "capability_evidence_boundary": {
+    "route_feasibility": "SUPPORTED__CNC_MACHINING_OF_TECAPEEK_PVX/PEEK",
+    "material_dimensional_stability": "SUPPORTED_QUALITATIVELY",
+    "stress_relief_anneal_relevance": "SUPPORTED_QUALITATIVELY_FOR_NARROW_TOLERANCE_PEEK_MACHINING",
+    "numeric_process_capability": "NOT_PROVEN_IN_CURRENT_REPO",
+    "numeric_metrology_uncertainty": "NOT_PROVEN_IN_CURRENT_REPO",
+    "supplier_lot_stock_CoC": "OPEN",
+    "statistical_capability_or_FAI_measurements": "NOT_FOUND_IN_CURRENT_REPO",
+    "records": []
+  },
+  "seat": {
+    "nominal_clearance_mm": 0.06,
+    "decision": "RETAIN",
+    "production_tolerance_split": "WAITING_EXTERNAL_CAPABILITY_EVIDENCE"
+  },
+  "axial": {
+    "previous_pre_promotion_nominal_float_mm": 0.05,
+    "canonical_P004_OAL_nominal_mm": 7.99,
+    "canonical_nominal_float_20C_mm": 0.06,
+    "canonical_stack_equation": "11.05 - (3.00 + 7.99) = 0.06",
+    "P003_geometry": "UNCHANGED",
+    "P014_geometry": "UNCHANGED",
+    "combined_half_budget_mm": 0.02,
+    "production_tolerance_split": "WAITING_EXTERNAL_CAPABILITY_EVIDENCE",
+    "authority": "control/decisions/EDR-047_P004_AXIAL_RECENTER.json"
+  },
+  "service_screen": {
+    "F20_target_mm": 0.06,
+    "F55_screen_mm": 0.056108,
+    "Fminus40_extrapolated_screen_mm": 0.066672,
+    "qualification_boundary": "55C engineering screen only; -40C remains L8 qualification/open because low-temperature material property is not directly controlled."
+  },
+  "external_evidence_required": true,
+  "native_mutation": "PERFORMED_BY_EDR047_CANONICAL_PROMOTION_BEFORE_THIS_RECONCILIATION__STAGE04_NONE",
+  "superseded_architecture": {
+    "path": "control/decisions/EDR-047_P004_CAPABILITY_BOUNDARY_AND_AXIAL_NOMINAL_RECENTER.json",
+    "disposition": "SUPERSEDED_ALTERNATE_REQUIREMENT_LEVEL_BRANCH",
+    "note": "Retain-P004-at-8.000 / H_nom=8.060 branch is not current because native P004 and canonical promotion evidence are 7.990 mm."
+  }
+}

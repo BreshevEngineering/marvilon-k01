@@ -1,0 +1,19 @@
+{
+  "decision_id": "EDR-053",
+  "title": "P004 external-evidence dependency classification and module completion frontier advance",
+  "status": "ACCEPTED_PROGRAM_FRONTIER_ADVANCE__P004_WAITING_EXTERNAL__T05_ACTIVE",
+  "date": "2026-09-18",
+  "problem": "P004 physical evidence acquisition is externally dependent. Treating it as the only active project blocker incorrectly stops independent calibration-module design closure work.",
+  "authority_rule": "This decision changes work routing only. It does not close P004 Product Definition, does not release any P004 tolerance, and does not change CAD geometry.",
+  "decision": [
+    "Keep K01-P-004 Product Definition OPEN and reclassify P004-EXTERNAL-EVIDENCE-ACQUISITION as WAITING_EXTERNAL.",
+    "Change the active deliverable to K01-A-001 CALIBRATION MODULE DESIGN FREEZE at lifecycle L5.",
+    "Activate exactly one executable WIP: T05 J2 local contact/separation FEA on final C2R1 P003/P007 geometry.",
+    "Do not restart T07A global P007 static/buckling or the passed FEMM numerical candidate unless a stale trigger occurs.",
+    "Continue independent executable module closures while physical qualification and user-controlled drawing work remain external."
+  ],
+  "next_active": "J2-T05-LOCAL-CONTACT-FEA",
+  "p004_state": "WAITING_EXTERNAL__PRODUCT_DEFINITION_NOT_READY",
+  "native_mutation": "NONE",
+  "generated_utc": "2026-09-18T19:50:06.474460+00:00"
+}

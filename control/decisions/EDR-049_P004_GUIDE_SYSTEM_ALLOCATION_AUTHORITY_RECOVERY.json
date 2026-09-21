@@ -1,0 +1,78 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-049",
+  "date": "2026-09-18",
+  "subject": "P004/P001 guide system-allocation authority recovery",
+  "status": "ACCEPTED_AUTHORITY_RECOVERY__NO_NUMERIC_SYSTEM_ALLOCATION__EXTERNAL_REQUIREMENT_OR_CHARACTERIZATION_REQUIRED",
+  "goal": "Determine whether a controlled numeric system-level repeatability allocation exists to bound P001↔P004 guide clearance; if absent, expose the dependency rather than inventing a fit.",
+  "authority": [
+    "control/decisions/EDR-040_P004_GUIDE_CLEARANCE_AUTHORITY_BOUNDARY.json",
+    "control/requirements/K01_RELEASE_REQUIREMENTS_CURRENT.json",
+    "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json",
+    "evidence/immutable/83dedb6a0803cfe6c43c20d3ef50c3b7b120343b43f0b1e8ee161fb39a139e5d__K01-P-004_READINESS_CURRENT.json",
+    "control/product_definition/K01_P004_PRODUCT_DEFINITION_WORKPACK_CURRENT.json"
+  ],
+  "inputs": {
+    "authorities_checked": [
+      "control/requirements/K01_RELEASE_REQUIREMENTS_CURRENT.json",
+      "control/decisions/EDR-040_P004_GUIDE_CLEARANCE_AUTHORITY_BOUNDARY.json",
+      "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json",
+      "evidence/immutable/83dedb6a0803cfe6c43c20d3ef50c3b7b120343b43f0b1e8ee161fb39a139e5d__K01-P-004_READINESS_CURRENT.json",
+      "control/product_definition/K01_P004_PRODUCT_DEFINITION_WORKPACK_CURRENT.json"
+    ],
+    "current_requirement_ids_matching_scope": [],
+    "keyword_hits_in_release_requirements": [],
+    "numeric_system_allocation_found": false,
+    "legacy_or_planning_mentions_are_authority": false,
+    "nominal_geometry_is_requirement_authority": false
+  },
+  "engineering_question": "Is there a current controlled numeric radial/angular/optical repeatability allocation that can be converted into P001↔P004 guide-clearance limits?",
+  "options": [
+    {
+      "id": "A",
+      "description": "Release guide clearance from the 5.055/5.000 nominal geometry or generic fits.",
+      "disposition": "REJECTED_NO_REQUIREMENT_AUTHORITY"
+    },
+    {
+      "id": "B",
+      "description": "Use a current controlled system-level numeric allocation if one exists.",
+      "disposition": "NOT_AVAILABLE_IN_CURRENT_AUTHORITIES"
+    },
+    {
+      "id": "C",
+      "description": "Keep numeric guide clearance open and create an explicit external requirement/characterization dependency.",
+      "disposition": "ACCEPTED"
+    }
+  ],
+  "technical_filter": {
+    "function": "OPEN_NUMERIC_SYSTEM_ACCEPTANCE",
+    "tolerance": "HOLD_NUMERIC_ALLOCATION",
+    "manufacturing": "NO_NEW_VALUES",
+    "inspection": "CHARACTERIZATION_METHOD_REQUIRED_IF_NO_STAKEHOLDER_REQUIREMENT",
+    "assembly": "NOMINAL_ARCHITECTURE_UNCHANGED",
+    "thermal": "NO_CHANGE_EDR045_BOUNDARY",
+    "CAD": "NONE"
+  },
+  "decision": [
+    "No controlled numeric system-level radial, angular or optical repeatability allocation was found in the current release requirements or active P004 authorities.",
+    "EDR-040 remains valid: P004 bore Ø5.055 and P001 rod Ø5.000 establish only 0.055 mm nominal diametral clearance; they do not establish acceptable guide-clearance min/max.",
+    "Do not release P004 bore tolerance, P001 rod tolerance, guide-form/GPS numeric values, or a guide-clearance band from nominal geometry or generic fit practice.",
+    "Classify GUIDE_NUMERIC as WAITING_EXTERNAL_REQUIREMENT_OR_CHARACTERIZATION_EVIDENCE.",
+    "A stakeholder/system requirement is preferred. If none exists, a controlled physical characterization may quantify current radial/angular/optical repeatability, but characterization results do not become a release requirement without an explicit system acceptance basis.",
+    "No native CAD, DimXpert or drawing mutation is authorized."
+  ],
+  "external_evidence_required": [
+    "Controlled system/stakeholder acceptance requirement for allowable calibration-rod/target radial or angular repositioning and/or optical calibration repeatability; OR",
+    "controlled characterization test results with method, setup, positions/stroke, repetitions, environmental conditions, raw results and uncertainty, followed by an explicit engineering allocation decision tying measured mechanical play to acceptable system/optical performance",
+    "P001 size/form capability and P004 bore size/form capability before final production tolerance split"
+  ],
+  "expected_closure": "PASS_P004_GUIDE_REQUIREMENT_AUTHORITY_RECOVERED_OR_EXPLICIT_EXTERNAL_DEPENDENCY",
+  "downstream_impact": {
+    "P004_guide_size_tolerance": "WAITING_EXTERNAL",
+    "P001_rod_tolerance": "WAITING_EXTERNAL",
+    "guide_GPS_numeric": "WAITING_EXTERNAL/DEPENDENCY",
+    "CAD": "NONE",
+    "DimXpert": "NONE",
+    "drawing": "NONE"
+  }
+}

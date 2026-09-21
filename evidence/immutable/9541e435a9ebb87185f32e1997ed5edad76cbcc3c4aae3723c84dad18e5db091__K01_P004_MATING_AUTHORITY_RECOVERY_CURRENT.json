@@ -1,0 +1,454 @@
+{
+  "schema": "k01.p004.mating_authority_recovery.current.v1",
+  "generated_utc": "2026-09-18T10:17:20.362948+00:00",
+  "status": "PASS_AUTHORITY_INVENTORY__JOINT_TOLERANCE_DECISION_READY",
+  "question": "What controlled P003/P014 authorities exist for P004 seat and axial chains?",
+  "P003": {
+    "part": "K01-P-003",
+    "released_authority_proven": false,
+    "reasons": [
+      "no explicit READY/RELEASED mating-part Product Definition proven"
+    ],
+    "candidate_records": [
+      {
+        "path": "control/decisions/EDR-034_P003_DRAWING_DATUM_NAMESPACE.json",
+        "schema": "k01.engineering_decision.v1",
+        "status": "ACCEPTED_DRAWING_DEFINITION",
+        "product_definition_ready": null,
+        "next_blocker": null
+      }
+    ],
+    "relevant_hits": [
+      {
+        "path": "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json",
+        "line": 58,
+        "context": "      },\n      \"production_tolerance\": \"OPEN\",\n      \"dependency\": \"temperature applicability + process capability + P003/P004 joint allocation\"\n    },\n    {"
+      },
+      {
+        "path": "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json",
+        "line": 146,
+        "context": "  \"open_release_blockers\": [\n    \"P001/P004 guide-clearance numeric min/max and size/form tolerance allocation — WAITING_DEPENDENCY on system radial/angular/optical repeatability allocation\",\n    \"temperature-aware P003/P004 tolerance allocation\",\n    \"P004 axial worst-case tolerance allocation\",\n    \"functional datum/GPS limits\","
+      },
+      {
+        "path": "reports/product_definition/K01-P-004_READINESS_CURRENT.json",
+        "line": 44,
+        "context": "      \"dependency\": \"P003 Ø6.60 seat production authority\",\n      \"blocks\": [\n        \"P003/P004 worst-case split\"\n      ]\n    },"
+      },
+      {
+        "path": "control/decisions/EDR-038_P004_MATERIAL_THERMAL_PROCESS_BASIS.json",
+        "line": 11,
+        "context": "    \"REQ-GUIDE-001 slip-fit; no full-length interference\",\n    \"REQ-GUIDE-002 removable metal retention; no adhesive/no axial preload\",\n    \"P004 seat functional clearance 0.04...0.08 mm\",\n    \"P004 axial float target 0.04...0.08 mm\"\n  ],"
+      },
+      {
+        "path": "control/decisions/EDR-038_P004_MATERIAL_THERMAL_PROCESS_BASIS.json",
+        "line": 23,
+        "context": "  ],\n  \"rejected_or_not_accepted\": [\n    \"Do not release ±0.01 mm on P003/P004 merely because it mathematically fits the room-temperature stack.\",\n    \"Do not assign P004 guide-bore tolerance before guide clearance min/max requirement is controlled.\",\n    \"Do not assign generic Ra values before function/process/inspection decision.\","
+      },
+      {
+        "path": "control/decisions/EDR-041_P004_SEAT_AXIAL_TOLERANCE_ARCHITECTURE.json",
+        "line": 5,
+        "context": "  \"decision_id\": \"EDR-041\",\n  \"date\": \"2026-09-17\",\n  \"subject\": \"P004 seat and axial tolerance architecture under thermal variation\",\n  \"status\": \"ACCEPTED_ARCHITECTURE_FINDING__NO_PRODUCTION_TOLERANCE_RELEASE\",\n  \"decision\": ["
+      },
+      {
+        "path": "control/decisions/EDR-041_P004_SEAT_AXIAL_TOLERANCE_ARCHITECTURE.json",
+        "line": 8,
+        "context": "  \"status\": \"ACCEPTED_ARCHITECTURE_FINDING__NO_PRODUCTION_TOLERANCE_RELEASE\",\n  \"decision\": [\n    \"Retain P003/P004 seat nominal clearance 0.060 mm as the current architecture nominal; it is near the thermally centered safe-window value and no CAD change is justified by screening alone.\",\n    \"Do not release seat production tolerances until the 0.04...0.08 band temperature applicability and manufacturing/metrology capability are explicitly controlled.\",\n    \"Do not release P004 axial production tolerance around the current 0.050 mm nominal under a full-temperature 0.04...0.08 interpretation; the low-side combined budget is too narrow to accept without capability evidence.\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 429,
+        "context": "              \"A001.stroke\": 10.0,\n              \"P003.length\": 38.0,\n              \"P003.P004_seat_ID\": 6.6,\n              \"P003.stop_in\": 12.0,\n              \"P003.stop_out\": 24.0,"
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 11038,
+        "context": "          \"path\": \"control/baseline/K01_FINAL_ASSEMBLY_BASELINE_v2_2.json\",\n          \"json_path\": \"$\",\n          \"field\": \"$.critical_geometry_mm.P003.P004_seat_ID\",\n          \"value\": 6.6\n        },"
+      },
+      {
+        "path": "reports/engineering/K01_P004_CALCULATION_REGISTER_CURRENT.json",
+        "line": 7,
+        "context": "    {\n      \"id\": \"P004-CALC-001\",\n      \"question\": \"P003 seat-to-P004 OD nominal diametral clearance\",\n      \"equation\": \"6.60 - 6.54\",\n      \"result_mm\": 0.06,"
+      },
+      {
+        "path": "reports/engineering/K01_P004_CALCULATION_REGISTER_CURRENT.json",
+        "line": 8,
+        "context": "      \"id\": \"P004-CALC-001\",\n      \"question\": \"P003 seat-to-P004 OD nominal diametral clearance\",\n      \"equation\": \"6.60 - 6.54\",\n      \"result_mm\": 0.06,\n      \"requirement_mm\": ["
+      },
+      {
+        "path": "reports/engineering/K01_P004_DEPENDENCY_CLOSURE_PLAN_CURRENT.json",
+        "line": 25,
+        "context": "      \"dependency\": \"P003 Ø6.60 seat production authority\",\n      \"blocks\": [\n        \"P003/P004 worst-case split\"\n      ]\n    },"
+      },
+      {
+        "path": "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.json",
+        "line": 66,
+        "context": "    {\n      \"id\": \"P004-CALC-001\",\n      \"question\": \"P003 seat-to-P004 OD nominal diametral clearance\",\n      \"equation\": \"6.60 - 6.54\",\n      \"result_mm\": 0.06,"
+      },
+      {
+        "path": "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.json",
+        "line": 67,
+        "context": "      \"id\": \"P004-CALC-001\",\n      \"question\": \"P003 seat-to-P004 OD nominal diametral clearance\",\n      \"equation\": \"6.60 - 6.54\",\n      \"result_mm\": 0.06,\n      \"requirement_mm\": ["
+      },
+      {
+        "path": "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.json",
+        "line": 101,
+        "context": "  \"current_blockers\": [\n    \"P001↔P004 guide clearance functional min/max requirement\",\n    \"P003/P004 production tolerance allocation\",\n    \"P004 axial worst-case tolerance allocation\",\n    \"production TECAPEEK PVX grade/process data\","
+      },
+      {
+        "path": "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.md",
+        "line": 14,
+        "context": "\n## Nominal calculations\n- **P004-CALC-001** — 6.60 - 6.54 = **0.06 mm** — DERIVED__TOLERANCE_ALLOCATION_OPEN\n- **P004-CALC-002** — 5.055 - 5.000 = **0.055 mm** — DERIVED_NOMINAL_ONLY__REQUIREMENT_OPEN\n- **P004-CALC-003** — 11.05 - (3.00 + 8.00) = **0.05 mm** — DERIVED_EXISTING_CONTROL__WORST_CASE_OPEN"
+      },
+      {
+        "path": "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.md",
+        "line": 20,
+        "context": "## Blockers\n- P001↔P004 guide clearance functional min/max requirement\n- P003/P004 production tolerance allocation\n- P004 axial worst-case tolerance allocation\n- production TECAPEEK PVX grade/process data"
+      },
+      {
+        "path": "reports/engineering/K01_P004_THERMAL_TOLERANCE_SCREEN_CURRENT.json",
+        "line": 61,
+        "context": "  },\n  \"interpretation\": [\n    \"Nominal P003/P004 seat clearance stays positive from -40 to +55 C.\",\n    \"Nominal P001/P004 guide clearance stays positive from -40 to +55 C.\",\n    \"Nominal P004 axial float stays inside 0.04...0.08 mm across the conservative temperature screen.\","
+      },
+      {
+        "path": "docs/K01_MANUFACTURING_ASSEMBLY_ROUTER_v1.md",
+        "line": 70,
+        "context": "## Subassembly sequence\n\n1. Verify cleaned P003, P001, P002, P004, P006, P008, P009, P013, P014.\n2. Install guide/stop stack into P003 from the designed service direction.\n3. Set P002 axial float using P006 relief; install P006."
+      }
+    ]
+  },
+  "P014": {
+    "part": "K01-P-014",
+    "released_authority_proven": false,
+    "reasons": [
+      "no part-specific product-definition/current decision record found",
+      "no explicit READY/RELEASED mating-part Product Definition proven"
+    ],
+    "candidate_records": [],
+    "relevant_hits": [
+      {
+        "path": "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json",
+        "line": 12,
+        "context": "    \"sliding clearance\",\n    \"slip fit in P003\",\n    \"axial retention by P014\",\n    \"no thermal binding\",\n    \"serviceable/replaceable\""
+      },
+      {
+        "path": "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json",
+        "line": 62,
+        "context": "    {\n      \"id\": \"P004-C03\",\n      \"name\": \"OAL / axial float chain\",\n      \"nominal\": \"8.00\",\n      \"status\": \"DERIVED\","
+      },
+      {
+        "path": "control/product_definition/K01_P004_PRODUCT_DEFINITION_WORKPACK_CURRENT.json",
+        "line": 23,
+        "context": "      \"sha256\": \"34184c4e5910f7128c8134aae01a9a4c06d465a2b690d1a7f302caca93a0580c\"\n    },\n    \"P014\": {\n      \"path\": \"D:\\\\Marvilon\\\\K01\\\\cad\\\\parts\\\\K01-P-014_Front_Guide_Retaining_Ring.SLDPRT\",\n      \"exists\": true,"
+      },
+      {
+        "path": "control/product_definition/K01_P004_PRODUCT_DEFINITION_WORKPACK_CURRENT.json",
+        "line": 53,
+        "context": "    {\n      \"id\": \"F04\",\n      \"text\": \"Be axially retained by P014 / housing stack without adhesive or preload.\"\n    },\n    {"
+      },
+      {
+        "path": "control/product_definition/K01_P004_PRODUCT_DEFINITION_WORKPACK_CURRENT.json",
+        "line": 82,
+        "context": "      \"id\": \"IF-03\",\n      \"P004\": \"axial faces / L8.00 nominal\",\n      \"mate\": \"P003 stack + P014\",\n      \"function\": \"axial retention/float\",\n      \"status\": \"NOMINAL_CHAIN_EVIDENCE_EXISTS__TOLERANCE_OPEN\""
+      },
+      {
+        "path": "control/product_definition/K01_P004_PRODUCT_DEFINITION_WORKPACK_CURRENT.json",
+        "line": 102,
+        "context": "    \"IF-02 tolerance allocation closes 0.04...0.08 mm clearance worst-case.\",\n    \"IF-01 functional guide clearance min/nom/max is controlled and tolerance budget allocated.\",\n    \"L8.00 axial chain closes required axial float worst-case.\",\n    \"Functional datum system is released.\",\n    \"Bore-to-OD axis relation is released.\","
+      },
+      {
+        "path": "reports/product_definition/K01-P-004_READINESS_CURRENT.json",
+        "line": 14,
+        "context": "  \"open_blocker_count\": 6,\n  \"next_blocker\": \"P004-MATING-AUTHORITY-RECOVERY\",\n  \"next\": \"Recover current P003 Ø6.60 seat and P014/P003 axial-stack production authorities, then decide joint worst-case tolerance allocation. Read-only; no CAD/DimXpert/drawing mutation.\",\n  \"guide_clearance_state\": \"WAITING_DEPENDENCY__NUMERIC_SYSTEM_ALLOCATION\",\n  \"waiting_dependency\": ["
+      },
+      {
+        "path": "reports/product_definition/K01-P-004_READINESS_CURRENT.json",
+        "line": 50,
+        "context": "      \"id\": \"AXIAL_TOLERANCE\",\n      \"state\": \"EXECUTABLE_AFTER_MATING_AUTHORITY_RECOVERY\",\n      \"dependency\": \"P003/P014 axial-stack production authorities\",\n      \"blocks\": [\n        \"P004 OAL tolerance\","
+      },
+      {
+        "path": "control/decisions/EDR-038_P004_MATERIAL_THERMAL_PROCESS_BASIS.json",
+        "line": 12,
+        "context": "    \"REQ-GUIDE-002 removable metal retention; no adhesive/no axial preload\",\n    \"P004 seat functional clearance 0.04...0.08 mm\",\n    \"P004 axial float target 0.04...0.08 mm\"\n  ],\n  \"accepted\": ["
+      },
+      {
+        "path": "control/decisions/EDR-044_P004_DATUM_FUNCTION_CORRECTION.json",
+        "line": 7,
+        "context": "  \"subject\": \"P004 datum architecture correction from assembly constraint hierarchy\",\n  \"status\": \"ACCEPTED_CORRECTION__DATUM_ARCHITECTURE\",\n  \"stale_trigger\": \"EDR-042 used an axial face as primary datum, while accepted assembly architecture radially locates P004 by Ø6.54 OD and intentionally retains axial float with P014 and no preload.\",\n  \"supersedes\": {\n    \"decision\": \"EDR-042\","
+      },
+      {
+        "path": "control/decisions/EDR-044_P004_DATUM_FUNCTION_CORRECTION.json",
+        "line": 22,
+        "context": "  \"basis\": [\n    \"P004 OD Ø6.54 is the P003 locating/slip-fit interface.\",\n    \"P004 is retained by P014 without adhesive or axial preload.\",\n    \"P004 axial float is intentional.\"\n  ],"
+      },
+      {
+        "path": "control/decisions/EDR-044_P004_DATUM_FUNCTION_CORRECTION.json",
+        "line": 23,
+        "context": "    \"P004 OD Ø6.54 is the P003 locating/slip-fit interface.\",\n    \"P004 is retained by P014 without adhesive or axial preload.\",\n    \"P004 axial float is intentional.\"\n  ],\n  \"impact\": {"
+      },
+      {
+        "path": "reports/engineering/K01_GATE04E_AS_BUILT_PASSPORT_CURRENT.json",
+        "line": 225,
+        "context": "      \"material_authority\": \"OPEN; 1.4310 / AISI 301 candidate\",\n      \"material_status\": \"OPEN\",\n      \"description\": \"Front Guide Retaining Ring / IN Stop\"\n    },\n    {"
+      },
+      {
+        "path": "reports/engineering/K01_GATE04E_AS_BUILT_PASSPORT_CURRENT.json",
+        "line": 335,
+        "context": "      \"MID_q_mm\": 5.0,\n      \"OUT_q_mm\": 10.0,\n      \"evidence\": \"Front Guide Retaining Ring / IN Stop\"\n    },\n    \"B001_center_states\": {"
+      },
+      {
+        "path": "reports/engineering/K01_GATE04E_AS_BUILT_PASSPORT_CURRENT.json",
+        "line": 517,
+        "context": "      \"material_authority\": \"OPEN; 1.4310 / AISI 301 candidate\",\n      \"material_status\": \"OPEN\",\n      \"description\": \"Front Guide Retaining Ring / IN Stop\"\n    },\n    {"
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 574,
+        "context": "              {\n                \"PartNo\": \"K01-P-014\",\n                \"Description\": \"Front Guide Retaining Ring\",\n                \"Observed_or_Controlled_Material\": \"OPEN\",\n                \"ControlStatus\": \"OPEN\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 587,
+        "context": "              }\n            ],\n            \"recommended_timing\": \"Do not spend time on final BOM projection before T05/T07 and P014/P015/B001 decisions. Maintain the 13-row structure BOM now; do one controlled projection/reconciliation near PRR.\"\n          }\n        },"
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 860,
+        "context": "                \"cad_identity_key\": \"K01-P-014\",\n                \"cad_property_projection\": {\n                  \"Description\": \"Front Guide Retaining Ring / IN Stop\",\n                  \"MakeBuy\": \"MAKE\",\n                  \"MaterialAuthority\": \"OPEN; 1.4310 / AISI 301 candidate\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 867,
+        "context": "                  \"Revision\": \"\"\n                },\n                \"description\": \"Front Guide Retaining Ring / IN Stop\",\n                \"item_type\": \"MANUFACTURED\",\n                \"make_buy\": \"MAKE\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 1278,
+        "context": "              \"cad_identity_key\": \"K01-P-014\",\n              \"cad_property_projection\": {\n                \"Description\": \"Front Guide Retaining Ring / IN Stop\",\n                \"MakeBuy\": \"MAKE\",\n                \"MaterialAuthority\": \"OPEN; 1.4310 / AISI 301 candidate\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 1285,
+        "context": "                \"Revision\": \"\"\n              },\n              \"description\": \"Front Guide Retaining Ring / IN Stop\",\n              \"item_type\": \"MANUFACTURED\",\n              \"make_buy\": \"MAKE\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 3326,
+        "context": "                  {\n                    \"part_no\": \"K01-P-014\",\n                    \"description\": \"Front Guide Retaining Ring / IN Stop\",\n                    \"qty\": 1,\n                    \"unit\": \"ea\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 3811,
+        "context": "                {\n                  \"part_no\": \"K01-P-014\",\n                  \"description\": \"Front Guide Retaining Ring / IN Stop\",\n                  \"qty\": 1,\n                  \"unit\": \"ea\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 4229,
+        "context": "              {\n                \"part_no\": \"K01-P-014\",\n                \"description\": \"Front Guide Retaining Ring / IN Stop\",\n                \"qty\": 1,\n                \"unit\": \"ea\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 4562,
+        "context": "                  \"K01-P-014_\"\n                ],\n                \"description\": \"Front Guide Retaining Ring / IN Stop\",\n                \"make_buy\": \"MAKE\",\n                \"material_authority\": \"OPEN; 1.4310 / AISI 301 candidate\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 4678,
+        "context": "              },\n              \"K01-P-014\": {\n                \"description\": \"Front Guide Retaining Ring / IN Stop\",\n                \"make_buy\": \"MAKE/BUY\"\n              },"
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 4762,
+        "context": "            },\n            \"K01-P-014\": {\n              \"description\": \"Front Guide Retaining Ring / IN Stop\",\n              \"make_buy\": \"MAKE/BUY\"\n            },"
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 5629,
+        "context": "              {\n                \"part_no\": \"K01-P-014\",\n                \"description\": \"Front Guide Retaining Ring / IN Stop\",\n                \"qty\": 1,\n                \"unit\": \"ea\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 5809,
+        "context": "              {\n                \"part_no\": \"K01-P-014\",\n                \"description\": \"Front Guide Retaining Ring / IN Stop\",\n                \"qty\": 1,\n                \"unit\": \"ea\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 6310,
+        "context": "                  {\n                    \"PartNo\": \"K01-P-014\",\n                    \"Description\": \"Front Guide Retaining Ring / IN Stop\",\n                    \"Qty\": 1,\n                    \"Type\": \"MANUFACTURED\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 6559,
+        "context": "                  {\n                    \"PartNo\": \"K01-P-014\",\n                    \"Description\": \"Front Guide Retaining Ring / IN Stop\",\n                    \"Qty\": 1,\n                    \"Type\": \"MANUFACTURED\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 6840,
+        "context": "                  {\n                    \"PartNo\": \"K01-P-014\",\n                    \"Description\": \"Front Guide Retaining Ring / IN Stop\",\n                    \"Qty\": 1,\n                    \"Type\": \"MANUFACTURED\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 7559,
+        "context": "                {\n                  \"part_number\": \"K01-P-014\",\n                  \"description\": \"Front Guide Retaining Ring / IN Stop\",\n                  \"item_type\": \"MANUFACTURED\",\n                  \"material\": \"OPEN; 1.4310 / AISI 301 candidate\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 7631,
+        "context": "                {\n                  \"part_number\": \"K01-P-014\",\n                  \"description\": \"Front Guide Retaining Ring / IN Stop\",\n                  \"item_type\": \"MANUFACTURED\",\n                  \"material\": \"OPEN; 1.4310 / AISI 301 candidate\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 9665,
+        "context": "                {\n                  \"PartNo\": \"K01-P-014\",\n                  \"Description\": \"Front Guide Retaining Ring / IN Stop\",\n                  \"Qty\": 1,\n                  \"Type\": \"MANUFACTURED\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 9914,
+        "context": "                {\n                  \"PartNo\": \"K01-P-014\",\n                  \"Description\": \"Front Guide Retaining Ring / IN Stop\",\n                  \"Qty\": 1,\n                  \"Type\": \"MANUFACTURED\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 10195,
+        "context": "                {\n                  \"PartNo\": \"K01-P-014\",\n                  \"Description\": \"Front Guide Retaining Ring / IN Stop\",\n                  \"Qty\": 1,\n                  \"Type\": \"MANUFACTURED\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 10534,
+        "context": "              {\n                \"PartNo\": \"K01-P-014\",\n                \"Description\": \"Front Guide Retaining Ring / IN Stop\",\n                \"Qty\": 1,\n                \"Type\": \"MANUFACTURED\","
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 11653,
+        "context": "              },\n              \"K01-P-014\": {\n                \"description\": \"Front Guide Retaining Ring / IN Stop\",\n                \"make_buy\": \"MAKE/BUY\"\n              },"
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_INPUT_ADJUDICATION_STEP8F_CURRENT.json",
+        "line": 11737,
+        "context": "            },\n            \"K01-P-014\": {\n              \"description\": \"Front Guide Retaining Ring / IN Stop\",\n              \"make_buy\": \"MAKE/BUY\"\n            },"
+      },
+      {
+        "path": "reports/engineering/K01_MAGNETIC_REQUIREMENTS_STEP8H_CURRENT.json",
+        "line": 39,
+        "context": "      \"id\": \"REQ-MAG-003\",\n      \"status\": \"BASELINE\",\n      \"text\": \"External magnetic carriage design travel is 12.00 mm; final magnetic lag is recalculated after B001/B002 grade selection.\",\n      \"satisfied_by\": \"B001+B002+P010\",\n      \"verified_by\": \"final magnetic model + assembly travel test\","
+      },
+      {
+        "path": "reports/engineering/K01_P004_CALCULATION_REGISTER_CURRENT.json",
+        "line": 29,
+        "context": "    {\n      \"id\": \"P004-CALC-003\",\n      \"question\": \"P004 nominal axial float from current dimension architecture\",\n      \"equation\": \"11.05 - (3.00 + 8.00)\",\n      \"result_mm\": 0.05,"
+      },
+      {
+        "path": "reports/engineering/K01_P004_CALCULATION_REGISTER_CURRENT.json",
+        "line": 30,
+        "context": "      \"id\": \"P004-CALC-003\",\n      \"question\": \"P004 nominal axial float from current dimension architecture\",\n      \"equation\": \"11.05 - (3.00 + 8.00)\",\n      \"result_mm\": 0.05,\n      \"requirement_mm\": ["
+      },
+      {
+        "path": "reports/engineering/K01_P004_DEPENDENCY_CLOSURE_PLAN_CURRENT.json",
+        "line": 31,
+        "context": "      \"id\": \"AXIAL_TOLERANCE\",\n      \"state\": \"EXECUTABLE_AFTER_MATING_AUTHORITY_RECOVERY\",\n      \"dependency\": \"P003/P014 axial-stack production authorities\",\n      \"blocks\": [\n        \"P004 OAL tolerance\","
+      },
+      {
+        "path": "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.json",
+        "line": 22,
+        "context": "    {\n      \"id\": \"F04\",\n      \"text\": \"Be axially retained by P014 / housing stack without adhesive or preload.\"\n    },\n    {"
+      },
+      {
+        "path": "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.json",
+        "line": 51,
+        "context": "      \"id\": \"IF-03\",\n      \"P004\": \"axial faces / L8.00 nominal\",\n      \"mate\": \"P003 stack + P014\",\n      \"function\": \"axial retention/float\",\n      \"status\": \"NOMINAL_CHAIN_EVIDENCE_EXISTS__TOLERANCE_OPEN\""
+      },
+      {
+        "path": "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.json",
+        "line": 88,
+        "context": "    {\n      \"id\": \"P004-CALC-003\",\n      \"question\": \"P004 nominal axial float from current dimension architecture\",\n      \"equation\": \"11.05 - (3.00 + 8.00)\",\n      \"result_mm\": 0.05,"
+      },
+      {
+        "path": "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.json",
+        "line": 89,
+        "context": "      \"id\": \"P004-CALC-003\",\n      \"question\": \"P004 nominal axial float from current dimension architecture\",\n      \"equation\": \"11.05 - (3.00 + 8.00)\",\n      \"result_mm\": 0.05,\n      \"requirement_mm\": ["
+      },
+      {
+        "path": "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.md",
+        "line": 9,
+        "context": "- F02: Maintain controlled sliding clearance without binding.\n- F03: Locate as a slip-fit bushing in P003 seat.\n- F04: Be axially retained by P014 / housing stack without adhesive or preload.\n- F05: Avoid binding across operating temperature/environment.\n- F06: Remain manufacturable, inspectable and replaceable."
+      },
+      {
+        "path": "reports/engineering/K01_P004_PRODUCT_DEFINITION_PREFLIGHT_CURRENT.md",
+        "line": 16,
+        "context": "- **P004-CALC-001** — 6.60 - 6.54 = **0.06 mm** — DERIVED__TOLERANCE_ALLOCATION_OPEN\n- **P004-CALC-002** — 5.055 - 5.000 = **0.055 mm** — DERIVED_NOMINAL_ONLY__REQUIREMENT_OPEN\n- **P004-CALC-003** — 11.05 - (3.00 + 8.00) = **0.05 mm** — DERIVED_EXISTING_CONTROL__WORST_CASE_OPEN\n\n## Blockers"
+      },
+      {
+        "path": "reports/engineering/K01_P004_SEAT_AXIAL_TOLERANCE_ARCHITECTURE_CURRENT.json",
+        "line": 56,
+        "context": "      {\n        \"id\": \"B\",\n        \"description\": \"Shift nominal axial float toward ~0.0586...0.060 mm, by controlled stack geometry change, then reallocate tolerances.\",\n        \"state\": \"CANDIDATE_FOR_REVIEW\",\n        \"benefit\": \"roughly centers the thermal-safe room-temperature window and materially increases combined tolerance budget\""
+      },
+      {
+        "path": "reports/engineering/K01_P004_TECHNICAL_FILTER_CURRENT.json",
+        "line": 25,
+        "context": "    {\n      \"id\": \"TF-INTERFACE\",\n      \"topic\": \"P001/P003/P014 interfaces\",\n      \"state\": \"DEFINED_FOR_REVIEW\"\n    },"
+      },
+      {
+        "path": "reports/engineering/K01_P004_THERMAL_TOLERANCE_SCREEN_CURRENT.json",
+        "line": 63,
+        "context": "    \"Nominal P003/P004 seat clearance stays positive from -40 to +55 C.\",\n    \"Nominal P001/P004 guide clearance stays positive from -40 to +55 C.\",\n    \"Nominal P004 axial float stays inside 0.04...0.08 mm across the conservative temperature screen.\",\n    \"The original 20 C seat-clearance manufacturing band 0.04...0.08 cannot by itself guarantee 0.04...0.08 at both temperature extremes because PEEK and 316L expand differently.\",\n    \"Therefore final production tolerances must be allocated to a narrower 20 C acceptance window, or the service-band requirement must be explicitly scoped to reference temperature.\","
+      },
+      {
+        "path": "control/product/parts.json",
+        "line": 247,
+        "context": "      \"cad_identity_key\": \"K01-P-014\",\n      \"cad_property_projection\": {\n        \"Description\": \"Front Guide Retaining Ring / IN Stop\",\n        \"MakeBuy\": \"MAKE\",\n        \"MaterialAuthority\": \"OPEN; 1.4310 / AISI 301 candidate\","
+      },
+      {
+        "path": "control/product/parts.json",
+        "line": 254,
+        "context": "        \"Revision\": \"\"\n      },\n      \"description\": \"Front Guide Retaining Ring / IN Stop\",\n      \"item_type\": \"MANUFACTURED\",\n      \"make_buy\": \"MAKE\","
+      },
+      {
+        "path": "docs/K01_COMPLETION_PLAN_20260902.md",
+        "line": 36,
+        "context": "   - B001 functional diameter acceptance Ø8 h9 or equivalent incoming sorting;\n   - stock MTS ±0.1 remains only a supplier candidate and may need sorting.\n4. Freeze P014 material.\n5. Freeze P015 production PPS/winding/lead/driver specification.\n6. Correct P009 and P013 CAD material metadata to controlled 316L."
+      },
+      {
+        "path": "docs/K01_DRAWING_RELEASE_MATRIX_v1.md",
+        "line": 17,
+        "context": "| P009 | K01-D-009 | stop washer dimensions/material |\n| P013 | K01-D-013 | end-cap geometry, bond face, no-preload note |\n| P014 | K01-D-014 | ring geometry, spring material/temper |\n| P015 | K01-D-015 | bobbin geometry, material, coil winding/lead exit |\n| P016 | K01-D-016 | saddle/port, A/B, M4, O-ring groove, C press-pin hole, post-join machining |"
+      },
+      {
+        "path": "docs/K01_MANUFACTURING_ASSEMBLY_ROUTER_v1.md",
+        "line": 50,
+        "context": "No preload on B001.\n\n### P014 Front Guide Retaining Ring — 1.4310/AISI301 spring stainless candidate\nFinalize spring temper → laser cut/stamp/machine → deburr/edge-finish → verify\ninstallation/removal and stop function."
+      },
+      {
+        "path": "docs/K01_MANUFACTURING_ASSEMBLY_ROUTER_v1.md",
+        "line": 70,
+        "context": "## Subassembly sequence\n\n1. Verify cleaned P003, P001, P002, P004, P006, P008, P009, P013, P014.\n2. Install guide/stop stack into P003 from the designed service direction.\n3. Set P002 axial float using P006 relief; install P006."
+      },
+      {
+        "path": "docs/K01_MANUFACTURING_ASSEMBLY_ROUTER_v1.md",
+        "line": 72,
+        "context": "1. Verify cleaned P003, P001, P002, P004, P006, P008, P009, P013, P014.\n2. Install guide/stop stack into P003 from the designed service direction.\n3. Set P002 axial float using P006 relief; install P006.\n4. Install P001 and verify free guide motion.\n5. Assemble P008/B001/P013 follower group; verify P008-to-P001 shoulder contact"
+      },
+      {
+        "path": "docs/K01_P006_FASTENER_REVIEW.md",
+        "line": 9,
+        "context": "- L8;\n- M12×1;\n- front relief Ø9.10 × 0.06 controlling P002 axial float;\n- thread-region BREP cylinder ≈Ø10.8 over 6 mm;\n- rear head OD11.5 × 2 mm;"
+      }
+    ]
+  },
+  "known_nominal_chain": {
+    "P003_seat_mm": 6.6,
+    "P004_OD_mm": 6.54,
+    "seat_nominal_clearance_mm": 0.06,
+    "P004_length_mm": 8.0,
+    "axial_float_nominal_mm": 0.05,
+    "architecture_tokens": [
+      "P014 groove X11.05..12",
+      "P014 rear face = IN metal stop X12"
+    ]
+  },
+  "authority_rule": "Nominal/build/DXF/review-drawing evidence proves architecture only. Only controlled Product Definition/release records release production tolerances.",
+  "decision_readiness": {
+    "joint_tolerance_budget_decision": "READY_FOR_ENGINEERING_DECISION",
+    "P003_released_PD_proven": false,
+    "P014_released_PD_proven": false,
+    "note": "Top-down interface budgets may be decided before mating-part PD READY; allocated mating-part values then become explicit downstream requirements for their later Product Definitions."
+  },
+  "native_mutation": "NONE"
+}

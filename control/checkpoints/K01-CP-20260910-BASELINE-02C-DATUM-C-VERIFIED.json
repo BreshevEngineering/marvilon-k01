@@ -1,0 +1,65 @@
+{
+  "schema": "k01.engineering_checkpoint.v1",
+  "checkpoint_id": "K01-CP-20260910-BASELINE-02C-DATUM-C-VERIFIED",
+  "created_utc": "2026-09-10T06:33:00+00:00",
+  "active_line": "K01-BASELINE-02C",
+  "status": "VERIFIED_CANDIDATE_PENDING_CANONICAL_PROMOTION",
+  "maturity": "VERIFIED_CANDIDATE",
+  "evidence_state": "PASS",
+  "freshness": "FRESH_EVIDENCE",
+  "authority": "NON_CANONICAL",
+  "decision": "EDR-023",
+  "architecture": {
+    "A": "mating face",
+    "B": "Ø10 H7/g6 pilot",
+    "C": "K01-P-017 relieved/diamond locator in P003 Ø3.02 +0.01/0 THRU"
+  },
+  "producer_evidence": {
+    "path": "reports/cad/current/K01_GATE04B_DATUM_C_BUILD.json",
+    "status": "PASS",
+    "P003_end_condition": "THROUGH_ALL_BOTH",
+    "P003_center_error_mm": 0.0
+  },
+  "integration_evidence": {
+    "path": "reports/cad/current/K01_GATE04B_DATUM_C_ASSEMBLY_QA.json",
+    "status": "PASS_CANDIDATE_ASSEMBLY_QA",
+    "verification_sha256": "48763f29e18a7a699aab203ee695b9adc29760203c1e39aa33a313a5e23c7a12",
+    "prechange_canonical_sha256": "a6bc1c6227075c2736a2383a73ecf2f95e109f7cbcfa34ef01ccf8bfa45cdd33",
+    "component_count": 14,
+    "active_mate_errors": 0,
+    "unexpected_interference_total": 0,
+    "moving_group_pass": true,
+    "P017_press_depth_mm": 4.0,
+    "P017_protrusion_mm": 2.0
+  },
+  "candidate_set": {
+    "P003": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-003_Cartridge_Body_GATE04B_DATUMC_V6_20260909_231939.SLDPRT",
+    "P016": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-016_Long_Run_Interface_Boss_GATE04B_DATUMC_V6_20260909_231939.SLDPRT",
+    "P017": "D:\\Marvilon\\K01\\cad\\candidates\\K01-P-017_Datum_C_Relieved_Locator_GATE04B_V7_20260909_231939.SLDPRT",
+    "verification_A001": "D:\\Marvilon\\K01\\cad\\candidates\\gate04b_datumc\\verification\\K01-A-001_GATE04B_DATUMC_VERIFY.SLDASM"
+  },
+  "product_delta": {
+    "modeled_occurrences_before": 13,
+    "modeled_occurrences_after": 14,
+    "add": [
+      {
+        "part_number": "K01-P-017",
+        "qty": 1
+      }
+    ],
+    "EBOM": "REBUILD_AFTER_PROMOTION",
+    "MBOM": "REBUILD_AFTER_PROMOTION"
+  },
+  "technical_filter_disposition": "PASS_FOR_VERIFIED_ENGINEERING_CANDIDATE; release-only material/process/test blockers remain OPEN and must not be hidden.",
+  "closed_do_not_restart_unless_dependency_changes": [
+    "Identity Freeze",
+    "Assembly Stage A",
+    "moving-group proof",
+    "Gate04B M4/C-angle derivation",
+    "Datum-C concept",
+    "producer mapping/THRU correction",
+    "candidate assembly QA"
+  ],
+  "next_transition": "CONTROLLED_CANONICAL_PROMOTION",
+  "R01": "NOT_RELEASED"
+}

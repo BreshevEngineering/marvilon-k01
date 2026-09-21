@@ -1,0 +1,629 @@
+{
+  "schema": "k01.characteristic_context.current.v1",
+  "part": "K01-P-007",
+  "purpose": "Context overlay for datum/reference system, measurement conditions, inspection strategy, manufacturing route, configuration/effectivity and binding-invariance requirements. OPEN is explicit; no default measurement condition is assumed.",
+  "configuration_scope": {
+    "engineering_baseline": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+    "part_revision": "OPEN_NOT_YET_ASSIGNED",
+    "effectivity_status": "BASELINE_SCOPED_DESIGN_REVIEW__RELEASE_EFFECTIVITY_OPEN"
+  },
+  "characteristics": {
+    "C01": {
+      "datum_reference_system": {
+        "defines": [
+          "A"
+        ],
+        "references": [],
+        "system_id": "DRS-K01-J2-AB",
+        "status": "CONTROLLED_IDENTITY_NUMERIC_GDT_OPEN"
+      },
+      "measurement_condition": {
+        "temperature": "20±2 °C metrology condition",
+        "part_state": "CLEAN_FREE_STATE",
+        "fixture": "DATUM_SIMULATOR_WITHOUT_DISTORTING_CLAMP",
+        "measurement_force": "LOW_FORCE_AS_NEEDED",
+        "status": "CONTROLLED"
+      },
+      "inspection_strategy": {
+        "method": "CMM_COMMON_ZONE_FLATNESS_CZ_ON_TWO_DATUM_A_PATCHES",
+        "capability": "FIRST_ARTICLE_CONFIRMATION_REQUIRED"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "L2_FORCE_REBUILD",
+      "binding_invariance_status": "NOT_QUALIFIED_FOR_RELEASE",
+      "drawing_authoring": {
+        "characteristic_tag": "C01",
+        "targets": [
+          {
+            "claim_id": "C01.DATUM_A",
+            "claim_paths": [
+              "nominal_or_requirement.datum",
+              "nominal_or_requirement.datum_identity"
+            ],
+            "carrier": "DIMXPERT_DATUM_OR_NATIVE_DATUM",
+            "annotation_view_role": "AV_J2_LONGITUDINAL",
+            "drawing_view_role": "SECTION_AA",
+            "authoring_class": "CONTROLLED_CLAIM",
+            "action": "AUTHOR_OR_VERIFY_NATIVE_DATUM",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "NONE",
+            "exemplar_scope": "AUTHOR_IF_D1_CONTROLLED"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    },
+    "C02": {
+      "datum_reference_system": {
+        "defines": [
+          "B"
+        ],
+        "references": [
+          "A_FOR_DEPTH_CONTEXT"
+        ],
+        "system_id": "DRS-K01-J2-AB",
+        "status": "PARTIAL"
+      },
+      "measurement_condition": {
+        "temperature": "20±2 °C metrology condition",
+        "part_state": "FREE_STATE",
+        "fixture": "DATUM_A_FUNCTIONAL_SETUP / NON_DISTORTING",
+        "measurement_force": "NORMAL_LOW_FORCE_SIZE_DEPTH_METROLOGY",
+        "status": "CONTROLLED_FOR_C02_DEPTH_RELEASE"
+      },
+      "inspection_strategy": {
+        "method": "BORE_SIZE_METHOD_PLUS_CMM_OR_DEPTH_MEASUREMENT_FROM_DATUM_A",
+        "capability": "STANDARD_PRECISION__FIRST_ARTICLE_CONFIRMATION_REQUIRED"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "L2_FORCE_REBUILD",
+      "binding_invariance_status": "PMI_SAVE_CLOSE_REOPEN_PASS__GEOMETRY_BINDING_REBUILD_TEST_OPEN",
+      "drawing_authoring": {
+        "characteristic_tag": "C02",
+        "targets": [
+          {
+            "claim_id": "C02.DIAMETER_FIT",
+            "claim_paths": [
+              "nominal_or_requirement.diameter_mm",
+              "variation_semantics.diameter_fit"
+            ],
+            "carrier": "DIMXPERT_SIZE_FIT",
+            "annotation_view_role": "AV_J2_LONGITUDINAL",
+            "drawing_view_role": "SECTION_AA",
+            "authoring_class": "CONTROLLED_CLAIM",
+            "action": "VERIFY_EXISTING_AND_ASSIGN_ANNOTATION_VIEW",
+            "existing_pmi_identity": {
+              "feature_name": "Cylinder1",
+              "annotation_name": "Diameter2"
+            },
+            "release_eligible": true,
+            "manufacturing_route_dependency": "NONE",
+            "exemplar_scope": "AUTHOR_IF_D1_CONTROLLED"
+          },
+          {
+            "claim_id": "C02.BORE_DEPTH",
+            "claim_paths": [
+              "nominal_or_requirement.bore_depth_mm",
+              "variation_semantics.depth_tolerance"
+            ],
+            "carrier": "DIMXPERT_SIZE_OR_LOCATION",
+            "annotation_view_role": "AV_J2_LONGITUDINAL",
+            "drawing_view_role": "SECTION_AA",
+            "authoring_class": "CONTROLLED_SIZE",
+            "action": "AUTHOR_RELEASE_DEPTH_2P00_PM0P05_AFTER_BINDING_SIGNATURE",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "CAPABILITY_CONFIRMATION_REQUIRED",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    },
+    "C03": {
+      "datum_reference_system": {
+        "defines": [],
+        "references": [
+          "A"
+        ],
+        "controlled_feature": "B-axis / C02 locator axis",
+        "system_id": "DRS-K01-J2-AB",
+        "status": "CONTROLLED_MMR_RELATIONSHIP"
+      },
+      "measurement_condition": {
+        "temperature": "OPEN",
+        "part_state": "OPEN",
+        "fixture": "OPEN",
+        "measurement_force": "OPEN",
+        "status": "OPEN"
+      },
+      "inspection_strategy": {
+        "method": "CMM_MMR_OR_FUNCTIONAL_GAGE",
+        "capability": "FIRST_ARTICLE_CONFIRMATION_REQUIRED"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "L2_FORCE_REBUILD",
+      "binding_invariance_status": "OPEN",
+      "drawing_authoring": {
+        "characteristic_tag": "C03",
+        "targets": [
+          {
+            "claim_id": "C03.ORIENTATION",
+            "claim_paths": [
+              "nominal_or_requirement.relationship",
+              "variation_semantics.perpendicularity"
+            ],
+            "carrier": "DIMXPERT_GDT",
+            "annotation_view_role": "AV_J2_LONGITUDINAL",
+            "drawing_view_role": "SECTION_AA",
+            "authoring_class": "CONTROLLED_GDT",
+            "action": "AUTHOR_RELEASE_GDT_AFTER_BINDING_SIGNATURE",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "NONE",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    },
+    "C04": {
+      "datum_reference_system": {
+        "defines": [],
+        "references": [
+          "A",
+          "B"
+        ],
+        "system_id": "DRS-K01-J2-AB",
+        "status": "CONTROLLED_AB"
+      },
+      "measurement_condition": {
+        "temperature": "OPEN",
+        "part_state": "OPEN",
+        "fixture": "OPEN",
+        "measurement_force": "OPEN",
+        "status": "OPEN"
+      },
+      "inspection_strategy": {
+        "method": "LIMIT_GAGE_PLUS_CMM_OR_FUNCTIONAL_GAUGE_CZ_MMR_PATTERN",
+        "capability": "STANDARD_INSPECTION__MMR_CZ_CAPABLE"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "L2_FORCE_REBUILD",
+      "binding_invariance_status": "OPEN",
+      "drawing_authoring": {
+        "characteristic_tag": "C04",
+        "targets": [
+          {
+            "claim_id": "C04.HOLE_PATTERN",
+            "claim_paths": [
+              "nominal_or_requirement.count",
+              "nominal_or_requirement.hole_diameter_mm",
+              "nominal_or_requirement.pcd_mm",
+              "nominal_or_requirement.equal_spacing_deg",
+              "variation_semantics.hole_size_tolerance",
+              "variation_semantics.position_tolerance",
+              "variation_semantics.pattern_modifier",
+              "variation_semantics.material_requirement"
+            ],
+            "carrier": "DIMXPERT_HOLE_PATTERN",
+            "annotation_view_role": "AV_FLANGE_END",
+            "drawing_view_role": "FLANGE_END",
+            "authoring_class": "CONTROLLED_HOLE_PATTERN_GDT",
+            "action": "AUTHOR_RELEASE_ISO5458_CZ_MMR_PATTERN_AFTER_BINDING_SIGNATURE",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "CAPABILITY_DEPENDENT",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    },
+    "C05": {
+      "datum_reference_system": {
+        "defines": [],
+        "references": [],
+        "status": "NOT_REQUIRED_FOR_SIZE_IDENTITY"
+      },
+      "measurement_condition": {
+        "temperature": "20±2 °C metrology condition",
+        "part_state": "FREE_STATE",
+        "fixture": "NON_DISTORTING_SUPPORT",
+        "measurement_force": "NORMAL_SIZE_METROLOGY",
+        "status": "CONTROLLED"
+      },
+      "inspection_strategy": {
+        "method": "OD_MICROMETER_OR_CMM_PLUS_FLANGE_THICKNESS_MEASUREMENT",
+        "capability": "STANDARD_PRECISION_CAPABILITY"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "L2_FORCE_REBUILD",
+      "binding_invariance_status": "PMI_SAVE_CLOSE_REOPEN_PASS__GEOMETRY_BINDING_REBUILD_TEST_OPEN",
+      "drawing_authoring": {
+        "characteristic_tag": "C05",
+        "targets": [
+          {
+            "claim_id": "C05.FLANGE_OD",
+            "claim_paths": [
+              "nominal_or_requirement.diameter_mm",
+              "variation_semantics.diameter_tolerance"
+            ],
+            "carrier": "DIMXPERT_SIZE",
+            "annotation_view_role": "AV_FLANGE_END",
+            "drawing_view_role": "FLANGE_END",
+            "authoring_class": "CONTROLLED_SIZE",
+            "action": "VERIFY_EXISTING_AND_APPLY_RELEASE_TOLERANCE",
+            "existing_pmi_identity": {
+              "feature_name": "Cylinder2",
+              "annotation_name": "Diameter4"
+            },
+            "release_eligible": true,
+            "manufacturing_route_dependency": "CAPABILITY_DEPENDENT",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          },
+          {
+            "claim_id": "C05.FLANGE_THICKNESS",
+            "claim_paths": [
+              "nominal_or_requirement.thickness_mm",
+              "variation_semantics.thickness_tolerance"
+            ],
+            "carrier": "DIMXPERT_SIZE",
+            "annotation_view_role": "AV_J2_LONGITUDINAL",
+            "drawing_view_role": "SECTION_AA",
+            "authoring_class": "CONTROLLED_SIZE",
+            "action": "AUTHOR_RELEASE_THICKNESS_AFTER_BINDING_SIGNATURE",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "CAPABILITY_DEPENDENT",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    },
+    "C06": {
+      "datum_reference_system": {
+        "defines": [],
+        "references": [],
+        "status": "NOT_REQUIRED_FOR_NOMINAL_IDENTITY"
+      },
+      "measurement_condition": {
+        "temperature": "20±2 °C metrology condition",
+        "part_state": "FREE_STATE",
+        "fixture": "DATUM_A_FUNCTIONAL_SETUP",
+        "measurement_force": "NORMAL_CMM_OR_LENGTH_METROLOGY",
+        "status": "CONTROLLED"
+      },
+      "inspection_strategy": {
+        "method": "CMM_OR_LENGTH_MEASUREMENT_FROM_DATUM_A_TO_EXTERNAL_BLIND_END_FACE",
+        "capability": "STANDARD_PRECISION_CAPABILITY"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "L2_FORCE_REBUILD",
+      "binding_invariance_status": "OPEN",
+      "drawing_authoring": {
+        "characteristic_tag": "C06",
+        "targets": [
+          {
+            "claim_id": "C06.OAL",
+            "claim_paths": [
+              "nominal_or_requirement.overall_length_mm",
+              "variation_semantics.length_tolerance"
+            ],
+            "carrier": "DIMXPERT_SIZE_OR_NATIVE_MODEL_DIMENSION",
+            "annotation_view_role": "AV_J2_LONGITUDINAL",
+            "drawing_view_role": "SECTION_AA",
+            "authoring_class": "CONTROLLED_SIZE",
+            "action": "AUTHOR_OAL_35P00_PM0P05_AFTER_BINDING_SIGNATURE",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "ROUTE_DEPENDENT",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    },
+    "C07": {
+      "datum_reference_system": {
+        "defines": [],
+        "references": [
+          "B_AXIS_CANDIDATE_FOR_RUNOUT_SCHEME"
+        ],
+        "status": "OPEN_FINAL_GDT_SCHEME"
+      },
+      "measurement_condition": {
+        "temperature": "OPEN",
+        "part_state": "THIN_WALL_FREE_OR_SUPPORTED_STATE_OPEN",
+        "fixture": "OPEN_SUPPORT_METHOD",
+        "measurement_force": "OPEN_LOW_FORCE_REQUIREMENT",
+        "status": "OPEN_CRITICAL_THIN_WALL_CONDITION"
+      },
+      "inspection_strategy": {
+        "method": "SUPPORTED_LOW_FORCE_OD_OR_CMM_PLUS_RUNOUT",
+        "capability": "FIRST_ARTICLE_CONFIRMATION_REQUIRED"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "L3_PERTURB_RESTORE_ON_DISPOSABLE_CANDIDATE",
+      "binding_invariance_status": "CANONICAL_REBIND_REQUIRED",
+      "drawing_authoring": {
+        "characteristic_tag": "C07",
+        "targets": [
+          {
+            "claim_id": "C07.CAN_OD",
+            "claim_paths": [
+              "nominal_or_requirement.diameter_mm",
+              "variation_semantics.diameter_tolerance"
+            ],
+            "carrier": "DIMXPERT_SIZE",
+            "annotation_view_role": "AV_CAN_SECTION",
+            "drawing_view_role": "SECTION_AA",
+            "authoring_class": "CONTROLLED_SIZE",
+            "action": "AUTHOR_RELEASE_SIZE_AFTER_BINDING_SIGNATURE",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "ROUTE_DEPENDENT",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    },
+    "C08": {
+      "datum_reference_system": {
+        "defines": [],
+        "references": [
+          "B_AXIS_CANDIDATE_FOR_COAXIAL_SCHEME"
+        ],
+        "status": "OPEN_FINAL_GDT_SCHEME"
+      },
+      "measurement_condition": {
+        "temperature": "OPEN",
+        "part_state": "THIN_WALL_FREE_OR_SUPPORTED_STATE_OPEN",
+        "fixture": "OPEN_SUPPORT_METHOD",
+        "measurement_force": "OPEN_LOW_FORCE_REQUIREMENT",
+        "status": "OPEN_CRITICAL_THIN_WALL_CONDITION"
+      },
+      "inspection_strategy": {
+        "method": "SUPPORTED_BORE_OR_CMM_PLUS_RUNOUT",
+        "capability": "FIRST_ARTICLE_CONFIRMATION_REQUIRED"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "L3_PERTURB_RESTORE_ON_DISPOSABLE_CANDIDATE",
+      "binding_invariance_status": "CANONICAL_REBIND_REQUIRED",
+      "drawing_authoring": {
+        "characteristic_tag": "C08",
+        "targets": [
+          {
+            "claim_id": "C08.CAN_ID",
+            "claim_paths": [
+              "nominal_or_requirement.id_mm",
+              "variation_semantics.id_tolerance"
+            ],
+            "carrier": "DIMXPERT_SIZE",
+            "annotation_view_role": "AV_CAN_SECTION",
+            "drawing_view_role": "SECTION_AA",
+            "authoring_class": "CONTROLLED_SIZE",
+            "action": "AUTHOR_RELEASE_SIZE_AFTER_BINDING_SIGNATURE",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "ROUTE_DEPENDENT",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          },
+          {
+            "claim_id": "C08.WALL",
+            "claim_paths": [
+              "nominal_or_requirement.radial_wall_mm",
+              "variation_semantics.wall_tolerance"
+            ],
+            "carrier": "DIMXPERT_SIZE_OR_DERIVED_REFERENCE",
+            "annotation_view_role": "AV_CAN_SECTION",
+            "drawing_view_role": "SECTION_AA",
+            "authoring_class": "DERIVED_REFERENCE_ONLY",
+            "action": "PROJECT_REFERENCE_WALL_ONLY__NO_INDEPENDENT_TOLERANCE",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "ROUTE_DEPENDENT",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    },
+    "C09": {
+      "datum_reference_system": {
+        "defines": [],
+        "references": [],
+        "status": "NOT_APPLICABLE"
+      },
+      "measurement_condition": {
+        "status": "NOT_APPLICABLE"
+      },
+      "inspection_strategy": {
+        "method": "MATERIAL_CERTIFICATE_PLUS_CAD_BOM_RECONCILIATION",
+        "capability": "CONTROLLED"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "MATERIAL_PROPERTY_RECONCILIATION",
+      "binding_invariance_status": "CONTROLLED_REQUIREMENT__FINAL_RELEASE_RECONCILIATION_REQUIRED",
+      "drawing_authoring": {
+        "characteristic_tag": "C09",
+        "targets": [
+          {
+            "claim_id": "C09.MATERIAL",
+            "claim_paths": [
+              "nominal_or_requirement.material"
+            ],
+            "carrier": "NATIVE_MATERIAL_PROPERTY_AND_TITLE_BLOCK",
+            "annotation_view_role": null,
+            "drawing_view_role": "TITLE_BLOCK",
+            "authoring_class": "CONTROLLED_CLAIM",
+            "action": "VERIFY_MODEL_PROPERTY_PROJECTION",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "NONE",
+            "exemplar_scope": "AUTHOR_IF_D1_CONTROLLED"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    },
+    "C10": {
+      "datum_reference_system": {
+        "status": "NOT_APPLICABLE_PROCESS_ARCHITECTURE"
+      },
+      "measurement_condition": {
+        "status": "NOT_APPLICABLE_TO_ARCHITECTURE_SELECTION"
+      },
+      "inspection_strategy": {
+        "method": "PART_INSPECTION_PLUS_CONTROLLED_J2_ASSEMBLY_AND_LEAK_VERIFICATION",
+        "capability": "OPEN_FOR_C12_AND_PROCESS_QUALIFICATION"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "NOT_APPLICABLE_PROCESS_SEMANTIC",
+      "binding_invariance_status": "NOT_APPLICABLE_PROCESS_SEMANTIC",
+      "drawing_authoring": {
+        "characteristic_tag": "C10",
+        "targets": [
+          {
+            "claim_id": "C10.J2_PROCESS_ARCHITECTURE",
+            "claim_paths": [
+              "nominal_or_requirement.P007_construction",
+              "nominal_or_requirement.J2_joint",
+              "nominal_or_requirement.permanent_P003_P007_weld"
+            ],
+            "carrier": "CONTROLLED_PROCESS_OR_ASSEMBLY_DOCUMENTATION",
+            "annotation_view_role": null,
+            "drawing_view_role": "GENERAL_NOTE_OR_ASSEMBLY_SPEC_REFERENCE",
+            "authoring_class": "CONTROLLED_PROCESS_ARCHITECTURE",
+            "action": "DO_NOT_AUTHOR_WELD_SYMBOL; REFERENCE CONTROLLED J2 PROCESS ONLY WHEN RELEASED",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "MFG-P007-MONOLITHIC",
+            "exemplar_scope": "NO_WELD_SYMBOL"
+          }
+        ],
+        "rule": "EDR-025 controls architecture: monolithic P007 and removable static-sealed J2. C12 leak acceptance and seal/fastener process details remain separate release blockers."
+      }
+    },
+    "C11": {
+      "datum_reference_system": {
+        "defines": [],
+        "references": [
+          "B"
+        ],
+        "controlled_feature": "thin-can OD and ID surfaces",
+        "system_id": "DRS-K01-J2-AB",
+        "status": "CONTROLLED_B_AXIS"
+      },
+      "measurement_condition": {
+        "temperature": "OPEN",
+        "part_state": "THIN_WALL_FREE_OR_SUPPORTED_STATE_OPEN",
+        "fixture": "OPEN_SUPPORT_METHOD",
+        "measurement_force": "OPEN_LOW_FORCE_REQUIREMENT",
+        "status": "OPEN_CRITICAL_THIN_WALL_CONDITION"
+      },
+      "inspection_strategy": {
+        "method": "CMM_OR_LOW_FORCE_TOTAL_RUNOUT_TO_B",
+        "capability": "FIRST_ARTICLE_CONFIRMATION_REQUIRED"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "L3_PERTURB_RESTORE_ON_DISPOSABLE_CANDIDATE",
+      "binding_invariance_status": "OPEN",
+      "drawing_authoring": {
+        "characteristic_tag": "C11",
+        "targets": [
+          {
+            "claim_id": "C11.TOTAL_RUNOUT",
+            "claim_paths": [
+              "nominal_or_requirement.relationship",
+              "variation_semantics.gdt"
+            ],
+            "carrier": "DIMXPERT_GDT",
+            "annotation_view_role": "AV_CAN_SECTION",
+            "drawing_view_role": "SECTION_AA",
+            "authoring_class": "CONTROLLED_GDT",
+            "action": "AUTHOR_TOTAL_RUNOUT_0P02_TO_B_AFTER_BINDING_SIGNATURE",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "CAPABILITY_DEPENDENT",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    },
+    "C12": {
+      "datum_reference_system": {
+        "status": "NOT_APPLICABLE"
+      },
+      "measurement_condition": {
+        "test_medium": "OPEN",
+        "temperature": "OPEN",
+        "pressure_sequence": "OPEN",
+        "fixture": "OPEN",
+        "status": "OPEN"
+      },
+      "inspection_strategy": {
+        "method": "QUALIFIED_LEAK_TEST",
+        "numeric_acceptance": "OPEN",
+        "capability": "OPEN"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "NOT_APPLICABLE",
+      "binding_invariance_status": "NOT_APPLICABLE",
+      "drawing_authoring": {
+        "characteristic_tag": "C12",
+        "targets": [
+          {
+            "claim_id": "C12.LEAK_ACCEPTANCE",
+            "claim_paths": [
+              "nominal_or_requirement.acceptance"
+            ],
+            "carrier": "CONTROLLED_PROCESS_OR_INSPECTION_NOTE",
+            "annotation_view_role": null,
+            "drawing_view_role": "GENERAL_NOTE_OR_SPEC_REFERENCE",
+            "authoring_class": "OPEN_ACCEPTANCE",
+            "action": "DO_NOT_AUTHOR_NUMERIC_ACCEPTANCE",
+            "release_eligible": false,
+            "manufacturing_route_dependency": "PROCESS_DEPENDENT",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    },
+    "K01-D006-BLIND-END": {
+      "datum_reference_system": {
+        "defines": [],
+        "references": [],
+        "status": "NOT_REQUIRED_FOR_SIZE_IDENTITY"
+      },
+      "measurement_condition": {
+        "temperature": "20±2 °C metrology condition",
+        "part_state": "THIN_WALL_SUPPORTED_NON_DISTORTING_STATE",
+        "fixture": "SUPPORTED_LOW_FORCE",
+        "measurement_force": "LOW_FORCE",
+        "status": "CONTROLLED"
+      },
+      "inspection_strategy": {
+        "method": "CMM_OR_DEPTH_DIFFERENCE_EXTERNAL_END_TO_INTERNAL_BLIND_BOTTOM",
+        "capability": "FIRST_ARTICLE_CONFIRMATION_REQUIRED"
+      },
+      "manufacturing_route_id": "MFG-P007-ROUTE-001",
+      "binding_invariance_required": "L3_PERTURB_RESTORE_ON_DISPOSABLE_CANDIDATE",
+      "binding_invariance_status": "OPEN",
+      "drawing_authoring": {
+        "characteristic_tag": "K01-D006-BLIND-END",
+        "targets": [
+          {
+            "claim_id": "K01-D006-BLIND-END.THICKNESS",
+            "claim_paths": [
+              "nominal_or_requirement.thickness_mm",
+              "variation_semantics.thickness_tolerance"
+            ],
+            "carrier": "DIMXPERT_SIZE",
+            "annotation_view_role": "AV_CAN_SECTION",
+            "drawing_view_role": "SECTION_AA",
+            "authoring_class": "CONTROLLED_SIZE",
+            "action": "AUTHOR_BLIND_END_1P00_PM0P10_AFTER_BINDING_SIGNATURE",
+            "release_eligible": true,
+            "manufacturing_route_dependency": "ROUTE_DEPENDENT",
+            "exemplar_scope": "OBSERVE_OR_HOLD"
+          }
+        ],
+        "rule": "Claim-level target mapping. Normalized annotation-view role is S2 context; concrete SOLIDWORKS annotation-view name is bound/verified by D2/D3 evidence."
+      }
+    }
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "schema": "k01.p007.definition_decisions.current.v2_0",
+  "part": "K01-P-007",
+  "drawing": "K01-D-006",
+  "status": "CONTROLLED_FOR_DRAWING_CANDIDATE__HOLD_RELEASE_OPEN_ITEMS",
+  "purpose": "Current engineering decisions used by the Product Definition compiler to resolve legacy candidate-spec drift. This file does not replace requirements, CAD geometry, calculations or evidence registries; it declares current disposition where older candidate text is unsafe to project.",
+  "characteristics": [
+    {
+      "id": "C01",
+      "role": "J2 mating face / Datum A",
+      "category": "DATUM_GDT",
+      "function": "Establish primary functional mating datum",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "datum": "A",
+        "datum_identity": "CONTROLLED_COMPOSITE_COPLANAR_FACE_SET",
+        "controlled_contact_patches": 2
+      },
+      "variation_semantics": {
+        "flatness": "0.03 mm COMMON/COMBINED ZONE (CZ) across the two controlled Datum-A mating-face patches",
+        "orientation": "NOT_APPLICABLE_TO_SELF_DATUM_FORM_CONTROL"
+      },
+      "authority_sources": [
+        "functional datum architecture",
+        "canonical persistent-ref binding",
+        "EDR-030_P007_C01_C05_C06_BLIND_END_RELEASE",
+        "SRC-TORNINCASA-GPS-DATUMS-FORM"
+      ],
+      "cad_binding": "PASS_CANONICAL_PERSISTENT_REF_COMPOSITE_FACE_SET",
+      "mbd_carrier": "Native Datum A + flatness 0.03 CZ on the controlled composite mating-face set",
+      "drawing_projection": "PROJECT DATUM A and FLATNESS 0.03 CZ on the controlled two-patch mating-face set",
+      "inspection": "CMM/common-zone plane evaluation of both controlled contact patches; clean free-state part; no clamp distortion",
+      "release_blocking": false
+    },
+    {
+      "id": "C02",
+      "role": "J2 locator / Datum B",
+      "category": "SIZE_FIT_DATUM",
+      "function": "Locate P007 axis in J2 interface",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "diameter_mm": 14.1,
+        "bore_depth_mm": 2.0,
+        "datum": "B"
+      },
+      "variation_semantics": {
+        "diameter_fit": "H7",
+        "mating_interface_fit": "H7/g6 architecture",
+        "depth_tolerance": "±0.05 mm",
+        "depth_limits_mm": [
+          1.95,
+          2.05
+        ],
+        "P003_counterpart_pilot_length": "1.50 ±0.05 mm",
+        "bottom_clearance_limits_mm": [
+          0.4,
+          0.6
+        ]
+      },
+      "authority_sources": [
+        "REQ-K01-J2-LOC-001",
+        "canonical native geometry",
+        "proven P007 PMI evidence",
+        "EDR-024_P007_C02_LOCATOR_DEPTH_BASELINE",
+        "EDR-032_P007_C02_LOCATOR_DEPTH_RELEASE"
+      ],
+      "cad_binding": "PASS_CANONICAL_PERSISTENT_REF",
+      "mbd_carrier": "DimXpert/native PMI for Ø14.10 H7; datum B; controlled bore depth 2.00 ±0.05",
+      "drawing_projection": "PROJECT Ø14.10 H7 and locator depth 2.00 ±0.05 from Datum-A mating plane",
+      "inspection": "CMM/depth measurement from Datum-A mating plane; counterpart P003 pilot 1.50 ±0.05; first-article capability confirmation before P6",
+      "release_blocking": false
+    },
+    {
+      "id": "C03",
+      "role": "Locator-axis orientation to Datum A",
+      "category": "GD&T",
+      "function": "Control locator axis orientation relative to mating face",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "relationship": "locator axis to Datum A",
+        "P007_fit": "Ø14.10 H7",
+        "P003_counterpart_fit": "Ø14.10 g6",
+        "common_virtual_condition_mm": 14.097
+      },
+      "variation_semantics": {
+        "perpendicularity": "Ø0.003(M) to A at MMC",
+        "P003_counterpart_perpendicularity": "Ø0.003(M) to A at MMC"
+      },
+      "authority_sources": [
+        "REQ-K01-J2-LOC-001",
+        "EDR-028_P007_C03_C04_RELEASE",
+        "SRC-FIT-ISO286-2-001",
+        "SRC-GPS-ISO2692-001",
+        "SRC-GPS-ISO1101-001"
+      ],
+      "cad_binding": "DERIVED_BINDING_READY_C02_AXIS_TO_DATUM_A",
+      "mbd_carrier": "DimXpert/GD&T perpendicularity on C02 bore axis with MMR",
+      "drawing_projection": "PROJECT PERP Ø0.003(M) | A on C02 locator-bore axis",
+      "inspection": "CMM with MMR evaluation or qualified functional-gage equivalent; first-article capability confirmation before P6",
+      "release_blocking": false
+    },
+    {
+      "id": "C04",
+      "role": "3-hole clamp clearance pattern",
+      "category": "SIZE_LOCATION_PATTERN",
+      "function": "Permit 3-fastener assembly without forcing/misalignment",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "count": 3,
+        "hole_diameter_mm": 2.9,
+        "hole_limits_mm": [
+          2.9,
+          2.94
+        ],
+        "through": true,
+        "pcd_mm": 26.5,
+        "equal_spacing_deg": 120.0
+      },
+      "variation_semantics": {
+        "hole_size_tolerance": "H10 (0/+0.040 mm at Ø2.90)",
+        "pcd": "TED Ø26.50",
+        "equal_spacing": "TED 120°",
+        "position_tolerance": "⌀0.15 CZ Ⓜ | A | B at hole MMC; datum B RFS",
+        "position_tolerance_at_hole_lmc_mm": 0.19,
+        "pattern": "ISO 5458 CZ combined tolerance-zone pattern"
+      },
+      "authority_sources": [
+        "canonical native geometry",
+        "WP-T03",
+        "EDR-028_P007_C03_C04_RELEASE",
+        "EDR-033_P007_C04_ISO5458_PATTERN_RELEASE",
+        "SRC-FIT-ISO286-2-001",
+        "SRC-FASTENER-ISO273-001",
+        "SRC-GPS-ISO5458-001",
+        "SRC-GPS-ISO2692-001"
+      ],
+      "cad_binding": "PASS_CANONICAL_PERSISTENT_REF",
+      "mbd_carrier": "Hole-pattern size + ISO 5458 position FCF; SW2018 CZ presentation requires controlled compatibility handling",
+      "drawing_projection": "PROJECT 3×Ø2.90 H10 THRU; TED Ø26.50; TED 120°; POSITION ⌀0.15 CZ Ⓜ | A | B",
+      "inspection": "2.900 GO / 2.940 NO-GO (or equivalent size measurement) + CMM/functional-gauge pattern evaluation with CZ/MMR to A|B",
+      "release_blocking": false
+    },
+    {
+      "id": "C05",
+      "role": "Flange size",
+      "category": "SIZE",
+      "function": "Provide J2 flange envelope and interface thickness",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "diameter_mm": 33.0,
+        "thickness_mm": 3.0
+      },
+      "variation_semantics": {
+        "diameter_tolerance": "±0.05 mm",
+        "diameter_limits_mm": [
+          32.95,
+          33.05
+        ],
+        "thickness_tolerance": "±0.05 mm",
+        "thickness_limits_mm": [
+          2.95,
+          3.05
+        ]
+      },
+      "authority_sources": [
+        "canonical native geometry",
+        "proven P007 PMI nominal evidence",
+        "WP-T05",
+        "EDR-030_P007_C01_C05_C06_BLIND_END_RELEASE"
+      ],
+      "cad_binding": "PASS_CANONICAL_PERSISTENT_REF",
+      "mbd_carrier": "DimXpert/native PMI Ø33.00 ±0.05 plus flange thickness 3.00 ±0.05",
+      "drawing_projection": "PROJECT Ø33.00 ±0.05 and flange thickness 3.00 ±0.05",
+      "inspection": "OD micrometer/CMM; flange thickness by CMM or qualified thickness/depth measurement",
+      "release_blocking": false
+    },
+    {
+      "id": "C06",
+      "role": "Overall length",
+      "category": "SIZE",
+      "function": "Maintain C2R1 mechanical baseline envelope",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "overall_length_mm": 35.0,
+        "measurement_origin": "Datum A functional mating plane",
+        "measurement_terminus": "external blind-end face"
+      },
+      "variation_semantics": {
+        "length_tolerance": "±0.05 mm",
+        "length_limits_mm": [
+          34.95,
+          35.05
+        ]
+      },
+      "authority_sources": [
+        "REQ-K01-P007-L-001",
+        "canonical native geometry",
+        "C2R1 mechanical baseline",
+        "EDR-030_P007_C01_C05_C06_BLIND_END_RELEASE"
+      ],
+      "cad_binding": "PASS_CANONICAL_PERSISTENT_REF",
+      "mbd_carrier": "native model dimension / controlled size annotation 35.00 ±0.05",
+      "drawing_projection": "PROJECT OAL 35.00 ±0.05 from Datum-A side to external blind-end face",
+      "inspection": "CMM or qualified length measurement from the functional Datum-A setup",
+      "release_blocking": false
+    },
+    {
+      "id": "C07",
+      "role": "Thin can OD",
+      "category": "SIZE_CONTAINMENT",
+      "function": "Maintain magnetic/containment radial envelope",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "diameter_mm": 10.0,
+        "limits_mm": [
+          9.964,
+          10.0
+        ]
+      },
+      "variation_semantics": {
+        "diameter_tolerance": "h9 (0/-0.036 mm at Ø10.00)",
+        "radial_envelope_relation": "C11 TOTAL RUNOUT 0.02 | B"
+      },
+      "authority_sources": [
+        "canonical native geometry",
+        "EDR-029_P007_C07_C08_C11_RADIAL_ENVELOPE_RELEASE",
+        "SRC-FIT-ISO286-2-001"
+      ],
+      "cad_binding": "CANONICAL_REBIND_REQUIRED",
+      "mbd_carrier": "DimXpert size Ø10 h9 + C11 total-runout control",
+      "drawing_projection": "PROJECT Ø10 h9; apply C11 TOTAL RUNOUT 0.02 | B to thin-can OD",
+      "inspection": "Low-force supported OD measurement/CMM plus total-runout verification to datum B; first-article capability confirmation",
+      "release_blocking": false
+    },
+    {
+      "id": "C08",
+      "role": "Thin can ID / radial wall",
+      "category": "SIZE_CONTAINMENT",
+      "function": "Maintain magnetic/containment radial envelope",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "id_mm": 9.4,
+        "limits_mm": [
+          9.4,
+          9.436
+        ],
+        "radial_wall_nominal_mm": 0.3,
+        "size_only_wall_range_mm": [
+          0.264,
+          0.3
+        ]
+      },
+      "variation_semantics": {
+        "id_tolerance": "H9 (0/+0.036 mm at Ø9.40)",
+        "wall": "0.30 REF derived from C07/C08 sizes; not independently toleranced",
+        "radial_envelope_relation": "C11 TOTAL RUNOUT 0.02 | B"
+      },
+      "authority_sources": [
+        "canonical native geometry",
+        "EDR-029_P007_C07_C08_C11_RADIAL_ENVELOPE_RELEASE",
+        "SRC-FIT-ISO286-2-001",
+        "EDR-027_T07A_PRESSURE_SHELL_SCREEN_ACCEPTANCE"
+      ],
+      "cad_binding": "CANONICAL_REBIND_REQUIRED",
+      "mbd_carrier": "DimXpert size Ø9.40 H9; wall 0.30 REF only",
+      "drawing_projection": "PROJECT Ø9.40 H9; show 0.30 wall as REF only if useful; apply C11 TOTAL RUNOUT 0.02 | B to thin-can ID",
+      "inspection": "Supported bore/CMM measurement plus total-runout verification to datum B; first-article thin-wall capability confirmation",
+      "release_blocking": false
+    },
+    {
+      "id": "C09",
+      "role": "Material",
+      "category": "MATERIAL",
+      "function": "Containment material/environment compatibility basis",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "material": "AISI 316L / EN 1.4404"
+      },
+      "variation_semantics": {},
+      "authority_sources": [
+        "REQ-K01-MAT-P007-001",
+        "parts/material state"
+      ],
+      "cad_binding": "native material + product registry reconciliation required",
+      "mbd_carrier": "material property/note",
+      "drawing_projection": "PROJECT AISI 316L / EN 1.4404",
+      "inspection": "material certificate + CAD/BOM reconciliation",
+      "release_blocking": false
+    },
+    {
+      "id": "C10",
+      "role": "J2 containment interface / assembly process architecture",
+      "category": "INTERFACE_PROCESS_CONTAINMENT",
+      "function": "Provide a removable leak-tight P003↔P007 service boundary without permanent welding",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "P007_construction": "MONOLITHIC_MACHINED_316L_WITH_INTEGRAL_BLIND_END",
+        "J2_joint": "REMOVABLE_METAL_FACE_STATIC_O_RING_3XM2P5_CLAMP",
+        "permanent_P003_P007_weld": "PROHIBITED_REJECTED"
+      },
+      "variation_semantics": {},
+      "authority_sources": [
+        "DOS-J2-C2R1-v2",
+        "CI-J2 C2R1 technical filter",
+        "EDR-025_P007_MONOLITHIC_REMOVABLE_J2_BASELINE"
+      ],
+      "cad_binding": "NOT_APPLICABLE_PROCESS_SEMANTIC__GEOMETRY_C2R1_FROZEN",
+      "mbd_carrier": "No weld symbol. J2 assembly/process controls belong to controlled assembly/process documentation; P007 drawing defines monolithic part geometry.",
+      "drawing_projection": "NO P003↔P007 WELD SYMBOL. P007 is a monolithic machined part with integral blind end; reference controlled J2 assembly/leak process only after release.",
+      "inspection": "Part inspection plus controlled J2 assembly/leak verification; exact leak acceptance remains C12 OPEN.",
+      "release_blocking": false
+    },
+    {
+      "id": "C11",
+      "role": "Critical coaxiality/concentricity control",
+      "category": "GD&T_CONTAINMENT",
+      "function": "Control radial alignment through magnetic/containment envelope",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "relationship": "thin-can OD and ID radial envelope to datum B axis",
+        "P007_side_allocation_mm": 0.02
+      },
+      "variation_semantics": {
+        "gdt": "TOTAL RUNOUT 0.02 | B on both thin-can OD and ID surfaces"
+      },
+      "authority_sources": [
+        "EDR-029_P007_C07_C08_C11_RADIAL_ENVELOPE_RELEASE",
+        "K01_P007_FUNCTIONAL_TOLERANCE_PLAN FT-04",
+        "EDR-027_T07A_PRESSURE_SHELL_SCREEN_ACCEPTANCE",
+        "SRC-GPS-ISO1101-001"
+      ],
+      "cad_binding": "DERIVED_BINDING_READY_C07_C08_SURFACES_TO_DATUM_B_AXIS",
+      "mbd_carrier": "DimXpert total-runout FCF on OD and ID surfaces to datum B",
+      "drawing_projection": "PROJECT TOTAL RUNOUT 0.02 | B on thin-can OD and ID",
+      "inspection": "CMM/qualified low-force rotary runout setup referenced to datum B; supported thin-wall condition; first-article capability confirmation",
+      "release_blocking": false
+    },
+    {
+      "id": "C12",
+      "role": "Quantitative leak/containment acceptance",
+      "category": "INSPECTION_ACCEPTANCE",
+      "function": "Verify containment integrity",
+      "definition_state": "OPEN",
+      "nominal_or_requirement": {
+        "acceptance": "OPEN"
+      },
+      "variation_semantics": {},
+      "authority_sources": [
+        "REQ-K01-LEAK-001"
+      ],
+      "cad_binding": "NOT_APPLICABLE",
+      "mbd_carrier": "inspection/process note after requirement release",
+      "drawing_projection": "Reference controlled leak specification only after release",
+      "inspection": "qualified leak test; numeric acceptance OPEN",
+      "release_blocking": true
+    },
+    {
+      "id": "K01-D006-BLIND-END",
+      "role": "Blind-end thickness",
+      "category": "SIZE_CONTAINMENT",
+      "function": "Maintain containment end-wall integrity",
+      "definition_state": "CONTROLLED",
+      "nominal_or_requirement": {
+        "thickness_mm": 1.0,
+        "limits_mm": [
+          0.9,
+          1.1
+        ]
+      },
+      "variation_semantics": {
+        "thickness_tolerance": "±0.10 mm"
+      },
+      "authority_sources": [
+        "canonical native geometry",
+        "K01_P007_FUNCTIONAL_TOLERANCE_PLAN FT-05",
+        "EDR-027_T07A_PRESSURE_SHELL_SCREEN_ACCEPTANCE",
+        "EDR-030_P007_C01_C05_C06_BLIND_END_RELEASE"
+      ],
+      "cad_binding": "PENDING_DETERMINISTIC_BINDING",
+      "mbd_carrier": "native size annotation 1.00 ±0.10 after deterministic blind-end face-pair binding",
+      "drawing_projection": "PROJECT BLIND-END THICKNESS 1.00 ±0.10",
+      "inspection": "CMM/depth comparison between external end face and internal blind-bottom face, or equivalent qualified thickness method",
+      "release_blocking": false
+    }
+  ],
+  "coverage_gaps": [
+    {
+      "id": "PDG-SURFACE-TEXTURE",
+      "category": "SURFACE_TEXTURE",
+      "state": "OPEN",
+      "requirement": "Define required surface texture only where function/manufacturing demands it; no default Ra shall be invented.",
+      "release_blocking": true
+    },
+    {
+      "id": "PDG-EDGE-CONDITION",
+      "category": "EDGE_CONDITION",
+      "state": "CONTROLLED",
+      "requirement": "DEBURR. Break non-functional sharp edges 0.1–0.2 mm. Do not break/abrade Datum A, Ø14.10 H7 locator, seal-contact, or other explicitly controlled functional edges unless specifically dimensioned.",
+      "release_blocking": false,
+      "authority": "EDR-030_P007_C01_C05_C06_BLIND_END_RELEASE"
+    },
+    {
+      "id": "PDG-INSPECTION-METHODS",
+      "category": "INSPECTION",
+      "state": "OPEN",
+      "requirement": "Close manufacturing inspection method/acceptance for release-blocking dimensional/GD&T characteristics.",
+      "release_blocking": true
+    }
+  ],
+  "explicitly_rejected_legacy_semantics": [
+    "C03 PERP Ø0.03 TO A as released value",
+    "any template/general ±0.25 applied automatically",
+    "Permanent P003↔P007 containment weld as active C2R1 baseline",
+    "C01/C05/C06 legacy values are no longer release-rejected after explicit revalidation and promotion by EDR-030; only pre-EDR-030 uncontrolled use remains superseded."
+  ]
+}

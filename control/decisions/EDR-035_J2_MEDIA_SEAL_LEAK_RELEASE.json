@@ -1,0 +1,71 @@
+{
+  "schema": "k01.edr.v1",
+  "id": "EDR-035",
+  "title": "J2 service media, static seal and C12 leak acceptance release",
+  "generated_utc": "2026-09-17T06:43:55.137237+00:00",
+  "status": "ACCEPTED_RELEASE_DEFINITION",
+  "scope": "K01-P-003 ↔ K01-P-007 J2 removable containment interface",
+  "request": "Close REQ-K01-MEDIA-001, REQ-K01-SEAL-001 and REQ-K01-LEAK-001 using the documented MARV application and an explicit K01 quantitative containment acceptance.",
+  "decision": {
+    "service_media": {
+      "applicability": [
+        "documented MARV BOF/BF-type process-gas service",
+        "CO-bearing process gas",
+        "water vapour / high humidity / possible condensate",
+        "dust / process particulates",
+        "dry N2 purge"
+      ],
+      "local_temperature_max_C": 55.0,
+      "differential_pressure_bar": [
+        -0.2,
+        0.2
+      ],
+      "cleaning": "No intentionally applied liquid cleaning chemical at J2 in the released internal-service baseline.",
+      "high_pressure_purge_exclusion": "6 bar probe/filter purge is excluded from the optical-module/J2 load path by system valve routing.",
+      "requalification_triggers": [
+        "new corrosive/acidic/solvent species not covered by current MARV service",
+        "intentional liquid cleaner contact at J2",
+        "temperature > 55 C",
+        "|differential pressure| > 0.20 bar",
+        "seal material family or gland geometry change"
+      ]
+    },
+    "seal": {
+      "architecture": "static face O-ring",
+      "size_mm": "16 x 1.5",
+      "gland": "existing controlled J2 gland retained",
+      "material_requirement": "FKM, 75 ±5 Shore A, post-cured production grade",
+      "supplier_lot_boundary": "Exact supplier compound/lot and CoC are incoming/procurement qualification, not geometry-definition blockers.",
+      "fallback": "FFKM only if later compatibility evidence invalidates FKM for the released media envelope."
+    },
+    "C12": {
+      "characteristic": "integral J2 leak / containment acceptance",
+      "acceptance_qHe_mbar_L_s_max": 1e-05,
+      "test_differential_pressure_bar_abs": 0.2,
+      "pressure_directions": "both directions unless equivalence is explicitly justified",
+      "measurement_temperature_C": "20 ±5",
+      "method": "calibrated helium tracer-gas integral/local method with stated tracer concentration, reference leak, background, test pressure and result",
+      "production_screening": "pressure-decay/gross-leak method allowed only after correlation to this quantitative acceptance",
+      "physical_verification_state": "OPEN_L8_QUALIFICATION"
+    }
+  },
+  "rationale": {
+    "containment_function": "The MARV protection concept requires no normal release, only abnormal limited release.",
+    "containment_inlet_limit": "200 mbar documented maximum inlet pressure to containment system",
+    "system_flow_context": "40 L/min documented maximum containment-system flow",
+    "q_limit_origin": "K01 engineering acceptance decision. It is NOT claimed to be supplied by IEC or a vacuum handbook.",
+    "q_limit_scale": "1e-5 mbar L/s corresponds to about 0.864 mL/day referenced to ~1 bar, approximately 1.5e-8 of 40 L/min on a daily-volume basis.",
+    "methodology_note": "Vacuum literature is used for leak-test method principles, not to invent the product acceptance number."
+  },
+  "requirements_closed": [
+    "REQ-K01-MEDIA-001",
+    "REQ-K01-SEAL-001",
+    "REQ-K01-LEAK-001"
+  ],
+  "downstream": [
+    "P007 Product Definition",
+    "D006",
+    "EBOM/MBOM",
+    "J2 physical leak qualification"
+  ]
+}

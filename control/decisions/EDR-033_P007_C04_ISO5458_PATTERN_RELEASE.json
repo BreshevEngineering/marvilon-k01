@@ -1,0 +1,57 @@
+{
+  "schema": "k01.engineering_decision.v1",
+  "id": "EDR-033_P007_C04_ISO5458_PATTERN_RELEASE",
+  "date": "2026-09-15",
+  "title": "Release strict ISO 5458 pattern semantics and MMR for P007 C04 clamp holes",
+  "scope": "K01-P-007 C04 three-hole clamp pattern presentation/variation semantics; numerical T03 worst-case boundary preserved",
+  "status": "ACCEPTED_RELEASE_DEFINITION",
+  "decision": {
+    "P007_release_spec": "3× Ø2.90 H10 THRU; TED PCD Ø26.50; TED 120°; POSITION ⌀0.15 CZ Ⓜ | A | B",
+    "datum_B_condition": "RFS / no MMR modifier on datum B in this revision",
+    "pattern_semantics": "CZ creates one ISO 5458 tolerance-zone pattern with internal orientation/location constraints between the three hole axes; TEDs define the exact PCD and equal spacing.",
+    "mmr_semantics": "The Ø0.15 position tolerance applies at hole MMC Ø2.900. Departure from MMC increases the allowed diametral position tolerance one-for-one, reaching Ø0.190 at hole Ø2.940.",
+    "virtual_boundary_mm": 2.75,
+    "inspection": "GO/NO-GO or equivalent size verification plus CMM/functional-gauge pattern evaluation supporting ISO MMR and CZ semantics. Datum system remains A|B.",
+    "solidworks_2018_representation": "SW2018 predates native ISO 5458:2018 CZ support. Drawing executor may render CZ as controlled literal text in the tolerance compartment if API accepts it; otherwise the drawing remains HOLD for a controlled manual ISO representation. The semantic authority is this EDR, never an untracked free note."
+  },
+  "basis": [
+    "ISO 5458:2018 pattern logic: multiplicity such as 3× does not by itself create an ISO tolerance-zone pattern; CZ is required when internal orientation and location constraints are intended.",
+    "The existing C04 T03 worst-case proof uses the minimum P007 hole Ø2.900 and position Ø0.15. Adding MMR does not weaken that boundary because at MMC the tolerance remains Ø0.15.",
+    "At Ø2.940 the size bonus is 0.040 mm, so position may increase to Ø0.190 while the internal virtual boundary remains Ø2.750. The increased hole radius and increased allowable axis offset cancel at the functional boundary.",
+    "Datum B is intentionally retained without MMR. EDR-028 T03 already accounts for pilot diametral clearance; adding datum shift now would require a new coupled stack and risks double-counting available assembly movement."
+  ],
+  "technical_filter": {
+    "function": "Treat the three clearance holes as one equally spaced assembly pattern rather than three independent ISO position zones.",
+    "assembly": "MMR allocates the maximum manufacturing tolerance compatible with the existing screw-clearance boundary; no loss of proven T03 worst-case assembly margin at MMC.",
+    "inspection": "Requires CMM or qualified functional-gauge interpretation capable of CZ/MMR evaluation.",
+    "manufacturing": "No nominal geometry or hole-size limits change; only functional geometric acceptance is optimized.",
+    "datum": "A remains primary mating plane, B remains secondary locator axis; no tertiary datum is required for the rotationally symmetric equal-spacing pattern.",
+    "change_impact": "Supersedes only the C04 pattern semantics/presentation portion of EDR-028; C03 and all numerical nominal dimensions remain unchanged."
+  },
+  "rejected_alternatives": [
+    {
+      "option": "3× POSITION ⌀0.15 | A | B without CZ",
+      "reason": "Under ISO independence the three zones are not locked into a pattern; this does not express the intended 120° internal relationship."
+    },
+    {
+      "option": "Add MMR to datum B now",
+      "reason": "Potential datum shift is useful in some flange designs but is not yet reconciled with the existing T03 pilot-clearance stack; defer until explicitly recalculated."
+    },
+    {
+      "option": "Coordinate ± dimensions for the hole centers",
+      "reason": "Creates tolerance accumulation and loses the functional cylindrical position-zone architecture."
+    }
+  ],
+  "supersedes": {
+    "source": "EDR-028_P007_C03_C04_RELEASE",
+    "scope": "C04 variation/pattern semantics only; EDR-028 remains authority for C03 and original T03 numeric basis."
+  },
+  "stale_triggers": [
+    "hole size limits change from Ø2.900..2.940 H10",
+    "PCD changes from Ø26.50",
+    "equal spacing changes from 120°",
+    "M2.5 fastener major/envelope changes",
+    "datum system changes from A|B",
+    "T03 assembly stack is recalculated with datum-B material-boundary shift"
+  ]
+}

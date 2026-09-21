@@ -1,0 +1,46 @@
+{
+  "schema": "k01.engineering_decision_record.v1",
+  "id": "EDR-025",
+  "title": "P007 monolithic construction and removable P003↔P007 J2 process baseline",
+  "date": "2026-09-14",
+  "status": "PASS_DECISION",
+  "scope": [
+    "K01-P-007",
+    "J2 P003↔P007",
+    "EBOM/MBOM process applicability",
+    "K01-D-006 process semantics"
+  ],
+  "problem": "Legacy weld-process/MBOM records coexist with the selected removable C2R1 service boundary.",
+  "decision": {
+    "P007_construction": "Monolithic machined AISI 316L / EN 1.4404 body with integral blind end.",
+    "P003_P007_joint": "Removable metal mating faces + static axial O-ring + 3×M2.5 clamp screws; locator pilot provides radial location.",
+    "permanent_P003_P007_weld": "REJECTED / NOT APPLICABLE to active C2R1.",
+    "drawing_consequence": "K01-D-006 shall not carry a P003↔P007 weld symbol. P007 detail drawing defines one monolithic manufactured part.",
+    "bom_consequence": "Retire NM-P007-WELD-PROCESS and legacy MBOM-P007-WELDED-CONSTRUCTION from active MBOM; preserve as superseded history.",
+    "open_release_controls": [
+      "seal compound/media",
+      "clamp screw/torque/anti-galling",
+      "C12 quantitative leak acceptance",
+      "thin-wall/blind-end process capability and inspection"
+    ]
+  },
+  "basis": [
+    "DOS-J2-C2R1-v2 rejects permanent P003↔P007 weld because it destroys required service access.",
+    "CI-J2 C2R1 technical filter states serviceability PASS_WITH_LIMIT with No weld.",
+    "C2R1 P007 manufacturing route is deep-bore/finish thin can with integral blind end and OD33×3 flange.",
+    "Existing J2 process definition already required applicability review and prohibited silent carry-over of legacy welding."
+  ],
+  "rejected_alternatives": [
+    {
+      "alternative": "Permanent P003↔P007 containment weld",
+      "status": "REJECTED",
+      "reason": "Conflicts with removable service-boundary requirement."
+    },
+    {
+      "alternative": "Separate welded P007 sleeve/flange construction",
+      "status": "REJECTED_FOR_CURRENT_BASELINE",
+      "reason": "No controlled need/subcomponent identities; monolithic route selected."
+    }
+  ],
+  "release_boundary": "Closes architecture/process applicability only; does not close seal/leak qualification, fastener process, thin-wall process capability or product release."
+}

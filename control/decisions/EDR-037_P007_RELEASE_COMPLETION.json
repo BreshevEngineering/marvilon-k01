@@ -1,0 +1,78 @@
+{
+  "schema": "k01.edr.v1",
+  "id": "EDR-037",
+  "title": "P007 release completion: surface, manufacturing, inspection, measurement and effectivity",
+  "generated_utc": "2026-09-17T06:43:55.138234+00:00",
+  "status": "ACCEPTED_RELEASE_DEFINITION",
+  "scope": "K01-P-007 Product Definition completion before D006 release pipeline",
+  "decision": {
+    "surface_texture": {
+      "surface": "J2 Datum-A seal-contact face only",
+      "requirement": "Ra <= 0.8 µm",
+      "inspection": "profilometer",
+      "basis": "EDR-031 engineering-review candidate promoted after EDR-035 media/seal/leak definition."
+    },
+    "edge_condition": {
+      "status": "ALREADY_RELEASED_EDR030",
+      "rule": "deburr; break non-functional sharp edges 0.1–0.2 mm; do not break/abrade Datum A, locator, seal or controlled functional edges"
+    },
+    "C02": {
+      "authority": "control/decisions/EDR-032_P007_C02_LOCATOR_DEPTH_RELEASE.json",
+      "status": "ACCEPTED_RELEASE_DEFINITION",
+      "P007_locator_depth_mm": "2.00 ±0.05",
+      "P003_pilot_length_mm": "1.50 ±0.05",
+      "worst_case_bottom_clearance_mm": "0.40...0.60",
+      "action": "NO_NEW_DESIGN_DECISION__PROPAGATE_EXISTING_RELEASE"
+    },
+    "manufacturing_route": {
+      "status": "ACCEPTED_DESIGN_ROUTE__PHYSICAL_FAI_CAPABILITY_OPEN",
+      "route": [
+        "certified EN 1.4404 / AISI 316L stock",
+        "deep-bore ID 9.40 leaving integral blind end",
+        "finish Ø14.10 H7 locator and controlled depth",
+        "supported finish of Ø10 thin wall",
+        "machine Ø33 x 3 flange and overall length",
+        "drill 3x Ø2.90 H10 pattern on PCD26.50",
+        "deburr with protected functional edges",
+        "clean/passivate using released stainless route",
+        "dimensional/geometry/surface inspection",
+        "J2 leak qualification at assembly level"
+      ],
+      "physical_qualification_open": [
+        "0.30 mm wall ovality/collapse capability",
+        "runout capability",
+        "fixture/support method",
+        "blind-end capability",
+        "FAI evidence"
+      ],
+      "important": "Physical process capability remains L8 evidence; it does not make the design definition OPEN."
+    },
+    "measurement_conditions": {
+      "reference_temperature_C": 20.0,
+      "allowed_lab_temperature_C": "20 ±2",
+      "stabilization": "part and measuring equipment thermally stabilized before acceptance measurement",
+      "FAI": "required for first released manufacturing route and after process/source change affecting characteristic"
+    },
+    "inspection_plan": "control/inspection/K01_P007_INSPECTION_PLAN_CURRENT.json",
+    "configuration_effectivity": {
+      "baseline": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "P007_definition": "EDR-025 through EDR-037",
+      "drawing_control_sha256_at_decision": "33ae864607a713e18bbf3e55ab9e8f5182b84f787c94bff91653cf4f84306562",
+      "binding_mode": "PINNED_CONTROLLED_CONFIGURATION",
+      "invalidation_rule": "Any P007 native geometry hash/revision change or released characteristic change invalidates D006/PMI binding and requires re-verification."
+    },
+    "stale_projection_resolution": {
+      "C01_C05_C06_blind_end": "Released by EDR-030; any PARTIAL readiness projection is stale and shall be rebuilt, not re-engineered.",
+      "C02": "Released by EDR-032; do not reopen.",
+      "C03_C04": "Released by EDR-028/033.",
+      "C07_C08_C11": "Released by EDR-029.",
+      "weld_process": "N/A / superseded by monolithic P007 baseline EDR-025."
+    }
+  },
+  "downstream": [
+    "P007 Product Definition READY record",
+    "D006 final Drawing Spec",
+    "semantic QA",
+    "D8"
+  ]
+}

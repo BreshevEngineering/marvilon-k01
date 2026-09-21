@@ -1,0 +1,3181 @@
+{
+  "schema_version": "MEDTAS-DERIVED-STATE-1.2",
+  "project": "K01",
+  "nodes": {
+    "K01.CAD.BINDING.POLICY": {
+      "state_hash": "448a0c7b98ed046eb9de607f8c4d273b71b71190cd244453a5051cd657b44eac",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "CAD binding invariance policy",
+      "kind": "verification_policy"
+    },
+    "K01.CONFIG.EFFECTIVITY": {
+      "state_hash": "b47e7853b5975085a7379f4ac08a4b673dc5bd757a1d0045f48fa22895ef58bf",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "Configuration/effectivity policy",
+      "kind": "configuration_policy"
+    },
+    "K01.DATUM.SYSTEMS": {
+      "state_hash": "62581c475059d76ac202ff73fc3abb5b874426d5fec01065f25a963e329f39b8",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "Datum/reference-system registry",
+      "kind": "datum_system_registry"
+    },
+    "K01.DERIVED.INPUTS": {
+      "state_hash": "b79c7eab39069c04ac08c9de4112407d277b75dfc3d4c44ef525839a4b86e283",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "Derived engineering input registry",
+      "kind": "derived_input_registry"
+    },
+    "K01.DRAWING.D006.D3.EXECUTION.CONTRACT": {
+      "state_hash": "3bb73d6175f8677b6b254527e0b6f166b21a2725f54811f9b247fe9207e75c5e",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "P007 D3 authority-to-SW2018 execution contract",
+      "kind": "execution_contract"
+    },
+    "K01.DRAWING.D006.EXEMPLAR.POLICY": {
+      "state_hash": "f553012d2a7a4653fca9969f1a90457150b09c2631b67b9d36ba485f3f8cf8b9",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01-D-006 manual exemplar execution policy",
+      "kind": "policy"
+    },
+    "K01.DRAWING.DELIVERY.CAPABILITY": {
+      "state_hash": "9597bd58ca8b2d60830f4b276c2619a9568ce5b222d8007bf67991adc7e5d425",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01 drawing delivery/export capability and recipient acceptance",
+      "kind": "delivery_profile"
+    },
+    "K01.DRAWING.FAMILY.RULES": {
+      "state_hash": "8d69870c482915c23886a3845dda3489fcd7d7ec528ef72eccdc77ea6b4b8b53",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01 reusable drawing-family rules",
+      "kind": "policy"
+    },
+    "K01.DRAWING.P007.EXEMPLAR.SPEC": {
+      "state_hash": "0ad588732184f4679c421dc1b360cacb44a46827602e59c6aa9b0d5337da47f6",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01-D-006 P007 exemplar characteristic specification",
+      "kind": "drawing_definition"
+    },
+    "K01.DRAWING.P007.FAMILY.BINDING": {
+      "state_hash": "bfa9e03f46edeb335fe191414e0273b27307dce4c0c6136768aaf49db20dee6f",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "P007 drawing-family binding",
+      "kind": "policy"
+    },
+    "K01.DRAWING.PIPELINE.POLICY": {
+      "state_hash": "9be1f5fb12b6647e3dc180fa8016f37a70fbe020b80bf58a3f363d9e7639f3c3",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01 D1-D9 controlled drawing pipeline policy",
+      "kind": "policy"
+    },
+    "K01.DRAWING.STANDARD.PROFILE": {
+      "state_hash": "218f1ca4bc4fa47d7956b6962c8fd210771770733a7bb5e57b3c3d6feed553b2",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "Controlled drawing environment / ISO-GPS profile",
+      "kind": "policy"
+    },
+    "K01.ENGINEERING.FEEDBACK.POLICY": {
+      "state_hash": "dd2965b0c9d022a554d7412cdafe937e766fdfec21f4b2d3d95a358085938a29",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "Engineering feedback policy",
+      "kind": "change_policy"
+    },
+    "K01.ENGINEERING.FEEDBACK.REGISTRY": {
+      "state_hash": "ba9f9ceaf2f7b14354897759323887b007158f57c43d18dcd6f80ef4c736c71c",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "Engineering feedback registry",
+      "kind": "feedback_registry"
+    },
+    "K01.EVIDENCE.REGISTRY": {
+      "state_hash": "ef501006a58ef3abdb7239d5a7e619561f1ed6826cbd1b4bba29a856d1284215",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01 evidence registry",
+      "kind": "evidence_registry"
+    },
+    "K01.EXEC.CONTRACT.CURRENT": {
+      "state_hash": "148888dcf494350c3e8726726bce60d0c29af6b6e32153e3c58914294aeda9f7",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "Current engineering execution contract",
+      "kind": "execution_contract"
+    },
+    "K01.EXEC.METHODS": {
+      "state_hash": "cefc783382026c565bd2adf91022e2b6457f53ff6a4c2fe34cc2141499c9465d",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "Engineering execution method registry",
+      "kind": "execution_method_registry"
+    },
+    "K01.IDENTITY.POLICY": {
+      "state_hash": "c9d45f2bc4707be46d556e2c66e9fd016a77f80dd8ffcee567999bb819685725",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01 stable identity policy",
+      "kind": "identity_policy"
+    },
+    "K01.IDENTITY.REGISTRY": {
+      "state_hash": "3e0f8b7bfac41422deddb26f6fece46959bf915fd8b7de669f74712921589d78",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01 stable engineering identity registry",
+      "kind": "identity_registry"
+    },
+    "K01.MFG.P007.FEASIBILITY": {
+      "state_hash": "10c001e1e12b4b360db195e335bdc1afbefba67f3beb0bb91a470ea1be4f2cf9",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "P007 manufacturing feasibility / route decision",
+      "kind": "manufacturing_feasibility"
+    },
+    "K01.PARTS.REGISTRY": {
+      "state_hash": "5717603fc0a9138feadb139566e90cb8a983abcd21859107c1412bff070f6112",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01 canonical parts registry",
+      "kind": "product_registry"
+    },
+    "K01.PD.P007.CONTEXT": {
+      "state_hash": "14230df24b5bcecf333b6873cf112821ef2c69d1dc19d5d92e7039f7b65497c2",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "P007 characteristic context",
+      "kind": "product_definition_context"
+    },
+    "K01.PD.P007.CONTEXT.BINDING": {
+      "state_hash": "77424fd1920b1bc5fc87c0ffa86db47251260f10a6d48a9fd71b395d82ad5066",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "P007 binding-invariance context projection",
+      "kind": "product_definition_context_slice"
+    },
+    "K01.PD.P007.CONTEXT.CONFIGURATION": {
+      "state_hash": "63180c4962a536102490784606ff2c4d18abc2db34d1cbeaaf55443f0e9ed0b7",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "P007 configuration/effectivity context projection",
+      "kind": "product_definition_context_slice"
+    },
+    "K01.PD.P007.CONTEXT.DATUM": {
+      "state_hash": "bb7da96fd79f3cb8abf7220b19df124af2497b94c7f251e50cbb368ce48ceb5d",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "P007 datum/reference context projection",
+      "kind": "product_definition_context_slice"
+    },
+    "K01.PD.P007.CONTEXT.INSPECTION": {
+      "state_hash": "f4830480afdedd9591afd21c80b964852f5afee4ddd3421f23ba3d3b547c9208",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "P007 inspection-strategy context projection",
+      "kind": "product_definition_context_slice"
+    },
+    "K01.PD.P007.CONTEXT.MANUFACTURING": {
+      "state_hash": "c32f0e3c69958a2057111f0be4582bd1328aa9d917ca4b268a0568d2f0c8a65b",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "P007 manufacturing-route context projection",
+      "kind": "product_definition_context_slice"
+    },
+    "K01.PD.P007.CONTEXT.MEASUREMENT": {
+      "state_hash": "cace39dbf302e784e6872ae5d728da7df40d16fbfbb9e707bbd1d4d8aceec552",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "P007 measurement-condition context projection",
+      "kind": "product_definition_context_slice"
+    },
+    "K01.PD.P007.DECISIONS": {
+      "state_hash": "1ebc3b1bf05ca7f513533625234f212345c870a6f226771e1b1d92ccbb2cb1de",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "P007 controlled Product Definition decisions",
+      "kind": "product_definition_source"
+    },
+    "K01.PD.POLICY.CURRENT": {
+      "state_hash": "40476755edea9c1ce86ab89e861a3ecaa7557035404245695fc4f5b23d4fd7af",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "Current Product Definition policy",
+      "kind": "product_definition_policy"
+    },
+    "K01.PD.P007.CONFIGURATION_SLICE": {
+      "state_hash": "81b3038b97df0118f13c0f76ed856cd39b6863b293746963de691d5fe6db122f",
+      "artifact_hash": "30c9794dcdefebe1d9dedc5956754eb719a333cb313f6997aca9d39954193c26",
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [
+        {
+          "node_id": "K01.CONFIG.EFFECTIVITY",
+          "role": "configuration_effectivity",
+          "consume": "state",
+          "state_hash": "b47e7853b5975085a7379f4ac08a4b673dc5bd757a1d0045f48fa22895ef58bf"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.CONFIGURATION",
+          "role": "configuration_context",
+          "consume": "state",
+          "state_hash": "63180c4962a536102490784606ff2c4d18abc2db34d1cbeaaf55443f0e9ed0b7"
+        },
+        {
+          "node_id": "K01.PD.POLICY.CURRENT",
+          "role": "product_definition_policy",
+          "consume": "state",
+          "state_hash": "40476755edea9c1ce86ab89e861a3ecaa7557035404245695fc4f5b23d4fd7af"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "configuration_slice",
+          "path": "reports/product_definition/current/K01_P007_PD_SLICE_CONFIGURATION.json",
+          "size": 7432,
+          "sha256": "059a88bae1092fb4431a513b5ab4ccc72d9bd347ab9e35d603a546ca7cf10e11"
+        }
+      ],
+      "title": "P007 configuration/effectivity Product Definition slice",
+      "kind": "product_definition_slice"
+    },
+    "K01.PD.POLICY.V2": {
+      "state_hash": "e78ee5eb4caa7ad58f2aed09bcdfa6d94084c31b0a152f036fad69f647a06c30",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01 Product Definition policy v2",
+      "kind": "product_definition_policy"
+    },
+    "K01.PROJECT.STRUCTURE": {
+      "state_hash": "6529ae10bc054dd94cbaf83c71457e84a97771fcc619a83f6a02ec2f2419e9ab",
+      "artifact_hash": "9e46e1e5f6bf27df4078520c4ea2b5fd3cf8e8aa4f379341b55fc58b78ae4531",
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [
+        {
+          "output_id": "migration_plan",
+          "path": "reports/control/K01_PROJECT_MIGRATION_PLAN_CURRENT.json",
+          "size": 10114,
+          "sha256": "44aca3309e012d02b2122d50830f109ba4f0e4d51d61cd9d9d61fba98f8a9164"
+        },
+        {
+          "output_id": "project_structure",
+          "path": "reports/control/K01_PROJECT_STRUCTURE_CURRENT.json",
+          "size": 12150,
+          "sha256": "f5130bc7e3e8a982b9ab9f73337ffd2bbe548c22834285fee7c3d6e8ba32cdf1"
+        }
+      ],
+      "title": "K01 canonical project/repository structure audit",
+      "kind": "project_structure"
+    },
+    "K01.REQ.ALLOCATION": {
+      "state_hash": "306748bbfc713651602ab1a3ce4c0d3dfaa88b24f198a782c5f6dffe816e26ed",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "Requirement allocation registry",
+      "kind": "requirement_allocation"
+    },
+    "K01.REQ.GATE04E": {
+      "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01 controlled requirements registry",
+      "kind": "requirement"
+    },
+    "K01.MAT.GATE04E": {
+      "state_hash": "55f197d3d349cc43387326c450f2f6bd974f85d7ca9a64ccc1f237c0e20f1bd3",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        }
+      ],
+      "artifact_manifest": [],
+      "title": "Gate04E material state",
+      "kind": "material_spec"
+    },
+    "K01.PARAM.GATE04E": {
+      "state_hash": "6e70a110469cf973a4389a7217042c927182181ab5ed5bca80e76ad197fccf69",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        }
+      ],
+      "artifact_manifest": [],
+      "title": "Gate04E controlled parameters",
+      "kind": "parameter_set"
+    },
+    "K01.PARAM.INTERFACE.J2": {
+      "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        }
+      ],
+      "artifact_manifest": [],
+      "title": "J2 controlled interface parameters",
+      "kind": "parameter_set"
+    },
+    "K01.CAD.SEM.A001": {
+      "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939",
+      "artifact_hash": "8c0ed2962c689d29f3101e529cd527a2c670cacb0877950f20d4655d9136c089",
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [
+        {
+          "node_id": "K01.MAT.GATE04E",
+          "role": "materials",
+          "consume": "state",
+          "state_hash": "55f197d3d349cc43387326c450f2f6bd974f85d7ca9a64ccc1f237c0e20f1bd3"
+        },
+        {
+          "node_id": "K01.PARAM.GATE04E",
+          "role": "parameters",
+          "consume": "state",
+          "state_hash": "6e70a110469cf973a4389a7217042c927182181ab5ed5bca80e76ad197fccf69"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "interface_parameters",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "cad_semantic_json",
+          "path": "reports/medtas/cad/current/K01_CAD_SEM_A001.json",
+          "size": 155712,
+          "sha256": "983c85018ab000834abb5142e3cd7344642a80fcc03e9fd22c8454f5db0af4c3"
+        }
+      ],
+      "title": "A001 CAD semantic state",
+      "kind": "cad_semantic_state"
+    },
+    "K01.CAD.HASH.QUAL.A001": {
+      "state_hash": "3f1153ec6bbe3cc84f48aedcd93eb456882d7ab9fd5f019c4e258a733c6a219d",
+      "artifact_hash": "6d352627944eb015a4af72882b5484da356297d940dc056b7b2d0004b27b5d69",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CAD.SEM.A001",
+          "role": "cad_semantic",
+          "consume": "both",
+          "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939",
+          "artifact_hash": "8c0ed2962c689d29f3101e529cd527a2c670cacb0877950f20d4655d9136c089"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "hash_qualification",
+          "path": "reports/medtas/tests/K01_CAD_CANONICAL_HASH_INVARIANCE_CURRENT.json",
+          "size": 1923,
+          "sha256": "f80991cf674852cf417eff87abd8b96ad76e683e726db9ff87a0bf92f01f6c3f"
+        }
+      ],
+      "title": "A001 canonical save-invariance qualification",
+      "kind": "verification"
+    },
+    "K01.CAD.PROPS.PROJECTION.A001": {
+      "state_hash": "951990e02fbc49c7505cb947d4275aec5a51eeba93a4105cd6749a4283de59bc",
+      "artifact_hash": "d991ef3492dd2c3921621a014b1225fb5f658e64a7bc0b48e98bba92fde6bbe2",
+      "state": "MISSING",
+      "reasons": [
+        "no build_record"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CAD.SEM.A001",
+          "role": "active_cad_documents",
+          "consume": "state",
+          "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939"
+        },
+        {
+          "node_id": "K01.PARTS.REGISTRY",
+          "role": "product_metadata",
+          "consume": "state",
+          "state_hash": "5717603fc0a9138feadb139566e90cb8a983abcd21859107c1412bff070f6112"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "property_projection",
+          "path": "reports/bom/current/K01_PARTS_PROPERTY_PROJECTION_CURRENT.json",
+          "size": 19215,
+          "sha256": "a7a99bf4fbc84a1b3d144183cb43a50ad037c6eec2a8134b0b41a9c480ae67ab"
+        }
+      ],
+      "title": "A001 registry-to-CAD property projection audit",
+      "kind": "verification"
+    },
+    "K01.DRAWING.P007.LIVE.GEOMETRY": {
+      "state_hash": "6f851ccf7434d67e7bbdcce8311dbb5b743e898ff615176da371126a4b357b7f",
+      "artifact_hash": "47f16f0f4f59eb81981b1af12627f201961cf2060e9ddd36964314a0ea8af79a",
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [
+        {
+          "node_id": "K01.CAD.SEM.A001",
+          "role": "live_cad_semantics",
+          "consume": "state",
+          "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939"
+        },
+        {
+          "node_id": "K01.DRAWING.P007.EXEMPLAR.SPEC",
+          "role": "legacy_candidate_comparison",
+          "consume": "state",
+          "state_hash": "0ad588732184f4679c421dc1b360cacb44a46827602e59c6aa9b0d5337da47f6"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "controlled_interface_parameters",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "p007_live_geometry",
+          "path": "reports/drawing/current/K01-D-006_P007_LIVE_GEOMETRY_CURRENT.json",
+          "size": 3991,
+          "sha256": "36163ec4c8941cfc4bbf1cf8d018d858477c7da9602e0a950cc0eeeb23596701"
+        }
+      ],
+      "title": "P007 live CAD geometry and legacy-draft reconciliation",
+      "kind": "drawing_geometry_authority"
+    },
+    "K01.IDENTITY.AUDIT": {
+      "state_hash": "e6db5c2c2e5e90926cbfd776bad5425ded3305b7d87c9e86e2384e8cc22418a0",
+      "artifact_hash": "3ccfe6c8c2704dc279f76013960a5731f42216fda0e47b8a16a40d8741ea3ddc",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CAD.SEM.A001",
+          "role": "cad_semantic",
+          "consume": "state",
+          "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939"
+        },
+        {
+          "node_id": "K01.IDENTITY.POLICY",
+          "role": "identity_policy",
+          "consume": "state",
+          "state_hash": "c9d45f2bc4707be46d556e2c66e9fd016a77f80dd8ffcee567999bb819685725"
+        },
+        {
+          "node_id": "K01.IDENTITY.REGISTRY",
+          "role": "identity_registry",
+          "consume": "state",
+          "state_hash": "3e0f8b7bfac41422deddb26f6fece46959bf915fd8b7de669f74712921589d78"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "report",
+          "path": "reports/control/K01_IDENTITY_AUDIT_CURRENT.json",
+          "size": 5584,
+          "sha256": "6cb9b05bb11275f45e528e5163fd4166abdd9e547bef85f6be623fdd11038495"
+        }
+      ],
+      "title": "Native CAD identity audit",
+      "kind": "verification"
+    },
+    "K01.IDENTITY.MIGRATION.PLAN": {
+      "state_hash": "c3140ec880967f16e5acfa2f9aeb35e0c3a5af0e8d35242f0c3fa843514907c0",
+      "artifact_hash": "3cd49885a11bf353d566366a25b33fd3a23bb6cce2a73271c5fa87f793c719f6",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.IDENTITY.AUDIT",
+          "role": "identity_audit",
+          "consume": "both",
+          "state_hash": "e6db5c2c2e5e90926cbfd776bad5425ded3305b7d87c9e86e2384e8cc22418a0",
+          "artifact_hash": "3ccfe6c8c2704dc279f76013960a5731f42216fda0e47b8a16a40d8741ea3ddc"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "identity_migration_plan",
+          "path": "reports/control/K01_IDENTITY_MIGRATION_PLAN_CURRENT.json",
+          "size": 2834,
+          "sha256": "09b537538c6dcb7f0d39b58be45bc9f9a8f59f689c89eb0b10d1300caee9485b"
+        }
+      ],
+      "title": "One-time stable CAD identity migration work order",
+      "kind": "migration_plan"
+    },
+    "K01.MBD.A001": {
+      "state_hash": "74a0035eb9ea7a41eeda634df22096f7cc663fff6b1db67f771457676a23a067",
+      "artifact_hash": "e210e4a8c9fafdf9d32a8c80b72a5fa0a8e028a6dd63478e6bd03bea3e88fa6d",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CAD.SEM.A001",
+          "role": "native_model_semantics",
+          "consume": "state",
+          "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "mbd_semantic_json",
+          "path": "reports/medtas/mbd/current/K01_MBD_A001_v1.json",
+          "size": 4357,
+          "sha256": "b7b7de89ed93ee79c4f9387ac8c92fbfb6dad28a94dac74641f43609b3968d6c"
+        }
+      ],
+      "title": "A001 model-based definition / DimXpert state",
+      "kind": "mbd_semantic_state"
+    },
+    "K01.DRAWING.P007.EXEMPLAR.PLAN": {
+      "state_hash": "ba5ca852ffe4827953a813fd434ebcbe98c14b53f773df812fc3bc00317c84b7",
+      "artifact_hash": "42d28f0ca4861d9ad2db1f08c0c0376ca827e7a5c6deebee5f94a6bf35f199e4",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DRAWING.P007.EXEMPLAR.SPEC",
+          "role": "characteristic_spec",
+          "consume": "state",
+          "state_hash": "0ad588732184f4679c421dc1b360cacb44a46827602e59c6aa9b0d5337da47f6"
+        },
+        {
+          "node_id": "K01.DRAWING.P007.LIVE.GEOMETRY",
+          "role": "live_geometry",
+          "consume": "both",
+          "state_hash": "6f851ccf7434d67e7bbdcce8311dbb5b743e898ff615176da371126a4b357b7f",
+          "artifact_hash": "47f16f0f4f59eb81981b1af12627f201961cf2060e9ddd36964314a0ea8af79a"
+        },
+        {
+          "node_id": "K01.MBD.A001",
+          "role": "native_mbd",
+          "consume": "state",
+          "state_hash": "74a0035eb9ea7a41eeda634df22096f7cc663fff6b1db67f771457676a23a067"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "interface_parameters",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        },
+        {
+          "node_id": "K01.PARTS.REGISTRY",
+          "role": "product_metadata",
+          "consume": "state",
+          "state_hash": "5717603fc0a9138feadb139566e90cb8a983abcd21859107c1412bff070f6112"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "p007_exemplar_plan",
+          "path": "reports/drawing/current/K01-D-006_P007_EXEMPLAR_PLAN_CURRENT.json",
+          "size": 11631,
+          "sha256": "8b6919597e39fcf521bd39897e0da3e104d985d7522195b9bd48a35d11d2ad83"
+        },
+        {
+          "output_id": "p007_inspection_characteristics",
+          "path": "reports/inspection/current/K01-D-006_P007_CHARACTERISTICS_CURRENT.csv",
+          "size": 1320,
+          "sha256": "2135ef52f4a03ab829839cc6b1b7a710be73b8b8cebd4879c0efb859598916d5"
+        },
+        {
+          "output_id": "p007_mbd_checklist",
+          "path": "reports/drawing/current/K01-D-006_P007_MBD_AUTHORING_CHECKLIST.md",
+          "size": 1551,
+          "sha256": "467df1ad1c9692d6ef693b2151524855262ea0859f5f4828067cf58d9fb20898"
+        }
+      ],
+      "title": "K01-D-006 / P007 first exemplar drawing plan",
+      "kind": "verification"
+    },
+    "K01.PD.P007.COMPILED": {
+      "state_hash": "fe07bd104c0a46c4ef95e65a77e0130cf44dd97d1cc5b8e900ce15eea73092df",
+      "artifact_hash": "8e1136c99fee3024ca6d0c5087c05e18a856d9c2bb1a73928eefde11041a63b9",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CAD.BINDING.POLICY",
+          "role": "binding_invariance_policy",
+          "consume": "state",
+          "state_hash": "448a0c7b98ed046eb9de607f8c4d273b71b71190cd244453a5051cd657b44eac"
+        },
+        {
+          "node_id": "K01.CONFIG.EFFECTIVITY",
+          "role": "configuration_effectivity",
+          "consume": "state",
+          "state_hash": "b47e7853b5975085a7379f4ac08a4b673dc5bd757a1d0045f48fa22895ef58bf"
+        },
+        {
+          "node_id": "K01.DATUM.SYSTEMS",
+          "role": "datum_reference_systems",
+          "consume": "state",
+          "state_hash": "62581c475059d76ac202ff73fc3abb5b874426d5fec01065f25a963e329f39b8"
+        },
+        {
+          "node_id": "K01.DERIVED.INPUTS",
+          "role": "derived_engineering_inputs",
+          "consume": "state",
+          "state_hash": "b79c7eab39069c04ac08c9de4112407d277b75dfc3d4c44ef525839a4b86e283"
+        },
+        {
+          "node_id": "K01.ENGINEERING.FEEDBACK.POLICY",
+          "role": "feedback_policy",
+          "consume": "state",
+          "state_hash": "dd2965b0c9d022a554d7412cdafe937e766fdfec21f4b2d3d95a358085938a29"
+        },
+        {
+          "node_id": "K01.EXEC.CONTRACT.CURRENT",
+          "role": "execution_contract",
+          "consume": "state",
+          "state_hash": "148888dcf494350c3e8726726bce60d0c29af6b6e32153e3c58914294aeda9f7"
+        },
+        {
+          "node_id": "K01.EXEC.METHODS",
+          "role": "execution_method_control",
+          "consume": "state",
+          "state_hash": "cefc783382026c565bd2adf91022e2b6457f53ff6a4c2fe34cc2141499c9465d"
+        },
+        {
+          "node_id": "K01.MFG.P007.FEASIBILITY",
+          "role": "manufacturing_feasibility",
+          "consume": "state",
+          "state_hash": "10c001e1e12b4b360db195e335bdc1afbefba67f3beb0bb91a470ea1be4f2cf9"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "interface_contract",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT",
+          "role": "characteristic_context",
+          "consume": "state",
+          "state_hash": "14230df24b5bcecf333b6873cf112821ef2c69d1dc19d5d92e7039f7b65497c2"
+        },
+        {
+          "node_id": "K01.PD.P007.DECISIONS",
+          "role": "p007_definition_decisions",
+          "consume": "state",
+          "state_hash": "1ebc3b1bf05ca7f513533625234f212345c870a6f226771e1b1d92ccbb2cb1de"
+        },
+        {
+          "node_id": "K01.PD.POLICY.CURRENT",
+          "role": "product_definition_policy",
+          "consume": "state",
+          "state_hash": "40476755edea9c1ce86ab89e861a3ecaa7557035404245695fc4f5b23d4fd7af"
+        },
+        {
+          "node_id": "K01.REQ.ALLOCATION",
+          "role": "requirement_allocation",
+          "consume": "state",
+          "state_hash": "306748bbfc713651602ab1a3ce4c0d3dfaa88b24f198a782c5f6dffe816e26ed"
+        },
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "compiled_product_definition",
+          "path": "reports/product_definition/current/K01_P007_PRODUCT_DEFINITION_COMPILED.json",
+          "size": 74091,
+          "sha256": "f4cd03b689a2bd741ba14e64f63d1bf55ec42c78db84796ccc7ab8670a5b09df"
+        },
+        {
+          "output_id": "drawing_authoring_gate",
+          "path": "reports/control/K01_D006_DRAWING_AUTHORING_GATE_CURRENT.json",
+          "size": 1069,
+          "sha256": "639749432928e623752b65fbb83086532bb2245be117b54821999db244b32d09"
+        },
+        {
+          "output_id": "product_definition_readiness",
+          "path": "reports/control/K01_P007_PRODUCT_DEFINITION_READINESS_CURRENT.json",
+          "size": 2779,
+          "sha256": "de2fc6fe3bf13fee2285a2ff0e2a00b1e96f9816529eb482f5351393e15acd9e"
+        }
+      ],
+      "title": "P007 compiled Product Definition / drawing-authoring contract",
+      "kind": "product_definition"
+    },
+    "K01.CHARACTERISTICS.REGISTRY": {
+      "state_hash": "c7560bd5a6f32786c0668cd64a3c7eb253ac16fdcbdc43de11277a2c31fa66a6",
+      "artifact_hash": "2857733d9d523319d077bd112334b76ee27763219acfa8c8f92d838f5d2aecbb",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.MBD.A001",
+          "role": "native_mbd_semantics",
+          "consume": "state",
+          "state_hash": "74a0035eb9ea7a41eeda634df22096f7cc663fff6b1db67f771457676a23a067"
+        },
+        {
+          "node_id": "K01.PD.P007.COMPILED",
+          "role": "compiled_product_definition",
+          "consume": "both",
+          "state_hash": "fe07bd104c0a46c4ef95e65a77e0130cf44dd97d1cc5b8e900ce15eea73092df",
+          "artifact_hash": "8e1136c99fee3024ca6d0c5087c05e18a856d9c2bb1a73928eefde11041a63b9"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "report",
+          "path": "reports/inspection/current/K01_RELEASE_CHARACTERISTICS_CURRENT.json",
+          "size": 7047,
+          "sha256": "2ed96f4773a1926cacaf78cf447ac6c60a03c573665fff67209bb1a167720614"
+        }
+      ],
+      "title": "Release characteristic registry",
+      "kind": "verification"
+    },
+    "K01.PD.P007.DRAWING_SLICE": {
+      "state_hash": "36113892f275fde8ead0bf11f4e5a0aa868f105b57a58682f9abd158975fad26",
+      "artifact_hash": "ed0fdafebd01cbb89f6e8bbbd7ea6a2399ce4a0d3895db329b24ae5065144260",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CONFIG.EFFECTIVITY",
+          "role": "configuration_effectivity",
+          "consume": "state",
+          "state_hash": "b47e7853b5975085a7379f4ac08a4b673dc5bd757a1d0045f48fa22895ef58bf"
+        },
+        {
+          "node_id": "K01.DATUM.SYSTEMS",
+          "role": "datum_systems",
+          "consume": "state",
+          "state_hash": "62581c475059d76ac202ff73fc3abb5b874426d5fec01065f25a963e329f39b8"
+        },
+        {
+          "node_id": "K01.MFG.P007.FEASIBILITY",
+          "role": "manufacturing_feasibility",
+          "consume": "state",
+          "state_hash": "10c001e1e12b4b360db195e335bdc1afbefba67f3beb0bb91a470ea1be4f2cf9"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "interface_contract",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.CONFIGURATION",
+          "role": "configuration_context",
+          "consume": "state",
+          "state_hash": "63180c4962a536102490784606ff2c4d18abc2db34d1cbeaaf55443f0e9ed0b7"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.DATUM",
+          "role": "datum_context",
+          "consume": "state",
+          "state_hash": "bb7da96fd79f3cb8abf7220b19df124af2497b94c7f251e50cbb368ce48ceb5d"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.MANUFACTURING",
+          "role": "manufacturing_context",
+          "consume": "state",
+          "state_hash": "c32f0e3c69958a2057111f0be4582bd1328aa9d917ca4b268a0568d2f0c8a65b"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.MEASUREMENT",
+          "role": "measurement_context",
+          "consume": "state",
+          "state_hash": "cace39dbf302e784e6872ae5d728da7df40d16fbfbb9e707bbd1d4d8aceec552"
+        },
+        {
+          "node_id": "K01.PD.P007.DECISIONS",
+          "role": "definition_decisions",
+          "consume": "state",
+          "state_hash": "1ebc3b1bf05ca7f513533625234f212345c870a6f226771e1b1d92ccbb2cb1de"
+        },
+        {
+          "node_id": "K01.PD.POLICY.CURRENT",
+          "role": "product_definition_policy",
+          "consume": "state",
+          "state_hash": "40476755edea9c1ce86ab89e861a3ecaa7557035404245695fc4f5b23d4fd7af"
+        },
+        {
+          "node_id": "K01.REQ.ALLOCATION",
+          "role": "requirement_allocation",
+          "consume": "state",
+          "state_hash": "306748bbfc713651602ab1a3ce4c0d3dfaa88b24f198a782c5f6dffe816e26ed"
+        },
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "drawing_slice",
+          "path": "reports/product_definition/current/K01_P007_PD_SLICE_DRAWING.json",
+          "size": 40077,
+          "sha256": "75f780c4b9b4553a8623578adaa4dc37bcac37397e559d3518179f82da085031"
+        }
+      ],
+      "title": "P007 drawing-projection Product Definition slice",
+      "kind": "product_definition_slice"
+    },
+    "K01.DRAWING.D006.FAMILY.PLAN": {
+      "state_hash": "c639003b6bc6d0203e7db3a200af2eadb783e0e45d5be20a16d77aaf1a364970",
+      "artifact_hash": "97b58b0c70ce7d61b1698634af6ac6e88ad310ccdc224a528e302e6bbfffc795",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DRAWING.FAMILY.RULES",
+          "role": "family_algorithm",
+          "consume": "state",
+          "state_hash": "8d69870c482915c23886a3845dda3489fcd7d7ec528ef72eccdc77ea6b4b8b53"
+        },
+        {
+          "node_id": "K01.DRAWING.P007.FAMILY.BINDING",
+          "role": "part_family_binding",
+          "consume": "state",
+          "state_hash": "bfa9e03f46edeb335fe191414e0273b27307dce4c0c6136768aaf49db20dee6f"
+        },
+        {
+          "node_id": "K01.PD.P007.DRAWING_SLICE",
+          "role": "controlled_drawing_semantics",
+          "consume": "state",
+          "state_hash": "36113892f275fde8ead0bf11f4e5a0aa868f105b57a58682f9abd158975fad26"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "drawing_family_plan",
+          "path": "reports/drawing/current/K01-D-006_FAMILY_PLAN_CURRENT.json",
+          "size": 15051,
+          "sha256": "79405c4ab7fe48a44956f5b56173e0292c80c9b53d3932bb99dacd93e3833be5"
+        },
+        {
+          "output_id": "drawing_family_plan_gate",
+          "path": "reports/control/K01_D006_DRAWING_FAMILY_PLAN_CURRENT.json",
+          "size": 494,
+          "sha256": "94e0b14dc7da6b2d89d52abf1eabd4c08a6df49e963cffb5ac9563d004d13cab"
+        }
+      ],
+      "title": "K01-D-006 reusable family view/routing plan",
+      "kind": "drawing_family_plan"
+    },
+    "K01.DRAWING.D006.D1.AUTHORING_PLAN": {
+      "state_hash": "e27466dd8c4e1e82cb7108c96d600594ba90dc57445941c0d6453585268025d3",
+      "artifact_hash": "31f2d270edf271687614ecce34a57c60ec1a84471041065534db00ee473c248a",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DRAWING.D006.FAMILY.PLAN",
+          "role": "view_and_claim_routing",
+          "consume": "state",
+          "state_hash": "c639003b6bc6d0203e7db3a200af2eadb783e0e45d5be20a16d77aaf1a364970"
+        },
+        {
+          "node_id": "K01.DRAWING.DELIVERY.CAPABILITY",
+          "role": "delivery_capability_context",
+          "consume": "state",
+          "state_hash": "9597bd58ca8b2d60830f4b276c2619a9568ce5b222d8007bf67991adc7e5d425"
+        },
+        {
+          "node_id": "K01.DRAWING.PIPELINE.POLICY",
+          "role": "drawing_pipeline_contract",
+          "consume": "state",
+          "state_hash": "9be1f5fb12b6647e3dc180fa8016f37a70fbe020b80bf58a3f363d9e7639f3c3"
+        },
+        {
+          "node_id": "K01.MFG.P007.FEASIBILITY",
+          "role": "manufacturing_route_gate",
+          "consume": "state",
+          "state_hash": "10c001e1e12b4b360db195e335bdc1afbefba67f3beb0bb91a470ea1be4f2cf9"
+        },
+        {
+          "node_id": "K01.PARTS.REGISTRY",
+          "role": "part_identity",
+          "consume": "state",
+          "state_hash": "5717603fc0a9138feadb139566e90cb8a983abcd21859107c1412bff070f6112"
+        },
+        {
+          "node_id": "K01.PD.P007.DRAWING_SLICE",
+          "role": "controlled_drawing_semantics",
+          "consume": "both",
+          "state_hash": "36113892f275fde8ead0bf11f4e5a0aa868f105b57a58682f9abd158975fad26",
+          "artifact_hash": "ed0fdafebd01cbb89f6e8bbbd7ea6a2399ce4a0d3895db329b24ae5065144260"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "d1_authoring_plan",
+          "path": "reports/drawing/current/K01-D-006_D1_AUTHORING_PLAN_CURRENT.json",
+          "size": 45724,
+          "sha256": "15fb27d79a59e107e6c5f92ad5da604f859442eaac04ca69776926675692d75b"
+        },
+        {
+          "output_id": "d1_readiness",
+          "path": "reports/control/K01_D006_D1_AUTHORING_READINESS_CURRENT.json",
+          "size": 1082,
+          "sha256": "18d1e453b26d8ffe2586ee14467d878dba0c6d1de7b25c41835c3dcab0c51170"
+        }
+      ],
+      "title": "K01-D-006 D1 claim-level PMI authoring plan",
+      "kind": "drawing_authoring_plan"
+    },
+    "K01.DRAWING.D006.PROJECTION": {
+      "state_hash": "5169e8cc433227ed05d6828edb0d4ef5ea1aa5ffba5e4b3348e23ff8d8188c34",
+      "artifact_hash": "5aa2c676d0c723d9e62141490fef78493c16b43d330a9ada6db2a779140efe53",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CAD.SEM.A001",
+          "role": "linked_native_geometry",
+          "consume": "state",
+          "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939"
+        },
+        {
+          "node_id": "K01.DRAWING.P007.LIVE.GEOMETRY",
+          "role": "p007_live_geometry_projection_context",
+          "consume": "state",
+          "state_hash": "6f851ccf7434d67e7bbdcce8311dbb5b743e898ff615176da371126a4b357b7f"
+        },
+        {
+          "node_id": "K01.MBD.A001",
+          "role": "native_pmi_context",
+          "consume": "state",
+          "state_hash": "74a0035eb9ea7a41eeda634df22096f7cc663fff6b1db67f771457676a23a067"
+        },
+        {
+          "node_id": "K01.PD.P007.DRAWING_SLICE",
+          "role": "drawing_product_definition_slice",
+          "consume": "both",
+          "state_hash": "36113892f275fde8ead0bf11f4e5a0aa868f105b57a58682f9abd158975fad26",
+          "artifact_hash": "ed0fdafebd01cbb89f6e8bbbd7ea6a2399ce4a0d3895db329b24ae5065144260"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "d006_projection_report",
+          "path": "reports/drawing/current/K01-D-006_PROJECTION_CURRENT.json",
+          "size": 8612,
+          "sha256": "8ed0f963945e407bbd1cebb03aeee635474eddc5b8954e6bd22eb9d73640bd13"
+        }
+      ],
+      "title": "K01-D-006 controlled projection from compiled P007 Product Definition",
+      "kind": "drawing_artifact"
+    },
+    "K01.DRAWING.D006.EXEMPLAR.WORKSPACE": {
+      "state_hash": "4bc6a9e01631cf1965f2835e94332c316ea1a738ac256e4697a1db950eb3b7e1",
+      "artifact_hash": "13864cd8ea099ff1f43febd1bc6c2eb905a51c621f1a3fa6de056badfe95d704",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DRAWING.D006.D1.AUTHORING_PLAN",
+          "role": "claim_scoped_d2_authorization",
+          "consume": "both",
+          "state_hash": "e27466dd8c4e1e82cb7108c96d600594ba90dc57445941c0d6453585268025d3",
+          "artifact_hash": "31f2d270edf271687614ecce34a57c60ec1a84471041065534db00ee473c248a"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.EXEMPLAR.POLICY",
+          "role": "exemplar_execution_contract",
+          "consume": "state",
+          "state_hash": "f553012d2a7a4653fca9969f1a90457150b09c2631b67b9d36ba485f3f8cf8b9"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.PROJECTION",
+          "role": "v10_design_review_seed",
+          "consume": "both",
+          "state_hash": "5169e8cc433227ed05d6828edb0d4ef5ea1aa5ffba5e4b3348e23ff8d8188c34",
+          "artifact_hash": "5aa2c676d0c723d9e62141490fef78493c16b43d330a9ada6db2a779140efe53"
+        },
+        {
+          "node_id": "K01.PD.P007.DRAWING_SLICE",
+          "role": "current_drawing_semantics",
+          "consume": "both",
+          "state_hash": "36113892f275fde8ead0bf11f4e5a0aa868f105b57a58682f9abd158975fad26",
+          "artifact_hash": "ed0fdafebd01cbb89f6e8bbbd7ea6a2399ce4a0d3895db329b24ae5065144260"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "d006_exemplar_workspace",
+          "path": "reports/drawing/current/K01-D-006_EXEMPLAR_WORKSPACE_CURRENT.json",
+          "size": 3340,
+          "sha256": "baddd72c9dc19b125603f95934096a498927eb755b400d344d35abebadc2a052"
+        }
+      ],
+      "title": "K01-D-006 manual exemplar dedicated linked workspace",
+      "kind": "drawing_exemplar_workspace"
+    },
+    "K01.DRAWING.D006.EXEMPLAR.CAPTURE": {
+      "state_hash": "f8518bf90f42abd5396da2f7ee2ebb7e9ca30c753cb2a6dc319c6ac3aff9392f",
+      "artifact_hash": "a12c5ac93c4e05f2db61846edcc736c426a8527b48d86d0e608b1f839405603c",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DRAWING.D006.D1.AUTHORING_PLAN",
+          "role": "authorized_claim_scope",
+          "consume": "state",
+          "state_hash": "e27466dd8c4e1e82cb7108c96d600594ba90dc57445941c0d6453585268025d3"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.EXEMPLAR.WORKSPACE",
+          "role": "dedicated_working_files",
+          "consume": "both",
+          "state_hash": "4bc6a9e01631cf1965f2835e94332c316ea1a738ac256e4697a1db950eb3b7e1",
+          "artifact_hash": "13864cd8ea099ff1f43febd1bc6c2eb905a51c621f1a3fa6de056badfe95d704"
+        },
+        {
+          "node_id": "K01.PD.P007.DRAWING_SLICE",
+          "role": "current_semantics",
+          "consume": "both",
+          "state_hash": "36113892f275fde8ead0bf11f4e5a0aa868f105b57a58682f9abd158975fad26",
+          "artifact_hash": "ed0fdafebd01cbb89f6e8bbbd7ea6a2399ce4a0d3895db329b24ae5065144260"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "d006_exemplar_capture",
+          "path": "reports/drawing/current/K01-D-006_EXEMPLAR_CAPTURE_CURRENT.json",
+          "size": 4003,
+          "sha256": "e7a9753b0c34a529786d11b6ca1c60ad7a48d4af87306ed762d2c318ac96a410"
+        }
+      ],
+      "title": "K01-D-006 manual exemplar semantic capture",
+      "kind": "drawing_exemplar_evidence"
+    },
+    "K01.DRAWING.D006.EXEMPLAR.REQUALIFICATION": {
+      "state_hash": "fe95847e1644e325f636170483dcbb8489fd529bfbd260198f4962d430d6b367",
+      "artifact_hash": "40f9407974224693ee76290004f4ba7a1933d434de929d2d93d7da98f5311607",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DRAWING.D006.D1.AUTHORING_PLAN",
+          "role": "current_d1_plan",
+          "consume": "state",
+          "state_hash": "e27466dd8c4e1e82cb7108c96d600594ba90dc57445941c0d6453585268025d3"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.EXEMPLAR.WORKSPACE",
+          "role": "original_workspace_pin_and_frozen_scope",
+          "consume": "state",
+          "state_hash": "4bc6a9e01631cf1965f2835e94332c316ea1a738ac256e4697a1db950eb3b7e1"
+        },
+        {
+          "node_id": "K01.PD.P007.DRAWING_SLICE",
+          "role": "current_controlled_drawing_semantics",
+          "consume": "state",
+          "state_hash": "36113892f275fde8ead0bf11f4e5a0aa868f105b57a58682f9abd158975fad26"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "exemplar_requalification",
+          "path": "reports/drawing/current/K01-D-006_EXEMPLAR_REQUALIFICATION_CURRENT.json",
+          "size": 1711,
+          "sha256": "6c1a4732abf10e96c8ed782373d6b31ec5c7ad21584917f2e4ae4e827a5d2463"
+        }
+      ],
+      "title": "K01-D-006 V12 exemplar explicit requalification to current D1 frozen scope",
+      "kind": "exemplar_requalification"
+    },
+    "K01.DRAWING.D006.D3.AUTHORING_VERIFY": {
+      "state_hash": "6c40191a67858ba16a6fffea241e05c101b73e0abd7f815d2bac50a4cc50c115",
+      "artifact_hash": "bd0047970411e125d6af5b5e9184b5537c1c4c2f156b6b61fc455dd881a78950",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CAD.BINDING.POLICY",
+          "role": "binding_invariance_policy",
+          "consume": "state",
+          "state_hash": "448a0c7b98ed046eb9de607f8c4d273b71b71190cd244453a5051cd657b44eac"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.D1.AUTHORING_PLAN",
+          "role": "authorized_claim_scope",
+          "consume": "both",
+          "state_hash": "e27466dd8c4e1e82cb7108c96d600594ba90dc57445941c0d6453585268025d3",
+          "artifact_hash": "31f2d270edf271687614ecce34a57c60ec1a84471041065534db00ee473c248a"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.D3.EXECUTION.CONTRACT",
+          "role": "authority_to_sw2018_execution_mapping",
+          "consume": "state",
+          "state_hash": "3bb73d6175f8677b6b254527e0b6f166b21a2725f54811f9b247fe9207e75c5e"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.EXEMPLAR.REQUALIFICATION",
+          "role": "explicit_current_d1_requalification",
+          "consume": "both",
+          "state_hash": "fe95847e1644e325f636170483dcbb8489fd529bfbd260198f4962d430d6b367",
+          "artifact_hash": "40f9407974224693ee76290004f4ba7a1933d434de929d2d93d7da98f5311607"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.EXEMPLAR.WORKSPACE",
+          "role": "saved_exemplar_part",
+          "consume": "both",
+          "state_hash": "4bc6a9e01631cf1965f2835e94332c316ea1a738ac256e4697a1db950eb3b7e1",
+          "artifact_hash": "13864cd8ea099ff1f43febd1bc6c2eb905a51c621f1a3fa6de056badfe95d704"
+        },
+        {
+          "node_id": "K01.DRAWING.PIPELINE.POLICY",
+          "role": "drawing_assurance_policy",
+          "consume": "state",
+          "state_hash": "9be1f5fb12b6647e3dc180fa8016f37a70fbe020b80bf58a3f363d9e7639f3c3"
+        },
+        {
+          "node_id": "K01.PD.P007.DRAWING_SLICE",
+          "role": "controlled_semantics",
+          "consume": "state",
+          "state_hash": "36113892f275fde8ead0bf11f4e5a0aa868f105b57a58682f9abd158975fad26"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "d3_authoring_verify",
+          "path": "reports/drawing/current/K01-P-007_D3_AUTHORING_VERIFY_CURRENT.json",
+          "size": 4344,
+          "sha256": "0f01738e1937d36abb9059620de18a6575353ae13342d9b8fdbb42f7d76bd119"
+        }
+      ],
+      "title": "K01-P-007 D3 native PMI / binding invariance verification",
+      "kind": "drawing_authoring_verification"
+    },
+    "K01.DRAWING.D006.D7.SEMANTIC_QA": {
+      "state_hash": "57f4baba9ffe9cdbb3f5ed88c8d0bfd9c45b62f5795e77a05fb99935f49db6d0",
+      "artifact_hash": "8e25207061e0ed85d17630becdda8afabe0f25e5cd7e3ac786d4c4a5b8962a9d",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DRAWING.D006.D1.AUTHORING_PLAN",
+          "role": "authorized_claim_scope",
+          "consume": "state",
+          "state_hash": "e27466dd8c4e1e82cb7108c96d600594ba90dc57445941c0d6453585268025d3"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.D3.AUTHORING_VERIFY",
+          "role": "verified_model_pmi_binding",
+          "consume": "both",
+          "state_hash": "6c40191a67858ba16a6fffea241e05c101b73e0abd7f815d2bac50a4cc50c115",
+          "artifact_hash": "bd0047970411e125d6af5b5e9184b5537c1c4c2f156b6b61fc455dd881a78950"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.EXEMPLAR.CAPTURE",
+          "role": "native_transport_capture",
+          "consume": "both",
+          "state_hash": "f8518bf90f42abd5396da2f7ee2ebb7e9ca30c753cb2a6dc319c6ac3aff9392f",
+          "artifact_hash": "a12c5ac93c4e05f2db61846edcc736c426a8527b48d86d0e608b1f839405603c"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.EXEMPLAR.WORKSPACE",
+          "role": "saved_exemplar_drawing",
+          "consume": "both",
+          "state_hash": "4bc6a9e01631cf1965f2835e94332c316ea1a738ac256e4697a1db950eb3b7e1",
+          "artifact_hash": "13864cd8ea099ff1f43febd1bc6c2eb905a51c621f1a3fa6de056badfe95d704"
+        },
+        {
+          "node_id": "K01.DRAWING.PIPELINE.POLICY",
+          "role": "qa_rules",
+          "consume": "state",
+          "state_hash": "9be1f5fb12b6647e3dc180fa8016f37a70fbe020b80bf58a3f363d9e7639f3c3"
+        },
+        {
+          "node_id": "K01.DRAWING.STANDARD.PROFILE",
+          "role": "drawing_environment_profile",
+          "consume": "state",
+          "state_hash": "218f1ca4bc4fa47d7956b6962c8fd210771770733a7bb5e57b3c3d6feed553b2"
+        },
+        {
+          "node_id": "K01.PD.P007.DRAWING_SLICE",
+          "role": "controlled_semantics",
+          "consume": "state",
+          "state_hash": "36113892f275fde8ead0bf11f4e5a0aa868f105b57a58682f9abd158975fad26"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "d7_semantic_qa",
+          "path": "reports/drawing/current/K01-D-006_D7_SEMANTIC_QA_CURRENT.json",
+          "size": 3378,
+          "sha256": "1f6900a422494688adca5451f3c90964b507374c0d2fe7bd20f2a86ac3cb17d6"
+        }
+      ],
+      "title": "K01-D-006 D7 semantic/provenance QA — first exemplar scope",
+      "kind": "drawing_semantic_qa"
+    },
+    "K01.PD.P007.INSPECTION_SLICE": {
+      "state_hash": "526e5d5c794313364a760b0c1c384d3c3685b103b0f28cb31fd719a827f85569",
+      "artifact_hash": "1c778e5e3bfe393408afa7326c88d2290cda08353ff13cf0511706b3f29e8220",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CONFIG.EFFECTIVITY",
+          "role": "configuration_effectivity",
+          "consume": "state",
+          "state_hash": "b47e7853b5975085a7379f4ac08a4b673dc5bd757a1d0045f48fa22895ef58bf"
+        },
+        {
+          "node_id": "K01.DATUM.SYSTEMS",
+          "role": "datum_systems",
+          "consume": "state",
+          "state_hash": "62581c475059d76ac202ff73fc3abb5b874426d5fec01065f25a963e329f39b8"
+        },
+        {
+          "node_id": "K01.MFG.P007.FEASIBILITY",
+          "role": "manufacturing_feasibility",
+          "consume": "state",
+          "state_hash": "10c001e1e12b4b360db195e335bdc1afbefba67f3beb0bb91a470ea1be4f2cf9"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.CONFIGURATION",
+          "role": "configuration_context",
+          "consume": "state",
+          "state_hash": "63180c4962a536102490784606ff2c4d18abc2db34d1cbeaaf55443f0e9ed0b7"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.DATUM",
+          "role": "datum_context",
+          "consume": "state",
+          "state_hash": "bb7da96fd79f3cb8abf7220b19df124af2497b94c7f251e50cbb368ce48ceb5d"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.INSPECTION",
+          "role": "inspection_context",
+          "consume": "state",
+          "state_hash": "f4830480afdedd9591afd21c80b964852f5afee4ddd3421f23ba3d3b547c9208"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.MANUFACTURING",
+          "role": "manufacturing_context",
+          "consume": "state",
+          "state_hash": "c32f0e3c69958a2057111f0be4582bd1328aa9d917ca4b268a0568d2f0c8a65b"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.MEASUREMENT",
+          "role": "measurement_context",
+          "consume": "state",
+          "state_hash": "cace39dbf302e784e6872ae5d728da7df40d16fbfbb9e707bbd1d4d8aceec552"
+        },
+        {
+          "node_id": "K01.PD.P007.DECISIONS",
+          "role": "definition_decisions",
+          "consume": "state",
+          "state_hash": "1ebc3b1bf05ca7f513533625234f212345c870a6f226771e1b1d92ccbb2cb1de"
+        },
+        {
+          "node_id": "K01.PD.POLICY.CURRENT",
+          "role": "product_definition_policy",
+          "consume": "state",
+          "state_hash": "40476755edea9c1ce86ab89e861a3ecaa7557035404245695fc4f5b23d4fd7af"
+        },
+        {
+          "node_id": "K01.REQ.ALLOCATION",
+          "role": "requirement_allocation",
+          "consume": "state",
+          "state_hash": "306748bbfc713651602ab1a3ce4c0d3dfaa88b24f198a782c5f6dffe816e26ed"
+        },
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "inspection_slice",
+          "path": "reports/product_definition/current/K01_P007_PD_SLICE_INSPECTION.json",
+          "size": 23421,
+          "sha256": "54938ce7199070a87745c04a02b217d5c7be663551718939ae4cfd6055257df6"
+        }
+      ],
+      "title": "P007 inspection Product Definition slice",
+      "kind": "product_definition_slice"
+    },
+    "K01.INSPECTION.RESULTS": {
+      "state_hash": "fcfc74ed66b301cd69bdaa515049a12fa3f2ee33e8993bbc0c0eb408bed81922",
+      "artifact_hash": null,
+      "state": "MISSING",
+      "reasons": [
+        "report:MISSING"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CHARACTERISTICS.REGISTRY",
+          "role": "characteristics",
+          "consume": "both",
+          "state_hash": "c7560bd5a6f32786c0668cd64a3c7eb253ac16fdcbdc43de11277a2c31fa66a6",
+          "artifact_hash": "2857733d9d523319d077bd112334b76ee27763219acfa8c8f92d838f5d2aecbb"
+        },
+        {
+          "node_id": "K01.PD.P007.INSPECTION_SLICE",
+          "role": "p007_inspection_definition",
+          "consume": "both",
+          "state_hash": "526e5d5c794313364a760b0c1c384d3c3685b103b0f28cb31fd719a827f85569",
+          "artifact_hash": "1c778e5e3bfe393408afa7326c88d2290cda08353ff13cf0511706b3f29e8220"
+        }
+      ],
+      "artifact_manifest": [],
+      "title": "Inspection / acceptance results",
+      "kind": "verification"
+    },
+    "K01.PD.P007.MANUFACTURING_SLICE": {
+      "state_hash": "558f1996609a74f413e50e4362e8da83354ddab9ded6a83026ce7daf09b8bbe8",
+      "artifact_hash": "a3a73cd03358281d085df4e6a46868b4dade00b4e4183dfb2e0ceda08b9b8d9d",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DATUM.SYSTEMS",
+          "role": "datum_systems",
+          "consume": "state",
+          "state_hash": "62581c475059d76ac202ff73fc3abb5b874426d5fec01065f25a963e329f39b8"
+        },
+        {
+          "node_id": "K01.MFG.P007.FEASIBILITY",
+          "role": "manufacturing_feasibility",
+          "consume": "state",
+          "state_hash": "10c001e1e12b4b360db195e335bdc1afbefba67f3beb0bb91a470ea1be4f2cf9"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "interface_contract",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.DATUM",
+          "role": "datum_context",
+          "consume": "state",
+          "state_hash": "bb7da96fd79f3cb8abf7220b19df124af2497b94c7f251e50cbb368ce48ceb5d"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.INSPECTION",
+          "role": "inspection_context",
+          "consume": "state",
+          "state_hash": "f4830480afdedd9591afd21c80b964852f5afee4ddd3421f23ba3d3b547c9208"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.MANUFACTURING",
+          "role": "manufacturing_context",
+          "consume": "state",
+          "state_hash": "c32f0e3c69958a2057111f0be4582bd1328aa9d917ca4b268a0568d2f0c8a65b"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.MEASUREMENT",
+          "role": "measurement_context",
+          "consume": "state",
+          "state_hash": "cace39dbf302e784e6872ae5d728da7df40d16fbfbb9e707bbd1d4d8aceec552"
+        },
+        {
+          "node_id": "K01.PD.P007.DECISIONS",
+          "role": "definition_decisions",
+          "consume": "state",
+          "state_hash": "1ebc3b1bf05ca7f513533625234f212345c870a6f226771e1b1d92ccbb2cb1de"
+        },
+        {
+          "node_id": "K01.PD.POLICY.CURRENT",
+          "role": "product_definition_policy",
+          "consume": "state",
+          "state_hash": "40476755edea9c1ce86ab89e861a3ecaa7557035404245695fc4f5b23d4fd7af"
+        },
+        {
+          "node_id": "K01.REQ.ALLOCATION",
+          "role": "requirement_allocation",
+          "consume": "state",
+          "state_hash": "306748bbfc713651602ab1a3ce4c0d3dfaa88b24f198a782c5f6dffe816e26ed"
+        },
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "manufacturing_slice",
+          "path": "reports/product_definition/current/K01_P007_PD_SLICE_MANUFACTURING.json",
+          "size": 26509,
+          "sha256": "f47b154fd26e2623fbf91fc197faeda1f73a48df26aaf5be2025cf56b6861fdc"
+        }
+      ],
+      "title": "P007 manufacturing Product Definition slice",
+      "kind": "product_definition_slice"
+    },
+    "K01.PD.P007.PHYSICS_SLICE": {
+      "state_hash": "a795ef44e3b707de91a4200f4909de4777f1bd02282c84e3d17d70d8e71ecfd7",
+      "artifact_hash": "f72b03d3d0c3d93627190b43a604692af1cb95596355441d1fd5e12477e551b4",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DERIVED.INPUTS",
+          "role": "derived_inputs",
+          "consume": "state",
+          "state_hash": "b79c7eab39069c04ac08c9de4112407d277b75dfc3d4c44ef525839a4b86e283"
+        },
+        {
+          "node_id": "K01.MFG.P007.FEASIBILITY",
+          "role": "manufacturing_feasibility",
+          "consume": "state",
+          "state_hash": "10c001e1e12b4b360db195e335bdc1afbefba67f3beb0bb91a470ea1be4f2cf9"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "interface_contract",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        },
+        {
+          "node_id": "K01.PD.P007.DECISIONS",
+          "role": "definition_decisions",
+          "consume": "state",
+          "state_hash": "1ebc3b1bf05ca7f513533625234f212345c870a6f226771e1b1d92ccbb2cb1de"
+        },
+        {
+          "node_id": "K01.PD.POLICY.CURRENT",
+          "role": "product_definition_policy",
+          "consume": "state",
+          "state_hash": "40476755edea9c1ce86ab89e861a3ecaa7557035404245695fc4f5b23d4fd7af"
+        },
+        {
+          "node_id": "K01.REQ.ALLOCATION",
+          "role": "requirement_allocation",
+          "consume": "state",
+          "state_hash": "306748bbfc713651602ab1a3ce4c0d3dfaa88b24f198a782c5f6dffe816e26ed"
+        },
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "physics_slice",
+          "path": "reports/product_definition/current/K01_P007_PD_SLICE_PHYSICS.json",
+          "size": 13047,
+          "sha256": "c718cafa442a66271b8e3aa7f85edada42701b106fcdbfdbe6ed246a2ee37452"
+        }
+      ],
+      "title": "P007 physics-analysis Product Definition slice",
+      "kind": "product_definition_slice"
+    },
+    "K01.PD.P007.VARIATION_SLICE": {
+      "state_hash": "fed331563fe936bd217002e6155f2f23d5cd0f671447e17802eb10979f7a86b0",
+      "artifact_hash": "7250214886e6fcc27daaae8e91fd5a6d3e01978cd9d4e7951847e934c6133af2",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DATUM.SYSTEMS",
+          "role": "datum_systems",
+          "consume": "state",
+          "state_hash": "62581c475059d76ac202ff73fc3abb5b874426d5fec01065f25a963e329f39b8"
+        },
+        {
+          "node_id": "K01.DERIVED.INPUTS",
+          "role": "derived_inputs",
+          "consume": "state",
+          "state_hash": "b79c7eab39069c04ac08c9de4112407d277b75dfc3d4c44ef525839a4b86e283"
+        },
+        {
+          "node_id": "K01.MFG.P007.FEASIBILITY",
+          "role": "manufacturing_feasibility",
+          "consume": "state",
+          "state_hash": "10c001e1e12b4b360db195e335bdc1afbefba67f3beb0bb91a470ea1be4f2cf9"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "interface_contract",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.DATUM",
+          "role": "datum_context",
+          "consume": "state",
+          "state_hash": "bb7da96fd79f3cb8abf7220b19df124af2497b94c7f251e50cbb368ce48ceb5d"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.INSPECTION",
+          "role": "inspection_context",
+          "consume": "state",
+          "state_hash": "f4830480afdedd9591afd21c80b964852f5afee4ddd3421f23ba3d3b547c9208"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.MANUFACTURING",
+          "role": "manufacturing_context",
+          "consume": "state",
+          "state_hash": "c32f0e3c69958a2057111f0be4582bd1328aa9d917ca4b268a0568d2f0c8a65b"
+        },
+        {
+          "node_id": "K01.PD.P007.CONTEXT.MEASUREMENT",
+          "role": "measurement_context",
+          "consume": "state",
+          "state_hash": "cace39dbf302e784e6872ae5d728da7df40d16fbfbb9e707bbd1d4d8aceec552"
+        },
+        {
+          "node_id": "K01.PD.P007.DECISIONS",
+          "role": "definition_decisions",
+          "consume": "state",
+          "state_hash": "1ebc3b1bf05ca7f513533625234f212345c870a6f226771e1b1d92ccbb2cb1de"
+        },
+        {
+          "node_id": "K01.PD.POLICY.CURRENT",
+          "role": "product_definition_policy",
+          "consume": "state",
+          "state_hash": "40476755edea9c1ce86ab89e861a3ecaa7557035404245695fc4f5b23d4fd7af"
+        },
+        {
+          "node_id": "K01.REQ.ALLOCATION",
+          "role": "requirement_allocation",
+          "consume": "state",
+          "state_hash": "306748bbfc713651602ab1a3ce4c0d3dfaa88b24f198a782c5f6dffe816e26ed"
+        },
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "variation_slice",
+          "path": "reports/product_definition/current/K01_P007_PD_SLICE_VARIATION.json",
+          "size": 15322,
+          "sha256": "86fc6c291df173b14d6551df60ae91434dd26372e63a05246e60c7629bd8f0b6"
+        }
+      ],
+      "title": "P007 variation/tolerance/capability Product Definition slice",
+      "kind": "product_definition_slice"
+    },
+    "K01.REQ.COVERAGE": {
+      "state_hash": "3a955d734fd05508d26b2588aa7e2d93252fbb23410e3d5d71e84a84f8166051",
+      "artifact_hash": "f064d182323fa480f5281957f5168a049c4afc9e6f9448c325e57d6518008a52",
+      "state": "HOLD",
+      "reasons": [],
+      "inputs": [
+        {
+          "node_id": "K01.EVIDENCE.REGISTRY",
+          "role": "evidence_registry",
+          "consume": "state",
+          "state_hash": "ef501006a58ef3abdb7239d5a7e619561f1ed6826cbd1b4bba29a856d1284215"
+        },
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "report",
+          "path": "reports/control/K01_REQUIREMENTS_COVERAGE_CURRENT.json",
+          "size": 20126,
+          "sha256": "56db26813abf522b572265277f3c96bea9f41486d489a6bb9f0119e63620c47d"
+        }
+      ],
+      "title": "Requirement-to-evidence coverage",
+      "kind": "verification"
+    },
+    "K01.SNAPSHOT.A001": {
+      "state_hash": "aa4afd7a28c5190e86d8100f87d1d356ba5504b351f77cefd632ac6140c710bc",
+      "artifact_hash": "b9ea671bf801baede918939fd4e5334d887e4284b7fb15f7794a6db55b5b0659",
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [
+        {
+          "node_id": "K01.CAD.SEM.A001",
+          "role": "cad_semantics",
+          "consume": "state",
+          "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939"
+        },
+        {
+          "node_id": "K01.MAT.GATE04E",
+          "role": "materials",
+          "consume": "state",
+          "state_hash": "55f197d3d349cc43387326c450f2f6bd974f85d7ca9a64ccc1f237c0e20f1bd3"
+        },
+        {
+          "node_id": "K01.PARAM.GATE04E",
+          "role": "parameters",
+          "consume": "state",
+          "state_hash": "6e70a110469cf973a4389a7217042c927182181ab5ed5bca80e76ad197fccf69"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "interface_parameters",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        },
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "canonical_snapshot",
+          "path": "reports/medtas/snapshot/current/K01_CANONICAL_ENGINEERING_SNAPSHOT_A001_v1.json",
+          "size": 171445,
+          "sha256": "b27c64d08c174732b9143b5533fb4a6fb9bdd440cd66fe644a104bf05c5a5131"
+        }
+      ],
+      "title": "A001 canonical engineering snapshot",
+      "kind": "canonical_snapshot"
+    },
+    "K01.BOM.MODEL.A001": {
+      "state_hash": "3cd40b92a31590c155759be3d075d55c2093a476956f855d8f135f651849b3e9",
+      "artifact_hash": "6e54419039fd729e11f35392f52358a7b0757beb93b2c971124c045bdbf80b11",
+      "state": "PASS_WITH_LIMITATIONS",
+      "reasons": [],
+      "inputs": [
+        {
+          "node_id": "K01.PARTS.REGISTRY",
+          "role": "product_metadata",
+          "consume": "state",
+          "state_hash": "5717603fc0a9138feadb139566e90cb8a983abcd21859107c1412bff070f6112"
+        },
+        {
+          "node_id": "K01.SNAPSHOT.A001",
+          "role": "canonical_state",
+          "consume": "state",
+          "state_hash": "aa4afd7a28c5190e86d8100f87d1d356ba5504b351f77cefd632ac6140c710bc"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "bom_json",
+          "path": "reports/medtas/bom/current/K01_BOM_MODEL_A001_v1.json",
+          "size": 13137,
+          "sha256": "85b92604c7d1a56efaa246b5b26ebebdae112ceb0b84f2407474c225120cc103"
+        }
+      ],
+      "title": "A001 Engineering BOM (EBOM) model",
+      "kind": "bom_model"
+    },
+    "K01.BOM.ARTIFACT.A001": {
+      "state_hash": "13f7ef48b7dacafac0e9935dce08673956677d8f14bb07870db64afd49809d69",
+      "artifact_hash": "6e86eb6bba5d6efed582f3140a6ab0528f30584ad6d5a1c2659f90569616eb86",
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [
+        {
+          "node_id": "K01.BOM.MODEL.A001",
+          "role": "bom_model",
+          "consume": "both",
+          "state_hash": "3cd40b92a31590c155759be3d075d55c2093a476956f855d8f135f651849b3e9",
+          "artifact_hash": "6e54419039fd729e11f35392f52358a7b0757beb93b2c971124c045bdbf80b11"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "ebom_csv",
+          "path": "reports/bom/current/K01_EBOM_A001_CURRENT.csv",
+          "size": 3142,
+          "sha256": "7aa66f2913bea74ca576e3b68875ce5cc53654c1b51958d8e675a80c4bd83c94"
+        },
+        {
+          "output_id": "ebom_json",
+          "path": "reports/bom/current/K01_EBOM_A001_CURRENT.json",
+          "size": 12377,
+          "sha256": "de9fe91427e021bca88d810f80e737e8153ad9327b15c07db0b14bc364c6a3c1"
+        }
+      ],
+      "title": "A001 EBOM JSON/CSV artifacts",
+      "kind": "bom_artifact"
+    },
+    "K01.BOM.VERIFY.A001": {
+      "state_hash": "ca412fabd99f187dde6225fc554be093aebce2a28679d4432c946c3ce7aa5482",
+      "artifact_hash": "ab858b575ae8f097e415f94c72ce522bc8d12d2f7c165e6609f0b8a235066b8d",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.BOM.ARTIFACT.A001",
+          "role": "bom_artifact",
+          "consume": "artifact",
+          "artifact_hash": "6e86eb6bba5d6efed582f3140a6ab0528f30584ad6d5a1c2659f90569616eb86"
+        },
+        {
+          "node_id": "K01.BOM.MODEL.A001",
+          "role": "bom_semantics",
+          "consume": "state",
+          "state_hash": "3cd40b92a31590c155759be3d075d55c2093a476956f855d8f135f651849b3e9"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "bom_verify",
+          "path": "reports/medtas/bom/current/K01_BOM_VERIFY_A001_v1.json",
+          "size": 946,
+          "sha256": "c4de79bb6ca208c1f61542d5663088d2aff514c87492a78e1d2b44c23d3cc228"
+        }
+      ],
+      "title": "A001 EBOM verification",
+      "kind": "verification"
+    },
+    "K01.FEMM.MODEL.CURRENT": {
+      "state_hash": "4e5d1824b527627a676a0fed7b3c99f2d87524705750fbca6411f26d59f32894",
+      "artifact_hash": "edd737a6ad907b117c5aa8a644f839a70fd94f9d0a86def76a2805c91e1d7b36",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.SNAPSHOT.A001",
+          "role": "canonical_state",
+          "consume": "state",
+          "state_hash": "aa4afd7a28c5190e86d8100f87d1d356ba5504b351f77cefd632ac6140c710bc"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "femm_model",
+          "path": "reports/medtas/femm/current/K01_FEMM_MODEL_CURRENT_v1.json",
+          "size": 715,
+          "sha256": "b13475499ce632fa47dc6b487f37a5ee274882ca6da63efdedd97a00bf8447be"
+        }
+      ],
+      "title": "FEMM current-position model",
+      "kind": "femm_model"
+    },
+    "K01.FEMM.RUN.A": {
+      "state_hash": "2199ee57dc7b71575f23ec3fc292586e49c91bf985e6ec116d1fd84fcc0c7c8b",
+      "artifact_hash": "931ce45836f2169a113a5f449e94eede631133768d25ec0fb341341369f05b73",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.FEMM.MODEL.CURRENT",
+          "role": "femm_model",
+          "consume": "both",
+          "state_hash": "4e5d1824b527627a676a0fed7b3c99f2d87524705750fbca6411f26d59f32894",
+          "artifact_hash": "edd737a6ad907b117c5aa8a644f839a70fd94f9d0a86def76a2805c91e1d7b36"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "done",
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_DONE.txt",
+          "size": 31,
+          "sha256": "17444e853da74cbdcf5a5a507c2d59e6f02a3a65e08cbc7505759867796aa6a8"
+        },
+        {
+          "output_id": "field_plot",
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_A_B.png",
+          "size": 53981,
+          "sha256": "cf7f924f986ffa90e52bdedc65563b39d75b30146eb9ebaa450555ce333773f7"
+        }
+      ],
+      "title": "FEMM Coil A screening",
+      "kind": "solver_run"
+    },
+    "K01.FEMM.RUN.B": {
+      "state_hash": "aad016b8aa3a4a1d3e2267293b081457c14d71feff14ad1fc6f5c50fdca94902",
+      "artifact_hash": "b0aaaa15a0ac7968049d10e557d7650a8de113d92f8cd33d24cac7d4826d5edd",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.FEMM.MODEL.CURRENT",
+          "role": "femm_model",
+          "consume": "both",
+          "state_hash": "4e5d1824b527627a676a0fed7b3c99f2d87524705750fbca6411f26d59f32894",
+          "artifact_hash": "edd737a6ad907b117c5aa8a644f839a70fd94f9d0a86def76a2805c91e1d7b36"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "done",
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_DONE.txt",
+          "size": 31,
+          "sha256": "17444e853da74cbdcf5a5a507c2d59e6f02a3a65e08cbc7505759867796aa6a8"
+        },
+        {
+          "output_id": "field_plot",
+          "path": "reports/engineering/current/source/K01_FEMM_CURRENT_COIL_B_B.png",
+          "size": 54091,
+          "sha256": "6be0f59c435c37ee7982af9906132c1e9a336874b726d843e30249500c73a1e6"
+        }
+      ],
+      "title": "FEMM Coil B screening",
+      "kind": "solver_run"
+    },
+    "K01.FEMM.VERIFY.CURRENT": {
+      "state_hash": "5a4e9fc84f167a110a9ad29107c3434688d6b937f418316a336f2cfb929508a5",
+      "artifact_hash": "b02f380b24b4d4916040992ae71a063e70f16f39a7a467f88ed0d354e62a1e9d",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.FEMM.RUN.A",
+          "role": "coil_A_results",
+          "consume": "both",
+          "state_hash": "2199ee57dc7b71575f23ec3fc292586e49c91bf985e6ec116d1fd84fcc0c7c8b",
+          "artifact_hash": "931ce45836f2169a113a5f449e94eede631133768d25ec0fb341341369f05b73"
+        },
+        {
+          "node_id": "K01.FEMM.RUN.B",
+          "role": "coil_B_results",
+          "consume": "both",
+          "state_hash": "aad016b8aa3a4a1d3e2267293b081457c14d71feff14ad1fc6f5c50fdca94902",
+          "artifact_hash": "b0aaaa15a0ac7968049d10e557d7650a8de113d92f8cd33d24cac7d4826d5edd"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "femm_verification",
+          "path": "reports/medtas/femm/current/K01_FEMM_VERIFY_CURRENT_v1.json",
+          "size": 460,
+          "sha256": "47f4edfc82bfafe413e71bf7205615c555dc8c5827e51be6c27aab8f39f23d68"
+        }
+      ],
+      "title": "FEMM current-position verification",
+      "kind": "verification"
+    },
+    "K01.MBOM.MODEL.A001": {
+      "state_hash": "7de6050da1584139c4eca83bd32701aabfa559e1324b52ec4e57a8fbd238e117",
+      "artifact_hash": "2afad2b49e0568877e70457c690976aff343089444cb1a7636805cf6aa5a4b5c",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.BOM.MODEL.A001",
+          "role": "engineering_bom",
+          "consume": "state",
+          "state_hash": "3cd40b92a31590c155759be3d075d55c2093a476956f855d8f135f651849b3e9"
+        },
+        {
+          "node_id": "K01.MFG.P007.FEASIBILITY",
+          "role": "p007_manufacturing_route",
+          "consume": "state",
+          "state_hash": "10c001e1e12b4b360db195e335bdc1afbefba67f3beb0bb91a470ea1be4f2cf9"
+        },
+        {
+          "node_id": "K01.PARTS.REGISTRY",
+          "role": "product_metadata",
+          "consume": "state",
+          "state_hash": "5717603fc0a9138feadb139566e90cb8a983abcd21859107c1412bff070f6112"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "mbom_model",
+          "path": "reports/medtas/bom/current/K01_MBOM_MODEL_A001_v1_9.json",
+          "size": 13767,
+          "sha256": "224ad1f1820322673d423322c0fc470c4f638da0d2273767cff5ac1389ebf038"
+        }
+      ],
+      "title": "A001 Manufacturing BOM (MBOM) model",
+      "kind": "bom_model"
+    },
+    "K01.MBOM.ARTIFACT.A001": {
+      "state_hash": "fd7eaeb66b4eba34ff038278bf13e72a41e417be623e5044bf9987ab9ad0bef5",
+      "artifact_hash": "100cc9495c76f8a30b1f077a67f8be6c73dbde1de82db0d5f77578fd2134c9b3",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.MBOM.MODEL.A001",
+          "role": "mbom_model",
+          "consume": "both",
+          "state_hash": "7de6050da1584139c4eca83bd32701aabfa559e1324b52ec4e57a8fbd238e117",
+          "artifact_hash": "2afad2b49e0568877e70457c690976aff343089444cb1a7636805cf6aa5a4b5c"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "mbom_csv",
+          "path": "reports/bom/current/K01_MBOM_A001_CURRENT.csv",
+          "size": 3390,
+          "sha256": "56e379edc0d5760f191f035770bf75b6bfebe326eafc8ca85ff7492e504a4391"
+        },
+        {
+          "output_id": "mbom_json",
+          "path": "reports/bom/current/K01_MBOM_A001_CURRENT.json",
+          "size": 13767,
+          "sha256": "224ad1f1820322673d423322c0fc470c4f638da0d2273767cff5ac1389ebf038"
+        }
+      ],
+      "title": "A001 MBOM JSON/CSV artifacts",
+      "kind": "bom_artifact"
+    },
+    "K01.MBOM.VERIFY.A001": {
+      "state_hash": "fc0a05e7ad9c666861996275641ffbc519fa90c1c79f94657699b81cab24aa7a",
+      "artifact_hash": "2c1906ef53b14c3c3492e1d2299631f19a9d64281dec2a3287cd86c1c0b9f274",
+      "state": "MISSING",
+      "reasons": [
+        "no build_record"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.MBOM.ARTIFACT.A001",
+          "role": "mbom_artifacts",
+          "consume": "artifact",
+          "artifact_hash": "100cc9495c76f8a30b1f077a67f8be6c73dbde1de82db0d5f77578fd2134c9b3"
+        },
+        {
+          "node_id": "K01.MBOM.MODEL.A001",
+          "role": "mbom_semantics",
+          "consume": "state",
+          "state_hash": "7de6050da1584139c4eca83bd32701aabfa559e1324b52ec4e57a8fbd238e117"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "mbom_verify",
+          "path": "reports/medtas/bom/current/K01_MBOM_VERIFY_A001_v1_9.json",
+          "size": 991,
+          "sha256": "4ac352273832c4ddf61fbefcdb306fbe25bd536032aa71678cc0930b9c54fb74"
+        }
+      ],
+      "title": "A001 MBOM verification",
+      "kind": "verification"
+    },
+    "K01.AI.HANDOFF.CURRENT": {
+      "state_hash": "da02e82f656bee1a71455ea370c9234c9f6c1acf19c0096d6605c6593d4514f8",
+      "artifact_hash": "33470f2ed81fd033f8aac5595bf7d6874febdad156450c9f56433887ad775b08",
+      "state": "DRIFT",
+      "reasons": [
+        "current ARTIFACT_HASH != recorded ARTIFACT_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.BOM.VERIFY.A001",
+          "role": "ebom",
+          "consume": "both",
+          "state_hash": "ca412fabd99f187dde6225fc554be093aebce2a28679d4432c946c3ce7aa5482",
+          "artifact_hash": "ab858b575ae8f097e415f94c72ce522bc8d12d2f7c165e6609f0b8a235066b8d"
+        },
+        {
+          "node_id": "K01.DRAWING.P007.EXEMPLAR.PLAN",
+          "role": "p007_release_front",
+          "consume": "both",
+          "state_hash": "ba5ca852ffe4827953a813fd434ebcbe98c14b53f773df812fc3bc00317c84b7",
+          "artifact_hash": "42d28f0ca4861d9ad2db1f08c0c0376ca827e7a5c6deebee5f94a6bf35f199e4"
+        },
+        {
+          "node_id": "K01.IDENTITY.AUDIT",
+          "role": "identity_audit",
+          "consume": "both",
+          "state_hash": "e6db5c2c2e5e90926cbfd776bad5425ded3305b7d87c9e86e2384e8cc22418a0",
+          "artifact_hash": "3ccfe6c8c2704dc279f76013960a5731f42216fda0e47b8a16a40d8741ea3ddc"
+        },
+        {
+          "node_id": "K01.MBOM.VERIFY.A001",
+          "role": "mbom",
+          "consume": "both",
+          "state_hash": "fc0a05e7ad9c666861996275641ffbc519fa90c1c79f94657699b81cab24aa7a",
+          "artifact_hash": "2c1906ef53b14c3c3492e1d2299631f19a9d64281dec2a3287cd86c1c0b9f274"
+        },
+        {
+          "node_id": "K01.REQ.COVERAGE",
+          "role": "requirements_coverage",
+          "consume": "both",
+          "state_hash": "3a955d734fd05508d26b2588aa7e2d93252fbb23410e3d5d71e84a84f8166051",
+          "artifact_hash": "f064d182323fa480f5281957f5168a049c4afc9e6f9448c325e57d6518008a52"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "ai_handoff_zip",
+          "path": "reports/control/K01_AI_HANDOFF_CURRENT.zip",
+          "size": 3667102,
+          "sha256": "6f532e6cf121ab33c7788f147e9f253d5aa9d9d90ac1718817ea088a1fe71181"
+        }
+      ],
+      "title": "Current AI engineering handoff ZIP",
+      "kind": "evidence_bundle"
+    },
+    "K01.PRODUCT.DEFINITION.GATE04E": {
+      "state_hash": "5cd911d84ff2cdd2ac6f51230001596b9b237cc6f23f8b7664edebc0d5f8ccda",
+      "artifact_hash": "e227340b67023cc7442e181266e5a978abc2c3770fb1d6280ae23dc67888b0c0",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.BOM.MODEL.A001",
+          "role": "canonical_bom",
+          "consume": "state",
+          "state_hash": "3cd40b92a31590c155759be3d075d55c2093a476956f855d8f135f651849b3e9"
+        },
+        {
+          "node_id": "K01.CAD.SEM.A001",
+          "role": "native_cad_semantics",
+          "consume": "state",
+          "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939"
+        },
+        {
+          "node_id": "K01.MAT.GATE04E",
+          "role": "material_state",
+          "consume": "state",
+          "state_hash": "55f197d3d349cc43387326c450f2f6bd974f85d7ca9a64ccc1f237c0e20f1bd3"
+        },
+        {
+          "node_id": "K01.MBD.A001",
+          "role": "native_mbd",
+          "consume": "state",
+          "state_hash": "74a0035eb9ea7a41eeda634df22096f7cc663fff6b1db67f771457676a23a067"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "interface_parameters",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        },
+        {
+          "node_id": "K01.PARTS.REGISTRY",
+          "role": "product_metadata",
+          "consume": "state",
+          "state_hash": "5717603fc0a9138feadb139566e90cb8a983abcd21859107c1412bff070f6112"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "product_definition",
+          "path": "reports/medtas/product_definition/current/K01_PRODUCT_DEFINITION_GATE04E_v1_8.json",
+          "size": 15050,
+          "sha256": "3e7747989ee900875cefc765818c02549953c90b3666eac944dcd34efa719189"
+        }
+      ],
+      "title": "Gate04E canonical product definition",
+      "kind": "product_definition"
+    },
+    "K01.STRUCT.MODEL.P006": {
+      "state_hash": "be2b1b121c79b741ff480972e052d9bbd217f8ccdeb9a6c630041f1aaf09a43b",
+      "artifact_hash": "661e2a1fa50b05d49aa3249307d4fb4745a11f4b920e6008978bfc2139a97e32",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DERIVED.INPUTS",
+          "role": "derived_load_inputs",
+          "consume": "state",
+          "state_hash": "b79c7eab39069c04ac08c9de4112407d277b75dfc3d4c44ef525839a4b86e283"
+        },
+        {
+          "node_id": "K01.SNAPSHOT.A001",
+          "role": "canonical_state",
+          "consume": "state",
+          "state_hash": "aa4afd7a28c5190e86d8100f87d1d356ba5504b351f77cefd632ac6140c710bc"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "structural_model",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_MODEL_P006_v1.json",
+          "size": 37178,
+          "sha256": "0ffd72247a9d6b1e4385659848e37bdd41b6bbeb115a8933233061ef6eada6ae"
+        }
+      ],
+      "title": "P006 solver-neutral structural model",
+      "kind": "structural_model"
+    },
+    "K01.STRUCT.BOLT_EQUIV.P006": {
+      "state_hash": "2861f30180665d1ca23885997c4f8a0101bfee7024fccc3ae32ff3534734776e",
+      "artifact_hash": "ffdc9d9dafa3dcbca1df4a2a649fe0fd624e935c2962e700ca24fe880f225208",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.STRUCT.MODEL.P006",
+          "role": "solver_neutral_model",
+          "consume": "state",
+          "state_hash": "be2b1b121c79b741ff480972e052d9bbd217f8ccdeb9a6c630041f1aaf09a43b"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "bolt_equiv",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_BOLT_EQUIV_P006_v1_7.json",
+          "size": 1625,
+          "sha256": "1311a9d8a401d6f0400d5980ccb5631ef5ebcdeb0a44e7b5681c433f03a6b26c"
+        }
+      ],
+      "title": "P006 bolt/preload cross-solver equivalence",
+      "kind": "verification"
+    },
+    "K01.STRUCT.FACE_MAP.P006": {
+      "state_hash": "5d4f7bc087b3e62ee79bf0221b904f8349f2d4a6633205f8d033c588ade8b499",
+      "artifact_hash": "f5d37c5e536f2ee1f300e5d6b1f31143c75c096e2b757220c8535356ea68be43",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.STRUCT.MODEL.P006",
+          "role": "structural_model",
+          "consume": "state",
+          "state_hash": "be2b1b121c79b741ff480972e052d9bbd217f8ccdeb9a6c630041f1aaf09a43b"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "face_map",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_FACE_MAP_P006_v1.json",
+          "size": 84108,
+          "sha256": "807a253e3053e9d8f0b6b431bd157ce854cb4dc0702c1005c0819d00118c9103"
+        }
+      ],
+      "title": "P006 solver-neutral boundary face map",
+      "kind": "boundary_role_map"
+    },
+    "K01.STRUCT.FACE_MAP.QUAL.P006": {
+      "state_hash": "6b48825bb375c988a2d3f2a4575ea855db88227a799ffa4f4f8466c71172c6a8",
+      "artifact_hash": "7a733d6fd281f418a6eda0a8730242f31f4feb1e8011e0b2310fb8fda56210bd",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CAD.SEM.A001",
+          "role": "cad_semantics",
+          "consume": "state",
+          "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939"
+        },
+        {
+          "node_id": "K01.STRUCT.FACE_MAP.P006",
+          "role": "face_map",
+          "consume": "both",
+          "state_hash": "5d4f7bc087b3e62ee79bf0221b904f8349f2d4a6633205f8d033c588ade8b499",
+          "artifact_hash": "f5d37c5e536f2ee1f300e5d6b1f31143c75c096e2b757220c8535356ea68be43"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "face_map_qualification",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_FACE_MAP_QUAL_P006_v1_7.json",
+          "size": 702,
+          "sha256": "85e830c114dc68cea3c8bed32fa48319ed433a3af56905d0252d214f25f2b599"
+        }
+      ],
+      "title": "P006 persistent face-map invariance qualification",
+      "kind": "verification"
+    },
+    "K01.STRUCT.NEUTRAL.GEOMETRY.P006": {
+      "state_hash": "6c7bd29172adc37d9fd708b9a5387fdf81a8c38a94817aa38639f020aae8f2d3",
+      "artifact_hash": "b97fb78f9e63cad9ae54a3d86848d9cd7a8a7a46dbfd65b59680a7a68f55e2b2",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.SNAPSHOT.A001",
+          "role": "canonical_state",
+          "consume": "state",
+          "state_hash": "aa4afd7a28c5190e86d8100f87d1d356ba5504b351f77cefd632ac6140c710bc"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "neutral_geometry_manifest",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_NEUTRAL_GEOMETRY_P006_v1_7.json",
+          "size": 2435,
+          "sha256": "90aef2dc1c6994b7debfcef47095338f1c1975c4f3bae72af9e468a6289ddf5d"
+        },
+        {
+          "output_id": "neutral_step_files",
+          "path": "reports/medtas/structural/current/neutral_geometry_p006/K01-P-003.STEP",
+          "size": 135508,
+          "sha256": "3cf517fdc8ebd94408826ed7bce7b69664703e4155a94b2fe308a1bab21302c8"
+        },
+        {
+          "output_id": "neutral_step_files",
+          "path": "reports/medtas/structural/current/neutral_geometry_p006/K01-P-007.STEP",
+          "size": 61347,
+          "sha256": "6b07c254699ed114a584cb1a685d410a00dc95131b8a291c7b477920fdf1277d"
+        }
+      ],
+      "title": "P006 solver-neutral P003/P007 geometry",
+      "kind": "neutral_geometry"
+    },
+    "K01.STRUCT.MESH.P006": {
+      "state_hash": "c246630b31a66860fe3ba9117c0860ca6d7a6b9e63308fa4ae2246b8e4fa86da",
+      "artifact_hash": "850d6f33005075d82ca6eb8222e1cb79d98bdea51213a1b92b7821c4100403b3",
+      "state": "MISSING",
+      "reasons": [
+        "neutral_mesh:MISSING"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.STRUCT.FACE_MAP.P006",
+          "role": "boundary_role_map",
+          "consume": "both",
+          "state_hash": "5d4f7bc087b3e62ee79bf0221b904f8349f2d4a6633205f8d033c588ade8b499",
+          "artifact_hash": "f5d37c5e536f2ee1f300e5d6b1f31143c75c096e2b757220c8535356ea68be43"
+        },
+        {
+          "node_id": "K01.STRUCT.FACE_MAP.QUAL.P006",
+          "role": "boundary_role_qualification",
+          "consume": "both",
+          "state_hash": "6b48825bb375c988a2d3f2a4575ea855db88227a799ffa4f4f8466c71172c6a8",
+          "artifact_hash": "7a733d6fd281f418a6eda0a8730242f31f4feb1e8011e0b2310fb8fda56210bd"
+        },
+        {
+          "node_id": "K01.STRUCT.NEUTRAL.GEOMETRY.P006",
+          "role": "neutral_geometry",
+          "consume": "both",
+          "state_hash": "6c7bd29172adc37d9fd708b9a5387fdf81a8c38a94817aa38639f020aae8f2d3",
+          "artifact_hash": "b97fb78f9e63cad9ae54a3d86848d9cd7a8a7a46dbfd65b59680a7a68f55e2b2"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "mesh_manifest",
+          "path": "reports/medtas/calculix/current/K01_STRUCTURAL_MESH_P006_v1_7.json",
+          "size": 364,
+          "sha256": "3d9ce12729c50eb31d413d7cc89d169f6aa093c071c804ed234bf8727eaae9b0"
+        }
+      ],
+      "title": "P006 controlled quadratic neutral mesh",
+      "kind": "mesh"
+    },
+    "K01.STRUCT.CCX.INPUT.P006": {
+      "state_hash": "0e48984a1bc9bfb1e98ffb8b1d83dbd5a4c889b98b9f518a33c0609a414a13d2",
+      "artifact_hash": "6df828a885b6eb60675f503009d751c6e709f452a71cb7df2a4001e95307b581",
+      "state": "BLOCKED",
+      "reasons": [
+        "blocked by K01.STRUCT.MESH.P006:MISSING"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.STRUCT.BOLT_EQUIV.P006",
+          "role": "bolt_equivalence",
+          "consume": "both",
+          "state_hash": "2861f30180665d1ca23885997c4f8a0101bfee7024fccc3ae32ff3534734776e",
+          "artifact_hash": "ffdc9d9dafa3dcbca1df4a2a649fe0fd624e935c2962e700ca24fe880f225208"
+        },
+        {
+          "node_id": "K01.STRUCT.FACE_MAP.P006",
+          "role": "boundary_roles",
+          "consume": "both",
+          "state_hash": "5d4f7bc087b3e62ee79bf0221b904f8349f2d4a6633205f8d033c588ade8b499",
+          "artifact_hash": "f5d37c5e536f2ee1f300e5d6b1f31143c75c096e2b757220c8535356ea68be43"
+        },
+        {
+          "node_id": "K01.STRUCT.FACE_MAP.QUAL.P006",
+          "role": "boundary_role_qualification",
+          "consume": "both",
+          "state_hash": "6b48825bb375c988a2d3f2a4575ea855db88227a799ffa4f4f8466c71172c6a8",
+          "artifact_hash": "7a733d6fd281f418a6eda0a8730242f31f4feb1e8011e0b2310fb8fda56210bd"
+        },
+        {
+          "node_id": "K01.STRUCT.MESH.P006",
+          "role": "mesh",
+          "consume": "both",
+          "state_hash": "c246630b31a66860fe3ba9117c0860ca6d7a6b9e63308fa4ae2246b8e4fa86da",
+          "artifact_hash": "850d6f33005075d82ca6eb8222e1cb79d98bdea51213a1b92b7821c4100403b3"
+        },
+        {
+          "node_id": "K01.STRUCT.MODEL.P006",
+          "role": "solver_model",
+          "consume": "state",
+          "state_hash": "be2b1b121c79b741ff480972e052d9bbd217f8ccdeb9a6c630041f1aaf09a43b"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "ccx_input_manifest",
+          "path": "reports/medtas/calculix/current/K01_CALCULIX_INPUT_P006_v1_7.json",
+          "size": 699,
+          "sha256": "df753b95d0824170e648d5fbbcfaac2d42d850129dd1b7862a46562fc2c9d8f7"
+        }
+      ],
+      "title": "P006 deterministic CalculiX input deck",
+      "kind": "solver_input"
+    },
+    "K01.STRUCT.CCX.P006": {
+      "state_hash": "64e787a4d7a4ac322be001a541e55309961b82a8a6092e05c01b2793dc877476",
+      "artifact_hash": null,
+      "state": "BLOCKED",
+      "reasons": [
+        "blocked by K01.STRUCT.CCX.INPUT.P006:BLOCKED"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.STRUCT.CCX.INPUT.P006",
+          "role": "controlled_input",
+          "consume": "both",
+          "state_hash": "0e48984a1bc9bfb1e98ffb8b1d83dbd5a4c889b98b9f518a33c0609a414a13d2",
+          "artifact_hash": "6df828a885b6eb60675f503009d751c6e709f452a71cb7df2a4001e95307b581"
+        }
+      ],
+      "artifact_manifest": [],
+      "title": "CalculiX independent P006 service run",
+      "kind": "solver_run"
+    },
+    "K01.STRUCT.SWSIM.P006": {
+      "state_hash": "5ca23913c9d4ce32d4a00e41d3ef432a699f42b78657acdf3ee157bf707e560a",
+      "artifact_hash": "24d6eb2be1da2cd2afb76bfdd615d77e890c66b22c4096c8ac69e22da5c04b9f",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.STRUCT.MODEL.P006",
+          "role": "solver_neutral_model",
+          "consume": "state",
+          "state_hash": "be2b1b121c79b741ff480972e052d9bbd217f8ccdeb9a6c630041f1aaf09a43b"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "sw_report",
+          "path": "reports/engineering/current/source/K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx",
+          "size": 658836,
+          "sha256": "fd44f0f9f5ca28d08fa8280a5717168aa68303219106d95216e4dcbb55cb9c16"
+        }
+      ],
+      "title": "SolidWorks Simulation P006 service run",
+      "kind": "solver_run"
+    },
+    "K01.EVIDENCE.GATE04E.REPORT": {
+      "state_hash": "d8a5b3de340333ff782dc2508a7d65fa38d691b92c62de0235ec77c7d3e5e234",
+      "artifact_hash": "e3d852c30827d2ee909d6a4040f689add6d05af61f553435c2a63771bd7d7277",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.FEMM.VERIFY.CURRENT",
+          "role": "femm_evidence",
+          "consume": "both",
+          "state_hash": "5a4e9fc84f167a110a9ad29107c3434688d6b937f418316a336f2cfb929508a5",
+          "artifact_hash": "b02f380b24b4d4916040992ae71a063e70f16f39a7a467f88ed0d354e62a1e9d"
+        },
+        {
+          "node_id": "K01.STRUCT.SWSIM.P006",
+          "role": "structural_evidence",
+          "consume": "both",
+          "state_hash": "5ca23913c9d4ce32d4a00e41d3ef432a699f42b78657acdf3ee157bf707e560a",
+          "artifact_hash": "24d6eb2be1da2cd2afb76bfdd615d77e890c66b22c4096c8ac69e22da5c04b9f"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "report_docx",
+          "path": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.docx",
+          "size": 139001,
+          "sha256": "e10764d62f1ab80d051cc145450d9184afd22e81c204c82be3cb8650f1cca545"
+        },
+        {
+          "output_id": "report_md",
+          "path": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.md",
+          "size": 3768,
+          "sha256": "48439d610299f5ef00e5163d2a8c148073e61bdc8ce586088a5b1f68b977f08e"
+        }
+      ],
+      "title": "Gate04E FEM/FEMM verification report",
+      "kind": "evidence_report"
+    },
+    "K01.STRUCT.RECON.P006": {
+      "state_hash": "fb57fac974d14abd5127b9375063548350caec645062e62af9a036ce726ea8c4",
+      "artifact_hash": "5055e487cb589c8f2f2ba02434110ec30660bff12a006f5a0dbe06f11ac56105",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.STRUCT.CCX.P006",
+          "role": "ccx_results",
+          "consume": "both",
+          "state_hash": "64e787a4d7a4ac322be001a541e55309961b82a8a6092e05c01b2793dc877476",
+          "artifact_hash": null
+        },
+        {
+          "node_id": "K01.STRUCT.SWSIM.P006",
+          "role": "sw_results",
+          "consume": "both",
+          "state_hash": "5ca23913c9d4ce32d4a00e41d3ef432a699f42b78657acdf3ee157bf707e560a",
+          "artifact_hash": "24d6eb2be1da2cd2afb76bfdd615d77e890c66b22c4096c8ac69e22da5c04b9f"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "structural_reconciliation",
+          "path": "reports/medtas/structural/current/K01_STRUCTURAL_RECON_P006_v1.json",
+          "size": 504,
+          "sha256": "2b6969a50275f7fa731b97dd1557c3ac348e6b6dd37d130d6fa3adc68f5d8dba"
+        }
+      ],
+      "title": "Structural solver reconciliation",
+      "kind": "verification"
+    },
+    "K01.SYSTEM.DOMAIN.REGISTRY": {
+      "state_hash": "ca2ed37503172e66ac7c61e8c79808a293e32d45387e8d377f7bcfb1e80a23a1",
+      "artifact_hash": null,
+      "state": "PASS",
+      "reasons": [],
+      "inputs": [],
+      "artifact_manifest": [],
+      "title": "K01 engineering-domain coverage registry",
+      "kind": "engineering_domain_registry"
+    },
+    "K01.SYSTEM.COVERAGE.GUARD": {
+      "state_hash": "c306d66f188ae2da04afc7014349707438f929e5cbd10c363c2b44339e06d679",
+      "artifact_hash": "4cf066d92ad27bab92ec03a4f7c1eb7cfd19a98b51892218615fd7e51c0d7540",
+      "state": "BLOCKED",
+      "reasons": [
+        "blocked by K01.MBOM.VERIFY.A001:MISSING"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.BOM.VERIFY.A001",
+          "role": "ebom_verification",
+          "consume": "state",
+          "state_hash": "ca412fabd99f187dde6225fc554be093aebce2a28679d4432c946c3ce7aa5482"
+        },
+        {
+          "node_id": "K01.CAD.SEM.A001",
+          "role": "cad_semantics",
+          "consume": "state",
+          "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.D3.AUTHORING_VERIFY",
+          "role": "drawing_d3_status",
+          "consume": "state",
+          "state_hash": "6c40191a67858ba16a6fffea241e05c101b73e0abd7f815d2bac50a4cc50c115"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.D7.SEMANTIC_QA",
+          "role": "drawing_d7_status",
+          "consume": "state",
+          "state_hash": "57f4baba9ffe9cdbb3f5ed88c8d0bfd9c45b62f5795e77a05fb99935f49db6d0"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.FAMILY.PLAN",
+          "role": "drawing_family_plan",
+          "consume": "state",
+          "state_hash": "c639003b6bc6d0203e7db3a200af2eadb783e0e45d5be20a16d77aaf1a364970"
+        },
+        {
+          "node_id": "K01.FEMM.VERIFY.CURRENT",
+          "role": "magnetic_evidence",
+          "consume": "state",
+          "state_hash": "5a4e9fc84f167a110a9ad29107c3434688d6b937f418316a336f2cfb929508a5"
+        },
+        {
+          "node_id": "K01.INSPECTION.RESULTS",
+          "role": "inspection_results",
+          "consume": "state",
+          "state_hash": "fcfc74ed66b301cd69bdaa515049a12fa3f2ee33e8993bbc0c0eb408bed81922"
+        },
+        {
+          "node_id": "K01.MBOM.VERIFY.A001",
+          "role": "mbom_verification",
+          "consume": "state",
+          "state_hash": "fc0a05e7ad9c666861996275641ffbc519fa90c1c79f94657699b81cab24aa7a"
+        },
+        {
+          "node_id": "K01.PD.P007.COMPILED",
+          "role": "compiled_definition",
+          "consume": "state",
+          "state_hash": "fe07bd104c0a46c4ef95e65a77e0130cf44dd97d1cc5b8e900ce15eea73092df"
+        },
+        {
+          "node_id": "K01.REQ.GATE04E",
+          "role": "requirements",
+          "consume": "state",
+          "state_hash": "226916e4524862106fdf0f9b6360a8071e8803571b28d15ab4d2d351b3125419"
+        },
+        {
+          "node_id": "K01.STRUCT.RECON.P006",
+          "role": "structural_reconciliation",
+          "consume": "state",
+          "state_hash": "fb57fac974d14abd5127b9375063548350caec645062e62af9a036ce726ea8c4"
+        },
+        {
+          "node_id": "K01.SYSTEM.DOMAIN.REGISTRY",
+          "role": "domain_contract",
+          "consume": "state",
+          "state_hash": "ca2ed37503172e66ac7c61e8c79808a293e32d45387e8d377f7bcfb1e80a23a1"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "coverage_report",
+          "path": "reports/control/K01_ENGINEERING_SYSTEM_COVERAGE_CURRENT.json",
+          "size": 18970,
+          "sha256": "1bec01f511fceba0a5e0bd07b935f591860655b1306b0d4d9943980654281354"
+        }
+      ],
+      "title": "Whole-project engineering-system coverage guard",
+      "kind": "verification"
+    },
+    "K01.TOL.A001": {
+      "state_hash": "d911b27d769f5800ab8be59162da1f3be63589563f52354b6ecefa409ac7551c",
+      "artifact_hash": "5c38f91c3452323dad4b137eed20ae172294073170e7cbe8c3bf80338a208b59",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.MBD.A001",
+          "role": "mbd_tolerances",
+          "consume": "state",
+          "state_hash": "74a0035eb9ea7a41eeda634df22096f7cc663fff6b1db67f771457676a23a067"
+        },
+        {
+          "node_id": "K01.PD.P007.VARIATION_SLICE",
+          "role": "p007_variation_semantics",
+          "consume": "both",
+          "state_hash": "fed331563fe936bd217002e6155f2f23d5cd0f671447e17802eb10979f7a86b0",
+          "artifact_hash": "7250214886e6fcc27daaae8e91fd5a6d3e01978cd9d4e7951847e934c6133af2"
+        },
+        {
+          "node_id": "K01.SNAPSHOT.A001",
+          "role": "canonical_state",
+          "consume": "state",
+          "state_hash": "aa4afd7a28c5190e86d8100f87d1d356ba5504b351f77cefd632ac6140c710bc"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "tolerance_report",
+          "path": "reports/medtas/tolerance/current/K01_TOLERANCE_A001_v1.json",
+          "size": 5878,
+          "sha256": "06c919a10cd091843498d9c03ccce4e65347a9a9379f29c37ba138a82ed7a552"
+        }
+      ],
+      "title": "A001 tolerance-chain analysis",
+      "kind": "tolerance_chain"
+    },
+    "K01.MBD.AUTHORING.PLAN": {
+      "state_hash": "df5c357a993b099feb65599161cb1aa2a229c397edb44229eca74cd41b886150",
+      "artifact_hash": "4e5efc9d67aaaff94966dd4269d4049dbae71c3f827f5e3922b831304e928d01",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.CAD.SEM.A001",
+          "role": "cad_semantics",
+          "consume": "state",
+          "state_hash": "4ef7666398a74393cb28563ef635b857333b6aaa5f8e0568c5904fab277f1939"
+        },
+        {
+          "node_id": "K01.MBD.A001",
+          "role": "mbd_state",
+          "consume": "both",
+          "state_hash": "74a0035eb9ea7a41eeda634df22096f7cc663fff6b1db67f771457676a23a067",
+          "artifact_hash": "e210e4a8c9fafdf9d32a8c80b72a5fa0a8e028a6dd63478e6bd03bea3e88fa6d"
+        },
+        {
+          "node_id": "K01.TOL.A001",
+          "role": "tolerance_intent",
+          "consume": "state",
+          "state_hash": "d911b27d769f5800ab8be59162da1f3be63589563f52354b6ecefa409ac7551c"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "mbd_authoring_plan",
+          "path": "reports/medtas/mbd/current/K01_MBD_AUTHORING_PLAN_v1_7.json",
+          "size": 4017,
+          "sha256": "0d7c05a4581127254727c4592362899f5081571a3caf24015ab2868a315250ed"
+        }
+      ],
+      "title": "A001 MBD authoring / semantic binding plan",
+      "kind": "verification"
+    },
+    "K01.DRAWING.MODEL.GATE04E": {
+      "state_hash": "4f33c46684b8af53427371e704d398db104b570aed1901f510a576bf49bd3627",
+      "artifact_hash": "681bb2f90e8d3014ded76fbd9af83f257ec969c22f98c9e5c7fb5de67184e0b1",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.MBD.A001",
+          "role": "model_based_definition",
+          "consume": "state",
+          "state_hash": "74a0035eb9ea7a41eeda634df22096f7cc663fff6b1db67f771457676a23a067"
+        },
+        {
+          "node_id": "K01.MBD.AUTHORING.PLAN",
+          "role": "mbd_authoring_plan",
+          "consume": "state",
+          "state_hash": "df5c357a993b099feb65599161cb1aa2a229c397edb44229eca74cd41b886150"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "interface_parameters",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        },
+        {
+          "node_id": "K01.SNAPSHOT.A001",
+          "role": "canonical_state",
+          "consume": "state",
+          "state_hash": "aa4afd7a28c5190e86d8100f87d1d356ba5504b351f77cefd632ac6140c710bc"
+        },
+        {
+          "node_id": "K01.TOL.A001",
+          "role": "tolerance_results",
+          "consume": "state",
+          "state_hash": "d911b27d769f5800ab8be59162da1f3be63589563f52354b6ecefa409ac7551c"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "drawing_semantics",
+          "path": "reports/medtas/drawing/current/K01_DRAWING_MODEL_GATE04E_v1.json",
+          "size": 2517,
+          "sha256": "49ebb05f15cc9c384a5d54f6e9b979097deda96d38e47811bef90d446843afbe"
+        }
+      ],
+      "title": "Gate04E drawing semantic model",
+      "kind": "drawing_model"
+    },
+    "K01.DRAWING.RELEASE.PLAN.GATE04E": {
+      "state_hash": "ac82b1b85fdbcdc229495c99d6672c251eea010f5d15ea884e440da6ad7984ed",
+      "artifact_hash": "812f0df10116f5ea446b638b5204077a855ee148c88a52344e30c447f5512a60",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.BOM.MODEL.A001",
+          "role": "bom_semantics",
+          "consume": "state",
+          "state_hash": "3cd40b92a31590c155759be3d075d55c2093a476956f855d8f135f651849b3e9"
+        },
+        {
+          "node_id": "K01.DRAWING.D006.PROJECTION",
+          "role": "d006_projection",
+          "consume": "both",
+          "state_hash": "5169e8cc433227ed05d6828edb0d4ef5ea1aa5ffba5e4b3348e23ff8d8188c34",
+          "artifact_hash": "5aa2c676d0c723d9e62141490fef78493c16b43d330a9ada6db2a779140efe53"
+        },
+        {
+          "node_id": "K01.DRAWING.MODEL.GATE04E",
+          "role": "drawing_semantics",
+          "consume": "state",
+          "state_hash": "4f33c46684b8af53427371e704d398db104b570aed1901f510a576bf49bd3627"
+        },
+        {
+          "node_id": "K01.DRAWING.P007.EXEMPLAR.PLAN",
+          "role": "priority_exemplar",
+          "consume": "state",
+          "state_hash": "ba5ca852ffe4827953a813fd434ebcbe98c14b53f773df812fc3bc00317c84b7"
+        },
+        {
+          "node_id": "K01.MBD.AUTHORING.PLAN",
+          "role": "mbd_migration_plan",
+          "consume": "state",
+          "state_hash": "df5c357a993b099feb65599161cb1aa2a229c397edb44229eca74cd41b886150"
+        },
+        {
+          "node_id": "K01.PARAM.INTERFACE.J2",
+          "role": "interface_parameters",
+          "consume": "state",
+          "state_hash": "a760110b80704711ffa519b160fafa04948dd8167cdc2bc16cdda7aca31c4d6f"
+        },
+        {
+          "node_id": "K01.PD.P007.COMPILED",
+          "role": "p007_compiled_product_definition",
+          "consume": "both",
+          "state_hash": "fe07bd104c0a46c4ef95e65a77e0130cf44dd97d1cc5b8e900ce15eea73092df",
+          "artifact_hash": "8e1136c99fee3024ca6d0c5087c05e18a856d9c2bb1a73928eefde11041a63b9"
+        },
+        {
+          "node_id": "K01.PD.P007.CONFIGURATION_SLICE",
+          "role": "p007_effectivity",
+          "consume": "both",
+          "state_hash": "81b3038b97df0118f13c0f76ed856cd39b6863b293746963de691d5fe6db122f",
+          "artifact_hash": "30c9794dcdefebe1d9dedc5956754eb719a333cb313f6997aca9d39954193c26"
+        },
+        {
+          "node_id": "K01.PD.P007.INSPECTION_SLICE",
+          "role": "p007_inspection",
+          "consume": "both",
+          "state_hash": "526e5d5c794313364a760b0c1c384d3c3685b103b0f28cb31fd719a827f85569",
+          "artifact_hash": "1c778e5e3bfe393408afa7326c88d2290cda08353ff13cf0511706b3f29e8220"
+        },
+        {
+          "node_id": "K01.PD.P007.MANUFACTURING_SLICE",
+          "role": "p007_manufacturing",
+          "consume": "both",
+          "state_hash": "558f1996609a74f413e50e4362e8da83354ddab9ded6a83026ce7daf09b8bbe8",
+          "artifact_hash": "a3a73cd03358281d085df4e6a46868b4dade00b4e4183dfb2e0ceda08b9b8d9d"
+        },
+        {
+          "node_id": "K01.PRODUCT.DEFINITION.GATE04E",
+          "role": "product_definition",
+          "consume": "both",
+          "state_hash": "5cd911d84ff2cdd2ac6f51230001596b9b237cc6f23f8b7664edebc0d5f8ccda",
+          "artifact_hash": "e227340b67023cc7442e181266e5a978abc2c3770fb1d6280ae23dc67888b0c0"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "drawing_release_plan",
+          "path": "reports/drawing/current/K01_DRAWING_RELEASE_PLAN_CURRENT.json",
+          "size": 12823,
+          "sha256": "83d3c210629d49c159907f8b2393f7ade55414f83cc1a6eb36c3a0b3934e6079"
+        }
+      ],
+      "title": "Gate04E drawing release-definition plan",
+      "kind": "verification"
+    },
+    "K01.DRAWING.ARTIFACT.GATE04E": {
+      "state_hash": "9450ed0f74fc990677ab8b686011f075d33176702ac98b0b3e99088e1700cc05",
+      "artifact_hash": null,
+      "state": "MISSING",
+      "reasons": [
+        "no build_record"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DRAWING.D006.PROJECTION",
+          "role": "p007_exemplar_projection",
+          "consume": "both",
+          "state_hash": "5169e8cc433227ed05d6828edb0d4ef5ea1aa5ffba5e4b3348e23ff8d8188c34",
+          "artifact_hash": "5aa2c676d0c723d9e62141490fef78493c16b43d330a9ada6db2a779140efe53"
+        },
+        {
+          "node_id": "K01.DRAWING.MODEL.GATE04E",
+          "role": "drawing_semantics",
+          "consume": "both",
+          "state_hash": "4f33c46684b8af53427371e704d398db104b570aed1901f510a576bf49bd3627",
+          "artifact_hash": "681bb2f90e8d3014ded76fbd9af83f257ec969c22f98c9e5c7fb5de67184e0b1"
+        },
+        {
+          "node_id": "K01.DRAWING.RELEASE.PLAN.GATE04E",
+          "role": "release_definition_plan",
+          "consume": "both",
+          "state_hash": "ac82b1b85fdbcdc229495c99d6672c251eea010f5d15ea884e440da6ad7984ed",
+          "artifact_hash": "812f0df10116f5ea446b638b5204077a855ee148c88a52344e30c447f5512a60"
+        }
+      ],
+      "artifact_manifest": [],
+      "title": "Gate04E production drawing pack",
+      "kind": "drawing_artifact"
+    },
+    "K01.DRAWING.VERIFY.GATE04E": {
+      "state_hash": "4ee717c58d30b3d971ce343357b9c99e736e69b8c25d5c157c4cfb11d1a2bde6",
+      "artifact_hash": "a4595c31987db9ae2d13e1f40277a6c38a953e89e2d828c942af31f6df3133ab",
+      "state": "BLOCKED",
+      "reasons": [
+        "blocked by K01.DRAWING.ARTIFACT.GATE04E:MISSING"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.DRAWING.ARTIFACT.GATE04E",
+          "role": "drawing_artifact",
+          "consume": "artifact",
+          "artifact_hash": null
+        },
+        {
+          "node_id": "K01.DRAWING.MODEL.GATE04E",
+          "role": "drawing_semantics",
+          "consume": "state",
+          "state_hash": "4f33c46684b8af53427371e704d398db104b570aed1901f510a576bf49bd3627"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "drawing_verify",
+          "path": "reports/medtas/drawing/current/K01_DRAWING_VERIFY_GATE04E_v1.json",
+          "size": 831,
+          "sha256": "df91b790532b371cf72ea32a40107d2bc45d0f0b02b512ada353d0e820ee737e"
+        }
+      ],
+      "title": "Drawing verification",
+      "kind": "verification"
+    },
+    "K01.VERIFY.GATE04E": {
+      "state_hash": "53e498f42e91b2d9ea57abfc20b55354f063ad9b7dfa6e17c2fbb3bf02e4c427",
+      "artifact_hash": "d0d730250a2898aee6798e6c6b1d01ba0253a6af948911b106118e3fa1652bf0",
+      "state": "STALE",
+      "reasons": [
+        "recorded STATE_HASH != current STATE_HASH"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.BOM.VERIFY.A001",
+          "role": "bom",
+          "consume": "both",
+          "state_hash": "ca412fabd99f187dde6225fc554be093aebce2a28679d4432c946c3ce7aa5482",
+          "artifact_hash": "ab858b575ae8f097e415f94c72ce522bc8d12d2f7c165e6609f0b8a235066b8d"
+        },
+        {
+          "node_id": "K01.CAD.PROPS.PROJECTION.A001",
+          "role": "cad_metadata_projection",
+          "consume": "both",
+          "state_hash": "951990e02fbc49c7505cb947d4275aec5a51eeba93a4105cd6749a4283de59bc",
+          "artifact_hash": "d991ef3492dd2c3921621a014b1225fb5f658e64a7bc0b48e98bba92fde6bbe2"
+        },
+        {
+          "node_id": "K01.DRAWING.P007.LIVE.GEOMETRY",
+          "role": "p007_live_geometry",
+          "consume": "both",
+          "state_hash": "6f851ccf7434d67e7bbdcce8311dbb5b743e898ff615176da371126a4b357b7f",
+          "artifact_hash": "47f16f0f4f59eb81981b1af12627f201961cf2060e9ddd36964314a0ea8af79a"
+        },
+        {
+          "node_id": "K01.DRAWING.RELEASE.PLAN.GATE04E",
+          "role": "drawing_release_plan",
+          "consume": "both",
+          "state_hash": "ac82b1b85fdbcdc229495c99d6672c251eea010f5d15ea884e440da6ad7984ed",
+          "artifact_hash": "812f0df10116f5ea446b638b5204077a855ee148c88a52344e30c447f5512a60"
+        },
+        {
+          "node_id": "K01.DRAWING.VERIFY.GATE04E",
+          "role": "drawings",
+          "consume": "both",
+          "state_hash": "4ee717c58d30b3d971ce343357b9c99e736e69b8c25d5c157c4cfb11d1a2bde6",
+          "artifact_hash": "a4595c31987db9ae2d13e1f40277a6c38a953e89e2d828c942af31f6df3133ab"
+        },
+        {
+          "node_id": "K01.EVIDENCE.GATE04E.REPORT",
+          "role": "formal_report",
+          "consume": "artifact",
+          "artifact_hash": "e3d852c30827d2ee909d6a4040f689add6d05af61f553435c2a63771bd7d7277"
+        },
+        {
+          "node_id": "K01.FEMM.VERIFY.CURRENT",
+          "role": "magnetic_screen",
+          "consume": "both",
+          "state_hash": "5a4e9fc84f167a110a9ad29107c3434688d6b937f418316a336f2cfb929508a5",
+          "artifact_hash": "b02f380b24b4d4916040992ae71a063e70f16f39a7a467f88ed0d354e62a1e9d"
+        },
+        {
+          "node_id": "K01.MBOM.VERIFY.A001",
+          "role": "manufacturing_bom",
+          "consume": "both",
+          "state_hash": "fc0a05e7ad9c666861996275641ffbc519fa90c1c79f94657699b81cab24aa7a",
+          "artifact_hash": "2c1906ef53b14c3c3492e1d2299631f19a9d64281dec2a3287cd86c1c0b9f274"
+        },
+        {
+          "node_id": "K01.REQ.COVERAGE",
+          "role": "requirements_coverage",
+          "consume": "both",
+          "state_hash": "3a955d734fd05508d26b2588aa7e2d93252fbb23410e3d5d71e84a84f8166051",
+          "artifact_hash": "f064d182323fa480f5281957f5168a049c4afc9e6f9448c325e57d6518008a52"
+        },
+        {
+          "node_id": "K01.STRUCT.CCX.P006",
+          "role": "calculix",
+          "consume": "both",
+          "state_hash": "64e787a4d7a4ac322be001a541e55309961b82a8a6092e05c01b2793dc877476",
+          "artifact_hash": null
+        },
+        {
+          "node_id": "K01.STRUCT.FACE_MAP.QUAL.P006",
+          "role": "face_map_qualification",
+          "consume": "both",
+          "state_hash": "6b48825bb375c988a2d3f2a4575ea855db88227a799ffa4f4f8466c71172c6a8",
+          "artifact_hash": "7a733d6fd281f418a6eda0a8730242f31f4feb1e8011e0b2310fb8fda56210bd"
+        },
+        {
+          "node_id": "K01.STRUCT.SWSIM.P006",
+          "role": "structural_screen",
+          "consume": "both",
+          "state_hash": "5ca23913c9d4ce32d4a00e41d3ef432a699f42b78657acdf3ee157bf707e560a",
+          "artifact_hash": "24d6eb2be1da2cd2afb76bfdd615d77e890c66b22c4096c8ac69e22da5c04b9f"
+        },
+        {
+          "node_id": "K01.TOL.A001",
+          "role": "tolerance",
+          "consume": "both",
+          "state_hash": "d911b27d769f5800ab8be59162da1f3be63589563f52354b6ecefa409ac7551c",
+          "artifact_hash": "5c38f91c3452323dad4b137eed20ae172294073170e7cbe8c3bf80338a208b59"
+        }
+      ],
+      "artifact_manifest": [
+        {
+          "output_id": "gate04e_verify",
+          "path": "reports/medtas/verification/current/K01_VERIFY_GATE04E_v1.json",
+          "size": 835,
+          "sha256": "9f632616311cb036c087e74911b100d79be58bcc36628ead6fbb1a1449445d4b"
+        }
+      ],
+      "title": "Gate04E engineering verification",
+      "kind": "verification"
+    },
+    "K01.BASELINE.GATE04E": {
+      "state_hash": "474c601d5322d5e75c2aa42ebe23bfa7f68df9db8a1bfd2ded59021e814815b3",
+      "artifact_hash": null,
+      "state": "BLOCKED",
+      "reasons": [
+        "blocked by K01.DRAWING.VERIFY.GATE04E:BLOCKED",
+        "blocked by K01.INSPECTION.RESULTS:MISSING",
+        "blocked by K01.REQ.COVERAGE:HOLD"
+      ],
+      "inputs": [
+        {
+          "node_id": "K01.BOM.VERIFY.A001",
+          "role": "ebom",
+          "consume": "both",
+          "state_hash": "ca412fabd99f187dde6225fc554be093aebce2a28679d4432c946c3ce7aa5482",
+          "artifact_hash": "ab858b575ae8f097e415f94c72ce522bc8d12d2f7c165e6609f0b8a235066b8d"
+        },
+        {
+          "node_id": "K01.CHARACTERISTICS.REGISTRY",
+          "role": "release_characteristics",
+          "consume": "both",
+          "state_hash": "c7560bd5a6f32786c0668cd64a3c7eb253ac16fdcbdc43de11277a2c31fa66a6",
+          "artifact_hash": "2857733d9d523319d077bd112334b76ee27763219acfa8c8f92d838f5d2aecbb"
+        },
+        {
+          "node_id": "K01.DRAWING.VERIFY.GATE04E",
+          "role": "drawings",
+          "consume": "both",
+          "state_hash": "4ee717c58d30b3d971ce343357b9c99e736e69b8c25d5c157c4cfb11d1a2bde6",
+          "artifact_hash": "a4595c31987db9ae2d13e1f40277a6c38a953e89e2d828c942af31f6df3133ab"
+        },
+        {
+          "node_id": "K01.IDENTITY.AUDIT",
+          "role": "identity",
+          "consume": "both",
+          "state_hash": "e6db5c2c2e5e90926cbfd776bad5425ded3305b7d87c9e86e2384e8cc22418a0",
+          "artifact_hash": "3ccfe6c8c2704dc279f76013960a5731f42216fda0e47b8a16a40d8741ea3ddc"
+        },
+        {
+          "node_id": "K01.INSPECTION.RESULTS",
+          "role": "inspection_results",
+          "consume": "both",
+          "state_hash": "fcfc74ed66b301cd69bdaa515049a12fa3f2ee33e8993bbc0c0eb408bed81922",
+          "artifact_hash": null
+        },
+        {
+          "node_id": "K01.REQ.COVERAGE",
+          "role": "requirements_coverage",
+          "consume": "both",
+          "state_hash": "3a955d734fd05508d26b2588aa7e2d93252fbb23410e3d5d71e84a84f8166051",
+          "artifact_hash": "f064d182323fa480f5281957f5168a049c4afc9e6f9448c325e57d6518008a52"
+        },
+        {
+          "node_id": "K01.VERIFY.GATE04E",
+          "role": "verification",
+          "consume": "both",
+          "state_hash": "53e498f42e91b2d9ea57abfc20b55354f063ad9b7dfa6e17c2fbb3bf02e4c427",
+          "artifact_hash": "d0d730250a2898aee6798e6c6b1d01ba0253a6af948911b106118e3fa1652bf0"
+        }
+      ],
+      "artifact_manifest": [],
+      "title": "Gate04E baseline manifest",
+      "kind": "baseline"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "k01.controlled_characteristic_registry.current.v1",
+  "generated_utc": "2026-09-19T12:45:00+00:00",
+  "status": "CONTROLLED_BOOTSTRAP__P004_EDR047_VALUE_CHAIN",
+  "rule": "A release-relevant characteristic shall have one current value/range, one authority chain, explicit downstream bindings, and stale triggers. Conflicting active values are a HARD engineering-value coherence HOLD.",
+  "characteristics": [
+    {
+      "id": "CHAR-P004-OAL-NOMINAL",
+      "object": "K01-P-004",
+      "name": "Overall length nominal",
+      "value": 7.99,
+      "unit": "mm",
+      "status": "CONTROLLED_CURRENT",
+      "authority": "control/decisions/EDR-047_P004_AXIAL_RECENTER.json",
+      "authority_sha256": "207efe1adec064c1fe95fabae01f3c6bf0dcab22a2adef47dd842958d7505ce6",
+      "native_binding": {
+        "path": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-004_Front_Guide_Bushing.SLDPRT",
+        "sha256": "6c5644913ce7694a46ceb557a5616a70598c50355d06e6f537b8a92a7c1ca779",
+        "solidworks_parameter": "D3@Sketch1",
+        "verified_value_mm": 7.99
+      },
+      "downstream_bindings": [
+        "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json::P004-C03.nominal",
+        "control/product_definition/K01_P004_PRODUCT_DEFINITION_WORKPACK_CURRENT.json::known_nominals.LENGTH_mm",
+        "reports/engineering/K01_P004_CALCULATION_REGISTER_CURRENT.json::P004-CALC-003",
+        "control/drawings/spec/K01-D-004_P004_DRAWING_SPEC_v1.json",
+        "control/drawings/trace/K01-D-004_TRACE_CURRENT.json",
+        "control/drawings/trace/K01-D-004_EDR047_NOMINAL_DELTA_CURRENT.json",
+        "control/decisions/EDR-052_P004_PHYSICAL_EVIDENCE_ACQUISITION_PLAN.json"
+      ],
+      "production_tolerance": "OPEN__NOT_RELEASED",
+      "stale_triggers": [
+        "native P004 SHA changes",
+        "EDR-047 canonical authority SHA changes",
+        "P004-C03 nominal changes",
+        "D004 nominal differs from 7.99"
+      ]
+    },
+    {
+      "id": "CHAR-P004-AXIAL-FLOAT-NOMINAL-20C",
+      "object": "K01-P-004 / P003 / P014 axial stack",
+      "name": "Nominal axial float at 20 C",
+      "value": 0.06,
+      "unit": "mm",
+      "status": "DERIVED_CONTROLLED_CURRENT__PRODUCTION_TOLERANCE_OPEN",
+      "equation": "11.05 - (3.00 + 7.99) = 0.06",
+      "authority": "control/decisions/EDR-047_P004_AXIAL_RECENTER.json",
+      "authority_sha256": "207efe1adec064c1fe95fabae01f3c6bf0dcab22a2adef47dd842958d7505ce6",
+      "production_acceptance": "OPEN",
+      "stale_triggers": [
+        "P004 OAL changes",
+        "P003/P014 stack geometry changes",
+        "functional window changes",
+        "reference-temperature requirement changes"
+      ]
+    }
+  ],
+  "expansion_policy": "Add characteristics when they are release-relevant, cross-domain, or capable of becoming inconsistent across Product Definition/CAD/drawing/analysis/inspection. Do not duplicate every dimension."
+}

@@ -1,0 +1,87 @@
+{
+  "schema": "k01.identity_freeze.adjudication.v1",
+  "generated_utc": "2026-09-09T08:45:41.503459+00:00",
+  "status": "PASS_IDENTITY_FREEZE_SEMANTIC_EQUIVALENCE",
+  "root_cause_of_previous_hold": {
+    "classification": "VERIFIER_DEFINITION_DEFECT",
+    "detail": "Existing exporter records the MateGroup folder as one raw semantic entry. The historical expected value 29 refers to actual mate features. Gate04E source snapshot already has 30 raw entries = 1 MateGroup + 29 mate features.",
+    "cad_change_required": false
+  },
+  "source_semantic": "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_A001_SEMANTIC_RAW_API_v1_4.json",
+  "canonical_semantic": "D:\\BreshevEngineering\\marvilon-k01\\reports\\cad\\current\\K01_A001_SEMANTIC_RAW_API_v2_0_IDENTITY_FREEZE.json",
+  "canonical_assembly": {
+    "path": "D:\\Marvilon\\K01\\cad\\assemblies\\K01-A-001_Calibration_Module.SLDASM",
+    "sha256": "a6bc1c6227075c2736a2383a73ecf2f95e109f7cbcfa34ef01ccf8bfa45cdd33"
+  },
+  "counts": {
+    "components": 13,
+    "raw_semantic_mate_entries": 30,
+    "mate_group_entries": 1,
+    "mate_features": 29,
+    "active_mate_features": 27,
+    "suppressed_mate_features": 2
+  },
+  "suppressed_mates": [
+    "Concentric5",
+    "Coincident5"
+  ],
+  "checks": [
+    {
+      "id": "ID-COMP-COUNT",
+      "status": "PASS",
+      "detail": "source=13 target=13 expected=13"
+    },
+    {
+      "id": "ID-COMP-IDENTITY",
+      "status": "PASS",
+      "detail": "same K01 product identities"
+    },
+    {
+      "id": "ID-COMP-SEMANTIC",
+      "status": "PASS",
+      "detail": "component transforms/config/suppression equal after path normalization"
+    },
+    {
+      "id": "ID-MATE-RAW",
+      "status": "PASS",
+      "detail": "raw semantic mate entries source=30 target=30"
+    },
+    {
+      "id": "ID-MATE-FEATURES",
+      "status": "PASS",
+      "detail": "real mate features source=29 target=29; MateGroup excluded"
+    },
+    {
+      "id": "ID-MATE-ACTIVE",
+      "status": "PASS",
+      "detail": "active mate features source=27 target=27"
+    },
+    {
+      "id": "ID-MATE-SUPPRESSED",
+      "status": "PASS",
+      "detail": "suppressed mates=Concentric5,Coincident5"
+    },
+    {
+      "id": "ID-STABLE-NAMES",
+      "status": "PASS",
+      "detail": "stateful live component filenames=0"
+    },
+    {
+      "id": "ID-CANONICAL-HASH",
+      "status": "PASS",
+      "detail": "canonical A001 exact bytes still match post-migration evidence"
+    }
+  ],
+  "next_gate": {
+    "name": "K01-BASELINE-02 ASSEMBLY APPROVAL",
+    "status": "READY_TO_CONTINUE",
+    "required_checks": [
+      "Exact shared-equation dimension binding",
+      "fully-defined / overdefined mate audit",
+      "external/in-context reference audit",
+      "native interference in IN/MID/OUT",
+      "rear-side sequential installation path",
+      "per-part material/mass audit"
+    ]
+  }
+}

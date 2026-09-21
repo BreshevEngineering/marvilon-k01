@@ -1,0 +1,117 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-047",
+  "date": "2026-09-18",
+  "subject": "P004 manufacturing/metrology capability boundary and axial nominal robustness allocation",
+  "status": "ACCEPTED_CAPABILITY_BOUNDARY__AXIAL_NOMINAL_RECENTER_REQUIREMENT__NUMERIC_PRODUCTION_CAPABILITY_EXTERNAL",
+  "goal": "Determine whether existing evidence can support EDR-046 part-level tolerance allocation and, if not, remove avoidable axial nominal asymmetry without inventing production capability.",
+  "authority": [
+    "control/decisions/EDR-046_P004_JOINT_TOLERANCE_BUDGET_20C.json",
+    "evidence/immutable/9e0971af12f82b64e5c92d70a1b0cf52f2e176b95cc5a5d8959b033140b23fdb__K01_P004_JOINT_TOLERANCE_ALLOCATION_CURRENT.json",
+    "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json",
+    "evidence/immutable/2b2fc6149831289892aceae6f9cad3671928f2849dff6b87a3a5a989c9e0d9ec__K01-P-004_INSPECTION_PLAN_CURRENT.json",
+    "EDR-038",
+    "EDR-043",
+    "EDR-045"
+  ],
+  "external_manufacturer_evidence": [
+    {
+      "authority": "Ensinger official",
+      "url": "https://www.ensingerplastics.com/en/shapes/peek-tecapeek-pvx-black",
+      "claim": "TECAPEEK PVX black is a bearing/sliding PEEK grade; official product data supports dimensional-stability/sliding application but does not publish project-specific machining Cp/Cpk or gage uncertainty."
+    },
+    {
+      "authority": "Ensinger official",
+      "url": "https://www.ensingerplastics.com/en/thermoplastic-materials/peek-plastic/peek-machining",
+      "claim": "PEEK including filled grades is suitable for precision CNC machining; actual tight-tolerance capability depends on optimized machining practice rather than a generic project tolerance value."
+    },
+    {
+      "authority": "Ensinger official",
+      "url": "https://www.ensingerplastics.com/en/faq",
+      "claim": "For narrow tolerances and filled plastics, intermediate annealing/stress relief may be beneficial; final dimensions are produced after the stabilization step."
+    }
+  ],
+  "capability_inventory": {
+    "candidate_records": [],
+    "physical_or_statistical_capability_records": []
+  },
+  "engineering_question": "Can current manufacturing/metrology evidence justify numeric tolerance splits, and should the 0.050 mm axial nominal be retained when only 0.010 mm adverse-side combined budget is available?",
+  "options": [
+    {
+      "id": "A",
+      "description": "Retain 0.050 mm axial nominal and wait for supplier capability evidence.",
+      "disposition": "REJECTED_AS_UNNECESSARILY_ASYMMETRIC_FOR_20C_FUNCTION"
+    },
+    {
+      "id": "B",
+      "description": "Recenter functional axial nominal to 0.060 mm through downstream P003/P014 effective retention-space requirement while retaining P004 L=8.000 mm.",
+      "disposition": "ACCEPTED"
+    },
+    {
+      "id": "C",
+      "description": "Assign typical ±0.01/H7/etc. production values from generic practice.",
+      "disposition": "REJECTED_NO_AUTHORITY"
+    },
+    {
+      "id": "D",
+      "description": "Change the 0.040...0.080 mm functional window.",
+      "disposition": "NOT_JUSTIFIED"
+    }
+  ],
+  "decision": [
+    "Current evidence supports the selected TECAPEEK PVX machining route, but it does not contain quantitative project/supplier process-capability data or measurement-uncertainty evidence sufficient to release numeric P003/P004/P014 production tolerance splits.",
+    "Do not invent ± values, ISO fit classes, Cpk/Ppk or gage capability from generic machining practice.",
+    "Retain the P003/P004 seat nominal architecture: 6.600/6.540 gives 0.060 mm nominal diametral clearance, already centered in the 0.040...0.080 mm 20 C functional window.",
+    "Reopen and recenter only the axial nominal architecture at the requirement level: retain P004 L_nom=8.000 mm and require P003/P014 effective installed retention-space nominal H_nom=8.060 mm, giving F_nom=0.060 mm at 20 C.",
+    "This axial recentering doubles the symmetric combined worst-case half-budget from 0.010 mm to 0.020 mm without assigning any part-level production tolerance.",
+    "The exact P003/P014 feature that realizes H_nom=8.060 mm remains a downstream Product Definition decision; no P003/P014 CAD, DimXpert or drawing mutation is authorized by this decision.",
+    "Supplier/FAI/metrology evidence remains required before numeric part-level tolerance allocation. The evidence package shall include stock/lot traceability, actual machining/stabilization route, dimensional results, measurement temperature, calibrated method and measurement uncertainty/decision rule.",
+    "A small first-article set may screen feasibility, but no statistical process-capability claim is released unless the data set and method are sufficient for that claim.",
+    "20 C dimensional acceptance remains separate from service-temperature no-binding qualification."
+  ],
+  "axial_nominal_allocation": {
+    "P004_length_nominal_mm": 8.0,
+    "previous_effective_retention_space_nominal_mm": 8.05,
+    "previous_float_nominal_mm": 0.05,
+    "required_effective_retention_space_nominal_mm": 8.06,
+    "required_float_nominal_20C_mm": 0.06,
+    "functional_window_20C_mm": [
+      0.04,
+      0.08
+    ],
+    "centered_combined_half_budget_mm": 0.019999999999999997,
+    "part_level_tolerance_split": "OPEN__WAITING_EXTERNAL_CAPABILITY_EVIDENCE",
+    "implementation_owner": "P003/P014 downstream Product Definition; exact feature allocation not selected here"
+  },
+  "service_screen": {
+    "F20_target_mm": 0.06,
+    "F55_screen_mm": 0.056108,
+    "Fminus40_extrapolated_screen_mm": 0.066672,
+    "qualification_boundary": "55C engineering screen only; -40C remains L8 qualification/open because low-temperature material property is not directly controlled."
+  },
+  "technical_filter": {
+    "function": "PASS__TARGET_REMAINS_INSIDE_20C_WINDOW",
+    "tolerance": "PASS_NOMINAL_RECENTER__NUMERIC_PART_SPLIT_OPEN",
+    "manufacturing": "ROUTE_FEASIBLE__NUMERIC_CAPABILITY_UNPROVEN",
+    "inspection": "METHOD_ARCHITECTURE_EXISTS__UNCERTAINTY_UNPROVEN",
+    "assembly": "PASS__AXIAL_FLOAT_RETENTION_NO_PRELOAD_PRESERVED",
+    "thermal": "PASS_SCREEN_WITH_LIMITATIONS__L8_LOW_T_OPEN",
+    "serviceability": "PASS__NO_SELECTIVE_ASSEMBLY_BASELINE_INTRODUCED"
+  },
+  "required_external_evidence": [
+    "TECAPEEK PVX stock form/lot/CoC and machining supplier identity/effectivity",
+    "declared rough/finish/stress-relief or anneal sequence used for P004",
+    "FAI dimensional measurements for P004 OD, OAL and bore at controlled/recorded temperature",
+    "measurement equipment traceability, method, contact force where relevant, and uncertainty/decision rule",
+    "supplier historical or pilot-run process capability evidence before any Cp/Cpk/Ppk claim",
+    "mating-part P003/P014 capability evidence before final shared tolerance split"
+  ],
+  "expected_closure": "PASS_P004_CAPABILITY_BASIS_CONTROLLED__NOMINAL_REOPEN_TRIGGERED__NUMERIC_SPLIT_EXTERNAL",
+  "impact": {
+    "CAD": "NONE",
+    "DimXpert": "NONE",
+    "drawing": "NONE",
+    "P003/P014": "DOWNSTREAM_NOMINAL_REQUIREMENT_ONLY",
+    "native_mutation": "NONE"
+  }
+}

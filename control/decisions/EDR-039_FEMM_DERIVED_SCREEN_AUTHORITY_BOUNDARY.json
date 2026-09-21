@@ -1,0 +1,35 @@
+{
+  "schema": "k01.edr.v1",
+  "decision_id": "EDR-039",
+  "date": "2026-09-17",
+  "subject": "FEMM V3 derived screening criterion versus released actuator-force requirement",
+  "status": "ACCEPTED_EVIDENCE_CLASSIFICATION",
+  "decision": "Classify K_F,min >= 0.930894486 N/A at nominal 1 A as a derived engineering design screen only. FEMM V3 PASS is numerical-candidate evidence, not closure of REQ-K01-ACT-FORCE-001.",
+  "basis": {
+    "derived_formula": "2*(0.25 + 0.185447243 + 0.03)=0.930894486 N; at 1 A the coefficient screen is numerically 0.930894486 N/A",
+    "requirement_numeric_acceptance_status": "OPEN",
+    "requirement_numeric_acceptance_basis": "DERIVED_FROM_REQUIREMENT_SCHEMA: acceptance=None, lifecycle_status='', coverage_status='', release_blocker=True",
+    "requirement_acceptance_field": null,
+    "requirement_lifecycle_status": null,
+    "requirement_release_blocker": true,
+    "FEMM_summary": "reports/femm/final_candidate_20260916_v3/K01_FEMM_FINAL_CANDIDATE_SUMMARY_V3.json"
+  },
+  "accepted": [
+    "CANDIDATE_350_BR1_BOUND: K_F,min=1.003471389 N/A, +7.796% versus derived screen — PASS_NUMERICAL_SCREEN",
+    "SENSITIVITY_350_BR095: K_F,min=0.953259402 N/A, +2.403% versus derived screen — PASS_NUMERICAL_SCREEN"
+  ],
+  "not_accepted": [
+    "REQ-K01-ACT-FORCE-001 numeric acceptance is NOT released.",
+    "Historical passive 5 N / 15 N targets are NOT inherited.",
+    "FEMM numerical PASS is NOT physical qualification or product release."
+  ],
+  "release_boundary": "Requirement closure requires released numeric force/force-coefficient envelope plus physical qualification evidence; FEMM remains one evidence class.",
+  "downstream_impact": {
+    "P004": "NONE — active Product Definition frontier unchanged",
+    "FEMM": "evidence semantics corrected",
+    "requirements": "NO MUTATION; numeric acceptance remains OPEN",
+    "BOM": "NONE",
+    "CAD": "NONE",
+    "drawing": "NONE"
+  }
+}

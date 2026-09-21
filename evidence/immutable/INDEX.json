@@ -1,0 +1,259 @@
+{
+  "schema": "k01.immutable_evidence_index.v1",
+  "generated_utc": "2026-09-21T10:50:59.815512+00:00",
+  "item_count": 42,
+  "items": [
+    {
+      "original_report": "reports/analysis/current/K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1.json",
+      "immutable": "evidence/immutable/02f26ebc77dda96757ac7695dc79a404a7c646142200bd26299c65b97ecc88fc__K01_C2_PILOT_INTERFERENCE_ROOT_CAUSE_v1.json",
+      "sha256": "02f26ebc77dda96757ac7695dc79a404a7c646142200bd26299c65b97ecc88fc",
+      "bytes": 1383
+    },
+    {
+      "original_report": "reports/analysis/current/K01_J2_C2_MECHANICAL_SCREEN_v1.json",
+      "immutable": "evidence/immutable/4bb2c2bad12c7925e194d1ac6c49d9159b47d8688d723ecea7e4cb75ce888b9d__K01_J2_C2_MECHANICAL_SCREEN_v1.json",
+      "sha256": "4bb2c2bad12c7925e194d1ac6c49d9159b47d8688d723ecea7e4cb75ce888b9d",
+      "bytes": 2030
+    },
+    {
+      "original_report": "reports/bom/current/K01_EBOM_A001_CURRENT.json",
+      "immutable": "evidence/immutable/de9fe91427e021bca88d810f80e737e8153ad9327b15c07db0b14bc364c6a3c1__K01_EBOM_A001_CURRENT.json",
+      "sha256": "de9fe91427e021bca88d810f80e737e8153ad9327b15c07db0b14bc364c6a3c1",
+      "bytes": 12377
+    },
+    {
+      "original_report": "reports/bom/K01_BOM_AUDIT_study_c2r1.json",
+      "immutable": "evidence/immutable/ab02eddbec2619f27d78ff1365b2417cecdb27638456ae06703c2dbf09cee2ed__K01_BOM_AUDIT_study_c2r1.json",
+      "sha256": "ab02eddbec2619f27d78ff1365b2417cecdb27638456ae06703c2dbf09cee2ed",
+      "bytes": 6397
+    },
+    {
+      "original_report": "reports/bom/K01_BOM_RECONCILIATION_study_c2r1.json",
+      "immutable": "evidence/immutable/a8ba068f3edb7ab9e9b55fc4353447c089dbd48a8b38a04e35c25022f4f0551f__K01_BOM_RECONCILIATION_study_c2r1.json",
+      "sha256": "a8ba068f3edb7ab9e9b55fc4353447c089dbd48a8b38a04e35c25022f4f0551f",
+      "bytes": 11460
+    },
+    {
+      "original_report": "reports/cad/current/K01_BASELINE_02C_POST_PROMOTION_ASSEMBLY_QA.json",
+      "immutable": "evidence/immutable/dfc90c0c31cec595a32f87af0b8840dcf884b127aca67b1debd899f34d80a23d__K01_BASELINE_02C_POST_PROMOTION_ASSEMBLY_QA.json",
+      "sha256": "dfc90c0c31cec595a32f87af0b8840dcf884b127aca67b1debd899f34d80a23d",
+      "bytes": 4782
+    },
+    {
+      "original_report": "reports/cad/current/K01_DRAWING_QUALITY_P003_C2R1_v1.json",
+      "immutable": "evidence/immutable/0e5f7d894ae4c2f24619c53bc6d668ce0394845abc16af872ad1012a943f620b__K01_DRAWING_QUALITY_P003_C2R1_v1.json",
+      "sha256": "0e5f7d894ae4c2f24619c53bc6d668ce0394845abc16af872ad1012a943f620b",
+      "bytes": 1326
+    },
+    {
+      "original_report": "reports/cad/current/K01_GATE04B_DATUM_C_ASSEMBLY_QA.json",
+      "immutable": "evidence/immutable/fa19b52d6d1279ffcb7c89a6251120000465f1f8591a858c38bdd1c1491bb073__K01_GATE04B_DATUM_C_ASSEMBLY_QA.json",
+      "sha256": "fa19b52d6d1279ffcb7c89a6251120000465f1f8591a858c38bdd1c1491bb073",
+      "bytes": 6310
+    },
+    {
+      "original_report": "reports/cad/current/K01_GATE04B_DATUM_C_BUILD.json",
+      "immutable": "evidence/immutable/7c2b55da77a5436be229bdfb877347ca5f6a3845dd72a1cf1df22200508cc60c__K01_GATE04B_DATUM_C_BUILD.json",
+      "sha256": "7c2b55da77a5436be229bdfb877347ca5f6a3845dd72a1cf1df22200508cc60c",
+      "bytes": 3853
+    },
+    {
+      "original_report": "reports/cad/current/K01_GATE04D_C2R1_INTERFERENCE.json",
+      "immutable": "evidence/immutable/7b15ac8a3b13abf0b1c4498ce0c40f26ba4d559402c02d834eec5c0f7038e9e1__K01_GATE04D_C2R1_INTERFERENCE.json",
+      "sha256": "7b15ac8a3b13abf0b1c4498ce0c40f26ba4d559402c02d834eec5c0f7038e9e1",
+      "bytes": 1127
+    },
+    {
+      "original_report": "reports/cad/current/K01_GATE04D_C2R1_TYPED_BUILD.json",
+      "immutable": "evidence/immutable/3a19086f0253d3d22689f2830a603acb968ca947be6f35c59cfbe59d42f4d2a0__K01_GATE04D_C2R1_TYPED_BUILD.json",
+      "sha256": "3a19086f0253d3d22689f2830a603acb968ca947be6f35c59cfbe59d42f4d2a0",
+      "bytes": 1085
+    },
+    {
+      "original_report": "reports/cad/current/K01_GATE04D_C2R1_TYPED_DRAWINGS_V2.json",
+      "immutable": "evidence/immutable/bd483f54f2b11f5d71b73af05634557871a35d468310726ff4179d61cee9c6d0__K01_GATE04D_C2R1_TYPED_DRAWINGS_V2.json",
+      "sha256": "bd483f54f2b11f5d71b73af05634557871a35d468310726ff4179d61cee9c6d0",
+      "bytes": 2052
+    },
+    {
+      "original_report": "reports/cad/current/K01_GATE04D_C2R1_VERIFY.json",
+      "immutable": "evidence/immutable/bd9ba6bf9f77cef0e5816f86fd5751317efb99f86380d528f0686ccf18b74a48__K01_GATE04D_C2R1_VERIFY.json",
+      "sha256": "bd9ba6bf9f77cef0e5816f86fd5751317efb99f86380d528f0686ccf18b74a48",
+      "bytes": 530
+    },
+    {
+      "original_report": "reports/cad/current/K01_GATE04E_P006_SERVICE_BUILD.json",
+      "immutable": "evidence/immutable/38e6c5e584cc6eaa2726edc68288f5839c254c3adee6e364e98b465c6b414aca__K01_GATE04E_P006_SERVICE_BUILD.json",
+      "sha256": "38e6c5e584cc6eaa2726edc68288f5839c254c3adee6e364e98b465c6b414aca",
+      "bytes": 1185
+    },
+    {
+      "original_report": "reports/cad/current/K01_GATE04E_P006_SERVICE_VERIFY.json",
+      "immutable": "evidence/immutable/4df44ac4ac44a38203bf0036efe7f4ba2dec2793d4817660e97f4dd49bb33538__K01_GATE04E_P006_SERVICE_VERIFY.json",
+      "sha256": "4df44ac4ac44a38203bf0036efe7f4ba2dec2793d4817660e97f4dd49bb33538",
+      "bytes": 1196
+    },
+    {
+      "original_report": "reports/cad/identity_freeze/K01_IDENTITY_FREEZE_ADJUDICATION_CURRENT.json",
+      "immutable": "evidence/immutable/71fa8c92981a2fe408214f8c28b7c7dca81e7921d7943eaf748bc9516a7502df__K01_IDENTITY_FREEZE_ADJUDICATION_CURRENT.json",
+      "sha256": "71fa8c92981a2fe408214f8c28b7c7dca81e7921d7943eaf748bc9516a7502df",
+      "bytes": 2958
+    },
+    {
+      "original_report": "reports/cad/identity_freeze/K01_IDENTITY_FREEZE_VERIFY_CURRENT.json",
+      "immutable": "evidence/immutable/3c0a6734e80ac50f388b0354df19d80908f6e636881cb256205ae1ea8a910cd5__K01_IDENTITY_FREEZE_VERIFY_CURRENT.json",
+      "sha256": "3c0a6734e80ac50f388b0354df19d80908f6e636881cb256205ae1ea8a910cd5",
+      "bytes": 2503
+    },
+    {
+      "original_report": "reports/cad/p007_pmi_step13/K01_P007_PMI_STEP13_CURRENT.json",
+      "immutable": "evidence/immutable/d58708e5bd853432046cf7bd1326723a1f014becb41e89c570290c1ff29ecc92__K01_P007_PMI_STEP13_CURRENT.json",
+      "sha256": "d58708e5bd853432046cf7bd1326723a1f014becb41e89c570290c1ff29ecc92",
+      "bytes": 3237
+    },
+    {
+      "original_report": "reports/calculations/K01_T05_CLAMP_SCREEN_CURRENT.json",
+      "immutable": "evidence/immutable/ed7dcf0f0376bc2f77d8e1223b9b097697af1d7f583df160ccc2123c1ee6942c__K01_T05_CLAMP_SCREEN_CURRENT.json",
+      "sha256": "ed7dcf0f0376bc2f77d8e1223b9b097697af1d7f583df160ccc2123c1ee6942c",
+      "bytes": 1883
+    },
+    {
+      "original_report": "reports/control/K01_DRAWING_CONTROL_CURRENT.json",
+      "immutable": "evidence/immutable/ca53a873527cf19e76ac71a9c9089f707b121e9e5b93581e5f97b521e36ac6bd__K01_DRAWING_CONTROL_CURRENT.json",
+      "sha256": "ca53a873527cf19e76ac71a9c9089f707b121e9e5b93581e5f97b521e36ac6bd",
+      "bytes": 8251
+    },
+    {
+      "original_report": "reports/control/K01_ENGINEERING_SYSTEM_COVERAGE_CURRENT.json",
+      "immutable": "evidence/immutable/bd8779037e5ce9bf009280207d4594e374146e44d8bfac3f7e8285da165225e9__K01_ENGINEERING_SYSTEM_COVERAGE_CURRENT.json",
+      "sha256": "bd8779037e5ce9bf009280207d4594e374146e44d8bfac3f7e8285da165225e9",
+      "bytes": 19006
+    },
+    {
+      "original_report": "reports/control/K01_MEDTAS_DERIVED_STATE_CURRENT.json",
+      "immutable": "evidence/immutable/d07b049d193037754ea348f2a29b082a039036a46cf596bebb8e7cdc2194f359__K01_MEDTAS_DERIVED_STATE_CURRENT.json",
+      "sha256": "d07b049d193037754ea348f2a29b082a039036a46cf596bebb8e7cdc2194f359",
+      "bytes": 125832
+    },
+    {
+      "original_report": "reports/control/K01_NODE_TECHNICAL_FILTER_CURRENT.json",
+      "immutable": "evidence/immutable/7b23a737ad2d6170c0c42c050c21f246f631195758d0d5bcd9f67bbeba3d8922__K01_NODE_TECHNICAL_FILTER_CURRENT.json",
+      "sha256": "7b23a737ad2d6170c0c42c050c21f246f631195758d0d5bcd9f67bbeba3d8922",
+      "bytes": 18252
+    },
+    {
+      "original_report": "reports/control/K01_TEMPORAL_COHERENCE_CURRENT.json",
+      "immutable": "evidence/immutable/9a65d76eb070320c3e84bad0e14a0e22ab89b57eeea5808ca2e022bc4d58951c__K01_TEMPORAL_COHERENCE_CURRENT.json",
+      "sha256": "9a65d76eb070320c3e84bad0e14a0e22ab89b57eeea5808ca2e022bc4d58951c",
+      "bytes": 2314
+    },
+    {
+      "original_report": "reports/engineering/current/K01_GATE04E_FEM_FEMM_Verification_Report_v1.md",
+      "immutable": "evidence/immutable/48439d610299f5ef00e5163d2a8c148073e61bdc8ce586088a5b1f68b977f08e__K01_GATE04E_FEM_FEMM_Verification_Report_v1.md",
+      "sha256": "48439d610299f5ef00e5163d2a8c148073e61bdc8ce586088a5b1f68b977f08e",
+      "bytes": 3768
+    },
+    {
+      "original_report": "reports/engineering/current/source/K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx",
+      "immutable": "evidence/immutable/fd44f0f9f5ca28d08fa8280a5717168aa68303219106d95216e4dcbb55cb9c16__K01-A-001_GATE04E_P006_SERVICE_VERIFY-Static_1-4.docx",
+      "sha256": "fd44f0f9f5ca28d08fa8280a5717168aa68303219106d95216e4dcbb55cb9c16",
+      "bytes": 658836
+    },
+    {
+      "original_report": "reports/engineering/K01_P004_CAPABILITY_BOUNDARY_CURRENT.json",
+      "immutable": "evidence/immutable/e6f397064eef88b9db51a268def8440484ede855463bb0de3427e0d68fea31a6__K01_P004_CAPABILITY_BOUNDARY_CURRENT.json",
+      "sha256": "e6f397064eef88b9db51a268def8440484ede855463bb0de3427e0d68fea31a6",
+      "bytes": 2225
+    },
+    {
+      "original_report": "reports/engineering/K01_P004_GUIDE_SYSTEM_ALLOCATION_AUTHORITY_RECOVERY_CURRENT.json",
+      "immutable": "evidence/immutable/bbdd964097a4de5004d1faedc586d214ae904a03358a29f66b2ee836084527c8__K01_P004_GUIDE_SYSTEM_ALLOCATION_AUTHORITY_RECOVERY_CURRENT.json",
+      "sha256": "bbdd964097a4de5004d1faedc586d214ae904a03358a29f66b2ee836084527c8",
+      "bytes": 1867
+    },
+    {
+      "original_report": "reports/engineering/K01_P004_JOINT_TOLERANCE_ALLOCATION_CURRENT.json",
+      "immutable": "evidence/immutable/9e0971af12f82b64e5c92d70a1b0cf52f2e176b95cc5a5d8959b033140b23fdb__K01_P004_JOINT_TOLERANCE_ALLOCATION_CURRENT.json",
+      "sha256": "9e0971af12f82b64e5c92d70a1b0cf52f2e176b95cc5a5d8959b033140b23fdb",
+      "bytes": 1848
+    },
+    {
+      "original_report": "reports/engineering/K01_P004_MATING_AUTHORITY_RECOVERY_CURRENT.json",
+      "immutable": "evidence/immutable/9541e435a9ebb87185f32e1997ed5edad76cbcc3c4aae3723c84dad18e5db091__K01_P004_MATING_AUTHORITY_RECOVERY_CURRENT.json",
+      "sha256": "9541e435a9ebb87185f32e1997ed5edad76cbcc3c4aae3723c84dad18e5db091",
+      "bytes": 33424
+    },
+    {
+      "original_report": "reports/engineering/K01_P004_THERMAL_TOLERANCE_SCREEN_CURRENT.json",
+      "immutable": "evidence/immutable/0f1dcf2b3f3da18f50490b225ac6997566fbd096186ead6912bd251988d6705f__K01_P004_THERMAL_TOLERANCE_SCREEN_CURRENT.json",
+      "sha256": "0f1dcf2b3f3da18f50490b225ac6997566fbd096186ead6912bd251988d6705f",
+      "bytes": 2644
+    },
+    {
+      "original_report": "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_V3_CURRENT.json",
+      "immutable": "evidence/immutable/c6d22085c8fb92897602a47b484953f14a10282490656369cb95f14a753a5517__K01_PROJECT_CLOSURE_STEP9C_V3_CURRENT.json",
+      "sha256": "c6d22085c8fb92897602a47b484953f14a10282490656369cb95f14a753a5517",
+      "bytes": 5508
+    },
+    {
+      "original_report": "reports/inspection/current/K01_RELEASE_CHARACTERISTICS_CURRENT.json",
+      "immutable": "evidence/immutable/2ed96f4773a1926cacaf78cf447ac6c60a03c573665fff67209bb1a167720614__K01_RELEASE_CHARACTERISTICS_CURRENT.json",
+      "sha256": "2ed96f4773a1926cacaf78cf447ac6c60a03c573665fff67209bb1a167720614",
+      "bytes": 7047
+    },
+    {
+      "original_report": "reports/inspection/K01-P-004_INSPECTION_PLAN_CURRENT.json",
+      "immutable": "evidence/immutable/2b2fc6149831289892aceae6f9cad3671928f2849dff6b87a3a5a989c9e0d9ec__K01-P-004_INSPECTION_PLAN_CURRENT.json",
+      "sha256": "2b2fc6149831289892aceae6f9cad3671928f2849dff6b87a3a5a989c9e0d9ec",
+      "bytes": 1671
+    },
+    {
+      "original_report": "reports/inspection/K01-P-004_INSPECTION_PROCEDURE_CURRENT.json",
+      "immutable": "evidence/immutable/084bb2e24931dd3d04dc674e3c9845e67177f742b3580a88b242653205a051ae__K01-P-004_INSPECTION_PROCEDURE_CURRENT.json",
+      "sha256": "084bb2e24931dd3d04dc674e3c9845e67177f742b3580a88b242653205a051ae",
+      "bytes": 3858
+    },
+    {
+      "original_report": "reports/medtas/bom/current/K01_BOM_VERIFY_A001_v1.json",
+      "immutable": "evidence/immutable/c4de79bb6ca208c1f61542d5663088d2aff514c87492a78e1d2b44c23d3cc228__K01_BOM_VERIFY_A001_v1.json",
+      "sha256": "c4de79bb6ca208c1f61542d5663088d2aff514c87492a78e1d2b44c23d3cc228",
+      "bytes": 946
+    },
+    {
+      "original_report": "reports/medtas/bom/current/K01_EBOM_MODEL_A001_v1_9.json",
+      "immutable": "evidence/immutable/de9fe91427e021bca88d810f80e737e8153ad9327b15c07db0b14bc364c6a3c1__K01_EBOM_MODEL_A001_v1_9.json",
+      "sha256": "de9fe91427e021bca88d810f80e737e8153ad9327b15c07db0b14bc364c6a3c1",
+      "bytes": 12377
+    },
+    {
+      "original_report": "reports/medtas/bom/current/K01_MBOM_VERIFY_A001_v1_9.json",
+      "immutable": "evidence/immutable/4ac352273832c4ddf61fbefcdb306fbe25bd536032aa71678cc0930b9c54fb74__K01_MBOM_VERIFY_A001_v1_9.json",
+      "sha256": "4ac352273832c4ddf61fbefcdb306fbe25bd536032aa71678cc0930b9c54fb74",
+      "bytes": 991
+    },
+    {
+      "original_report": "reports/medtas/cad/current/K01_CAD_SEM_A001.json",
+      "immutable": "evidence/immutable/983c85018ab000834abb5142e3cd7344642a80fcc03e9fd22c8454f5db0af4c3__K01_CAD_SEM_A001.json",
+      "sha256": "983c85018ab000834abb5142e3cd7344642a80fcc03e9fd22c8454f5db0af4c3",
+      "bytes": 155712
+    },
+    {
+      "original_report": "reports/medtas/calculix/current/K01_CALCULIX_PREFLIGHT_CURRENT.json",
+      "immutable": "evidence/immutable/f3d27501ba44d518bc4279f70fa2314b6a737daf0c734f16b6892aa97ec720d7__K01_CALCULIX_PREFLIGHT_CURRENT.json",
+      "sha256": "f3d27501ba44d518bc4279f70fa2314b6a737daf0c734f16b6892aa97ec720d7",
+      "bytes": 491
+    },
+    {
+      "original_report": "reports/medtas/tolerance/current/K01_TOLERANCE_A001_v1.json",
+      "immutable": "evidence/immutable/06c919a10cd091843498d9c03ccce4e65347a9a9379f29c37ba138a82ed7a552__K01_TOLERANCE_A001_v1.json",
+      "sha256": "06c919a10cd091843498d9c03ccce4e65347a9a9379f29c37ba138a82ed7a552",
+      "bytes": 5878
+    },
+    {
+      "original_report": "reports/product_definition/K01-P-004_READINESS_CURRENT.json",
+      "immutable": "evidence/immutable/83dedb6a0803cfe6c43c20d3ef50c3b7b120343b43f0b1e8ee161fb39a139e5d__K01-P-004_READINESS_CURRENT.json",
+      "sha256": "83dedb6a0803cfe6c43c20d3ef50c3b7b120343b43f0b1e8ee161fb39a139e5d",
+      "bytes": 4370
+    }
+  ]
+}

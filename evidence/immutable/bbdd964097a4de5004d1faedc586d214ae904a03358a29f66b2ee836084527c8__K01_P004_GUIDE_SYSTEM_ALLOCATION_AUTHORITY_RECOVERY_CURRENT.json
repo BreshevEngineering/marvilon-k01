@@ -1,0 +1,30 @@
+{
+  "schema": "k01.p004.guide_system_allocation_authority_recovery.current.v1",
+  "generated_utc": "2026-09-18T19:29:42.843368+00:00",
+  "status": "PASS_P004_GUIDE_REQUIREMENT_AUTHORITY_RECOVERED_OR_EXPLICIT_EXTERNAL_DEPENDENCY",
+  "part_id": "K01-P-004",
+  "interface": "P004 bore Ø5.055 nominal ↔ P001 rod Ø5.000 nominal",
+  "nominal_diametral_clearance_mm": 0.055,
+  "numeric_system_allocation_found": false,
+  "guide_numeric_state": "WAITING_EXTERNAL_REQUIREMENT_OR_CHARACTERIZATION_EVIDENCE",
+  "authority_inventory": {
+    "authorities_checked": [
+      "control/requirements/K01_RELEASE_REQUIREMENTS_CURRENT.json",
+      "control/decisions/EDR-040_P004_GUIDE_CLEARANCE_AUTHORITY_BOUNDARY.json",
+      "control/product_definition/K01-P-004_PRODUCT_DEFINITION_CURRENT.json",
+      "reports/product_definition/K01-P-004_READINESS_CURRENT.json",
+      "control/product_definition/K01_P004_PRODUCT_DEFINITION_WORKPACK_CURRENT.json"
+    ],
+    "current_requirement_ids_matching_scope": [],
+    "keyword_hits_in_release_requirements": [],
+    "numeric_system_allocation_found": false,
+    "legacy_or_planning_mentions_are_authority": false,
+    "nominal_geometry_is_requirement_authority": false
+  },
+  "external_evidence_required": [
+    "Controlled system/stakeholder acceptance requirement for allowable calibration-rod/target radial or angular repositioning and/or optical calibration repeatability; OR",
+    "controlled characterization test results with method, setup, positions/stroke, repetitions, environmental conditions, raw results and uncertainty, followed by an explicit engineering allocation decision tying measured mechanical play to acceptable system/optical performance",
+    "P001 size/form capability and P004 bore size/form capability before final production tolerance split"
+  ],
+  "native_mutation": "NONE"
+}

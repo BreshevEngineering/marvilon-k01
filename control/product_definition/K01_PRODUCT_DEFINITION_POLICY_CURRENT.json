@@ -1,0 +1,132 @@
+{
+  "schema": "k01.product_definition_policy.v3_0",
+  "project": "K01",
+  "purpose": "Fail-closed Product Definition contract from allocated requirements and derived engineering inputs to characteristics, datum/measurement semantics, CAD binding, evidence, drawing and inspection. Drawing is a projection, never a second engineering authority.",
+  "supersedes_for_current_use": "control/product_definition/K01_PRODUCT_DEFINITION_POLICY_v2_0.json",
+  "authority_precedence": [
+    "released_requirement_or_interface_contract",
+    "controlled_requirement_allocation",
+    "approved_engineering_decision_or_EDR",
+    "controlled_derived_engineering_input_with_derivation",
+    "approved_calculation_tolerance_stack_test_or_manufacturing_capability_evidence",
+    "controlled_material_process_and_configuration_definition",
+    "canonical_native_CAD_nominal_geometry",
+    "candidate_or_legacy_spec_for_information_only"
+  ],
+  "principles": [
+    "System/interface requirements are allocated before they become part-level responsibilities. Shared requirements retain explicit complementary allocation across participants.",
+    "Derived loads and calculated design inputs are separate objects from requirements and characteristics; equal numeric values do not imply common meaning or authority.",
+    "The product is defined before the drawing is authored. The drawing projects controlled Product Definition only.",
+    "Every manufacturing/inspection characteristic has a stable characteristic ID, revision/effectivity context and explicit authority source chain.",
+    "A nominal CAD value does not imply a released tolerance. OPEN remains OPEN and must not inherit a SOLIDWORKS/general-template default.",
+    "Datum/reference-system semantics and measurement conditions are first-class characteristic context. For thin/compliant parts, free/fixture state and measurement force are release-critical where they materially affect the result.",
+    "Inspection method/strategy is selected with the characteristic before release. A tolerance that cannot be verified with a controlled method/capability is not release-ready.",
+    "Manufacturing route/supplier capability is upstream of process-dependent tolerances, roughness and joining notes. Route selection is an engineering decision, not a drawing note.",
+    "Native PMI/DimXpert is the preferred semantic carrier for size/fit/GD&T. Other controlled native model annotations are allowed when DimXpert is not the correct carrier.",
+    "Semantic annotation existence is insufficient for release: characteristic-to-geometry binding invariance must meet the required qualification level.",
+    "Physical/behavior analysis and variation/tolerance/process-capability analysis are separate evidence classes with separate invalidation domains.",
+    "Downstream findings create explicit Engineering Feedback Records and reopen upstream decisions through change control; silent characteristic edits are prohibited.",
+    "Drawing/inspection code consumes compiled Product Definition/slices only; legacy candidate strings, UI defaults and PDF text are non-authorities.",
+    "Configuration/effectivity is explicit. Released predecessors remain immutable; changes create successor revisions and stale only applicable downstream consumers."
+  ],
+  "characteristic_required_fields": [
+    "id",
+    "revision_effectivity",
+    "part",
+    "role",
+    "category",
+    "function",
+    "definition_state",
+    "requirement_allocation_ids",
+    "derived_input_ids",
+    "nominal_or_requirement",
+    "variation_semantics",
+    "datum_reference_system",
+    "measurement_condition",
+    "authority_sources",
+    "cad_binding",
+    "binding_invariance",
+    "mbd_carrier",
+    "manufacturing_feasibility",
+    "inspection_strategy",
+    "drawing_projection",
+    "release_blocking",
+    "drawing_authoring"
+  ],
+  "definition_states": [
+    "CONTROLLED",
+    "PARTIAL",
+    "OPEN",
+    "NOT_APPLICABLE"
+  ],
+  "lifecycle": [
+    "REQUIREMENT_DEFINED",
+    "REQUIREMENT_ALLOCATED",
+    "ENGINEERING_DECIDED",
+    "DERIVED_INPUTS_CONTROLLED",
+    "MANUFACTURING_STRATEGY_REVIEWED",
+    "CHARACTERISTIC_DEFINED",
+    "CAD_BOUND",
+    "BINDING_INVARIANCE_VERIFIED",
+    "MBD_AUTHORED",
+    "SEMANTIC_VERIFIED",
+    "PHYSICS_EVIDENCE_VERIFIED",
+    "VARIATION_CAPABILITY_EVIDENCE_VERIFIED",
+    "COMPILED_PRODUCT_DEFINITION",
+    "DRAWING_PROJECTED",
+    "INSPECTION_PLAN_LINKED",
+    "CONFIGURATION_RELEASED"
+  ],
+  "gates": {
+    "DRAWING_CANDIDATE_READY": {
+      "requires": [
+        "all projected characteristics exist or are explicitly OPEN",
+        "all shown numeric values have source authority",
+        "allocation/derived-input identity is not ambiguous",
+        "material explicit",
+        "legacy conflicting numeric candidate specs excluded"
+      ],
+      "allows": "Design-review SLDDRW projection with controlled nominals and explicit OPEN states."
+    },
+    "PMI_AUTHORING_READY": {
+      "requires": [
+        "deterministic CAD binding",
+        "controlled variation semantics for authored tolerance/fit/GD&T",
+        "datum/reference semantics defined where applicable",
+        "OPEN variation not auto-filled"
+      ],
+      "allows": "Author candidate native PMI/annotations; release still requires binding-invariance qualification."
+    },
+    "DRAWING_RELEASE_READY": {
+      "requires": [
+        "all release-blocking characteristics CONTROLLED",
+        "requirement allocation complete",
+        "derived release inputs controlled",
+        "functional tolerance/variation evidence complete",
+        "physics evidence complete where applicable",
+        "manufacturing route/capability controlled",
+        "datum/reference systems and measurement conditions controlled",
+        "inspection method/capability linked",
+        "binding invariance PASS at required level",
+        "configuration/effectivity assigned",
+        "semantic QA PASS",
+        "visual QA PASS"
+      ],
+      "allows": "Promote released SLDDRW/PDF and inspection plan."
+    }
+  },
+  "feedback_rule": "Any downstream inability to manufacture, analyze, inspect or unambiguously project a characteristic creates an Engineering Feedback Record and reopens the relevant engineering decision/change record; no silent upstream mutation.",
+  "mutation_rule": "Any method pivot or characteristic authority change atomically updates decision/change, next action, policy/architecture, dependency graph/relationship registry and acceptance tests before implementation.",
+  "non_authorities": [
+    "drawing free text",
+    "general SOLIDWORKS template tolerance",
+    "UI defaults",
+    "AI/chat recollection",
+    "legacy candidate_spec without current authority",
+    "generated PDF/BMP",
+    "runtime face index without semantic qualification",
+    "analysis input with unknown derivation"
+  ],
+  "drawing_authoring_rule": "S2 carries claim-level drawing_authoring targets. Annotation-view role and drawing-view role are controlled context; actual SOLIDWORKS annotation-view identity/orientation is D2/D3 evidence. Release-native drawing values never originate only in SLDDRW text.",
+  "general_tolerance_rule": "No implicit general tolerance. If used, characteristic/drawing contract must reference a controlled general_tolerance_policy_ref."
+}

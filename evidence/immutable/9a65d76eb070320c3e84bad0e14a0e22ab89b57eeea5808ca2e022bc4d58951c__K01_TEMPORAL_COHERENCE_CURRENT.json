@@ -1,0 +1,77 @@
+{
+  "schema": "k01.temporal_coherence.current.v2_independent_guard",
+  "generated_utc": "2026-09-20T09:27:06.995330+00:00",
+  "status": "PASS_TEMPORAL_COHERENCE",
+  "state_epoch": "K01-SE-fccd982b0c077a50",
+  "issues": [],
+  "checks": [
+    {
+      "check": "source_state_fingerprint",
+      "expected": "fccd982b0c077a50e669e7fb8d1fa80b834326f7b16c7bff14ae1ba519023cfc",
+      "got": "fccd982b0c077a50e669e7fb8d1fa80b834326f7b16c7bff14ae1ba519023cfc"
+    },
+    {
+      "check": "state_epoch_derivation",
+      "expected": "K01-SE-fccd982b0c077a50",
+      "got": "K01-SE-fccd982b0c077a50"
+    },
+    {
+      "check": "manifest_epoch",
+      "expected": "K01-SE-fccd982b0c077a50",
+      "got": "K01-SE-fccd982b0c077a50"
+    },
+    {
+      "check": "goal_lock_epoch",
+      "expected": "K01-SE-fccd982b0c077a50",
+      "got": "K01-SE-fccd982b0c077a50"
+    },
+    {
+      "check": "next_actions_epoch",
+      "expected": "K01-SE-fccd982b0c077a50",
+      "got": "K01-SE-fccd982b0c077a50"
+    },
+    {
+      "check": "ai_session_rules_epoch",
+      "expected": "K01-SE-fccd982b0c077a50",
+      "got": "K01-SE-fccd982b0c077a50"
+    },
+    {
+      "check": "visual_qa_epoch",
+      "expected": "K01-SE-fccd982b0c077a50",
+      "got": "K01-SE-fccd982b0c077a50"
+    },
+    {
+      "check": "resume_epoch",
+      "expected": "K01-SE-fccd982b0c077a50",
+      "got": "K01-SE-fccd982b0c077a50"
+    },
+    {
+      "check": "center_input_epoch",
+      "expected": "K01-SE-fccd982b0c077a50",
+      "got": "K01-SE-fccd982b0c077a50"
+    },
+    {
+      "check": "active_step_epoch",
+      "expected": "K01-SE-fccd982b0c077a50",
+      "got": "K01-SE-fccd982b0c077a50"
+    },
+    {
+      "check": "completion_frontier_epoch",
+      "expected": "K01-SE-fccd982b0c077a50",
+      "got": "K01-SE-fccd982b0c077a50"
+    },
+    {
+      "check": "start_here_contains_epoch",
+      "ok": true
+    },
+    {
+      "check": "session_close_contains_epoch",
+      "ok": true
+    },
+    {
+      "check": "readme_current_contains_epoch",
+      "ok": true
+    }
+  ],
+  "rule": "Temporal coherence validates primary project-state artifacts only. Semantic coherence is evaluated afterward by the independent semantic guard; guards must not depend on each other cyclically."
+}

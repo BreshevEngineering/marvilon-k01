@@ -1,0 +1,110 @@
+{
+  "schema": "k01.product_definition_policy.v2_0",
+  "project": "K01",
+  "purpose": "Fail-closed contract from requirement/design intent to product characteristics, CAD semantics, drawing projection and inspection. Prevents drawing work from becoming a second engineering authority.",
+  "authority_precedence": [
+    "released_requirement_or_interface_contract",
+    "approved_engineering_decision_or_EDR",
+    "approved_calculation_tolerance_stack_or_test_evidence",
+    "controlled_material_or_process_definition",
+    "canonical_native_CAD_nominal_geometry",
+    "candidate_or_legacy_spec_for_information_only"
+  ],
+  "principles": [
+    "The product is defined before the drawing is authored. The drawing is a projection, not a place where nominal values, tolerances, fits, GD&T, roughness, material or process requirements are invented.",
+    "Every manufacturing/inspection characteristic has a stable characteristic ID and explicit source authority.",
+    "A nominal CAD value does not imply a released tolerance. OPEN remains OPEN and must not inherit a SOLIDWORKS/general-template default.",
+    "Legacy candidate_spec text is never release authority. If it conflicts with current decisions it is reported as STALE_CANDIDATE_SPEC and ignored by downstream release projection.",
+    "Native PMI/DimXpert is the preferred semantic carrier for size/fit/GD&T. Other controlled native model annotations are allowed when DimXpert is not the correct carrier.",
+    "Drawing automation consumes only the compiled Product Definition contract, never raw legacy candidate strings.",
+    "Inspection acceptance consumes the same compiled Product Definition contract; drawing text is not independently parsed into acceptance limits.",
+    "Release requires complete functional definition, evidence and inspection method. A design-review/base drawing may show controlled nominals plus explicit OPEN states without inventing release values.",
+    "The compiled Product Definition participates in the authoritative engineering DAG. Its semantic fingerprint and its MEDTAS consumed-state fingerprint are distinct: unchanged Cxx values do not make a CAD-binding change fresh.",
+    "Any upstream requirement/interface/CAD-binding/Product Definition change invalidates downstream drawing/inspection consumers through graph fingerprints; downstream artifacts are never manually blessed fresh."
+  ],
+  "characteristic_required_fields": [
+    "id",
+    "part",
+    "role",
+    "category",
+    "function",
+    "definition_state",
+    "nominal_or_requirement",
+    "variation_semantics",
+    "authority_sources",
+    "cad_binding",
+    "mbd_carrier",
+    "drawing_projection",
+    "inspection",
+    "release_blocking"
+  ],
+  "definition_states": [
+    "CONTROLLED",
+    "PARTIAL",
+    "OPEN",
+    "NOT_APPLICABLE"
+  ],
+  "lifecycle": [
+    "REQUIREMENT_DEFINED",
+    "ENGINEERING_DECIDED",
+    "CHARACTERISTIC_DEFINED",
+    "CAD_BOUND",
+    "MBD_AUTHORED",
+    "SEMANTIC_VERIFIED",
+    "DRAWING_PROJECTED",
+    "INSPECTION_LINKED",
+    "RELEASED"
+  ],
+  "gates": {
+    "DRAWING_CANDIDATE_READY": {
+      "requires": [
+        "all required characteristics exist or are explicitly OPEN",
+        "material is explicit",
+        "all shown numeric values have an authority source",
+        "legacy conflicting numeric candidate specs are excluded from projection"
+      ],
+      "allows": "Generate/edit a design-review SLDDRW using controlled nominals and explicit OPEN notes."
+    },
+    "PMI_AUTHORING_READY": {
+      "requires": [
+        "CAD binding is deterministic for each characteristic to be authored",
+        "variation semantics are CONTROLLED for tolerance/fit/GD&T values",
+        "OPEN variation is not auto-filled"
+      ],
+      "allows": "Author model PMI/annotations on a timestamped candidate and verify save-close-reopen semantics."
+    },
+    "DRAWING_RELEASE_READY": {
+      "requires": [
+        "all release-blocking characteristics CONTROLLED",
+        "functional tolerance analysis complete where applicable",
+        "manufacturing process capability addressed",
+        "surface texture/process notes closed where required",
+        "inspection method and acceptance criterion linked",
+        "semantic QA PASS",
+        "visual QA PASS"
+      ],
+      "allows": "Promote released SLDDRW/PDF."
+    }
+  },
+  "mutation_rule": "Any change of execution method, characteristic semantics or authority precedence must atomically update architecture/decision/next-action control and its acceptance test in the same patch before implementation begins.",
+  "attempt_rule": {
+    "max_same_mechanism_failures": 2,
+    "after_limit": "STOP_AND_REVIEW_ARCHITECTURE",
+    "exception_requires": "explicit decision-log entry with new evidence and bounded experiment"
+  },
+  "non_authorities": [
+    "drawing free text",
+    "general SOLIDWORKS template tolerance",
+    "UI defaults",
+    "AI/chat recollection",
+    "legacy candidate_spec without current authority",
+    "generated PDF/BMP"
+  ],
+  "dependency_control": {
+    "graph_authority": "control/project/K01_AUTHORITY_MAP_CURRENT.json::control_families.engineering_build_graph",
+    "change_policy": "control/project/K01_CHANGE_IMPACT_POLICY_v1.json",
+    "relationship_registry": "control/project/K01_ENGINEERING_RELATIONSHIP_REGISTRY_v1.json",
+    "compiled_node": "K01.PD.P007.COMPILED",
+    "drawing_projection_node": "K01.DRAWING.D006.PROJECTION"
+  }
+}

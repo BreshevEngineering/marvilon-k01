@@ -1,0 +1,51 @@
+{
+  "schema": "k01.j2.factual_interface.v1",
+  "generated_utc": "2026-09-08T14:09:48.393192+00:00",
+  "snapshot_sha256": "7766bc37874f2ea4bcdf712b4b052436abacaec3dc4612bc75645a42463e117d",
+  "status": "PASS_FACTUAL_ARCHITECTURE",
+  "clamp": {
+    "count": 3,
+    "nominal_thread_family": "M2.5",
+    "P003_native_tap_drill_diameter_mm": 2.05,
+    "P007_native_clearance_diameter_mm": 2.9,
+    "pattern_PCD_mm": 26.5,
+    "preload_candidate_window_N_per_screw": [
+      200,
+      300
+    ],
+    "release_open": [
+      "exact screw standard/head form",
+      "length",
+      "material/grade",
+      "finish/lubrication",
+      "torque-preload calibration condition"
+    ]
+  },
+  "seal": {
+    "architecture": "static face O-ring",
+    "gland_feature": "K01_F_J2_ORING_GLAND_16x1p5",
+    "nominal_design_size": "16 x 1.5 mm",
+    "native_gland_diameters_mm": [
+      16.0,
+      20.2
+    ],
+    "material_candidate": "FKM 75A preferred candidate for bounded current release",
+    "fallback": "FFKM",
+    "release_open": [
+      "media/cleaning envelope",
+      "exact supplier compound",
+      "compression-force qualification",
+      "quantitative leak acceptance"
+    ]
+  },
+  "locator": {
+    "P007_locator_OD_mm": 14.1,
+    "released_fit_architecture": "Ø14.10 H7/g6 pilot/locator pair",
+    "axial_location": "metal mating faces"
+  },
+  "flange": {
+    "OD_mm": 33.0,
+    "P007_OAL_mm": 35.0,
+    "P007_material": "AISI 316L / EN 1.4404"
+  }
+}
