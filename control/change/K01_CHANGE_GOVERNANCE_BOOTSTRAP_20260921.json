@@ -1,0 +1,31 @@
+{
+  "schema": "k01.change_transaction.minimal.v1",
+  "change_id": "governance/k01-trusted-control-gate-v1",
+  "intent": "Bootstrap the trusted base-branch K01 control gate and minimal configuration model before configuration recovery.",
+  "allowed_paths": [
+    ".github/workflows/k01-control-gate.yml",
+    ".github/workflows/k01-tests.yml",
+    "control/change/K01_CHANGE_GOVERNANCE_BOOTSTRAP_20260921.json",
+    "control/change/K01_CHANGE_TRANSACTION_MINIMAL_SCHEMA.json",
+    "control/configuration/K01_CONFIGURATION_POLICY_SIMPLE_V1.json",
+    "docs/architecture/K01_CONFIGURATION_MODEL_SIMPLE.md",
+    "tests/governance/test_k01_configuration_state.py",
+    "tests/governance/test_k01_pr_control_gate.py",
+    "tools/governance/k01_configuration_state.py",
+    "tools/governance/k01_pr_control_gate.py"
+  ],
+  "new_files": [
+    ".github/workflows/k01-control-gate.yml",
+    ".github/workflows/k01-tests.yml",
+    "control/change/K01_CHANGE_GOVERNANCE_BOOTSTRAP_20260921.json",
+    "control/change/K01_CHANGE_TRANSACTION_MINIMAL_SCHEMA.json",
+    "control/configuration/K01_CONFIGURATION_POLICY_SIMPLE_V1.json",
+    "docs/architecture/K01_CONFIGURATION_MODEL_SIMPLE.md",
+    "tests/governance/test_k01_configuration_state.py",
+    "tests/governance/test_k01_pr_control_gate.py",
+    "tools/governance/k01_configuration_state.py",
+    "tools/governance/k01_pr_control_gate.py"
+  ],
+  "external_cad_scope": [],
+  "bootstrap_exception": "This PR establishes the trusted gate itself and therefore requires manual diff review before merge. No product/control recovery is mixed into this PR."
+}

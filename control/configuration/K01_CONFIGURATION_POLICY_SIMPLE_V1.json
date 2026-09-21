@@ -1,0 +1,18 @@
+{
+  "schema": "k01.configuration_policy.simple.v1",
+  "authorities": {
+    "git": "committed source/control/configuration",
+    "evidence": "evidence/immutable/**",
+    "native_cad": "external CAD workspace bound by control/configuration/K01_CAD_MANIFEST_BASELINE.json"
+  },
+  "runtime": [
+    "reports/**",
+    "evidence/current/**",
+    "handoff/**",
+    "_hotfix_backup/**"
+  ],
+  "state_rule": "Configuration state is derived from clean Git HEAD plus CAD manifest. Dirty controlled worktree cannot produce PASS.",
+  "change_rule": "Normal changes occur on a branch with one minimal transaction record. Added files must be named exactly in new_files. PR merge is human authorization.",
+  "close_rule": "Close = required checks PASS + PR merge + clean main + checkpoint tag.",
+  "center_rule": "Center is a read-only projection and must show STALE if its Git HEAD differs from actual repository HEAD."
+}
