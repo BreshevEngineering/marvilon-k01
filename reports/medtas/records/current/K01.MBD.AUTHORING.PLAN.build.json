@@ -1,9 +1,0 @@
-{
-  "artifact_hash": "4e5efc9d67aaaff94966dd4269d4049dbae71c3f827f5e3922b831304e928d01",
-  "built_state_hash": "63f01e0829524b9ff13760bf1b17fd34ab73921f0c89942102814dd5ae45df0d",
-  "node_id": "K01.MBD.AUTHORING.PLAN",
-  "producer": {
-    "tool": "build_mbd_authoring_plan_v1_7.py"
-  },
-  "schema": "medtas.build_record.v1"
-}

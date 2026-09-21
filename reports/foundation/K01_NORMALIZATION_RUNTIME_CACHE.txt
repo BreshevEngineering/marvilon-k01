@@ -1,4 +1,0 @@
-Downloads/
-cad_api/bin/
-handoff/
-review_upload/

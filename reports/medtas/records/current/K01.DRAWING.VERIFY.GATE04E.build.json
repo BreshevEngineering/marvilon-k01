@@ -1,9 +1,0 @@
-{
-  "artifact_hash": "a4595c31987db9ae2d13e1f40277a6c38a953e89e2d828c942af31f6df3133ab",
-  "built_state_hash": "5e7d6a72cd60fab8ff7dbd89621b830ba5cfa2498266938f7c7de5dd6ab8752c",
-  "node_id": "K01.DRAWING.VERIFY.GATE04E",
-  "producer": {
-    "tool": "verify_drawing_pack_v1_7.py"
-  },
-  "schema": "medtas.build_record.v1"
-}
