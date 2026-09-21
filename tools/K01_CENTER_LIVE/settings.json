@@ -1,0 +1,24 @@
+{
+  "repo_root": "D:/BreshevEngineering/marvilon-k01",
+  "cad_root": "D:/Marvilon/K01",
+  "port": 8792,
+  "sources": {
+    "verdict": "evidence/current/K01_CENTER_VIEW.json",
+    "graph": "reports/control/K01_MEDTAS_DERIVED_STATE_CURRENT.json",
+    "ebom": "reports/bom/current/K01_EBOM_A001_CURRENT.json",
+    "mbom": "reports/bom/current/K01_MBOM_A001_CURRENT.json",
+    "artifacts": "evidence/current/K01_EVIDENCE_INDEX.json",
+    "requirements": "control/requirements/K01_RELEASE_REQUIREMENTS_CURRENT.json",
+    "actuator_requirements": "control/requirements/K01_FIXED_COIL_ACTUATOR_REQUIREMENTS.json",
+    "graph_authority": "control/medtas/v1/graph/K01_engineering_build_graph_v2_5.json",
+    "assurance_coherence": "reports/control/K01_ASSURANCE_COHERENCE_CURRENT.json"
+  },
+  "capability_query_enabled": true,
+  "p007_documents": {
+    "Product characteristics": "control/product_definition/K01_P007_PRODUCT_CHARACTERISTICS.json",
+    "Drawing release definition": "control/drawings/K01_D006_RELEASE_DEFINITION.json",
+    "PMI write evidence": "control/product_definition/K01_P007_PMI_WRITE_EVIDENCE.json",
+    "Drawing verification": "reports/cad/d006_candidate/K01_D006_CANDIDATE_VERIFY_CURRENT.json",
+    "PMI verification": "reports/cad/p007_pmi_step13/K01_P007_PMI_STEP13_CURRENT.json"
+  }
+}

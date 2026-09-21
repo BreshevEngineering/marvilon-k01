@@ -1,0 +1,80 @@
+{
+  "schema": "k01.center.master_feed.current.v1",
+  "generated_utc": "2026-09-20T09:27:04.560281+00:00",
+  "authority": "PROJECTION_ONLY",
+  "source": "reports/control/K01_PROJECT_CONTROL_SPINE_CURRENT.json",
+  "home": {
+    "product_structure": {
+      "assembly": "K01-A-001",
+      "expected_modeled_occurrences": 14
+    },
+    "drawing_lane": "SEPARATE_USER_CONTROLLED_MARVILON_BRANCH",
+    "bom_status": "HOLD_RELEASE_BOM__STRUCTURE_CONTROLLED",
+    "analysis_domains": [
+      {
+        "domain": "FEMM",
+        "status": "NUMERICAL_DESIGN_CANDIDATE_PASS__PHYSICAL_QUALIFICATION_OPEN",
+        "trust": "ENGINEERING"
+      },
+      {
+        "domain": "Flow/CFD",
+        "status": "CONSOLIDATION_OPEN",
+        "trust": "ENGINEERING"
+      },
+      {
+        "domain": "Structural/SWSIM",
+        "status": "SCREENING_OR_ENGINEERING_EVIDENCE_EXISTS",
+        "trust": "ENGINEERING"
+      },
+      {
+        "domain": "Tolerance/Variation",
+        "status": "ACTIVE_FOR_NEXT_PD",
+        "trust": "ENGINEERING"
+      },
+      {
+        "domain": "Pressure/Vacuum/Containment",
+        "status": "P007_DEFINITION_CLOSED__L8_TEST_OPEN",
+        "trust": "ENGINEERING"
+      },
+      {
+        "domain": "EBOM",
+        "status": "HOLD_RELEASE",
+        "trust": "ENGINEERING"
+      },
+      {
+        "domain": "MBOM",
+        "status": "HOLD_RELEASE",
+        "trust": "ENGINEERING"
+      },
+      {
+        "domain": "Inspection/Metrology",
+        "status": "PARTIAL",
+        "trust": "ENGINEERING"
+      },
+      {
+        "domain": "Configuration/Release",
+        "status": "HOLD",
+        "trust": "ENGINEERING"
+      }
+    ],
+    "next_product_definition_prepared": "K01-P-004"
+  },
+  "program_board": [
+    "D006 user-controlled drawing finalization",
+    "P004 Product Definition closure",
+    "remaining own-part Product Definitions",
+    "magnetic physical qualification",
+    "EBOM/MBOM release closure",
+    "remaining drawings",
+    "manufacturing/inspection capability and FAI",
+    "verification/qualification evidence",
+    "Git/configuration release checkpoint",
+    "SW2026 migration + full chamber integration -> Released TPD -> R01"
+  ],
+  "state_epoch": "K01-SE-fccd982b0c077a50",
+  "current_lifecycle_level": "L5",
+  "current_deliverable": "K01-A-001 CALIBRATION MODULE DESIGN FREEZE",
+  "active_engineering_object": "K01-J2 P003-P007 SERVICE JOINT",
+  "active_blocker": "J2-T05-LOCAL-CONTACT-FEA",
+  "next_action_id": "K01-NA-T05-J2-LOCAL-FEA"
+}

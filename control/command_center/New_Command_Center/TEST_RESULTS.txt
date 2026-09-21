@@ -1,0 +1,21 @@
+Installed: /tmp/tmp24s9laym/center/panel
+Configuration: /tmp/tmp24s9laym/center/panel/config.json
+Canonical integration: Existing dispatcher preserved; use the direct command below or add center route.
+Direct launch:
+py -3 "/tmp/tmp24s9laym/center/panel/server.py" --repo-root "/tmp/tmp24s9laym"
+No CAD/BOM/requirements/verdict/Git changes were made.
+
+test_bom_quantity_zero_preserved (test_panel.PanelTests.test_bom_quantity_zero_preserved) ... ok
+test_broken_json_is_visible (test_panel.PanelTests.test_broken_json_is_visible) ... ok
+test_changed_input_does_not_overwrite_engine_verdict (test_panel.PanelTests.test_changed_input_does_not_overwrite_engine_verdict) ... ok
+test_install_preserves_unknown_dispatcher (test_panel.PanelTests.test_install_preserves_unknown_dispatcher) ... ok
+test_malformed_ledger_visible (test_panel.PanelTests.test_malformed_ledger_visible) ... ok
+test_missing_is_not_pass (test_panel.PanelTests.test_missing_is_not_pass) ... ok
+test_path_escape (test_panel.PanelTests.test_path_escape) ... ok
+test_reasons_and_semantic_hash_retained (test_panel.PanelTests.test_reasons_and_semantic_hash_retained) ... ok
+test_transport_blocks_cross_origin_and_unknown_command (test_panel.PanelTests.test_transport_blocks_cross_origin_and_unknown_command) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.610s
+
+OK

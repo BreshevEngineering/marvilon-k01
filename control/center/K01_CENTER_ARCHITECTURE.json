@@ -1,0 +1,27 @@
+{
+  "schema": "k01.center.architecture.v4",
+  "generated_utc": "2026-09-08T18:31:45.568921+00:00",
+  "status": "ACTIVE_ASSURANCE_COHERENCE_REFACTOR",
+  "role": "INSTRUMENT_NOT_CONTROL_AUTHORITY",
+  "screens": [
+    "BLOCKERS",
+    "GRAPH",
+    "RELEASE_HISTORY",
+    "ASSURANCE_COHERENCE",
+    "TRANSACTIONS",
+    "DRIFT"
+  ],
+  "data_source": "evidence/current/K01_CENTER_VIEW.json",
+  "verdict_logic": "tools/assurance/evidence_reducer.py",
+  "tests": [
+    "tests/assurance/test_evidence_reducer.py"
+  ],
+  "state_changing_actions": "NONE in Center; future actions only delegate to canonical run.cmd",
+  "hardcoded_engineering_values": "FORBIDDEN",
+  "deletion_test": "Reducer must build without center/ present; tested in unit test.",
+  "assurance_coherence": {
+    "contract": "control/center/K01_CENTER_ASSURANCE_INTEGRITY_CONTRACT.json",
+    "report": "reports/control/K01_ASSURANCE_COHERENCE_CURRENT.json",
+    "rule": "HOLD fail-closes mutation and stage-transition actions; read-only diagnostics remain available."
+  }
+}
