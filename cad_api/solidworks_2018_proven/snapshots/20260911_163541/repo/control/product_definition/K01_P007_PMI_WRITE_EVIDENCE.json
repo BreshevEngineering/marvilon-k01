@@ -1,0 +1,43 @@
+{
+  "schema": "k01.p007.pmi_write_evidence.v1",
+  "generated_utc": "2026-09-08T13:58:19.349769+00:00",
+  "status": "PASS_PILOT_SAVE_CLOSE_REOPEN",
+  "scope": [
+    "C02 locator nominal diameter 14.10",
+    "C05 flange OD nominal 33.00"
+  ],
+  "source_report": "reports/cad/p007_pmi_step13/K01_P007_PMI_STEP13_CURRENT.json",
+  "source_report_sha256": "d58708e5bd853432046cf7bd1326723a1f014becb41e89c570290c1ff29ecc92",
+  "source_authority_part": "D:\\Marvilon\\K01\\cad\\candidates\\gate04d_c2r1\\K01-P-007_Hermetic_Magnetic_Can_GATE04D_C2R1_CANDIDATE.SLDPRT",
+  "source_authority_sha256": "615ad82ffe1b555ad7800723096fda297233e21a4deea5d84c2d75c1bdaa6653",
+  "candidate_part": "D:\\Marvilon\\K01\\cad\\candidates\\p007_pmi_authoring\\step13_20260908_164745\\K01-P-007_Hermetic_Magnetic_Can_PMI_STEP13_CANDIDATE.SLDPRT",
+  "candidate_file_sha256": "167649f752a9ef97350ba04e14cddec95391493a132938481c6ed18087d44f22",
+  "geometry_invariant": true,
+  "saved": true,
+  "reopen_readback": {
+    "pass": true,
+    "geometry_fingerprint": "868b175f3919b3598dd8ae47c8fee388f28f30211081561b12fb3820cb7a4a63",
+    "feature_count": 2,
+    "annotation_count": 2,
+    "C02_nominal_match_count": 1,
+    "C05_nominal_match_count": 1,
+    "C02_persist_state": 0,
+    "C05_persist_state": 0
+  },
+  "api_return_anomaly": true,
+  "interpretation": "SolidWorks 2018 returned false from InsertSizeDimension, but the correct DimXpert dimensions were created, saved, reopened, semantically read back, persistent references resolved, and geometry remained invariant.",
+  "not_released_by_this_evidence": [
+    "C01 Datum A authoring strategy",
+    "C02 Datum B symbol and H7 tolerance",
+    "C03 GD&T",
+    "C04 pattern/position",
+    "C05 released diameter tolerance",
+    "C06",
+    "C07",
+    "C08",
+    "C10",
+    "C11",
+    "C12",
+    "blind-end tolerance"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema": "k01.drawing_refine_api.job.v1",
+  "drawing_id": "K01-D-005",
+  "source_drawing": "D:\\Marvilon\\K01\\cad\\drawings\\seeds\\rotational_family_v1\\K01-P-006_D005_SEED.SLDDRW",
+  "source_model": "D:\\Marvilon\\K01\\cad\\parts\\K01-P-006_Retaining_Plug.SLDPRT",
+  "candidate_root": "D:\\Marvilon\\K01\\cad\\drawings\\candidates\\K01-D-005\\seed_refine_r1",
+  "operations": [
+    {
+      "id": "D005_HEAD_OD_H9",
+      "op": "SET_FIT",
+      "target": {
+        "annotation_name": "K01DS_P006-C02-HEAD-OD"
+      },
+      "shaft_fit": "h9",
+      "precision": 2
+    },
+    {
+      "id": "D005_BORE_THRU",
+      "op": "SET_DIM_TEXT",
+      "target": {
+        "annotation_name": "K01DS_P006-C03-BORE"
+      },
+      "suffix": " THRU",
+      "precision": 2
+    },
+    {
+      "id": "D005_SERVICE_HOLE_PLUS",
+      "op": "SET_ASYM_PRESENTATION",
+      "target": {
+        "annotation_name": "K01DS_P006-C04-HOLE-SIZE"
+      },
+      "tol_min_mm": 0.0,
+      "tol_max_mm": 0.05,
+      "suffix": " BLIND",
+      "precision": 2
+    },
+    {
+      "id": "D005_HOLE_DEPTH",
+      "op": "SET_NOTE",
+      "target": {
+        "annotation_name": "K01DS_P006-C04-DEPTH"
+      },
+      "text": "2× BLIND DEPTH 1.20 ±0.05"
+    },
+    {
+      "id": "D005_PCD",
+      "op": "SET_NOTE",
+      "target": {
+        "annotation_name": "K01DS_P006-C04-PCD"
+      },
+      "text": "Ø8.50 BASIC"
+    },
+    {
+      "id": "D005_ANGLE",
+      "op": "SET_NOTE",
+      "target": {
+        "annotation_name": "K01DS_P006-C04-ANGLE"
+      },
+      "text": "180° BASIC"
+    },
+    {
+      "id": "D005_THREAD",
+      "op": "SET_NOTE",
+      "target": {
+        "annotation_name": "K01DS_P006-C01-THREAD"
+      },
+      "text": "M12×1-6g"
+    },
+    {
+      "id": "D005_RELIEF",
+      "op": "SET_DIM_TEXT",
+      "target": {
+        "annotation_name": "RD1"
+      },
+      "prefix": "RELIEF ",
+      "suffix": " ×0.06",
+      "precision": 2
+    }
+  ]
+}

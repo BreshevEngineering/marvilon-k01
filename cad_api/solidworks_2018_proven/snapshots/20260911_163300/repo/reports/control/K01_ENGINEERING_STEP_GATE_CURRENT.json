@@ -1,0 +1,560 @@
+{
+  "schema": "k01.engineering_step_gate.v1",
+  "generated_utc": "2026-09-11T13:20:41.110992+00:00",
+  "step_id": "K01-STEP-P4-P007-NATIVE-DIMXPERT-CANDIDATE",
+  "intent": "AUTHOR_TIMESTAMPED_P007_NATIVE_DIMXPERT_PMI_CANDIDATE_WITH_GEOMETRY_INVARIANCE",
+  "status": "PASS_TO_P007_NATIVE_DIMXPERT_CANDIDATE_WRITE",
+  "mutation_authorized": true,
+  "checks": [
+    {
+      "check": "checkpoint matches active step",
+      "status": "PASS",
+      "actual": "K01-CP-20260910-BASELINE-02C-PROMOTED",
+      "expected": "K01-CP-20260910-BASELINE-02C-PROMOTED"
+    },
+    {
+      "check": "required file reports/control/K01_P007_PROFESSIONAL_START_CURRENT.json",
+      "status": "PASS",
+      "actual": "reports/control/K01_P007_PROFESSIONAL_START_CURRENT.json",
+      "expected": "exists"
+    },
+    {
+      "check": "required file reports/control/K01_P007_CANONICAL_PERSISTENT_REBIND_CURRENT.json",
+      "status": "PASS",
+      "actual": "reports/control/K01_P007_CANONICAL_PERSISTENT_REBIND_CURRENT.json",
+      "expected": "exists"
+    },
+    {
+      "check": "required file control/product_definition/K01_P007_PRODUCT_CHARACTERISTICS.json",
+      "status": "PASS",
+      "actual": "control/product_definition/K01_P007_PRODUCT_CHARACTERISTICS.json",
+      "expected": "exists"
+    },
+    {
+      "check": "required file control/product_definition/K01_P007_PMI_AUTHORING_SCOPE.json",
+      "status": "PASS",
+      "actual": "control/product_definition/K01_P007_PMI_AUTHORING_SCOPE.json",
+      "expected": "exists"
+    },
+    {
+      "check": "required file control/product_definition/K01_P007_PMI_WRITE_EVIDENCE.json",
+      "status": "PASS",
+      "actual": "control/product_definition/K01_P007_PMI_WRITE_EVIDENCE.json",
+      "expected": "exists"
+    },
+    {
+      "check": "required file reports/control/K01_NODE_TECHNICAL_FILTER_CURRENT.json",
+      "status": "PASS",
+      "actual": "reports/control/K01_NODE_TECHNICAL_FILTER_CURRENT.json",
+      "expected": "exists"
+    },
+    {
+      "check": "source contract exists",
+      "status": "PASS",
+      "actual": "D:\\BreshevEngineering\\marvilon-k01\\control\\project\\K01_HANDOFF_REQUIRED_SOURCES_CURRENT.json",
+      "expected": "exists"
+    },
+    {
+      "check": "required source tools/sw_gate04b_datum_c_v7.py",
+      "status": "PASS",
+      "actual": "tools/sw_gate04b_datum_c_v7.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source cad_api/gates/gate04b/K01Gate04B_DatumC_AssemblyQA.cs",
+      "status": "PASS",
+      "actual": "cad_api/gates/gate04b/K01Gate04B_DatumC_AssemblyQA.cs",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source scripts/K01_PROMOTE_P003_P007.py",
+      "status": "PASS",
+      "actual": "scripts/K01_PROMOTE_P003_P007.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source scripts/RUN_K01_PROMOTE_P003_P007_DRYRUN.cmd",
+      "status": "PASS",
+      "actual": "scripts/RUN_K01_PROMOTE_P003_P007_DRYRUN.cmd",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source scripts/RUN_K01_PROMOTE_P003_P007_APPLY.cmd",
+      "status": "PASS",
+      "actual": "scripts/RUN_K01_PROMOTE_P003_P007_APPLY.cmd",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/sw_post_promotion_qa.py",
+      "status": "PASS",
+      "actual": "tools/sw_post_promotion_qa.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/technical_filter_map_v2_2.py",
+      "status": "PASS",
+      "actual": "tools/medtas/technical_filter_map_v2_2.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/build_bom_v2_2.py",
+      "status": "PASS",
+      "actual": "tools/medtas/build_bom_v2_2.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/build_mbd_a001_v1_6.py",
+      "status": "PASS",
+      "actual": "tools/medtas/build_mbd_a001_v1_6.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/build_mbd_authoring_plan_v1_7.py",
+      "status": "PASS",
+      "actual": "tools/medtas/build_mbd_authoring_plan_v1_7.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/build_p007_exemplar_plan_v2_0.py",
+      "status": "PASS",
+      "actual": "tools/medtas/build_p007_exemplar_plan_v2_0.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/drawing_qa_gate_v1_9.py",
+      "status": "PASS",
+      "actual": "tools/medtas/drawing_qa_gate_v1_9.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source cad_api/medtas/K01MbdDimXpertPart.cs",
+      "status": "PASS",
+      "actual": "cad_api/medtas/K01MbdDimXpertPart.cs",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/repo/control_namespace_guard.py",
+      "status": "PASS",
+      "actual": "tools/repo/control_namespace_guard.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/assurance/engineering_step_gate.py",
+      "status": "PASS",
+      "actual": "tools/assurance/engineering_step_gate.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/v22_common.py",
+      "status": "PASS",
+      "actual": "tools/medtas/v22_common.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/cli/k01_cli.py",
+      "status": "PASS",
+      "actual": "tools/cli/k01_cli.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/repo/quarantine_center_panel_package.py",
+      "status": "PASS",
+      "actual": "tools/repo/quarantine_center_panel_package.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/repo/relocate_local_inbox.py",
+      "status": "PASS",
+      "actual": "tools/repo/relocate_local_inbox.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/control_authority.py",
+      "status": "PASS",
+      "actual": "tools/medtas/control_authority.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/build_requirements_coverage_v1_9.py",
+      "status": "PASS",
+      "actual": "tools/medtas/build_requirements_coverage_v1_9.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source control/requirements/K01_REQUIREMENTS_EVIDENCE_POLICY.json",
+      "status": "PASS",
+      "actual": "control/requirements/K01_REQUIREMENTS_EVIDENCE_POLICY.json",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/medtas_v16_common.py",
+      "status": "PASS",
+      "actual": "tools/medtas/medtas_v16_common.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/repo/root_cleanup.py",
+      "status": "PASS",
+      "actual": "tools/repo/root_cleanup.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/baseline_02c_promotion_dryrun.py",
+      "status": "PASS",
+      "actual": "tools/medtas/baseline_02c_promotion_dryrun.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/assurance/prewrite_control.py",
+      "status": "PASS",
+      "actual": "tools/assurance/prewrite_control.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/baseline_02c_promotion_apply.py",
+      "status": "PASS",
+      "actual": "tools/medtas/baseline_02c_promotion_apply.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source cad_api/gates/gate04b/K01Baseline02C_ReferenceRewrite.cs",
+      "status": "PASS",
+      "actual": "cad_api/gates/gate04b/K01Baseline02C_ReferenceRewrite.cs",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source cad_api/gates/gate04b/K01Baseline02C_StableAssemblyQA.cs",
+      "status": "PASS",
+      "actual": "cad_api/gates/gate04b/K01Baseline02C_StableAssemblyQA.cs",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/baseline_02c_candidate_requalify.py",
+      "status": "PASS",
+      "actual": "tools/medtas/baseline_02c_candidate_requalify.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/assurance/build_engineering_dashboard.py",
+      "status": "PASS",
+      "actual": "tools/assurance/build_engineering_dashboard.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/baseline_02c_post_promotion_finalize.py",
+      "status": "PASS",
+      "actual": "tools/medtas/baseline_02c_post_promotion_finalize.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/p007_professional_start_v1.py",
+      "status": "PASS",
+      "actual": "tools/medtas/p007_professional_start_v1.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/build_p007_geometry_authority_v2_0.py",
+      "status": "PASS",
+      "actual": "tools/medtas/build_p007_geometry_authority_v2_0.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/build_p007_release_front_v2_0.py",
+      "status": "PASS",
+      "actual": "tools/medtas/build_p007_release_front_v2_0.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source control/product_definition/K01_P007_PRODUCT_CHARACTERISTICS.json",
+      "status": "PASS",
+      "actual": "control/product_definition/K01_P007_PRODUCT_CHARACTERISTICS.json",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source control/product_definition/K01_P007_PMI_AUTHORING_SCOPE.json",
+      "status": "PASS",
+      "actual": "control/product_definition/K01_P007_PMI_AUTHORING_SCOPE.json",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source control/drawings/K01_D006_AUTHORING_INPUT.json",
+      "status": "PASS",
+      "actual": "control/drawings/K01_D006_AUTHORING_INPUT.json",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source control/drawings/K01_D006_RELEASE_DEFINITION.json",
+      "status": "PASS",
+      "actual": "control/drawings/K01_D006_RELEASE_DEFINITION.json",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source control/drawings/K01_P007_FUNCTIONAL_TOLERANCE_PLAN.json",
+      "status": "PASS",
+      "actual": "control/drawings/K01_P007_FUNCTIONAL_TOLERANCE_PLAN.json",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source cad_api/medtas/K01P007PersistentRefRebind.cs",
+      "status": "PASS",
+      "actual": "cad_api/medtas/K01P007PersistentRefRebind.cs",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/p007_persistent_ref_rebind_v1.py",
+      "status": "PASS",
+      "actual": "tools/medtas/p007_persistent_ref_rebind_v1.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source cad_api/medtas/K01P007DimXpertPhaseA.cs",
+      "status": "PASS",
+      "actual": "cad_api/medtas/K01P007DimXpertPhaseA.cs",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "required source tools/medtas/p007_dimxpert_phase_a_v1.py",
+      "status": "PASS",
+      "actual": "tools/medtas/p007_dimxpert_phase_a_v1.py",
+      "expected": "exists on disk"
+    },
+    {
+      "check": "control namespace guard",
+      "status": "PASS",
+      "actual": "PASS_WITH_DECLARED_MIGRATION_DEBT",
+      "expected": "PASS*"
+    },
+    {
+      "check": "repository migration guard",
+      "status": "PASS",
+      "actual": "repo_guard MIGRATION PASS",
+      "expected": "repo_guard PASS"
+    },
+    {
+      "check": "status reports/control/K01_P007_PROFESSIONAL_START_CURRENT.json::status",
+      "status": "PASS",
+      "actual": "PASS_P007_CANONICAL_GEOMETRY_RECONCILED_READY_FOR_ENTITY_REBIND",
+      "expected": [
+        "PASS_P007_CANONICAL_GEOMETRY_RECONCILED_READY_FOR_ENTITY_REBIND"
+      ]
+    },
+    {
+      "check": "status reports/control/K01_P007_CANONICAL_PERSISTENT_REBIND_CURRENT.json::status",
+      "status": "PASS",
+      "actual": "PASS_P007_CANONICAL_PERSISTENT_REFS_REBOUND_READY_FOR_NATIVE_PMI",
+      "expected": [
+        "PASS_P007_CANONICAL_PERSISTENT_REFS_REBOUND_READY_FOR_NATIVE_PMI"
+      ]
+    },
+    {
+      "check": "status control/product_definition/K01_P007_PMI_AUTHORING_SCOPE.json::status",
+      "status": "PASS",
+      "actual": "READY_FOR_CANONICAL_CANDIDATE_PMI_AUTHORING",
+      "expected": [
+        "READY_FOR_CANONICAL_CANDIDATE_PMI_AUTHORING"
+      ]
+    },
+    {
+      "check": "status control/product_definition/K01_P007_PMI_WRITE_EVIDENCE.json::status",
+      "status": "PASS",
+      "actual": "PASS_PILOT_SAVE_CLOSE_REOPEN",
+      "expected": [
+        "PASS_PILOT_SAVE_CLOSE_REOPEN"
+      ]
+    },
+    {
+      "check": "status reports/control/K01_NODE_TECHNICAL_FILTER_CURRENT.json::status",
+      "status": "PASS",
+      "actual": "PASS",
+      "expected": [
+        "PASS"
+      ]
+    },
+    {
+      "check": "impact declaration requirements",
+      "status": "PASS",
+      "actual": "Author only already-controlled/candidate characteristics C01/C02/C03/C04/C05/C06/C09; do not invent C07/C08/C10/C11/C12/blind-end release values.",
+      "expected": "non-empty"
+    },
+    {
+      "check": "impact declaration materials",
+      "status": "PASS",
+      "actual": "P007 stays AISI 316L / EN 1.4404; material note C09 only.",
+      "expected": "non-empty"
+    },
+    {
+      "check": "impact declaration bom",
+      "status": "PASS",
+      "actual": "No quantity/geometry change is authorized by PMI authoring.",
+      "expected": "non-empty"
+    },
+    {
+      "check": "impact declaration dimxpert_drawings",
+      "status": "PASS",
+      "actual": "Write native PMI on timestamped P007 candidate; K01-D-006 is derived only after save-close-reopen verification.",
+      "expected": "non-empty"
+    },
+    {
+      "check": "impact declaration inspection",
+      "status": "PASS",
+      "actual": "Characteristic IDs remain stable and will feed the inspection template after candidate acceptance.",
+      "expected": "non-empty"
+    },
+    {
+      "check": "impact declaration dependencies",
+      "status": "PASS",
+      "actual": "Any geometry fingerprint change beyond PMI-only metadata is a hard HOLD.",
+      "expected": "non-empty"
+    },
+    {
+      "check": "impact declaration technical_filter",
+      "status": "PASS",
+      "actual": "Manufacturing/tolerance/release OPENs remain explicit; authoring does not imply release.",
+      "expected": "non-empty"
+    },
+    {
+      "check": "impact declaration rollback",
+      "status": "PASS",
+      "actual": "Delete/reject timestamped candidate on failure; canonical stable P007 is never overwritten.",
+      "expected": "non-empty"
+    },
+    {
+      "check": "impact declaration evidence",
+      "status": "PASS",
+      "actual": "Candidate path/SHA + pre/post geometry fingerprint + native DimXpert readback + save-close-reopen persistence.",
+      "expected": "non-empty"
+    }
+  ],
+  "control_namespace": {
+    "schema": "k01.control_namespace_guard.v1",
+    "generated_utc": "2026-09-11T13:20:40.711175+00:00",
+    "status": "PASS_WITH_DECLARED_MIGRATION_DEBT",
+    "violations": [],
+    "critical_authorities": [
+      {
+        "id": "engineering_build_graph",
+        "authority": "control/medtas/v1/graph/K01_engineering_build_graph_v2_0.json",
+        "authority_exists": true,
+        "legacy_present": [
+          "control/medtas/v1/graph/K01_engineering_build_graph_v1_1.json",
+          "control/medtas/v1/graph/K01_engineering_build_graph_v1_2.json",
+          "control/medtas/v1/graph/K01_engineering_build_graph_v1_3.json",
+          "control/medtas/v1/graph/K01_engineering_build_graph_v1_4.json",
+          "control/medtas/v1/graph/K01_engineering_build_graph_v1_5.json",
+          "control/medtas/v1/graph/K01_engineering_build_graph_v1_6.json",
+          "control/medtas/v1/graph/K01_engineering_build_graph_v1_7.json",
+          "control/medtas/v1/graph/K01_engineering_build_graph_v1_8.json",
+          "control/medtas/v1/graph/K01_engineering_build_graph_v1_9.json"
+        ],
+        "undeclared_siblings": [],
+        "canonical_target": "control/medtas/v1/graph/K01_engineering_build_graph.json",
+        "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+      },
+      {
+        "id": "cad_sem_a001_binding",
+        "authority": "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_6.json",
+        "authority_exists": true,
+        "legacy_present": [
+          "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1.json",
+          "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_2.json",
+          "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_3.json",
+          "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_4.json",
+          "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING_v1_5.json"
+        ],
+        "undeclared_siblings": [],
+        "canonical_target": "control/medtas/v1/bindings/K01_CAD_SEM_A001_BINDING.json",
+        "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+      },
+      {
+        "id": "status_model",
+        "authority": "control/medtas/v1/spec/K01_STATUS_MODEL_v1_9.json",
+        "authority_exists": true,
+        "legacy_present": [
+          "control/medtas/v1/spec/K01_STATUS_MODEL_v1_7.json",
+          "control/medtas/v1/spec/K01_STATUS_MODEL_v1_8.json"
+        ],
+        "undeclared_siblings": [],
+        "canonical_target": "control/medtas/v1/spec/K01_STATUS_MODEL.json",
+        "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+      },
+      {
+        "id": "bolt_equiv_p006_binding",
+        "authority": "control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING_v1_7.json",
+        "authority_exists": true,
+        "legacy_present": [
+          "control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING_v1_6.json"
+        ],
+        "undeclared_siblings": [],
+        "canonical_target": "control/medtas/v1/bindings/K01_BOLT_EQUIV_P006_BINDING.json",
+        "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+      },
+      {
+        "id": "evidence_registry",
+        "authority": "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY_v1_2.json",
+        "authority_exists": true,
+        "legacy_present": [
+          "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY_v1.json"
+        ],
+        "undeclared_siblings": [],
+        "canonical_target": "control/medtas/v1/registry/K01_EVIDENCE_REGISTRY.json",
+        "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+      },
+      {
+        "id": "legacy_state_projection",
+        "authority": "control/state/K01_STATE_CURRENT_v8.json",
+        "authority_exists": true,
+        "legacy_present": [
+          "control/state/K01_STATE_CURRENT.json"
+        ],
+        "undeclared_siblings": [],
+        "canonical_target": "control/state/K01_STATE_CURRENT.json",
+        "migration": "LEGACY_CENTER_PROJECTION / DO_NOT_USE_AS PRODUCT AUTHORITY"
+      },
+      {
+        "id": "project_closure_step9c_projection",
+        "authority": "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_V3_CURRENT.json",
+        "authority_exists": true,
+        "legacy_present": [
+          "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_CURRENT.json",
+          "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_V2_CURRENT.json"
+        ],
+        "undeclared_siblings": [],
+        "canonical_target": "reports/engineering/K01_PROJECT_CLOSURE_STEP9C_CURRENT.json",
+        "migration": "LEGACY_REPORT_PROJECTION / DECLARED V3 CURRENT"
+      },
+      {
+        "id": "technical_filter_categories",
+        "authority": "control/decision_system/K01_TECHNICAL_FILTER_24_v2_2.json",
+        "authority_exists": true,
+        "legacy_present": [],
+        "undeclared_siblings": [],
+        "canonical_target": "control/decision_system/K01_TECHNICAL_FILTER_24.json",
+        "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+      },
+      {
+        "id": "technical_filter_rules",
+        "authority": "control/decision_system/K01_TECHNICAL_FILTER_RULES_v2_2.json",
+        "authority_exists": true,
+        "legacy_present": [],
+        "undeclared_siblings": [],
+        "canonical_target": "control/decision_system/K01_TECHNICAL_FILTER_RULES.json",
+        "migration": "DECLARED_CURRENT_VERSION / STABLE_UNVERSIONED_TARGET_PENDING"
+      }
+    ],
+    "declared_version_family_count": 35,
+    "declared_legacy_sibling_debt": 79,
+    "rule": "No implicit newest-file authority. Critical authority is explicit; existing version debt may shrink; new sibling ambiguity is blocked."
+  },
+  "impact_declarations": {
+    "requirements": "Author only already-controlled/candidate characteristics C01/C02/C03/C04/C05/C06/C09; do not invent C07/C08/C10/C11/C12/blind-end release values.",
+    "materials": "P007 stays AISI 316L / EN 1.4404; material note C09 only.",
+    "bom": "No quantity/geometry change is authorized by PMI authoring.",
+    "dimxpert_drawings": "Write native PMI on timestamped P007 candidate; K01-D-006 is derived only after save-close-reopen verification.",
+    "inspection": "Characteristic IDs remain stable and will feed the inspection template after candidate acceptance.",
+    "dependencies": "Any geometry fingerprint change beyond PMI-only metadata is a hard HOLD.",
+    "technical_filter": "Manufacturing/tolerance/release OPENs remain explicit; authoring does not imply release.",
+    "rollback": "Delete/reject timestamped candidate on failure; canonical stable P007 is never overwritten.",
+    "evidence": "Candidate path/SHA + pre/post geometry fingerprint + native DimXpert readback + save-close-reopen persistence."
+  },
+  "rule": "A step gate confirms control/evidence readiness for the declared intent only. It never upgrades OPEN release evidence."
+}

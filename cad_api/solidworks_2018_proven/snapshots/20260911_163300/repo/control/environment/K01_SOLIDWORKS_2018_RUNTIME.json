@@ -1,0 +1,14 @@
+{
+  "schema": "k01.solidworks_environment.v1",
+  "status": "LOCKED_FOR_CURRENT_WORKSTATION",
+  "solidworks_product_year": 2018,
+  "solidworks_api_revision": 26,
+  "expected_sldworks_interop_major": 26,
+  "csharp_language_level": "C# 5 / .NET Framework v4 compiler",
+  "compatibility_rules": [
+    "Use IComponent2.GetSuppression(), not GetSuppression2().",
+    "Use explicit COM casts for Feature-returning object methods.",
+    "Hash open SOLIDWORKS native files with shared read/write/delete access.",
+    "Do not use API members introduced after revision 26 unless guarded by capability detection."
+  ]
+}
