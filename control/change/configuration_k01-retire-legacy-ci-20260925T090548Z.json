@@ -1,0 +1,11 @@
+{
+  "schema": "k01.change_transaction.minimal.v1",
+  "change_id": "configuration/k01-retire-legacy-ci-20260925T090548Z",
+  "intent": "Retire legacy failing workflows from automatic push/PR execution while preserving them as manual diagnostics. Current required CI remains K01 control gate + K01 tests.",
+  "allowed_paths": [
+    ".github/workflows/k01-control-ci.yml",
+    ".github/workflows/qa.yml",
+    ".github/workflows/repo-guard.yml"
+  ],
+  "new_files": []
+}
