@@ -1,9 +1,10 @@
-name: engineering-qa
+name: Legacy diagnostic - engineering-qa
 
 on:
-  push:
-    branches: [main]
-  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   control-qa:

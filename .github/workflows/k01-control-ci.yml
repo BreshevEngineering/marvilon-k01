@@ -1,17 +1,10 @@
-name: K01 Control CI
+name: Legacy diagnostic - K01 Control CI
 
 on:
-  push:
-    paths:
-      - 'control/**'
-      - 'tools/**'
-      - 'tests/**'
-      - '.github/workflows/k01-control-ci.yml'
-  pull_request:
-    paths:
-      - 'control/**'
-      - 'tools/**'
-      - 'tests/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   control-integrity:

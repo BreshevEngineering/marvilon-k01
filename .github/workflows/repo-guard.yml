@@ -1,7 +1,11 @@
-name: K01 Repository Guard
+name: Legacy diagnostic - K01 Repository Guard
+
 on:
-  push:
-  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
   repo-guard:
     runs-on: ubuntu-latest
