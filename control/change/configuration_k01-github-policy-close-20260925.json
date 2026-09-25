@@ -1,0 +1,10 @@
+{
+  "schema": "k01.change_transaction.minimal.v1",
+  "change_id": "configuration/k01-github-policy-close-20260925",
+  "intent": "Close post-T05 GitHub governance drift without touching engineering/CAD state.",
+  "allowed_paths": [
+    "control/git/K01_GIT_POLICY_v2_2.json",
+    "control/git/K01_BRANCH_PROTECTION_POLICY.json"
+  ],
+  "new_files": []
+}
