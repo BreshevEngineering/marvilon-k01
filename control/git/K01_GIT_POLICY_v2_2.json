@@ -1,8 +1,8 @@
 {
   "schema": "k01.git_policy.v2_2",
-  "recommended_repo": "BreshevEngineering/k01-calibration-module-engineering",
+  "recommended_repo": "BreshevEngineering/marvilon-k01",
   "default_branch": "main",
-  "private": true,
+  "private": false,
   "tracked": [
     "control/**",
     "docs/**",
@@ -21,5 +21,15 @@
     "generated current dashboards"
   ],
   "release_rule": "Release manifest contains hashes; Git commit/tag records configuration. Binary CAD may remain outside Git if storage policy requires, but its semantic snapshot and release artifact hashes are tracked.",
-  "github_connection_note": "ChatGPT GitHub connector currently exposed no repositories during v2.2 audit; local Git audit remains authoritative until connector access is restored."
+  "github_connection_note": "Repository identity and visibility are aligned to the operator-approved live repository BreshevEngineering/marvilon-k01 (PUBLIC). Required checks are K01 control gate + K01 tests.",
+  "visibility": "PUBLIC",
+  "policy_decisions": {
+    "repository_identity": "BreshevEngineering/marvilon-k01",
+    "visibility": "PUBLIC",
+    "required_checks": [
+      "K01 control gate",
+      "K01 tests"
+    ],
+    "decision_status": "CLOSED_POST_T05"
+  }
 }
