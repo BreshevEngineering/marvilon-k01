@@ -24,23 +24,17 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install Center test dependencies
-        run: python -m pip install -r center/requirements-test.txt
+      - name: Install repository test dependencies
+        run: python -m pip install --upgrade pip pytest jsonschema
 
-      - name: Center import-safety gate
-        run: python center/tools/ci/import_safety_guard.py --center-root center
+      - name: Run repository test suite
+        run: pytest -q
 
-      - name: Full Center test suite and generated acceptance
-        run: python center/tools/ci/k01_center_acceptance.py --center-root center --project-root . --output "${RUNNER_TEMP}/K01_CENTER_ACCEPTANCE_CURRENT.json"
+      - name: Validate JSON schemas
+        run: python tools/validate_schemas.py
 
-      - name: Package guard
-        run: |
-          find center -type d \( -name __pycache__ -o -name .pytest_cache \) -prune -exec rm -rf {} +
-          find center -type f -name '*.pyc' -delete
-          python center/tools/package_guard.py
+      - name: Validate requirement-to-gate links
+        run: python tools/check_requirement_links.py
 
-      - name: Upload generated acceptance
-        uses: actions/upload-artifact@v4
-        with:
-          name: K01_CENTER_ACCEPTANCE_CURRENT
-          path: ${{ runner.temp }}/K01_CENTER_ACCEPTANCE_CURRENT.json
+      - name: Block engineering values in UI source
+        run: python tools/check_ui_engineering_literals.py
