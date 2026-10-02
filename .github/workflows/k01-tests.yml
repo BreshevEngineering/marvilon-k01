@@ -24,17 +24,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Install repository test dependencies
-        run: python -m pip install --upgrade pip pytest jsonschema
+      - name: K01 governance regression
+        run: python -m unittest discover -s tests/governance -p "test_*.py"
 
-      - name: Run repository test suite
-        run: pytest -q
+      - name: K01 assurance regression
+        run: python -m unittest discover -s tests/assurance -p "test_*.py"
 
-      - name: Validate JSON schemas
-        run: python tools/validate_schemas.py
+      - name: MEDTAS repository validation (machine-readable)
+        run: python tools/medtas/ci_validate_repository_v2_2.py --repo-root . --json-only
 
-      - name: Validate requirement-to-gate links
-        run: python tools/check_requirement_links.py
-
-      - name: Block engineering values in UI source
-        run: python tools/check_ui_engineering_literals.py
+      - name: MEDTAS technical-filter / structure / graph QA
+        run: python tools/medtas/ci_validate_repository_v2_2.py --repo-root .
