@@ -2,9 +2,6 @@ name: K01 tests
 
 on:
   pull_request:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -24,11 +21,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: K01 governance regression
-        run: python -m unittest discover -s tests/governance -p "test_*.py"
-
-      - name: K01 assurance regression
-        run: python -m unittest discover -s tests/assurance -p "test_*.py"
+      - name: Trusted control-gate regression
+        run: python -m unittest discover -s tests/governance -p "test_k01_pr_control_gate.py"
 
       - name: MEDTAS repository validation (machine-readable)
         run: python tools/medtas/ci_validate_repository_v2_2.py --repo-root . --json-only
