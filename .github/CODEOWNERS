@@ -1,0 +1,7 @@
+# K01 release-controlled paths
+/project_control/00_CURRENT/ @oleksii-breshev
+/control/ @oleksii-breshev
+/.github/workflows/ @oleksii-breshev
+/.github/CODEOWNERS @oleksii-breshev
+/center/ @oleksii-breshev
+/tools/governance/ @oleksii-breshev
