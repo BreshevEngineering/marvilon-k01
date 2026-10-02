@@ -1,0 +1,11 @@
+{
+  "schema": "k01.change_transaction.minimal.v1",
+  "change_id": "automation/k01-r55-32-codeowners-20261002_183618",
+  "intent": "Align external GitHub governance only. Engineering CURRENT remains D:\\MARVILON\\K01; GitHub is an external collaboration axis.",
+  "allowed_paths": [
+    ".github/CODEOWNERS"
+  ],
+  "new_files": [
+    ".github/CODEOWNERS"
+  ]
+}
