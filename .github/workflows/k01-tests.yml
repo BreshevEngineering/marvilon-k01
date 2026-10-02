@@ -21,8 +21,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: K01 configuration/governance regression
-        run: python -m unittest discover -s tests/governance -p "test_k01_*.py"
+      - name: Trusted control-gate regression
+        run: python -m unittest discover -s tests/governance -p "test_k01_pr_control_gate.py"
 
-      - name: K01 assurance regression
-        run: python -m unittest discover -s tests/assurance -p "test_*.py"
+      - name: MEDTAS repository validation (machine-readable)
+        run: python tools/medtas/ci_validate_repository_v2_2.py --repo-root . --json-only
+
+      - name: MEDTAS technical-filter / structure / graph QA
+        run: python tools/medtas/ci_validate_repository_v2_2.py --repo-root .

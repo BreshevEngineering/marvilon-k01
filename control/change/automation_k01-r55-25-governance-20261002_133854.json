@@ -1,0 +1,9 @@
+{
+  "schema": "k01.change_transaction.minimal.v1",
+  "change_id": "automation/k01-r55-25-governance-20261002_133854",
+  "intent": "Align external GitHub governance only. Engineering CURRENT remains D:\\MARVILON\\K01; GitHub is an external collaboration axis.",
+  "allowed_paths": [
+    ".github/workflows/k01-tests.yml"
+  ],
+  "new_files": []
+}
